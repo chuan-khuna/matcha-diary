@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New entry — Matcha Diary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-head { padding: var(--s6) 0 var(--s5); border-bottom: 1px solid var(--line); }
+
+  form { padding: var(--s6) 0 var(--s8); display: grid; gap: var(--s6); }
+
+  /* Photo tray */
+  .tray { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); }
+  @media (max-width: 600px) { .tray { grid-template-columns: repeat(3, 1fr); } }
+  .slot { position: relative; aspect-ratio: 1; border-radius: var(--r-sm); overflow: hidden;
+          cursor: pointer; outline: 2px solid transparent; outline-offset: 2px;
+          transition: outline-color .15s; }
+  .slot:hover { outline-color: var(--matcha-line); }
+  .slot.is-cover { outline-color: var(--matcha); }
+  .slot .tag {
+    position: absolute; z-index: 2; left: 6px; bottom: 6px;
+    padding: 3px 7px;
+    font-family: var(--mono); font-size: 9px; letter-spacing: .08em;
+    background: rgba(255,255,255,.88); color: var(--ink-2);
+    opacity: 0; transition: opacity .15s;
+  }
+  .slot:hover .tag { opacity: 1; }
+  .slot.is-cover .tag { opacity: 1; background: var(--matcha); color: #fff; }
+  .slot .x {
+    position: absolute; z-index: 2; right: 6px; top: 6px;
+    width: 20px; height: 20px; border: 0; border-radius: var(--r-xs);
+    background: rgba(20,24,19,.6); color: #fff; font-size: 12px; line-height: 1;
+    cursor: pointer; opacity: 0; transition: opacity .15s;
+  }
+  .slot:hover .x { opacity: 1; }
+
+  .slot-add {
+    display: grid; place-content: center; gap: 4px; text-align: center;
+    border: 1.5px dashed var(--line-strong); background: var(--surface);
+    color: var(--clay); outline: none;
+  }
+  .slot-add:hover { border-color: var(--matcha); color: var(--matcha-deep); background: var(--matcha-soft); }
+  .slot-add span { font-size: 1.25rem; line-height: 1; }
+
+  /* Two-up fields */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s4); }
+  @media (max-width: 600px) { .duo { grid-template-columns: 1fr; } }
+
+  /* Title input reads like the headline it becomes */
+  .input-title { font-size: var(--t-title); font-weight: 600; letter-spacing: -.015em; padding: 12px 14px; }
+
+  /* Taste note builder */
+  .note-box { border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+              background: var(--surface); padding: var(--s3); }
+  .note-box:focus-within { border-color: var(--matcha); box-shadow: 0 0 0 3px var(--matcha-soft); }
+  .note-input { border: 0; outline: none; background: transparent; padding: 4px 2px;
+                font-family: var(--mono); font-size: var(--t-small); min-width: 160px; flex: 1; }
+  .chip .x { border: 0; background: none; cursor: pointer; color: inherit; padding: 0 0 0 2px; font-size: 12px; }
+
+  /* Score editor */
+  .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5) var(--s7); }
+  @media (max-width: 640px) { .score-grid { grid-template-columns: 1fr; } }
+  .axis { display: grid; gap: var(--s2); }
+  .axis-head { display: flex; align-items: baseline; justify-content: space-between; }
+  .axis-val { font-family: var(--mono); font-size: var(--t-small); font-variant-numeric: tabular-nums; }
+
+  .submit-bar {
+    position: sticky; bottom: 0;
+    display: flex; align-items: center; gap: var(--s3);
+    padding: var(--s4) 0;
+    background: linear-gradient(to top, var(--paper) 70%, transparent);
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="nav">
+      <a href="index.html">feed</a>
+      <a href="review.html">review</a>
+      <a href="create.html" aria-current="page">new</a>
+      <a href="design-system.html">system</a>
+    </nav>
+    <span class="spacer"></span>
+    <button class="btn btn-quiet btn-sm">Saved as draft · 09:41</button>
+  </div>
+</header>
+
+<main class="wrap-narrow">
+
+  <div class="page-head">
+    <p class="label">New entry</p>
+    <h1 class="title" style="margin-top:var(--s2)">Log a cup</h1>
+  </div>
+
+  <form onsubmit="return false">
+
+    <!-- Photos -->
+    <section>
+      <p class="label">Photos</p>
+      <p class="hint" style="margin:0 0 var(--s3)">Click a photo to make it the cover. The cover leads your card in the feed.</p>
+      <div class="tray" id="tray">
+        <div class="slot photo ph-1 is-cover"><span class="tag">COVER</span><button class="x" type="button" aria-label="Remove">×</button></div>
+        <div class="slot photo ph-3"><span class="tag">SET COVER</span><button class="x" type="button" aria-label="Remove">×</button></div>
+        <div class="slot photo ph-6"><span class="tag">SET COVER</span><button class="x" type="button" aria-label="Remove">×</button></div>
+        <button class="slot slot-add" type="button"><span>+</span><span class="mono">add</span></button>
+      </div>
+    </section>
+
+    <!-- Title -->
+    <label class="field">
+      <span class="label">Title</span>
+      <input class="input input-title" type="text" value="Uji Ceremonial, whisked thin" placeholder="What was this cup?">
+    </label>
+
+    <!-- Café + style -->
+    <div class="duo">
+      <label class="field">
+        <span class="label">Café <span style="text-transform:none; letter-spacing:0">— optional</span></span>
+        <input class="input" type="text" value="Kettl Tea" placeholder="Leave empty if brewed at home">
+        <span class="hint">Brooklyn, NY · from your last visit</span>
+      </label>
+      <label class="field">
+        <span class="label">Preparation</span>
+        <select class="input">
+          <option>Usucha (thin)</option>
+          <option>Koicha (thick)</option>
+          <option>Iced</option>
+          <option>Latte</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Body -->
+    <label class="field">
+      <span class="label">Diary</span>
+      <textarea class="textarea" placeholder="How did it taste? What do you want to remember?">Ordered it thin on purpose — the shop grinds a first-harvest Uji that gets bullied by milk, so I wanted it bare. It arrives in a shallow bowl, foam still tightening.
+
+The front is all cut grass and something like snap peas. Then it turns: a long savory tail that coats the roof of the mouth and refuses to leave for a good minute.</textarea>
+      <span class="hint">Private until you publish · 412 characters</span>
+    </label>
+
+    <!-- Taste notes -->
+    <section class="field">
+      <span class="label">Taste notes</span>
+      <div class="note-box">
+        <div class="chips" id="notes">
+          <span class="chip chip-on">umami<button class="x" type="button" aria-label="Remove">×</button></span>
+          <span class="chip chip-on">cut grass<button class="x" type="button" aria-label="Remove">×</button></span>
+          <span class="chip chip-on">nutty<button class="x" type="button" aria-label="Remove">×</button></span>
+          <input class="note-input" id="noteInput" placeholder="add a note…">
+        </div>
+      </div>
+      <p class="hint">Suggestions</p>
+      <div class="chips" id="suggest" style="margin-top:var(--s2)">
+        <button class="chip chip-btn" type="button">snap pea</button>
+        <button class="chip chip-btn" type="button">creamy foam</button>
+        <button class="chip chip-btn" type="button">long finish</button>
+        <button class="chip chip-btn" type="button">seaweed</button>
+        <button class="chip chip-btn" type="button">cocoa</button>
+        <button class="chip chip-btn" type="button">astringent</button>
+      </div>
+    </section>
+
+    <!-- Taste ratings -->
+    <section>
+      <p class="label">Taste ratings</p>
+      <p class="hint" style="margin:0 0 var(--s4)">Rate each note 0–10. Leave one at zero if it wasn't there — nothing is averaged into a single score.</p>
+      <div class="score-grid" id="scores">
+        <div class="axis" data-axis="umami"      data-init="8.5"></div>
+        <div class="axis" data-axis="sweetness"  data-init="6"></div>
+        <div class="axis" data-axis="bitterness" data-init="4"></div>
+        <div class="axis" data-axis="creaminess" data-init="9"></div>
+        <div class="axis" data-axis="aroma"      data-init="7.5"></div>
+        <div class="axis" data-axis="aftertaste" data-init="9.5"></div>
+      </div>
+    </section>
+
+    <!-- Submit -->
+    <div class="submit-bar">
+      <button class="btn btn-primary" type="submit">Publish entry</button>
+      <button class="btn btn-ghost" type="button">Save draft</button>
+      <span class="spacer"></span>
+      <span class="mono muted">visible to · everyone ▾</span>
+    </div>
+
+  </form>
+
+  <div class="foot mono">matcha diary — showcase build · compose</div>
+</main>
+
+<script>
+  /* ---- Photo tray: pick a cover, remove a photo ---- */
+  var tray = document.getElementById('tray');
+  tray.addEventListener('click', function (e) {
+    var slot = e.target.closest('.slot');
+    if (!slot || slot.classList.contains('slot-add')) return;
+    if (e.target.classList.contains('x')) { slot.remove(); return; }
+    tray.querySelectorAll('.slot').forEach(function (s) {
+      s.classList.remove('is-cover');
+      var tag = s.querySelector('.tag');
+      if (tag) tag.textContent = 'SET COVER';
+    });
+    slot.classList.add('is-cover');
+    slot.querySelector('.tag').textContent = 'COVER';
+  });
+
+  /* ---- Taste notes: add from input or suggestion, remove on × ---- */
+  var notes = document.getElementById('notes');
+  var noteInput = document.getElementById('noteInput');
+
+  function addNote(text) {
+    text = text.trim().toLowerCase();
+    if (!text) return;
+    var exists = Array.from(notes.querySelectorAll('.chip')).some(function (c) {
+      return c.textContent.replace('×', '').trim() === text;
+    });
+    if (exists) return;
+    var chip = document.createElement('span');
+    chip.className = 'chip chip-on';
+    chip.textContent = text;
+    var x = document.createElement('button');
+    x.className = 'x'; x.type = 'button'; x.textContent = '×';
+    x.setAttribute('aria-label', 'Remove');
+    chip.appendChild(x);
+    notes.insertBefore(chip, noteInput);
+  }
+
+  noteInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ',') { e.preventDefault(); addNote(noteInput.value); noteInput.value = ''; }
+    if (e.key === 'Backspace' && !noteInput.value) {
+      var last = noteInput.previousElementSibling;
+      if (last) last.remove();
+    }
+  });
+  notes.addEventListener('click', function (e) {
+    if (e.target.classList.contains('x')) e.target.closest('.chip').remove();
+  });
+  document.getElementById('suggest').addEventListener('click', function (e) {
+    var chip = e.target.closest('.chip');
+    if (chip) { addNote(chip.textContent); chip.remove(); }
+  });
+
+  /* ---- Taste ratings: slider + live segmented bar ---- */
+  var axes = Array.from(document.querySelectorAll('.axis'));
+
+  axes.forEach(function (axis) {
+    var name = axis.dataset.axis;
+    var init = parseFloat(axis.dataset.init);
+    axis.innerHTML =
+      '<div class="axis-head"><span class="bar-name">' + name + '</span>' +
+      '<span class="axis-val">' + init.toFixed(1) + '</span></div>' +
+      '<div class="bar-track"></div>' +
+      '<input class="slider" type="range" min="0" max="10" step="0.5" value="' + init + '">';
+    axis.querySelector('.slider').addEventListener('input', function (e) {
+      render(axis, parseFloat(e.target.value));
+    });
+    render(axis, init);
+  });
+
+  function render(axis, v) {
+    axis.querySelector('.axis-val').textContent = v.toFixed(1);
+    var track = axis.querySelector('.bar-track');
+    track.innerHTML = '';
+    for (var i = 0; i < 10; i++) {
+      var cell = document.createElement('i');
+      cell.className = 'bar-cell' + (v >= i + 1 ? ' on' : v > i ? ' half' : '');
+      track.appendChild(cell);
+    }
+  }
+</script>
+
+</body>
+</html>

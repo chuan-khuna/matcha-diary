@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matcha Diary — Feed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .timeline { max-width: 620px; margin: 0 auto; padding: 0 var(--s4); }
+
+  /* Tab bar — sticks under the topbar */
+  .tabs { position: sticky; top: 60px; z-index: 10;
+          display: flex; gap: var(--s5);
+          background: rgba(250,248,243,.9); backdrop-filter: blur(12px);
+          border-bottom: 1px solid var(--line); }
+  .tab { padding: var(--s4) 0; text-decoration: none;
+         font-family: var(--mono); font-size: var(--t-small); color: var(--clay);
+         border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tab:hover { color: var(--ink); }
+  .tab[aria-current] { color: var(--ink); border-bottom-color: var(--matcha); }
+
+  /* Compose prompt */
+  .compose { display: flex; align-items: center; gap: var(--s3);
+             padding: var(--s4) 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+  .compose .avatar { width: 34px; height: 34px; border-radius: 50%; flex: none;
+                     background: linear-gradient(135deg, #C8D6B9, #6E9E63); }
+  .compose .prompt { color: var(--clay); }
+
+  /* Feed — one column, every entry identical */
+  .feed { display: flex; flex-direction: column; padding-bottom: var(--s8); }
+
+  .post { display: flex; gap: var(--s3); padding: var(--s5) 0;
+          border-bottom: 1px solid var(--line); text-decoration: none; }
+  .post:hover { background: rgba(242,238,229,.45);
+                box-shadow: 0 0 0 var(--s4) rgba(242,238,229,.45); }
+  .post .avatar { width: 34px; height: 34px; border-radius: 50%; flex: none; }
+  .post .col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--s3); }
+
+  .byline { display: flex; align-items: baseline; gap: var(--s2); flex-wrap: wrap; }
+  .byline .who { font-weight: 500; font-size: var(--t-body); }
+
+  .shot { border-radius: var(--r-md); overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid var(--line); }
+
+  .post-title { margin: 0; font-size: 1.0625rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; }
+  .post-desc {
+    margin: 0; color: var(--ink-2); line-height: 1.65;
+    display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+    line-clamp: 4; overflow: hidden;
+  }
+
+  .a1 { background: linear-gradient(135deg, #C8D6B9, #6E9E63); }
+  .a2 { background: linear-gradient(135deg, #E0D3B8, #A98F63); }
+  .a3 { background: linear-gradient(135deg, #B9C9D6, #63859E); }
+
+  .more { display: block; width: 100%; padding: var(--s5) 0; margin-bottom: var(--s7);
+          border: 0; background: none; cursor: pointer;
+          font-family: var(--mono); font-size: var(--t-small); color: var(--matcha-deep); }
+  .more:hover { background: var(--paper-sunk); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">feed</a>
+      <a href="review.html">review</a>
+      <a href="create.html">new</a>
+      <a href="design-system.html">system</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn btn-primary" href="create.html">+ Log a cup</a>
+  </div>
+</header>
+
+<main class="timeline">
+
+  <nav class="tabs">
+    <a class="tab" href="#" aria-current="page">for you</a>
+    <a class="tab" href="#">following</a>
+    <a class="tab" href="#">nearby</a>
+    <a class="tab" href="#">my diary</a>
+  </nav>
+
+  <a class="compose" href="create.html">
+    <span class="avatar"></span>
+    <span class="prompt">What are you drinking today?</span>
+    <span class="spacer"></span>
+    <span class="btn btn-ghost btn-sm">Log a cup</span>
+  </a>
+
+  <section class="feed">
+
+    <a class="post" href="review.html">
+      <span class="avatar a1"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Arisa</span>
+          <span class="mono muted">@arisa · 2h</span>
+        </div>
+        <div class="shot photo ph-1"></div>
+        <h2 class="post-title">Uji Ceremonial, whisked thin</h2>
+        <div class="chips">
+          <span class="chip">umami</span>
+          <span class="chip">cut grass</span>
+          <span class="chip">nutty</span>
+          <span class="chip">creamy foam</span>
+        </div>
+        <p class="post-desc">Ordered it thin on purpose — the shop grinds a first-harvest Uji that gets bullied by milk, so I wanted it bare. The front is all cut grass and something like snap peas, then it turns into a long savory tail that coats the roof of the mouth and refuses to leave. Foam held for a full three minutes before it broke.</p>
+        <span class="mono muted">KETTL TEA · BROOKLYN</span>
+      </div>
+    </a>
+
+    <a class="post" href="review.html">
+      <span class="avatar a3"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Mei</span>
+          <span class="mono muted">@mei · 5h</span>
+        </div>
+        <div class="shot photo ph-5"></div>
+        <h2 class="post-title">Koicha tasting flight</h2>
+        <div class="chips">
+          <span class="chip">thick</span>
+          <span class="chip">cocoa</span>
+          <span class="chip">slow finish</span>
+        </div>
+        <p class="post-desc">Three bowls, each thicker than the last. The middle one was the revelation — paint-like body, bitter cocoa up front, and a sweetness that only shows up after you swallow. The third crossed into something I'd call a texture experiment rather than a drink.</p>
+        <span class="mono muted">IPPODO · KYOTO</span>
+      </div>
+    </a>
+
+    <a class="post" href="review.html">
+      <span class="avatar a1"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Arisa</span>
+          <span class="mono muted">@arisa · yesterday</span>
+        </div>
+        <div class="shot photo ph-3"></div>
+        <h2 class="post-title">Home bowl, Marukyu Kohoen</h2>
+        <div class="chips">
+          <span class="chip">vegetal</span>
+          <span class="chip">silky</span>
+          <span class="chip">no grit</span>
+        </div>
+        <p class="post-desc">Sifted the powder for once and it made an absurd difference — not one lump, not one gritty sip. Deep spinach sweetness, zero scratch on the finish. Water at 72°, whisked flat for twenty seconds then lifted. This is the bar now.</p>
+        <span class="mono muted">HOME</span>
+      </div>
+    </a>
+
+    <a class="post" href="review.html">
+      <span class="avatar a2"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Dan</span>
+          <span class="mono muted">@dan · 2d</span>
+        </div>
+        <div class="shot photo ph-4"></div>
+        <h2 class="post-title">Oat latte, too much syrup</h2>
+        <div class="chips">
+          <span class="chip">sugary</span>
+          <span class="chip">chalky</span>
+        </div>
+        <p class="post-desc">Asked for half sweet and got something closer to dessert. Underneath the syrup there's a chalky, dusty powder that never dissolved and settled into a sludge at the bottom. Drinkable if you stir hard and lower your expectations.</p>
+        <span class="mono muted">CAFÉ NORDIC · OSLO</span>
+      </div>
+    </a>
+
+    <a class="post" href="review.html">
+      <span class="avatar a3"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Mei</span>
+          <span class="mono muted">@mei · 3d</span>
+        </div>
+        <div class="shot photo ph-7"></div>
+        <h2 class="post-title">Shincha-season usucha</h2>
+        <div class="chips">
+          <span class="chip">grassy</span>
+          <span class="chip">sweet finish</span>
+          <span class="chip">bright</span>
+        </div>
+        <p class="post-desc">First harvest, whisked in front of you at the counter. Aggressively green in a way that tastes like the smell of a cut lawn, then it lands soft and sweet. Queue was forty minutes and I would do it again next week.</p>
+        <span class="mono muted">SORATE · TOKYO</span>
+      </div>
+    </a>
+
+    <a class="post" href="review.html">
+      <span class="avatar a1"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Arisa</span>
+          <span class="mono muted">@arisa · 4d</span>
+        </div>
+        <div class="shot photo ph-2"></div>
+        <h2 class="post-title">Iced hojicha-matcha split</h2>
+        <div class="chips">
+          <span class="chip">roasty</span>
+          <span class="chip">thin</span>
+        </div>
+        <p class="post-desc">Two layers that never quite met. The hojicha half is toasty and comforting; the matcha sits on top of it looking pretty and tasting like nothing much. Fun photograph, forgettable drink.</p>
+        <span class="mono muted">BLUE BOTTLE · BROOKLYN</span>
+      </div>
+    </a>
+
+    <a class="post" href="review.html">
+      <span class="avatar a2"></span>
+      <div class="col">
+        <div class="byline">
+          <span class="who">Dan</span>
+          <span class="mono muted">@dan · 6d</span>
+        </div>
+        <div class="shot photo ph-6"></div>
+        <h2 class="post-title">Sunday morning, borrowed chasen</h2>
+        <div class="chips">
+          <span class="chip">citrus</span>
+          <span class="chip">light body</span>
+        </div>
+        <p class="post-desc">Borrowed a friend's older whisk with half the tines snapped off and somehow got the best foam of the month. Bright, almost lemony, and gone in four sips. Now wondering whether I've been buying the wrong chasen for two years.</p>
+        <span class="mono muted">HOME</span>
+      </div>
+    </a>
+
+  </section>
+
+  <button class="more">load older entries ↓</button>
+
+</main>
+
+</body>
+</html>

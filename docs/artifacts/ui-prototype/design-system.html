@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System — Matcha Diary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .sys-head { padding: var(--s7) 0 var(--s6); }
+  section.block { padding: var(--s6) 0; border-top: 1px solid var(--line); }
+  .block-head { display: flex; align-items: baseline; gap: var(--s3); margin-bottom: var(--s5); }
+  .block-head h2 { margin: 0; font-size: 1.0625rem; font-weight: 600; letter-spacing: -.01em; }
+
+  .grid { display: grid; gap: var(--s4); }
+  .g4 { grid-template-columns: repeat(4, 1fr); }
+  .g3 { grid-template-columns: repeat(3, 1fr); }
+  .g2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 760px) { .g4 { grid-template-columns: repeat(2, 1fr); }
+                              .g3, .g2 { grid-template-columns: 1fr; } }
+
+  /* Swatches */
+  .swatch { border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; background: var(--surface); }
+  .swatch .chipfill { height: 72px; }
+  .swatch .info { padding: var(--s3); display: grid; gap: 2px; }
+  .swatch .name { font-size: var(--t-small); font-weight: 500; }
+
+  /* Type specimens */
+  .spec { display: grid; grid-template-columns: 130px 1fr; gap: var(--s4); align-items: baseline;
+          padding: var(--s3) 0; border-bottom: 1px dashed var(--line); }
+  @media (max-width: 600px) { .spec { grid-template-columns: 1fr; } }
+
+  /* Spacing ruler */
+  .space-row { display: flex; align-items: center; gap: var(--s3); padding: 5px 0; }
+  .space-bar { height: 12px; background: var(--matcha-soft); border: 1px solid var(--matcha-line); }
+
+  /* Shape + elevation demo */
+  .box { background: var(--surface); border: 1px solid var(--line); height: 76px;
+         display: grid; place-content: center; }
+
+  /* Card anatomy annotation */
+  .anatomy { display: grid; grid-template-columns: 320px 1fr; gap: var(--s6); align-items: start; }
+  @media (max-width: 760px) { .anatomy { grid-template-columns: 1fr; } }
+  .anatomy-list { display: grid; gap: var(--s3); }
+  .anatomy-list li { list-style: none; display: grid; grid-template-columns: 22px 1fr; gap: var(--s3); }
+  .anatomy-list ol, .anatomy-list ul { margin: 0; padding: 0; }
+  .num { width: 22px; height: 22px; border-radius: var(--r-xs); display: grid; place-content: center;
+         background: var(--matcha-soft); color: var(--matcha-deep);
+         font-family: var(--mono); font-size: 10px; }
+
+  .demo-post { display: flex; gap: var(--s3); }
+  .demo-avatar { width: 34px; height: 34px; border-radius: 50%; flex: none;
+                 background: linear-gradient(135deg, #C8D6B9, #6E9E63); }
+  .demo-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--s3); }
+  .demo-shot { aspect-ratio: 4 / 3; border-radius: var(--r-md); overflow: hidden; border: 1px solid var(--line); }
+  .demo-post .card-title { margin: 0; font-size: 1.0625rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; }
+  .demo-post .card-desc { margin: 0; color: var(--ink-2); font-size: var(--t-small); line-height: 1.65;
+                          display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;
+                          line-clamp: 4; overflow: hidden; }
+
+  code.tok { font-family: var(--mono); font-size: var(--t-micro); color: var(--clay); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="nav">
+      <a href="index.html">feed</a>
+      <a href="review.html">review</a>
+      <a href="create.html">new</a>
+      <a href="design-system.html" aria-current="page">system</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn btn-ghost btn-sm" href="styles.css">styles.css</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="sys-head">
+    <p class="label">Design system</p>
+    <h1 class="display" style="margin-top:var(--s3)">Warm ceramic minimal</h1>
+    <p class="lead" style="max-width:60ch; margin-top:var(--s3)">
+      Paper-toned surfaces, one matcha accent, monospace reserved for data, and near-flat corners throughout.
+      The photos carry the colour; the interface stays out of their way.
+    </p>
+  </div>
+
+  <!-- COLOUR -->
+  <section class="block">
+    <div class="block-head"><h2>Colour</h2><span class="mono muted">6 surfaces · 3 inks · 1 accent family</span></div>
+
+    <p class="label" style="margin-bottom:var(--s3)">Surface &amp; line</p>
+    <div class="grid g4">
+      <div class="swatch"><div class="chipfill" style="background:#FAF8F3"></div><div class="info"><span class="name">Paper</span><code class="tok">--paper #FAF8F3</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#FFFFFF; border-bottom:1px solid var(--line)"></div><div class="info"><span class="name">Surface</span><code class="tok">--surface #FFFFFF</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#F2EEE5"></div><div class="info"><span class="name">Sunk</span><code class="tok">--paper-sunk #F2EEE5</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#E9E5DC"></div><div class="info"><span class="name">Line</span><code class="tok">--line #E9E5DC</code></div></div>
+    </div>
+
+    <p class="label" style="margin:var(--s5) 0 var(--s3)">Ink</p>
+    <div class="grid g4">
+      <div class="swatch"><div class="chipfill" style="background:#1F241E"></div><div class="info"><span class="name">Ink</span><code class="tok">--ink #1F241E</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#4C5349"></div><div class="info"><span class="name">Ink 2</span><code class="tok">--ink-2 #4C5349</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#8B8578"></div><div class="info"><span class="name">Clay</span><code class="tok">--clay #8B8578</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#D8D2C5"></div><div class="info"><span class="name">Line strong</span><code class="tok">--line-strong #D8D2C5</code></div></div>
+    </div>
+
+    <p class="label" style="margin:var(--s5) 0 var(--s3)">Accent — matcha</p>
+    <div class="grid g4">
+      <div class="swatch"><div class="chipfill" style="background:#4A7C59"></div><div class="info"><span class="name">Matcha</span><code class="tok">--matcha #4A7C59</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#3A6347"></div><div class="info"><span class="name">Matcha deep</span><code class="tok">--matcha-deep #3A6347</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#C6DCC4"></div><div class="info"><span class="name">Matcha line</span><code class="tok">--matcha-line #C6DCC4</code></div></div>
+      <div class="swatch"><div class="chipfill" style="background:#E7F0E6"></div><div class="info"><span class="name">Matcha soft</span><code class="tok">--matcha-soft #E7F0E6</code></div></div>
+    </div>
+
+    <p class="hint" style="margin-top:var(--s4)">
+      Rule: green is for state and data only — active nav, filled score cells, the primary button. Never for decoration.
+    </p>
+  </section>
+
+  <!-- TYPE -->
+  <section class="block">
+    <div class="block-head"><h2>Typography</h2><span class="mono muted">Inter for prose · JetBrains Mono for data</span></div>
+
+    <div class="spec"><code class="tok">.display / 36 / 600</code><span class="display">A diary for every bowl</span></div>
+    <div class="spec"><code class="tok">.title / 24 / 600</code><span class="title">Uji Ceremonial, whisked thin</span></div>
+    <div class="spec"><code class="tok">.lead / 18 / 400</code><span class="lead">The front is all cut grass and snap peas.</span></div>
+    <div class="spec"><code class="tok">body / 15 / 400</code><span>Then it turns: a long savory tail that coats the roof of the mouth.</span></div>
+    <div class="spec"><code class="tok">.mono / 13</code><span class="mono">KETTL TEA · BROOKLYN · 2026-08-04</span></div>
+    <div class="spec"><code class="tok">.label / 11 / .12em</code><span class="label">Taste notes</span></div>
+
+    <p class="hint" style="margin-top:var(--s4)">
+      Monospace signals a fact rather than a voice: café names, dates, handles, tags, score values, axis labels.
+      Anything the author wrote in their own words stays in Inter.
+    </p>
+  </section>
+
+  <!-- SPACE & SHAPE -->
+  <section class="block">
+    <div class="block-head"><h2>Space &amp; shape</h2><span class="mono muted">4pt base</span></div>
+    <div class="grid g2">
+      <div>
+        <p class="label" style="margin-bottom:var(--s3)">Spacing scale</p>
+        <div class="space-row"><span class="mono muted" style="width:56px">s1 4</span><span class="space-bar" style="width:4px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s2 8</span><span class="space-bar" style="width:8px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s3 12</span><span class="space-bar" style="width:12px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s4 16</span><span class="space-bar" style="width:16px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s5 24</span><span class="space-bar" style="width:24px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s6 32</span><span class="space-bar" style="width:32px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s7 48</span><span class="space-bar" style="width:48px"></span></div>
+        <div class="space-row"><span class="mono muted" style="width:56px">s8 64</span><span class="space-bar" style="width:64px"></span></div>
+      </div>
+      <div>
+        <p class="label" style="margin-bottom:var(--s3)">Radius &amp; elevation</p>
+        <div class="grid g2">
+          <div class="box" style="border-radius:var(--r-flat)"><code class="tok">r-flat 0</code></div>
+          <div class="box" style="border-radius:var(--r-xs)"><code class="tok">r-xs 2</code></div>
+          <div class="box" style="border-radius:var(--r-sm)"><code class="tok">r-sm 3</code></div>
+          <div class="box" style="border-radius:var(--r-md)"><code class="tok">r-md 5</code></div>
+          <div class="box" style="border-radius:var(--r-lg)"><code class="tok">r-lg 8</code></div>
+          <div class="box" style="border-radius:var(--r-md); box-shadow:var(--e1)"><code class="tok">e1 rest</code></div>
+        </div>
+        <p class="hint">
+          Corners are softened, never rounded. <code class="tok">r-flat</code> for taste notes and score cells,
+          <code class="tok">r-xs</code> for overlay labels and nav, <code class="tok">r-sm</code> for buttons and
+          fields, <code class="tok">r-md</code> for cards and photos, <code class="tok">r-lg</code> only for the
+          review cover. Circles survive in three places only: the brand mark, avatars, and the slider knob.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="block">
+    <div class="block-head"><h2>Controls</h2><span class="mono muted">buttons · chips · fields</span></div>
+
+    <p class="label" style="margin-bottom:var(--s3)">Buttons</p>
+    <div class="row" style="flex-wrap:wrap">
+      <button class="btn btn-primary">Publish entry</button>
+      <button class="btn btn-ghost">Save draft</button>
+      <button class="btn btn-quiet">Edit</button>
+      <button class="btn btn-ghost btn-sm">Follow</button>
+      <button class="btn btn-quiet btn-sm">newest ▾</button>
+    </div>
+
+    <p class="label" style="margin:var(--s5) 0 var(--s3)">Taste-note chips</p>
+    <div class="chips">
+      <span class="chip">umami</span>
+      <span class="chip">cut grass</span>
+      <span class="chip chip-on">selected</span>
+      <span class="chip chip-btn">hoverable</span>
+    </div>
+    <p class="hint">
+      Zero radius, on purpose — a taste note is a stamped label, not a bubble. Mono at 11px, no marker, no icon:
+      the word does the work. This is the sharpest shape in the system and the only component that never softens.
+    </p>
+
+    <p class="label" style="margin:var(--s5) 0 var(--s3)">Fields</p>
+    <div class="grid g2">
+      <label class="field">
+        <span class="label">Title</span>
+        <input class="input" type="text" placeholder="What was this cup?">
+      </label>
+      <label class="field">
+        <span class="label">Café — optional</span>
+        <input class="input" type="text" value="Kettl Tea">
+        <span class="hint">Helper text uses mono at 11px</span>
+      </label>
+    </div>
+  </section>
+
+  <!-- SCORE -->
+  <section class="block">
+    <div class="block-head"><h2>Taste ratings</h2><span class="mono muted">10 cells · half-cell at .5</span></div>
+    <div class="grid g2">
+      <div class="card card-pad">
+        <div class="bars">
+          <div class="bar-row"><span class="bar-name">umami</span><span class="bar-track" data-value="8.5"></span><span class="bar-val">8.5</span></div>
+          <div class="bar-row"><span class="bar-name">sweetness</span><span class="bar-track" data-value="6"></span><span class="bar-val">6.0</span></div>
+          <div class="bar-row"><span class="bar-name">bitterness</span><span class="bar-track" data-value="4"></span><span class="bar-val">4.0</span></div>
+          <div class="bar-row"><span class="bar-name">creaminess</span><span class="bar-track" data-value="9"></span><span class="bar-val">9.0</span></div>
+        </div>
+      </div>
+      <div>
+        <p class="hint" style="margin-top:0">
+          Six notes: umami, sweetness, bitterness, creaminess, aroma, aftertaste. Each is rated 0–10 in half
+          steps. A filled cell is <code class="tok">--matcha</code>; an empty one is
+          <code class="tok">--paper-sunk</code>; a half value splits one cell down the middle.
+        </p>
+        <p class="hint">
+          <strong>There is no overall score.</strong> Nothing is averaged, nothing is reduced to a single
+          number or a star count — a cup is described by the shape of its six ratings and by what the author
+          wrote. Ratings appear on the <strong>review page only</strong>; the timeline stays about the photo
+          and the writing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POST -->
+  <section class="block">
+    <div class="block-head"><h2>Feed post</h2><span class="mono muted">the timeline's only unit</span></div>
+    <div class="anatomy">
+      <div class="demo-post">
+        <span class="demo-avatar"></span>
+        <div class="demo-col">
+          <div class="row" style="gap:var(--s2); align-items:baseline">
+            <span style="font-weight:500">Arisa</span>
+            <span class="mono muted">@arisa · yesterday</span>
+          </div>
+          <div class="demo-shot photo ph-3"></div>
+          <h3 class="card-title">Home bowl, Marukyu Kohoen</h3>
+          <div class="chips">
+            <span class="chip">vegetal</span>
+            <span class="chip">silky</span>
+            <span class="chip">no grit</span>
+          </div>
+          <p class="card-desc">Sifted the powder for once and it made an absurd difference — not one lump, not one gritty sip. Deep spinach sweetness, zero scratch on the finish. Water at 72°, whisked flat for twenty seconds then lifted.</p>
+          <span class="mono muted">HOME</span>
+        </div>
+      </div>
+      <ol class="anatomy-list">
+        <li><span class="num">1</span><span><strong>Byline</strong> — avatar, name in Inter, handle and relative time in mono. Every post carries it; nothing is promoted or featured.</span></li>
+        <li><span class="num">2</span><span><strong>Cover photo</strong> — 4:3, hairline border, <code class="tok">r-md</code> corner. The one image the author marked as cover; the rest live in the detail gallery.</span></li>
+        <li><span class="num">3</span><span><strong>Title</strong> — Inter 17/600, up to two lines. The author's own words, so never monospace.</span></li>
+        <li><span class="num">4</span><span><strong>Taste notes</strong> — up to four chips, wrapping. Overflow is cut, not scrolled.</span></li>
+        <li><span class="num">5</span><span><strong>Description</strong> — opening lines of the diary body, clamped to four rows so every post holds the same rhythm.</span></li>
+        <li><span class="num">6</span><span><strong>Café</strong> — mono, clay, last line. Falls back to <code class="tok">HOME</code> when the field is left empty.</span></li>
+        <li><span class="num">7</span><span><strong>No ratings.</strong> The timeline is for photos and writing; the six taste ratings appear once you open the review. There is no overall score anywhere in the system.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="foot mono">matcha diary — showcase build · design system</div>
+</main>
+
+<script>
+  document.querySelectorAll('.bar-track[data-value]').forEach(function (track) {
+    var v = parseFloat(track.dataset.value);
+    for (var i = 0; i < 10; i++) {
+      var cell = document.createElement('i');
+      cell.className = 'bar-cell' + (v >= i + 1 ? ' on' : v > i ? ' half' : '');
+      track.appendChild(cell);
+    }
+  });
+</script>
+
+</body>
+</html>

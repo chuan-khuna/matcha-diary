@@ -1,0 +1,265 @@
+/* ==========================================================================
+   Matcha Diary — design system
+   Warm ceramic minimal · sans body + mono data · segmented score bars
+   ========================================================================== */
+
+/* ---- Tokens ---------------------------------------------------------- */
+:root {
+  /* Surface */
+  --paper:        #FAF8F3;
+  --paper-sunk:   #F2EEE5;
+  --surface:      #FFFFFF;
+  --line:         #E9E5DC;
+  --line-strong:  #D8D2C5;
+
+  /* Ink */
+  --ink:          #1F241E;
+  --ink-2:        #4C5349;
+  --clay:         #8B8578;
+
+  /* Accent */
+  --matcha:       #4A7C59;
+  --matcha-deep:  #3A6347;
+  --matcha-soft:  #E7F0E6;
+  --matcha-line:  #C6DCC4;
+
+  /* Type */
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --t-display: 2.25rem;  /* 36 */
+  --t-title:   1.5rem;   /* 24 */
+  --t-lead:    1.125rem; /* 18 */
+  --t-body:    0.9375rem;/* 15 */
+  --t-small:   0.8125rem;/* 13 */
+  --t-micro:   0.6875rem;/* 11 */
+
+  /* Space — 4pt base */
+  --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px;
+  --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
+
+  /* Shape — near-flat. Corners are softened, never rounded.
+     Taste-note chips are the one deliberate 0: they read as pressed labels. */
+  --r-flat: 0;
+  --r-xs: 2px;
+  --r-sm: 3px;
+  --r-md: 5px;
+  --r-lg: 8px;
+
+  /* Elevation — warm, low-contrast */
+  --e1: 0 1px 2px rgba(48, 42, 30, .05);
+  --e2: 0 2px 10px rgba(48, 42, 30, .07);
+  --e3: 0 12px 32px rgba(48, 42, 30, .10);
+}
+
+/* ---- Reset ----------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+button, input, textarea, select { font: inherit; color: inherit; }
+a { color: inherit; }
+
+/* ---- Type utilities -------------------------------------------------- */
+.display { font-size: var(--t-display); line-height: 1.15; letter-spacing: -.02em; font-weight: 600; margin: 0; }
+.title   { font-size: var(--t-title);   line-height: 1.25; letter-spacing: -.015em; font-weight: 600; margin: 0; }
+.lead    { font-size: var(--t-lead);    line-height: 1.55; color: var(--ink-2); margin: 0; }
+.muted   { color: var(--clay); }
+
+/* Mono is reserved for data: dates, cafés, scores, tags, labels */
+.mono {
+  font-family: var(--mono);
+  font-size: var(--t-small);
+  letter-spacing: .02em;
+  font-variant-numeric: tabular-nums;
+}
+.label {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+/* ---- Layout ---------------------------------------------------------- */
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--s5); }
+.wrap-narrow { max-width: 720px; margin: 0 auto; padding: 0 var(--s5); }
+.stack > * + * { margin-top: var(--s4); }
+.row { display: flex; align-items: center; gap: var(--s3); }
+.spacer { flex: 1; }
+
+/* ---- App chrome ------------------------------------------------------ */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(250, 248, 243, .88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner { display: flex; align-items: center; gap: var(--s5); height: 60px; }
+
+.brand { display: flex; align-items: center; gap: var(--s2); text-decoration: none; font-weight: 600; letter-spacing: -.01em; }
+.brand-mark {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #86B378, var(--matcha) 55%, var(--matcha-deep));
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,.5);
+  flex: none;
+}
+
+.nav { display: flex; gap: var(--s1); }
+.nav a {
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: var(--t-small);
+  color: var(--clay);
+  padding: 6px 10px;
+  border-radius: var(--r-xs);
+}
+.nav a:hover { color: var(--ink); background: var(--paper-sunk); }
+.nav a[aria-current="page"] { color: var(--matcha-deep); background: var(--matcha-soft); }
+
+/* ---- Buttons --------------------------------------------------------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s2);
+  padding: 9px 16px;
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  background: var(--surface);
+  font-size: var(--t-small); font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s, border-color .15s, transform .05s;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--matcha); color: #fff; }
+.btn-primary:hover { background: var(--matcha-deep); }
+.btn-ghost { border-color: var(--line-strong); color: var(--ink-2); }
+.btn-ghost:hover { background: var(--paper-sunk); }
+.btn-quiet { color: var(--clay); }
+.btn-quiet:hover { background: var(--paper-sunk); color: var(--ink); }
+.btn-sm { padding: 5px 11px; font-size: var(--t-micro); font-family: var(--mono); letter-spacing: .04em; }
+
+/* ---- Chips (taste notes) ---------------------------------------------
+   Square by design — a taste note is a stamped label, not a bubble.      */
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 9px;
+  border-radius: var(--r-flat);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .04em;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.chip-on { background: var(--matcha-soft); border-color: var(--matcha-line); color: var(--matcha-deep); }
+.chip-btn { cursor: pointer; transition: background .15s, border-color .15s; }
+.chip-btn:hover { border-color: var(--matcha-line); background: var(--matcha-soft); }
+.chips { display: flex; flex-wrap: wrap; gap: var(--s2); }
+
+/* ---- Card ------------------------------------------------------------ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--e1);
+  overflow: hidden;
+}
+.card-pad { padding: var(--s5); }
+
+/* ---- Placeholder photography ----------------------------------------
+   Stand-ins for uploads. Swap for <img> when real photos land.          */
+.photo { position: relative; background: var(--paper-sunk); overflow: hidden; }
+.photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(120% 90% at 30% 15%, rgba(255,255,255,.30), transparent 60%);
+}
+.ph-1 { background: linear-gradient(150deg, #A8C89A 0%, #6E9E63 45%, #43663C 100%); }
+.ph-2 { background: linear-gradient(160deg, #EFE7D6 0%, #C9CFA8 50%, #7D9464 100%); }
+.ph-3 { background: linear-gradient(140deg, #DCD3C2 0%, #9BAF84 55%, #4F6B45 100%); }
+.ph-4 { background: linear-gradient(200deg, #F2EADA 0%, #B7C9A1 60%, #5F7F52 100%); }
+.ph-5 { background: linear-gradient(170deg, #CBBFA8 0%, #8FA478 48%, #38512F 100%); }
+.ph-6 { background: linear-gradient(130deg, #E8E0CB 0%, #A9BE8E 52%, #6B8A57 100%); }
+.ph-7 { background: linear-gradient(210deg, #D6CDBA 0%, #93A97C 50%, #47613A 100%); }
+.ph-8 { background: linear-gradient(120deg, #F0EBDC 0%, #BCCBA4 55%, #74905C 100%); }
+
+/* Small badge that sits on a photo */
+.badge {
+  position: absolute; z-index: 2;
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 9px;
+  border-radius: var(--r-xs);
+  background: rgba(20, 24, 19, .62);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .06em;
+}
+
+/* ---- Taste ratings ---------------------------------------------------
+   There is no overall score. A cup is described by its taste axes only.  */
+
+/* Segmented bar — 10 cells, filled left to right */
+.bars { display: grid; gap: var(--s3); }
+.bar-row { display: grid; grid-template-columns: 84px 1fr 34px; align-items: center; gap: var(--s3); }
+.bar-name {
+  font-family: var(--mono); font-size: var(--t-micro);
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2);
+}
+.bar-track { display: flex; gap: 3px; }
+.bar-cell { height: 10px; flex: 1; border-radius: var(--r-flat); background: var(--paper-sunk); }
+.bar-cell.on { background: var(--matcha); }
+.bar-cell.half { background: linear-gradient(90deg, var(--matcha) 50%, var(--paper-sunk) 50%); }
+.bar-val {
+  font-family: var(--mono); font-size: var(--t-small);
+  font-variant-numeric: tabular-nums; text-align: right; color: var(--ink);
+}
+
+/* ---- Form controls --------------------------------------------------- */
+.field { display: block; }
+.field > .label { display: block; margin-bottom: var(--s2); }
+.input, .textarea {
+  width: 100%;
+  padding: 11px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.input::placeholder, .textarea::placeholder { color: #B3ADA0; }
+.input:focus, .textarea:focus {
+  border-color: var(--matcha);
+  box-shadow: 0 0 0 3px var(--matcha-soft);
+}
+.textarea { min-height: 200px; resize: vertical; line-height: 1.7; }
+.hint { font-family: var(--mono); font-size: var(--t-micro); color: var(--clay); margin-top: 6px; }
+
+/* Slider */
+.slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: var(--r-flat); background: var(--paper-sunk); outline: none; }
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--matcha); border: 3px solid var(--surface);
+  box-shadow: var(--e2); cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--matcha); border: 3px solid var(--surface);
+  box-shadow: var(--e2); cursor: pointer;
+}
+
+/* ---- Divider --------------------------------------------------------- */
+.rule { height: 1px; background: var(--line); border: 0; margin: var(--s6) 0; }
+
+/* ---- Footer ---------------------------------------------------------- */
+.foot { padding: var(--s7) 0 var(--s8); color: var(--clay); }

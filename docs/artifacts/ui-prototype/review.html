@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uji Ceremonial, whisked thin — Matcha Diary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .back { display: inline-flex; align-items: center; gap: 6px; text-decoration: none;
+          font-family: var(--mono); font-size: var(--t-small); color: var(--clay); margin: var(--s5) 0; }
+  .back:hover { color: var(--ink); }
+
+  /* Gallery */
+  .gallery { display: grid; gap: var(--s3); }
+  .cover { position: relative; aspect-ratio: 3 / 2; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--e2); }
+  .thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--s3); }
+  .thumb { position: relative; aspect-ratio: 1; border-radius: var(--r-sm); overflow: hidden;
+           cursor: pointer; box-shadow: var(--e1); transition: outline-color .15s;
+           outline: 2px solid transparent; outline-offset: 2px; }
+  .thumb:hover { outline-color: var(--matcha-line); }
+  .thumb.is-cover { outline-color: var(--matcha); }
+  .thumb.is-cover::before {
+    content: "COVER"; position: absolute; z-index: 2; left: 4px; bottom: 4px;
+    padding: 2px 5px;
+    background: rgba(20,24,19,.66); color: #fff;
+    font-family: var(--mono); font-size: 9px; letter-spacing: .08em;
+  }
+  @media (max-width: 600px) { .thumbs { grid-template-columns: repeat(3, 1fr); } }
+
+  /* Header block */
+  .head { margin: var(--s6) 0 var(--s5); }
+  .head .meta { margin-top: var(--s2); display: flex; flex-wrap: wrap; gap: var(--s3); }
+
+  /* Body copy */
+  .prose { font-size: var(--t-lead); line-height: 1.75; color: var(--ink-2); }
+  .prose p { margin: 0 0 var(--s4); }
+  .prose p:first-child::first-letter {
+    float: left; font-size: 3.1rem; line-height: .84; font-weight: 600;
+    padding: 4px 10px 0 0; color: var(--matcha-deep);
+  }
+
+  /* Score panel */
+  .score-panel { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5) var(--s7); }
+  @media (max-width: 640px) { .score-panel { grid-template-columns: 1fr; } }
+
+  .section-head { display: flex; align-items: baseline; gap: var(--s3); margin-bottom: var(--s4); }
+
+  /* Actions */
+  .actions { display: flex; gap: var(--s2); padding: var(--s5) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+  /* Author */
+  .author { display: flex; align-items: center; gap: var(--s3); padding: var(--s5) 0 var(--s8); }
+  .author .avatar-lg { width: 40px; height: 40px; border-radius: 50%; flex: none;
+                       background: linear-gradient(135deg, #C8D6B9, #6E9E63); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="nav">
+      <a href="index.html">feed</a>
+      <a href="review.html" aria-current="page">review</a>
+      <a href="create.html">new</a>
+      <a href="design-system.html">system</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn btn-primary" href="create.html">+ Log a cup</a>
+  </div>
+</header>
+
+<main class="wrap-narrow">
+
+  <a class="back" href="index.html">← back to feed</a>
+
+  <section class="gallery">
+    <div class="cover photo ph-1" id="cover">
+      <span class="badge" style="right:12px; bottom:12px">1 / 6</span>
+    </div>
+    <div class="thumbs">
+      <div class="thumb photo ph-1 is-cover"></div>
+      <div class="thumb photo ph-3"></div>
+      <div class="thumb photo ph-6"></div>
+      <div class="thumb photo ph-2"></div>
+      <div class="thumb photo ph-8"></div>
+      <div class="thumb photo ph-5"></div>
+    </div>
+  </section>
+
+  <section class="head">
+    <h1 class="title">Uji Ceremonial, whisked thin</h1>
+    <div class="meta">
+      <span class="mono muted">KETTL TEA · BROOKLYN</span>
+      <span class="mono muted">2026-08-04 · 09:12</span>
+      <span class="mono muted">USUCHA</span>
+    </div>
+  </section>
+
+  <section class="prose">
+    <p>Ordered it thin on purpose — the shop grinds a first-harvest Uji that gets bullied by milk, so I wanted it bare. It arrives in a shallow bowl, foam still tightening.</p>
+    <p>The front is all cut grass and something like snap peas. Then it turns: a long savory tail that coats the roof of the mouth and refuses to leave for a good minute. Barely any bitterness, and what's there reads as structure rather than a flaw.</p>
+    <p>Foam held for a full three minutes before it broke. Water was noticeably softer than what I get at home, which is probably doing half the work here. Coming back with a thermometer.</p>
+  </section>
+
+  <div class="rule"></div>
+
+  <section>
+    <div class="section-head">
+      <h2 class="label">Taste notes</h2>
+    </div>
+    <div class="chips">
+      <span class="chip">umami</span>
+      <span class="chip">cut grass</span>
+      <span class="chip">snap pea</span>
+      <span class="chip">nutty</span>
+      <span class="chip">creamy foam</span>
+      <span class="chip">long finish</span>
+      <span class="chip">low astringency</span>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section>
+    <div class="section-head">
+      <h2 class="label">Taste ratings</h2>
+      <span class="mono muted">0–10 per note</span>
+    </div>
+    <div class="score-panel">
+      <div class="bars">
+        <div class="bar-row"><span class="bar-name">umami</span><span class="bar-track" data-value="8.5"></span><span class="bar-val">8.5</span></div>
+        <div class="bar-row"><span class="bar-name">sweetness</span><span class="bar-track" data-value="6"></span><span class="bar-val">6.0</span></div>
+        <div class="bar-row"><span class="bar-name">bitterness</span><span class="bar-track" data-value="4"></span><span class="bar-val">4.0</span></div>
+      </div>
+      <div class="bars">
+        <div class="bar-row"><span class="bar-name">creaminess</span><span class="bar-track" data-value="9"></span><span class="bar-val">9.0</span></div>
+        <div class="bar-row"><span class="bar-name">aroma</span><span class="bar-track" data-value="7.5"></span><span class="bar-val">7.5</span></div>
+        <div class="bar-row"><span class="bar-name">aftertaste</span><span class="bar-track" data-value="9.5"></span><span class="bar-val">9.5</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: var(--s6)"></div>
+
+  <section class="actions">
+    <button class="btn btn-ghost">♡ &nbsp;42</button>
+    <button class="btn btn-ghost">Save</button>
+    <button class="btn btn-ghost">Share</button>
+    <span class="spacer"></span>
+    <button class="btn btn-quiet">Edit</button>
+  </section>
+
+  <section class="author">
+    <span class="avatar-lg"></span>
+    <div>
+      <div style="font-weight:500">Arisa</div>
+      <div class="mono muted">@arisa · 213 cups logged · 41 cafés</div>
+    </div>
+    <span class="spacer"></span>
+    <button class="btn btn-ghost btn-sm">Follow</button>
+  </section>
+
+  <div class="foot mono">matcha diary — showcase build · review detail</div>
+</main>
+
+<script>
+  // Render 10-cell segmented bars from data-value (0–10).
+  document.querySelectorAll('.bar-track[data-value]').forEach(function (track) {
+    var v = parseFloat(track.dataset.value);
+    for (var i = 0; i < 10; i++) {
+      var cell = document.createElement('i');
+      cell.className = 'bar-cell' + (v >= i + 1 ? ' on' : v > i ? ' half' : '');
+      track.appendChild(cell);
+    }
+  });
+
+  // Thumbnail → cover swap (demo interaction).
+  var cover = document.getElementById('cover');
+  var badge = cover.querySelector('.badge');
+  document.querySelectorAll('.thumb').forEach(function (thumb, i) {
+    thumb.addEventListener('click', function () {
+      var tone = Array.from(thumb.classList).find(function (c) { return c.indexOf('ph-') === 0; });
+      cover.className = 'cover photo ' + tone;
+      badge.textContent = (i + 1) + ' / 6';
+      document.querySelectorAll('.thumb').forEach(function (t) { t.classList.remove('is-cover'); });
+      thumb.classList.add('is-cover');
+    });
+  });
+</script>
+
+</body>
+</html>
