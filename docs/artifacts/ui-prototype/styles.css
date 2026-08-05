@@ -1,6 +1,6 @@
 /* ==========================================================================
    Matcha Diary — design system
-   Warm ceramic minimal · sans body + mono data · segmented score bars
+   Warm ceramic minimal · sans body + mono data · segmented rating bars
    ========================================================================== */
 
 /* ---- Tokens ---------------------------------------------------------- */
@@ -74,7 +74,7 @@ a { color: inherit; }
 .lead    { font-size: var(--t-lead);    line-height: 1.55; color: var(--ink-2); margin: 0; }
 .muted   { color: var(--clay); }
 
-/* Mono is reserved for data: dates, cafés, scores, tags, labels */
+/* Mono is reserved for data: dates, cafés, ratings, tags, labels */
 .mono {
   font-family: var(--mono);
   font-size: var(--t-small);
@@ -208,7 +208,7 @@ a { color: inherit; }
 /* ---- Taste ratings ---------------------------------------------------
    There is no overall score. A cup is described by its taste axes only.  */
 
-/* Segmented bar — 10 cells, filled left to right */
+/* Segmented bar — 5 cells for a 0-5 rating, filled left to right */
 .bars { display: grid; gap: var(--s3); }
 .bar-row { display: grid; grid-template-columns: 84px 1fr 34px; align-items: center; gap: var(--s3); }
 .bar-name {
@@ -223,6 +223,32 @@ a { color: inherit; }
   font-family: var(--mono); font-size: var(--t-small);
   font-variant-numeric: tabular-nums; text-align: right; color: var(--ink);
 }
+
+/* A labelled editable axis: name + value above, clickable bar below */
+.axis { display: grid; gap: var(--s2); }
+.axis-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s2); }
+.axis-right { display: flex; align-items: baseline; gap: var(--s2); }
+.axis-val {
+  font-family: var(--mono); font-size: var(--t-small);
+  font-variant-numeric: tabular-nums; color: var(--ink);
+}
+.axis-x {
+  border: 0; background: none; cursor: pointer; padding: 0 1px;
+  color: var(--clay); font-size: 13px; line-height: 1;
+  opacity: 0; transition: opacity .15s, color .15s;
+}
+.axis:hover .axis-x, .axis-x:focus-visible { opacity: 1; }
+.axis-x:hover { color: var(--ink); }
+
+/* Editable bar — the same component, clickable. There is no separate slider:
+   you set a rating by clicking the bar you are already reading. */
+.bar-input { cursor: pointer; }
+.bar-input .bar-cell { height: 22px; transition: background .08s; }
+.bar-input:focus-visible { outline: 2px solid var(--matcha); outline-offset: 4px; }
+
+/* Hover preview — lighter than a committed value */
+.bar-cell.preview.on { background: var(--matcha-line); }
+.bar-cell.preview.half { background: linear-gradient(90deg, var(--matcha-line) 50%, var(--paper-sunk) 50%); }
 
 /* ---- Form controls --------------------------------------------------- */
 .field { display: block; }
@@ -243,20 +269,6 @@ a { color: inherit; }
 }
 .textarea { min-height: 200px; resize: vertical; line-height: 1.7; }
 .hint { font-family: var(--mono); font-size: var(--t-micro); color: var(--clay); margin-top: 6px; }
-
-/* Slider */
-.slider { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; border-radius: var(--r-flat); background: var(--paper-sunk); outline: none; }
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none; appearance: none;
-  width: 18px; height: 18px; border-radius: 50%;
-  background: var(--matcha); border: 3px solid var(--surface);
-  box-shadow: var(--e2); cursor: pointer;
-}
-.slider::-moz-range-thumb {
-  width: 18px; height: 18px; border-radius: 50%;
-  background: var(--matcha); border: 3px solid var(--surface);
-  box-shadow: var(--e2); cursor: pointer;
-}
 
 /* ---- Divider --------------------------------------------------------- */
 .rule { height: 1px; background: var(--line); border: 0; margin: var(--s6) 0; }

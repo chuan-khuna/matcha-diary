@@ -61,12 +61,9 @@
                 font-family: var(--mono); font-size: var(--t-small); min-width: 160px; flex: 1; }
   .chip .x { border: 0; background: none; cursor: pointer; color: inherit; padding: 0 0 0 2px; font-size: 12px; }
 
-  /* Score editor */
+  /* Rating editor — .axis itself lives in styles.css */
   .score-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5) var(--s7); }
   @media (max-width: 640px) { .score-grid { grid-template-columns: 1fr; } }
-  .axis { display: grid; gap: var(--s2); }
-  .axis-head { display: flex; align-items: baseline; justify-content: space-between; }
-  .axis-val { font-family: var(--mono); font-size: var(--t-small); font-variant-numeric: tabular-nums; }
 
   .submit-bar {
     position: sticky; bottom: 0;
@@ -171,14 +168,33 @@ The front is all cut grass and something like snap peas. Then it turns: a long s
     <!-- Taste ratings -->
     <section>
       <p class="label">Taste ratings</p>
-      <p class="hint" style="margin:0 0 var(--s4)">Rate each note 0–10. Leave one at zero if it wasn't there — nothing is averaged into a single score.</p>
+      <p class="hint" style="margin:0 0 var(--s5)">Rate each note out of 5. Click a bar to set it — left half of a cell is the half step. Click the current value again to clear it, or use ← → to nudge. Six notes are suggested to start; drop any that don't apply and add your own. Nothing is averaged into a single score.</p>
       <div class="score-grid" id="scores">
-        <div class="axis" data-axis="umami"      data-init="8.5"></div>
-        <div class="axis" data-axis="sweetness"  data-init="6"></div>
-        <div class="axis" data-axis="bitterness" data-init="4"></div>
-        <div class="axis" data-axis="creaminess" data-init="9"></div>
-        <div class="axis" data-axis="aroma"      data-init="7.5"></div>
-        <div class="axis" data-axis="aftertaste" data-init="9.5"></div>
+        <div class="axis" data-axis="umami"       data-init="4.5" data-removable></div>
+        <div class="axis" data-axis="sweetness"   data-init="3"   data-removable></div>
+        <div class="axis" data-axis="bitterness"  data-init="2"   data-removable></div>
+        <div class="axis" data-axis="astringency" data-init="1.5" data-removable></div>
+        <div class="axis" data-axis="aroma"       data-init="4"   data-removable></div>
+        <div class="axis" data-axis="aftertaste"  data-init="5"   data-removable></div>
+      </div>
+
+      <p class="hint" style="margin:var(--s6) 0 var(--s3)">Rate another note</p>
+      <div class="chips" id="axisSuggest">
+        <button class="chip chip-btn" type="button">body</button>
+        <button class="chip chip-btn" type="button">creaminess</button>
+        <button class="chip chip-btn" type="button">smoothness</button>
+        <button class="chip chip-btn" type="button">froth</button>
+        <button class="chip chip-btn" type="button">vegetal</button>
+        <button class="chip chip-btn" type="button">marine</button>
+        <button class="chip chip-btn" type="button">nutty</button>
+        <button class="chip chip-btn" type="button">floral</button>
+        <button class="chip chip-btn" type="button">cocoa</button>
+        <button class="chip chip-btn" type="button">roasty</button>
+        <button class="chip chip-btn" type="button">freshness</button>
+        <button class="chip chip-btn" type="button">balance</button>
+      </div>
+      <div class="note-box" style="margin-top:var(--s3); max-width:320px">
+        <input class="note-input" id="axisInput" placeholder="or name your own…">
       </div>
     </section>
 
@@ -246,34 +262,34 @@ The front is all cut grass and something like snap peas. Then it turns: a long s
     var chip = e.target.closest('.chip');
     if (chip) { addNote(chip.textContent); chip.remove(); }
   });
+</script>
+<script src="ratings.js"></script>
+<script>
+  /* ---- Rated notes: add from the suggested vocabulary or name your own ---- */
+  var scores = document.getElementById('scores');
+  var axisInput = document.getElementById('axisInput');
 
-  /* ---- Taste ratings: slider + live segmented bar ---- */
-  var axes = Array.from(document.querySelectorAll('.axis'));
-
-  axes.forEach(function (axis) {
-    var name = axis.dataset.axis;
-    var init = parseFloat(axis.dataset.init);
-    axis.innerHTML =
-      '<div class="axis-head"><span class="bar-name">' + name + '</span>' +
-      '<span class="axis-val">' + init.toFixed(1) + '</span></div>' +
-      '<div class="bar-track"></div>' +
-      '<input class="slider" type="range" min="0" max="10" step="0.5" value="' + init + '">';
-    axis.querySelector('.slider').addEventListener('input', function (e) {
-      render(axis, parseFloat(e.target.value));
+  function addAxis(name) {
+    name = name.trim().toLowerCase().slice(0, 24);
+    if (!name) return false;
+    var taken = Array.prototype.some.call(scores.children, function (a) {
+      return a.dataset.axis === name;
     });
-    render(axis, init);
+    if (taken) return false;
+    MatchaRatings.addAxis(scores, name, 0);
+    return true;
+  }
+
+  document.getElementById('axisSuggest').addEventListener('click', function (e) {
+    var chip = e.target.closest('.chip');
+    if (chip && addAxis(chip.textContent)) chip.remove();
   });
 
-  function render(axis, v) {
-    axis.querySelector('.axis-val').textContent = v.toFixed(1);
-    var track = axis.querySelector('.bar-track');
-    track.innerHTML = '';
-    for (var i = 0; i < 10; i++) {
-      var cell = document.createElement('i');
-      cell.className = 'bar-cell' + (v >= i + 1 ? ' on' : v > i ? ' half' : '');
-      track.appendChild(cell);
-    }
-  }
+  axisInput.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ',') return;
+    e.preventDefault();
+    if (addAxis(axisInput.value)) axisInput.value = '';
+  });
 </script>
 
 </body>

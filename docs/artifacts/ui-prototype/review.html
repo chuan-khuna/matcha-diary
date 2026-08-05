@@ -37,10 +37,6 @@
   /* Body copy */
   .prose { font-size: var(--t-lead); line-height: 1.75; color: var(--ink-2); }
   .prose p { margin: 0 0 var(--s4); }
-  .prose p:first-child::first-letter {
-    float: left; font-size: 3.1rem; line-height: .84; font-weight: 600;
-    padding: 4px 10px 0 0; color: var(--matcha-deep);
-  }
 
   /* Score panel */
   .score-panel { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s5) var(--s7); }
@@ -128,18 +124,20 @@
   <section>
     <div class="section-head">
       <h2 class="label">Taste ratings</h2>
-      <span class="mono muted">0–10 per note</span>
+      <span class="mono muted">0–5 per note · 8 rated</span>
     </div>
     <div class="score-panel">
       <div class="bars">
-        <div class="bar-row"><span class="bar-name">umami</span><span class="bar-track" data-value="8.5"></span><span class="bar-val">8.5</span></div>
-        <div class="bar-row"><span class="bar-name">sweetness</span><span class="bar-track" data-value="6"></span><span class="bar-val">6.0</span></div>
-        <div class="bar-row"><span class="bar-name">bitterness</span><span class="bar-track" data-value="4"></span><span class="bar-val">4.0</span></div>
+        <div class="bar-row"><span class="bar-name">umami</span><span class="bar-track" data-value="4.5"></span><span class="bar-val">4.5</span></div>
+        <div class="bar-row"><span class="bar-name">sweetness</span><span class="bar-track" data-value="3"></span><span class="bar-val">3.0</span></div>
+        <div class="bar-row"><span class="bar-name">bitterness</span><span class="bar-track" data-value="2"></span><span class="bar-val">2.0</span></div>
+        <div class="bar-row"><span class="bar-name">astringency</span><span class="bar-track" data-value="1.5"></span><span class="bar-val">1.5</span></div>
       </div>
       <div class="bars">
-        <div class="bar-row"><span class="bar-name">creaminess</span><span class="bar-track" data-value="9"></span><span class="bar-val">9.0</span></div>
-        <div class="bar-row"><span class="bar-name">aroma</span><span class="bar-track" data-value="7.5"></span><span class="bar-val">7.5</span></div>
-        <div class="bar-row"><span class="bar-name">aftertaste</span><span class="bar-track" data-value="9.5"></span><span class="bar-val">9.5</span></div>
+        <div class="bar-row"><span class="bar-name">aroma</span><span class="bar-track" data-value="4"></span><span class="bar-val">4.0</span></div>
+        <div class="bar-row"><span class="bar-name">aftertaste</span><span class="bar-track" data-value="5"></span><span class="bar-val">5.0</span></div>
+        <div class="bar-row"><span class="bar-name">froth</span><span class="bar-track" data-value="4.5"></span><span class="bar-val">4.5</span></div>
+        <div class="bar-row"><span class="bar-name">vegetal</span><span class="bar-track" data-value="4"></span><span class="bar-val">4.0</span></div>
       </div>
     </div>
   </section>
@@ -167,17 +165,8 @@
   <div class="foot mono">matcha diary — showcase build · review detail</div>
 </main>
 
+<script src="ratings.js"></script>
 <script>
-  // Render 10-cell segmented bars from data-value (0–10).
-  document.querySelectorAll('.bar-track[data-value]').forEach(function (track) {
-    var v = parseFloat(track.dataset.value);
-    for (var i = 0; i < 10; i++) {
-      var cell = document.createElement('i');
-      cell.className = 'bar-cell' + (v >= i + 1 ? ' on' : v > i ? ' half' : '');
-      track.appendChild(cell);
-    }
-  });
-
   // Thumbnail → cover swap (demo interaction).
   var cover = document.getElementById('cover');
   var badge = cover.querySelector('.badge');
