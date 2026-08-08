@@ -1,13 +1,14 @@
 # Matcha Diary — UI prototype
 
 Clickable, non-production prototype of the app. Static HTML, one stylesheet, one script — no build
-step. Open `index.html` in a browser; the top nav links all four pages.
+step. Open `index.html` in a browser; the top nav links all five pages.
 
 | File | Screen |
 |---|---|
 | `index.html` | Feed — single-column timeline, uniform posts, no ratings |
 | `review.html` | Review detail — gallery, diary body, taste notes, taste ratings |
 | `create.html` | New entry — photo tray with cover selection, taste-note builder, click-to-rate bars |
+| `database.html` | Powder database — searchable index of powders beside the open record |
 | `design-system.html` | Colour, type, space, shape, controls, post anatomy |
 | `styles.css` | The design system itself — all tokens live here |
 | `ratings.js` | The taste-rating bar, in both its read-only and editable modes |
@@ -54,8 +55,40 @@ pending value in a lighter green. Both modes come from `ratings.js`:
 <div class="axis" data-axis="umami" data-init="4.5"></div> <!-- rate  -->
 ```
 
+## Powder database
+
+A review is about one cup; a powder outlives every cup made from it. `database.html` is the
+reference side of the app — one record per powder, six fields and no more:
+
+| Field | Shape |
+|---|---|
+| brand | The maker |
+| name | The powder or blend name |
+| cultivars | Tags — the named varieties, no blend shares or ratios |
+| description | Long prose — what the powder is and how it behaves |
+| taste notes | Tags, from the same vocabulary the reviews use |
+| photos | A cover plus a thumb strip |
+
+Deliberately **not** here: price, grade, harvest year, stock. Those change; a powder does not.
+There is also no score — a powder is described, never ranked, exactly as a cup is.
+
+**Layout.** A card grid. Each card is the compact form of a record — cover photo with a photo
+count, brand, name, cultivars, the first paragraph clamped to three lines, taste notes pinned to
+the bottom edge so cards in a row line up. Clicking a card opens the full record as a sheet:
+gallery, both fields of tags with their labels, and the description unclipped.
+
+**Two kinds of tag, one chip.** Cultivars are tinted (`.chip-cv`, matcha-soft) because a cultivar
+is a fact about the powder; taste notes stay neutral because they are somebody's impression. The
+cultivar filter above the grid uses the same chip a third way — solid green when pressed, so an
+action never looks like data.
+
+Records are defined as one array at the bottom of `database.html`; the cultivar filter chips are
+built from that array rather than hand-maintained.
+
 ## Known stand-ins
 
 - Photos are CSS gradients (`.ph-1`–`.ph-8`). Swap for `<img>` when real uploads exist.
+- Database records name real makers, but every cultivar split, description and taste note attached
+  to them is invented placeholder copy. The page says so above the index.
 - Fonts load from Google Fonts with a system fallback stack; the pages hold up offline.
 - Interactions are demo-only (cover swap, chip add/remove, rating bars). No data layer, no routing.
