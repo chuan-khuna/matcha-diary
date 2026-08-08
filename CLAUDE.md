@@ -1,3 +1,20 @@
+# Colour
+
+Every colour in this repo is written in **OKLCH** — design tokens, stylesheets, markup, prose.
+`oklch(L C H)`, or `oklch(L C H / A)` with alpha. `L` is a 0–1 decimal to 4 places, `C` to 4, `H` in
+degrees to 2. Fully neutral values collapse to `oklch(1 0 0)` rather than carrying a meaningless hue.
+
+Hex and `rgb()` may appear **only** as a reference beside an OKLCH value — a table column, a comment —
+never as the value a stylesheet or a token file reads. When you add one, it must be the exact
+round-trip of the OKLCH beside it.
+
+Why: `L` is perceptual, so a tint is a change to `L` alone and a ramp holds its hue instead of
+drifting. That property is also the check — if two shades of one colour disagree on `H`, that is a
+bug the hex hid. **But do not infer contrast from `L`.** WCAG ratios are computed in sRGB; compute
+them, don't estimate them.
+
+`DESIGN.md` is the source of truth for the palette. Add a colour there before using it anywhere else.
+
 # Artifacts
 
 Everything under `docs/artifacts/` follows this convention — files you create there, and files you

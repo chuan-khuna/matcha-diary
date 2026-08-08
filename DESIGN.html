@@ -16,22 +16,22 @@
 
 :root {
   /* colors */
-  --primary:              #4A7C59;
-  --primary-hover:        #3A6347;
-  --primary-container:    #E7F0E6;
-  --primary-outline:      #C6DCC4;
-  --on-primary:           #FFFFFF;
-  --on-primary-container: #3A6347;
-  --background:           #FAF8F3;
-  --surface:              #FFFFFF;
-  --surface-sunk:         #F2EEE5;
-  --on-surface:           #1F241E;
-  --on-surface-variant:   #4C5349;
-  --on-surface-muted:     #8B8578;
-  --outline:              #D8D2C5;
-  --outline-variant:      #E9E5DC;
-  --placeholder:          #B3ADA0;
-  --scrim:                rgba(20, 24, 19, .62);
+  --primary:              oklch(0.5406 0.0773 152.71);
+  --primary-hover:        oklch(0.4609 0.0652 153.33);
+  --primary-container:    oklch(0.9456 0.0164 142.56);
+  --primary-outline:      oklch(0.8715 0.0402 142.92);
+  --on-primary:           oklch(1 0 0);
+  --on-primary-container: oklch(0.4609 0.0652 153.33);
+  --background:           oklch(0.9793 0.0070 88.64);
+  --surface:              oklch(1 0 0);
+  --surface-sunk:         oklch(0.9497 0.0127 86.83);
+  --on-surface:           oklch(0.2530 0.0133 140.45);
+  --on-surface-variant:   oklch(0.4327 0.0184 136.18);
+  --on-surface-muted:     oklch(0.6181 0.0204 86.17);
+  --outline:              oklch(0.8650 0.0188 86.15);
+  --outline-variant:      oklch(0.9225 0.0128 86.83);
+  --placeholder:          oklch(0.7489 0.0195 86.16);
+  --scrim:                oklch(0.2028 0.0115 139.43 / 0.62);
 
   /* type */
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -45,9 +45,9 @@
   --r-none: 0px; --r-xs: 2px; --r-sm: 3px; --r-md: 5px; --r-lg: 8px; --r-full: 9999px;
 
   /* elevation */
-  --e1: 0 1px 2px rgba(48, 42, 30, .05);
-  --e2: 0 2px 10px rgba(48, 42, 30, .07);
-  --e3: 0 12px 32px rgba(48, 42, 30, .10);
+  --e1: 0 1px 2px oklch(0.2878 0.0225 84.41 / 0.05);
+  --e2: 0 2px 10px oklch(0.2878 0.0225 84.41 / 0.07);
+  --e3: 0 12px 32px oklch(0.2878 0.0225 84.41 / 0.10);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -88,7 +88,7 @@ code { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; }
 /* ---- Chrome ---------------------------------------------------------- */
 .topbar {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(250, 248, 243, .88);
+  background: oklch(0.9793 0.0070 88.64 / 0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--outline-variant);
 }
@@ -100,8 +100,8 @@ code { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; }
          letter-spacing: -.01em; text-decoration: none; color: inherit; flex: none; }
 .brand-mark {
   width: 26px; height: 26px; border-radius: var(--r-full); flex: none;
-  background: radial-gradient(circle at 32% 28%, #86B378, var(--primary) 55%, var(--primary-hover));
-  box-shadow: inset 0 0 0 3px rgba(255,255,255,.5);
+  background: radial-gradient(circle at 32% 28%, oklch(0.7192 0.0960 138.42), var(--primary) 55%, var(--primary-hover));
+  box-shadow: inset 0 0 0 3px oklch(1 0 0 / 0.5);
 }
 .jump { display: flex; gap: var(--xs); overflow-x: auto; scrollbar-width: none; }
 .jump::-webkit-scrollbar { display: none; }
@@ -164,7 +164,7 @@ section.block { padding: var(--2xl) 0; border-top: 1px solid var(--outline-varia
 .dot { display: inline-block; width: 12px; height: 12px; border-radius: var(--r-xs);
        border: 1px solid var(--outline-variant); vertical-align: -1px; margin-right: 8px; }
 .pass { color: var(--on-primary-container); }
-.warn { color: #9A5A34; }
+.warn { color: oklch(0.5330 0.0993 50.04); }
 
 /* ---- Type specimens -------------------------------------------------- */
 .spec { display: grid; grid-template-columns: 190px 1fr; gap: var(--lg); align-items: baseline;
@@ -256,18 +256,18 @@ section.block { padding: var(--2xl) 0; border-top: 1px solid var(--outline-varia
 /* Photo stand-ins */
 .photo { position: relative; background: var(--surface-sunk); overflow: hidden;
          border: 1px solid var(--outline-variant); }
-.ph-1 { background: linear-gradient(150deg, #A8C89A 0%, #6E9E63 45%, #43663C 100%); }
-.ph-3 { background: linear-gradient(140deg, #DCD3C2 0%, #9BAF84 55%, #4F6B45 100%); }
-.ph-6 { background: linear-gradient(130deg, #E8E0CB 0%, #A9BE8E 52%, #6B8A57 100%); }
+.ph-1 { background: linear-gradient(150deg, oklch(0.7971 0.0721 136.25) 0%, oklch(0.6496 0.0995 139.83) 45%, oklch(0.4719 0.0769 140.34) 100%); }
+.ph-3 { background: linear-gradient(140deg, oklch(0.8695 0.0250 83.41) 0%, oklch(0.7272 0.0640 128.19) 55%, oklch(0.4950 0.0672 137.69) 100%); }
+.ph-6 { background: linear-gradient(130deg, oklch(0.9074 0.0293 89.58) 0%, oklch(0.7731 0.0697 127.16) 52%, oklch(0.5963 0.0820 133.79) 100%); }
 .shot-cover { aspect-ratio: 3 / 2; border-radius: var(--r-lg); box-shadow: var(--e2); border: 0; }
 .shot-feed  { aspect-ratio: 4 / 3; border-radius: var(--r-md); }
 .shot-thumb { aspect-ratio: 1; border-radius: var(--r-sm); }
 .badge { position: absolute; right: 12px; bottom: 12px; z-index: 2;
          padding: 4px 9px; border-radius: var(--r-xs); background: var(--scrim);
-         backdrop-filter: blur(6px); color: #fff;
+         backdrop-filter: blur(6px); color: oklch(1 0 0);
          font-family: var(--mono); font-size: 11px; letter-spacing: .06em; }
 .avatar { width: 34px; height: 34px; border-radius: var(--r-full); flex: none;
-          background: linear-gradient(135deg, #C8D6B9, #6E9E63); }
+          background: linear-gradient(135deg, oklch(0.8576 0.0421 128.35), oklch(0.6496 0.0995 139.83)); }
 
 /* ---- Do / Don't ------------------------------------------------------ */
 .rules { display: grid; grid-template-columns: 1fr 1fr; gap: var(--lg); }
@@ -278,7 +278,7 @@ section.block { padding: var(--2xl) 0; border-top: 1px solid var(--outline-varia
 .mark { width: 20px; height: 20px; border-radius: var(--r-xs); display: grid; place-content: center;
         font-family: var(--mono); font-size: 11px; line-height: 1; }
 .mark.do    { background: var(--primary-container); color: var(--on-primary-container); }
-.mark.dont  { background: #F3E7E1; color: #9A5A34; }
+.mark.dont  { background: oklch(0.9358 0.0154 48.55); color: oklch(0.5330 0.0993 50.04); }
 .rules h3 { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
             text-transform: uppercase; color: var(--on-surface-muted);
             font-weight: 400; margin-bottom: var(--md); }
@@ -394,42 +394,49 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
       photograph or a piece of interactive state.
     </p>
 
+    <p class="note" style="margin-bottom:var(--xl)">
+      <strong>Every colour is authored in <code>oklch(L C H)</code></strong> — tokens, stylesheets,
+      prototype markup. The sRGB value under each swatch is a reference for design tools that still
+      speak hex; it is not a second source of truth. Each one is the exact round-trip of the OKLCH
+      above it, to the byte.
+    </p>
+
     <p class="sub-label t-label-caps">Accent — matcha</p>
     <div class="grid g4">
-      <div class="swatch"><div class="fill" style="background:#4A7C59"></div>
-        <div class="info"><span class="tok">primary</span><span class="val">#4A7C59 · --matcha</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#3A6347"></div>
-        <div class="info"><span class="tok">primary-hover</span><span class="val">#3A6347 · --matcha-deep</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#C6DCC4"></div>
-        <div class="info"><span class="tok">primary-outline</span><span class="val">#C6DCC4 · --matcha-line</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#E7F0E6"></div>
-        <div class="info"><span class="tok">primary-container</span><span class="val">#E7F0E6 · --matcha-soft</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.5406 0.0773 152.71)"></div>
+        <div class="info"><span class="tok">primary</span><span class="val">oklch(0.5406 0.0773 152.71)</span><span class="val">--matcha · #4A7C59</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.4609 0.0652 153.33)"></div>
+        <div class="info"><span class="tok">primary-hover</span><span class="val">oklch(0.4609 0.0652 153.33)</span><span class="val">--matcha-deep · #3A6347</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.8715 0.0402 142.92)"></div>
+        <div class="info"><span class="tok">primary-outline</span><span class="val">oklch(0.8715 0.0402 142.92)</span><span class="val">--matcha-line · #C6DCC4</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.9456 0.0164 142.56)"></div>
+        <div class="info"><span class="tok">primary-container</span><span class="val">oklch(0.9456 0.0164 142.56)</span><span class="val">--matcha-soft · #E7F0E6</span></div></div>
     </div>
 
     <p class="sub-label t-label-caps">Surface &amp; line</p>
     <div class="grid g5">
-      <div class="swatch"><div class="fill" style="background:#FAF8F3"></div>
-        <div class="info"><span class="tok">background</span><span class="val">#FAF8F3 · --paper</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#FFFFFF; border-bottom:1px solid var(--outline-variant)"></div>
-        <div class="info"><span class="tok">surface</span><span class="val">#FFFFFF · --surface</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#F2EEE5"></div>
-        <div class="info"><span class="tok">surface-sunk</span><span class="val">#F2EEE5 · --paper-sunk</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#E9E5DC"></div>
-        <div class="info"><span class="tok">outline-variant</span><span class="val">#E9E5DC · --line</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#D8D2C5"></div>
-        <div class="info"><span class="tok">outline</span><span class="val">#D8D2C5 · --line-strong</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.9793 0.0070 88.64)"></div>
+        <div class="info"><span class="tok">background</span><span class="val">oklch(0.9793 0.0070 88.64)</span><span class="val">--paper · #FAF8F3</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(1 0 0); border-bottom:1px solid var(--outline-variant)"></div>
+        <div class="info"><span class="tok">surface</span><span class="val">oklch(1 0 0)</span><span class="val">--surface · #FFFFFF</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.9497 0.0127 86.83)"></div>
+        <div class="info"><span class="tok">surface-sunk</span><span class="val">oklch(0.9497 0.0127 86.83)</span><span class="val">--paper-sunk · #F2EEE5</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.9225 0.0128 86.83)"></div>
+        <div class="info"><span class="tok">outline-variant</span><span class="val">oklch(0.9225 0.0128 86.83)</span><span class="val">--line · #E9E5DC</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.8650 0.0188 86.15)"></div>
+        <div class="info"><span class="tok">outline</span><span class="val">oklch(0.8650 0.0188 86.15)</span><span class="val">--line-strong · #D8D2C5</span></div></div>
     </div>
 
     <p class="sub-label t-label-caps">Ink</p>
     <div class="grid g4">
-      <div class="swatch"><div class="fill" style="background:#1F241E"></div>
-        <div class="info"><span class="tok">on-surface</span><span class="val">#1F241E · --ink</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#4C5349"></div>
-        <div class="info"><span class="tok">on-surface-variant</span><span class="val">#4C5349 · --ink-2</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#8B8578"></div>
-        <div class="info"><span class="tok">on-surface-muted</span><span class="val">#8B8578 · --clay</span></div></div>
-      <div class="swatch"><div class="fill" style="background:#B3ADA0"></div>
-        <div class="info"><span class="tok">placeholder</span><span class="val">#B3ADA0</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.2530 0.0133 140.45)"></div>
+        <div class="info"><span class="tok">on-surface</span><span class="val">oklch(0.2530 0.0133 140.45)</span><span class="val">--ink · #1F241E</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.4327 0.0184 136.18)"></div>
+        <div class="info"><span class="tok">on-surface-variant</span><span class="val">oklch(0.4327 0.0184 136.18)</span><span class="val">--ink-2 · #4C5349</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.6181 0.0204 86.17)"></div>
+        <div class="info"><span class="tok">on-surface-muted</span><span class="val">oklch(0.6181 0.0204 86.17)</span><span class="val">--clay · #8B8578</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.7489 0.0195 86.16)"></div>
+        <div class="info"><span class="tok">placeholder</span><span class="val">oklch(0.7489 0.0195 86.16)</span><span class="val">#B3ADA0</span></div></div>
     </div>
 
     <p class="sub-label t-label-caps">Contrast</p>
@@ -437,23 +444,91 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
       <table class="tbl">
         <thead><tr><th>Pair</th><th>Ratio</th><th>Verdict</th></tr></thead>
         <tbody>
-          <tr><td class="m"><span class="dot" style="background:#1F241E"></span>on-surface on background</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(0.2530 0.0133 140.45)"></span>on-surface on background</td>
               <td class="m">14.9:1</td><td class="m pass">AAA</td></tr>
-          <tr><td class="m"><span class="dot" style="background:#4C5349"></span>on-surface-variant on background</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(0.4327 0.0184 136.18)"></span>on-surface-variant on background</td>
               <td class="m">7.5:1</td><td class="m pass">AAA</td></tr>
-          <tr><td class="m"><span class="dot" style="background:#3A6347"></span>on-primary-container on primary-container</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(0.4609 0.0652 153.33)"></span>on-primary-container on primary-container</td>
               <td class="m">5.9:1</td><td class="m pass">AA</td></tr>
-          <tr><td class="m"><span class="dot" style="background:#4A7C59"></span>primary on background</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(0.5406 0.0773 152.71)"></span>primary on background</td>
               <td class="m">4.6:1</td><td class="m pass">AA</td></tr>
-          <tr><td class="m"><span class="dot" style="background:#FFFFFF"></span>on-primary on primary</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(1 0 0)"></span>on-primary on primary</td>
               <td class="m">4.9:1</td><td class="m pass">AA</td></tr>
-          <tr><td class="m"><span class="dot" style="background:#8B8578"></span>on-surface-muted on background</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(0.6181 0.0204 86.17)"></span>on-surface-muted on background</td>
               <td class="m">3.5:1</td><td class="m warn">Large text / non-text only</td></tr>
-          <tr><td class="m"><span class="dot" style="background:#B3ADA0"></span>placeholder on surface</td>
+          <tr><td class="m"><span class="dot" style="background:oklch(0.7489 0.0195 86.16)"></span>placeholder on surface</td>
               <td class="m">2.2:1</td><td class="m warn">Hint only — never load-bearing</td></tr>
         </tbody>
       </table>
     </div>
+
+    <p class="sub-label t-label-caps">Two inconsistencies the conversion exposed</p>
+    <p class="prose" style="margin-bottom:var(--lg)">
+      Both are recorded, not fixed — changing them changes the design, which is a separate decision.
+      Hex hid them; hue as an explicit number does not.
+    </p>
+    <div class="grid g2">
+      <div class="demo">
+        <div class="demo-head"><h3>The accent is not one hue</h3></div>
+        <div class="bars" style="gap:var(--sm)">
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">primary</span>
+            <span style="height:20px; background:oklch(0.5406 0.0773 152.71)"></span>
+            <span class="t-data-md">H 152.7</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">primary-hover</span>
+            <span style="height:20px; background:oklch(0.4609 0.0652 153.33)"></span>
+            <span class="t-data-md">H 153.3</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">primary-outline</span>
+            <span style="height:20px; background:oklch(0.8715 0.0402 142.92)"></span>
+            <span class="t-data-md">H 142.9</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">primary-container</span>
+            <span style="height:20px; background:oklch(0.9456 0.0164 142.56)"></span>
+            <span class="t-data-md">H 142.6</span></div>
+        </div>
+        <p class="hint">
+          The two solids sit at H ≈ 153; the two tints sit at H ≈ 142.7. The ramp drifts about 10°
+          yellower as it lightens instead of holding a hue.
+        </p>
+      </div>
+      <div class="demo">
+        <div class="demo-head"><h3>The neutrals change hue at the dark end</h3></div>
+        <div class="bars" style="gap:var(--sm)">
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">background</span>
+            <span style="height:20px; background:oklch(0.9793 0.0070 88.64)"></span>
+            <span class="t-data-md">H 88.6</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">outline</span>
+            <span style="height:20px; background:oklch(0.8650 0.0188 86.15)"></span>
+            <span class="t-data-md">H 86.2</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">clay</span>
+            <span style="height:20px; background:oklch(0.6181 0.0204 86.17)"></span>
+            <span class="t-data-md">H 86.2</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">ink-2</span>
+            <span style="height:20px; background:oklch(0.4327 0.0184 136.18)"></span>
+            <span class="t-data-md">H 136.2</span></div>
+          <div class="bar-row" style="grid-template-columns:124px 1fr 62px">
+            <span class="bar-name">ink</span>
+            <span style="height:20px; background:oklch(0.2530 0.0133 140.45)"></span>
+            <span class="t-data-md">H 140.5</span></div>
+        </div>
+        <p class="hint">
+          Warm yellow-grey at H ≈ 86–89 down to clay, then the two darkest inks jump to green at
+          H ≈ 136–140. The family reads as warm neutrals at the top and desaturated matcha at the
+          bottom.
+        </p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:var(--lg)">
+      If either is regularised later, do it by holding H constant and moving L and C — that is the
+      whole reason for authoring in OKLCH — and re-check the contrast ratios afterwards rather than
+      assuming they survived.
+    </p>
 
     <p class="note" style="margin-top:var(--xl)">
       <strong>Not yet defined.</strong> There is no error, warning, or success palette, because no
@@ -583,8 +658,9 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
     </div>
     <p class="prose">
       The stack is shallow on purpose — a diary page should feel like paper on a desk, not like cards
-      floating over a void. Every shadow is warm-tinted <code>rgba(48, 42, 30, …)</code>, never
-      neutral black.
+      floating over a void. Every shadow is one warm-tinted colour at H 84 —
+      <code>oklch(0.2878 0.0225 84.41 / …)</code> — never neutral black. Only the alpha changes
+      between levels.
     </p>
     <div class="grid g4" style="margin-top:var(--xl)">
       <div class="elev" style="box-shadow:none; background:var(--background)">
@@ -825,7 +901,8 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
           <li><span class="mark do">✓</span><span>Show taste ratings on the review page only.</span></li>
           <li><span class="mark do">✓</span><span>Keep taste-note chips and rating cells at <code>rounded.none</code>. They are the system's fixed point.</span></li>
           <li><span class="mark do">✓</span><span>Express depth with a hairline and a tone change first; reach for a shadow only for photography and real overlays.</span></li>
-          <li><span class="mark do">✓</span><span>Treat <code>on-surface-muted</code> as a large-text and non-text colour. At 3.5:1 it fails AA for body copy — darken toward <code>#6F6A5E</code> before shipping anything a user must read.</span></li>
+          <li><span class="mark do">✓</span><span>Write every colour as <code>oklch(L C H)</code>, alpha as <code>oklch(L C H / A)</code>. Hex belongs only in a reference column beside an OKLCH value.</span></li>
+          <li><span class="mark do">✓</span><span>Treat <code>on-surface-muted</code> as a large-text and non-text colour. At 3.5:1 it fails AA for body copy — darken toward <code>oklch(0.5252 0.0193 88.06)</code> before shipping anything a user must read.</span></li>
           <li><span class="mark do">✓</span><span>Ship one rating control: the bar you read is the bar you click. Keep the keyboard path and the <code>role="slider"</code> semantics wherever it appears.</span></li>
           <li><span class="mark do">✓</span><span>Clamp the feed excerpt to four lines and cut chip overflow, so every post holds the same height rhythm.</span></li>
           <li><span class="mark do">✓</span><span>Define an <code>error</code> palette in DESIGN.md before building the first failure state.</span></li>
@@ -838,7 +915,8 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
           <li><span class="mark dont">✕</span><span>Set a person's own words in monospace, or a date in the sans face.</span></li>
           <li><span class="mark dont">✕</span><span>Introduce an overall score, an average, or a star count anywhere — not in the feed, not in sorting, not in a profile summary.</span></li>
           <li><span class="mark dont">✕</span><span>Round anything past <code>lg</code> (8px), or add a circle outside the brand mark and avatars.</span></li>
-          <li><span class="mark dont">✕</span><span>Use neutral-black shadows — every shadow is warm-tinted <code>rgba(48, 42, 30, …)</code>.</span></li>
+          <li><span class="mark dont">✕</span><span>Use neutral-black shadows — every shadow is warm-tinted at H 84.</span></li>
+          <li><span class="mark dont">✕</span><span>Infer contrast from <code>L</code>. OKLCH lightness is perceptual and good for building a ramp, but WCAG ratios are computed in sRGB — measure them, don't estimate.</span></li>
           <li><span class="mark dont">✕</span><span>Rely on <code>placeholder</code> (2.2:1) to communicate anything. It is a hint, and every field also needs a real label.</span></li>
           <li><span class="mark dont">✕</span><span>Add a second rating input — no numeric field, no separate slider, no dropdown of values.</span></li>
           <li><span class="mark dont">✕</span><span>Promote, feature, or visually rank a post. Every entry in the timeline is drawn identically.</span></li>
@@ -867,23 +945,23 @@ description: &gt;-
   Warm ceramic minimal. Paper-toned surfaces, one matcha accent, monospace
   reserved for data, near-flat corners.
 colors:
-  primary: "#4A7C59"
-  primary-hover: "#3A6347"
-  primary-container: "#E7F0E6"
-  primary-outline: "#C6DCC4"
-  on-primary: "#FFFFFF"
-  on-primary-container: "#3A6347"
-  background: "#FAF8F3"
-  surface: "#FFFFFF"
-  surface-sunk: "#F2EEE5"
-  on-surface: "#1F241E"
-  on-surface-variant: "#4C5349"
-  on-surface-muted: "#8B8578"
-  outline: "#D8D2C5"
-  outline-variant: "#E9E5DC"
-  placeholder: "#B3ADA0"
-  scrim: "rgba(20, 24, 19, 0.62)"
-  on-scrim: "#FFFFFF"
+  primary: "oklch(0.5406 0.0773 152.71)"
+  primary-hover: "oklch(0.4609 0.0652 153.33)"
+  primary-container: "oklch(0.9456 0.0164 142.56)"
+  primary-outline: "oklch(0.8715 0.0402 142.92)"
+  on-primary: "oklch(1 0 0)"
+  on-primary-container: "oklch(0.4609 0.0652 153.33)"
+  background: "oklch(0.9793 0.0070 88.64)"
+  surface: "oklch(1 0 0)"
+  surface-sunk: "oklch(0.9497 0.0127 86.83)"
+  on-surface: "oklch(0.2530 0.0133 140.45)"
+  on-surface-variant: "oklch(0.4327 0.0184 136.18)"
+  on-surface-muted: "oklch(0.6181 0.0204 86.17)"
+  outline: "oklch(0.8650 0.0188 86.15)"
+  outline-variant: "oklch(0.9225 0.0128 86.83)"
+  placeholder: "oklch(0.7489 0.0195 86.16)"
+  scrim: "oklch(0.2028 0.0115 139.43 / 0.62)"
+  on-scrim: "oklch(1 0 0)"
 typography:
   display:      { fontFamily: Inter, fontSize: 36px, fontWeight: 600, lineHeight: 1.15, letterSpacing: -0.02em }
   headline-lg:  { fontFamily: Inter, fontSize: 24px, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.015em }

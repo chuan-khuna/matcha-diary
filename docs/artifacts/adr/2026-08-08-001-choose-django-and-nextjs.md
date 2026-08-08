@@ -445,6 +445,14 @@ The existing design system ports cleanly, because it is already a token set. `st
 colour, type, spacing and radius as custom properties; Tailwind v4's `@theme` block takes those same
 values and generates the utilities from them.
 
+**Colour is authored in OKLCH** — `DESIGN.md`, `styles.css` and the prototype markup all carry
+`oklch()` values, and `CLAUDE.md` states the convention. This agrees with the stack rather than
+fighting it: Tailwind v4 ships its own default palette in OKLCH and its colour manipulation assumes
+that space, and shadcn's theme variables are OKLCH on v4 too. So the port is a substitution of
+values into a slot that already expects this format, not a conversion. It also makes the token
+overrides below verifiable — a tint that disagrees with its base on `H` is visible in the value,
+where hex hides it.
+
 **Components come from shadcn/ui.** On Tailwind v4 that means the CSS-variable architecture — an
 `@theme inline` block mapping this project's tokens onto the names the components reference, and
 `"tailwind.config": ""` in `components.json`. Radix sits underneath, so dialog, dropdown, select and
@@ -530,8 +538,9 @@ Turborepo or Nx at this size; two directories and two Dockerfiles.
 ## What happens to the prototype
 
 - **`styles.css` tokens** move into Tailwind's `@theme`, with the override warning above, and become
-  the values shadcn's semantic names resolve to. The token set is the source of truth; shadcn's
-  vocabulary is a layer of aliases over it, never a second palette.
+  the values shadcn's semantic names resolve to. They are already OKLCH, which is the format both
+  Tailwind v4 and shadcn expect, so this is a copy rather than a conversion. The token set is the
+  source of truth; shadcn's vocabulary is a layer of aliases over it, never a second palette.
 - **`ratings.js` is ported to a React component, not rewritten.** The behaviour is specified in the
   prototype README and the logic — half-step quantisation, pointer position to value, keyboard
   nudges, click-to-clear — carries across almost line for line. It is roughly eighty lines. shadcn

@@ -14,9 +14,12 @@ step. Open `index.html` in a browser; the top nav links all four pages.
 
 ## Design system
 
-**Warm ceramic minimal.** Paper-toned surfaces (`#FAF8F3`), one matcha accent (`#4A7C59`),
-clay neutrals. Green is reserved for state and data — active nav, filled rating cells, primary
-button — never decoration.
+**Warm ceramic minimal.** Paper-toned surfaces (`oklch(0.9793 0.0070 88.64)`), one matcha accent
+(`oklch(0.5406 0.0773 152.71)`), clay neutrals. Green is reserved for state and data — active nav,
+filled rating cells, primary button — never decoration.
+
+**Colour is written in OKLCH**, here and everywhere else in the repo — see `CLAUDE.md`. `styles.css`
+holds every value; nothing in the markup carries a colour of its own except the photo stand-ins.
 
 **Type.** Inter for anything the author wrote; JetBrains Mono for anything factual — café, date,
 handle, taste notes, axis labels, rating values.

@@ -5,23 +5,23 @@ description: >-
   Warm ceramic minimal. Paper-toned surfaces, one matcha accent, monospace reserved for data,
   near-flat corners. The photographs carry the colour; the interface stays out of their way.
 colors:
-  primary: "#4A7C59"
-  primary-hover: "#3A6347"
-  primary-container: "#E7F0E6"
-  primary-outline: "#C6DCC4"
-  on-primary: "#FFFFFF"
-  on-primary-container: "#3A6347"
-  background: "#FAF8F3"
-  surface: "#FFFFFF"
-  surface-sunk: "#F2EEE5"
-  on-surface: "#1F241E"
-  on-surface-variant: "#4C5349"
-  on-surface-muted: "#8B8578"
-  outline: "#D8D2C5"
-  outline-variant: "#E9E5DC"
-  placeholder: "#B3ADA0"
-  scrim: "rgba(20, 24, 19, 0.62)"
-  on-scrim: "#FFFFFF"
+  primary: "oklch(0.5406 0.0773 152.71)"
+  primary-hover: "oklch(0.4609 0.0652 153.33)"
+  primary-container: "oklch(0.9456 0.0164 142.56)"
+  primary-outline: "oklch(0.8715 0.0402 142.92)"
+  on-primary: "oklch(1 0 0)"
+  on-primary-container: "oklch(0.4609 0.0652 153.33)"
+  background: "oklch(0.9793 0.0070 88.64)"
+  surface: "oklch(1 0 0)"
+  surface-sunk: "oklch(0.9497 0.0127 86.83)"
+  on-surface: "oklch(0.2530 0.0133 140.45)"
+  on-surface-variant: "oklch(0.4327 0.0184 136.18)"
+  on-surface-muted: "oklch(0.6181 0.0204 86.17)"
+  outline: "oklch(0.8650 0.0188 86.15)"
+  outline-variant: "oklch(0.9225 0.0128 86.83)"
+  placeholder: "oklch(0.7489 0.0195 86.16)"
+  scrim: "oklch(0.2028 0.0115 139.43 / 0.62)"
+  on-scrim: "oklch(1 0 0)"
 typography:
   display:
     fontFamily: Inter
@@ -122,7 +122,7 @@ spacing:
   timeline-max: 620px
 components:
   topbar:
-    backgroundColor: "rgba(250, 248, 243, 0.88)"
+    backgroundColor: "oklch(0.9793 0.0070 88.64 / 0.88)"
     borderColor: "{colors.outline-variant}"
     height: "{spacing.topbar-height}"
   nav-link:
@@ -268,36 +268,55 @@ more whitespace, no new colour.
 One accent, one family of warm neutrals, and no second hue. The palette is deliberately small so that
 the only saturated thing on a screen is either a photograph or a piece of interactive state.
 
-- **Primary — Matcha (#4A7C59):** The one accent. Primary buttons, filled rating cells, focus rings,
-  and the active-tab underline. Reaches 4.9:1 on white and 4.6:1 on paper, so it is safe for text.
-- **Primary Container — Matcha Soft (#E7F0E6):** The tinted background for a selected state — the
-  active nav pill, a selected taste-note chip. Always paired with Matcha Deep (#3A6347) for text.
-- **Background — Paper (#FAF8F3):** The page. Warm off-white, never pure white, because pure white
-  makes the photographs look grey.
-- **Surface — White (#FFFFFF):** Raised material only: cards, inputs, ghost buttons. White is the
-  *higher* surface here, which inverts the usual convention and is intentional.
-- **Surface Sunk — Sunk (#F2EEE5):** Recessed material: the empty cells of a rating bar, hover
-  washes, the well behind a photograph that has not loaded.
-- **Ink (#1F241E) / Ink 2 (#4C5349) / Clay (#8B8578):** The three text weights — body copy, secondary
-  copy, and metadata. Clay is the quietest and the one to watch: see Do's and Don'ts.
-- **Outline (#D8D2C5) / Outline Variant (#E9E5DC):** Hairlines. Outline Variant separates rows and
-  cards; Outline is the stronger edge on things you can type into or press.
+**Every colour is authored in `oklch(L C H)`** — tokens, stylesheets, prototype markup. The sRGB
+column below is a reference for design tools that still speak hex; it is not a second source of
+truth. Each hex is the exact round-trip of the OKLCH value beside it, to the byte.
 
-| Token | CSS variable | Value | Role |
-| --- | --- | --- | --- |
-| `primary` | `--matcha` | `#4A7C59` | Accent — state and data only |
-| `primary-hover` | `--matcha-deep` | `#3A6347` | Pressed/hover accent, text on tint |
-| `primary-container` | `--matcha-soft` | `#E7F0E6` | Selected background |
-| `primary-outline` | `--matcha-line` | `#C6DCC4` | Selected border, pending rating preview |
-| `background` | `--paper` | `#FAF8F3` | Page |
-| `surface` | `--surface` | `#FFFFFF` | Cards, fields, ghost buttons |
-| `surface-sunk` | `--paper-sunk` | `#F2EEE5` | Empty rating cells, hover wash |
-| `on-surface` | `--ink` | `#1F241E` | Body text — 14.9:1 on paper |
-| `on-surface-variant` | `--ink-2` | `#4C5349` | Secondary text — 7.5:1 on paper |
-| `on-surface-muted` | `--clay` | `#8B8578` | Metadata — 3.5:1 on paper |
-| `outline` | `--line-strong` | `#D8D2C5` | Interactive edges |
-| `outline-variant` | `--line` | `#E9E5DC` | Dividers, card edges |
-| `scrim` | — | `rgba(20, 24, 19, 0.62)` | Blurred overlay behind labels on photos |
+- **Primary — Matcha:** The one accent. Primary buttons, filled rating cells, focus rings, and the
+  active-tab underline. Reaches 4.9:1 on white and 4.6:1 on paper, so it is safe for text.
+- **Primary Container — Matcha Soft:** The tinted background for a selected state — the active nav
+  pill, a selected taste-note chip. Always paired with Matcha Deep for text.
+- **Background — Paper:** The page. Warm off-white, never pure white, because pure white makes the
+  photographs look grey.
+- **Surface — White:** Raised material only: cards, inputs, ghost buttons. White is the *higher*
+  surface here, which inverts the usual convention and is intentional.
+- **Surface Sunk:** Recessed material: the empty cells of a rating bar, hover washes, the well behind
+  a photograph that has not loaded.
+- **Ink / Ink 2 / Clay:** The three text weights — body copy, secondary copy, and metadata. Clay is
+  the quietest and the one to watch: see Do's and Don'ts.
+- **Outline / Outline Variant:** Hairlines. Outline Variant separates rows and cards; Outline is the
+  stronger edge on things you can type into or press.
+
+| Token | CSS variable | OKLCH | sRGB | Role |
+| --- | --- | --- | --- | --- |
+| `primary` | `--matcha` | `0.5406 0.0773 152.71` | `#4A7C59` | Accent — state and data only |
+| `primary-hover` | `--matcha-deep` | `0.4609 0.0652 153.33` | `#3A6347` | Pressed/hover accent, text on tint |
+| `primary-outline` | `--matcha-line` | `0.8715 0.0402 142.92` | `#C6DCC4` | Selected border, pending rating preview |
+| `primary-container` | `--matcha-soft` | `0.9456 0.0164 142.56` | `#E7F0E6` | Selected background |
+| `background` | `--paper` | `0.9793 0.0070 88.64` | `#FAF8F3` | Page |
+| `surface` | `--surface` | `1 0 0` | `#FFFFFF` | Cards, fields, ghost buttons |
+| `surface-sunk` | `--paper-sunk` | `0.9497 0.0127 86.83` | `#F2EEE5` | Empty rating cells, hover wash |
+| `outline-variant` | `--line` | `0.9225 0.0128 86.83` | `#E9E5DC` | Dividers, card edges |
+| `outline` | `--line-strong` | `0.8650 0.0188 86.15` | `#D8D2C5` | Interactive edges |
+| `placeholder` | — | `0.7489 0.0195 86.16` | `#B3ADA0` | Field hint — 2.2:1, never load-bearing |
+| `on-surface-muted` | `--clay` | `0.6181 0.0204 86.17` | `#8B8578` | Metadata — 3.5:1 on paper |
+| `on-surface-variant` | `--ink-2` | `0.4327 0.0184 136.18` | `#4C5349` | Secondary text — 7.5:1 on paper |
+| `on-surface` | `--ink` | `0.2530 0.0133 140.45` | `#1F241E` | Body text — 14.9:1 on paper |
+| `scrim` | — | `0.2028 0.0115 139.43 / 0.62` | — | Blurred overlay behind labels on photos |
+
+**Two inconsistencies the conversion exposed.** Both are recorded, not fixed — changing them changes
+the design, which is a separate decision:
+
+- **The accent is not one hue.** `primary` and `primary-hover` sit at H ≈ 153, but `primary-outline`
+  and `primary-container` sit at H ≈ 142.7. The tints are about 10° yellower than the solids, so the
+  ramp drifts as it lightens instead of holding a hue.
+- **The neutral ramp changes hue at the dark end.** `background` through `on-surface-muted` are all
+  H ≈ 86–89, a warm yellow-leaning grey. But `on-surface-variant` (H 136) and `on-surface` (H 140)
+  are green. The family reads as "warm neutrals" at the top and as desaturated matcha at the bottom.
+
+If either is regularised later, do it by holding H constant and moving L and C — that is the whole
+reason for authoring in OKLCH — and re-check the contrast ratios afterwards rather than assuming
+they survived.
 
 **Not yet defined.** There is no error, warning, or success palette, because no screen in the current
 prototype has a failure state. When validation and upload errors land, add a single `error` /
@@ -365,15 +384,16 @@ purpose — a diary page should feel like paper on a desk, not like cards floati
 
 - **Level 0 — Page.** Paper background. No border, no shadow.
 - **Level 1 — Resting material.** Cards, inputs, ghost buttons: white fill, 1px `outline-variant`
-  border, and `0 1px 2px rgba(48, 42, 30, .05)`. The border does the separating; the shadow only
-  keeps the edge from looking printed on.
-- **Level 2 — Photography.** The review cover carries `0 2px 10px rgba(48, 42, 30, .07)`, the one
-  place a shadow is allowed to be visible, because a photograph is a physical object in this metaphor.
-- **Level 3 — Reserved.** `0 12px 32px rgba(48, 42, 30, .10)` exists for overlays and menus. No
-  current screen uses it; anything that needs it should be a genuine overlay.
+  border, and `0 1px 2px oklch(0.2878 0.0225 84.41 / 0.05)`. The border does the separating; the
+  shadow only keeps the edge from looking printed on.
+- **Level 2 — Photography.** The review cover carries `0 2px 10px oklch(0.2878 0.0225 84.41 / 0.07)`,
+  the one place a shadow is allowed to be visible, because a photograph is a physical object in this
+  metaphor.
+- **Level 3 — Reserved.** `0 12px 32px oklch(0.2878 0.0225 84.41 / 0.10)` exists for overlays and
+  menus. No current screen uses it; anything that needs it should be a genuine overlay.
 
-Every shadow is warm-tinted (`rgba(48, 42, 30, …)`), never neutral black, and every one is
-low-opacity. Sticky chrome uses translucency plus blur instead of a shadow to signal that content is
+Every shadow is one warm-tinted colour at H 84 — `oklch(0.2878 0.0225 84.41 / …)` — never neutral
+black, and every one is low-opacity. Only the alpha changes between levels. Sticky chrome uses translucency plus blur instead of a shadow to signal that content is
 passing underneath it. Recession is expressed with `surface-sunk` — an empty rating cell reads as a
 groove waiting to be filled rather than as an outlined box.
 
@@ -478,13 +498,17 @@ where white text appears outside a primary button.
 - **Don't** round anything past `lg` (8px), and don't add a circle outside the brand mark and avatars.
 - **Do** express depth with a hairline and a tone change first; reach for a shadow only for
   photography and real overlays.
-- **Don't** use neutral-black shadows — every shadow is warm-tinted `rgba(48, 42, 30, …)`.
+- **Don't** use neutral-black shadows — every shadow is warm-tinted at H 84.
+- **Do** write every colour as `oklch(L C H)`, including alpha as `oklch(L C H / A)`. Hex and `rgb()`
+  belong only in a reference column beside an OKLCH value, never as the thing a stylesheet reads.
+- **Don't** infer contrast from L. OKLCH lightness is perceptual and useful for building a ramp, but
+  WCAG ratios are computed in sRGB — two tokens 0.2 apart in L can still fail. Measure, don't assume.
 - **Do** treat `on-surface-muted` (clay) as a **large-text and non-text colour only**. At 3.5:1 on
   paper it fails WCAG AA for normal-size body copy, and the system currently uses it at 11–13px for
-  metadata and helper text. Darken it toward `#6F6A5E` before shipping anything a user must read, and
-  never use it for an interactive label.
-- **Don't** rely on `placeholder` (#B3ADA0, 2.2:1) to communicate anything. It is a hint, and every
-  field also needs a real label.
+  metadata and helper text. Darken it toward `oklch(0.5252 0.0193 88.06)` — the same H and C, L down
+  by 0.09 — before shipping anything a user must read, and never use it for an interactive label.
+- **Don't** rely on `placeholder` (2.2:1) to communicate anything. It is a hint, and every field also
+  needs a real label.
 - **Do** ship one rating control: the bar you read is the bar you click. Keep the keyboard path
   (arrows, Home, End) and the `role="slider"` semantics wherever it appears.
 - **Don't** add a second rating input — no numeric field, no separate slider, no dropdown of values.

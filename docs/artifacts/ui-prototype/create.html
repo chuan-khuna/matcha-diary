@@ -25,15 +25,15 @@
     position: absolute; z-index: 2; left: 6px; bottom: 6px;
     padding: 3px 7px;
     font-family: var(--mono); font-size: 9px; letter-spacing: .08em;
-    background: rgba(255,255,255,.88); color: var(--ink-2);
+    background: oklch(1 0 0 / 0.88); color: var(--ink-2);
     opacity: 0; transition: opacity .15s;
   }
   .slot:hover .tag { opacity: 1; }
-  .slot.is-cover .tag { opacity: 1; background: var(--matcha); color: #fff; }
+  .slot.is-cover .tag { opacity: 1; background: var(--matcha); color: oklch(1 0 0); }
   .slot .x {
     position: absolute; z-index: 2; right: 6px; top: 6px;
     width: 20px; height: 20px; border: 0; border-radius: var(--r-xs);
-    background: rgba(20,24,19,.6); color: #fff; font-size: 12px; line-height: 1;
+    background: oklch(0.2028 0.0115 139.43 / 0.6); color: oklch(1 0 0); font-size: 12px; line-height: 1;
     cursor: pointer; opacity: 0; transition: opacity .15s;
   }
   .slot:hover .x { opacity: 1; }
