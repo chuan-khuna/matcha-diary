@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matcha Diary — DESIGN.md preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Visual preview of DESIGN.md. The page is built out of the tokens it
+   documents, so what you read here is also what you are looking at.
+   Light-only by design: this system defines no dark palette.
+   ========================================================================== */
+
+:root {
+  /* colors */
+  --primary:              #4A7C59;
+  --primary-hover:        #3A6347;
+  --primary-container:    #E7F0E6;
+  --primary-outline:      #C6DCC4;
+  --on-primary:           #FFFFFF;
+  --on-primary-container: #3A6347;
+  --background:           #FAF8F3;
+  --surface:              #FFFFFF;
+  --surface-sunk:         #F2EEE5;
+  --on-surface:           #1F241E;
+  --on-surface-variant:   #4C5349;
+  --on-surface-muted:     #8B8578;
+  --outline:              #D8D2C5;
+  --outline-variant:      #E9E5DC;
+  --placeholder:          #B3ADA0;
+  --scrim:                rgba(20, 24, 19, .62);
+
+  /* type */
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* spacing */
+  --xs: 4px; --sm: 8px; --md: 12px; --lg: 16px;
+  --xl: 24px; --2xl: 32px; --3xl: 48px; --4xl: 64px;
+
+  /* rounded */
+  --r-none: 0px; --r-xs: 2px; --r-sm: 3px; --r-md: 5px; --r-lg: 8px; --r-full: 9999px;
+
+  /* elevation */
+  --e1: 0 1px 2px rgba(48, 42, 30, .05);
+  --e2: 0 2px 10px rgba(48, 42, 30, .07);
+  --e3: 0 12px 32px rgba(48, 42, 30, .10);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--on-surface);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+a { color: var(--on-primary-container); }
+code { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; }
+
+/* ---- Type roles ------------------------------------------------------ */
+.t-display     { font-size: 36px; font-weight: 600; line-height: 1.15; letter-spacing: -.02em; }
+.t-headline-lg { font-size: 24px; font-weight: 600; line-height: 1.25; letter-spacing: -.015em; }
+.t-headline-md { font-size: 17px; font-weight: 600; line-height: 1.35; letter-spacing: -.01em; }
+.t-body-lg     { font-size: 18px; font-weight: 400; line-height: 1.55; }
+.t-body-prose  { font-size: 18px; font-weight: 400; line-height: 1.75; }
+.t-body-md     { font-size: 15px; font-weight: 400; line-height: 1.6; }
+.t-body-excerpt{ font-size: 15px; font-weight: 400; line-height: 1.65; }
+.t-label-lg    { font-size: 13px; font-weight: 500; line-height: 1.2; }
+.t-data-md     { font-family: var(--mono); font-size: 13px; line-height: 1.5;
+                 letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+.t-data-sm     { font-family: var(--mono); font-size: 11px; line-height: 1.45; letter-spacing: .04em; }
+.t-data-xs     { font-family: var(--mono); font-size: 9px;  line-height: 1.2;  letter-spacing: .08em; }
+.t-label-caps  { font-family: var(--mono); font-size: 11px; line-height: 1.45;
+                 letter-spacing: .12em; text-transform: uppercase; }
+.t-label-axis  { font-family: var(--mono); font-size: 11px; line-height: 1.45;
+                 letter-spacing: .1em;  text-transform: uppercase; }
+
+.muted   { color: var(--on-surface-muted); }
+.variant { color: var(--on-surface-variant); }
+
+/* ---- Chrome ---------------------------------------------------------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(250, 248, 243, .88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--outline-variant);
+}
+.topbar-inner {
+  max-width: 1080px; margin: 0 auto; padding: 0 var(--xl);
+  height: 60px; display: flex; align-items: center; gap: var(--xl);
+}
+.brand { display: flex; align-items: center; gap: var(--sm); font-weight: 600;
+         letter-spacing: -.01em; text-decoration: none; color: inherit; flex: none; }
+.brand-mark {
+  width: 26px; height: 26px; border-radius: var(--r-full); flex: none;
+  background: radial-gradient(circle at 32% 28%, #86B378, var(--primary) 55%, var(--primary-hover));
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,.5);
+}
+.jump { display: flex; gap: var(--xs); overflow-x: auto; scrollbar-width: none; }
+.jump::-webkit-scrollbar { display: none; }
+.jump a {
+  text-decoration: none; color: var(--on-surface-muted);
+  font-family: var(--mono); font-size: 13px; letter-spacing: .02em;
+  padding: 6px 10px; border-radius: var(--r-xs); white-space: nowrap;
+}
+.jump a:hover { color: var(--on-surface); background: var(--surface-sunk); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--xl); }
+
+/* ---- Page head ------------------------------------------------------- */
+.head { padding: var(--3xl) 0 var(--2xl); }
+.head .kicker { display: flex; align-items: center; gap: var(--md); flex-wrap: wrap; }
+.pill {
+  display: inline-block; padding: 3px 8px; border-radius: var(--r-xs);
+  background: var(--primary-container); color: var(--on-primary-container);
+  font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+}
+.head h1 { margin-top: var(--md); }
+.head .sub { max-width: 62ch; margin-top: var(--md); color: var(--on-surface-variant); }
+
+/* ---- Section shell --------------------------------------------------- */
+section.block { padding: var(--2xl) 0; border-top: 1px solid var(--outline-variant); }
+.block-head { display: flex; align-items: baseline; gap: var(--md); flex-wrap: wrap;
+              margin-bottom: var(--xl); }
+.block-head h2 { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.prose { max-width: 72ch; color: var(--on-surface-variant); }
+.prose + .prose { margin-top: var(--md); }
+.sub-label { margin: var(--xl) 0 var(--md); color: var(--on-surface-muted); }
+.sub-label:first-child { margin-top: 0; }
+
+.grid { display: grid; gap: var(--lg); }
+.g5 { grid-template-columns: repeat(5, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 900px) { .g5 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px) { .g4 { grid-template-columns: repeat(2, 1fr); }
+                            .g3, .g2 { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .g5 { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---- Colour swatches ------------------------------------------------- */
+.swatch { border: 1px solid var(--outline-variant); border-radius: var(--r-md);
+          overflow: hidden; background: var(--surface); box-shadow: var(--e1); }
+.swatch .fill { height: 68px; }
+.swatch .info { padding: var(--md); display: grid; gap: 3px; }
+.swatch .tok { font-family: var(--mono); font-size: 11px; letter-spacing: .02em; font-weight: 500; }
+.swatch .val { font-family: var(--mono); font-size: 11px; color: var(--on-surface-muted); }
+
+/* ---- Tables ---------------------------------------------------------- */
+.tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tbl th, .tbl td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--outline-variant); }
+.tbl th { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+          text-transform: uppercase; color: var(--on-surface-muted); font-weight: 400; }
+.tbl td.m { font-family: var(--mono); font-size: 12px; }
+.tbl-scroll { overflow-x: auto; border: 1px solid var(--outline-variant);
+              border-radius: var(--r-md); background: var(--surface); }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: var(--r-xs);
+       border: 1px solid var(--outline-variant); vertical-align: -1px; margin-right: 8px; }
+.pass { color: var(--on-primary-container); }
+.warn { color: #9A5A34; }
+
+/* ---- Type specimens -------------------------------------------------- */
+.spec { display: grid; grid-template-columns: 190px 1fr; gap: var(--lg); align-items: baseline;
+        padding: var(--md) 0; border-bottom: 1px dashed var(--outline-variant); }
+.spec:last-child { border-bottom: 0; }
+.spec .meta { font-family: var(--mono); font-size: 11px; color: var(--on-surface-muted);
+              letter-spacing: .02em; line-height: 1.5; }
+.spec .meta b { display: block; color: var(--on-surface-variant); font-weight: 500; letter-spacing: .04em; }
+@media (max-width: 640px) { .spec { grid-template-columns: 1fr; gap: var(--xs); } }
+
+/* ---- Spacing ruler --------------------------------------------------- */
+.ruler { display: grid; gap: 3px; }
+.ruler-row { display: flex; align-items: center; gap: var(--md); }
+.ruler-row .k { width: 64px; font-family: var(--mono); font-size: 11px; color: var(--on-surface-muted); }
+.ruler-bar { height: 13px; background: var(--primary-container); border: 1px solid var(--primary-outline); }
+
+.widths { display: grid; gap: var(--sm); }
+.width-row { display: grid; grid-template-columns: 130px 1fr; gap: var(--md); align-items: center; }
+.width-bar { height: 22px; background: var(--surface); border: 1px solid var(--outline);
+             border-radius: var(--r-sm); }
+@media (max-width: 640px) { .width-row { grid-template-columns: 1fr; } }
+
+/* ---- Shape + elevation ----------------------------------------------- */
+.box { background: var(--surface); border: 1px solid var(--outline-variant); height: 78px;
+       display: grid; place-content: center; }
+.box code { color: var(--on-surface-muted); }
+.elev { background: var(--surface); border: 1px solid var(--outline-variant);
+        border-radius: var(--r-md); padding: var(--lg); display: grid; gap: 4px; }
+.elev .n { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+           text-transform: uppercase; color: var(--on-surface-muted); }
+.elev .d { font-size: 13px; color: var(--on-surface-variant); }
+
+/* ---- Components ------------------------------------------------------ */
+.demo { background: var(--surface); border: 1px solid var(--outline-variant);
+        border-radius: var(--r-md); padding: var(--xl); box-shadow: var(--e1); }
+.demo + .demo { margin-top: var(--lg); }
+.demo-head { display: flex; align-items: baseline; gap: var(--md); margin-bottom: var(--lg); }
+.demo-head h3 { font-size: 15px; font-weight: 600; }
+.row { display: flex; align-items: center; gap: var(--md); flex-wrap: wrap; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sm);
+       padding: 9px 16px; border-radius: var(--r-sm); border: 1px solid transparent;
+       background: var(--surface); font-size: 13px; font-weight: 500; line-height: 1.2;
+       cursor: pointer; font-family: var(--sans); }
+.btn-primary { background: var(--primary); color: var(--on-primary); }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-ghost { border-color: var(--outline); color: var(--on-surface-variant); }
+.btn-ghost:hover { background: var(--surface-sunk); }
+.btn-quiet { background: transparent; color: var(--on-surface-muted); }
+.btn-quiet:hover { background: var(--surface-sunk); color: var(--on-surface); }
+.btn-sm { padding: 5px 11px; font-family: var(--mono); font-size: 11px;
+          font-weight: 400; letter-spacing: .04em; }
+
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px;
+        border-radius: var(--r-none); border: 1px solid var(--outline);
+        background: var(--surface); font-family: var(--mono); font-size: 11px;
+        letter-spacing: .04em; color: var(--on-surface-variant); white-space: nowrap; }
+.chip-on { background: var(--primary-container); border-color: var(--primary-outline);
+           color: var(--on-primary-container); }
+.chips { display: flex; flex-wrap: wrap; gap: var(--sm); }
+
+.field { display: block; max-width: 340px; }
+.field .lab { display: block; margin-bottom: var(--sm); }
+.input { width: 100%; padding: 11px 14px; background: var(--surface);
+         border: 1px solid var(--outline); border-radius: var(--r-sm);
+         font: inherit; color: inherit; outline: none; }
+.input::placeholder { color: var(--placeholder); }
+.input.is-focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-container); }
+.hint { font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
+        color: var(--on-surface-muted); margin-top: 6px; display: block; }
+
+/* Rating bars — read-only (10px) and editable (22px) */
+.bars { display: grid; gap: var(--md); }
+.bar-row { display: grid; grid-template-columns: 84px 1fr 34px; align-items: center; gap: var(--md); }
+.bar-name { font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+            text-transform: uppercase; color: var(--on-surface-variant); }
+.bar-track { display: flex; gap: 3px; }
+.bar-track i { height: 10px; flex: 1; border-radius: var(--r-none); background: var(--surface-sunk); }
+.bar-track i.on   { background: var(--primary); }
+.bar-track i.half { background: linear-gradient(90deg, var(--primary) 50%, var(--surface-sunk) 50%); }
+.bar-track.tall i { height: 22px; }
+.bar-track i.pv      { background: var(--primary-outline); }
+.bar-track i.pv-half { background: linear-gradient(90deg, var(--primary-outline) 50%, var(--surface-sunk) 50%); }
+.bar-val { font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums;
+           text-align: right; color: var(--on-surface); }
+.axis-head { display: flex; align-items: baseline; justify-content: space-between;
+             gap: var(--sm); margin-bottom: var(--sm); }
+
+/* Photo stand-ins */
+.photo { position: relative; background: var(--surface-sunk); overflow: hidden;
+         border: 1px solid var(--outline-variant); }
+.ph-1 { background: linear-gradient(150deg, #A8C89A 0%, #6E9E63 45%, #43663C 100%); }
+.ph-3 { background: linear-gradient(140deg, #DCD3C2 0%, #9BAF84 55%, #4F6B45 100%); }
+.ph-6 { background: linear-gradient(130deg, #E8E0CB 0%, #A9BE8E 52%, #6B8A57 100%); }
+.shot-cover { aspect-ratio: 3 / 2; border-radius: var(--r-lg); box-shadow: var(--e2); border: 0; }
+.shot-feed  { aspect-ratio: 4 / 3; border-radius: var(--r-md); }
+.shot-thumb { aspect-ratio: 1; border-radius: var(--r-sm); }
+.badge { position: absolute; right: 12px; bottom: 12px; z-index: 2;
+         padding: 4px 9px; border-radius: var(--r-xs); background: var(--scrim);
+         backdrop-filter: blur(6px); color: #fff;
+         font-family: var(--mono); font-size: 11px; letter-spacing: .06em; }
+.avatar { width: 34px; height: 34px; border-radius: var(--r-full); flex: none;
+          background: linear-gradient(135deg, #C8D6B9, #6E9E63); }
+
+/* ---- Do / Don't ------------------------------------------------------ */
+.rules { display: grid; grid-template-columns: 1fr 1fr; gap: var(--lg); }
+@media (max-width: 760px) { .rules { grid-template-columns: 1fr; } }
+.rules ul { list-style: none; padding: 0; display: grid; gap: var(--md); }
+.rules li { display: grid; grid-template-columns: 20px 1fr; gap: var(--md);
+            font-size: 14px; line-height: 1.6; color: var(--on-surface-variant); }
+.mark { width: 20px; height: 20px; border-radius: var(--r-xs); display: grid; place-content: center;
+        font-family: var(--mono); font-size: 11px; line-height: 1; }
+.mark.do    { background: var(--primary-container); color: var(--on-primary-container); }
+.mark.dont  { background: #F3E7E1; color: #9A5A34; }
+.rules h3 { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+            text-transform: uppercase; color: var(--on-surface-muted);
+            font-weight: 400; margin-bottom: var(--md); }
+
+/* ---- Callout + source ------------------------------------------------ */
+.note { border-left: 2px solid var(--primary-outline); padding: 2px 0 2px var(--lg);
+        color: var(--on-surface-variant); font-size: 14px; max-width: 72ch; }
+details.src { border: 1px solid var(--outline-variant); border-radius: var(--r-md);
+              background: var(--surface); overflow: hidden; }
+details.src summary { cursor: pointer; padding: var(--md) var(--lg);
+                      font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
+                      text-transform: uppercase; color: var(--on-surface-muted); }
+details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--outline-variant);
+                  background: var(--surface-sunk); overflow-x: auto;
+                  font-family: var(--mono); font-size: 12px; line-height: 1.65;
+                  color: var(--on-surface-variant); }
+
+.foot { padding: var(--3xl) 0 var(--4xl); color: var(--on-surface-muted);
+        font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
+        border-top: 1px solid var(--outline-variant); margin-top: var(--2xl); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="jump">
+      <a href="#overview">overview</a>
+      <a href="#colors">colors</a>
+      <a href="#typography">typography</a>
+      <a href="#layout">layout</a>
+      <a href="#elevation">elevation</a>
+      <a href="#shapes">shapes</a>
+      <a href="#components">components</a>
+      <a href="#rules">do &amp; don't</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="head">
+    <div class="kicker">
+      <span class="pill">DESIGN.md</span>
+      <span class="t-data-md muted">version alpha · preview of DESIGN.md</span>
+    </div>
+    <h1 class="t-display">Matcha Diary</h1>
+    <p class="sub t-body-lg">
+      Warm ceramic minimal. Paper-toned surfaces, one matcha accent, monospace reserved for data,
+      near-flat corners. The photographs carry the colour; the interface stays out of their way.
+    </p>
+    <p class="sub t-data-sm muted" style="margin-top:var(--lg)">
+      This page is built from the tokens it documents — what you read is what you are looking at.
+      Light-only: the system defines no dark palette.
+    </p>
+  </div>
+
+  <!-- OVERVIEW ---------------------------------------------------------- -->
+  <section class="block" id="overview">
+    <div class="block-head">
+      <h2>Overview</h2>
+      <span class="t-data-md muted">brand &amp; style</span>
+    </div>
+    <p class="prose">
+      Matcha Diary is a diary, not a scoreboard. People log the bowl they drank, the photograph they
+      took of it, and what they noticed — and the interface's job is to stay out of the way of those
+      three things. Every surface is a warm paper tone so that photographs of green tea, which are
+      almost always a narrow band of green and beige, look like the brightest object on the screen.
+    </p>
+    <p class="prose">
+      The personality is <strong>warm ceramic minimal</strong>: quiet, tactile, and a little
+      utilitarian. It should feel like a well-kept notebook rather than a social product. When a rule
+      or token does not cover a case, resolve it toward <em>less</em>: fewer weights, flatter corners,
+      more whitespace, no new colour.
+    </p>
+    <div class="grid g2" style="margin-top:var(--xl)">
+      <div class="demo">
+        <div class="demo-head"><h3>Green means state or data</h3></div>
+        <p class="t-body-excerpt variant" style="margin-bottom:var(--lg)">
+          The accent appears on the active nav item, the filled cells of a rating bar, and the single
+          primary action on a screen. If green is being used because a surface looked plain, it is
+          being used wrongly.
+        </p>
+        <div class="row">
+          <span class="chip chip-on">selected</span>
+          <span class="bar-track" style="width:120px">
+            <i class="on"></i><i class="on"></i><i class="on"></i><i class="half"></i><i></i>
+          </span>
+          <button class="btn btn-primary">Publish entry</button>
+        </div>
+      </div>
+      <div class="demo">
+        <div class="demo-head"><h3>There is no overall score</h3></div>
+        <p class="t-body-excerpt variant">
+          A cup is described by the shape of its individual taste ratings and by what the author
+          wrote. Nothing is averaged, nothing collapses to a star count, and ratings never appear in
+          the timeline — only on the review page. Do not add a summary number, however convenient it
+          would be for sorting.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLORS ------------------------------------------------------------ -->
+  <section class="block" id="colors">
+    <div class="block-head">
+      <h2>Colors</h2>
+      <span class="t-data-md muted">1 accent · 1 warm neutral family · no second hue</span>
+    </div>
+    <p class="prose">
+      The palette is deliberately small so that the only saturated thing on a screen is either a
+      photograph or a piece of interactive state.
+    </p>
+
+    <p class="sub-label t-label-caps">Accent — matcha</p>
+    <div class="grid g4">
+      <div class="swatch"><div class="fill" style="background:#4A7C59"></div>
+        <div class="info"><span class="tok">primary</span><span class="val">#4A7C59 · --matcha</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#3A6347"></div>
+        <div class="info"><span class="tok">primary-hover</span><span class="val">#3A6347 · --matcha-deep</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#C6DCC4"></div>
+        <div class="info"><span class="tok">primary-outline</span><span class="val">#C6DCC4 · --matcha-line</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#E7F0E6"></div>
+        <div class="info"><span class="tok">primary-container</span><span class="val">#E7F0E6 · --matcha-soft</span></div></div>
+    </div>
+
+    <p class="sub-label t-label-caps">Surface &amp; line</p>
+    <div class="grid g5">
+      <div class="swatch"><div class="fill" style="background:#FAF8F3"></div>
+        <div class="info"><span class="tok">background</span><span class="val">#FAF8F3 · --paper</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#FFFFFF; border-bottom:1px solid var(--outline-variant)"></div>
+        <div class="info"><span class="tok">surface</span><span class="val">#FFFFFF · --surface</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#F2EEE5"></div>
+        <div class="info"><span class="tok">surface-sunk</span><span class="val">#F2EEE5 · --paper-sunk</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#E9E5DC"></div>
+        <div class="info"><span class="tok">outline-variant</span><span class="val">#E9E5DC · --line</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#D8D2C5"></div>
+        <div class="info"><span class="tok">outline</span><span class="val">#D8D2C5 · --line-strong</span></div></div>
+    </div>
+
+    <p class="sub-label t-label-caps">Ink</p>
+    <div class="grid g4">
+      <div class="swatch"><div class="fill" style="background:#1F241E"></div>
+        <div class="info"><span class="tok">on-surface</span><span class="val">#1F241E · --ink</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#4C5349"></div>
+        <div class="info"><span class="tok">on-surface-variant</span><span class="val">#4C5349 · --ink-2</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#8B8578"></div>
+        <div class="info"><span class="tok">on-surface-muted</span><span class="val">#8B8578 · --clay</span></div></div>
+      <div class="swatch"><div class="fill" style="background:#B3ADA0"></div>
+        <div class="info"><span class="tok">placeholder</span><span class="val">#B3ADA0</span></div></div>
+    </div>
+
+    <p class="sub-label t-label-caps">Contrast</p>
+    <div class="tbl-scroll">
+      <table class="tbl">
+        <thead><tr><th>Pair</th><th>Ratio</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td class="m"><span class="dot" style="background:#1F241E"></span>on-surface on background</td>
+              <td class="m">14.9:1</td><td class="m pass">AAA</td></tr>
+          <tr><td class="m"><span class="dot" style="background:#4C5349"></span>on-surface-variant on background</td>
+              <td class="m">7.5:1</td><td class="m pass">AAA</td></tr>
+          <tr><td class="m"><span class="dot" style="background:#3A6347"></span>on-primary-container on primary-container</td>
+              <td class="m">5.9:1</td><td class="m pass">AA</td></tr>
+          <tr><td class="m"><span class="dot" style="background:#4A7C59"></span>primary on background</td>
+              <td class="m">4.6:1</td><td class="m pass">AA</td></tr>
+          <tr><td class="m"><span class="dot" style="background:#FFFFFF"></span>on-primary on primary</td>
+              <td class="m">4.9:1</td><td class="m pass">AA</td></tr>
+          <tr><td class="m"><span class="dot" style="background:#8B8578"></span>on-surface-muted on background</td>
+              <td class="m">3.5:1</td><td class="m warn">Large text / non-text only</td></tr>
+          <tr><td class="m"><span class="dot" style="background:#B3ADA0"></span>placeholder on surface</td>
+              <td class="m">2.2:1</td><td class="m warn">Hint only — never load-bearing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note" style="margin-top:var(--xl)">
+      <strong>Not yet defined.</strong> There is no error, warning, or success palette, because no
+      screen in the current prototype has a failure state. When validation and upload errors land,
+      add a single <code>error</code> / <code>on-error</code> / <code>error-container</code> triad in
+      the same warm register — a clay-leaning red, not a pure red — and record it in DESIGN.md before
+      using it.
+    </p>
+  </section>
+
+  <!-- TYPOGRAPHY -------------------------------------------------------- -->
+  <section class="block" id="typography">
+    <div class="block-head">
+      <h2>Typography</h2>
+      <span class="t-data-md muted">Inter for voice · JetBrains Mono for fact</span>
+    </div>
+    <p class="prose">
+      Two families, and the split between them is semantic rather than aesthetic. <strong>Inter</strong>
+      carries anything a person wrote in their own voice. <strong>JetBrains Mono</strong> carries
+      anything that is a fact about the cup — café, date, handle, taste notes, axis labels, rating
+      values. Reading a screen, you can tell authored text from recorded data without reading a word
+      of it.
+    </p>
+
+    <p class="sub-label t-label-caps">Inter — the author's voice</p>
+    <div class="spec"><span class="meta"><b>display</b>36 / 600 / 1.15 / -0.02em</span>
+      <span class="t-display">A diary for every bowl</span></div>
+    <div class="spec"><span class="meta"><b>headline-lg</b>24 / 600 / 1.25 / -0.015em</span>
+      <span class="t-headline-lg">Uji Ceremonial, whisked thin</span></div>
+    <div class="spec"><span class="meta"><b>headline-md</b>17 / 600 / 1.35 / -0.01em</span>
+      <span class="t-headline-md">Home bowl, Marukyu Kohoen</span></div>
+    <div class="spec"><span class="meta"><b>body-prose</b>18 / 400 / 1.75 · review diary body</span>
+      <span class="t-body-prose variant">The front is all cut grass and something like snap peas. Then it turns: a long savory tail that coats the roof of the mouth.</span></div>
+    <div class="spec"><span class="meta"><b>body-lg</b>18 / 400 / 1.55 · lead-in</span>
+      <span class="t-body-lg variant">Ordered it thin on purpose — the shop grinds a first-harvest Uji.</span></div>
+    <div class="spec"><span class="meta"><b>body-md</b>15 / 400 / 1.6 · default</span>
+      <span class="t-body-md">Water was noticeably softer than what I get at home.</span></div>
+    <div class="spec"><span class="meta"><b>body-excerpt</b>15 / 400 / 1.65 · feed, clamped to 4 lines</span>
+      <span class="t-body-excerpt variant">Sifted the powder for once and it made an absurd difference — not one lump, not one gritty sip.</span></div>
+    <div class="spec"><span class="meta"><b>label-lg</b>13 / 500 / 1.2 · button text</span>
+      <span class="t-label-lg">Publish entry</span></div>
+
+    <p class="sub-label t-label-caps">JetBrains Mono — recorded fact</p>
+    <div class="spec"><span class="meta"><b>data-md</b>13 / 400 / 0.02em / tabular</span>
+      <span class="t-data-md">KETTL TEA · BROOKLYN · 2026-08-04 · 4.5</span></div>
+    <div class="spec"><span class="meta"><b>data-sm</b>11 / 400 / 0.04em · chips, hints</span>
+      <span class="t-data-sm">umami · cut grass · astringency</span></div>
+    <div class="spec"><span class="meta"><b>label-caps</b>11 / 400 / 0.12em / uppercase</span>
+      <span class="t-label-caps muted">Taste notes</span></div>
+    <div class="spec"><span class="meta"><b>label-axis</b>11 / 400 / 0.1em / uppercase · 84px column</span>
+      <span class="t-label-axis variant">aftertaste</span></div>
+    <div class="spec"><span class="meta"><b>data-xs</b>9 / 400 / 0.08em · on photos only</span>
+      <span class="t-data-xs muted">COVER</span></div>
+
+    <p class="note" style="margin-top:var(--xl)">
+      Weight is rationed: 400 for prose, 500 for button labels and an author's display name, 600 for
+      headlines. Nothing is bold, nothing is italic, and no screen shows more than these three
+      weights. Uppercasing happens in CSS, never in the source text.
+    </p>
+  </section>
+
+  <!-- LAYOUT ------------------------------------------------------------ -->
+  <section class="block" id="layout">
+    <div class="block-head">
+      <h2>Layout &amp; Spacing</h2>
+      <span class="t-data-md muted">4px base · single column by intent</span>
+    </div>
+    <div class="grid g2">
+      <div>
+        <p class="sub-label t-label-caps">Spacing scale</p>
+        <div class="ruler">
+          <div class="ruler-row"><span class="k">xs 4</span><span class="ruler-bar" style="width:4px"></span></div>
+          <div class="ruler-row"><span class="k">sm 8</span><span class="ruler-bar" style="width:8px"></span></div>
+          <div class="ruler-row"><span class="k">md 12</span><span class="ruler-bar" style="width:12px"></span></div>
+          <div class="ruler-row"><span class="k">lg 16</span><span class="ruler-bar" style="width:16px"></span></div>
+          <div class="ruler-row"><span class="k">xl 24</span><span class="ruler-bar" style="width:24px"></span></div>
+          <div class="ruler-row"><span class="k">2xl 32</span><span class="ruler-bar" style="width:32px"></span></div>
+          <div class="ruler-row"><span class="k">3xl 48</span><span class="ruler-bar" style="width:48px"></span></div>
+          <div class="ruler-row"><span class="k">4xl 64</span><span class="ruler-bar" style="width:64px"></span></div>
+        </div>
+        <p class="hint" style="margin-top:var(--lg)">
+          The mid-range steps — 12, 16, 24 — do most of the work.
+        </p>
+      </div>
+      <div>
+        <p class="sub-label t-label-caps">Content widths</p>
+        <div class="widths">
+          <div class="width-row">
+            <span class="t-data-sm muted">content-max 1080</span>
+            <span class="width-bar" style="width:100%"></span>
+          </div>
+          <div class="width-row">
+            <span class="t-data-sm muted">reading-max 720</span>
+            <span class="width-bar" style="width:66.6%"></span>
+          </div>
+          <div class="width-row">
+            <span class="t-data-sm muted">timeline-max 620</span>
+            <span class="width-bar" style="width:57.4%"></span>
+          </div>
+          <div class="width-row">
+            <span class="t-data-sm muted">topbar-height 60</span>
+            <span class="width-bar" style="width:5.6%"></span>
+          </div>
+        </div>
+        <p class="prose t-body-excerpt" style="margin-top:var(--lg)">
+          <strong>1080</strong> for chrome and reference pages (24px gutter). <strong>720</strong> for
+          the review and the composer — wide enough for a 3:2 cover, narrow enough that an 18px diary
+          body stays near 70 characters. <strong>620</strong> for the feed, where the gutter drops to
+          16px so photographs get the width back on a phone.
+        </p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:var(--xl)">
+      Posts are separated by a single hairline rather than by gaps or shadows, and hover paints a sunk
+      wash that bleeds 16px past the row so the whole post reads as one target. Breakpoints are
+      content-driven, not device-driven: 640px collapses the two-column rating panel, 600px reflows
+      paired form fields and drops the photo tray from four columns to three, 760px collapses the
+      reference grids.
+    </p>
+  </section>
+
+  <!-- ELEVATION --------------------------------------------------------- -->
+  <section class="block" id="elevation">
+    <div class="block-head">
+      <h2>Elevation &amp; Depth</h2>
+      <span class="t-data-md muted">hairlines and tone, not shadow</span>
+    </div>
+    <p class="prose">
+      The stack is shallow on purpose — a diary page should feel like paper on a desk, not like cards
+      floating over a void. Every shadow is warm-tinted <code>rgba(48, 42, 30, …)</code>, never
+      neutral black.
+    </p>
+    <div class="grid g4" style="margin-top:var(--xl)">
+      <div class="elev" style="box-shadow:none; background:var(--background)">
+        <span class="n">Level 0 · page</span>
+        <span class="d">Paper background. No border, no shadow.</span>
+      </div>
+      <div class="elev" style="box-shadow:var(--e1)">
+        <span class="n">Level 1 · resting</span>
+        <span class="d">Cards, inputs, ghost buttons. 1px hairline does the separating.</span>
+        <code class="muted">0 1px 2px / .05</code>
+      </div>
+      <div class="elev" style="box-shadow:var(--e2)">
+        <span class="n">Level 2 · photography</span>
+        <span class="d">The review cover — the one visible shadow in the system.</span>
+        <code class="muted">0 2px 10px / .07</code>
+      </div>
+      <div class="elev" style="box-shadow:var(--e3)">
+        <span class="n">Level 3 · reserved</span>
+        <span class="d">Overlays and menus. No current screen uses it.</span>
+        <code class="muted">0 12px 32px / .10</code>
+      </div>
+    </div>
+    <p class="note" style="margin-top:var(--xl)">
+      Sticky chrome uses translucency plus a 12px blur instead of a shadow, to signal that content is
+      passing underneath it. Recession is expressed with <code>surface-sunk</code> — an empty rating
+      cell reads as a groove waiting to be filled rather than as an outlined box.
+    </p>
+  </section>
+
+  <!-- SHAPES ------------------------------------------------------------ -->
+  <section class="block" id="shapes">
+    <div class="block-head">
+      <h2>Shapes</h2>
+      <span class="t-data-md muted">softened, never rounded · max 8px</span>
+    </div>
+    <div class="grid g3">
+      <div class="grid g3" style="grid-column: span 2">
+        <div class="box" style="border-radius:0"><code>none 0</code></div>
+        <div class="box" style="border-radius:2px"><code>xs 2</code></div>
+        <div class="box" style="border-radius:3px"><code>sm 3</code></div>
+        <div class="box" style="border-radius:5px"><code>md 5</code></div>
+        <div class="box" style="border-radius:8px"><code>lg 8</code></div>
+        <div class="box" style="border-radius:9999px"><code>full</code></div>
+      </div>
+      <div>
+        <p class="prose t-body-excerpt" style="margin:0">
+          Radius is assigned by <strong>material, not by size</strong> — the same button is 3px
+          whether it is 28px or 40px tall.
+        </p>
+        <p class="prose t-body-excerpt" style="margin-top:var(--md)">
+          The zero is the load-bearing decision. A taste note is a <strong>stamped label, not a
+          bubble</strong> — square corners, monospace, no icon, no dot. It is the sharpest shape in
+          the system and the only component that never softens, which is what makes a row of them
+          read as a record rather than as tags on a blog post.
+        </p>
+      </div>
+    </div>
+    <div class="tbl-scroll" style="margin-top:var(--xl)">
+      <table class="tbl">
+        <thead><tr><th>Token</th><th>Value</th><th>Applied to</th></tr></thead>
+        <tbody>
+          <tr><td class="m">none</td><td class="m">0px</td><td>Taste-note chips, rating cells</td></tr>
+          <tr><td class="m">xs</td><td class="m">2px</td><td>Nav pills, labels overlaid on photos</td></tr>
+          <tr><td class="m">sm</td><td class="m">3px</td><td>Buttons, inputs, thumbnails, photo-tray slots</td></tr>
+          <tr><td class="m">md</td><td class="m">5px</td><td>Cards, feed photographs</td></tr>
+          <tr><td class="m">lg</td><td class="m">8px</td><td>The review cover photograph only</td></tr>
+          <tr><td class="m">full</td><td class="m">9999px</td><td>Brand mark and avatars only</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- COMPONENTS -------------------------------------------------------- -->
+  <section class="block" id="components">
+    <div class="block-head">
+      <h2>Components</h2>
+      <span class="t-data-md muted">buttons · chips · ratings · cards · inputs</span>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><h3>Buttons</h3>
+        <span class="t-data-sm muted">three levels · at most one primary per screen</span></div>
+      <div class="row">
+        <button class="btn btn-primary">Publish entry</button>
+        <button class="btn btn-ghost">Save draft</button>
+        <button class="btn btn-quiet">Edit</button>
+        <button class="btn btn-ghost btn-sm">Follow</button>
+        <button class="btn btn-quiet btn-sm">newest ▾</button>
+      </div>
+      <p class="hint">
+        The <code>button-sm</code> variant swaps the Inter label for mono at 11px, so small controls
+        read as data rather than as shrunken buttons. All three levels sit at <code>sm</code> (3px)
+        and depress 1px on :active.
+      </p>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><h3>Taste-note chips</h3>
+        <span class="t-data-sm muted">rounded.none · mono 11 · overflow is cut, not scrolled</span></div>
+      <div class="chips">
+        <span class="chip">umami</span>
+        <span class="chip">cut grass</span>
+        <span class="chip">snap pea</span>
+        <span class="chip chip-on">selected</span>
+        <span class="chip chip-on">astringency</span>
+      </div>
+      <p class="hint">
+        Resting: white fill, <code>outline</code> border. Selected: <code>primary-container</code>
+        fill with accent border and text. In the composer, chips gain a × and the suggestion row
+        moves a chip into the note box on click. The feed shows up to four.
+      </p>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><h3>Rating bars</h3>
+        <span class="t-data-sm muted">0–5 in half steps · 5 cells · no overall score</span></div>
+      <div class="grid g2">
+        <div>
+          <p class="sub-label t-label-caps" style="margin-top:0">Reading — 10px cells</p>
+          <div class="bars">
+            <div class="bar-row"><span class="bar-name">umami</span>
+              <span class="bar-track"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="half"></i></span>
+              <span class="bar-val">4.5</span></div>
+            <div class="bar-row"><span class="bar-name">sweetness</span>
+              <span class="bar-track"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+              <span class="bar-val">3.0</span></div>
+            <div class="bar-row"><span class="bar-name">bitterness</span>
+              <span class="bar-track"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+              <span class="bar-val">2.0</span></div>
+            <div class="bar-row"><span class="bar-name">astringency</span>
+              <span class="bar-track"><i class="on"></i><i class="half"></i><i></i><i></i><i></i></span>
+              <span class="bar-val">1.5</span></div>
+          </div>
+        </div>
+        <div>
+          <p class="sub-label t-label-caps" style="margin-top:0">Rating — same component, 22px cells</p>
+          <div class="axis-head">
+            <span class="bar-name">aftertaste</span><span class="t-data-md">5.0</span>
+          </div>
+          <span class="bar-track tall">
+            <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+          </span>
+          <div class="axis-head" style="margin-top:var(--lg)">
+            <span class="bar-name">aroma</span><span class="t-data-md">3.0</span>
+          </div>
+          <span class="bar-track tall">
+            <i class="on"></i><i class="on"></i><i class="on"></i><i class="pv"></i><i class="pv-half"></i>
+          </span>
+          <p class="hint">
+            The fourth and fifth cells above show the hover preview in
+            <code>primary-outline</code> — a pending 4.5, lighter than a committed value.
+          </p>
+        </div>
+      </div>
+      <p class="hint" style="margin-top:var(--lg)">
+        <strong>The bar you read is the bar you click — there is no separate slider.</strong> Left half
+        of a cell sets the half step, right half sets the whole, clicking the current value clears it
+        to zero, arrow keys nudge by 0.5, Home and End jump to 0 and 5. The editable host exposes
+        <code>role="slider"</code> with <code>aria-valuenow</code> and <code>aria-valuetext</code>.
+        Axis names sit in a fixed 84px column, values in a 34px right-aligned column with tabular
+        figures, so a stack of bars aligns on both edges.
+      </p>
+      <p class="hint">
+        <strong>The set of axes is not fixed.</strong> Six are suggested — umami, sweetness,
+        bitterness, astringency, aroma, aftertaste — and the author drops, adds, or names their own.
+        Astringency stays separate from bitterness on purpose: one is a taste, the other a mouthfeel.
+      </p>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><h3>Cards &amp; photographs</h3>
+        <span class="t-data-sm muted">selection is an outline, never a border</span></div>
+      <div class="grid g3">
+        <div>
+          <div class="photo ph-1 shot-cover"><span class="badge">1 / 6</span></div>
+          <p class="hint">Review cover — 3:2 at <code>lg</code> (8px) with the level-2 shadow. The only 8px corner in the system.</p>
+        </div>
+        <div>
+          <div class="photo ph-3 shot-feed"></div>
+          <p class="hint">Feed photograph — 4:3 at <code>md</code> (5px) with an <code>outline-variant</code> hairline.</p>
+        </div>
+        <div>
+          <div class="row" style="gap:var(--md); align-items:stretch">
+            <div class="photo ph-6 shot-thumb" style="flex:1; outline:2px solid var(--primary); outline-offset:2px"></div>
+            <div class="photo ph-1 shot-thumb" style="flex:1"></div>
+            <div class="photo ph-3 shot-thumb" style="flex:1"></div>
+          </div>
+          <p class="hint">Thumbnails and composer slots — 1:1 at <code>sm</code> (3px). Selection is a 2px matcha outline offset 2px, so the photograph never shifts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-head"><h3>Inputs</h3>
+        <span class="t-data-sm muted">focus = accent border + 3px container ring</span></div>
+      <div class="row" style="align-items:flex-start; gap:var(--xl)">
+        <label class="field">
+          <span class="lab t-label-caps muted">Title</span>
+          <input class="input" type="text" placeholder="What was this cup?">
+          <span class="hint">Resting — outline border, sm radius</span>
+        </label>
+        <label class="field">
+          <span class="lab t-label-caps muted">Café — optional</span>
+          <input class="input is-focus" type="text" value="Kettl Tea">
+          <span class="hint">Focused — border swaps to primary</span>
+        </label>
+        <div class="field">
+          <span class="lab t-label-caps muted">Byline &amp; avatar</span>
+          <div class="row">
+            <span class="avatar"></span>
+            <span style="font-weight:500">Arisa</span>
+            <span class="t-data-md muted">@arisa · 2h</span>
+          </div>
+          <span class="hint">Avatars are one of two circles in the system</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="note" style="margin-top:var(--xl)">
+      <code>borderColor</code> is not in the DESIGN.md component property list, but hairline borders
+      are how this system expresses hierarchy, so it is used throughout the component tokens.
+      Consumers accept unknown component properties; a linter may warn.
+    </p>
+  </section>
+
+  <!-- DO / DON'T -------------------------------------------------------- -->
+  <section class="block" id="rules">
+    <div class="block-head">
+      <h2>Do's and Don'ts</h2>
+      <span class="t-data-md muted">guardrails</span>
+    </div>
+    <div class="rules">
+      <div>
+        <h3>Do</h3>
+        <ul>
+          <li><span class="mark do">✓</span><span>Keep green for state and data — active nav, filled rating cells, focus rings, the one primary button per screen.</span></li>
+          <li><span class="mark do">✓</span><span>Put anything factual in JetBrains Mono and anything authored in Inter. The family is the signal.</span></li>
+          <li><span class="mark do">✓</span><span>Show taste ratings on the review page only.</span></li>
+          <li><span class="mark do">✓</span><span>Keep taste-note chips and rating cells at <code>rounded.none</code>. They are the system's fixed point.</span></li>
+          <li><span class="mark do">✓</span><span>Express depth with a hairline and a tone change first; reach for a shadow only for photography and real overlays.</span></li>
+          <li><span class="mark do">✓</span><span>Treat <code>on-surface-muted</code> as a large-text and non-text colour. At 3.5:1 it fails AA for body copy — darken toward <code>#6F6A5E</code> before shipping anything a user must read.</span></li>
+          <li><span class="mark do">✓</span><span>Ship one rating control: the bar you read is the bar you click. Keep the keyboard path and the <code>role="slider"</code> semantics wherever it appears.</span></li>
+          <li><span class="mark do">✓</span><span>Clamp the feed excerpt to four lines and cut chip overflow, so every post holds the same height rhythm.</span></li>
+          <li><span class="mark do">✓</span><span>Define an <code>error</code> palette in DESIGN.md before building the first failure state.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Don't</h3>
+        <ul>
+          <li><span class="mark dont">✕</span><span>Use green as decoration: no green dividers, no green headings, no tinted section backgrounds because a page looked empty.</span></li>
+          <li><span class="mark dont">✕</span><span>Set a person's own words in monospace, or a date in the sans face.</span></li>
+          <li><span class="mark dont">✕</span><span>Introduce an overall score, an average, or a star count anywhere — not in the feed, not in sorting, not in a profile summary.</span></li>
+          <li><span class="mark dont">✕</span><span>Round anything past <code>lg</code> (8px), or add a circle outside the brand mark and avatars.</span></li>
+          <li><span class="mark dont">✕</span><span>Use neutral-black shadows — every shadow is warm-tinted <code>rgba(48, 42, 30, …)</code>.</span></li>
+          <li><span class="mark dont">✕</span><span>Rely on <code>placeholder</code> (2.2:1) to communicate anything. It is a hint, and every field also needs a real label.</span></li>
+          <li><span class="mark dont">✕</span><span>Add a second rating input — no numeric field, no separate slider, no dropdown of values.</span></li>
+          <li><span class="mark dont">✕</span><span>Promote, feature, or visually rank a post. Every entry in the timeline is drawn identically.</span></li>
+          <li><span class="mark dont">✕</span><span>Derive colours from the <code>.ph-*</code> photo gradients; they are upload stand-ins, not tokens.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCE ------------------------------------------------------------ -->
+  <section class="block">
+    <div class="block-head">
+      <h2>Front matter</h2>
+      <span class="t-data-md muted">the normative values</span>
+    </div>
+    <p class="prose" style="margin-bottom:var(--lg)">
+      Tokens are normative; the prose above provides context for how to apply them. The full block
+      lives in <code>DESIGN.md</code> — the excerpt below is the shape of it.
+    </p>
+    <details class="src">
+      <summary>DESIGN.md — YAML front matter (excerpt)</summary>
+      <pre>---
+version: alpha
+name: Matcha Diary
+description: &gt;-
+  Warm ceramic minimal. Paper-toned surfaces, one matcha accent, monospace
+  reserved for data, near-flat corners.
+colors:
+  primary: "#4A7C59"
+  primary-hover: "#3A6347"
+  primary-container: "#E7F0E6"
+  primary-outline: "#C6DCC4"
+  on-primary: "#FFFFFF"
+  on-primary-container: "#3A6347"
+  background: "#FAF8F3"
+  surface: "#FFFFFF"
+  surface-sunk: "#F2EEE5"
+  on-surface: "#1F241E"
+  on-surface-variant: "#4C5349"
+  on-surface-muted: "#8B8578"
+  outline: "#D8D2C5"
+  outline-variant: "#E9E5DC"
+  placeholder: "#B3ADA0"
+  scrim: "rgba(20, 24, 19, 0.62)"
+  on-scrim: "#FFFFFF"
+typography:
+  display:      { fontFamily: Inter, fontSize: 36px, fontWeight: 600, lineHeight: 1.15, letterSpacing: -0.02em }
+  headline-lg:  { fontFamily: Inter, fontSize: 24px, fontWeight: 600, lineHeight: 1.25, letterSpacing: -0.015em }
+  headline-md:  { fontFamily: Inter, fontSize: 17px, fontWeight: 600, lineHeight: 1.35, letterSpacing: -0.01em }
+  body-prose:   { fontFamily: Inter, fontSize: 18px, fontWeight: 400, lineHeight: 1.75 }
+  data-md:      { fontFamily: JetBrains Mono, fontSize: 13px, fontWeight: 400, letterSpacing: 0.02em }
+  label-caps:   { fontFamily: JetBrains Mono, fontSize: 11px, fontWeight: 400, letterSpacing: 0.12em }
+  # …13 levels in total
+rounded:
+  none: 0px
+  xs: 2px
+  sm: 3px
+  md: 5px
+  lg: 8px
+  full: 9999px
+spacing:
+  base: 4px
+  xs: 4px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 24px
+  "2xl": 32px
+  "3xl": 48px
+  "4xl": 64px
+  content-max: 1080px
+  reading-max: 720px
+  timeline-max: 620px
+  topbar-height: 60px
+components:
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.label-lg}"
+    rounded: "{rounded.sm}"
+    padding: 9px 16px
+  chip:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.on-surface-variant}"
+    borderColor: "{colors.outline}"
+    typography: "{typography.data-sm}"
+    rounded: "{rounded.none}"
+    padding: 4px 9px
+  rating-cell:
+    backgroundColor: "{colors.surface-sunk}"
+    rounded: "{rounded.none}"
+    height: 10px
+  rating-cell-filled:
+    backgroundColor: "{colors.primary}"
+  # …26 components in total
+---</pre>
+    </details>
+  </section>
+
+  <div class="foot">
+    matcha diary · DESIGN.md preview · follows the
+    <a href="https://github.com/google-labs-code/design.md">DESIGN.md format specification</a>
+    (alpha) · reference implementation in
+    <a href="docs/artifacts/ui-prototype/index.html">docs/artifacts/ui-prototype/</a>
+  </div>
+
+</main>
+
+</body>
+</html>
