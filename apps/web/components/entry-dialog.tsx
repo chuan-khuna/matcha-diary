@@ -80,7 +80,12 @@ export function EntryDialog({
             </button>
           </div>
 
-          <EntryDetail entry={entry} titleId={titleId} />
+          {/* Keyed by entry: the dialog element itself has to survive between
+              openings, but the review inside it must not. Without this the
+              gallery would open the second entry already scrolled to whichever
+              photograph you left selected in the first — and would index past
+              the end of a shorter set. */}
+          <EntryDetail key={entry.id} entry={entry} titleId={titleId} />
         </>
       )}
     </dialog>

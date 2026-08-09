@@ -1,5 +1,5 @@
-import { OverlayLabel } from "@/components/overlay-label";
-import { AvatarStandIn, PhotoStandIn } from "@/components/placeholders";
+import { PhotoGallery } from "@/components/photo-gallery";
+import { AvatarStandIn } from "@/components/placeholders";
 import { RatingBar } from "@/components/rating-bar";
 import type { FeedEntry } from "@/lib/feed-data";
 
@@ -10,8 +10,9 @@ import type { FeedEntry } from "@/lib/feed-data";
  * a cup is described by the shape of its individual axes and by what its author
  * wrote, and nothing here collapses that to a number.
  *
- * Presentational and server-renderable. The dialog around it owns the client
- * behaviour.
+ * Presentational and server-renderable. The dialog around it owns dismissal;
+ * the photo gallery below owns which photograph is large. Nothing else here
+ * holds state.
  */
 export function EntryDetail({
   entry,
@@ -20,8 +21,6 @@ export function EntryDetail({
   entry: FeedEntry;
   titleId: string;
 }) {
-  const [cover, ...rest] = entry.photos;
-
   return (
     <article className="flex flex-col gap-6 p-4 sm:p-6">
       <div className="flex items-center gap-3">
@@ -34,36 +33,7 @@ export function EntryDetail({
         </div>
       </div>
 
-      {cover !== undefined && (
-        <div className="flex flex-col gap-2">
-          {/* 3:2 at `lg` — the review cover is the only element in the system
-              allowed an 8px corner, and the only place a shadow is meant to be
-              visible, because a photograph is a physical object here. */}
-          <PhotoStandIn
-            seed={cover}
-            className="aspect-[3/2] rounded-lg shadow-photo"
-          >
-            {rest.length > 0 && (
-              <OverlayLabel className="absolute right-3 bottom-3">
-                1 / {entry.photos.length}
-              </OverlayLabel>
-            )}
-          </PhotoStandIn>
-
-          {rest.length > 0 && (
-            <ul className="flex flex-wrap gap-2">
-              {rest.map((photo, index) => (
-                <li key={`${photo}-${index}`}>
-                  <PhotoStandIn
-                    seed={photo}
-                    className="size-16 rounded-sm border border-line"
-                  />
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
+      {entry.photos.length > 0 && <PhotoGallery photos={entry.photos} />}
 
       <h2 id={titleId} className="text-headline-lg">
         {entry.title}
