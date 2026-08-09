@@ -324,8 +324,18 @@ prototype has a failure state. When validation and upload errors land, add a sin
 and record it here before using it. Do not improvise a status colour inline.
 
 **Photography placeholders.** The prototype fakes uploads with eight CSS gradients (`.ph-1`–`.ph-8`)
-in the green-to-beige range. They are stand-ins for `<img>`, not palette members; do not derive
-tokens from them or use them as decorative fills.
+in the green-to-beige range. The app generates them instead — one of four patterns (a linear *wash*,
+a two-blob *bloom*, a *sweep* around a point, soft *strata* bands), with stops drawn from a seed and
+held between H 83 and H 152, so every photograph in a review looks like a different photograph.
+Either way they are stand-ins for `<img>`, not palette members; do not derive tokens from them or use
+them as decorative fills.
+
+Two properties of the generator are load-bearing rather than incidental. It is **seeded, never
+random at render**: the same seed gives the same picture on the server, after hydration, and in both
+the timeline and the open review. And its stops **deliberately drift in hue**, because a photograph
+is not a token ramp — light across a bowl of tea changes hue as it darkens. That drift is the one
+place in this repo where two stops of one gradient disagreeing on H is correct, and it is confined to
+values nothing else may read.
 
 ## Typography
 
