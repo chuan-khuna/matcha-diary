@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Preset — Washi (和紙)
+   The default theme, named for the paper it is built on. Paper-toned surfaces,
+   one matcha accent, monospace reserved for data, near-flat corners.
+   DESIGN.md calls this personality "warm ceramic minimal".
+
+   This file holds RAW TOKEN VALUES ONLY. It declares no Tailwind theme and
+   generates no utilities — `styles/globals.css` owns the single `@theme inline`
+   block that maps these names onto Tailwind's namespaces. Adding a theme means
+   adding a file here that redefines the same custom properties under its own
+   `[data-theme="…"]` selector; the mapping is never duplicated.
+
+   Source of truth for every value below is `DESIGN.md` at the repo root.
+   Add a colour there before adding it here.
+
+   Colour is authored in `oklch(L C H)` — see CLAUDE.md. The `#` comments are a
+   reference for design tools and are the exact round-trip of the OKLCH beside
+   them, copied from DESIGN.md's palette table. They are never read by anything.
+   ========================================================================== */
+
+:root,
+[data-theme="washi"] {
+  /* ---- Surface ------------------------------------------------------- */
+  --paper: oklch(0.9793 0.0070 88.64); /* #FAF8F3 — the page */
+  --paper-sunk: oklch(0.9497 0.0127 86.83); /* #F2EEE5 — empty rating cells, hover wash */
+  --surface: oklch(1 0 0); /* #FFFFFF — cards, fields, ghost buttons */
+  --line: oklch(0.9225 0.0128 86.83); /* #E9E5DC — dividers, card edges */
+  --line-strong: oklch(0.8650 0.0188 86.15); /* #D8D2C5 — interactive edges */
+
+  /* Sticky chrome signals depth with translucency plus blur, never a shadow.
+     This is --paper at 0.88 alpha; DESIGN.md `components.topbar`. */
+  --paper-translucent: oklch(0.9793 0.0070 88.64 / 0.88);
+
+  /* ---- Ink ----------------------------------------------------------- */
+  --ink: oklch(0.2530 0.0133 140.45); /* #1F241E — body text, 14.9:1 on paper */
+  --ink-2: oklch(0.4327 0.0184 136.18); /* #4C5349 — secondary text, 7.5:1 on paper */
+  --clay: oklch(0.6181 0.0204 86.17); /* #8B8578 — metadata, 3.5:1 — LARGE TEXT AND NON-TEXT ONLY */
+  --placeholder: oklch(0.7489 0.0195 86.16); /* #B3ADA0 — field hint, 2.2:1 — never load-bearing */
+
+  /* ---- Accent — state and data only, never decoration ---------------- */
+  --matcha: oklch(0.5406 0.0773 152.71); /* #4A7C59 — accent, 4.9:1 on white */
+  --matcha-deep: oklch(0.4609 0.0652 153.33); /* #3A6347 — pressed/hover, text on tint */
+  --matcha-soft: oklch(0.9456 0.0164 142.56); /* #E7F0E6 — selected background */
+  --matcha-line: oklch(0.8715 0.0402 142.92); /* #C6DCC4 — selected border, pending rating */
+
+  /* ---- Overlay ------------------------------------------------------- */
+  --scrim: oklch(0.2028 0.0115 139.43 / 0.62); /* behind labels on photographs */
+  --on-scrim: oklch(1 0 0);
+
+  /* ---- Elevation ----------------------------------------------------- */
+  /* Every shadow is one warm-tinted colour at H 84, never neutral black.
+     Only the alpha changes between levels. */
+  --e1: 0 1px 2px oklch(0.2878 0.0225 84.41 / 0.05); /* resting material */
+  --e2: 0 2px 10px oklch(0.2878 0.0225 84.41 / 0.07); /* photography */
+  --e3: 0 12px 32px oklch(0.2878 0.0225 84.41 / 0.10); /* genuine overlays only */
+
+  /* ---- Shape — softened, never rounded ------------------------------- */
+  /* Assigned by material, not by size. The 0 is load-bearing: taste-note
+     chips and rating cells are stamped labels, not bubbles. */
+  --r-none: 0px;
+  --r-xs: 2px;
+  --r-sm: 3px;
+  --r-md: 5px;
+  --r-lg: 8px;
+  --r-full: 9999px;
+
+  /* ---- Space --------------------------------------------------------- */
+  /* 4pt base. Tailwind multiplies this, so p-1 is 4px and p-6 is 24px. */
+  --space-base: 4px;
+
+  --gutter: 24px;
+  --gutter-timeline: 16px;
+  --topbar-height: 60px;
+
+  /* Three content widths, each matched to a reading task. */
+  --w-content: 1080px; /* application chrome */
+  --w-reading: 720px; /* review page, compose form */
+  --w-timeline: 620px; /* the feed */
+
+  /* ---- Type families -------------------------------------------------- */
+  /* Inter carries anything a person wrote. JetBrains Mono carries anything
+     that is a fact about the cup. The family is the signal.
+     --font-inter and --font-jetbrains-mono are injected by next/font in
+     app/layout.tsx; the fallbacks cover the pre-hydration paint. */
+  --family-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif;
+  --family-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+
+  /* ---- Type scale ----------------------------------------------------- */
+  /* A closed set of 13 semantic styles. Weight is 400 for prose, 500 for
+     button labels, 600 for headlines — nothing bold, nothing italic. */
+
+  --t-display-size: 36px;
+  --t-display-leading: 1.15;
+  --t-display-tracking: -0.02em;
+  --t-display-weight: 600;
+
+  --t-headline-lg-size: 24px;
+  --t-headline-lg-leading: 1.25;
+  --t-headline-lg-tracking: -0.015em;
+  --t-headline-lg-weight: 600;
+
+  --t-headline-md-size: 17px;
+  --t-headline-md-leading: 1.35;
+  --t-headline-md-tracking: -0.01em;
+  --t-headline-md-weight: 600;
+
+  --t-body-lg-size: 18px;
+  --t-body-lg-leading: 1.55;
+  --t-body-lg-tracking: normal;
+  --t-body-lg-weight: 400;
+
+  /* The loosest leading in the system — the one place people read paragraphs. */
+  --t-body-prose-size: 18px;
+  --t-body-prose-leading: 1.75;
+  --t-body-prose-tracking: normal;
+  --t-body-prose-weight: 400;
+
+  --t-body-md-size: 15px;
+  --t-body-md-leading: 1.6;
+  --t-body-md-tracking: normal;
+  --t-body-md-weight: 400;
+
+  --t-body-excerpt-size: 15px;
+  --t-body-excerpt-leading: 1.65;
+  --t-body-excerpt-tracking: normal;
+  --t-body-excerpt-weight: 400;
+
+  --t-label-lg-size: 13px;
+  --t-label-lg-leading: 1.2;
+  --t-label-lg-tracking: normal;
+  --t-label-lg-weight: 500;
+
+  --t-data-md-size: 13px;
+  --t-data-md-leading: 1.5;
+  --t-data-md-tracking: 0.02em;
+  --t-data-md-weight: 400;
+
+  --t-data-sm-size: 11px;
+  --t-data-sm-leading: 1.45;
+  --t-data-sm-tracking: 0.04em;
+  --t-data-sm-weight: 400;
+
+  --t-data-xs-size: 9px;
+  --t-data-xs-leading: 1.2;
+  --t-data-xs-tracking: 0.08em;
+  --t-data-xs-weight: 400;
+
+  /* Uppercased in CSS, not in the source text — see the .text-label-caps rule. */
+  --t-label-caps-size: 11px;
+  --t-label-caps-leading: 1.45;
+  --t-label-caps-tracking: 0.12em;
+  --t-label-caps-weight: 400;
+
+  /* Rating axis names sit in a fixed 84px column and need the tighter setting. */
+  --t-label-axis-size: 11px;
+  --t-label-axis-leading: 1.45;
+  --t-label-axis-tracking: 0.1em;
+  --t-label-axis-weight: 400;
+}
