@@ -19,7 +19,7 @@ export function FeedTabs() {
     <div
       role="tablist"
       aria-label="Timeline filter"
-      className="sticky top-15 z-10 flex gap-6 border-b border-line bg-paper-translucent backdrop-blur-md"
+      className="sticky top-15 z-10 flex gap-4 border-b border-line bg-paper-translucent backdrop-blur-md sm:gap-6"
     >
       {TABS.map((tab) => {
         const isActive = tab === active;

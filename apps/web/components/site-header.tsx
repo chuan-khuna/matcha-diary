@@ -8,11 +8,18 @@ import { SiteNav } from "@/components/site-nav";
  * photography and genuine overlays.
  *
  * A server component: only the nav's active state needs the client.
+ *
+ * Carries no compose action. The feed's own ComposePrompt is the entry point to
+ * writing, which keeps the screen to at most one primary action and leaves the
+ * bar as brand and navigation only. Below 640px SiteNav hides and BottomNav
+ * takes over, so the bar is brand-only on mobile.
  */
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-paper-translucent backdrop-blur-md">
-      <div className="mx-auto flex h-15 max-w-content items-center gap-6 px-6">
+      {/* The sticky header is itself a positioned ancestor, which is what the
+          mobile nav panel anchors its `top-full` to. */}
+      <div className="mx-auto flex h-15 max-w-content items-center gap-2 px-4 sm:gap-6 sm:px-6">
         <Link
           href="/"
           className="flex shrink-0 items-center gap-2 font-semibold -tracking-[0.01em]"
@@ -32,13 +39,6 @@ export function SiteHeader() {
         </Link>
 
         <SiteNav />
-
-        <Link
-          href="#"
-          className="ml-auto shrink-0 rounded-sm bg-matcha px-4 py-2.25 text-label-lg text-surface transition-colors hover:bg-matcha-deep active:translate-y-px"
-        >
-          + Log a cup
-        </Link>
       </div>
     </header>
   );

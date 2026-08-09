@@ -3,26 +3,31 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-/**
- * The only reason this is a client component is `usePathname` — active state has
- * to know where you are. Keep it that way: the header shell around it stays a
- * server component, so the brand and the primary action ship no JavaScript.
- *
- * `#` marks a destination that does not exist yet. Each becomes a real route as
- * it is built; nothing else about this file changes.
- */
-const LINKS = [
-  { label: "feed", href: "/" },
-  { label: "database", href: "#" },
-  { label: "my diary", href: "#" },
-] as const;
+import { NAV_LINKS, navLinkClasses } from "@/lib/nav-links";
 
+/**
+ * Primary navigation for wide viewports, inline in the top bar.
+ *
+ * Below 640px this hides entirely and BottomNav takes over — the same
+ * destinations, moved within reach of a thumb. The breakpoint is content-driven
+ * rather than device-driven: three labels plus the brand stop fitting on one
+ * 60px line, which is the actual reason and not a device class.
+ *
+ * Keeps its labels beside the icons. The bottom bar drops them because it is
+ * three wide targets where position alone is a strong cue; up here the items sit
+ * in a row of arbitrary length beside a wordmark, where a bare glyph is a
+ * guess. Space is not the constraint at this width, so nothing is bought by
+ * hiding the word.
+ *
+ * Client-only because `usePathname` drives active state. The header shell around
+ * it stays a server component.
+ */
 export function SiteNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-1" aria-label="Primary">
-      {LINKS.map(({ label, href }) => {
+    <nav aria-label="Primary" className="hidden gap-1 sm:flex">
+      {NAV_LINKS.map(({ label, href, Icon }) => {
         const isCurrent = href !== "#" && pathname === href;
 
         return (
@@ -30,13 +35,9 @@ export function SiteNav() {
             key={label}
             href={href}
             aria-current={isCurrent ? "page" : undefined}
-            // Matcha here is state, not decoration — it marks where you are.
-            className={`rounded-xs px-2.5 py-1.5 font-mono text-data-md transition-colors ${
-              isCurrent
-                ? "bg-matcha-soft text-matcha-deep"
-                : "text-clay hover:bg-paper-sunk hover:text-ink"
-            }`}
+            className={`flex items-center gap-1.5 rounded-xs px-2.5 py-1.5 font-mono text-data-md transition-colors ${navLinkClasses(isCurrent)}`}
           >
+            <Icon aria-hidden="true" size={16} />
             {label}
           </Link>
         );
