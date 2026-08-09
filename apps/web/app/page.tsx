@@ -1,5 +1,5 @@
 import { ComposePrompt } from "@/components/compose-prompt";
-import { FeedEntry } from "@/components/feed-entry";
+import { FeedList } from "@/components/feed-list";
 import { FeedTabs } from "@/components/feed-tabs";
 import { PLACEHOLDER_FEED } from "@/lib/feed-data";
 
@@ -17,11 +17,7 @@ export default function FeedPage() {
 
       <ComposePrompt />
 
-      <section className="flex flex-col pb-16" aria-label="Timeline">
-        {PLACEHOLDER_FEED.map((entry) => (
-          <FeedEntry key={entry.id} entry={entry} />
-        ))}
-      </section>
+      <FeedList entries={PLACEHOLDER_FEED} />
 
       <button
         type="button"
