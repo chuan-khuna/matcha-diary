@@ -15,6 +15,20 @@ them, don't estimate them.
 
 `DESIGN.md` is the source of truth for the palette. Add a colour there before using it anywhere else.
 
+# Imports
+
+In `apps/web`, import through the `@/*` alias. It resolves to the app root, so
+`@/styles/globals.css` and `@/components/rating-bar` are correct and `../../styles/globals.css` is
+not. This holds however short the relative path would be.
+
+Why: a relative path encodes where the *importer* sits, so moving a file rewrites every path inside
+it. An alias encodes where the *target* sits — the thing that did not move.
+
+**One exception, and it is a hard one: `@import` inside a stylesheet.** Tailwind's PostCSS plugin
+resolves those itself and never reads `tsconfig.json`, so an alias there fails the build outright
+rather than falling back. `styles/globals.css` imports its preset as `./presets/washi.css`, and that
+is correct rather than an oversight.
+
 # Artifacts
 
 Everything under `docs/artifacts/` follows this convention — files you create there, and files you
