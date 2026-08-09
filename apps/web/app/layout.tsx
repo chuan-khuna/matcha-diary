@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
+import { SiteHeader } from "@/components/site-header";
 import "@/styles/globals.css";
 
 // Inter carries anything a person wrote; JetBrains Mono carries anything that
@@ -31,7 +32,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-theme="washi"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   );
 }
