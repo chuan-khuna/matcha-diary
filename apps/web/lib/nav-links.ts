@@ -26,7 +26,7 @@ export type NavLink = {
 
 export const NAV_LINKS: NavLink[] = [
   { label: "feed", href: "/", Icon: PiHouseLight },
-  { label: "database", href: "#", Icon: PiLeafLight },
+  { label: "database", href: "/database", Icon: PiLeafLight },
   { label: "my diary", href: "#", Icon: PiNotebookLight },
 ];
 

@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { PiLeafLight } from "react-icons/pi";
 
 import { GradientPattern } from "@/components/gradient-pattern";
 
@@ -42,6 +43,44 @@ export function PhotoStandIn({
     <GradientPattern seed={seed} className={`bg-paper-sunk ${className}`}>
       {children}
     </GradientPattern>
+  );
+}
+
+/**
+ * The empty frame a record with no photograph gets — a sunk well with a leaf
+ * centred in it.
+ *
+ * The glyph is what separates *absent* from *broken*. A bare `paper-sunk` box
+ * is the well a photograph sits in while it loads, so on its own it reads as a
+ * picture that failed to arrive; a mark inside it says the slot is empty on
+ * purpose. It is a glyph rather than a line of text because "no photo" is a
+ * sentence about the interface, and the leaf is the Phosphor Light one the
+ * database nav already uses, so no new weight or icon set enters the repo.
+ *
+ * `placeholder` is the right token and its 2.2:1 is not a problem here: it is
+ * the one colour DESIGN.md marks as never load-bearing, and nothing about a
+ * record depends on seeing this.
+ *
+ * Note that the feed does the opposite — an entry with no photograph is simply
+ * shorter. A timeline is a column of posts of whatever length, where a row of
+ * empty frames would be an invented rhythm; a grid is a set of cards compared
+ * side by side, where a missing frame ragged-edges the row it sits in.
+ */
+export function PhotoPlaceholder({
+  className = "",
+  iconSize = 32,
+}: {
+  className?: string;
+  /** Scaled to the frame — a 32px leaf is lost in a full-width cover. */
+  iconSize?: number;
+}) {
+  return (
+    <div
+      aria-hidden="true"
+      className={`flex items-center justify-center bg-paper-sunk ${className}`}
+    >
+      <PiLeafLight size={iconSize} className="text-placeholder" />
+    </div>
   );
 }
 
