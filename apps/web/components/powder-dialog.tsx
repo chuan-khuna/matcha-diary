@@ -4,11 +4,8 @@ import { useEffect, useId, useRef } from "react";
 
 import { PhotoGallery } from "@/components/photo-gallery";
 import { PhotoPlaceholder } from "@/components/placeholders";
-import {
-  formatPrice,
-  formatPricePerGram,
-  type Powder,
-} from "@/lib/powder-data";
+import { PriceList } from "@/components/price-list";
+import type { Powder } from "@/lib/powder-data";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
@@ -125,13 +122,7 @@ export function PowderDialog({
 
             <section className="flex flex-col gap-3">
               <h3 className="label-caps text-clay">Price</h3>
-              <p className="font-mono text-data-md tabular-nums">
-                {formatPrice(powder)}
-                <span className="text-clay">
-                  {" · "}
-                  {powder.grams} g · {formatPricePerGram(powder)}
-                </span>
-              </p>
+              <PriceList sizes={powder.sizes} />
             </section>
 
             <section className="flex flex-col gap-3">

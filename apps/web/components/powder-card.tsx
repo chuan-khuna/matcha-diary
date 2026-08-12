@@ -1,10 +1,7 @@
 import { OverlayLabel } from "@/components/overlay-label";
 import { PhotoPlaceholder, PhotoStandIn } from "@/components/placeholders";
-import {
-  formatPrice,
-  formatPricePerGram,
-  type Powder,
-} from "@/lib/powder-data";
+import { PriceList } from "@/components/price-list";
+import type { Powder } from "@/lib/powder-data";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
@@ -81,15 +78,7 @@ export function PowderCard({
           {powder.cultivars.join(" · ")}
         </p>
 
-        {/* Tabular figures so the price column does not jitter between cards —
-            the whole point of a per-gram number is that you can read down it. */}
-        <p className="font-mono text-data-md tabular-nums">
-          {formatPrice(powder)}
-          <span className="text-clay">
-            {" · "}
-            {powder.grams} g · {formatPricePerGram(powder)}
-          </span>
-        </p>
+        <PriceList sizes={powder.sizes} />
 
         <p className="line-clamp-3 text-body-excerpt text-ink-2">
           {powder.description[0]}

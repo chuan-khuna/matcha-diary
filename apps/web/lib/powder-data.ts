@@ -26,6 +26,26 @@
  * Those two draw `PhotoPlaceholder`, so a row of cards keeps one eye line.
  */
 
+/**
+ * One tin, at one weight, for one price.
+ *
+ * A powder is sold in several sizes and they do not scale linearly — the 100g
+ * tin is cheaper per gram than the 20g one, near enough always. That gap is the
+ * thing worth showing, and it only exists if the sizes are rows rather than a
+ * single price with a note beside it.
+ */
+export type PowderSize = {
+  /** Weight of the tin. */
+  grams: number;
+  /**
+   * Retail price in **minor units** — 105000 is ฿1,050.00, since one baht is a
+   * hundred satang. An integer because money in a float is a rounding bug
+   * waiting for a currency with three decimal places, and because a price that
+   * has to be summed or compared should never have been approximate.
+   */
+  priceMinor: number;
+};
+
 export type Powder = {
   /** UUIDv7 once the API is real. */
   id: string;
@@ -52,14 +72,11 @@ export type Powder = {
    */
   notes: string[];
   /**
-   * Retail price in **minor units** — 105000 is ฿1,050.00, since one baht is a
-   * hundred satang. An integer because money in a float is a rounding bug
-   * waiting for a currency with three decimal places, and because a price that
-   * has to be summed or compared should never have been approximate.
+   * The tins this powder is sold in, smallest first. Ordered here rather than
+   * sorted at render, because the order is a property of the range a maker
+   * offers and not of the page that draws it.
    */
-  priceMinor: number;
-  /** Weight of the tin that price buys. */
-  grams: number;
+  sizes: PowderSize[];
   /**
    * Seeds for the photo stand-ins, cover first. Becomes an ordered list of
    * storage keys.
@@ -123,16 +140,16 @@ const perGramFormat = new Intl.NumberFormat(LOCALE, {
   maximumFractionDigits: 2,
 });
 
-export const formatPrice = (powder: Powder): string =>
-  priceFormat.format(powder.priceMinor / 100);
+export const formatPrice = (size: PowderSize): string =>
+  priceFormat.format(size.priceMinor / 100);
 
 /**
  * Derived at the edge rather than stored beside the price. Two fields for one
  * fact can disagree — a corrected price with a stale rate beneath it is a
  * plausible bug and an invisible one — and this one is a division.
  */
-export const formatPricePerGram = (powder: Powder): string =>
-  `${perGramFormat.format(powder.priceMinor / 100 / powder.grams)}/g`;
+export const formatPricePerGram = (size: PowderSize): string =>
+  `${perGramFormat.format(size.priceMinor / 100 / size.grams)}/g`;
 
 export const PLACEHOLDER_POWDERS: Powder[] = [
   {
@@ -145,8 +162,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "Very forgiving. This is the one to hand someone who has only ever had matcha as a latte and wants to try a bowl without deciding they hate it.",
     ],
     notes: ["nutty", "toasted", "sweet finish", "light body"],
-    priceMinor: 105000,
-    grams: 30,
+    sizes: [
+      { grams: 30, priceMinor: 105000 },
+      { grams: 100, priceMinor: 320000 },
+    ],
     photos: [201, 202, 203],
   },
   {
@@ -159,8 +178,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "It punishes bad water. Filtered and at 70° it is precise and long; straight from the tap it collapses into something metallic.",
     ],
     notes: ["mineral", "umami", "astringent", "long finish"],
-    priceMinor: 185000,
-    grams: 20,
+    sizes: [
+      { grams: 20, priceMinor: 185000 },
+      { grams: 40, priceMinor: 354000 },
+    ],
     photos: [204, 205, 206, 207],
   },
   {
@@ -175,8 +196,11 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "Cheaper water and a careless 75° pour will not ruin it. The finish is short and clean, and a faint pea-shoot sweetness shows up more on the second bowl than the first.",
     ],
     notes: ["grassy", "light body", "citrus", "sweet finish"],
-    priceMinor: 120000,
-    grams: 40,
+    sizes: [
+      { grams: 20, priceMinor: 64000 },
+      { grams: 40, priceMinor: 120000 },
+      { grams: 100, priceMinor: 285000 },
+    ],
     photos: [],
   },
   {
@@ -189,8 +213,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "The maker does not publish the blend; the cultivars tagged here are what the cup suggests rather than what the tin says. What is clear is that it was built for koicha and is grudging about anything else.",
     ],
     notes: ["marine", "umami", "thick body", "bitter"],
-    priceMinor: 205000,
-    grams: 40,
+    sizes: [
+      { grams: 20, priceMinor: 107000 },
+      { grams: 40, priceMinor: 205000 },
+    ],
     photos: [208, 209, 210, 211, 212],
   },
   {
@@ -203,8 +229,11 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "Bare, it shows its hand — a coarse grassiness and a bitterness that arrives early and then does not develop. Less a flaw than a design brief.",
     ],
     notes: ["grassy", "bitter", "astringent"],
-    priceMinor: 160000,
-    grams: 100,
+    sizes: [
+      { grams: 40, priceMinor: 68000 },
+      { grams: 100, priceMinor: 160000 },
+      { grams: 200, priceMinor: 300000 },
+    ],
     photos: [213, 214, 215],
   },
   {
@@ -217,8 +246,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "Held against the tongue it thickens rather than thins. The sweetness arrives late — a good thirty seconds after the swallow — and stays longer than anything else in this list.",
     ],
     notes: ["cocoa", "thick body", "sweet finish", "long finish"],
-    priceMinor: 155000,
-    grams: 20,
+    sizes: [
+      { grams: 20, priceMinor: 155000 },
+      { grams: 40, priceMinor: 300000 },
+    ],
     photos: [216, 217, 218, 219],
   },
   {
@@ -231,8 +262,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "Thin, it foams into a pale jade with a chestnut sweetness that sits at the front and never turns bitter. Thick, it flattens out; this is not a koicha powder pretending otherwise.",
     ],
     notes: ["umami", "nutty", "creamy", "sweet finish"],
-    priceMinor: 135000,
-    grams: 40,
+    sizes: [
+      { grams: 20, priceMinor: 70000 },
+      { grams: 40, priceMinor: 135000 },
+    ],
     photos: [220, 221, 222],
   },
   {
@@ -246,8 +279,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "The most useful powder here for learning what the others are doing — nothing sticks out far enough to distract from the rest.",
     ],
     notes: ["grassy", "sweet finish", "umami"],
-    priceMinor: 114000,
-    grams: 30,
+    sizes: [
+      { grams: 30, priceMinor: 114000 },
+      { grams: 100, priceMinor: 365000 },
+    ],
     photos: [],
   },
   {
@@ -260,8 +295,8 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "The shortest finish on this list, and that is the point — it is clean, it resets the mouth, and it does not coat anything on the way out.",
     ],
     notes: ["citrus", "astringent", "light body"],
-    priceMinor: 148000,
-    grams: 40,
+    // Sold in one size only, so the list is a list of one.
+    sizes: [{ grams: 40, priceMinor: 148000 }],
     photos: [223, 224, 225, 226],
   },
   {
@@ -276,8 +311,10 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
       "Silky rather than thick. Best drunk in a quiet room, because most of what is good about it happens above the liquid rather than in it.",
     ],
     notes: ["floral", "creamy", "light body"],
-    priceMinor: 142500,
-    grams: 30,
+    sizes: [
+      { grams: 30, priceMinor: 142500 },
+      { grams: 60, priceMinor: 276000 },
+    ],
     photos: [227],
   },
 ];
