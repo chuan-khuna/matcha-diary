@@ -7,11 +7,11 @@
  * tea.
  *
  * Shapes follow the data model in the stack ADR: a Powder hangs off a Brand row
- * rather than carrying a brand string, and cultivars and taste notes are both
- * rows in shared, extensible tag vocabularies rather than free text on the
- * record. Both are flattened to strings here because there is no API yet and a
- * fake join buys nothing — `brand` becomes `brand.name` and the two tag lists
- * become arrays of slugs when it lands.
+ * rather than carrying a brand string, and origin, cultivars and taste notes
+ * are all rows in shared, extensible vocabularies rather than free text on the
+ * record. Every one is flattened to a string here because there is no API yet
+ * and a fake join buys nothing — `brand` becomes `brand.name`, `origin` becomes
+ * `region.name`, and the two tag lists become arrays of slugs when it lands.
  *
  * There is no rating and no score on a powder. Ratings belong to a review, are
  * sparse and per-note, and the system has no single number by design — so a
@@ -53,6 +53,19 @@ export type Powder = {
   brand: string;
   /** The blend name, as the maker prints it. */
   name: string;
+  /**
+   * Where the leaf was grown, as "town, prefecture".
+   *
+   * A fact about the tea rather than about the company, which is why it is not
+   * folded into the brand: Aiya is an Aichi house and Ippodo a Kyoto one, but a
+   * Kyoto house can and does sell a Kagoshima single cultivar, and the growing
+   * region is the half that shows up in the cup.
+   *
+   * Becomes a Region row on the same terms as Brand and Cultivar — one row for
+   * Uji rather than seven strings, so it can be counted, filtered and spelled
+   * one way.
+   */
+  origin: string;
   /**
    * Tags, not shares: a blend lists what is in it and never in what ratio,
    * because no maker publishes that and inventing a percentage would read as a
@@ -156,6 +169,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0001-7000-8000-000000000001",
     brand: "Aiya",
     name: "Nishio Ceremonial",
+    origin: "Nishio, Aichi",
     cultivars: ["yabukita", "okumidori"],
     description: [
       "Nishio rather than Uji, and it tastes like it: softer, nuttier, less of the marine depth and more of a toasted sweetness sitting where the umami would otherwise be.",
@@ -172,6 +186,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0002-7000-8000-000000000002",
     brand: "Horii Shichimeien",
     name: "Uji Hikari, single cultivar",
+    origin: "Uji, Kyoto",
     cultivars: ["uji hikari"],
     description: [
       "A single cultivar bottled as an argument. Uji Hikari gives a sharper, more mineral umami than Samidori does — less sweet, more structured, with a stony finish that some drinkers read as a flaw and others as the whole point.",
@@ -190,6 +205,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0003-7000-8000-000000000003",
     brand: "Ippodo",
     name: "Sayaka-no-mukashi",
+    origin: "Wazuka, Kyoto",
     cultivars: ["okumidori", "samidori"],
     description: [
       "The everyday one. Lighter body, brighter attack, less to think about — a powder to drink two bowls of on a Tuesday rather than one bowl of on a Sunday.",
@@ -207,6 +223,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0004-7000-8000-000000000004",
     brand: "Ippodo",
     name: "Ummon-no-mukashi",
+    origin: "Uji, Kyoto",
     cultivars: ["samidori", "asahi", "gokou"],
     description: [
       "Dense in a way that is hard to describe without sounding like marketing. It reads marine before it reads vegetal — a nori edge under the umami — and the bitterness is present but structural, holding the shape of everything around it.",
@@ -223,6 +240,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0005-7000-8000-000000000005",
     brand: "Marukyu Koyamaen",
     name: "Aoarashi",
+    origin: "Ujitawara, Kyoto",
     cultivars: ["okumidori", "yabukita"],
     description: [
       "The blend the cafés buy by the kilo. Loud, green, and built to survive dairy: pull it thin into oat milk and it still reads as matcha rather than as a colour.",
@@ -240,6 +258,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0006-7000-8000-000000000006",
     brand: "Marukyu Koyamaen",
     name: "Kinrin",
+    origin: "Uji, Kyoto",
     cultivars: ["samidori", "asahi"],
     description: [
       "A koicha powder that behaves badly as usucha. Ground fine enough to go to paste with very little water, and the Asahi in the blend brings a dark, nearly cocoa-like weight that Samidori on its own never reaches.",
@@ -256,6 +275,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0007-7000-8000-000000000007",
     brand: "Marukyu Koyamaen",
     name: "Wako",
+    origin: "Uji, Kyoto",
     cultivars: ["samidori"],
     description: [
       "The powder most people meet first, and the reason Samidori has the reputation it does. Sweet, round, almost edgeless — it forgives water that is too hot and a whisk that is too slow.",
@@ -273,6 +293,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0008-7000-8000-000000000008",
     brand: "Nakamura Tokichi",
     name: "Ogura Yama",
+    origin: "Kyotanabe, Kyoto",
     cultivars: ["okumidori", "samidori", "yabukita"],
     description: [
       "Middle of everything, deliberately. The Okumidori carries the sweetness, the Samidori rounds it off, and the Yabukita keeps a little green bite so the whole thing does not turn into syrup.",
@@ -289,6 +310,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0009-7000-8000-000000000009",
     brand: "Rocky's Matcha",
     name: "Kagoshima Saemidori",
+    origin: "Kirishima, Kagoshima",
     cultivars: ["saemidori"],
     description: [
       "Kyushu rather than Kyoto. Saemidori runs bright and citrus-adjacent, and this is ground fine enough that the astringency stays light even when the whisk is lazy.",
@@ -305,6 +327,7 @@ export const PLACEHOLDER_POWDERS: Powder[] = [
     id: "01924f8b-0010-7000-8000-000000000010",
     brand: "Yamamasa Koyamaen",
     name: "Hatsu Mukashi",
+    origin: "Uji, Kyoto",
     cultivars: ["gokou", "samidori"],
     description: [
       "Gokou is the aroma cultivar and it dominates here — the bowl smells floral before it smells like tea — while the Samidori underneath keeps the body from going thin.",

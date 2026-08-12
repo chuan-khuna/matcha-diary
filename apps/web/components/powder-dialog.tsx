@@ -111,6 +111,13 @@ export function PowderDialog({
             </header>
 
             <section className="flex flex-col gap-3">
+              <h3 className="label-caps text-clay">Origin</h3>
+              <p className="font-mono text-data-md uppercase">
+                {powder.origin}
+              </p>
+            </section>
+
+            <section className="flex flex-col gap-3">
               <h3 className="label-caps text-clay">Cultivars</h3>
               {/* Tags, and the record says nothing about their shares —
                   no maker publishes the ratio and a made-up percentage

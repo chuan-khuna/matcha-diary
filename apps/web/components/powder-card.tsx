@@ -60,9 +60,14 @@ export function PowderCard({
       )}
 
       <div className="flex flex-1 flex-col gap-3 p-4">
-        <span className="font-mono text-data-sm uppercase text-ink-2">
-          {powder.brand}
-        </span>
+        {/* Maker on the left, growing region on the right — the two halves of
+            where a tin came from, on one line because they answer one
+            question. The brand is the identifier and carries the darker ink;
+            the origin qualifies it. */}
+        <div className="flex items-baseline justify-between gap-2 font-mono text-data-sm uppercase">
+          <span className="text-ink-2">{powder.brand}</span>
+          <span className="text-right text-clay">{powder.origin}</span>
+        </div>
 
         <h2 className="text-headline-md">
           <button

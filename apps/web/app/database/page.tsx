@@ -35,9 +35,9 @@ export default function DatabasePage() {
         <p className="label-caps text-clay">Database</p>
         <h1 className="text-headline-lg">Matcha powders</h1>
         <p className="text-body-lg text-ink-2">
-          One card per powder — brand, blend name, cultivars, price, photographs,
-          description and taste notes. Placeholder records: the brands are real,
-          everything written about them here is not.
+          One card per powder — brand, blend name, origin, cultivars, price,
+          photographs, description and taste notes. Placeholder records: the
+          brands are real, everything written about them here is not.
         </p>
       </header>
 
