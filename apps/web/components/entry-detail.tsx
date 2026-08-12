@@ -2,6 +2,7 @@ import { PhotoGallery } from "@/components/photo-gallery";
 import { AvatarStandIn } from "@/components/placeholders";
 import { RatingBar } from "@/components/rating-bar";
 import type { FeedEntry } from "@/lib/feed-data";
+import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
  * The full review. This is the one place taste ratings are allowed to appear —
@@ -55,10 +56,7 @@ export function EntryDetail({
           {/* Every note, not the feed's four: the cut is a timeline rule. */}
           <ul className="flex flex-wrap gap-2">
             {entry.notes.map((note) => (
-              <li
-                key={note}
-                className="rounded-none border border-line-strong bg-surface px-2.25 py-1 font-mono text-data-sm whitespace-nowrap text-ink-2"
-              >
+              <li key={note} className={tasteNoteChipClasses()}>
                 {note}
               </li>
             ))}

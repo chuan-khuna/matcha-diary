@@ -1,6 +1,7 @@
 import { OverlayLabel } from "@/components/overlay-label";
 import { AvatarStandIn, PhotoStandIn } from "@/components/placeholders";
 import type { FeedEntry as FeedEntryData } from "@/lib/feed-data";
+import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
  * Chip overflow is cut, not scrolled, and not counted with a "+2" affordance.
@@ -75,12 +76,7 @@ export function FeedEntry({
         {entry.notes.length > 0 && (
           <ul className="flex flex-wrap gap-2">
             {entry.notes.slice(0, MAX_NOTES).map((note) => (
-              <li
-                key={note}
-                // Zero radius is the fixed point of the system: a taste note is
-                // a stamped label, not a bubble.
-                className="rounded-none border border-line-strong bg-surface px-2.25 py-1 font-mono text-data-sm whitespace-nowrap text-ink-2"
-              >
+              <li key={note} className={tasteNoteChipClasses()}>
                 {note}
               </li>
             ))}
