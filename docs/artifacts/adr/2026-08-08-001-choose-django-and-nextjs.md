@@ -1,6 +1,6 @@
 # Choose Django and Next.js for the Matcha Diary stack
 
-**Status:** Accepted · 2026-08-08
+**Status:** Accepted · 2026-08-08 · *Hosting revised 2026-08-13 — Fly.io → DigitalOcean*
 
 Covers the whole stack as one decision, because the layers pick each other. Individual layers can
 be superseded by a later ADR without reopening the rest.
@@ -64,7 +64,7 @@ or small team, hundreds-to-thousands of users rather than millions.
 | Image delivery | `next/image` with a custom loader |
 | Cache, queue broker, token state | Redis |
 | Background jobs | Celery — see *Alternatives considered* |
-| Hosting | Both apps on Fly.io, managed Postgres |
+| Hosting | Both apps on DigitalOcean App Platform, one region, managed Postgres and Valkey |
 | Repo | One repository — `apps/api` and `apps/web` |
 | Task runner | `just`, one `justfile` at the root, shared with CI |
 | Tests | pytest + `pytest-django` + `factory_boy`; Playwright and Vitest on the frontend |
@@ -503,21 +503,59 @@ layer around them — dialog, dropdown, select, form, tabs, toast, command — a
 point. It removes the accessibility-critical boilerplate so the bespoke work sits where the product
 actually differs.
 
-### Hosting — co-locate both apps on Fly.io
+### Hosting — co-locate both apps on DigitalOcean
 
-One provider, one bill. Two specific reasons beyond tidiness:
+One provider, one bill, **one region**. Two specific reasons beyond tidiness:
 
-1. Server Components *and* the token broker call Django from the server on nearly every request. On
-   Fly they can do it over the private network rather than back out through the public internet — a
-   real latency saving on exactly the requests that render the feed, and on every token refresh.
+1. Server Components *and* the token broker call Django from the server on nearly every request.
+   Placed in the same region and VPC, they do it over private networking rather than back out
+   through the public internet — a real latency saving on exactly the requests that render the feed,
+   and on every token refresh. Intra-VPC traffic is also not billed as bandwidth.
 2. One place where secrets and the JWT signing keypair live, and one bill.
 
-Vercel is the alternative and its Next.js DX is better. Brokering removed the cross-provider cookie
-problem, so the only remaining cost against it is metered image optimization on a photo-heavy app —
-which makes Vercel a more serious option than it would have been under a session-cookie design. A
-single Hetzner VPS running everything under Docker Compose is perhaps a quarter of the cost at small
-scale and a reasonable move later, once someone is willing to own upgrades, backups and restore
-drills.
+| Piece | On DigitalOcean |
+| --- | --- |
+| Django | App Platform service, built from `apps/api/Dockerfile` |
+| Next.js | App Platform service, built from `apps/web/Dockerfile` |
+| Celery worker | App Platform worker component, sharing the API image |
+| Postgres | Managed Databases — PostgreSQL |
+| Redis | Managed Caching — Valkey, Redis-protocol compatible |
+
+**App Platform rather than Droplets**, because it consumes the two Dockerfiles the repo already
+needs and asks for nothing further — no host to patch, no Compose file to keep in step with CI. A
+single Droplet running everything under Docker Compose is a fraction of the cost and is the same
+trade as the Hetzner note below: it becomes the right answer once someone is willing to own
+upgrades, backups and restore drills.
+
+**Media stays on Cloudflare R2 rather than moving to Spaces.** Spaces is the same-provider option
+and would be tidier, but the argument for R2 in *Media* was zero egress billing, which is exactly
+the cost that matters on an image-heavy feed. Provider consolidation does not outweigh it.
+
+**Two things to settle while scaffolding, both cheap now and irritating later.**
+
+- **Managed Postgres fronts the database with a PgBouncer pool running in transaction mode.** Django
+  must then set `DISABLE_SERVER_SIDE_CURSORS = True`, or `.iterator()` fails in production and
+  nowhere else. Connect through the pool, use Django's own `"pool": True` on the application side,
+  and put that setting in `production.py` before the first deploy rather than after the first
+  `QuerySet.iterator()`.
+- **Confirm the PostgreSQL major version on offer, and that `pg_trgm` is creatable on the chosen
+  plan.** The trigram search in *Database* depends on that extension. The `18+` in the decision
+  table does not depend on anything — IDs are minted in Python, and the native `uuidv7()` is only
+  ever a convenience for bulk loads and raw SQL.
+
+**What this gives up against Fly.io.** Fly scales machines to zero and bills close to nothing at
+idle, which suits a diary's occasional traffic; App Platform bills for an always-on instance. Fly
+also deploys faster, and it is genuinely multi-region where App Platform is one region chosen up
+front. What DigitalOcean returns is conventional managed infrastructure — first-party managed
+Postgres *and* Redis with automated backups and standby nodes, a real VPC, and pricing that is
+predictable rather than metered — where on Fly the Redis half is a partner service. On a solo
+project touched monthly, that trade favours boring.
+
+Vercel remains the alternative for the Next.js half and its DX there is better. Brokering removed
+the cross-provider cookie problem, so the only remaining cost against it is metered image
+optimization on a photo-heavy app — though splitting the two halves across providers would also
+forfeit reason 1 above, which is most of why they are co-located at all. A single Hetzner VPS under
+Docker Compose remains the cheaper end of the same spectrum as the Droplet option.
 
 ### Repo layout
 
@@ -645,6 +683,7 @@ Turborepo or Nx at this size; two directories and two Dockerfiles.
 | **Single `settings.py`** with `if DEBUG:` branches | Fewer files, and adequate on a project without a security-sensitive configuration surface. Rejected because here the environment-divergent settings are cookie flags, CORS origins and the JWT signing key — where one truthy value in the wrong place ships a development security posture to production. |
 | **All configuration in environment variables**, one settings module | Purer twelve-factor, and it is what the *values* already do. Rejected for the structural differences — installed apps, storage backend, email backend — which become unreadable when expressed as environment lookups. |
 | **Django + SQLite** | Loses Postgres full-text and trigram search, weakens dev/prod parity. Fine for a prototype, wrong for the first real deploy. |
+| **Fly.io** for hosting | The original choice here, and still better on idle cost, deploy speed and multi-region reach — machines scale to zero, which genuinely suits occasional traffic. Rejected in favour of conventional managed infrastructure: DigitalOcean offers first-party managed Postgres *and* Redis with backups and standby nodes, where on Fly the Redis half is a partner service. |
 | **Streamlit / Gradio** | Data-tool framing. Cannot express this design system or a social feed. |
 
 ## What would reopen this
