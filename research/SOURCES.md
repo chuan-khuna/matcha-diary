@@ -129,7 +129,24 @@ anything factual.
 - **The Japanese tea cultivars** — Japanese Tea Sommelier.
   https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   The master list: ~110 cultivars split by tea type (sencha, kamairicha, gyokuro/tencha, black
-  tea, non-registered), each with parentage and registration year. The spine of this research.
+  tea, non-registered), each with parentage and registration year. The spine of this research —
+  nothing else has comparable coverage.
+
+  **But it carries errors of parentage, not only of date**, and because it is the spine those
+  errors propagate. Confirmed against release papers:
+
+  - **Nagomiyutaka is not a Kyoken 283 descendant.** The list gives Saitama No. 1 × Kyoken 283;
+    its own 2014 release paper (Yoshidome et al.) gives **Saitama No. 16 × Fuku 8**, crossed
+    1988, and never mentions either claimed parent.
+  - **Miyamakaori's registration is 2003**, not 2006 as listed.
+  - **Meiryoku** is listed as Yabukita × Z1; its 1987 release paper gives Yabukita × Yamatomidori.
+  - **Benikaori** is dated 1960 alongside Benifuji; MAFF's own list gives Benikaori as 昭和29
+    (1954).
+  - Registration years are frequently the wrong milestone — see the two-registry and 育成/登録
+    notes below.
+
+  Use it to *enumerate* cultivars, which is what it is uniquely good for. Do not take a parent or
+  a year from it without corroboration.
 - **Japanese Tea Cultivar List** — My Japanese Green Tea.
   https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
 - **Japanese Tea Pedia — Cultivars** — Japanese Tea Singapore.
@@ -487,6 +504,7 @@ prefix tells you the station:
 | `Makura-…`, `枕崎N号` | Makurazaki, Kagoshima |
 | `静…` / `Shizu-…` | Shizuoka prefectural |
 | `Mie-…` | Mie |
+| `国茶…` | the national tea programme's own pre-naming designations (Asatsuyu was 国茶U14号) |
 
 Line identities confirmed from primary sources during this research:
 
@@ -535,7 +553,15 @@ Line identities confirmed from primary sources during this research:
 - **京研166号** = Gokou · **京研170号** = Ujihikari · **京研307号** = Ujimidori.
 - **53-7** = Houshun, **53-38** = Tenmyo — both open-pollinated Samidori seedlings, Kyoto, 1977.
 - **平野11号** = Asahi (grower Hirano Jin'nojō) · **小山69号** = Samidori (grower Koyama
-  Masajirō). Grower selections carry the grower's surname, not a station code.
+  Masajirō). Grower selections carry the grower's surname, not a station code — which is itself
+  the tell that a cultivar came from a farmer's field rather than an institute. The 京研 series
+  is the Kyoto institute's own in-house numbering by contrast.
+
+**Many cultivars have no kanji form at all.** Benihomare, Samidori, Ujihikari, Seimei, Sawamizuka
+and Takane-wase are all registered or recorded in kana only, and plausible-looking kanji
+(紅誉 for Benihomare, 宇治光 for Ujihikari, 五月みどり for Samidori) appear in no primary source.
+Set `kanji: null` rather than supplying one that reads correctly — a kanji spelling is a claim
+about the official name, not a transliteration.
 - **G15613** = Sayamakaori before naming · **金谷4号** = Shunmei · **Mi99-23 / 宮崎31号** =
   Kirari 31.
 
@@ -573,13 +599,59 @@ been contradicted by primary sources:
   Shichimeien's own account gives a single 1980–2000 span, consistent with the 2000 PVP filing
   date. The specificity of the invented figures is what makes them dangerous — they read as
   primary data.
+- The **Asahi** draft lists **gyokuro** among its tea types. Kyoto Prefecture's own
+  characteristics table marks Asahi ◎ for てん茶 (tencha) only, and Matcha Direct states its
+  thin, large leaf is unsuitable for a rolled tea like gyokuro. Independently disconfirmed.
+- The **Yutakamidori** draft claims a 1934 **self-pollination** cross and the strain name
+  "U14-1". No source corroborates it; tea is self-incompatible, so a self-pollination claim needs
+  strong sourcing; and **`U14` is Asatsuyu's own designation** — the 1953 registration bulletin
+  gives Asatsuyu as 国茶U14号. The fabrication was assembled out of a real fact belonging to the
+  *parent* cultivar. That is the pattern to watch for: invented detail built from adjacent true
+  detail, which is why it survives a plausibility check.
 
 Treat those files as a guide to voice and structure, not as evidence. Verify independently and
 log the disagreement.
 
-They are not uniformly wrong, though — `minekaori.mdx`'s account of Miya-F1 9-4-48 was
-independently confirmed correct by Unkai's 1971 release paper. The problem is that a draft gives
-no signal about which of its claims are sourced, so each has to be checked on its own.
+They are not uniformly wrong, and the `kirari31.mdx` audit is the fairest test so far. It is the
+most granular draft in the directory — 1,290 seeds sown November 1995, 28 individuals selected,
+strain Mi99-23, survival rates of 86/88/73%, yields of 511 and 520 kg/10a, a 21–27 day
+leaf-colour window, six researchers — and checked against the actual release paper
+(茶業研究報告 No. 120, 2015) **almost all of it held up**. Only two claims failed: a specific
+seed-collection day of "19 October 1995" where the paper says only "October 1995", and a garbled
+disease list (below).
+
+`minekaori.mdx`'s account of Miya-F1 9-4-48 was likewise confirmed correct by Unkai's 1971 paper.
+
+So the drafts are a mix of sound research and invention, with no way to tell which from the text.
+That is worse than uniform unreliability, because the accurate detail lends credibility to the
+fabricated detail sitting beside it. Every claim needs its own check.
+
+### Agronomic figures are trial-specific, not cultivar constants
+
+Yield, survival and resistance numbers come from particular trials at particular sites in
+particular years, and two sources can both be right while disagreeing.
+
+Seedling survival for Saemidori is the worked example: Kirari 31's 2015 release paper gives
+Kirari 31 86%, Yabukita 88%, Saemidori 73%; the 2018 Haruto 34 release paper, a 13–15-site
+national trial, gives Saemidori and Yabukita an equal 75% national average. Neither is wrong —
+they are different trials with different scopes, and the widely-repeated "Saemidori 73% vs
+Yabukita 88%" quotes one trial's numbers as though they were properties of the cultivars.
+
+Attribute a figure to its trial rather than stating it flat. The same caution applies to budding
+time, which varies by region: Ujihikari reads medium in Kyoto and early in a Kagoshima frost
+trial.
+
+### 赤枯れ / 青枯れ are not diseases
+
+A translation trap that will recur across the records. English sources list "red blight" and
+"blue blight" as diseases a cultivar resists. In the Japanese trial tables, **赤枯れ and 青枯れ
+are winter cold-scorch symptoms**, not pathogens — a cultivar "strong" against them is
+cold-hardy, not disease-resistant.
+
+The actual bacterial disease is **赤焼病** (bacterial shoot blight), which is a separate row in
+the same tables and often carries a *different* rating. Kirari 31 is strong against the cold
+symptoms and only "somewhat weak" against the bacterial disease; a flattened English list
+reports both as "strong". Check which term the source table uses before recording a resistance.
 
 ### Two registries, not one wrong year
 
@@ -606,6 +678,23 @@ different events. Records here state **which registry** a date belongs to rather
 Some cultivars are in only one system. Okuhikari and Inaguchi have PVP registrations and **no
 Cha Norin number at all**, despite sources implying otherwise — verified against the full
 52-entry Cha Norin table. Terakawa-wase is PVP No. 2092.
+
+### 育成 is not 登録
+
+The Kyoto institute's own pages distinguish **育成年 (development year)** from **登録年 /
+品種登録 (formal registration)**, and use them deliberately: Ujihikari carries 育成 1954, while
+the institute's later Tenmyo and Houshun carry 品種登録 2006. Secondary sources flatten both into
+"registered", which is how a cultivar that was never registered anywhere acquires a registration
+year.
+
+A third term: **命名登録 (name registration)**. Yutakamidori was name-registered by Kagoshima
+Prefecture in 1966 and holds no Cha Norin number — so `registry: prefectural recommended
+cultivar` is accurate where a flat "unregistered" would not be.
+
+So a Japanese page giving a year is not necessarily giving a registration date. Check which word
+it uses. For the Uji cultivars especially — Asahi, Samidori, Ujihikari, Gokou, Komakage are
+**prefectural recommended cultivars with no national registration at all**, and their "1954" is a
+development or adoption year, not a registration.
 
 ### Dates worth separating generally
 
