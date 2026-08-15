@@ -28,6 +28,27 @@ dates and numbers inline. Before this feeds anything, collapse it to a fixed voc
 the detail into `registrationNumber` / a dated field. `MAFF` and `Ministry of Agriculture and
 Forestry` are the same thing and should merge.
 
+**Naming convention: settled, partially applied.** The house style follows Tezumi
+(https://www.tezumi.com/collections/matcha) — see the naming section in `SOURCES.md` for the
+rule and the three registers. In short: **a place-name or line-code prefix takes a hyphen; every
+other compound stays solid.** Slugs are unaffected.
+
+Applied: `ujihikari.md` (`name: Uji-Hikari`, `romaji:` and prose `Uji-hikari`).
+
+Still open:
+
+- **`kyoken283.md`** has `name: Kyoken 283`. Tezumi writes `Kyōken-283` — hyphen *and* macron.
+  The hyphen fits the rule; the macron does not, since this corpus is macron-free elsewhere and
+  Tezumi itself writes `Gokou`, not `Gokō`. Suggested: `Kyoken-283`. **Undecided.**
+- **Ujimidori** has no record yet (only in `example/`). When written it should be `Uji-Midori` /
+  `Uji-midori`.
+- Five records hyphenate compounds that the rule says should be solid — `Oku-no-yama`
+  (vs `Yamanoibuki`), `Takane-wase`, `Sato-wase`, `Terakawa-wase` (vs `Makinoharawase`), and
+  `Ogura-midori` (vs `Sayamakaori`, `Kanayamidori`, `Hoshinomidori`). None carries a place
+  prefix, so all five should be solid. Not yet applied.
+- `Kirari 31`, `Inzatsu 131`, `Shizu-7132` and `Mie Ryokuho No. 1` carry numbers, where a
+  separator is standard — leave those alone.
+
 **The `example/` drafts contain fabricated data** and should be audited, not trusted — see the
 note in `SOURCES.md`. Two confirmed cases so far: Okunoyama's invented selection window and
 screening funnel, and Kirari 31's registration date.

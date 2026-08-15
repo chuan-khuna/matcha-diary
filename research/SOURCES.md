@@ -396,6 +396,29 @@ Not online; noted for anyone able to reach a copy.
   to Japanese consumers: Asatsuyu as 天然玉露 "natural gyokuro", Kanayamidori's 乳香 milk-aroma,
   Sayamakaori's fit with 狭山火入れ Sayama-style roasting.
 
+- **Tezumi — matcha collection** — https://www.tezumi.com/collections/matcha
+  Example product page: https://www.tezumi.com/products/uji-hikari-matcha
+  A specialist English-language retailer, and the best source found for **which cultivars are
+  actually sold as single-cultivar matcha, and by whom**. Every product names its producer, so it
+  connects cultivars to houses: Yoshida Meichaen, Rishouen, Seicha Tsujiki, Osada Seicha, Kogacha,
+  Azuma Chaen, Arita Sansuien, Yamecha Kumaen, Maruyasu Chagyo, Minoruen, Ozawa Seifuen,
+  Miyazakien, Shōkakuen.
+
+  Cultivars it sells as single-cultivar matcha: Asahi, Asanoka, Gokou, Kirari 31, Kyōken-283,
+  Meiryoku, Okumidori, Saeakari, Saemidori, Samidori, Sayamakaori, Tsuyuhikari, Uji-Hikari,
+  Uji-Midori, Yabukita. Notable that **Kyōken-283, Meiryoku, Asanoka, Sayamakaori and Tsuyuhikari
+  reach market as matcha at all** — the registry treats several of those as sencha cultivars.
+  Product pages carry region, elevation, harvest month, picking method and tasting notes.
+
+  It also documents the **regional pairings** that matter for a diary: Shirakawa Asahi, Shirakawa
+  Gokou, Shirakawa Samidori and Shirakawa Uji-Hikari alongside the Uji versions, Yame Okumidori,
+  Yame Kirari 31, Wazuka Saemidori, Kyōtanabe Gokou, Isagawa Gokou. Same cultivar, different
+  district.
+
+  **On spelling** — this page is also the clearest evidence of how unstable English cultivar
+  romanisation is. Tezumi writes the same cultivar three ways: `Uji Hikari` (product title),
+  `Uji-hikari` (body text) and `Uji-Hikari` (spec table). See the naming note below.
+
 - **日本茶備忘録 / Japanese Tea Memorandum** — https://japantea-chachacha.com/hinshu/
   An individually-run Japanese reference indexing 50+ cultivars alphabetically by kana, each with
   its own page. Thin on registration numbers and parentage, but it covers obscure cultivars the
@@ -678,6 +701,43 @@ different events. Records here state **which registry** a date belongs to rather
 Some cultivars are in only one system. Okuhikari and Inaguchi have PVP registrations and **no
 Cha Norin number at all**, despite sources implying otherwise — verified against the full
 52-entry Cha Norin table. Terakawa-wase is PVP No. 2092.
+
+### Writing cultivar names in English
+
+English sources are wildly inconsistent — Tezumi alone writes `Uji Hikari`, `Uji-hikari` and
+`Uji-Hikari` on one product page, and the Japanese Tea Sommelier list hyphenates almost
+everything (`Sae-midori`, `Oku-midori`, `Kanaya-midori`) while vendors write those solid.
+
+**House convention follows Tezumi**, the specialist retailer at
+https://www.tezumi.com/collections/matcha — chosen because it is how these cultivars actually
+reach English-speaking drinkers.
+
+The rule is **not** "hyphenate compounds". Tezumi writes `Yabukita`, `Saemidori`, `Okumidori`,
+`Samidori`, `Sayamakaori`, `Tsuyuhikari`, `Asanoka`, `Saeakari`, `Meiryoku`, `Asahi` and `Gokou`
+**solid**, and hyphenates only `Uji-Hikari`, `Uji-Midori` and `Kyōken-283`.
+
+So: **a place-name or line-code prefix takes a hyphen; every other compound stays solid.**
+`Uji-` qualifies the name that follows it; `Sayama` in Sayamakaori does not — it is one lexical
+unit. This also avoids a real ambiguity, since `Uji Samidori Matcha` and `Uji Asahi Matcha` in
+the same catalogue use *Uji* as the region.
+
+Three registers, all from the same product page:
+
+| Context | Form |
+|---|---|
+| Title / heading | `Uji Hikari Matcha` (spaced) |
+| Body prose | `Uji-hikari` (hyphen, lower-case second element) |
+| Field label / value | `Cultivar: Uji-Hikari` (hyphen, both capitalised) |
+
+In these records that means `name: Uji-Hikari`, `romaji: Uji-hikari`, prose `Uji-hikari`, and the
+slug stays `ujihikari` — slugs are unaffected throughout.
+
+Numbers keep their separator: `Kirari 31`, `Inzatsu 131`. Note Tezumi writes `Kyōken-283` with a
+hyphen and a macron, while this corpus is otherwise macron-free (`Gokou`, not `Gokō` — as Tezumi
+also writes it). The macron question is unresolved; see STATUS.md.
+
+Because readers meet these names on tins rather than in registries, an `aka:` field listing the
+variants each source uses is worth more than any single choice.
 
 ### 育成 is not 登録
 
