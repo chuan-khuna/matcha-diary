@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Matcha Diary — cultivar lineage
+   Components layered on ../styles.css. No token is redefined here and no
+   colour is invented: everything below resolves to the palette in DESIGN.md.
+   ========================================================================== */
+
+/* ---- Page furniture --------------------------------------------------- */
+.page-head { padding: var(--s6) 0 var(--s4); }
+.page-head .lead { max-width: 62ch; margin-top: var(--s3); }
+
+.note-strip {
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: var(--t-small);
+}
+.note-strip strong { font-weight: 600; color: var(--ink); }
+
+.toolbar {
+  display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
+  padding: var(--s4) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* A pressed control is solid green; a cultivar is soft green. Same colour,
+   two weights — the database page draws the distinction the same way. */
+.chip-btn[aria-pressed="true"] {
+  background: var(--matcha);
+  border-color: var(--matcha);
+  color: oklch(1 0 0);
+}
+
+/* ---- The diagram ------------------------------------------------------ */
+.lin-frame {
+  position: relative;
+  margin-top: var(--s5);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--e1);
+  overflow: hidden;
+}
+.lin-scroll { overflow: auto; }
+.lin-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 240px;
+  touch-action: none;
+  cursor: grab;
+}
+.lin-svg:active { cursor: grabbing; }
+.lin-frame.is-compact .lin-svg { min-height: 160px; }
+
+/* Nodes. A cultivar is the same stamped mono label the powder database uses
+   for a cultivar tag; the map is a field of those, wired together. */
+.lin-node rect {
+  fill: var(--surface);
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  transition: fill .15s, stroke .15s;
+}
+.lin-node text { font-family: var(--mono); }
+.lin-name {
+  font-size: 11px;
+  letter-spacing: .04em;
+  fill: var(--ink-2);
+}
+.lin-meta {
+  font-size: 9px;
+  letter-spacing: .08em;
+  fill: var(--clay);
+}
+
+/* Tinted means "this is what the diary is about" — a matcha cultivar in a
+   field of tea cultivars, exactly as a cultivar tag is tinted on a powder
+   card in a field of taste notes. */
+.lin-node.is-matcha rect { fill: var(--matcha-soft); stroke: var(--matcha-line); }
+.lin-node.is-matcha .lin-name { fill: var(--matcha-deep); }
+
+/* A landrace is ground rather than a plant: recessed fill, broken edge. */
+.lin-node.is-population rect {
+  fill: var(--paper-sunk);
+  stroke-dasharray: 3 3;
+}
+.lin-node.is-population .lin-name { fill: var(--clay); }
+
+.lin-node[tabindex] { cursor: pointer; }
+.lin-node:hover rect { stroke: var(--matcha); }
+.lin-node:focus { outline: none; }
+.lin-node:focus-visible rect { stroke: var(--matcha); stroke-width: 2; }
+
+.lin-node.is-lit rect { stroke: var(--matcha); stroke-width: 2; }
+.lin-node.is-dim { opacity: .26; }
+
+/* Edges. Evidence is carried by stroke pattern, never by hue — the system has
+   one accent and it is already spoken for. Weight rises with how well the
+   claim is attested; a broken line means the record is incomplete or wrong. */
+.lin-edge path {
+  fill: none;
+  stroke: var(--line-strong);
+  stroke-width: 1;
+  transition: stroke .15s, opacity .15s;
+}
+.lin-edge.ev-ssr-confirmed path { stroke-width: 1.7; }
+.lin-edge.ev-ssr-resolved  path { stroke-dasharray: 5 3; }
+.lin-edge.ev-disputed      path { stroke-dasharray: 1.5 3.5; }
+.lin-edge.ev-selection     path { stroke-dasharray: 2 4; }
+
+/* The open circle is the whole point of a stub: it ends in nothing, visibly. */
+.lin-edge circle { fill: var(--surface); stroke: var(--line-strong); stroke-width: 1; }
+.lin-edge.is-stub path { stroke-dasharray: 1.5 3.5; }
+
+.lin-edge.is-lit path { stroke: var(--matcha); }
+.lin-edge.is-lit circle { stroke: var(--matcha); }
+.lin-edge.is-dim { opacity: .16; }
+
+/* ---- Controls sitting on the frame ------------------------------------ */
+.lin-tools {
+  position: absolute; top: var(--s3); right: var(--s3); z-index: 2;
+  display: flex; gap: var(--s1);
+}
+
+.lin-key {
+  display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5);
+  padding: var(--s3) var(--s4);
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+.lin-key-item { display: flex; align-items: center; gap: var(--s2); }
+.lin-key-item svg { flex: none; display: block; }
+.lin-key-item span {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .04em;
+  color: var(--ink-2);
+}
+.lin-key line { stroke: var(--line-strong); stroke-width: 1; }
+.lin-key line.k-confirmed { stroke-width: 1.7; }
+.lin-key line.k-resolved  { stroke-dasharray: 5 3; }
+.lin-key line.k-disputed  { stroke-dasharray: 1.5 3.5; }
+.lin-key line.k-selection { stroke-dasharray: 2 4; }
+.lin-key rect { fill: var(--surface); stroke: var(--line-strong); }
+.lin-key rect.k-matcha { fill: var(--matcha-soft); stroke: var(--matcha-line); }
+.lin-key rect.k-landrace { fill: var(--paper-sunk); stroke-dasharray: 3 3; }
+
+/* Shown only when d3 did not load — the page still has to say something. */
+.lin-offline { display: none; padding: var(--s5); color: var(--ink-2); }
+.no-d3 .lin-offline { display: block; }
+.no-d3 .lin-scroll,
+.no-d3 .lin-tools,
+.no-d3 .lin-key { display: none; }
+
+/* ---- The same lineage, as a list --------------------------------------- */
+.lin-text { margin-top: var(--s4); }
+.lin-text > summary {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--clay);
+  padding: var(--s2) 0;
+}
+.lin-text > summary:hover { color: var(--ink); }
+
+.lin-list, .lin-list ul { list-style: none; margin: 0; padding: 0; }
+.lin-list ul {
+  margin-left: 9px;
+  padding-left: var(--s4);
+  border-left: 1px solid var(--line);
+}
+.lin-list li { padding: 3px 0; }
+.lin-list-name {
+  font-family: var(--mono);
+  font-size: var(--t-small);
+  color: var(--ink);
+}
+.lin-list-name.is-population { color: var(--clay); }
+.lin-list-name.is-unknown { color: var(--clay); font-style: italic; }
+.lin-list-ev {
+  display: inline-block;
+  margin-left: var(--s2);
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .04em;
+  color: var(--clay);
+}
+
+/* ---- Index of cultivars ------------------------------------------------ */
+.cv-index { border-top: 1px solid var(--line); }
+.cv-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) 92px minmax(0, 1.1fr);
+  gap: var(--s3);
+  align-items: baseline;
+  padding: var(--s3) var(--s2);
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: background .12s;
+}
+.cv-row:hover { background: var(--paper-sunk); }
+.cv-row:focus-visible { outline: 2px solid var(--matcha); outline-offset: -2px; }
+.cv-row-name { font-family: var(--mono); font-size: var(--t-small); color: var(--ink); }
+.cv-row-ja, .cv-row-year, .cv-row-kind {
+  font-family: var(--mono); font-size: var(--t-micro); color: var(--clay);
+  font-variant-numeric: tabular-nums;
+}
+.cv-row-kind { color: var(--ink-2); }
+@media (max-width: 700px) {
+  .cv-row { grid-template-columns: minmax(0, 1fr) 72px; }
+  .cv-row-ja, .cv-row-kind { display: none; }
+}
+
+/* ---- Cultivar record --------------------------------------------------- */
+.cv-head { padding: var(--s6) 0 var(--s4); }
+.cv-title { display: flex; align-items: baseline; gap: var(--s3); flex-wrap: wrap; }
+.cv-name {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+.cv-ja { font-size: var(--t-lead); color: var(--clay); }
+
+.cv-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--s4) var(--s5);
+  padding: var(--s4) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.cv-fact { display: grid; gap: 5px; }
+.cv-fact dd { margin: 0; font-family: var(--mono); font-size: var(--t-small); color: var(--ink); }
+.cv-fact dd.is-empty { color: var(--clay); }
+
+.cv-body { max-width: 68ch; }
+.cv-body p { font-size: var(--t-lead); line-height: 1.75; color: var(--ink-2); }
+
+.cv-section { padding-top: var(--s5); }
+.cv-section > .label { display: block; margin-bottom: var(--s3); }
+
+.cv-rel { display: grid; gap: var(--s2); }
+.cv-rel-row {
+  display: flex; align-items: baseline; gap: var(--s3); flex-wrap: wrap;
+  padding: var(--s2) 0;
+  border-bottom: 1px solid var(--line);
+}
+.cv-rel-row:last-child { border-bottom: 0; }
+.cv-rel-link { font-family: var(--mono); font-size: var(--t-small); color: var(--ink); }
+.cv-rel-role, .cv-rel-note {
+  font-family: var(--mono); font-size: var(--t-micro); color: var(--clay);
+}
+.cv-rel-note { flex: 1 1 22ch; font-family: var(--sans); font-size: var(--t-small); }
+.cv-empty { color: var(--clay); font-size: var(--t-small); }
+
+.cv-powders { display: grid; gap: var(--s2); }
+.cv-powder {
+  display: flex; align-items: baseline; gap: var(--s3);
+  padding: var(--s3);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  text-decoration: none;
+}
+.cv-powder:hover { border-color: var(--line-strong); background: var(--paper-sunk); }
+.cv-powder-brand { font-family: var(--mono); font-size: var(--t-micro); color: var(--clay); }
+.cv-powder-name { font-weight: 500; color: var(--ink); }
+
+.cv-foot-nav {
+  display: flex; justify-content: space-between; gap: var(--s3);
+  padding: var(--s5) 0;
+  border-top: 1px solid var(--line);
+  margin-top: var(--s6);
+}

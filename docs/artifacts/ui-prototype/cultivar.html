@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cultivar — Matcha Diary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="lineage.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="nav">
+      <a href="index.html">feed</a>
+      <a href="review.html">review</a>
+      <a href="create.html">new</a>
+      <a href="database.html">database</a>
+      <a href="cultivars.html" aria-current="page">cultivars</a>
+      <a href="design-system.html">system</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn btn-primary" href="create.html">+ Log a cup</a>
+  </div>
+</header>
+
+<main class="wrap-narrow" id="record"></main>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="cultivar-data.js"></script>
+<script src="lineage.js"></script>
+<script>
+(() => {
+  if (!window.d3) document.body.classList.add("no-d3");
+
+  const byId = new Map(CULTIVARS.map((c) => [c.id, c]));
+  const id = new URLSearchParams(location.search).get("id") || "asahi";
+  const cv = byId.get(id);
+  const mount = document.getElementById("record");
+
+  const el = (tag, className, text) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  };
+
+  if (!cv) {
+    const head = el("div", "page-head");
+    head.append(el("h1", "display", "No such cultivar"));
+    head.append(el("p", "lead", `Nothing in this prototype is filed under “${id}”.`));
+    const back = el("a", "btn btn-ghost", "← Back to the lineage");
+    back.href = "cultivars.html";
+    mount.append(head, back);
+    return;
+  }
+
+  document.title = `${cv.name} — Matcha Diary`;
+
+  const kind = cv.population
+    ? "landrace"
+    : cv.parents.some((p) => p.relation === "cross")
+      ? "cross"
+      : "selection from a landrace";
+
+  /* ---- Head ------------------------------------------------------------ */
+  const head = el("div", "cv-head");
+  const crumb = el("a", "btn btn-quiet btn-sm", "← all cultivars");
+  crumb.href = "cultivars.html";
+  head.append(crumb);
+
+  const title = el("div", "cv-title");
+  title.append(el("h1", "cv-name", cv.name));
+  if (cv.ja) title.append(el("span", "cv-ja", cv.ja));
+  title.append(el("span", "chip" + (cv.matcha ? " chip-on" : ""), cv.matcha ? "matcha" : kind));
+  head.append(title);
+  mount.append(head);
+
+  /* ---- Facts ------------------------------------------------------------
+     Mono throughout: every one of these is a fact about the plant rather than
+     anybody's sentence about it. An unrecorded fact says so rather than
+     collapsing to a blank, which would read as "none". */
+  const facts = el("dl", "cv-facts");
+  const fact = (label, value) => {
+    const wrap = el("div", "cv-fact");
+    wrap.append(el("dt", "label", label));
+    wrap.append(el("dd", value ? null : "is-empty", value || "not recorded"));
+    facts.append(wrap);
+  };
+  fact("Kind", kind);
+  if (!cv.population) {
+    fact("Year", cv.year ? String(cv.year) : null);
+    fact("Registration", cv.norin || (cv.year ? "never registered nationally" : null));
+    fact("Selected or bred by", cv.breeder);
+  }
+  fact("Grown", cv.region);
+  if (cv.budding) fact("Budding", cv.budding);
+  mount.append(facts);
+
+  /* ---- Prose ------------------------------------------------------------ */
+  const body = el("div", "cv-body");
+  cv.summary.forEach((p) => body.append(el("p", null, p)));
+  mount.append(body);
+
+  if (cv.notes.length) {
+    const notes = el("section", "cv-section");
+    notes.append(el("span", "label", "Taste notes"));
+    const chips = el("div", "chips");
+    cv.notes.forEach((n) => chips.append(el("span", "chip", n)));
+    notes.append(chips);
+    notes.append(el("p", "hint", "An editorial reading, not a measurement — and a cultivar is a tendency, not a taste. Shading, harvest and the maker's hand all move these further than the plant does."));
+    mount.append(notes);
+  }
+
+  /* ---- Its own slice of the graph --------------------------------------- */
+  const graphSection = el("section", "cv-section");
+  graphSection.append(el("span", "label", "Line of descent"));
+
+  const frame = el("div", "lin-frame is-compact");
+  const scroll = el("div", "lin-scroll");
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "lin-svg");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", `Everything ${cv.name} descends from and everything descended from it. The same is written out below.`);
+  scroll.append(svg);
+  frame.append(scroll);
+  frame.append(el("p", "lin-offline", "The diagram needs d3, which did not load. The parentage is listed below."));
+  graphSection.append(frame);
+  mount.append(graphSection);
+
+  Lineage.draw(svg, Lineage.layout(Lineage.subgraph(CULTIVARS, cv.id)), {
+    focus: cv.id,
+    onSelect: (next) => { if (next !== cv.id) location.href = `cultivar.html?id=${encodeURIComponent(next)}`; },
+  });
+
+  /* ---- Parents and children --------------------------------------------- */
+  const relRow = (fallback, target, role, evidence, note) => {
+    const row = el("div", "cv-rel-row");
+    if (target) {
+      const link = el("a", "cv-rel-link", target.name);
+      link.href = `cultivar.html?id=${encodeURIComponent(target.id)}`;
+      row.append(link);
+    } else {
+      row.append(el("span", "cv-rel-link", fallback));
+    }
+    row.append(el("span", "cv-rel-role", role));
+    if (evidence) row.append(el("span", "cv-rel-role", evidence));
+    if (note) row.append(el("span", "cv-rel-note", note));
+    return row;
+  };
+
+  const parents = el("section", "cv-section");
+  parents.append(el("span", "label", "Parents"));
+  const plist = el("div", "cv-rel");
+  if (!cv.parents.length) {
+    plist.append(el("p", "cv-empty", "None — a landrace is a seed-grown population rather than a plant with a pedigree."));
+  }
+  cv.parents.forEach((p) => {
+    const ev = EVIDENCE[p.relation === "selection" ? "selection" : p.evidence];
+    plist.append(relRow(
+      "parent unassigned",
+      p.of ? byId.get(p.of) : null,
+      p.relation === "selection" ? "selected from" : `${p.role} parent`,
+      ev.label,
+      p.note || ev.blurb,
+    ));
+  });
+  parents.append(plist);
+  mount.append(parents);
+
+  const kids = CULTIVARS.filter((c) => (c.parents || []).some((p) => p.of === cv.id));
+  const children = el("section", "cv-section");
+  children.append(el("span", "label", kids.length === 1 ? "Child" : "Children"));
+  const clist = el("div", "cv-rel");
+  if (!kids.length) {
+    clist.append(el("p", "cv-empty", "Nothing in this prototype descends from it."));
+  }
+  kids.forEach((k) => {
+    const via = k.parents.filter((p) => p.of === cv.id);
+    const ev = EVIDENCE[via[0].relation === "selection" ? "selection" : via[0].evidence];
+    clist.append(relRow(
+      null,
+      k,
+      via.length > 1 ? "both parents" : via[0].relation === "selection" ? "selected from it" : `${via[0].role} parent`,
+      ev.label,
+      via[0].note || null,
+    ));
+  });
+  children.append(clist);
+  mount.append(children);
+
+  /* ---- The powder side of the join --------------------------------------
+     The reverse of the cultivar tag that already sits on every powder record.
+     One shared row rather than two loose strings is the whole reason this
+     direction is answerable at all. */
+  const used = POWDERS.filter((p) => p.cultivars.includes(cv.id));
+  if (used.length) {
+    const section = el("section", "cv-section");
+    section.append(el("span", "label", `Powders listing ${cv.name}`));
+    const grid = el("div", "cv-powders");
+    used.forEach((p) => {
+      const card = el("a", "cv-powder");
+      card.href = "database.html";
+      card.append(el("span", "cv-powder-brand", p.brand));
+      card.append(el("span", "cv-powder-name", p.name));
+      grid.append(card);
+    });
+    section.append(grid);
+    section.append(el("p", "hint", "Placeholder records — the brands are real, the blends attributed to them are not."));
+    mount.append(section);
+  }
+
+  /* ---- The same lineage, written out ------------------------------------ */
+  const text = el("details", "lin-text");
+  text.append(el("summary", null, "Read the line as a list"));
+  text.append(Lineage.ancestryList(CULTIVARS, cv.id));
+  if (!window.d3) text.open = true;
+  mount.append(text);
+
+  /* ---- Walk the set ------------------------------------------------------ */
+  const order = CULTIVARS.map((c) => c.id);
+  const here = order.indexOf(cv.id);
+  const nav = el("div", "cv-foot-nav");
+  const step = (delta, label) => {
+    const target = byId.get(order[(here + delta + order.length) % order.length]);
+    const a = el("a", "btn btn-ghost btn-sm", label.replace("%s", target.name));
+    a.href = `cultivar.html?id=${encodeURIComponent(target.id)}`;
+    return a;
+  };
+  nav.append(step(-1, "← %s"), step(1, "%s →"));
+  mount.append(nav);
+
+  mount.append(el("p", "foot mono", "Hover a node to light its line · click to open that record"));
+})();
+</script>
+
+</body>
+</html>

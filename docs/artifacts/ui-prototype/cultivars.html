@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cultivar lineage — Matcha Diary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="lineage.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"></span> matcha diary</a>
+    <nav class="nav">
+      <a href="index.html">feed</a>
+      <a href="review.html">review</a>
+      <a href="create.html">new</a>
+      <a href="database.html">database</a>
+      <a href="cultivars.html" aria-current="page">cultivars</a>
+      <a href="design-system.html">system</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="btn btn-primary" href="create.html">+ Log a cup</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <h1 class="display">Cultivar lineage</h1>
+    <p class="lead">
+      A powder is a blend somebody assembled and can change next season. A cultivar is a plant with a
+      pedigree — and the pedigree is most of the answer to why two powders made the same way taste
+      unalike. Every line below is a parentage; the way it is drawn is how well that parentage is
+      attested.
+    </p>
+  </div>
+
+  <p class="note-strip">
+    <strong>This data is real.</strong> Unlike the powder records on the database page, the
+    parentages, years, breeders and registration numbers here are sourced — see
+    <code>README.md</code>. Only the taste notes are an editorial reading rather than a measurement.
+  </p>
+
+  <div class="toolbar">
+    <span class="label">Show</span>
+    <button class="chip chip-btn" type="button" id="filter-matcha" aria-pressed="false">matcha cultivars only</button>
+    <span class="spacer"></span>
+    <span class="mono muted" id="count"></span>
+  </div>
+
+  <div class="lin-frame" id="frame">
+    <div class="lin-tools">
+      <button class="btn btn-ghost btn-sm" type="button" id="fit">reset view</button>
+    </div>
+
+    <div class="lin-scroll">
+      <svg class="lin-svg" id="graph" role="img"
+           aria-label="Lineage of Japanese tea cultivars. Generations run left to right, from seed-grown landraces through selections to crosses. The same pedigree is written out under &quot;read it as a list&quot; below."></svg>
+    </div>
+
+    <p class="lin-offline">
+      The diagram needs d3, which did not load — it comes from a CDN, and this page is otherwise
+      offline-capable. The full pedigree is written out under <strong>read it as a list</strong>
+      below, and every cultivar record still opens.
+    </p>
+
+    <div class="lin-key">
+      <span class="lin-key-item"><svg width="26" height="14" aria-hidden="true"><rect x="1" y="2" width="24" height="10" rx="2"></rect></svg><span>cultivar</span></span>
+      <span class="lin-key-item"><svg width="26" height="14" aria-hidden="true"><rect class="k-matcha" x="1" y="2" width="24" height="10" rx="2"></rect></svg><span>used for matcha</span></span>
+      <span class="lin-key-item"><svg width="26" height="14" aria-hidden="true"><rect class="k-landrace" x="1" y="2" width="24" height="10" rx="2"></rect></svg><span>landrace</span></span>
+      <span class="lin-key-item"><svg width="30" height="14" aria-hidden="true"><line class="k-selection" x1="1" y1="7" x2="29" y2="7"></line></svg><span>selected from</span></span>
+      <span class="lin-key-item"><svg width="30" height="14" aria-hidden="true"><line x1="1" y1="7" x2="29" y2="7"></line></svg><span>crossed, recorded</span></span>
+      <span class="lin-key-item"><svg width="30" height="14" aria-hidden="true"><line class="k-confirmed" x1="1" y1="7" x2="29" y2="7"></line></svg><span>confirmed by markers</span></span>
+      <span class="lin-key-item"><svg width="30" height="14" aria-hidden="true"><line class="k-resolved" x1="1" y1="7" x2="29" y2="7"></line></svg><span>resolved by markers</span></span>
+      <span class="lin-key-item"><svg width="30" height="14" aria-hidden="true"><line class="k-disputed" x1="1" y1="7" x2="29" y2="7"></line></svg><span>contested, or unassigned</span></span>
+    </div>
+  </div>
+
+  <details class="lin-text" id="text-view">
+    <summary>Read it as a list</summary>
+    <div id="text-body"></div>
+  </details>
+
+  <section class="cv-section">
+    <span class="label">Every record</span>
+    <div class="cv-index" id="index"></div>
+  </section>
+
+  <p class="foot mono">
+    Hover a node to light its line of descent · click to open the record · scroll to zoom, drag to pan
+  </p>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="cultivar-data.js"></script>
+<script src="lineage.js"></script>
+<script>
+(() => {
+  const svg = document.getElementById("graph");
+  const filterBtn = document.getElementById("filter-matcha");
+  const countEl = document.getElementById("count");
+
+  if (!window.d3) document.body.classList.add("no-d3");
+
+  /* Filtering keeps a cultivar's ancestors even when they are not matcha
+     cultivars themselves — Asatsuyu is barely grown and never whisked, and
+     removing it would leave Saemidori looking self-descended. */
+  function visible(matchaOnly) {
+    if (!matchaOnly) return CULTIVARS;
+    const keep = new Set();
+    CULTIVARS.filter((c) => c.matcha).forEach((c) => {
+      keep.add(c.id);
+      Lineage.relatives(CULTIVARS, c.id).ancestors.forEach((a) => keep.add(a));
+    });
+    return CULTIVARS.filter((c) => keep.has(c.id));
+  }
+
+  let chart = null;
+
+  function render(matchaOnly) {
+    const list = visible(matchaOnly);
+    const model = Lineage.layout(list);
+
+    const plants = list.filter((n) => !n.population).length;
+    const pools = list.length - plants;
+    countEl.textContent = `${plants} cultivars · ${pools} landraces · ${model.edges.length} parentages`;
+
+    chart = Lineage.draw(svg, model, {
+      onSelect: (id) => { window.location.href = `cultivar.html?id=${encodeURIComponent(id)}`; },
+    });
+
+    drawText(list);
+    drawIndex(list);
+  }
+
+  /* The list view is the same model rendered as text — what a screen reader
+     gets, what prints, and what is here when the CDN is not. */
+  function drawText(list) {
+    const body = document.getElementById("text-body");
+    body.textContent = "";
+    const byId = new Map(list.map((n) => [n.id, n]));
+    const wrap = document.createElement("ul");
+    wrap.className = "lin-list";
+
+    list.forEach((n) => {
+      const li = document.createElement("li");
+      const name = document.createElement("span");
+      name.className = "lin-list-name" + (n.population ? " is-population" : "");
+      name.textContent = n.name;
+      li.append(name);
+
+      if (!n.parents.length) {
+        const tag = document.createElement("span");
+        tag.className = "lin-list-ev";
+        tag.textContent = "a seed-grown population, so it has no parent";
+        li.append(tag);
+      } else {
+        const ul = document.createElement("ul");
+        n.parents.forEach((p) => {
+          const ev = EVIDENCE[p.relation === "selection" ? "selection" : p.evidence];
+          const row = document.createElement("li");
+          row.innerHTML =
+            `<span class="lin-list-name${p.of ? "" : " is-unknown"}">${p.of ? (byId.get(p.of) || {}).name || p.of : "parent unassigned"}</span>` +
+            `<span class="lin-list-ev">${p.role === "unassigned" ? "" : p.role + " parent · "}${ev.label}${p.note ? ` — ${p.note}` : ""}</span>`;
+          ul.append(row);
+        });
+        li.append(ul);
+      }
+      wrap.append(li);
+    });
+    body.append(wrap);
+  }
+
+  function drawIndex(list) {
+    const index = document.getElementById("index");
+    index.textContent = "";
+    [...list]
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .forEach((n) => {
+        const a = document.createElement("a");
+        a.className = "cv-row";
+        a.href = `cultivar.html?id=${encodeURIComponent(n.id)}`;
+        a.innerHTML =
+          `<span class="cv-row-name">${n.name}</span>` +
+          `<span class="cv-row-ja">${n.ja || ""}</span>` +
+          `<span class="cv-row-year">${n.year || "—"}</span>` +
+          `<span class="cv-row-kind">${n.population ? "landrace" : n.parents.some((p) => p.relation === "cross") ? "cross" : "selection"}</span>`;
+        index.append(a);
+      });
+  }
+
+  filterBtn.addEventListener("click", () => {
+    const on = filterBtn.getAttribute("aria-pressed") !== "true";
+    filterBtn.setAttribute("aria-pressed", String(on));
+    render(on);
+  });
+
+  document.getElementById("fit").addEventListener("click", () => chart && chart.fit());
+
+  if (!window.d3) document.getElementById("text-view").open = true;
+  render(false);
+})();
+</script>
+
+</body>
+</html>
