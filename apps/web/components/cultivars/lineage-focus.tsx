@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useRouter } from "next/navigation";
 
 import { chipClasses } from "@/lib/chip";
 import {
@@ -16,36 +17,50 @@ import {
 } from "@/lib/lineage-geometry";
 
 /**
- * Hover behaviour for a pedigree, in two strengths.
+ * Interaction for a pedigree, in two layers.
  *
- * **Fade** (default) dims everything off the hovered plant's line of descent.
- * It answers "what is this one related to" without moving anything, which is
- * the right default because the diagram stays where you learned it.
+ * **Hover fades.** Everything off the pointed-at plant's line of descent drops
+ * to a whisper. Nothing moves, so it costs nothing and is always on.
  *
- * **Hide unrelated** is the button. Fading leaves the unrelated boxes taking up
- * their space, so on the whole-collection canvas — 112 plants over nearly three
- * thousand pixels — a plant's own line can still be strung out across a screen
- * and a half with nothing but whitespace between its parents. Switched on,
- * hovering removes the unrelated boxes outright, closes the gaps they leave,
- * and refits the canvas to what remains: a cultivar's parents and children come
- * back as a handful of boxes you can see at once.
+ * **Click isolates.** The unrelated boxes are removed outright, the empty rows
+ * and columns they leave are squeezed out, and the canvas refits to what
+ * survives — Seimei's line goes from a 2902px canvas to 230px. It sticks until
+ * released, so the isolated view can be read rather than merely glimpsed.
  *
- * The re-stack is deliberately not a re-layout. Nodes keep their generation
- * (the column they were placed in) and their order within it; only the empty
- * rows and columns are squeezed out. Running the barycentre passes again in the
- * browser would reorder boxes as you moved the mouse, which would make the
- * diagram feel like it was rearranging itself rather than zooming in.
+ * Isolating on *hover* is what this used to do, and it flickered, for a reason
+ * worth writing down: compaction moves the hovered box out from under the
+ * cursor, `pointerover` then fires for whatever is underneath instead, that
+ * clears the isolation, the box springs back under the cursor, and the whole
+ * thing oscillates. Any "re-layout on hover" has this bug. Pinning the hovered
+ * box in place would break the loop but defeat the feature — if it stays put at
+ * y=2400 the canvas still has to span 2400, and fitting the line on screen was
+ * the entire point. A click has no such loop, because the pointer's position
+ * stops being the input.
  *
- * This is still an enhancer, not a renderer. The SVG arrives finished from the
- * server and is handed here as children; what this file does is set opacity,
- * set display, and rewrite `transform` and `d` on elements that already exist.
- * Positions it computes come from `lib/lineage-geometry`, the same module the
- * build-time layout uses, so an isolated edge lands exactly where the server
- * would have drawn it.
+ * Double-click opens the record, and a single click is therefore deferred by
+ * `DOUBLE_CLICK_MS` so it can be cancelled — isolating immediately would move
+ * the box away before the second click of a double-click could land on it,
+ * which is the same bug in a different coat.
+ *
+ * Small diagrams skip all of this. A record page's own pedigree is a handful of
+ * boxes that already fit, so there is nothing to isolate and a plain link click
+ * should just open the record.
+ *
+ * Still an enhancer, not a renderer: the SVG arrives finished from the server
+ * and this only sets opacity and display and rewrites `transform` and `d` on
+ * elements that already exist. Every position it computes comes from
+ * `lib/lineage-geometry`, the module the build-time layout uses, so an isolated
+ * edge lands exactly where the server would have drawn it.
  */
 
-/** Matches the prototype's dimmed state, and stays legible enough to read. */
+/** Dimmed but still legible — the prototype's value. */
 const DIM = "0.16";
+
+/** Long enough to catch a double-click, short enough not to feel laggy. */
+const DOUBLE_CLICK_MS = 220;
+
+/** Below this, the diagram already fits and clicking should just navigate. */
+const ISOLATE_FROM = 12;
 
 type EdgeSpec = [parent: string, child: string, role: LineageRole];
 
@@ -57,8 +72,10 @@ export function LineageFocus({
   edges: EdgeSpec[];
   children: ReactNode;
 }) {
-  const [hideUnrelated, setHideUnrelated] = useState(false);
+  const [focused, setFocused] = useState<string | null>(null);
+  const [canIsolate, setCanIsolate] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const root = ref.current;
@@ -98,6 +115,9 @@ export function LineageFocus({
     const badgeEls = [...root.querySelectorAll<SVGGElement>("g[data-parent]")];
     const drawn = [...nodeEls, ...pathEls, ...badgeEls];
 
+    const isolatable = nodeEls.length >= ISOLATE_FROM;
+    setCanIsolate(isolatable);
+
     // A (parent, child) pair is unique — a self-pollination is deduplicated to
     // one edge at build time — so it is a safe key for both lookups.
     const key = (el: Element) =>
@@ -113,11 +133,6 @@ export function LineageFocus({
       home.set(el, { x: Number(found?.[1] ?? 0), y: Number(found?.[2] ?? 0) });
     }
     const homePath = new Map(pathEls.map((el) => [el, el.getAttribute("d")]));
-    const homeBox = {
-      viewBox: svg.getAttribute("viewBox"),
-      width: svg.getAttribute("width"),
-      height: svg.getAttribute("height"),
-    };
     const homeBadge = new Map(
       badgeEls.map((el) => [
         el,
@@ -127,6 +142,11 @@ export function LineageFocus({
         },
       ]),
     );
+    const homeBox = {
+      viewBox: svg.getAttribute("viewBox"),
+      width: svg.getAttribute("width"),
+      height: svg.getAttribute("height"),
+    };
 
     const placeBadge = (el: SVGGElement, x: number, y: number) => {
       const disc = el.querySelector("circle");
@@ -137,9 +157,13 @@ export function LineageFocus({
       glyph?.setAttribute("y", String(y - BADGE_GLYPH / 2));
     };
 
-    /* ---- the three states -------------------------------------------- */
+    const onLine = (el: Element, lit: Set<string>) =>
+      lit.has(el.getAttribute("data-parent") ?? "") &&
+      lit.has(el.getAttribute("data-child") ?? "");
 
-    const clear = () => {
+    /* ---- the states --------------------------------------------------- */
+
+    const restore = () => {
       for (const el of drawn) {
         el.style.opacity = "";
         el.style.display = "";
@@ -155,9 +179,8 @@ export function LineageFocus({
       }
       for (const el of badgeEls) {
         const at = homeBadge.get(el);
-        if (at?.cx != null && at.cy != null) {
+        if (at?.cx != null && at.cy != null)
           placeBadge(el, Number(at.cx), Number(at.cy));
-        }
       }
       if (homeBox.viewBox !== null)
         svg.setAttribute("viewBox", homeBox.viewBox);
@@ -170,14 +193,15 @@ export function LineageFocus({
       for (const el of nodeEls) {
         el.style.opacity = lit.has(el.dataset.node ?? "") ? "" : DIM;
       }
-      // An edge is on the line only if both its ends are — otherwise hovering
-      // Yabukita would light every edge leaving each of its descendants.
+      // Both ends must be lit, or hovering Yabukita would light every edge
+      // leaving each of its descendants, off to families it has no part in.
       for (const el of [...pathEls, ...badgeEls]) {
-        const on =
-          lit.has(el.getAttribute("data-parent") ?? "") &&
-          lit.has(el.getAttribute("data-child") ?? "");
-        el.style.opacity = on ? "" : DIM;
+        el.style.opacity = onLine(el, lit) ? "" : DIM;
       }
+    };
+
+    const unfade = () => {
+      for (const el of drawn) el.style.opacity = "";
     };
 
     const isolate = (id: string) => {
@@ -185,16 +209,17 @@ export function LineageFocus({
 
       for (const el of nodeEls) {
         el.style.display = lit.has(el.dataset.node ?? "") ? "" : "none";
+        el.style.opacity = "";
       }
       for (const el of [...pathEls, ...badgeEls]) {
-        const on =
-          lit.has(el.getAttribute("data-parent") ?? "") &&
-          lit.has(el.getAttribute("data-child") ?? "");
-        el.style.display = on ? "" : "none";
+        el.style.display = onLine(el, lit) ? "" : "none";
+        el.style.opacity = "";
       }
 
       // Squeeze out the empty columns and rows the hidden boxes left behind,
       // keeping every survivor in its own generation and in its original order.
+      // Deliberately not a re-layout: re-running the barycentre passes here
+      // would reorder boxes under the reader mid-interaction.
       const columns = new Map<number, SVGGElement[]>();
       for (const el of nodeEls) {
         if (!lit.has(el.dataset.node ?? "")) continue;
@@ -242,50 +267,105 @@ export function LineageFocus({
       svg.setAttribute("height", String(height));
     };
 
-    /* ---- wiring ------------------------------------------------------- */
+    /* ---- apply the current state -------------------------------------- */
 
+    if (focused !== null) isolate(focused);
+
+    /* ---- wiring -------------------------------------------------------- */
+
+    const nodeUnder = (event: Event) =>
+      (event.target as Element | null)?.closest<SVGGElement>("[data-node]") ??
+      null;
+
+    // Hover only speaks while nothing is pinned. Once a line is isolated the
+    // unrelated boxes are gone, so there is nothing left for fading to say.
     const onOver = (event: Event) => {
-      const node = (event.target as Element | null)?.closest<SVGGElement>(
-        "[data-node]",
-      );
-      const id = node?.dataset.node;
-      if (id === undefined) clear();
-      else if (hideUnrelated) isolate(id);
+      if (focused !== null) return;
+      const id = nodeUnder(event)?.dataset.node;
+      if (id === undefined) unfade();
       else fade(id);
+    };
+
+    const onLeave = () => {
+      if (focused === null) unfade();
+    };
+
+    let pending: number | undefined;
+
+    const onClick = (event: MouseEvent) => {
+      const node = nodeUnder(event);
+      const id = node?.dataset.node;
+
+      if (id === undefined) {
+        // A click on empty canvas releases, which is the gesture people try.
+        if (focused !== null) setFocused(null);
+        return;
+      }
+      // `detail === 0` is a keyboard Enter on the link. Leave it alone so the
+      // record still opens without a mouse.
+      if (!isolatable || event.detail === 0) return;
+
+      event.preventDefault();
+
+      if (event.detail === 1) {
+        window.clearTimeout(pending);
+        pending = window.setTimeout(() => {
+          setFocused((current) => (current === id ? null : id));
+        }, DOUBLE_CLICK_MS);
+        return;
+      }
+
+      // Second click of a double-click: cancel the pending isolate and go.
+      window.clearTimeout(pending);
+      const href = node?.closest("a")?.getAttribute("href");
+      if (href != null) router.push(href);
+    };
+
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && focused !== null) setFocused(null);
     };
 
     root.addEventListener("pointerover", onOver);
     root.addEventListener("focusin", onOver);
-    root.addEventListener("pointerleave", clear);
-    root.addEventListener("focusout", clear);
+    root.addEventListener("pointerleave", onLeave);
+    root.addEventListener("focusout", onLeave);
+    root.addEventListener("click", onClick);
+    window.addEventListener("keydown", onKey);
 
     return () => {
+      window.clearTimeout(pending);
       root.removeEventListener("pointerover", onOver);
       root.removeEventListener("focusin", onOver);
-      root.removeEventListener("pointerleave", clear);
-      root.removeEventListener("focusout", clear);
-      // Switching the button re-runs this effect; put the diagram back first so
-      // the new mode starts from the drawing the server sent.
-      clear();
+      root.removeEventListener("pointerleave", onLeave);
+      root.removeEventListener("focusout", onLeave);
+      root.removeEventListener("click", onClick);
+      window.removeEventListener("keydown", onKey);
+      restore();
     };
-  }, [edges, hideUnrelated]);
+  }, [edges, focused, router]);
 
   return (
     <div ref={ref} className="relative">
       {/* Floats over the top-right of the frame. `pointer-events-none` on the
           strip keeps it from stealing hovers from the boxes underneath; the
-          button itself takes them back. */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-end p-3">
-        <button
-          type="button"
-          aria-pressed={hideUnrelated}
-          onClick={() => setHideUnrelated((on) => !on)}
-          title="On hover, drop everything off the plant's line and refit the diagram"
-          className={`${chipClasses(hideUnrelated)} pointer-events-auto cursor-pointer shadow-raised transition-colors hover:border-matcha-line hover:bg-matcha-soft`}
-        >
-          hide unrelated
-        </button>
-      </div>
+          controls inside take them back. */}
+      {canIsolate && (
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-end p-3">
+          {focused === null ? (
+            <p className="rounded-xs border border-line bg-surface/90 px-2.25 py-1 font-mono text-data-sm text-clay">
+              click a plant to hide the rest · double-click opens it
+            </p>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setFocused(null)}
+              className={`${chipClasses(true)} pointer-events-auto cursor-pointer shadow-raised transition-colors hover:border-matcha hover:bg-matcha-soft`}
+            >
+              show all
+            </button>
+          )}
+        </div>
+      )}
 
       {children}
     </div>
