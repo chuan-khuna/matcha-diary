@@ -1,5 +1,5 @@
-import { OverlayLabel } from "@/components/overlay-label";
-import { AvatarStandIn, PhotoStandIn } from "@/components/placeholders";
+import { OverlayLabel } from "@/components/shared/overlay-label";
+import { AvatarStandIn, PhotoStandIn } from "@/components/shared/placeholders";
 import type { FeedEntry as FeedEntryData } from "@/lib/feed-data";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 

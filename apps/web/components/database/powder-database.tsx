@@ -2,8 +2,8 @@
 
 import { useId, useMemo, useState } from "react";
 
-import { PowderCard } from "@/components/powder-card";
-import { PowderDialog } from "@/components/powder-dialog";
+import { PowderCard } from "@/components/database/powder-card";
+import { PowderDialog } from "@/components/database/powder-dialog";
 import type { Powder } from "@/lib/powder-data";
 import { tasteNoteChipClasses, tasteNoteVocabulary } from "@/lib/taste-notes";
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef } from "react";
 
-import { EntryDetail } from "@/components/entry-detail";
+import { EntryDetail } from "@/components/feed/entry-detail";
 import type { FeedEntry } from "@/lib/feed-data";
 
 /**

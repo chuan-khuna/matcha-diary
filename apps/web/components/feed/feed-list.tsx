@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { EntryDialog } from "@/components/entry-dialog";
-import { FeedEntry } from "@/components/feed-entry";
+import { EntryDialog } from "@/components/feed/entry-dialog";
+import { FeedEntry } from "@/components/feed/feed-entry";
 import type { FeedEntry as FeedEntryData } from "@/lib/feed-data";
 
 /**

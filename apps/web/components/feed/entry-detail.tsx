@@ -1,6 +1,6 @@
-import { PhotoGallery } from "@/components/photo-gallery";
-import { AvatarStandIn } from "@/components/placeholders";
-import { RatingBar } from "@/components/rating-bar";
+import { PhotoGallery } from "@/components/shared/photo-gallery";
+import { AvatarStandIn } from "@/components/shared/placeholders";
+import { RatingBar } from "@/components/feed/rating-bar";
 import type { FeedEntry } from "@/lib/feed-data";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 

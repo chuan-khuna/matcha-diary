@@ -2,9 +2,9 @@
 
 import { useEffect, useId, useRef } from "react";
 
-import { PhotoGallery } from "@/components/photo-gallery";
-import { PhotoPlaceholder } from "@/components/placeholders";
-import { PriceList } from "@/components/price-list";
+import { PhotoGallery } from "@/components/shared/photo-gallery";
+import { PhotoPlaceholder } from "@/components/shared/placeholders";
+import { PriceList } from "@/components/database/price-list";
 import type { Powder } from "@/lib/powder-data";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 

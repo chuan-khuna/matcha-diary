@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { PowderDatabase } from "@/components/powder-database";
+import { PowderDatabase } from "@/components/database/powder-database";
 import { PLACEHOLDER_POWDERS } from "@/lib/powder-data";
 
 export const metadata: Metadata = {

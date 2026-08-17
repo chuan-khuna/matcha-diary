@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
-import { BottomNav } from "@/components/bottom-nav";
-import { SiteHeader } from "@/components/site-header";
+import { BottomNav } from "@/components/chrome/bottom-nav";
+import { SiteHeader } from "@/components/chrome/site-header";
 import "@/styles/globals.css";
 
 // Inter carries anything a person wrote; JetBrains Mono carries anything that

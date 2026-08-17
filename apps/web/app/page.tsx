@@ -1,6 +1,6 @@
-import { ComposePrompt } from "@/components/compose-prompt";
-import { FeedList } from "@/components/feed-list";
-import { FeedTabs } from "@/components/feed-tabs";
+import { ComposePrompt } from "@/components/feed/compose-prompt";
+import { FeedList } from "@/components/feed/feed-list";
+import { FeedTabs } from "@/components/feed/feed-tabs";
 import { PLACEHOLDER_FEED } from "@/lib/feed-data";
 
 /**

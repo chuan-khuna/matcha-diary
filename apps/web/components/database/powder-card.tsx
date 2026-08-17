@@ -1,6 +1,6 @@
-import { OverlayLabel } from "@/components/overlay-label";
-import { PhotoPlaceholder, PhotoStandIn } from "@/components/placeholders";
-import { PriceList } from "@/components/price-list";
+import { OverlayLabel } from "@/components/shared/overlay-label";
+import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
+import { PriceList } from "@/components/database/price-list";
 import type { Powder } from "@/lib/powder-data";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 

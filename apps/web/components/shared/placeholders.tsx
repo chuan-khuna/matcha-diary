@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { PiLeafLight } from "react-icons/pi";
 
-import { GradientPattern } from "@/components/gradient-pattern";
+import { GradientPattern } from "@/components/shared/gradient-pattern";
 
 /**
  * Upload stand-ins — photographs and avatars.

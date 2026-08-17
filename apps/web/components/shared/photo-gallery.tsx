@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { OverlayLabel } from "@/components/overlay-label";
-import { PhotoStandIn } from "@/components/placeholders";
+import { OverlayLabel } from "@/components/shared/overlay-label";
+import { PhotoStandIn } from "@/components/shared/placeholders";
 
 /**
  * A review's photographs: one shown large, with the whole set beneath it as

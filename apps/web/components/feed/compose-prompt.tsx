@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { AvatarStandIn } from "@/components/placeholders";
+import { AvatarStandIn } from "@/components/shared/placeholders";
 
 /**
  * The one entry point to writing, sitting where the reader's eye already is.
