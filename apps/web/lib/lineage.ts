@@ -59,8 +59,8 @@ export type LineageRole = "seed" | "pollen";
 export type LineageNode = {
   id: string;
   name: string;
-  /** Second line: a year, or why there is no year. */
-  sub: string;
+  /** Second line: the year. `null` on nodes that have no year to give. */
+  sub: string | null;
   /** `external` is a parent the records name but do not profile. */
   kind: "documented" | "external";
   href: string | null;
@@ -486,9 +486,12 @@ function describeFor(all: Cultivar[], focus: string | null) {
       return {
         id: externalId(name),
         name,
-        // Named as a parent, but with no record behind it. Saying so is the
-        // point: it marks a real gap rather than implying the line stops here.
-        sub: "not in collection",
+        // No second line. These are landraces and breeding lines with no record
+        // and usually no date, so the slot has nothing to put in it — and the
+        // recessed fill and broken border already say the box is a reference
+        // rather than a record, with the legend carrying the words once for the
+        // whole diagram instead of on all thirty-three of them.
+        sub: null,
         kind: "external",
         href: null,
         isMatcha: false,

@@ -151,24 +151,28 @@ function Node({ node, model }: { node: LineageNode; model: LineageModel }) {
         // edge: an unfinished record, shown as one rather than quietly closed.
         strokeDasharray={node.kind === "external" ? "3 3" : undefined}
       />
+      {/* With no year to show, the name takes the whole box rather than sitting
+          high over an empty half of it. */}
       <text
         x={11}
-        y={17}
+        y={node.sub === null ? 24 : 17}
         fontSize={11}
         letterSpacing="0.04em"
         fill={nameFillFor(node)}
       >
         {truncate(node.name)}
       </text>
-      <text
-        x={11}
-        y={30}
-        fontSize={9}
-        letterSpacing="0.08em"
-        fill={subFillFor(node)}
-      >
-        {node.sub}
-      </text>
+      {node.sub !== null && (
+        <text
+          x={11}
+          y={30}
+          fontSize={9}
+          letterSpacing="0.08em"
+          fill={subFillFor(node)}
+        >
+          {node.sub}
+        </text>
+      )}
     </g>
   );
 
@@ -177,7 +181,10 @@ function Node({ node, model }: { node: LineageNode; model: LineageModel }) {
   }
 
   return (
-    <Link href={node.href} aria-label={`${node.name}, ${node.sub}`}>
+    <Link
+      href={node.href}
+      aria-label={node.sub === null ? node.name : `${node.name}, ${node.sub}`}
+    >
       {box}
     </Link>
   );
