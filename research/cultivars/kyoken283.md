@@ -13,8 +13,10 @@ selectedFrom: Kyoto zairai (native, seed-grown) tea population — the release p
 bredAt: Kyoto Prefectural Tea Research Institute (京都府茶業研究所)
 prefecture: Kyoto
 parents:
-  female: null
+  female: Kyoto zairai
   male: null
+parentNotes:
+  female: "landrace selection — Miyamakaori's release paper, the only primary source that describes this line at all, calls it a selection from 京都在来 (Kyoto zairai) and stops there. It does not narrow that to Uji, name a seed stand or give a locality, so this record does not either; see conflicts on why the Uji reading is tempting and still unsourced."
 teaTypes: null
 buddingTime: null
 recommendedRegions: null
@@ -22,7 +24,7 @@ diseaseResistance: null
 notableDescendants:
   - Miyamakaori (みやまかおり · Cha Norin No. 52 · registered 2003) — Kyoken 283 is its seed parent, crossed with Saitama No. 1 in 1983 at the Tea Branch, Miyazaki Prefectural Agricultural Experiment Station
 rarity: Never released or grown under this designation; whether the original selection is still maintained at the institute is not documented
-lineageNote: Kyoken 283 is a Kyoto Prefectural Tea Research Institute breeding-line number, not a cultivar that was ever named or registered. Its own parentage is unpublished — it appears in only one primary source, the release paper for Miyamakaori, which shows it as that cultivar's seed parent and describes it as "selected from Kyoto zairai." Whether it was an Uji-district selection specifically, like its numerical neighbours in the same series (Kyoken 166 → Gokou, Kyoken 307 → Ujimidori), is not stated anywhere sourced. A claim that it is also a parent of Nagomiyutaka circulates in secondary lists but is not supported by Nagomiyutaka's own release paper — see conflicts.
+lineageNote: Kyoken 283 is a Kyoto Prefectural Tea Research Institute breeding-line number, not a cultivar that was ever named or registered. Its own parentage is unpublished — it appears in only one primary source, the release paper for Miyamakaori, which shows it as that cultivar's seed parent and describes it as "selected from Kyoto zairai." It is recorded here with Kyoto zairai as its seed parent, which is the whole of what the source says and is enough to place it in the pedigree; a landrace selection has no second parent by definition, since a zairai stand is pollinated at random. Whether it was an Uji-district selection specifically, like its numerical neighbours in the same series (Kyoken 166 → Gokou, Kyoken 307 → Ujimidori), is not stated anywhere sourced, which is why it draws as its own landrace node rather than joining the Uji zairai cluster. A claim that it is also a parent of Nagomiyutaka circulates in secondary lists but is not supported by Nagomiyutaka's own release paper — see conflicts.
 documentation: sparse
 conflicts: |
   Three disagreements surfaced during research, all resolved in favour of the primary release papers:
