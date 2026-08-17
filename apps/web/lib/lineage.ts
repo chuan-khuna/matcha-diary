@@ -149,6 +149,61 @@ function reachable(start: string, step: Map<string, string[]>): Set<string> {
   return seen;
 }
 
+/**
+ * Which family each node belongs to, numbered largest family first.
+ *
+ * A family is a connected component of the *undirected* graph — which way an
+ * edge points has nothing to do with whether two plants are related. The number
+ * is only an ordering key for layout; it is not shown anywhere.
+ */
+function familyIndex(edges: RawEdge[]): Map<string, number> {
+  const neighbours = new Map<string, Set<string>>();
+  const link = (a: string, b: string) => {
+    if (!neighbours.has(a)) neighbours.set(a, new Set());
+    neighbours.get(a)?.add(b);
+  };
+  for (const edge of edges) {
+    link(edge.parent, edge.child);
+    link(edge.child, edge.parent);
+  }
+
+  const seen = new Set<string>();
+  const components: string[][] = [];
+
+  for (const start of [...neighbours.keys()].sort((a, b) => a.localeCompare(b))) {
+    if (seen.has(start)) continue;
+
+    const component: string[] = [];
+    const queue = [start];
+    seen.add(start);
+
+    while (queue.length > 0) {
+      const name = queue.pop();
+      if (name === undefined) continue;
+      component.push(name);
+      for (const other of neighbours.get(name) ?? []) {
+        if (seen.has(other)) continue;
+        seen.add(other);
+        queue.push(other);
+      }
+    }
+
+    components.push(component);
+  }
+
+  // Largest first, so the collection's one big family leads and the long tail
+  // of two- and three-plant families follows it.
+  components.sort(
+    (a, b) => b.length - a.length || (a[0] ?? "").localeCompare(b[0] ?? ""),
+  );
+
+  const index = new Map<string, number>();
+  components.forEach((component, i) => {
+    for (const name of component) index.set(name, i);
+  });
+  return index;
+}
+
 function adjacency(edges: RawEdge[]) {
   const up = new Map<string, string[]>();
   const down = new Map<string, string[]>();
@@ -204,9 +259,21 @@ function layout(
 
   const depth = Math.max(...names.map((name) => rank.get(name) ?? 0)) + 1;
   const columns: string[][] = Array.from({ length: depth }, () => []);
-  // Seeded alphabetically so the barycentre sweep starts from a stable order
-  // and the same collection always lays out the same way.
-  for (const name of [...names].sort((a, b) => a.localeCompare(b))) {
+
+  /* Seeded by family, then alphabetically inside it.
+     Families share no edges, so the barycentre pass below has no opinion about
+     where one sits relative to another — it can only order nodes against their
+     own relatives. Seeded alphabetically across the whole collection that
+     leaves families interleaved down a column, with each one scattered among
+     plants it is unrelated to. Seeded by family they start as contiguous
+     blocks, and because a family's barycentres are computed only from its own
+     members they stay in that band. Alphabetical within the family, and
+     families ordered by size, so the layout is stable across builds. */
+  const family = familyIndex(live);
+  for (const name of [...names].sort(
+    (a, b) =>
+      (family.get(a) ?? 0) - (family.get(b) ?? 0) || a.localeCompare(b),
+  )) {
     columns[rank.get(name) ?? 0].push(name);
   }
 
@@ -328,18 +395,21 @@ function layout(
     const from = { x: parent.x + NODE_W, y: parent.y + NODE_H / 2 };
     const to = { x: child.x, y: child.y + NODE_H / 2 + offset };
 
+    // Ranking is by longest path, so an edge can skip a generation: a plant may
+    // sit two columns right of one of its parents. Putting the badge at the
+    // curve's midpoint drops it in the middle of the intervening column, on top
+    // of whatever node is there. Anchoring it to the gap immediately before the
+    // child keeps every badge in clear space, and for the ordinary
+    // one-column edge it lands exactly where the midpoint would have.
+    const badge = pointAtX(from, to, to.x - COL_GAP / 2);
+
     return [
       {
         key: `${edge.parent}~${edge.child}~${i}`,
         role: edge.role,
         from,
         to,
-        // The midpoint of the cubic below, which by symmetry of its control
-        // points is simply the average of its ends.
-        badge: {
-          x: Math.round((from.x + to.x) / 2),
-          y: Math.round((from.y + to.y) / 2),
-        },
+        badge: { x: Math.round(badge.x), y: Math.round(badge.y) },
       },
     ];
   });
@@ -351,6 +421,40 @@ function layout(
     height: PAD * 2 + Math.max(...nodes.map((node) => node.y)) - PAD + NODE_H,
     nodeWidth: NODE_W,
     nodeHeight: NODE_H,
+  };
+}
+
+type Point = { x: number; y: number };
+
+/**
+ * The point on an edge's curve at a given x.
+ *
+ * The curve is the cubic `lineagePath` draws, so a badge placed with this sits
+ * exactly on the line rather than near it. `x(t)` is monotonic — both control
+ * points share the ends' midpoint — so bisection converges, and twenty steps
+ * resolves it well past the half-pixel the result is rounded to. It runs at
+ * build time, once per edge.
+ */
+function pointAtX(from: Point, to: Point, targetX: number): Point {
+  const mid = (from.x + to.x) / 2;
+  const xAt = (t: number) => {
+    const u = 1 - t;
+    return u * u * u * from.x + 3 * u * t * mid + t * t * t * to.x;
+  };
+
+  let low = 0;
+  let high = 1;
+  for (let step = 0; step < 20; step++) {
+    const t = (low + high) / 2;
+    if (xAt(t) < targetX) low = t;
+    else high = t;
+  }
+
+  const t = (low + high) / 2;
+  const u = 1 - t;
+  return {
+    x: xAt(t),
+    y: from.y * (u * u * u + 3 * u * u * t) + to.y * (3 * u * t * t + t * t * t),
   };
 }
 
@@ -428,78 +532,31 @@ export function lineageFor(cultivar: Cultivar, all: Cultivar[]): LineageModel | 
   return layout(names, edges, describeFor(all, cultivar.name));
 }
 
-export type LineageFamily = {
-  /** The family's best-known member, used as its heading. */
-  title: string;
-  model: LineageModel;
-};
-
 /**
- * Every family in the collection, largest first.
+ * The whole collection as one pedigree.
  *
- * Split into connected components rather than drawn as one canvas. Laid out
- * left to right a single drawing would in fact fit the page width, so this is
- * no longer a size argument — it is that families are disjoint. Nothing joins
- * one to another, so on a shared canvas their members interleave down a column
- * and a family ends up scattered among plants it has no relation to. Split, each
- * one is a contiguous block with a heading and a count of its own.
+ * One canvas rather than a diagram per family. Laid out left to right the
+ * drawing is only as wide as the collection is deep — four generations — so it
+ * fits the page without a horizontal scrollbar, and every plant sits in the
+ * same coordinate system, which is what makes the shape of the collection
+ * legible: a wall of landraces on the left, the 1950s selections beside them,
+ * and the handful of modern crosses that descend from several of them at once
+ * out on the right.
  *
- * Records with neither a parent nor an offspring on file form no family and are
- * left out; the index page already lists all 69.
+ * Families stay in contiguous bands because `layout` seeds each column by
+ * family before the barycentre pass — see the note there.
+ *
+ * Records with neither a parent nor an offspring on file have no pedigree to
+ * place and are left out. There are six, and the index lists all 69 either way.
  */
-export function lineageFamilies(all: Cultivar[]): LineageFamily[] {
+export function lineageAll(all: Cultivar[]): LineageModel {
   const { edges } = buildGraph(all);
 
-  // Undirected adjacency — a family is a connected component, and which way an
-  // edge points has nothing to do with whether two plants are related.
-  const neighbours = new Map<string, Set<string>>();
-  const link = (a: string, b: string) => {
-    if (!neighbours.has(a)) neighbours.set(a, new Set());
-    neighbours.get(a)?.add(b);
-  };
+  const connected = new Set<string>();
   for (const edge of edges) {
-    link(edge.parent, edge.child);
-    link(edge.child, edge.parent);
+    connected.add(edge.parent);
+    connected.add(edge.child);
   }
 
-  const describe = describeFor(all, null);
-  const seen = new Set<string>();
-  const families: LineageFamily[] = [];
-
-  for (const start of [...neighbours.keys()].sort((a, b) => a.localeCompare(b))) {
-    if (seen.has(start)) continue;
-
-    const component: string[] = [];
-    const queue = [start];
-    seen.add(start);
-
-    while (queue.length > 0) {
-      const name = queue.pop();
-      if (name === undefined) continue;
-      component.push(name);
-      for (const other of neighbours.get(name) ?? []) {
-        if (seen.has(other)) continue;
-        seen.add(other);
-        queue.push(other);
-      }
-    }
-
-    const model = layout(component, edges, describe);
-
-    // The heading names the family after its most-connected member, which is
-    // the plant someone would actually recognise it by.
-    const title = [...component].sort(
-      (a, b) =>
-        (neighbours.get(b)?.size ?? 0) - (neighbours.get(a)?.size ?? 0) ||
-        a.localeCompare(b),
-    )[0];
-
-    families.push({ title, model });
-  }
-
-  return families.sort(
-    (a, b) =>
-      b.model.nodes.length - a.model.nodes.length ||
-      a.title.localeCompare(b.title),
-  );
+  return layout([...connected], edges, describeFor(all, null));
 }

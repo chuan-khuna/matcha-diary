@@ -1,5 +1,6 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
-import { PiGenderFemaleLight, PiGenderMaleLight } from "react-icons/pi";
+import { PiGenderFemaleBold, PiGenderMaleBold } from "react-icons/pi";
 
 import { lineagePath, type LineageModel, type LineageNode } from "@/lib/lineage";
 
@@ -31,7 +32,8 @@ export function LineageGraph({
   caption,
 }: {
   model: LineageModel;
-  caption?: string;
+  /** Rendered in a hairline-separated footer inside the frame. */
+  caption?: ReactNode;
 }) {
   return (
     <figure className="rounded-md border border-line bg-surface shadow-raised">
@@ -64,26 +66,34 @@ export function LineageGraph({
           {/* The ♀/♂ badge is the diagram's one piece of real information that
               geometry cannot carry: which parent supplied the seed and which
               the pollen. It sits on a filled disc so the edge does not run
-              through the glyph. */}
-          <g className="text-clay">
+              through the glyph.
+
+              Bold rather than the Light weight the nav uses, and inked rather
+              than clay. The rest of the app draws Phosphor at Light because it
+              sits beside 1px hairlines at 16-20px; this is a 13px glyph inside
+              a 9px disc, where Light thins to nothing and clay's 3.5:1 is not
+              enough to read it against. `ink-2` measures 7.9:1 on the disc. */}
+          {/* The glyphs are `fill="currentColor"`, so the colour is set once
+              here rather than on each of them. */}
+          <g style={{ color: "var(--ink-2)" }}>
             {model.edges.map((edge) => {
               const Icon =
-                edge.role === "seed" ? PiGenderFemaleLight : PiGenderMaleLight;
+                edge.role === "seed" ? PiGenderFemaleBold : PiGenderMaleBold;
 
               return (
                 <g key={`${edge.key}-role`}>
                   <circle
                     cx={edge.badge.x}
                     cy={edge.badge.y}
-                    r={9}
+                    r={9.5}
                     fill="var(--surface)"
-                    stroke="var(--line-strong)"
+                    stroke="var(--clay)"
                     strokeWidth={1}
                   />
                   <Icon
-                    x={edge.badge.x - 6}
-                    y={edge.badge.y - 6}
-                    size={12}
+                    x={edge.badge.x - 6.5}
+                    y={edge.badge.y - 6.5}
+                    size={13}
                     aria-hidden="true"
                   />
                 </g>
