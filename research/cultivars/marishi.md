@@ -13,8 +13,11 @@ selectedFrom: A naturally cross-pollinated seedling found growing between the ro
 bredAt: Selected and bred by Yamamori Miyoshi (山森美好) and Yamamori Risao (山森理佐雄); cultivation passed to Fuji Akiyama-en, Fuji City, in March 2007 when the Fuji branch of the Shizuoka Prefectural Tea Experiment Station that had supported it was closed
 prefecture: Shizuoka
 parents:
-  female: Yaeho (やえほ, Cha Norin No. 17) — per the official Plant Variety Protection Act registration record
-  male: null — a naturally cross-pollinated seedling (自然交雑実生); the pollen parent was never identified
+  female: Yaeho
+  male: null
+parentNotes:
+  female: やえほ, Cha Norin No. 17 — per the official Plant Variety Protection Act registration record
+  male: a naturally cross-pollinated seedling (自然交雑実生); the pollen parent was never identified
 teaTypes:
   - sencha
   - fukamushi sencha

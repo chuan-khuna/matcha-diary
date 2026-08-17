@@ -15,7 +15,9 @@ bredAt: "Miyazaki Prefectural Agricultural Experiment Station (宮崎県総合�
 prefecture: Miyazaki
 parents:
   female: Yabukita
-  male: "Miya A11 (宮A11)"
+  male: Miya A11
+parentNotes:
+  male: 宮A11
 teaTypes:
   - sencha
 buddingTime: "medium — classified as 中生 (mid-season), the same category as Yabukita; no day-count relative to Yabukita was found in the sources consulted"

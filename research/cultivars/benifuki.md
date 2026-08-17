@@ -15,8 +15,11 @@ selectedYear: null
 bredAt: National tea research station, Makurazaki branch, Kagoshima (農林省茶業試験場枕崎支場 at the time of the 1965 cross; the institution has since been folded into NARO)
 prefecture: Kagoshima
 parents:
-  female: Benihomare (べにほまれ, Cha Norin No. 1)
-  male: Makura-Cd86 (枕Ｃｄ86) — a Darjeeling-origin accession held in the Makurazaki station's own germplasm collection, not a named cultivar in its own right
+  female: Benihomare
+  male: Makura-Cd86
+parentNotes:
+  female: べにほまれ, Cha Norin No. 1
+  male: 枕Ｃｄ86 — a Darjeeling-origin accession held in the Makurazaki station's own germplasm collection, not a named cultivar in its own right
 teaTypes:
   - black tea
   - kamairicha

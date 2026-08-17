@@ -13,8 +13,10 @@ selectedFrom: A Zairai (native, seed-grown) tea garden in Yokooka, Goka village,
 bredAt: Selected by Matsumoto Nakakichi; developed at the Shizuoka Prefectural Tea Experiment Station's Ministry-designated seed orchard, 1935-1946
 prefecture: Shizuoka
 parents:
-  female: Shizuoka Zairai seedling
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: seedling
 teaTypes:
   - sencha
   - fukamushi sencha

@@ -13,8 +13,10 @@ selectedFrom: The existing seedling tea garden (実生茶園) of the National Te
 bredAt: National Tea Experiment Station, Ministry of Agriculture and Forestry (農林省茶業試験場), Kanaya, Shizuoka — founded 1919, predecessor of NARO's Institute of Fruit Tree and Tea Science, Kanaya
 prefecture: Shizuoka
 parents:
-  female: Shizuoka zairai (indigenous) seedling
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: indigenous seedling
 teaTypes:
   - sencha
 buddingTime: medium — first-flush plucking fell one day after Yabukita's in a controlled 1954-season comparison trial at Kanaya (2 May vs 1 May), essentially the same timing despite "natsu" (summer) in its name

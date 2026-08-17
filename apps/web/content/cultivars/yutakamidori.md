@@ -15,8 +15,10 @@ prefecture: Shizuoka (selected) / Kagoshima (named, and almost entirely grown)
 strainNames:
   - Y2
 parents:
-  female: Asatsuyu (あさつゆ)
+  female: Asatsuyu
   male: null
+parentNotes:
+  female: あさつゆ
 teaTypes:
   - sencha
   - fukamushi sencha

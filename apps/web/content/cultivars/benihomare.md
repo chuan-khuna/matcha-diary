@@ -13,8 +13,10 @@ selectedFrom: Tada-line Assam-type (多田系印度雑種) open-pollinated seedl
 bredAt: Selected at Nishigahara, Tokyo; transplanted in 1921 to, and established by 1935 at, the national Tea Experiment Station, Kanaya, Shizuoka
 prefecture: Shizuoka
 parents:
-  female: Tada-line Assam-type (多田系印度雑種) open-pollinated seedling
+  female: Tada-line Assam-type
   male: null
+parentNotes:
+  female: 多田系印度雑種 open-pollinated seedling
 teaTypes:
   - black tea
 buddingTime: late (晩生, per the 1953 registration paper); no source gives a day-count relative to Yabukita

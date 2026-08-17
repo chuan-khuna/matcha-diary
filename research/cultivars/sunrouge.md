@@ -13,8 +13,10 @@ selectedFrom: "Open-pollinated (naturally crossed) seedlings of the intermediate
 bredAt: NARO Institute of Vegetable and Tea Science (NIVTS), Makurazaki Tea Research Station, Kagoshima; joint development with Nippon Paper Group, Inc.
 prefecture: Kagoshima
 parents:
-  female: "Cha Chuukanbohon Nou 6 (茶中間母本農6号) — itself Camellia taliensis 'Akame' (♀) × Camellia sinensis cv. Okumusashi (♂), crossed 1993"
+  female: Cha Chuukanbohon Nou 6
   male: null
+parentNotes:
+  female: 茶中間母本農6号 — itself Camellia taliensis 'Akame' (♀) × Camellia sinensis cv. Okumusashi (♂), crossed 1993
 teaTypes:
   - sencha
   - fukamushi sencha

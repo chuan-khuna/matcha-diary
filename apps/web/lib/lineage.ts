@@ -1,4 +1,4 @@
-import { normaliseParent, type Cultivar } from "@/lib/cultivars";
+import { parentName, type Cultivar } from "@/lib/cultivars";
 
 /**
  * Cultivar pedigrees, laid out at build time.
@@ -117,7 +117,7 @@ function buildGraph(all: Cultivar[]) {
       ["seed", cultivar.parents.female],
       ["pollen", cultivar.parents.male],
     ] as const) {
-      const parent = normaliseParent(raw);
+      const parent = parentName(raw);
       if (parent === null) continue;
       // A self-pollination names the same plant twice. One edge, not two.
       if (seen.has(parent)) continue;

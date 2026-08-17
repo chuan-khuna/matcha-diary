@@ -13,8 +13,10 @@ selectedFrom: Fukuoka indigenous (zairai) tea tree seedlings, Hoshino village, Y
 bredAt: "Selected and registered by an individual grower, Inoue (井上十二生; given-name reading unconfirmed), resident at 16901 Hoshino village, Yame County, Fukuoka — not developed at a national or prefectural research station"
 prefecture: Fukuoka
 parents:
-  female: Fukuoka zairai seedling
+  female: Fukuoka zairai
   male: null
+parentNotes:
+  female: seedling
 teaTypes:
   - sencha
 buddingTime: medium-late — later than Yabukita (no day figure sourced)

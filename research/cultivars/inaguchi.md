@@ -13,8 +13,10 @@ selectedFrom: An open-pollinated Yabukita seedling found growing by chance in a 
 bredAt: Discovered and propagated by the grower Inaguchi; evaluated by the Shizuoka Prefectural Tea Industry Experimental Station, which confirmed its colour, shape and aroma in 1986
 prefecture: Shizuoka
 parents:
-  female: Yabukita (open-pollinated seed parent)
+  female: Yabukita
   male: null
+parentNotes:
+  female: open-pollinated seed parent
 teaTypes:
   - sencha
 buddingTime: medium — 1 to 2 days after Yabukita

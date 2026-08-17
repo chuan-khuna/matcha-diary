@@ -16,7 +16,9 @@ bredAt: National Agriculture and Food Research Organization (NARO), Makurazaki t
 prefecture: Kagoshima
 parents:
   female: FYZ-41
-  male: Saemidori (さえみどり)
+  male: Saemidori
+parentNotes:
+  male: さえみどり
 teaTypes:
   - sencha
   - oolong-style tea

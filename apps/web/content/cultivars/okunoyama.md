@@ -14,8 +14,10 @@ selectedFrom: "Uji zairai (landrace) tea trees growing in the Okunoyama garden, 
 bredAt: "Horii Shichimeien (堀井七茗園); selected by Horii Nobuo (堀井信夫), the fifth-generation head of the family, who is also the individual named as registrant and breeder on the MAFF registration"
 prefecture: Kyoto
 parents:
-  female: Uji zairai (landrace) seedling, Okunoyama garden
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling, Okunoyama garden
 teaTypes:
   - gyokuro
   - tencha

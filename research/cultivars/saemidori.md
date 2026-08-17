@@ -12,8 +12,11 @@ crossedYear: 1969
 bredAt: Ministry of Agriculture and Forestry Tea Research Station, Makurazaki Branch (農林省茶業試験場枕崎支場), Makurazaki City, Kagoshima — now NARO's Institute of Fruit Tree and Tea Science, Makurazaki Tea Research Station
 prefecture: Kagoshima
 parents:
-  female: Yabukita (やぶきた) — itself a selection from Shizuoka-type Zairai
-  male: Asatsuyu (あさつゆ) — itself a selection from Uji-type Zairai, chosen as the pollen parent specifically for being early-budding and high quality
+  female: Yabukita
+  male: Asatsuyu
+parentNotes:
+  female: やぶきた — itself a selection from Shizuoka-type Zairai
+  male: あさつゆ — itself a selection from Uji-type Zairai, chosen as the pollen parent specifically for being early-budding and high quality
 teaTypes:
   - sencha
   - gyokuro

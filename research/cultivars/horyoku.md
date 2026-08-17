@@ -13,8 +13,10 @@ selectedFrom: "Open-pollinated (natural-cross) seedling of Assam-type (アッサ
 bredAt: "Bred by Shizuoka Prefecture (静岡県育成, per NARO's tea cultivar handbook pedigree chart) — a separate line from the Meiji-era national trial planting at Nishigahara, Tokyo that produced Benihomare. By 1972 it was held in the germplasm collection at the (national) Tea Research Station, Kanaya, Shizuoka (then 茶業試験場, now part of NARO's Institute of Vegetable and Tea Science), where it was used as the seed parent in the cross that produced Ryofu."
 prefecture: Shizuoka
 parents:
-  female: Assam-type (アッサム系) open-pollinated seedling
+  female: Assam-type
   male: null
+parentNotes:
+  female: アッサム系 open-pollinated seedling
 teaTypes:
   - sencha
   - fukamushi sencha

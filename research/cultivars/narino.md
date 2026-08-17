@@ -14,8 +14,10 @@ selectedFrom: Uji zairai (indigenous, seed-grown) tea tree population, Okunoyama
 bredAt: Horii Shichimeien (堀井七茗園); selection led by Horii Nobuo (堀井信夫), fifth-generation head of the house
 prefecture: Kyoto
 parents:
-  female: Uji zairai seedling, Okunoyama garden
+  female: Uji zairai
   male: null
+parentNotes:
+  female: seedling from the Okunoyama garden
 teaTypes:
   - tencha
   - matcha

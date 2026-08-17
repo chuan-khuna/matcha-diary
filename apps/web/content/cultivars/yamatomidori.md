@@ -13,8 +13,10 @@ selectedFrom: "Nara indigenous (zairai) tea tree seed: seedling trees collected 
 bredAt: Nara Prefectural Agricultural Experiment Station, Tea Branch (奈良県農事試験場茶業分場; successor institution now called the Yamatocha Research Center, 大和茶研究センター)
 prefecture: Nara
 parents:
-  female: Nara indigenous (zairai) tea tree seedling
+  female: Nara indigenous
   male: null
+parentNotes:
+  female: zairai tea tree seedling
 teaTypes:
   - sencha
   - hojicha

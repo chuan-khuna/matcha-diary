@@ -13,8 +13,10 @@ selectedFrom: Uji zairai (landrace) seedling stand; old strain name Koyama No. 6
 bredAt: Selected by the Uji grower Koyama Masajirō from his own zairai planting; subsequently trialled and promoted by the Kyoto Prefectural Tea Research Institute (京都府茶業研究所)
 prefecture: Kyoto
 parents:
-  female: Uji zairai (landrace) seedling
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling
 teaTypes:
   - tencha
   - matcha

@@ -44,7 +44,12 @@ export type Cultivar = {
   prefecture: string | null;
   strainNames: string[];
 
+  /**
+   * Bare cultivar names, and nothing else. Readings, breeding-line glosses and
+   * provenance live in `parentNotes` under the same key — see `parentName`.
+   */
   parents: { female: string | null; male: string | null };
+  parentNotes: { female: string | null; male: string | null };
   notableDescendants: string[];
   siblingCultivars: string[];
   lineageNote: string | null;
@@ -161,24 +166,22 @@ export function registeredLabel(cultivar: Cultivar): string {
 }
 
 /**
- * A parent name, stripped back to the name.
+ * A parent reference, as a name.
  *
- * Frontmatter carries the kana and the provenance inline — `Yabukita (やぶきた)
- * — itself a selection from Shizuoka-type Zairai` — because that is useful
- * prose. It is not a key. Cutting at the first bracket or dash is what lets a
- * parent reference resolve to the record it names.
+ * `parents.female` and `parents.male` hold a bare cultivar name and nothing
+ * else, so this is only a guard against the ways "no parent" gets written down.
+ * It used to do real work — the field once carried the reading and the
+ * provenance inline, as `Yabukita (やぶきた) — itself a selection from
+ * Shizuoka-type Zairai`, and every consumer had to cut it back to a key before
+ * it could resolve. Splitting that into `parents` and `parentNotes` moved the
+ * problem to where it belongs: the data. Two consequences worth knowing —
+ * landrace variants that used to draw as separate nodes (`Uji zairai seedling`,
+ * `Uji-strain`, `Kyoto/Uji indigenous tea tree`) now collapse onto one, and a
+ * name is short enough that the diagram no longer truncates any of them.
  */
-export function normaliseParent(raw: string | null): string | null {
-  if (!raw) return null;
-
-  const name = raw
-    .split("(")[0]
-    .split("—")[0]
-    .split(" - ")[0]
-    .replace(/[,;]$/, "")
-    .trim();
-
-  if (!name || /^unknown$/i.test(name)) return null;
+export function parentName(raw: string | null): string | null {
+  const name = raw?.trim();
+  if (!name || /^(unknown|null)$/i.test(name)) return null;
   return name;
 }
 
@@ -188,6 +191,8 @@ export type ParentLink = {
   name: string;
   /** Set when the parent is itself one of the records in the collection. */
   slug: string | null;
+  /** Reading, breeding-line gloss or provenance, where the record has one. */
+  note: string | null;
 };
 
 export function parentsOf(cultivar: Cultivar, all: Cultivar[]): ParentLink[] {
@@ -195,12 +200,15 @@ export function parentsOf(cultivar: Cultivar, all: Cultivar[]): ParentLink[] {
 
   return (
     [
-      ["♀", cultivar.parents.female],
-      ["♂", cultivar.parents.male],
+      ["♀", cultivar.parents.female, cultivar.parentNotes.female],
+      ["♂", cultivar.parents.male, cultivar.parentNotes.male],
     ] as const
   )
-    .map(([role, raw]) => ({ role, name: normaliseParent(raw) }))
-    .filter((parent): parent is { role: "♀" | "♂"; name: string } => parent.name !== null)
+    .map(([role, raw, note]) => ({ role, name: parentName(raw), note }))
+    .filter(
+      (parent): parent is { role: "♀" | "♂"; name: string; note: string | null } =>
+        parent.name !== null,
+    )
     .map((parent) => ({ ...parent, slug: slugByName.get(parent.name) ?? null }));
 }
 
@@ -216,7 +224,7 @@ export function parentsOf(cultivar: Cultivar, all: Cultivar[]): ParentLink[] {
 export function offspringOf(cultivar: Cultivar, all: Cultivar[]): Cultivar[] {
   return all.filter((entry) =>
     [entry.parents.female, entry.parents.male].some(
-      (parent) => normaliseParent(parent) === cultivar.name,
+      (parent) => parentName(parent) === cultivar.name,
     ),
   );
 }

@@ -12,8 +12,11 @@ crossedYear: null
 bredAt: Saitama Prefectural Tea Experiment Station (埼玉県茶業試験場), now the Saitama Prefectural Tea Research Institute
 prefecture: Saitama
 parents:
-  female: Sayamamidori (さやまみどり)
-  male: Yabukita (やぶきた)
+  female: Sayamamidori
+  male: Yabukita
+parentNotes:
+  female: さやまみどり
+  male: やぶきた
 teaTypes:
   - sencha
   - black tea

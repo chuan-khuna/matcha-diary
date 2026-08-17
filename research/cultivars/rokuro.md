@@ -13,8 +13,10 @@ selectedFrom: Shizuoka Zairai (indigenous) tea trees; no garden or locality is n
 bredAt: Selected by Sugiyama Hikosaburo; developed 1935–1946 (Showa 10–21) at the MAFF-designated foundation-stock plot (原種圃) of the Shizuoka Prefectural Tea Experiment Station
 prefecture: Shizuoka
 parents:
-  female: Shizuoka Zairai individual
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: an individual bush
 teaTypes:
   - sencha
 buddingTime: medium (中生, per the 1953 registration paper); one tea-shop account describes it as slightly later than Yabukita, but no trial data giving days relative to Yabukita was found

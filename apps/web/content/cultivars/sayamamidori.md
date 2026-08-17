@@ -13,8 +13,10 @@ selectedFrom: Uji zairai (native, seed-grown) seedlings, grown out and selected 
 bredAt: A Saitama prefectural experiment station, under the MAFF-designated original-strain programme (candidate strain named Saitama A-1-go in 1939); the institutional line continues through today's Saitama Prefectural Tea Research Institute (埼玉県茶業研究所)
 prefecture: Saitama
 parents:
-  female: Uji zairai seedling
+  female: Uji zairai
   male: null
+parentNotes:
+  female: seedling
 teaTypes:
   - sencha
 buddingTime: medium to medium-late — picked about 4-5 days after Yabukita in Saitama comparison trials of the 1950s-60s (17 May against Yabukita's 12 May in one trial year; 4 days later in another)

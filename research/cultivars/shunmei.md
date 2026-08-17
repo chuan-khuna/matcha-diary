@@ -13,8 +13,11 @@ selectedYear: null
 bredAt: National Tea Experiment Station, Kanaya, Shizuoka (reorganised more than once since; operates today as NARO's Kanaya Tea Research Base)
 prefecture: Shizuoka
 parents:
-  female: Yutakamidori (ゆたかみどり)
-  male: F1NN8 (an unreleased Kanaya-station F1 hybrid breeding line, itself Tamamidori × S6)
+  female: Yutakamidori
+  male: F1NN8
+parentNotes:
+  female: ゆたかみどり
+  male: an unreleased Kanaya-station F1 hybrid breeding line, itself Tamamidori × S6
 teaTypes:
   - sencha
 buddingTime: early — about 4 to 5 days before Yabukita in warm districts

@@ -13,8 +13,11 @@ selectedYear: 1985
 bredAt: Shizuoka Prefectural Tea Experiment Station (静岡県茶業試験場; reorganised since as the Tea Research Center, Shizuoka Prefectural Research Institute of Agriculture and Forestry)
 prefecture: Shizuoka
 parents:
-  female: Yabukita (やぶきた)
-  male: Shizu-Cy225 (静Cy225) — a Chinese-origin breeding accession held by the station
+  female: Yabukita
+  male: Shizu-Cy225
+parentNotes:
+  female: やぶきた
+  male: 静Cy225 — a Chinese-origin breeding accession held by the station
 teaTypes:
   - sencha
   - kamairicha

@@ -15,8 +15,11 @@ strainNames:
 bredAt: National Tea Experiment Station, Makurazaki branch, Kagoshima (reorganised more than once since; the institution NARO's own handbook credits as its predecessor); characteristics later written up by researcher Takeda Yoshiyuki for the Shizuoka Prefectural Tea Industry Council
 prefecture: Kagoshima
 parents:
-  female: Kanayamidori (かなやみどり)
-  male: Yabukita (やぶきた)
+  female: Kanayamidori
+  male: Yabukita
+parentNotes:
+  female: かなやみどり
+  male: やぶきた
 teaTypes:
   - sencha
   - fukamushi sencha

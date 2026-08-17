@@ -13,8 +13,10 @@ selectedFrom: Uji zairai (landrace) seedling population; old strain name Kyoken 
 bredAt: Kyoto Prefectural Tea Research Institute (京都府茶業研究所)
 prefecture: Kyoto
 parents:
-  female: Uji zairai (landrace) seedling
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling
 teaTypes:
   - tencha
   - matcha

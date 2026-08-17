@@ -13,8 +13,10 @@ selectedFrom: An individual tree selected by Sugiyama Hikosaburo from an existin
 bredAt: Selected by Sugiyama Hikosaburo; developed 1935–1946 (Showa 10–21) at the Shizuoka Prefectural Tea Experiment Station's Ministry-designated original-seed orchard
 prefecture: Shizuoka
 parents:
-  female: An individual tree selected by Sugiyama Hikosaburo (landrace selection, not a controlled cross)
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: an individual tree selected by Sugiyama Hikosaburo — landrace selection, not a controlled cross
 teaTypes:
   - sencha
 buddingTime: medium (chuban) by the original 1953 classification, though the record notes plucking begins a little earlier than that class implies; no day-count relative to Yabukita has been sourced

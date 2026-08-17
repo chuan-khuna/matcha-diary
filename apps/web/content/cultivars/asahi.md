@@ -13,8 +13,10 @@ selectedFrom: Uji zairai (landrace) tea garden, Uji City — old strain name Hir
 bredAt: Selected by the farmer Hirano Jin'nojō (平野甚之丞); trialled from 1953 and named by the Kyoto Prefectural Tea Research Institute (京都府茶業研究所)
 prefecture: Kyoto
 parents:
-  female: Uji zairai (landrace) tea tree, Hirano's selection
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace tea tree, Hirano's selection
 teaTypes:
   - tencha
   - matcha

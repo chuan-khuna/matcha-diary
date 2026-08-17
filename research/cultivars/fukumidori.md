@@ -13,7 +13,9 @@ bredAt: Saitama Prefectural Tea Experiment Station (埼玉県茶業試験場), f
 prefecture: Saitama
 parents:
   female: Yabukita
-  male: "23F1-107 (Sayamamidori × Yabukita, 1948)"
+  male: 23F1-107
+parentNotes:
+  male: Sayamamidori × Yabukita, 1948
 teaTypes:
   - sencha
 buddingTime: medium — about 2 days later than Yabukita at first-flush budding and 1 day later at first-flush plucking, on a multi-year average; second-flush plucking runs about a day earlier than Yabukita

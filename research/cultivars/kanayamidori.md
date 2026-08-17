@@ -13,8 +13,10 @@ selectedYear: null
 bredAt: National Tea Experiment Station, Kanaya, Shizuoka (reorganised more than once since; operates today as NARO's Kanaya Tea Research Base)
 prefecture: Shizuoka
 parents:
-  female: S6 (静岡県在来6号, a Shizuoka zairai seedling selection — the station's own No. 6, distinct from the No. 16 selection later used as a parent of Okumidori)
+  female: S6
   male: Yabukita
+parentNotes:
+  female: 静岡県在来6号, a Shizuoka zairai seedling selection — the station's own No. 6, distinct from the No. 16 selection later used as a parent of Okumidori
 teaTypes:
   - sencha
   - fukamushi sencha

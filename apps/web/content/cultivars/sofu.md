@@ -16,7 +16,9 @@ bredAt: Tea Experiment Station, cultivation department, Kanaya (now NARO Institu
 prefecture: Shizuoka
 parents:
   female: Yabukita
-  male: Shizu-Inzatsu 131 (静印雑131)
+  male: Shizu-Inzatsu 131
+parentNotes:
+  male: 静印雑131
 teaTypes:
   - sencha
   - kamairicha

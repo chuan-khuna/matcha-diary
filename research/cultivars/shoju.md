@@ -13,8 +13,10 @@ selectedYear: null
 bredAt: "Selected and privately registered by Matsushita Eiichi (松下栄市), a fourth-generation tea grower at Furuta, Nishinoomote City, Tanegashima, Kagoshima — not a research-station programme. His family's tea garden trades today as Tanegashima Shōjuen (種子島松寿園)."
 prefecture: Kagoshima
 parents:
-  female: "Kuritawase (くりたわせ / 栗田早生) — the single source clone. Not a seed parent: a sport has no sexual parentage, so this slot records the plant Shoju mutated from, not a mother in a cross."
+  female: Kuritawase
   male: null
+parentNotes:
+  female: "くりたわせ / 栗田早生 — the single source clone. Not a seed parent: a sport has no sexual parentage, so this slot records the plant Shoju mutated from, not a mother in a cross."
 teaTypes:
   - sencha
 buddingTime: "extremely early (極早生). Shoju's own official variety description states that both its budding period and its picking period are 極早生 at its place of breeding (Nishinoomote City, Tanegashima). No day-count relative to Yabukita was located, and any such figure would be hard to compare cleanly, since Tanegashima's climate is far milder than the mainland gardens Yabukita is usually benchmarked against — local reporting has new-tea picking starting there in mid-March, with budding from around February."

@@ -13,8 +13,10 @@ selectedFrom: "A seedling of \"Abe No. 1\" (阿部1号, also transliterated Abe 
 bredAt: "Selected by Satō Mitsuteru, an independent grower; no research station is credited in any source found"
 prefecture: Shizuoka
 parents:
-  female: Abe No. 1 seedling
+  female: Abe No. 1
   male: null
+parentNotes:
+  female: seedling
 teaTypes:
   - sencha
 buddingTime: "early — 早生 in the name denotes early budding, and in a 2009 NARO germplasm trial at Makurazaki, Kagoshima it was picked on 11 April, the earliest of eight cultivars sampled alongside it. No source gives an exact days-relative-to-Yabukita figure."

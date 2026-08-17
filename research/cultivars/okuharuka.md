@@ -13,8 +13,11 @@ selectedYear: 1982
 bredAt: "Saitama Prefectural Agriculture and Forestry Research Center, Green Tea Laboratory (埼玉県農林総合研究センター茶業研究所) — the current name of the same Saitama tea-breeding programme, under earlier names, that produced Okumusashi, Fukumidori and Sayamakaori"
 prefecture: Saitama
 parents:
-  female: "Saitama 20 (埼玉20号)"
-  male: "Saitama 7 (埼玉7号)"
+  female: Saitama 20
+  male: Saitama 7
+parentNotes:
+  female: 埼玉20号
+  male: 埼玉7号
 teaTypes:
   - sencha
 buddingTime: "extremely late (極晩生, the release paper's own top category) — 9 days after Yabukita at the Saitama breeding site (4-year average, 2008–2011); 6 days after Yabukita in the national multi-prefecture trial average (picking date, 13 prefectures, 2006–2009)"

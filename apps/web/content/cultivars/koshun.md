@@ -12,8 +12,11 @@ crossedYear: 1970
 bredAt: Shizuoka Prefectural Tea Experiment Station (静岡県茶業試験場)
 prefecture: Shizuoka
 parents:
-  female: Kurasawa (くらさわ)
-  male: Kanayamidori (かなやみどり)
+  female: Kurasawa
+  male: Kanayamidori
+parentNotes:
+  female: くらさわ
+  male: かなやみどり
 teaTypes:
   - sencha
   - kamairicha

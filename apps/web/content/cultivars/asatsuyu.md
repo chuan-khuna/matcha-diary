@@ -13,8 +13,10 @@ selectedFrom: Uji zairai (Kyoto landrace) seed, sown at the Ministry of Agricult
 bredAt: Transplanted in 1921 to the tea experiment station at Kanaya, Shizuoka (a predecessor of today's NARO Institute of Fruit Tree and Tea Science); development completed there in 1944, under the pre-naming designation Kokucha U14 (国茶U14号)
 prefecture: Kyoto
 parents:
-  female: Uji zairai seed stand, Kyoto — no individual mother plant is recorded
+  female: Uji zairai
   male: null
+parentNotes:
+  female: seed stand, Kyoto — no individual mother plant is recorded
 teaTypes:
   - sencha
 buddingTime: "Early in the field record — a 1991 NARO/Kagoshima trial (Torimaru & Fuchinoue) found it, with Yutakamidori, among the two earliest-budding of 13 cultivars tested, ahead of Yabukita. The 1953 registration bulletin itself, however, classified Asatsuyu as 中生種 (medium-season); see conflicts."

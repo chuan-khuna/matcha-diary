@@ -12,8 +12,11 @@ crossedYear: 1947
 bredAt: Ministry of Agriculture and Forestry Kumagaya Agricultural Improvement Experiment Station, Toyooka trial site (1947–51); continued from 1951 at the Saitama Prefectural Tea Research Institute (埼玉県茶業研究所), which authored the release paper
 prefecture: Saitama
 parents:
-  female: Sayamamidori (さやまみどり)
-  male: Yamatomidori (やまとみどり)
+  female: Sayamamidori
+  male: Yamatomidori
+parentNotes:
+  female: さやまみどり
+  male: やまとみどり
 teaTypes:
   - sencha
 buddingTime: late (about 10 days after Yabukita; about 4–5 days after Sayamamidori — the 1962 release paper places it mid-rank among the late varieties then available)

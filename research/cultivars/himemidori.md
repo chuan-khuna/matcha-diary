@@ -13,8 +13,10 @@ selectedFrom: Native (zairai) mountain tea gardens in Obuchi and Kasahara villag
 bredAt: Selection begun at the Fukuoka Prefectural Agricultural Experiment Station, Chikugo Branch (1929); carried to registration at the MAFF Kyushu Agricultural Experiment Station, Tea Division, from 1950, under Hajime Sanai and Shun Amma, with Takashi Imai, Ichiro Baba and Tadashi Yonemaru
 prefecture: Fukuoka
 parents:
-  female: Yame Zairai seedling
+  female: Yame zairai
   male: null
+parentNotes:
+  female: seedling
 teaTypes:
   - gyokuro
   - tencha

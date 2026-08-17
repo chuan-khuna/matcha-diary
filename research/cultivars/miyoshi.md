@@ -12,8 +12,10 @@ selectedFrom: Uji-strain (宇治種) zairai seedlings sown at the Ministry of Ag
 bredAt: The government tea experiment station (Ministry of Agriculture and Forestry) — the selected seedling was transplanted there in 1921, established as a fixed line in 1944, and was based at Kanaya, Shizuoka by the time of its 1953 registration
 prefecture: Shizuoka
 parents:
-  female: Uji-strain (宇治種) zairai seedling
+  female: Uji zairai
   male: null
+parentNotes:
+  female: recorded as Uji-strain (宇治種) — (宇治種) zairai seedling
 teaTypes:
   - sencha
 buddingTime: medium (中生) — the 1953 registration paper's own classification; no source found gives a day-count relative to Yabukita

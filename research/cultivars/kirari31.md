@@ -18,8 +18,11 @@ selectedYear: 1998
 bredAt: Miyazaki Prefectural Agricultural Experiment Station, Tea Research Branch (宮崎県総合農業試験場茶業支場; since reorganised as the Miyazaki Agricultural Research Institute's Tea Branch Facility)
 prefecture: Miyazaki
 parents:
-  female: Sakimidori (さきみどり)
-  male: Saemidori (さえみどり)
+  female: Sakimidori
+  male: Saemidori
+parentNotes:
+  female: さきみどり
+  male: さえみどり
 teaTypes:
   - sencha
   - kabusecha

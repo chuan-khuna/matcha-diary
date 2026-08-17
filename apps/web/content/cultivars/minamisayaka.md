@@ -14,8 +14,11 @@ selectedYear: null
 bredAt: Miyazaki Prefecture — sources render the station in English as the "Miyazaki Prefectural Agricultural Experiment Station" or "Miyazaki Agricultural Research Institute"; no source gives its exact contemporary Japanese name for the 1970s–90s trial period
 prefecture: Miyazaki
 parents:
-  female: Miya A-6 (宮A6) — bred by Miyazaki Prefecture from Takachiho × Miya F1-9-4-48
-  male: Chamoto F1 NN27 (茶本F1NN27) — bred at the National Tea Research Station from Yabukita × Shizuoka Zairai 16 (静在16)
+  female: Miya A-6
+  male: Chamoto F1 NN27
+parentNotes:
+  female: 宮A6 — bred by Miyazaki Prefecture from Takachiho × Miya F1-9-4-48
+  male: 茶本F1NN27 — bred at the National Tea Research Station from Yabukita × Shizuoka Zairai 16 (静在16)
 teaTypes:
   - sencha
   - fukamushi sencha

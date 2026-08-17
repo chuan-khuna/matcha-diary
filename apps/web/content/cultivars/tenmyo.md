@@ -12,7 +12,10 @@ selectedYear: 1977
 bredAt: Kyoto Prefectural Tea Research Institute (京都府茶業研究所)
 prefecture: Kyoto
 parents:
-  female: Samidori (さみどり) — natural crossing
+  female: Samidori
+  male: null
+parentNotes:
+  female: さみどり — natural crossing
   male: unknown (open pollination)
 teaTypes:
   - tencha

@@ -11,8 +11,10 @@ registry: Plant Variety Protection Act
 bredAt: "Matsushita Ei'ichi, an individual grower — not a prefectural or national research station; associated with Tanegashima, Kagoshima"
 prefecture: Kagoshima (Tanegashima)
 parents:
-  female: "Yabukita — source plant of the bud sport, not a cross parent"
+  female: Yabukita
   male: null
+parentNotes:
+  female: source plant of the bud sport, not a cross parent
 teaTypes:
   - sencha
   - fukamushi sencha

@@ -13,8 +13,10 @@ selectedFrom: A seedling population raised from seed imported from Mie prefectur
 bredAt: Selected and developed at the Kagoshima Prefectural Agricultural Experiment Station (鹿児島県農業試験場) from 1933
 prefecture: Kagoshima
 parents:
-  female: Mie Zairai seedling
+  female: Mie zairai
   male: null
+parentNotes:
+  female: seedling
 teaTypes:
   - sencha
 buddingTime: extremely early — the 1954 registration paper classes it 極早生 ("extra-early"), a grade ahead of the ordinary 早生 ("early") tier; a 1979 trial at the National Research Institute of Tea's Makurazaki Branch, testing it directly against Yabukita and five other early cultivars at one site, put its optimum first-flush picking date at 17 April against Yabukita's 26 April — about nine days earlier

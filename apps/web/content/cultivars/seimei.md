@@ -17,8 +17,11 @@ selectedYear: null
 bredAt: NARO (then the National Institute of Vegetable and Tea Science, tea research division; now NARO's Institute of Fruit Tree and Tea Science), Makurazaki, Kagoshima
 prefecture: Kagoshima
 parents:
-  female: Fushun (ふうしゅん) — vigorous, high-yielding, cold-hardy
-  male: Saemidori (さえみどり) — early-maturing, high processing quality
+  female: Fushun
+  male: Saemidori
+parentNotes:
+  female: ふうしゅん — vigorous, high-yielding, cold-hardy
+  male: さえみどり — early-maturing, high processing quality
 teaTypes:
   - sencha
   - kabusecha

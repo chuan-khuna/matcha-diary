@@ -13,8 +13,10 @@ selectedFrom: Kyoto/Uji indigenous tea trees (zairai); the specific stand or sel
 bredAt: Kyoto Prefectural Tea Research Institute
 prefecture: Kyoto
 parents:
-  female: Kyoto/Uji indigenous tea tree (zairai) individual
+  female: Uji zairai
   male: null
+parentNotes:
+  female: recorded as a Kyoto/Uji indigenous tea tree — (zairai) individual
 teaTypes:
   - tencha
   - gyokuro

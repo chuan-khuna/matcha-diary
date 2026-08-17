@@ -13,8 +13,11 @@ selectedYear: 1984
 bredAt: Miyazaki Prefectural Agricultural Experiment Station
 prefecture: Miyazaki
 parents:
-  female: F1NN27 (an unreleased breeding line from the National Tea Experiment Station, Kanaya — itself Yabukita x Shizuoka Zairai No. 16)
-  male: ME52 (a Miyazaki landrace/zairai selection)
+  female: F1NN27
+  male: ME52
+parentNotes:
+  female: an unreleased breeding line from the National Tea Experiment Station, Kanaya — itself Yabukita x Shizuoka Zairai No. 16
+  male: a Miyazaki landrace/zairai selection
 teaTypes:
   - sencha
   - fukamushi sencha

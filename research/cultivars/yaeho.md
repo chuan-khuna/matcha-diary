@@ -12,8 +12,10 @@ selectedFrom: Shizuoka Zairai individual, from a tea garden at a locality called
 bredAt: Selected by Sugiyama Hikosaburo from his own garden; evaluated 1935–1946 (Showa 10–21) at the Shizuoka Prefectural Tea Experiment Station's MAFF-designated foundation-stock garden, then adopted as a Shizuoka Prefecture recommended cultivar ahead of national registration
 prefecture: Shizuoka
 parents:
-  female: Shizuoka Zairai individual selected by Sugiyama Hikosaburo
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: an individual bush selected by Sugiyama Hikosaburo
 teaTypes:
   - sencha
   - gyokuro

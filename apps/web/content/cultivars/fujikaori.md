@@ -13,8 +13,10 @@ selectedYear: null
 bredAt: Selected privately by Morizono Ichiji (森薗市二) and Koyanagi Mitsuyoshi (小柳三義), both of Fujieda city; propagation and commercial promotion were later organised through the Fujieda Tea Promotion Council (藤枝茶振興協議会), and cultivation was later carried on by Koyanagi's son
 prefecture: Shizuoka
 parents:
-  female: Shizu-Inzatsu 131 (静印雑131)
+  female: Shizu-Inzatsu 131
   male: Yabukita
+parentNotes:
+  female: 静印雑131
 teaTypes:
   - sencha
   - kamairicha

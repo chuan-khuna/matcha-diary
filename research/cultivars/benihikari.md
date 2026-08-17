@@ -12,8 +12,11 @@ crossedYear: 1952
 bredAt: "Crossed 1952 at the Kagoshima Prefectural Agricultural Experiment Station's Chiran Tea Branch, Makurazaki Black Tea Trial Site (鹿児島県農事試験場知覧茶業分場枕崎紅茶試験地); the programme passed in 1953 to the MAFF-designated black tea breeding trial at the same site, in 1961 to the new MAFF Kyushu Agricultural Experiment Station Tea Division, and in December 1961 to the renamed MAFF Tea Experiment Station, Makurazaki Branch (農林省茶業試験場枕崎支場), whose Tea Tree 1st Research Laboratory carried it to registration."
 prefecture: Kagoshima
 parents:
-  female: Benikaori (べにかおり) — an Assam-hybrid black tea cultivar
-  male: "Cn1 — a China-type breeding line (the 1970 registration paper's own English summary glosses it directly as \"the China variety\")"
+  female: Benikaori
+  male: Cn1
+parentNotes:
+  female: べにかおり — an Assam-hybrid black tea cultivar
+  male: "a China-type breeding line (the 1970 registration paper's own English summary glosses it directly as \"the China variety\")"
 teaTypes:
   - black tea
 buddingTime: "late (晩生); averaged over the registration paper's multi-year trials, buds around 26 March and its first flush is picked around 26 April — five days and one day earlier than Benihomare respectively. No source gives a day-count relative to Yabukita."

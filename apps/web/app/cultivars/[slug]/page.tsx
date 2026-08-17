@@ -199,20 +199,35 @@ export default async function CultivarPage({
                     {parents.map((parent) => (
                       <li
                         key={`${parent.role}-${parent.name}`}
-                        className="flex gap-2 font-mono text-data-md"
+                        className="flex gap-2"
                       >
-                        <span className="text-clay" aria-hidden="true">
+                        <span
+                          className="font-mono text-data-md text-clay"
+                          aria-hidden="true"
+                        >
                           {parent.role}
                         </span>
-                        {parent.slug === null ? (
-                          // Not one of the 69. Named, but with no record behind
-                          // it — a gap in the collection, shown as one.
-                          <span className="text-ink-2">{parent.name}</span>
-                        ) : (
-                          <RecordLink href={`/cultivars/${parent.slug}`}>
-                            {parent.name}
-                          </RecordLink>
-                        )}
+                        <div className="min-w-0 flex-1">
+                          <p className="font-mono text-data-md">
+                            {parent.slug === null ? (
+                              // Not one of the 69. Named, but with no record
+                              // behind it — a gap, shown as one.
+                              <span className="text-ink-2">{parent.name}</span>
+                            ) : (
+                              <RecordLink href={`/cultivars/${parent.slug}`}>
+                                {parent.name}
+                              </RecordLink>
+                            )}
+                          </p>
+                          {/* The reading and provenance that used to be crammed
+                              into the name itself. Kept, just no longer in the
+                              way of resolving the reference. */}
+                          {parent.note !== null && (
+                            <p className="mt-1 text-body-excerpt text-ink-2">
+                              {parent.note}
+                            </p>
+                          )}
+                        </div>
                       </li>
                     ))}
                   </ul>

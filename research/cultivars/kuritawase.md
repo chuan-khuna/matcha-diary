@@ -13,8 +13,10 @@ selectedFrom: "A seedling tea garden at Furuta, Nishinoomote City, Tanegashima, 
 bredAt: "Selected across three generations of the Kurita family — Kurita Mosaburo sowed the seed, his son Kurita Seiichi ran the decade-long individual selection, and the final single-stock selection in Showa 2 (1927) was made under the guidance of Sugiyama Hikosaburo, Yabukita's own discoverer; evaluated from 1931 at the Kagoshima Prefectural Tea Experiment Station"
 prefecture: Kagoshima
 parents:
-  female: Shizuoka zairai (native) seedling
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: native seedling
 teaTypes:
   - sencha
   - fukamushi sencha

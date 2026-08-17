@@ -14,8 +14,10 @@ selectedFrom: "A natural, open-pollinated seed of 'Manipuri No. 15', an Assam (v
 bredAt: Shizuoka Prefecture Tea Experiment Station (静岡県立茶業試験場), development credited to Arima Toshiharu (有馬利治, 1912–1999)
 prefecture: Shizuoka
 parents:
-  female: Manipuri No. 15 (マニプリ15号, Assam / var. assamica seedling)
+  female: Manipuri No. 15
   male: null
+parentNotes:
+  female: マニプリ15号, Assam / var. assamica seedling
 teaTypes:
   - sencha
   - fukamushi sencha

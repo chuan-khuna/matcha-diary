@@ -77,6 +77,7 @@ function parse(file: string, raw: string): Cultivar {
   const fallbackSlug = file.replace(/\.md$/, "");
 
   const parents = (data.parents ?? {}) as Record<string, unknown>;
+  const parentNotes = (data.parentNotes ?? {}) as Record<string, unknown>;
 
   const sources = (Array.isArray(data.sources) ? data.sources : [])
     .map((entry): CultivarSource | null => {
@@ -114,6 +115,10 @@ function parse(file: string, raw: string): Cultivar {
     strainNames: list(data.strainNames),
 
     parents: { female: text(parents.female), male: text(parents.male) },
+    parentNotes: {
+      female: text(parentNotes.female),
+      male: text(parentNotes.male),
+    },
     notableDescendants: list(data.notableDescendants),
     siblingCultivars: list(data.siblingCultivars),
     lineageNote: text(data.lineageNote),

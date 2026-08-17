@@ -13,8 +13,10 @@ selectedFrom: Open-pollinated Yabukita seedlings (やぶきたの実生苗), Hai
 bredAt: Selected by Muramatsu Hoichi (村松穂一), a private grower at Sakabe, Haibara-cho, Haibara-gun, Shizuoka — not a research-station programme
 prefecture: Shizuoka
 parents:
-  female: Yabukita (open-pollinated seed parent)
+  female: Yabukita
   male: null
+parentNotes:
+  female: open-pollinated seed parent
 teaTypes:
   - sencha
 buddingTime: early — its own registration text states both budding and picking come earlier than Yabukita, and earlier than three other named Shizuoka early cultivars (Surugawase, Ōiwase, Yamakai). No source found quantifies the gap in days.

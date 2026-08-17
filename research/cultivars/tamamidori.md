@@ -13,8 +13,10 @@ selectedFrom: Uji-strain (宇治種) zairai seedlings sown at the Ministry of Ag
 bredAt: The government tea experiment station (Ministry of Agriculture and Forestry) — the selected seedling was transplanted there in 1921 and established as a fixed line in 1940; based at Kanaya, Shizuoka by the time of its 1953 registration
 prefecture: Shizuoka
 parents:
-  female: Uji-strain (宇治種) zairai seedling
+  female: Uji zairai
   male: null
+parentNotes:
+  female: recorded as Uji-strain (宇治種) — (宇治種) zairai seedling
 teaTypes:
   - tamaryokucha
 buddingTime: medium (中生種) — the 1953 registration paper's own classification; no day-count relative to Yabukita has been located. One secondary source (日本茶備忘録) instead calls it late-budding (晩生); not corroborated elsewhere, see conflicts.
