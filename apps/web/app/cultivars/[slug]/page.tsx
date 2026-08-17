@@ -176,7 +176,13 @@ export default async function CultivarPage({
             </section>
           )}
 
-          <article>
+          {/* `prose` is the floor under the MDX map, not a replacement for it:
+              the map still dresses every element these records contain, and
+              the plugin only reaches an element the map has no rule for. See
+              the block at the foot of `styles/globals.css`. The column width
+              stays `max-w-reading` above — the plugin's own 65ch cap is
+              lifted there. */}
+          <article className="prose">
             {/* The record opens with its own name as an `h1`. The page header
                 above has already said it, and two `h1`s is one too many, so the
                 heading is dropped here rather than globally in the MDX map. */}

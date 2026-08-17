@@ -1,10 +1,11 @@
 /* ==========================================================================
    Matcha Diary — global stylesheet
 
-   Three things happen here, in order:
-     1. Tailwind is imported.
+   Four things happen here, in order:
+     1. Tailwind is imported, and with it the typography plugin.
      2. A preset is imported, which declares the raw token values.
      3. One `@theme inline` block maps those tokens onto Tailwind's namespaces.
+     4. A `.prose` block rebinds the plugin's palette onto those same tokens.
 
    The mapping lives here and only here. Adding a theme is adding a file to
    `styles/presets/` that redefines the same custom properties under its own
@@ -21,6 +22,12 @@
 
 @import "tailwindcss";
 @import "./presets/washi.css";
+
+/* Coverage only — see the `.prose` block at the foot of this file for what the
+   plugin is and is not allowed to decide. Loaded from CSS because v4 has no JS
+   config; the plugin reads its defaults from its own bundle rather than from
+   `@theme`, so clearing `--color-*` below does not reach it. */
+@plugin "@tailwindcss/typography";
 
 @theme inline {
   /* ---- Colour -------------------------------------------------------- */
@@ -203,4 +210,91 @@
   letter-spacing: var(--t-label-axis-tracking);
   font-weight: var(--t-label-axis-weight);
   text-transform: uppercase;
+}
+
+/* ---- The prose floor ----------------------------------------------------
+   `@tailwindcss/typography` is loaded for coverage, not for looks.
+
+   The MDX map in `components/cultivars/mdx-components` dresses every element
+   the records actually contain, and each one by design token. What a hand map
+   cannot do is cover an element nobody has written yet — the first table,
+   figure, <pre> or <kbd> to land in a record would otherwise arrive as raw
+   user-agent HTML in the middle of a styled page. That gap is the plugin's
+   whole job here.
+
+   The two layers stack rather than fight, and that is a property of the
+   plugin rather than luck: it wraps every element rule in `:where()`, so all
+   of its selectors carry zero specificity and any class at all outranks them.
+   Where the map has an opinion it wins outright; the plugin shows through
+   only where the map is silent.
+
+   Its palette does not reach the page. The defaults are Tailwind's grays —
+   `oklch(37.3% 0.034 259.733)` and relatives — which are off DESIGN.md twice
+   over: a blue hue nothing in this system uses, and a percentage `L` rather
+   than the 0–1 decimal CLAUDE.md mandates. Every slot is rebound below, so
+   the plugin supplies the element list and washi.css supplies the colour.
+   Because these are `var()` references to the preset's own token names, a
+   theme swap re-themes prose for free.
+
+   Deliberately unlayered, and that is what does the overriding: Tailwind
+   emits all three of the plugin's `.prose` rules into the utilities layer,
+   and an unlayered rule beats a layered one whatever the specificity or the
+   source order. The grays are still in the compiled stylesheet — inspecting
+   the bundle will turn up `#364153` — they simply never win. Moving this
+   block inside `@layer` would hand them the cascade back.
+
+   One thing this does NOT cover is `prose-invert`. Inverting is a second
+   palette, and this system does not have one — a theme is a preset file
+   redefining the same token names, so `--ink` is already whatever the current
+   theme says it is. Using that modifier would reach past every binding below
+   and back out to Tailwind's grays. Like preferring the semantic type names
+   over `text-sm`, that is a review rule rather than something enforced here. */
+.prose {
+  /* The size every `em` measurement inside the plugin is taken against. It
+     assumes 16px; paragraphs here are `body-prose` at 18px, so setting it
+     gives the uncovered elements the same rhythm the covered ones have. */
+  font-size: var(--t-body-prose-size);
+  line-height: var(--t-body-prose-leading);
+
+  /* The plugin caps itself at 65ch. Reading width is a layout question this
+     system already answered three times over, and both prose sites set their
+     own — so the cap is lifted rather than left as a quiet fourth answer. */
+  max-width: none;
+
+  --tw-prose-body: var(--ink-2);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-lead: var(--ink-2);
+  --tw-prose-links: var(--ink);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-counters: var(--clay);
+  --tw-prose-bullets: var(--matcha-line);
+  --tw-prose-hr: var(--line);
+  --tw-prose-quotes: var(--ink-2);
+  --tw-prose-quote-borders: var(--matcha-line);
+  --tw-prose-captions: var(--clay);
+  --tw-prose-code: var(--ink);
+  --tw-prose-pre-code: var(--ink);
+  --tw-prose-pre-bg: var(--paper-sunk);
+  --tw-prose-th-borders: var(--line-strong);
+  --tw-prose-td-borders: var(--line);
+  --tw-prose-kbd: var(--ink);
+
+  /* Consumed as a colour, not as the channel triplet older versions wanted.
+     It draws a 1px ring and a 3px bottom edge — a hairline, so it takes the
+     hairline colour rather than a newly invented tinted black. */
+  --tw-prose-kbd-shadows: var(--line-strong);
+}
+
+/* The two decorations a class cannot reach, because a class on an element
+   does not touch that element's pseudo-elements: the plugin puts literal
+   backticks around every `code` and curly quotes around every `blockquote`.
+   Both elements are already dressed by the MDX map — code as a stamped,
+   bordered chip, a blockquote with a matcha rule down its left edge — so
+   these would be a second mark on top of a finished one rather than the
+   floor the plugin is here to be. */
+.prose code::before,
+.prose code::after,
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+  content: none;
 }

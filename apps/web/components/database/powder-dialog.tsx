@@ -144,11 +144,13 @@ export function PowderDialog({
             <section className="flex flex-col gap-3">
               <h3 className="label-caps text-clay">Description</h3>
               {/* The MDX map in `components/cultivars/mdx-components` dresses
-                  every element markdown can produce, body-prose paragraphs
-                  included, so the prose needs no styling here. Only the leading
-                  paragraph's top margin is cancelled: the section's own gap has
-                  already set the distance from the heading. */}
-              <div className="[&>p:first-child]:mt-0">{prose}</div>
+                  every element these records contain, body-prose paragraphs
+                  included, so nothing here restyles them. `prose` sits under
+                  that map as a floor for anything a future record writes that
+                  the map has no rule for — see `styles/globals.css`. Only the
+                  leading paragraph's top margin is cancelled: the section's
+                  own gap has already set the distance from the heading. */}
+              <div className="prose [&>p:first-child]:mt-0">{prose}</div>
             </section>
 
             <section className="flex flex-col gap-3">

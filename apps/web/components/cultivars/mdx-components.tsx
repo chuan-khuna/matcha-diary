@@ -4,22 +4,25 @@ import type { MDXComponents } from "mdx/types";
  * The design system, applied to the HTML that markdown compiles down to.
  *
  * Required at the app root by `@next/mdx` — App Router will not compile MDX
- * without this file. It is also the only styling layer the cultivar prose gets:
- * rather than a `.prose` stylesheet and a typography plugin, each element that
- * markdown can actually produce is mapped to the token it should have been
- * written with. The upside is that there is no second vocabulary — a heading
+ * without this file. Each element markdown can produce is mapped to the token
+ * it should have been written with, so there is no second vocabulary: a heading
  * here is `text-headline-lg`, the same name a heading anywhere else in the app
  * carries, and a colour that is not in DESIGN.md cannot be reached from here.
  *
- * Cultivar records are the only MDX in the app, so a global map is the right
- * scope. The one thing left local is `h1`: every record opens with its own name
- * as a heading, and the detail page has already set that as the page title, so
- * the page passes `h1: () => null` rather than this file deciding for everyone.
+ * This map is the authority, but it is no longer the only layer. Both render
+ * sites also carry `prose`, which puts `@tailwindcss/typography` underneath as
+ * a floor — its palette rebound to these same tokens in `styles/globals.css`.
+ * The two do not collide: the plugin writes its rules inside `:where()`, so
+ * every class below outranks it and it only surfaces where this file is silent.
+ * That is the division of labour to keep. An element the records actually use
+ * belongs here, spelled as a token; the plugin is what stops the first table or
+ * figure someone writes from landing as unstyled user-agent HTML.
  *
- * The element set is deliberately the set the records use — headings,
- * paragraphs, lists, emphasis, inline code — plus links and rules, which cost
- * nothing to cover and would otherwise render unstyled the first time someone
- * writes one.
+ * The MDX is powder and cultivar records, both dressed the same way, so a
+ * global map is the right scope. The one thing left local is `h1`: every record
+ * opens with its own name as a heading and both render sites have already
+ * printed it, so each passes `h1: () => null` rather than this file deciding
+ * for everyone.
  */
 const components: MDXComponents = {
   h1: ({ children }) => <h1 className="text-display">{children}</h1>,
