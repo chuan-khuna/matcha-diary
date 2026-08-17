@@ -75,6 +75,9 @@ export type LineageNode = {
 export type LineageEdge = {
   key: string;
   role: LineageRole;
+  /** Node ids, so the rendered edge can say which two boxes it joins. */
+  parent: string;
+  child: string;
   from: { x: number; y: number };
   to: { x: number; y: number };
   /** Where the ♀/♂ badge sits — the curve's midpoint. */
@@ -407,6 +410,8 @@ function layout(
       {
         key: `${edge.parent}~${edge.child}~${i}`,
         role: edge.role,
+        parent: parent.id,
+        child: child.id,
         from,
         to,
         badge: { x: Math.round(badge.x), y: Math.round(badge.y) },

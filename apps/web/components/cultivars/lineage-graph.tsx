@@ -2,7 +2,12 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { PiGenderFemaleBold, PiGenderMaleBold } from "react-icons/pi";
 
-import { lineagePath, type LineageModel, type LineageNode } from "@/lib/lineage";
+import { LineageFocus } from "@/components/cultivars/lineage-focus";
+import {
+  lineagePath,
+  type LineageModel,
+  type LineageNode,
+} from "@/lib/lineage";
 
 const SEED_GLYPH = "lineage-seed-glyph";
 const POLLEN_GLYPH = "lineage-pollen-glyph";
@@ -10,10 +15,15 @@ const POLLEN_GLYPH = "lineage-pollen-glyph";
 /**
  * A pedigree, drawn.
  *
- * Server-rendered inline SVG with no client JavaScript at all: the layout ran
- * during `next build`, so what ships is finished geometry. That is the whole
- * reason there is no zoom or pan here — the prototype got those from d3, and a
- * static page trades them for a scroll frame and a diagram that costs nothing.
+ * Server-rendered inline SVG: the layout ran during `next build`, so what ships
+ * is finished geometry rather than a drawing program. That is the whole reason
+ * there is no zoom or pan here — the prototype got those from d3, and a static
+ * page trades them for a scroll frame and a diagram that costs nothing.
+ *
+ * One behaviour is worth client code, and it is wrapped rather than woven in:
+ * LineageFocus fades everything off the hovered plant's line of descent. It
+ * takes the SVG as children and only ever sets an inline opacity, so this stays
+ * a server component and the markup below is never re-rendered in the browser.
  *
  * Generations run left to right, siblings stacked. That way round because the
  * collection is four generations deep and up to forty-nine plants wide, so
@@ -48,33 +58,42 @@ export function LineageGraph({
 }) {
   return (
     <figure className="rounded-md border border-line bg-surface shadow-raised">
-      {/* The diagram scrolls rather than scaling down. Shrinking a pedigree to
+      {/* The one client-side behaviour: hovering a box fades everything off its
+          line of descent. LineageFocus only sets opacity — the SVG below is
+          still rendered on the server and never re-rendered. */}
+      <LineageFocus
+        edges={model.edges.map((edge) => [edge.parent, edge.child])}
+      >
+        {/* The diagram scrolls rather than scaling down. Shrinking a pedigree to
           the column width makes the labels unreadable, which costs more than a
           scrollbar does. */}
-      <div className="overflow-auto p-4" style={{ maxHeight }}>
-        <svg
-          viewBox={`0 0 ${model.width} ${model.height}`}
-          width={model.width}
-          height={model.height}
-          role="img"
-          aria-label={describeModel(model)}
-          className="block h-auto max-w-none font-mono"
-        >
-          {/* Edges first, so a node always covers the line arriving at it. */}
-          <g>
-            {model.edges.map((edge) => (
-              <path
-                key={edge.key}
-                d={lineagePath(edge)}
-                fill="none"
-                stroke="var(--line-strong)"
-                strokeWidth={1.2}
-                strokeLinecap="round"
-              />
-            ))}
-          </g>
+        <div className="overflow-auto p-4" style={{ maxHeight }}>
+          <svg
+            viewBox={`0 0 ${model.width} ${model.height}`}
+            width={model.width}
+            height={model.height}
+            role="img"
+            aria-label={describeModel(model)}
+            className="block h-auto max-w-none font-mono"
+          >
+            {/* Edges first, so a node always covers the line arriving at it. */}
+            <g>
+              {model.edges.map((edge) => (
+                <path
+                  key={edge.key}
+                  data-parent={edge.parent}
+                  data-child={edge.child}
+                  d={lineagePath(edge)}
+                  fill="none"
+                  stroke="var(--line-strong)"
+                  strokeWidth={1.2}
+                  strokeLinecap="round"
+                  className="transition-opacity duration-150"
+                />
+              ))}
+            </g>
 
-          {/* The ♀/♂ badge is the diagram's one piece of real information that
+            {/* The ♀/♂ badge is the diagram's one piece of real information that
               geometry cannot carry: which parent supplied the seed and which
               the pollen. It sits on a filled disc so the edge does not run
               through the glyph.
@@ -84,49 +103,55 @@ export function LineageGraph({
               sits beside 1px hairlines at 16-20px; this is a 13px glyph inside
               a 9px disc, where Light thins to nothing and clay's 3.5:1 is not
               enough to read it against. `ink-2` measures 7.9:1 on the disc. */}
-          {/* Each glyph is a path of about a kilobyte, and the collection has 88
+            {/* Each glyph is a path of about a kilobyte, and the collection has 88
               parentages — inlined per edge that is most of the page. Defined
               once and referenced instead. Fixed ids are safe here: two diagrams
               on one page would define the same two glyphs, so a collision
               resolves to an identical symbol. */}
-          <defs>
-            <g id={SEED_GLYPH}>
-              <PiGenderFemaleBold size={13} aria-hidden="true" />
-            </g>
-            <g id={POLLEN_GLYPH}>
-              <PiGenderMaleBold size={13} aria-hidden="true" />
-            </g>
-          </defs>
-
-          {/* The glyphs are `fill="currentColor"`, so the colour is set once
-              here rather than on each of them. */}
-          <g style={{ color: "var(--ink-2)" }}>
-            {model.edges.map((edge) => (
-              <g key={`${edge.key}-role`}>
-                <circle
-                  cx={edge.badge.x}
-                  cy={edge.badge.y}
-                  r={9.5}
-                  fill="var(--surface)"
-                  stroke="var(--clay)"
-                  strokeWidth={1}
-                />
-                <use
-                  href={`#${edge.role === "seed" ? SEED_GLYPH : POLLEN_GLYPH}`}
-                  x={edge.badge.x - 6.5}
-                  y={edge.badge.y - 6.5}
-                />
+            <defs>
+              <g id={SEED_GLYPH}>
+                <PiGenderFemaleBold size={13} aria-hidden="true" />
               </g>
-            ))}
-          </g>
+              <g id={POLLEN_GLYPH}>
+                <PiGenderMaleBold size={13} aria-hidden="true" />
+              </g>
+            </defs>
 
-          <g>
-            {model.nodes.map((node) => (
-              <Node key={node.id} node={node} model={model} />
-            ))}
-          </g>
-        </svg>
-      </div>
+            {/* The glyphs are `fill="currentColor"`, so the colour is set once
+              here rather than on each of them. */}
+            <g style={{ color: "var(--ink-2)" }}>
+              {model.edges.map((edge) => (
+                <g
+                  key={`${edge.key}-role`}
+                  data-parent={edge.parent}
+                  data-child={edge.child}
+                  className="transition-opacity duration-150"
+                >
+                  <circle
+                    cx={edge.badge.x}
+                    cy={edge.badge.y}
+                    r={9.5}
+                    fill="var(--surface)"
+                    stroke="var(--clay)"
+                    strokeWidth={1}
+                  />
+                  <use
+                    href={`#${edge.role === "seed" ? SEED_GLYPH : POLLEN_GLYPH}`}
+                    x={edge.badge.x - 6.5}
+                    y={edge.badge.y - 6.5}
+                  />
+                </g>
+              ))}
+            </g>
+
+            <g>
+              {model.nodes.map((node) => (
+                <Node key={node.id} node={node} model={model} />
+              ))}
+            </g>
+          </svg>
+        </div>
+      </LineageFocus>
 
       {caption !== undefined && (
         <figcaption className="border-t border-line px-4 py-3 font-mono text-data-sm text-clay">
@@ -139,7 +164,11 @@ export function LineageGraph({
 
 function Node({ node, model }: { node: LineageNode; model: LineageModel }) {
   const box = (
-    <g transform={`translate(${node.x},${node.y})`}>
+    <g
+      data-node={node.id}
+      transform={`translate(${node.x},${node.y})`}
+      className="transition-opacity duration-150"
+    >
       <rect
         width={model.nodeWidth}
         height={model.nodeHeight}
