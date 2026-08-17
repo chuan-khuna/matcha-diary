@@ -2,33 +2,39 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { CultivarIndex } from "@/components/cultivars/cultivar-index";
+import { LineageGraph } from "@/components/cultivars/lineage-graph";
+import { LineageKey } from "@/components/cultivars/lineage-key";
 import { allCultivars } from "@/lib/cultivar-data";
 import { toCardData } from "@/lib/cultivars";
+import { lineageAll } from "@/lib/lineage";
 
 export const metadata: Metadata = {
   title: "Cultivars — Matcha Diary",
   description:
-    "Sixty-nine Japanese tea cultivars: lineage, registration, budding time and what each one is grown for.",
+    "Sixty-nine Japanese tea cultivars: pedigree, registration, budding time and what each one is grown for.",
 };
 
 /**
- * The cultivar index — the second grid in the app, and a different kind of
- * reference from the first.
+ * The cultivar index — the pedigree, then every record beneath it.
  *
- * The powder database holds tins you might buy; this holds the plants those tins
- * are made from, transcribed from primary sources. So it takes the same
- * `max-w-content` and the same three columns, because it is the same task —
- * scanning across records that differ on four or five facts each — but the cards
- * carry no photography, because a cultivar is not a product and there is nothing
- * to photograph that would distinguish one from another.
+ * Two views of one collection, in the order they answer questions. The diagram
+ * says what the collection *is*: a handful of landraces, the selections drawn
+ * out of them in the 1950s, and the modern crosses descending from several of
+ * those at once. The grid below is for when you already know which plant you
+ * want. Neither replaces the other, which is why both are here rather than the
+ * graph living only on a page of its own.
+ *
+ * The diagram is capped and scrolls inside its frame. At full height it is over
+ * 3000px — a fine page by itself, and a poor way to open a different one, since
+ * it would push the search field and all 69 cards off the bottom.
  *
  * Statically rendered: the records are files in `content/cultivars/`, read at
- * build time, so this page and all 69 detail pages behind it are HTML before
- * anyone asks for them.
+ * build time, so this page and all 69 behind it are HTML before anyone asks.
  */
 export default function CultivarsPage() {
   const cultivars = allCultivars();
   const cards = cultivars.map((cultivar) => toCardData(cultivar, cultivars));
+  const lineage = lineageAll(cultivars);
 
   return (
     <main className="mx-auto w-full max-w-content px-4 sm:px-6">
@@ -39,16 +45,30 @@ export default function CultivarsPage() {
           {cultivars.length} cultivars, each with its lineage, registration
           history and growing characteristics, transcribed from primary sources
           and annotated where those sources disagree. Search by name, reading,
-          prefecture, breeder or parent — or read the collection as{" "}
-          <Link
-            href="/cultivars/lineage"
-            className="text-ink underline decoration-matcha-line decoration-1 underline-offset-4 transition-colors hover:decoration-matcha"
-          >
-            one set of pedigrees
-          </Link>
-          .
+          prefecture, breeder or parent.
         </p>
       </header>
+
+      <section aria-labelledby="pedigree-heading">
+        <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h2 id="pedigree-heading" className="text-headline-md">
+            Pedigree
+          </h2>
+          <p className="font-mono text-data-sm text-clay">
+            {lineage.nodes.length} plants · {lineage.edges.length} parentages ·{" "}
+            <Link
+              href="/cultivars/lineage"
+              className="text-ink underline decoration-matcha-line decoration-1 underline-offset-4 transition-colors hover:decoration-matcha"
+            >
+              open full height
+            </Link>
+          </p>
+        </div>
+
+        <LineageGraph model={lineage} maxHeight={560} caption={<LineageKey />} />
+      </section>
+
+      <h2 className="label-caps pt-10 pb-3 text-clay">Every record</h2>
 
       <CultivarIndex cultivars={cards} />
     </main>

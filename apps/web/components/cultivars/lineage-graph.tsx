@@ -4,6 +4,9 @@ import { PiGenderFemaleBold, PiGenderMaleBold } from "react-icons/pi";
 
 import { lineagePath, type LineageModel, type LineageNode } from "@/lib/lineage";
 
+const SEED_GLYPH = "lineage-seed-glyph";
+const POLLEN_GLYPH = "lineage-pollen-glyph";
+
 /**
  * A pedigree, drawn.
  *
@@ -30,17 +33,25 @@ import { lineagePath, type LineageModel, type LineageNode } from "@/lib/lineage"
 export function LineageGraph({
   model,
   caption,
+  maxHeight,
 }: {
   model: LineageModel;
   /** Rendered in a hairline-separated footer inside the frame. */
   caption?: ReactNode;
+  /**
+   * Cap the frame and scroll the diagram inside it. Used where the pedigree is
+   * one thing on a page among others — the whole collection is over 3000px
+   * tall, which is a fine page of its own and a poor way to open a different
+   * one. Left unset the frame grows to the drawing.
+   */
+  maxHeight?: number;
 }) {
   return (
     <figure className="rounded-md border border-line bg-surface shadow-raised">
-      {/* Wide families scroll rather than scale down. Shrinking a pedigree to
-          the column width makes the labels unreadable, which costs more than
-          a horizontal scrollbar does. */}
-      <div className="overflow-x-auto p-4">
+      {/* The diagram scrolls rather than scaling down. Shrinking a pedigree to
+          the column width makes the labels unreadable, which costs more than a
+          scrollbar does. */}
+      <div className="overflow-auto p-4" style={{ maxHeight }}>
         <svg
           viewBox={`0 0 ${model.width} ${model.height}`}
           width={model.width}
@@ -73,32 +84,40 @@ export function LineageGraph({
               sits beside 1px hairlines at 16-20px; this is a 13px glyph inside
               a 9px disc, where Light thins to nothing and clay's 3.5:1 is not
               enough to read it against. `ink-2` measures 7.9:1 on the disc. */}
+          {/* Each glyph is a path of about a kilobyte, and the collection has 88
+              parentages — inlined per edge that is most of the page. Defined
+              once and referenced instead. Fixed ids are safe here: two diagrams
+              on one page would define the same two glyphs, so a collision
+              resolves to an identical symbol. */}
+          <defs>
+            <g id={SEED_GLYPH}>
+              <PiGenderFemaleBold size={13} aria-hidden="true" />
+            </g>
+            <g id={POLLEN_GLYPH}>
+              <PiGenderMaleBold size={13} aria-hidden="true" />
+            </g>
+          </defs>
+
           {/* The glyphs are `fill="currentColor"`, so the colour is set once
               here rather than on each of them. */}
           <g style={{ color: "var(--ink-2)" }}>
-            {model.edges.map((edge) => {
-              const Icon =
-                edge.role === "seed" ? PiGenderFemaleBold : PiGenderMaleBold;
-
-              return (
-                <g key={`${edge.key}-role`}>
-                  <circle
-                    cx={edge.badge.x}
-                    cy={edge.badge.y}
-                    r={9.5}
-                    fill="var(--surface)"
-                    stroke="var(--clay)"
-                    strokeWidth={1}
-                  />
-                  <Icon
-                    x={edge.badge.x - 6.5}
-                    y={edge.badge.y - 6.5}
-                    size={13}
-                    aria-hidden="true"
-                  />
-                </g>
-              );
-            })}
+            {model.edges.map((edge) => (
+              <g key={`${edge.key}-role`}>
+                <circle
+                  cx={edge.badge.x}
+                  cy={edge.badge.y}
+                  r={9.5}
+                  fill="var(--surface)"
+                  stroke="var(--clay)"
+                  strokeWidth={1}
+                />
+                <use
+                  href={`#${edge.role === "seed" ? SEED_GLYPH : POLLEN_GLYPH}`}
+                  x={edge.badge.x - 6.5}
+                  y={edge.badge.y - 6.5}
+                />
+              </g>
+            ))}
           </g>
 
           <g>
@@ -141,7 +160,13 @@ function Node({ node, model }: { node: LineageNode; model: LineageModel }) {
       >
         {truncate(node.name)}
       </text>
-      <text x={11} y={30} fontSize={9} letterSpacing="0.08em" fill="var(--clay)">
+      <text
+        x={11}
+        y={30}
+        fontSize={9}
+        letterSpacing="0.08em"
+        fill={subFillFor(node)}
+      >
         {node.sub}
       </text>
     </g>
@@ -158,8 +183,15 @@ function Node({ node, model }: { node: LineageNode; model: LineageModel }) {
   );
 }
 
+/**
+ * The focus node is filled with `matcha-deep` rather than `matcha`, and the
+ * reason is measured rather than aesthetic. It is the one box carrying reversed
+ * type, and on plain `matcha` the pair comes out at 4.86:1 for the name and
+ * 4.17:1 for the year — the year failing AA outright at 9px. A step down the
+ * ramp costs nothing visually and buys 6.87:1 and 5.89:1.
+ */
 function fillFor(node: LineageNode): string {
-  if (node.isFocus) return "var(--matcha)";
+  if (node.isFocus) return "var(--matcha-deep)";
   if (node.kind === "external") return "var(--paper-sunk)";
   if (node.isMatcha) return "var(--matcha-soft)";
   return "var(--surface)";
@@ -172,12 +204,22 @@ function strokeFor(node: LineageNode): string {
 }
 
 function nameFillFor(node: LineageNode): string {
-  // The focus node is the one box drawn in solid matcha, so its label has to
-  // invert. `on-scrim` is the token for exactly this — type over a filled area.
+  // `on-scrim` is the token for exactly this — type over a filled area.
   if (node.isFocus) return "var(--on-scrim)";
   if (node.isMatcha) return "var(--matcha-deep)";
   if (node.kind === "external") return "var(--clay)";
   return "var(--ink-2)";
+}
+
+/**
+ * The year line, one step quieter than the name.
+ *
+ * On the focus node clay would sit at 1.33:1 against the fill — invisible, not
+ * merely quiet — so the reversed pair steps down the green ramp instead, which
+ * keeps the same "name louder than year" relationship the other boxes have.
+ */
+function subFillFor(node: LineageNode): string {
+  return node.isFocus ? "var(--matcha-soft)" : "var(--clay)";
 }
 
 /** 168px at 11px mono holds about this much before it collides with the edge. */
