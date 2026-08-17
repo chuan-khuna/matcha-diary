@@ -2,7 +2,7 @@ import { parentName, type Cultivar } from "@/lib/cultivars";
 import {
   COL_PITCH,
   edgeGeometry,
-  edgePath,
+  edgePathThrough,
   NODE_H,
   NODE_W,
   PAD,
@@ -68,7 +68,9 @@ export type LineageEdge = {
   child: string;
   from: { x: number; y: number };
   to: { x: number; y: number };
-  /** Where the ♀/♂ badge sits — the curve's midpoint. */
+  /** from, any lanes it threads through, then to. */
+  points: Array<{ x: number; y: number }>;
+  /** Where the ♀/♂ badge sits, in the gap before the child. */
   badge: { x: number; y: number };
 };
 
@@ -379,13 +381,25 @@ function layout(
 
   const placed = new Map(nodes.map((node) => [node.name, node]));
 
+  // What each column has in it, so a crossing edge can be threaded between the
+  // boxes rather than drawn behind them.
+  const occupied = new Map<number, number[]>();
+  for (const node of nodes) {
+    occupied.set(node.x, [...(occupied.get(node.x) ?? []), node.y]);
+  }
+
   const laidOutEdges: LineageEdge[] = live.flatMap((edge, i) => {
     const parent = placed.get(edge.parent);
     const child = placed.get(edge.child);
     if (parent === undefined || child === undefined) return [];
 
     // Shared with the browser's isolate mode — see `lib/lineage-geometry`.
-    const { from, to, badge } = edgeGeometry(parent, child, edge.role);
+    const { from, to, points, badge } = edgeGeometry(
+      parent,
+      child,
+      edge.role,
+      occupied,
+    );
 
     return [
       {
@@ -395,6 +409,7 @@ function layout(
         child: child.id,
         from,
         to,
+        points,
         badge,
       },
     ];
@@ -415,7 +430,7 @@ function layout(
  * geometry so callers can pass a laid-out edge rather than two points.
  */
 export function lineagePath(edge: LineageEdge): string {
-  return edgePath(edge.from, edge.to);
+  return edgePathThrough(edge.points);
 }
 
 /* -------------------------------------------------------------------------- */

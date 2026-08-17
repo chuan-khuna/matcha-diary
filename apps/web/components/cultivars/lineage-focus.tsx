@@ -8,9 +8,7 @@ import {
   BADGE_GLYPH,
   COL_PITCH,
   edgeGeometry,
-  edgePath,
-  NODE_H,
-  NODE_W,
+  edgePathThrough,
   PAD,
   ROW_PITCH,
   type LineageRole,
@@ -142,12 +140,6 @@ export function LineageFocus({
         },
       ]),
     );
-    const homeBox = {
-      viewBox: svg.getAttribute("viewBox"),
-      width: svg.getAttribute("width"),
-      height: svg.getAttribute("height"),
-    };
-
     const placeBadge = (el: SVGGElement, x: number, y: number) => {
       const disc = el.querySelector("circle");
       const glyph = el.querySelector("use");
@@ -182,10 +174,6 @@ export function LineageFocus({
         if (at?.cx != null && at.cy != null)
           placeBadge(el, Number(at.cx), Number(at.cy));
       }
-      if (homeBox.viewBox !== null)
-        svg.setAttribute("viewBox", homeBox.viewBox);
-      if (homeBox.width !== null) svg.setAttribute("width", homeBox.width);
-      if (homeBox.height !== null) svg.setAttribute("height", homeBox.height);
     };
 
     const fade = (id: string) => {
@@ -230,13 +218,11 @@ export function LineageFocus({
 
       const order = [...columns.keys()].sort((a, b) => a - b);
       const moved = new Map<string, { x: number; y: number }>();
-      let deepest = 0;
 
       order.forEach((column, index) => {
         const stack = (columns.get(column) ?? []).sort(
           (a, b) => (home.get(a)?.y ?? 0) - (home.get(b)?.y ?? 0),
         );
-        deepest = Math.max(deepest, stack.length);
 
         stack.forEach((el, row) => {
           const at = { x: PAD + index * COL_PITCH, y: PAD + row * ROW_PITCH };
@@ -245,26 +231,33 @@ export function LineageFocus({
         });
       });
 
+      // Same lane-threading the server does, against the compacted columns —
+      // an edge that skips a generation still has to miss the boxes in it.
+      const occupied = new Map<number, number[]>();
+      for (const at of moved.values()) {
+        occupied.set(at.x, [...(occupied.get(at.x) ?? []), at.y]);
+      }
+
       for (const [parent, child, role] of edges) {
         const from = moved.get(parent);
         const to = moved.get(child);
         if (from === undefined || to === undefined) continue;
 
-        const geometry = edgeGeometry(from, to, role);
+        const geometry = edgeGeometry(from, to, role, occupied);
         pathFor
           .get(`${parent}|${child}`)
-          ?.setAttribute("d", edgePath(geometry.from, geometry.to));
+          ?.setAttribute("d", edgePathThrough(geometry.points));
 
         const badge = badgeFor.get(`${parent}|${child}`);
         if (badge !== undefined)
           placeBadge(badge, geometry.badge.x, geometry.badge.y);
       }
 
-      const width = PAD * 2 + (order.length - 1) * COL_PITCH + NODE_W;
-      const height = PAD * 2 + (deepest - 1) * ROW_PITCH + NODE_H;
-      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
-      svg.setAttribute("width", String(width));
-      svg.setAttribute("height", String(height));
+      // The canvas deliberately keeps its size. Refitting it to the isolated
+      // line collapsed the frame from 560px to 230px and back on every click,
+      // which threw the page around and moved whatever the reader was looking
+      // at next. The line is compact and top-left; the room around it is the
+      // price of the frame holding still.
     };
 
     /* ---- apply the current state -------------------------------------- */
@@ -277,18 +270,17 @@ export function LineageFocus({
       (event.target as Element | null)?.closest<SVGGElement>("[data-node]") ??
       null;
 
-    // Hover only speaks while nothing is pinned. Once a line is isolated the
-    // unrelated boxes are gone, so there is nothing left for fading to say.
+    // Hover works whether or not a line is pinned. It only ever changes
+    // opacity, so unlike isolating it cannot move a box out from under the
+    // cursor — which is the whole reason isolating had to leave the pointer
+    // behind. Inside a pinned line it picks out one plant's own descent.
     const onOver = (event: Event) => {
-      if (focused !== null) return;
       const id = nodeUnder(event)?.dataset.node;
       if (id === undefined) unfade();
       else fade(id);
     };
 
-    const onLeave = () => {
-      if (focused === null) unfade();
-    };
+    const onLeave = () => unfade();
 
     let pending: number | undefined;
 
