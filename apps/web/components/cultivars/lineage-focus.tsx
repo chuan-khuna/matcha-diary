@@ -9,6 +9,8 @@ import {
   COL_PITCH,
   edgeGeometry,
   edgePathThrough,
+  NODE_H,
+  NODE_W,
   PAD,
   ROW_PITCH,
   type LineageRole,
@@ -73,6 +75,8 @@ export function LineageFocus({
   const [focused, setFocused] = useState<string | null>(null);
   const [canIsolate, setCanIsolate] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  // Where the reader was before a line was pinned, so releasing puts them back.
+  const parked = useRef<{ top: number; left: number } | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -218,6 +222,22 @@ export function LineageFocus({
 
       const order = [...columns.keys()].sort((a, b) => a - b);
       const moved = new Map<string, { x: number; y: number }>();
+      const deepest = Math.max(...[...columns.values()].map((c) => c.length));
+
+      // Centred in the canvas rather than parked in its top-left corner. The
+      // canvas keeps its full size so the frame does not jump, which leaves a
+      // lot of room around a short line; putting the line in the middle of it
+      // is what makes that room read as margin instead of as emptiness.
+      const spanX = (order.length - 1) * COL_PITCH + NODE_W;
+      const spanY = (deepest - 1) * ROW_PITCH + NODE_H;
+      const originX = Math.max(
+        PAD,
+        Math.round((Number(svg.getAttribute("width") ?? 0) - spanX) / 2),
+      );
+      const originY = Math.max(
+        PAD,
+        Math.round((Number(svg.getAttribute("height") ?? 0) - spanY) / 2),
+      );
 
       order.forEach((column, index) => {
         const stack = (columns.get(column) ?? []).sort(
@@ -225,7 +245,10 @@ export function LineageFocus({
         );
 
         stack.forEach((el, row) => {
-          const at = { x: PAD + index * COL_PITCH, y: PAD + row * ROW_PITCH };
+          const at = {
+            x: originX + index * COL_PITCH,
+            y: originY + row * ROW_PITCH,
+          };
           el.setAttribute("transform", `translate(${at.x},${at.y})`);
           moved.set(el.dataset.node ?? "", at);
         });
@@ -253,16 +276,33 @@ export function LineageFocus({
           placeBadge(badge, geometry.badge.x, geometry.badge.y);
       }
 
-      // The canvas deliberately keeps its size. Refitting it to the isolated
-      // line collapsed the frame from 560px to 230px and back on every click,
-      // which threw the page around and moved whatever the reader was looking
-      // at next. The line is compact and top-left; the room around it is the
-      // price of the frame holding still.
+      // Centring inside a canvas taller than the frame would hide the line
+      // below the fold, so the scroller is brought to it. Recorded first, so
+      // releasing can put the reader back where they were.
+      const viewport = svg.parentElement;
+      if (viewport !== null) {
+        if (parked.current === null) {
+          parked.current = {
+            top: viewport.scrollTop,
+            left: viewport.scrollLeft,
+          };
+        }
+        viewport.scrollTo({
+          left: Math.max(0, originX + spanX / 2 - viewport.clientWidth / 2),
+          top: Math.max(0, originY + spanY / 2 - viewport.clientHeight / 2),
+          behavior: "smooth",
+        });
+      }
     };
 
     /* ---- apply the current state -------------------------------------- */
 
-    if (focused !== null) isolate(focused);
+    if (focused !== null) {
+      isolate(focused);
+    } else if (parked.current !== null) {
+      svg.parentElement?.scrollTo({ ...parked.current, behavior: "smooth" });
+      parked.current = null;
+    }
 
     /* ---- wiring -------------------------------------------------------- */
 
