@@ -185,3 +185,32 @@ export const formatPrice = (size: PowderSize): string =>
  */
 export const formatPricePerGram = (size: PowderSize): string =>
   `${perGramFormat.format(size.price / size.grams)}/g`;
+
+/* -------------------------------------------------------------------------- */
+/* Search                                                                     */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Everything one keystroke is matched against, as a single lowercased string:
+ * blend name, brand, cultivars, taste notes.
+ *
+ * One string rather than four `some` passes per record, and built once per
+ * collection rather than once per keystroke — the same reasoning as the cultivar
+ * index's `haystack`. The text does not change while someone types; only the
+ * query does.
+ *
+ * The four fields are the four a person has a word for before they open the
+ * page: a tin they half remember, a house they trust, a cultivar they are
+ * chasing, a flavour they are in the mood for. Origin is deliberately not in
+ * here — adding it is one line, but "kyoto" would then return two thirds of the
+ * collection, which is a filter that has stopped narrowing.
+ *
+ * Prose is not in here either, and should not be: matching the description would
+ * make a record hit on a word its author used in passing, and the reader cannot
+ * see why the row came back.
+ */
+export function powderHaystack(powder: Powder): string {
+  return [powder.name, powder.brand, ...powder.cultivars, ...powder.notes]
+    .join(" ")
+    .toLowerCase();
+}

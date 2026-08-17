@@ -4,7 +4,7 @@ import { useId, useMemo, useState, type ReactNode } from "react";
 
 import { PowderCard } from "@/components/database/powder-card";
 import { PowderDialog } from "@/components/database/powder-dialog";
-import type { Powder } from "@/lib/powders";
+import { powderHaystack, type Powder } from "@/lib/powders";
 import { tasteNoteChipClasses, tasteNoteVocabulary } from "@/lib/taste-notes";
 
 /**
@@ -13,17 +13,17 @@ import { tasteNoteChipClasses, tasteNoteVocabulary } from "@/lib/taste-notes";
  * component, so the client boundary starts here — at the first thing that
  * genuinely needs state.
  *
- * Search and filter are two doors onto the same vocabulary rather than a
- * duplicated control. Typing narrows by a keyword you already have in mind
- * ("citrus", or just "cit"); the chips show a vocabulary you do not yet know,
- * which is most of the point of a reference database. They compose: a chip and
- * a query both apply.
+ * Search and filter are two doors onto one collection rather than a duplicated
+ * control. Typing narrows by a word you already have in mind — a blend, a house,
+ * a cultivar, a flavour; the chips show a taste vocabulary you do not yet know,
+ * which is most of the point of a reference database. They compose: a chip and a
+ * query both apply.
  *
- * Both read taste notes only, which is why the field says so. Brand and
- * cultivar search belong here too and the ADR expects them — full-text over
- * brand, name, cultivar and note together — but that is a server query against
- * a GIN index, not a substring scan over ten rows, and a client-side version
- * would set an expectation the real one has to re-earn.
+ * The field reads name, brand, cultivar and taste note together, which is the
+ * full-text search the ADR expects, run here as a substring scan because the
+ * collection is small enough that one is indistinguishable from the other. What
+ * changes when the API lands is where the scan happens, not what it covers — see
+ * `powderHaystack` for what is in it and what is deliberately left out.
  *
  * The filter is single-select. Two notes ANDed together would empty the grid
  * almost every time — records carry three or four notes each — and ORing them
@@ -50,16 +50,22 @@ export function PowderDatabase({
 
   const vocabulary = useMemo(() => tasteNoteVocabulary(powders), [powders]);
 
+  // Built per collection, not per keystroke: the text a query is matched
+  // against is the same string every time someone presses a key.
+  const haystacks = useMemo(
+    () => new Map(powders.map((powder) => [powder.id, powderHaystack(powder)])),
+    [powders],
+  );
+
   const keyword = query.trim().toLowerCase();
   const visible = useMemo(
     () =>
       powders.filter(
         (powder) =>
           (note === null || powder.notes.includes(note)) &&
-          (keyword === "" ||
-            powder.notes.some((candidate) => candidate.includes(keyword))),
+          (keyword === "" || (haystacks.get(powder.id) ?? "").includes(keyword)),
       ),
-    [powders, note, keyword],
+    [powders, note, keyword, haystacks],
   );
 
   // Looked up in the full list rather than the visible one: an open record
@@ -73,9 +79,9 @@ export function PowderDatabase({
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search taste notes…"
+          placeholder="Search name, brand, cultivar, note…"
           // The placeholder sits at 2.2:1 and is a hint, never the label.
-          aria-label="Search taste notes"
+          aria-label="Search powders by name, brand, cultivar or taste note"
           className="w-full rounded-sm border border-line-strong bg-surface px-3.5 py-2.75 text-body-md placeholder:text-placeholder focus:border-matcha focus:ring-3 focus:ring-matcha-soft focus:outline-hidden sm:w-85"
         />
 
