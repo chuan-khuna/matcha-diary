@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { NAV_LINKS, navLinkClasses } from "@/lib/nav-links";
+import { isNavLinkCurrent, NAV_LINKS, navLinkClasses } from "@/lib/nav-links";
 
 /**
  * Primary navigation for narrow viewports, fixed to the bottom of the viewport.
@@ -33,7 +33,7 @@ export function BottomNav() {
     >
       <div className="flex h-15">
         {NAV_LINKS.map(({ label, href, Icon }) => {
-          const isCurrent = href !== "#" && pathname === href;
+          const isCurrent = isNavLinkCurrent(pathname, href);
 
           return (
             <Link

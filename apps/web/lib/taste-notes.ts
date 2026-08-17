@@ -1,3 +1,4 @@
+import { chipClasses } from "@/lib/chip";
 import type { Powder } from "@/lib/powder-data";
 
 /**
@@ -6,23 +7,18 @@ import type { Powder } from "@/lib/powder-data";
  * reasoning as `navLinkClasses` — a stamped label that four files each spell
  * out is four chances for one of them to drift.
  *
- * Zero radius is the fixed point of the system and is not a parameter: a taste
- * note is a stamped label, not a bubble.
+ * The geometry itself now lives in `lib/chip`, because the cultivar index
+ * stamps tea types with the same object. This stays as the taste-note-shaped
+ * door onto it: the call sites read as what they are drawing, and if taste notes
+ * ever earn a treatment of their own it changes here rather than in five files.
  *
- * The selected variant is the accent as *state* — a pressed filter — which is
- * why nothing else on the database page is green. Cultivars are facts about a
- * powder and stay in mono grey rather than taking the tint the prototype gave
- * them; two green chips on one card, one meaning "this is data" and the other
- * "this is switched on", is exactly the ambiguity DESIGN.md avoids by rationing
- * the colour.
+ * Cultivars are facts about a powder and stay in mono grey rather than taking
+ * the tint the prototype gave them; two green chips on one card, one meaning
+ * "this is data" and the other "this is switched on", is exactly the ambiguity
+ * DESIGN.md avoids by rationing the colour.
  */
-const CHIP_BASE =
-  "rounded-none border px-2.25 py-1 font-mono text-data-sm whitespace-nowrap";
-
 export function tasteNoteChipClasses(isSelected = false) {
-  return isSelected
-    ? `${CHIP_BASE} border-matcha-line bg-matcha-soft text-matcha-deep`
-    : `${CHIP_BASE} border-line-strong bg-surface text-ink-2`;
+  return chipClasses(isSelected);
 }
 
 /**

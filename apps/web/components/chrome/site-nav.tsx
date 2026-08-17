@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { NAV_LINKS, navLinkClasses } from "@/lib/nav-links";
+import { isNavLinkCurrent, NAV_LINKS, navLinkClasses } from "@/lib/nav-links";
 
 /**
  * Primary navigation for wide viewports, inline in the top bar.
@@ -28,7 +28,7 @@ export function SiteNav() {
   return (
     <nav aria-label="Primary" className="hidden gap-1 sm:flex">
       {NAV_LINKS.map(({ label, href, Icon }) => {
-        const isCurrent = href !== "#" && pathname === href;
+        const isCurrent = isNavLinkCurrent(pathname, href);
 
         return (
           <Link
