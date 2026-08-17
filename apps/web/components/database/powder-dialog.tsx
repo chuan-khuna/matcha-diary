@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, type ReactNode } from "react";
 
 import { PhotoGallery } from "@/components/shared/photo-gallery";
 import { PhotoPlaceholder } from "@/components/shared/placeholders";
 import { PriceList } from "@/components/database/price-list";
-import type { Powder } from "@/lib/powder-data";
+import type { Powder } from "@/lib/powders";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
@@ -21,15 +21,24 @@ import { tasteNoteChipClasses } from "@/lib/taste-notes";
  * prose to three lines and never offering the rest would make the field
  * decorative, so the card is the summary and this is the record.
  *
+ * `prose` is the record's compiled markdown body, rendered on the server and
+ * handed down as a node. A client component cannot import an MDX module for a
+ * record chosen at runtime, and it should not want to: the description is static
+ * content that belongs in the payload rather than a compiler that belongs in the
+ * bundle. The page above compiles all ten and passes the open one through.
+ *
  * Deliberately NOT a route yet, on the same terms as the entry dialog: when
  * /powders/[id] exists this should become an intercepting route so the record
- * earns a URL, a back button, and a page that survives a refresh.
+ * earns a URL, a back button, and a page that survives a refresh — and the
+ * dynamic import would move there, one record at a time.
  */
 export function PowderDialog({
   powder,
+  prose,
   onClose,
 }: {
   powder: Powder | null;
+  prose: ReactNode;
   onClose: () => void;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
@@ -134,15 +143,12 @@ export function PowderDialog({
 
             <section className="flex flex-col gap-3">
               <h3 className="label-caps text-clay">Description</h3>
-              {/* body-prose: 18/1.75, the loosest leading in the system,
-                  because this is the one place people read paragraphs. */}
-              <div className="flex flex-col gap-4">
-                {powder.description.map((paragraph, index) => (
-                  <p key={index} className="text-body-prose">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+              {/* The MDX map in `components/cultivars/mdx-components` dresses
+                  every element markdown can produce, body-prose paragraphs
+                  included, so the prose needs no styling here. Only the leading
+                  paragraph's top margin is cancelled: the section's own gap has
+                  already set the distance from the heading. */}
+              <div className="[&>p:first-child]:mt-0">{prose}</div>
             </section>
 
             <section className="flex flex-col gap-3">

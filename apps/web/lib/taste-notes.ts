@@ -1,5 +1,5 @@
 import { chipClasses } from "@/lib/chip";
-import type { Powder } from "@/lib/powder-data";
+import type { Powder } from "@/lib/powders";
 
 /**
  * The taste-note chip, in one place because four components draw it: the feed

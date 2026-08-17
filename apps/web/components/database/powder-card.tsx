@@ -1,7 +1,7 @@
 import { OverlayLabel } from "@/components/shared/overlay-label";
 import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
 import { PriceList } from "@/components/database/price-list";
-import type { Powder } from "@/lib/powder-data";
+import type { Powder } from "@/lib/powders";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
@@ -85,8 +85,10 @@ export function PowderCard({
 
         <PriceList sizes={powder.sizes} />
 
+        {/* The record's opening paragraph, clamped — not a second summary
+            written for the card. See `Powder.excerpt`. */}
         <p className="line-clamp-3 text-body-excerpt text-ink-2">
-          {powder.description[0]}
+          {powder.excerpt}
         </p>
 
         <ul className="mt-auto flex flex-wrap gap-2 pt-1">

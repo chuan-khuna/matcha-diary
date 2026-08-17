@@ -4,7 +4,7 @@ import {
   formatPrice,
   formatPricePerGram,
   type PowderSize,
-} from "@/lib/powder-data";
+} from "@/lib/powders";
 
 /**
  * What a powder costs, one row per tin it is sold in.

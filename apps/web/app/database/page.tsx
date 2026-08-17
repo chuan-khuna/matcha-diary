@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 import { PowderDatabase } from "@/components/database/powder-database";
-import { PLACEHOLDER_POWDERS } from "@/lib/powder-data";
+import { allPowders } from "@/lib/powder-data";
 
 export const metadata: Metadata = {
   title: "Powder database — Matcha Diary",
@@ -27,8 +28,39 @@ export const metadata: Metadata = {
  * The records are curated rather than user-generated (see the stack ADR), so
  * this page never grows a compose affordance. "+ Add powder" belongs to the
  * Django admin, not here.
+ *
+ * Statically rendered, on the same footing as the cultivar index: the records
+ * are files under `content/database/<brand>/`, read at build time, so the page
+ * is HTML before anyone asks for it.
  */
-export default function DatabasePage() {
+export default async function DatabasePage() {
+  const powders = allPowders();
+
+  // Every description, compiled. The grid is a client component and the record
+  // it opens is chosen at runtime, so the bodies cannot be imported down there —
+  // they are rendered here and passed as nodes. Ten records is the whole
+  // collection; when it is a query rather than a directory this becomes one
+  // fetch per opened record, which is what the /powders/[id] route is for.
+  //
+  // The path is built from two variables rather than `powder.id` so it reads as
+  // the directory layout it is. Either way the bundler compiles it to the same
+  // recursive context over `content/database`.
+  const prose: Record<string, ReactNode> = Object.fromEntries(
+    await Promise.all(
+      powders.map(async (powder) => {
+        const { default: Prose } = await import(
+          `@/content/database/${powder.brandSlug}/${powder.slug}.mdx`
+        );
+
+        // Each record opens with its own name as an `h1`, which is how the file
+        // reads on disk. The dialog has already printed the name in its header,
+        // so the heading is dropped here — the same call the cultivar detail
+        // page makes, and for the same reason.
+        return [powder.id, <Prose key={powder.id} components={{ h1: () => null }} />] as const;
+      }),
+    ),
+  );
+
   return (
     <main className="mx-auto w-full max-w-content px-4 sm:px-6">
       <header className="flex flex-col gap-2 py-6">
@@ -41,7 +73,7 @@ export default function DatabasePage() {
         </p>
       </header>
 
-      <PowderDatabase powders={PLACEHOLDER_POWDERS} />
+      <PowderDatabase powders={powders} prose={prose} />
     </main>
   );
 }

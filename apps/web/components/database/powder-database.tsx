@@ -1,10 +1,10 @@
 "use client";
 
-import { useId, useMemo, useState } from "react";
+import { useId, useMemo, useState, type ReactNode } from "react";
 
 import { PowderCard } from "@/components/database/powder-card";
 import { PowderDialog } from "@/components/database/powder-dialog";
-import type { Powder } from "@/lib/powder-data";
+import type { Powder } from "@/lib/powders";
 import { tasteNoteChipClasses, tasteNoteVocabulary } from "@/lib/taste-notes";
 
 /**
@@ -29,8 +29,20 @@ import { tasteNoteChipClasses, tasteNoteVocabulary } from "@/lib/taste-notes";
  * almost every time — records carry three or four notes each — and ORing them
  * makes "add a filter" widen the result set, which is the opposite of what
  * pressing a second chip looks like it should do.
+ *
+ * `prose` arrives beside the records rather than on them: the descriptions are
+ * compiled MDX bodies, so they are React nodes the server rendered, and a node
+ * has no business inside a data type that also has to survive a JSON round trip
+ * when the API is real. Keyed by `Powder.id`, and only the open record's is ever
+ * read.
  */
-export function PowderDatabase({ powders }: { powders: Powder[] }) {
+export function PowderDatabase({
+  powders,
+  prose,
+}: {
+  powders: Powder[];
+  prose: Record<string, ReactNode>;
+}) {
   const [query, setQuery] = useState("");
   const [note, setNote] = useState<string | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
@@ -128,7 +140,11 @@ export function PowderDatabase({ powders }: { powders: Powder[] }) {
         </p>
       )}
 
-      <PowderDialog powder={openPowder} onClose={() => setOpenId(null)} />
+      <PowderDialog
+        powder={openPowder}
+        prose={openPowder === null ? null : prose[openPowder.id]}
+        onClose={() => setOpenId(null)}
+      />
     </>
   );
 }
