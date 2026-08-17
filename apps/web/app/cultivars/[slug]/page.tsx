@@ -73,7 +73,16 @@ export default async function CultivarPage({
   const parents = parentsOf(cultivar, cultivars);
   const offspring = offspringOf(cultivar, cultivars);
   const teaTypes = teaTypeTokens(cultivar);
-  const lineage = lineageFor(cultivar, cultivars);
+  const ancestry = lineageFor(cultivar, cultivars);
+  const withOffspring = lineageFor(cultivar, cultivars, { includeOffspring: true });
+
+  // Only worth a disclosure when opening it would actually add boxes.
+  const offspringToShow =
+    ancestry !== null &&
+    withOffspring !== null &&
+    withOffspring.nodes.length > ancestry.nodes.length
+      ? withOffspring
+      : null;
 
   const previous = cultivars[index - 1];
   const next = cultivars[index + 1];
@@ -132,13 +141,38 @@ export default async function CultivarPage({
           {/* Above the prose, because it is the shape of what the prose then
               explains — and `null` when the record has neither a parent nor an
               offspring on file, which is a lone box saying nothing. */}
-          {lineage !== null && (
+          {ancestry !== null && (
             <section className="mb-10">
               <h2 className="label-caps mb-3 text-clay">Lineage</h2>
               <LineageGraph
-                model={lineage}
-                caption={`${cultivar.name} in its family — ♀ seed parent, ♂ pollen parent. Generations run left to right.`}
+                model={ancestry}
+                caption={`What ${cultivar.name} descends from — ♀ seed parent, ♂ pollen parent. Generations run left to right.`}
               />
+
+              {/* Offspring are the other direction and a different question, so
+                  they open rather than crowd the default view. A plain
+                  <details> keeps this working without client JavaScript, which
+                  the diagram itself has stayed free of. */}
+              {offspringToShow !== null && (
+                <details className="group mt-3">
+                  <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 rounded-xs px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink [&::-webkit-details-marker]:hidden">
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform group-open:rotate-90"
+                    >
+                      ›
+                    </span>
+                    Show what came out of it
+                  </summary>
+
+                  <div className="mt-3">
+                    <LineageGraph
+                      model={offspringToShow}
+                      caption={`${cultivar.name} with its offspring — the same pedigree carried forward.`}
+                    />
+                  </div>
+                </details>
+              )}
             </section>
           )}
 

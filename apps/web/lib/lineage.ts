@@ -522,18 +522,36 @@ function describeFor(all: Cultivar[], focus: string | null) {
 }
 
 /**
- * One cultivar's own slice: itself, everything above it, everything below.
+ * One cultivar's own slice of the pedigree.
  *
- * Returns `null` when the slice would be a single unconnected node — a record
- * with no recorded parent and no recorded offspring has no pedigree to draw,
- * and a lone box captioned "lineage" says less than the prose already does.
+ * Ancestry only by default: the record, and everything it descends from. That
+ * is the question a record page is answering — what is this plant made of —
+ * and it is the half a reader cannot get anywhere else on the page. Offspring
+ * are already listed by name in the Family panel, and drawing them fans the
+ * diagram out to the right with boxes that are each better served by their own
+ * record. Yabukita is the case that settles it: twenty-two children and their
+ * descendants make a diagram nobody reads, in place of a four-box drawing that
+ * says exactly where Yabukita came from.
+ *
+ * `includeOffspring` draws the full slice, for the disclosure the record page
+ * puts underneath.
+ *
+ * Returns `null` when the slice would be a lone box — a record with nothing
+ * recorded either side has no pedigree to draw, and an empty frame captioned
+ * "lineage" says less than the prose already does.
  */
-export function lineageFor(cultivar: Cultivar, all: Cultivar[]): LineageModel | null {
+export function lineageFor(
+  cultivar: Cultivar,
+  all: Cultivar[],
+  { includeOffspring = false }: { includeOffspring?: boolean } = {},
+): LineageModel | null {
   const { edges } = buildGraph(all);
   const { up, down } = adjacency(edges);
 
   const ancestors = reachable(cultivar.name, up);
-  const descendants = reachable(cultivar.name, down);
+  const descendants = includeOffspring
+    ? reachable(cultivar.name, down)
+    : new Set<string>();
   if (ancestors.size === 0 && descendants.size === 0) return null;
 
   const names = [cultivar.name, ...ancestors, ...descendants];
