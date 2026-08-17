@@ -222,11 +222,21 @@
    user-agent HTML in the middle of a styled page. That gap is the plugin's
    whole job here.
 
-   The two layers stack rather than fight, and that is a property of the
-   plugin rather than luck: it wraps every element rule in `:where()`, so all
-   of its selectors carry zero specificity and any class at all outranks them.
-   Where the map has an opinion it wins outright; the plugin shows through
-   only where the map is silent.
+   How the two layers stack is worth getting right, because the obvious
+   reading of it is wrong. The plugin wraps each element in `:where()`, so
+   `.prose :where(p):not(:where(…))` scores (0,1,0) — the `:where()` and the
+   `:not()` contribute nothing, but `.prose` is still a class. That is the
+   same score a utility like `.mt-4` carries, so these are *ties*, not
+   defeats, and they are settled by source order: Tailwind emits the plugin's
+   rules ahead of its utilities, so the utility wins.
+
+   The consequence, and the thing to hold on to: a tie is only won for a
+   property the utility actually sets. The map is silent per *property*, not
+   per element. It positions every block with `mt-*` and never `mb-*`, so the
+   plugin's matching `margin-bottom` met no competition and landed on every
+   paragraph, list and heading — spacing the design system never asked for,
+   scaled in `em` off the size set below. The reset further down is what
+   closes that gap, and any new rule here needs the same check.
 
    Its palette does not reach the page. The defaults are Tailwind's grays —
    `oklch(37.3% 0.034 259.733)` and relatives — which are off DESIGN.md twice
@@ -283,6 +293,22 @@
      It draws a 1px ring and a 3px bottom edge — a hairline, so it takes the
      hairline colour rather than a newly invented tinted black. */
   --tw-prose-kbd-shadows: var(--line-strong);
+}
+
+/* Vertical rhythm belongs to the MDX map, all of it.
+
+   The map positions every block with `mt-*` alone, which leaves the plugin's
+   `margin-bottom` uncontested — 1.25em under each paragraph and list, 1em
+   under each heading, on top of the `mt-*` above the next one. Zeroing the
+   bottom half hands the spacing back to the map without touching a single
+   thing it sets: there is no `mb-*` anywhere in the map to lose.
+
+   Only the elements the map actually covers are listed. An element it does
+   not cover — a table, a figure, a `pre` — keeps the plugin's own rhythm,
+   which is the entire point of having a floor. `hr` is covered but stays out
+   of the list: its `my-10` is the one place the map sets a bottom margin. */
+.prose :is(h1, h2, h3, p, ul, ol, li, blockquote) {
+  margin-bottom: 0;
 }
 
 /* The two decorations a class cannot reach, because a class on an element
