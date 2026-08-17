@@ -54,7 +54,7 @@ sources:
     url: https://minorien.jp/university/hinshu.pdf
   - title: 茶品種ハンドブック 第6版 Version 2 (NARO tea cultivar handbook)
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
-  - title: "Różnice między odmianami matchy" (Differences between matcha cultivars) — Royal Brand
+  - title: "\"Różnice między odmianami matchy\" (Differences between matcha cultivars) — Royal Brand"
     url: https://przyprawyimatcha.pl/en-world/blogs/news/roznice-miedzy-odmianami-matchy
 ---
 

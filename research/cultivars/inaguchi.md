@@ -25,7 +25,7 @@ diseaseResistance:
   - anthracnose (fairly strong)
   - ring spot / grey blight (fairly strong)
   - bacterial shoot blight (very weak)
-lineageNote: An open-pollinated Yabukita seedling found by chance, not a controlled cross — the pollen parent was never recorded and cannot now be known. This is one generation removed from a landrace selection like Yabukita itself: Yabukita's own seed parent is an anonymous Zairai bush, while Inaguchi's seed parent is specifically Yabukita, making it a chance "Yabukita seedling" cultivar rather than a Zairai one.
+lineageNote: "An open-pollinated Yabukita seedling found by chance, not a controlled cross — the pollen parent was never recorded and cannot now be known. This is one generation removed from a landrace selection like Yabukita itself: Yabukita's own seed parent is an anonymous Zairai bush, while Inaguchi's seed parent is specifically Yabukita, making it a chance \"Yabukita seedling\" cultivar rather than a Zairai one."
 rarity: A minor, little-planted cultivar — absent from Shizuoka Prefecture's own guidebook of recommended cultivars and from every general cultivar hub checked for this record; documented in useful detail by only one source found.
 documentation: sparse
 summary: A Yabukita seedling a Shizuoka grower named Inaguchi found by chance in his own tea field and propagated himself, registered in 1988 under the Plant Variety Protection Act; a minor, thinly documented sencha cultivar budding just a day or two after Yabukita.

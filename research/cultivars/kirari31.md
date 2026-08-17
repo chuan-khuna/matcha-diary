@@ -24,7 +24,7 @@ teaTypes:
   - sencha
   - kabusecha
   - gyokuro
-buddingTime: early — first-flush budding about 4 days before Yabukita and first-flush plucking about 3 days before, averaged over 10 years at the breeding station (national/regional trial network: about 4 days early to bud, 2 early to pluck); about 1-4 days behind Saemidori depending on the trial
+buddingTime: "early — first-flush budding about 4 days before Yabukita and first-flush plucking about 3 days before, averaged over 10 years at the breeding station (national/regional trial network: about 4 days early to bud, 2 early to pluck); about 1-4 days behind Saemidori depending on the trial"
 recommendedRegions:
   - Nationwide, where frost-protection facilities are in place
   - Bred and trialled from Miyazaki; regional and prefectural adaptation trials ran at 15 institutions plus 2 dedicated disease-trial sites by 2012

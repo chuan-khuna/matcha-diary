@@ -44,7 +44,7 @@ sources:
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: 品種茶（か行のお茶）— 日本茶備忘録
     url: https://japantea-chachacha.com/hinshu/か行のお茶/
-  - title: "The Japanese Tea Cultivars" (master cultivar registry)
+  - title: "\"The Japanese Tea Cultivars\" (master cultivar registry)"
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: "Shizu-Inzatsu 131: An Historical Cultivar"
     url: https://japaneseteasommelier.wordpress.com/2017/01/24/shizu-inzatsu-131-an-historical-cultivar/

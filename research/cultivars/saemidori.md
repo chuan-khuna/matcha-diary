@@ -57,7 +57,7 @@ sources:
     url: https://www.o-cha.net/teacha/hinshu/saemidori.html
   - title: さ行のお茶 — 日本茶備忘録
     url: https://japantea-chachacha.com/hinshu/%e3%81%95%e8%a1%8c%e3%81%ae%e3%81%8a%e8%8c%b6/
-  - title: "The Japanese Tea Cultivars" (master cultivar registry)
+  - title: "\"The Japanese Tea Cultivars\" (master cultivar registry)"
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: 日本の緑茶の主な品種｜お茶ができるまで｜お茶百科 (Ito En O-CHA NET)
     url: https://www.ocha.tv/how_tea_is_made/plants_and_breeds/plants_and_breeds_japanesetea/
@@ -65,7 +65,7 @@ sources:
     url: https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
   - title: さえみどり｜品種茶｜心向樹
     url: https://www.shinkoju.com/%E5%93%81%E7%A8%AE%E8%8C%B6/%E3%81%95%E3%81%88%E3%81%BF%E3%81%A9%E3%82%8A/
-  - title: "Różnice między odmianami matchy" (matcha cultivar differences) — Przyprawy i Matcha
+  - title: "\"Różnice między odmianami matchy\" (matcha cultivar differences) — Przyprawy i Matcha"
     url: https://przyprawyimatcha.pl/en-world/blogs/news/roznice-miedzy-odmianami-matchy
 ---
 

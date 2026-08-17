@@ -21,10 +21,10 @@ teaTypes:
 buddingTime: medium (中生) — on par with Yabukita
 recommendedRegions:
   - Kyoto (Uji and the surrounding tencha districts, including Ujitawara and Uji city)
-yield: somewhat low — Kyoto Prefecture's own cultivation table rates it 収量性: やや少 ("somewhat low"), despite good early growth; the short picking window keeps the usable harvest small even where the bush grows well
+yield: "somewhat low — Kyoto Prefecture's own cultivation table rates it 収量性: やや少 (\"somewhat low\"), despite good early growth; the short picking window keeps the usable harvest small even where the bush grows well"
 cultivationShare: 5th among Kyoto Prefecture's tea cultivars by production volume, behind Yabukita, Okumidori, Samidori and Gokou (matchadirect.kyoto, citing Kyoto Prefecture figures)
 diseaseResistance:
-  - late-spring frost on new buds (weak — Kyoto Prefecture's cultivation guidance singles this out as a caution specific to Asahi: "芽は晩霜に敏感であるので注意")
+  - "late-spring frost on new buds (weak — Kyoto Prefecture's cultivation guidance singles this out as a caution specific to Asahi: \"芽は晩霜に敏感であるので注意\")"
   - anthracnose / 炭疽病 (medium)
   - gray blight / ring spot disease, 輪斑病 (somewhat weak)
   - cutting propagation / 挿し木発根性 (somewhat poor — rated below Yabukita, Samidori, Ujihikari and Tenmyo on the same official table)

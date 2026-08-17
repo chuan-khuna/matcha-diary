@@ -18,7 +18,7 @@ parents:
 teaTypes:
   - sencha
   - fukamushi sencha
-buddingTime: early — reported as 1 to 3 days before Yabukita depending on source (NARO's current handbook: same as Yabukita to 2 days early; the 1999 release paper: 2-3 days early; Ito En/O-cha.net: 1 day early)
+buddingTime: "early — reported as 1 to 3 days before Yabukita depending on source (NARO's current handbook: same as Yabukita to 2 days early; the 1999 release paper: 2-3 days early; Ito En/O-cha.net: 1 day early)"
 recommendedRegions:
   - Nationwide (NARO's handbook: 全国的に栽培が可能である, "can be cultivated nationwide")
   - Bred and mainly grown in Miyazaki

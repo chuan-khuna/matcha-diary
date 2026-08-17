@@ -37,7 +37,7 @@ sources:
     url: https://www.shinkoju.com/品種茶/静７１３２/
   - title: 品種茶一覧 (cultivar tea list, entry for 静７１３２)
     url: https://www.shinkoju.com/知る-見る-学ぶ/品種茶の話/品種茶一覧/
-  - title: "A New Cultivar 'Tsuyuhikari' for Green Tea" (Oyaizu et al., 茶業研究報告 95, 2003)
+  - title: "\"A New Cultivar 'Tsuyuhikari' for Green Tea\" (Oyaizu et al., 茶業研究報告 95, 2003)"
     url: https://www.jstage.jst.go.jp/article/cha1953/2003/95/2003_95_1/_article/-char/en
   - title: つゆひかり ─ 炭そ病に強い良質多収品種 ─
     url: https://www.o-cha.net/teacha/hinshu/tsuyuhikari.html

@@ -31,7 +31,7 @@ lineageNote: A controlled backcross rather than a fresh cross — Yabukita was c
 conflicts: "Two secondary sources (the japaneseteasommelier registry and myjapanesegreentea's cultivar list) give 1988 as Fukumidori's registration year. The release paper resolves this: the MAFF Cha Norin No. 36 designation was announced within the ministry on 13 May 1986 and registered in June 1986 (per the paper's own English summary), while a separate registration under the Seed and Seedling Act (種苗法) — filed by the Saitama prefectural governor as an employment-bred cultivar — was still pending when the paper went to press in June 1987. 1988 most likely marks that second, separate registration completing, not the Cha Norin designation."
 summary: A Saitama-bred sencha cultivar registered in 1986 as Cha Norin No. 36, produced by backcrossing Yabukita against its own earlier hybrid offspring 23F1-107 (Sayamamidori × Yabukita); it out-yields Yabukita by roughly a third to two-thirds and resists frost markedly better, bred for the cold northern edge of Japan's tea belt.
 sources:
-  - title: "煎茶用新登録品種"ふくみどり" / A Newly Registered Tea Cultivar 'Fukumidori' Suitable for Green Tea"
+  - title: "煎茶用新登録品種\"ふくみどり\" / A Newly Registered Tea Cultivar 'Fukumidori' Suitable for Green Tea"
     url: https://www.jstage.jst.go.jp/article/cha1953/1987/66/1987_66_1/_article/-char/en
   - title: "The Japanese Tea Cultivars"
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
