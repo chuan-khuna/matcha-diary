@@ -339,11 +339,13 @@ values nothing else may read.
 
 ## Typography
 
-Two families, and the split between them is semantic rather than aesthetic. **Inter** carries
-anything a person wrote in their own voice — titles, diary bodies, descriptions. **JetBrains Mono**
-carries anything that is a fact about the cup — café name, date, handle, taste-note chips, rating
-axis labels, and rating values. Reading a screen, you can tell authored text from recorded data
-without reading a word of it.
+One split, drawn twice — once per script. It is semantic rather than aesthetic: on either side of it
+sits *what a person wrote in their own voice* and *what is a recorded fact about the cup*. Reading a
+screen, you can tell the two apart without reading a word.
+
+In Latin the split is carried by family. **Inter** carries the voice — titles, diary bodies,
+descriptions. **JetBrains Mono** carries the record — café name, date, handle, taste-note chips,
+rating axis labels, and rating values.
 
 - **Display (36):** One per page at most, on the design-system and empty-state headers.
 - **Headlines (24 / 17):** `headline-lg` for a review title, `headline-md` for a post title in the
@@ -363,6 +365,36 @@ without reading a word of it.
 
 Weight is used sparingly: 400 for prose, 500 for button labels and an author's display name, 600 for
 headlines. Nothing is bold, nothing is italic, and no screen shows more than these three weights.
+
+### Thai
+
+Thai is set in **IBM Plex Sans Thai Looped**, one face for both stacks. Looped (มีหัว) is the
+traditional, bookish setting and the more readable one at paragraph length, which is what
+`body-prose` asks for. It is the same superfamily as the rest of Plex, so its skeleton and vertical
+metrics are drawn against a Latin neo-grotesque, and weights 400 / 500 / 600 map onto the three the
+system already uses.
+
+It sits directly behind the Latin face in **both** stacks rather than in a stack of its own. Fallback
+is per glyph, so Latin and **digits never leave Inter or JetBrains Mono** whatever the surrounding
+language — which is what preserves mono's tabular figures in a Thai interface.
+
+**The consequence to know about:** the authored/recorded split above is Latin-only. Neither Latin
+face covers Thai, and no monospace on Google Fonts covers it at all, so there is no Thai equivalent of
+JetBrains Mono to reach for — a Thai café name and a Thai diary sentence are set in the same face. In
+Thai that distinction has to come from somewhere other than the typeface: the mono slots already
+carry `clay` colour, chip borders and label casing, and those are what remain load-bearing.
+
+**Two rules above do not survive the script, and are open rather than decided:**
+
+- **The tight leadings clip.** Thai stacks vowel and tone marks above and below the baseline, so it
+  needs more room than Latin. `display` (1.15), `label-lg` (1.2) and `data-xs` (1.2) are too tight to
+  set Thai in safely; roughly 1.3 is the floor for headings and 1.5 for anything read as text. Raise
+  them per script rather than globally — the Latin scale is not wrong, it is just Latin.
+- **`label-caps` and `label-axis` lose their mark.** Thai is unicameral, so `text-transform:
+  uppercase` does nothing, and the 0.12em / 0.1em tracking is actively harmful: Thai does not space
+  between words, so letterspacing breaks the grouping a reader uses to find word boundaries. A Thai
+  section header needs a different mark — weight, colour, or a rule — not a transform that no-ops and
+  a tracking that damages.
 
 ## Layout & Spacing
 

@@ -80,12 +80,23 @@
   /* ---- Type families -------------------------------------------------- */
   /* Inter carries anything a person wrote. JetBrains Mono carries anything
      that is a fact about the cup. The family is the signal.
-     --font-inter and --font-jetbrains-mono are injected by next/font in
-     app/layout.tsx; the fallbacks cover the pre-hydration paint. */
-  --family-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif;
-  --family-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-    monospace;
+
+     That signal is Latin-only. Thai has no monospace on Google Fonts, so both
+     stacks fall back to the same looped face and a Thai reader does not get
+     the distinction from the typeface — see DESIGN.md's typography section.
+
+     Both stacks carry it directly behind the Latin face, and the order is
+     doing real work: a browser falls back per glyph, not per run, so Latin
+     and digits always resolve to Inter or JetBrains Mono and only Thai ever
+     reaches Plex. That is what keeps mono's tabular figures — the digits
+     never leave JetBrains Mono, whatever language surrounds them.
+
+     All three --font-* variables are injected by next/font in app/layout.tsx;
+     the generic fallbacks cover the pre-hydration paint. */
+  --family-sans: var(--font-inter), var(--font-ibm-plex-thai-looped), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --family-mono: var(--font-jetbrains-mono), var(--font-ibm-plex-thai-looped), ui-monospace,
+    SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
   /* ---- Type scale ----------------------------------------------------- */
   /* A closed set of 13 semantic styles. Weight is 400 for prose, 500 for
