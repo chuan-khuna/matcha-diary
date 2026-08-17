@@ -59,8 +59,8 @@ export default function LineagePage() {
         <p className="max-w-reading text-body-lg text-ink-2">
           Every parentage the records attest, drawn as {families.length}{" "}
           families: {drawn} plants joined by {parentages} recorded crosses and
-          selections. Generations run top to bottom, and every box opens its
-          record.
+          selections. Generations run left to right, siblings stacked, and every
+          box opens its record.
         </p>
       </header>
 

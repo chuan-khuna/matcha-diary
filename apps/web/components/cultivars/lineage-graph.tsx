@@ -11,9 +11,14 @@ import { lineagePath, type LineageModel, type LineageNode } from "@/lib/lineage"
  * reason there is no zoom or pan here — the prototype got those from d3, and a
  * static page trades them for a scroll frame and a diagram that costs nothing.
  *
- * Generations run top to bottom. The node is the same stamped mono label used
- * across the app, given a second line for its year, so a pedigree reads as a
- * field of chips you already know, wired together.
+ * Generations run left to right, siblings stacked. That way round because the
+ * collection is four generations deep and up to forty-nine plants wide, so
+ * depth takes the short side and fits the page, and the siblings run down the
+ * side the page already scrolls.
+ *
+ * The node is the same stamped mono label used across the app, given a second
+ * line for its year, so a pedigree reads as a field of chips you already know,
+ * wired together.
  *
  * Colour is doing exactly one job. Matcha and tencha cultivars are tinted
  * because they are what this diary is about — a matcha cultivar in a field of
@@ -178,6 +183,6 @@ function truncate(text: string, max = 22): string {
  * the links carry the content.
  */
 function describeModel(model: LineageModel): string {
-  const generations = new Set(model.nodes.map((node) => node.y)).size;
-  return `Pedigree diagram: ${model.nodes.length} cultivars across ${generations} generations, joined by ${model.edges.length} recorded parentages. Generations run top to bottom; each cultivar is a link to its record.`;
+  const generations = new Set(model.nodes.map((node) => node.x)).size;
+  return `Pedigree diagram: ${model.nodes.length} cultivars across ${generations} generations, joined by ${model.edges.length} recorded parentages. Generations run left to right; each cultivar is a link to its record.`;
 }

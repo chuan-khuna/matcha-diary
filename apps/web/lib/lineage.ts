@@ -9,16 +9,21 @@ import { normaliseParent, type Cultivar } from "@/lib/cultivars";
  * duplicating Yabukita a dozen times or dropping an edge. Both destroy the thing
  * the diagram exists to show, which is that two cultivars meet further up.
  *
- * So this is the layered (Sugiyama) kind, in three steps, transposed to run top
- * to bottom:
+ * So this is the layered (Sugiyama) kind, in three steps, running left to right:
  *
- *   1. RANK  — each node sits one row below its *furthest* parent, so no edge
- *              ever points upward. Longest path, not shortest.
- *   2. ORDER — within a row, sort by the mean position of the nodes each one
- *              connects to, sweeping down then up. The barycentre heuristic;
- *              it is what removes crossings.
- *   3. PLACE — give each node the mean x of its relatives, then push apart
+ *   1. RANK  — each node sits one column right of its *furthest* parent, so no
+ *              edge ever points backwards. Longest path, not shortest.
+ *   2. ORDER — within a column, sort by the mean position of the nodes each one
+ *              connects to, sweeping forwards then backwards. The barycentre
+ *              heuristic; it is what removes crossings.
+ *   3. PLACE — give each node the mean y of its relatives, then push apart
  *              whatever now overlaps.
+ *
+ * Left to right suits this collection specifically. It is only four generations
+ * deep but forty-nine plants wide at its widest, and generation is the axis with
+ * the small number — so depth becomes the short side, which fits the page, and
+ * the crowd of siblings runs down the long side, which the page already
+ * scrolls.
  *
  * About seventy lines, which is the argument for not taking a graph-layout
  * dependency at this size — and the layout runs during `next build`, so the
@@ -33,21 +38,21 @@ import { normaliseParent, type Cultivar } from "@/lib/cultivars";
    wired together rather than as a new vocabulary. */
 const NODE_W = 168;
 const NODE_H = 40;
-const COL_GAP = 24;
 /** Generous, because the ♀/♂ badge sits in the middle of every edge. */
-const ROW_GAP = 60;
+const COL_GAP = 76;
+const ROW_GAP = 14;
 const COL_PITCH = NODE_W + COL_GAP;
 const ROW_PITCH = NODE_H + ROW_GAP;
 const PAD = 14;
 
 /**
- * Seed parent enters left of centre, pollen parent right of it.
+ * Seed parent arrives above centre, pollen parent below it.
  *
  * Without the offset the two edges into a cross land on the same point and the
  * diagram stops being able to say which parent was which — which is exactly
  * what the ♀/♂ badges are there to record.
  */
-const ROLE_OFFSET = 10;
+const ROLE_OFFSET = 9;
 
 export type LineageRole = "seed" | "pollen";
 
@@ -175,8 +180,9 @@ function layout(
   const childrenOf = (name: string) => down.get(name) ?? [];
 
   /* 1. Rank — longest path from a root, so a node clears every parent and not
-     merely the nearest one. `open` guards against a cycle the data should not
-     contain but which a transcription error could introduce. */
+     merely the nearest one. This is the column index. `open` guards against a
+     cycle the data should not contain but which a transcription error could
+     introduce. */
   const rank = new Map<string, number>();
   const open = new Set<string>();
 
@@ -197,21 +203,21 @@ function layout(
   for (const name of names) rankOf(name);
 
   const depth = Math.max(...names.map((name) => rank.get(name) ?? 0)) + 1;
-  const rows: string[][] = Array.from({ length: depth }, () => []);
+  const columns: string[][] = Array.from({ length: depth }, () => []);
   // Seeded alphabetically so the barycentre sweep starts from a stable order
   // and the same collection always lays out the same way.
   for (const name of [...names].sort((a, b) => a.localeCompare(b))) {
-    rows[rank.get(name) ?? 0].push(name);
+    columns[rank.get(name) ?? 0].push(name);
   }
 
-  /* 2. Order — sweep down then up, each pass sorting a row by the mean index of
-     the row it was just compared against. A node with nothing to average (a
-     childless node on an upward sweep) is held in place rather than given its
-     own index as a stand-in: mixing the two scales is what drags childless
-     nodes away from their siblings. */
+  /* 2. Order — sweep forwards then backwards, each pass sorting a column by the
+     mean index of the column it was just compared against. A node with nothing
+     to average (a childless node on a backward sweep) is held in place rather
+     than given its own index as a stand-in: mixing the two scales is what drags
+     childless nodes away from their siblings. */
   const slot = new Map<string, number>();
   const reindex = () =>
-    rows.forEach((row) => row.forEach((name, i) => slot.set(name, i)));
+    columns.forEach((column) => column.forEach((name, i) => slot.set(name, i)));
   reindex();
 
   const barycentre = (names_: string[]) =>
@@ -220,15 +226,15 @@ function layout(
       : null;
 
   for (let sweep = 0; sweep < 8; sweep++) {
-    const downward = sweep % 2 === 0;
-    const order = downward ? rows.slice(1) : rows.slice(0, -1).reverse();
+    const forward = sweep % 2 === 0;
+    const order = forward ? columns.slice(1) : columns.slice(0, -1).reverse();
 
-    for (const row of order) {
+    for (const column of order) {
       const key = new Map<string, number>();
       const movable: Array<{ name: string; at: number }> = [];
 
-      row.forEach((name, i) => {
-        const value = barycentre(downward ? parentsOf(name) : childrenOf(name));
+      column.forEach((name, i) => {
+        const value = barycentre(forward ? parentsOf(name) : childrenOf(name));
         if (value === null) return;
         key.set(name, value);
         movable.push({ name, at: i });
@@ -241,28 +247,30 @@ function layout(
           (a, b) => (key.get(a.name) ?? 0) - (key.get(b.name) ?? 0) || a.at - b.at,
         )
         .forEach((entry, i) => {
-          row[seats[i]] = entry.name;
+          column[seats[i]] = entry.name;
         });
       reindex();
     }
   }
 
-  /* 3. Place — each node wants the mean x of what it connects to; the row is
-     then packed left to right so nothing overlaps, and shifted back to undo the
-     rightward drift that packing in one direction always introduces. */
-  const x = new Map<string, number>();
-  rows.forEach((row) => row.forEach((name, i) => x.set(name, i * COL_PITCH)));
+  /* 3. Place — each node wants the mean y of what it connects to; the column is
+     then packed top to bottom so nothing overlaps, and shifted back to undo the
+     downward drift that packing in one direction always introduces. */
+  const y = new Map<string, number>();
+  columns.forEach((column) =>
+    column.forEach((name, i) => y.set(name, i * ROW_PITCH)),
+  );
 
-  const pack = (row: string[], want: Map<string, number>) => {
-    let edge = -Infinity;
+  const pack = (column: string[], want: Map<string, number>) => {
+    let floor = -Infinity;
     let drift = 0;
     let wanted = 0;
 
-    for (const name of row) {
-      const target = want.get(name) ?? x.get(name) ?? 0;
-      const placed = Math.max(target, edge + COL_PITCH);
-      x.set(name, placed);
-      edge = placed;
+    for (const name of column) {
+      const target = want.get(name) ?? y.get(name) ?? 0;
+      const placed = Math.max(target, floor + ROW_PITCH);
+      y.set(name, placed);
+      floor = placed;
 
       if (want.has(name)) {
         drift += placed - target;
@@ -272,39 +280,39 @@ function layout(
 
     if (wanted > 0) {
       const shift = drift / wanted;
-      for (const name of row) x.set(name, (x.get(name) ?? 0) - shift);
+      for (const name of column) y.set(name, (y.get(name) ?? 0) - shift);
     }
   };
 
   for (let pass = 0; pass < 4; pass++) {
-    const downward = pass % 2 === 0;
-    const sequence = downward ? rows.slice(1) : rows.slice(0, -1).reverse();
+    const forward = pass % 2 === 0;
+    const sequence = forward ? columns.slice(1) : columns.slice(0, -1).reverse();
 
-    for (const row of sequence) {
+    for (const column of sequence) {
       const want = new Map<string, number>();
-      for (const name of row) {
-        const related = downward ? parentsOf(name) : childrenOf(name);
+      for (const name of column) {
+        const related = forward ? parentsOf(name) : childrenOf(name);
         if (related.length === 0) continue;
         want.set(
           name,
-          related.reduce((sum, other) => sum + (x.get(other) ?? 0), 0) /
+          related.reduce((sum, other) => sum + (y.get(other) ?? 0), 0) /
             related.length,
         );
       }
-      pack(row, want);
+      pack(column, want);
     }
   }
 
-  const left = Math.min(...names.map((name) => x.get(name) ?? 0));
+  const top = Math.min(...names.map((name) => y.get(name) ?? 0));
 
   // Rounded here and nowhere else. Barycentre placement produces fractions, and
   // every coordinate downstream is derived from a node's — so rounding once, at
   // the source, keeps the whole drawing on whole pixels and off the RSC payload
-  // as things like `5503.094473698129`.
+  // as things like `1174.0944736981`.
   const nodes: LineageNode[] = names.map((name) => ({
     ...describe(name),
-    x: Math.round(PAD + (x.get(name) ?? 0) - left),
-    y: PAD + (rank.get(name) ?? 0) * ROW_PITCH,
+    x: PAD + (rank.get(name) ?? 0) * COL_PITCH,
+    y: Math.round(PAD + (y.get(name) ?? 0) - top),
   }));
 
   const placed = new Map(nodes.map((node) => [node.name, node]));
@@ -315,8 +323,10 @@ function layout(
     if (parent === undefined || child === undefined) return [];
 
     const offset = edge.role === "seed" ? -ROLE_OFFSET : ROLE_OFFSET;
-    const from = { x: parent.x + NODE_W / 2, y: parent.y + NODE_H };
-    const to = { x: child.x + NODE_W / 2 + offset, y: child.y };
+    // Leaves the parent's right edge, arrives at the child's left edge —
+    // seed parent above the midline, pollen parent below it.
+    const from = { x: parent.x + NODE_W, y: parent.y + NODE_H / 2 };
+    const to = { x: child.x, y: child.y + NODE_H / 2 + offset };
 
     return [
       {
@@ -337,23 +347,23 @@ function layout(
   return {
     nodes,
     edges: laidOutEdges,
-    width: PAD * 2 + Math.max(...nodes.map((node) => node.x)) - PAD + NODE_W,
-    height: PAD * 2 + (depth - 1) * ROW_PITCH + NODE_H,
+    width: PAD * 2 + (depth - 1) * COL_PITCH + NODE_W,
+    height: PAD * 2 + Math.max(...nodes.map((node) => node.y)) - PAD + NODE_H,
     nodeWidth: NODE_W,
     nodeHeight: NODE_H,
   };
 }
 
 /**
- * The cubic path for one edge, top to bottom.
+ * The cubic path for one edge, left to right.
  *
- * Control points sit at the vertical midpoint, which is what gives the flat
+ * Control points sit at the horizontal midpoint, which is what gives the flat
  * departure and arrival that make a generation read as a generation — the same
- * curve `d3.linkVertical` produces, without the dependency.
+ * curve `d3.linkHorizontal` produces, without the dependency.
  */
 export function lineagePath(edge: LineageEdge): string {
-  const mid = (edge.from.y + edge.to.y) / 2;
-  return `M${edge.from.x},${edge.from.y}C${edge.from.x},${mid} ${edge.to.x},${mid} ${edge.to.x},${edge.to.y}`;
+  const mid = (edge.from.x + edge.to.x) / 2;
+  return `M${edge.from.x},${edge.from.y}C${mid},${edge.from.y} ${mid},${edge.to.y} ${edge.to.x},${edge.to.y}`;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -427,11 +437,12 @@ export type LineageFamily = {
 /**
  * Every family in the collection, largest first.
  *
- * Deliberately not one canvas. The pedigree is only four generations deep but
- * forty-nine nodes wide at its widest, so a single top-to-bottom drawing is
- * roughly twelve thousand pixels across — a diagram nobody can read and a
- * scrollbar nobody can aim. Split into connected components it is one large
- * family and twenty-one small ones, each of which fits on a screen.
+ * Split into connected components rather than drawn as one canvas. Laid out
+ * left to right a single drawing would in fact fit the page width, so this is
+ * no longer a size argument — it is that families are disjoint. Nothing joins
+ * one to another, so on a shared canvas their members interleave down a column
+ * and a family ends up scattered among plants it has no relation to. Split, each
+ * one is a contiguous block with a heading and a count of its own.
  *
  * Records with neither a parent nor an offspring on file form no family and are
  * left out; the index page already lists all 69.

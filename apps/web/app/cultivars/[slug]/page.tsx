@@ -137,7 +137,7 @@ export default async function CultivarPage({
               <h2 className="label-caps mb-3 text-clay">Lineage</h2>
               <LineageGraph
                 model={lineage}
-                caption={`${cultivar.name} in its family — ♀ seed parent, ♂ pollen parent. Generations run top to bottom.`}
+                caption={`${cultivar.name} in its family — ♀ seed parent, ♂ pollen parent. Generations run left to right.`}
               />
             </section>
           )}
