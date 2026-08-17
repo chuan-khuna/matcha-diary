@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PiGenderFemaleBold, PiGenderMaleBold } from "react-icons/pi";
 
 import { LineageFocus } from "@/components/cultivars/lineage-focus";
+import { BADGE_GLYPH, BADGE_RADIUS } from "@/lib/lineage-geometry";
 import {
   lineagePath,
   type LineageModel,
@@ -62,7 +63,7 @@ export function LineageGraph({
           line of descent. LineageFocus only sets opacity — the SVG below is
           still rendered on the server and never re-rendered. */}
       <LineageFocus
-        edges={model.edges.map((edge) => [edge.parent, edge.child])}
+        edges={model.edges.map((edge) => [edge.parent, edge.child, edge.role])}
       >
         {/* The diagram scrolls rather than scaling down. Shrinking a pedigree to
           the column width makes the labels unreadable, which costs more than a
@@ -110,10 +111,10 @@ export function LineageGraph({
               resolves to an identical symbol. */}
             <defs>
               <g id={SEED_GLYPH}>
-                <PiGenderFemaleBold size={13} aria-hidden="true" />
+                <PiGenderFemaleBold size={BADGE_GLYPH} aria-hidden="true" />
               </g>
               <g id={POLLEN_GLYPH}>
-                <PiGenderMaleBold size={13} aria-hidden="true" />
+                <PiGenderMaleBold size={BADGE_GLYPH} aria-hidden="true" />
               </g>
             </defs>
 
@@ -130,15 +131,15 @@ export function LineageGraph({
                   <circle
                     cx={edge.badge.x}
                     cy={edge.badge.y}
-                    r={9.5}
+                    r={BADGE_RADIUS}
                     fill="var(--surface)"
                     stroke="var(--clay)"
                     strokeWidth={1}
                   />
                   <use
                     href={`#${edge.role === "seed" ? SEED_GLYPH : POLLEN_GLYPH}`}
-                    x={edge.badge.x - 6.5}
-                    y={edge.badge.y - 6.5}
+                    x={edge.badge.x - BADGE_GLYPH / 2}
+                    y={edge.badge.y - BADGE_GLYPH / 2}
                   />
                 </g>
               ))}

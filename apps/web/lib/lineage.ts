@@ -1,4 +1,14 @@
 import { parentName, type Cultivar } from "@/lib/cultivars";
+import {
+  COL_PITCH,
+  edgeGeometry,
+  edgePath,
+  NODE_H,
+  NODE_W,
+  PAD,
+  ROW_PITCH,
+  type LineageRole,
+} from "@/lib/lineage-geometry";
 
 /**
  * Cultivar pedigrees, laid out at build time.
@@ -32,29 +42,7 @@ import { parentName, type Cultivar } from "@/lib/cultivars";
  * Pure: no `fs`, no React. The collection is passed in.
  */
 
-/* ---- Geometry ------------------------------------------------------------
-   A node is the stamped mono label used everywhere else in this app, given a
-   second line for its year, so a pedigree reads as a field of familiar chips
-   wired together rather than as a new vocabulary. */
-const NODE_W = 168;
-const NODE_H = 40;
-/** Generous, because the ♀/♂ badge sits in the middle of every edge. */
-const COL_GAP = 76;
-const ROW_GAP = 14;
-const COL_PITCH = NODE_W + COL_GAP;
-const ROW_PITCH = NODE_H + ROW_GAP;
-const PAD = 14;
-
-/**
- * Seed parent arrives above centre, pollen parent below it.
- *
- * Without the offset the two edges into a cross land on the same point and the
- * diagram stops being able to say which parent was which — which is exactly
- * what the ♀/♂ badges are there to record.
- */
-const ROLE_OFFSET = 9;
-
-export type LineageRole = "seed" | "pollen";
+export type { LineageRole };
 
 export type LineageNode = {
   id: string;
@@ -173,7 +161,9 @@ function familyIndex(edges: RawEdge[]): Map<string, number> {
   const seen = new Set<string>();
   const components: string[][] = [];
 
-  for (const start of [...neighbours.keys()].sort((a, b) => a.localeCompare(b))) {
+  for (const start of [...neighbours.keys()].sort((a, b) =>
+    a.localeCompare(b),
+  )) {
     if (seen.has(start)) continue;
 
     const component: string[] = [];
@@ -251,8 +241,7 @@ function layout(
 
     open.add(name);
     const parents = parentsOf(name);
-    const value =
-      parents.length > 0 ? 1 + Math.max(...parents.map(rankOf)) : 0;
+    const value = parents.length > 0 ? 1 + Math.max(...parents.map(rankOf)) : 0;
     open.delete(name);
 
     rank.set(name, value);
@@ -274,8 +263,7 @@ function layout(
      families ordered by size, so the layout is stable across builds. */
   const family = familyIndex(live);
   for (const name of [...names].sort(
-    (a, b) =>
-      (family.get(a) ?? 0) - (family.get(b) ?? 0) || a.localeCompare(b),
+    (a, b) => (family.get(a) ?? 0) - (family.get(b) ?? 0) || a.localeCompare(b),
   )) {
     columns[rank.get(name) ?? 0].push(name);
   }
@@ -292,7 +280,8 @@ function layout(
 
   const barycentre = (names_: string[]) =>
     names_.length > 0
-      ? names_.reduce((sum, name) => sum + (slot.get(name) ?? 0), 0) / names_.length
+      ? names_.reduce((sum, name) => sum + (slot.get(name) ?? 0), 0) /
+        names_.length
       : null;
 
   for (let sweep = 0; sweep < 8; sweep++) {
@@ -314,7 +303,8 @@ function layout(
       const seats = movable.map((entry) => entry.at);
       [...movable]
         .sort(
-          (a, b) => (key.get(a.name) ?? 0) - (key.get(b.name) ?? 0) || a.at - b.at,
+          (a, b) =>
+            (key.get(a.name) ?? 0) - (key.get(b.name) ?? 0) || a.at - b.at,
         )
         .forEach((entry, i) => {
           column[seats[i]] = entry.name;
@@ -356,7 +346,9 @@ function layout(
 
   for (let pass = 0; pass < 4; pass++) {
     const forward = pass % 2 === 0;
-    const sequence = forward ? columns.slice(1) : columns.slice(0, -1).reverse();
+    const sequence = forward
+      ? columns.slice(1)
+      : columns.slice(0, -1).reverse();
 
     for (const column of sequence) {
       const want = new Map<string, number>();
@@ -392,19 +384,8 @@ function layout(
     const child = placed.get(edge.child);
     if (parent === undefined || child === undefined) return [];
 
-    const offset = edge.role === "seed" ? -ROLE_OFFSET : ROLE_OFFSET;
-    // Leaves the parent's right edge, arrives at the child's left edge —
-    // seed parent above the midline, pollen parent below it.
-    const from = { x: parent.x + NODE_W, y: parent.y + NODE_H / 2 };
-    const to = { x: child.x, y: child.y + NODE_H / 2 + offset };
-
-    // Ranking is by longest path, so an edge can skip a generation: a plant may
-    // sit two columns right of one of its parents. Putting the badge at the
-    // curve's midpoint drops it in the middle of the intervening column, on top
-    // of whatever node is there. Anchoring it to the gap immediately before the
-    // child keeps every badge in clear space, and for the ordinary
-    // one-column edge it lands exactly where the midpoint would have.
-    const badge = pointAtX(from, to, to.x - COL_GAP / 2);
+    // Shared with the browser's isolate mode — see `lib/lineage-geometry`.
+    const { from, to, badge } = edgeGeometry(parent, child, edge.role);
 
     return [
       {
@@ -414,7 +395,7 @@ function layout(
         child: child.id,
         from,
         to,
-        badge: { x: Math.round(badge.x), y: Math.round(badge.y) },
+        badge,
       },
     ];
   });
@@ -429,50 +410,12 @@ function layout(
   };
 }
 
-type Point = { x: number; y: number };
-
 /**
- * The point on an edge's curve at a given x.
- *
- * The curve is the cubic `lineagePath` draws, so a badge placed with this sits
- * exactly on the line rather than near it. `x(t)` is monotonic — both control
- * points share the ends' midpoint — so bisection converges, and twenty steps
- * resolves it well past the half-pixel the result is rounded to. It runs at
- * build time, once per edge.
- */
-function pointAtX(from: Point, to: Point, targetX: number): Point {
-  const mid = (from.x + to.x) / 2;
-  const xAt = (t: number) => {
-    const u = 1 - t;
-    return u * u * u * from.x + 3 * u * t * mid + t * t * t * to.x;
-  };
-
-  let low = 0;
-  let high = 1;
-  for (let step = 0; step < 20; step++) {
-    const t = (low + high) / 2;
-    if (xAt(t) < targetX) low = t;
-    else high = t;
-  }
-
-  const t = (low + high) / 2;
-  const u = 1 - t;
-  return {
-    x: xAt(t),
-    y: from.y * (u * u * u + 3 * u * u * t) + to.y * (3 * u * t * t + t * t * t),
-  };
-}
-
-/**
- * The cubic path for one edge, left to right.
- *
- * Control points sit at the horizontal midpoint, which is what gives the flat
- * departure and arrival that make a generation read as a generation — the same
- * curve `d3.linkHorizontal` produces, without the dependency.
+ * The cubic path for one edge, left to right. Thin wrapper over the shared
+ * geometry so callers can pass a laid-out edge rather than two points.
  */
 export function lineagePath(edge: LineageEdge): string {
-  const mid = (edge.from.x + edge.to.x) / 2;
-  return `M${edge.from.x},${edge.from.y}C${mid},${edge.from.y} ${mid},${edge.to.y} ${edge.to.x},${edge.to.y}`;
+  return edgePath(edge.from, edge.to);
 }
 
 /* -------------------------------------------------------------------------- */
