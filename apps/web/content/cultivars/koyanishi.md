@@ -16,7 +16,7 @@ parents:
   female: Shizuoka zairai
   male: null
 parentNotes:
-  female: an individual tree selected by Sugiyama Hikosaburo — landrace selection, not a controlled cross
+  female: an individual tree selected by Sugiyama Hikosaburo — a landrace selection, not a controlled cross. Which landrace is disputed; see conflicts.
 teaTypes:
   - sencha
 buddingTime: medium (chuban) by the original 1953 classification, though the record notes plucking begins a little earlier than that class implies; no day-count relative to Yabukita has been sourced
@@ -26,9 +26,11 @@ yield: null
 rarity: Not found in any modern retailer, vendor cultivar list, or prefectural cultivation page consulted for this record; delisted as a Shizuoka Prefecture recommended cultivar in 1955 and not documented as commercially grown since.
 lineageNote: An individual selection by Sugiyama Hikosaburo — the breeder of Yabukita — from an existing Shizuoka planting, not a controlled cross; the pollen parent is unrecorded and no cultivar bred from Koyanishi was found in the sources checked.
 documentation: sparse
-conflicts: "The Japanese Tea Cultivars (japaneseteasommelier.wordpress.com) lists Koyanishi's origin as \"Uji indigenous tea tree seed,\" the same as its table-neighbours Miyoshi and Sayama-midori. The original 1953 registration record (茶業研究報告 / Chagyo Kenkyu Hokoku, Tea Research Journal) gives a different and more detailed account: an individual tree selected by Sugiyama Hikosaburo from an existing planting in Shizuoka Prefecture, suitable region Shizuoka only, with no mention of Uji — matching his known biography and matching neighbouring entries in the same primary source (Yabukita and Makinohara-wase, both explicitly \"Shizuoka indigenous tea tree seed\"). Kyoto Prefecture's own page on Uji-origin cultivars does not list Koyanishi at all. This record follows the primary registration document and treats the Uji claim as an error, likely a row mix-up in the secondary table."
+conflicts: "The Japanese Tea Cultivars (japaneseteasommelier.wordpress.com) lists Koyanishi's origin as \"Uji indigenous tea tree seed,\" the same as its table-neighbours Miyoshi and Sayama-midori. The original 1953 registration record (茶業研究報告 / Chagyo Kenkyu Hokoku, Tea Research Journal) gives a different and more detailed account: an individual tree selected by Sugiyama Hikosaburo from an existing planting in Shizuoka Prefecture, suitable region Shizuoka only, with no mention of Uji — matching his known biography and matching neighbouring entries in the same primary source (Yabukita and Makinohara-wase, both explicitly \"Shizuoka indigenous tea tree seed\"). Kyoto Prefecture's own page on Uji-origin cultivars does not list Koyanishi at all. This record follows the primary registration document. The \"row mix-up in a secondary table\" explanation this note previously offered does not survive checking, however: MAFF's own Cha Norin registry table gives the 来歴 of 茶農林8号 as 宇治在来種実生 too, so the sommelier list was most likely copying the registry rather than misaligning rows, and the disagreement is between two official records rather than between an official one and a careless one. The registry table carries a single origin phrase per cultivar and files Koyanishi with the 宇治在来種実生 block it sits in numerically; the 1953 journal record gives a specific, individually described provenance and names Shizuoka as the only suitable region. This record still prefers the more detailed document, but the conflict is real and unresolved, and a reader who wants to treat Koyanishi as Uji-derived has MAFF's registry behind them."
 summary: An individual tree selected by Sugiyama Hikosaburo — the breeder of Yabukita — from a Shizuoka planting, registered in 1953 as Cha Norin No. 8; a Shizuoka recommended cultivar from 1937, it was delisted in 1955, the year Yabukita replaced it.
 sources:
+  - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林8号 row)
+    url: https://minorien.jp/university/hinshu.pdf
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 No. 2, October 1953, pp. 95–97
     url: https://www.jstage.jst.go.jp/article/cha1953/1953/2/1953_2_95/_article/-char/ja
   - title: 杉山彦三郎 — Wikipedia

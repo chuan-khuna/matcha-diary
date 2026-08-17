@@ -16,9 +16,9 @@ import {
  *
  * The client boundary starts here rather than at the page, for the same reason
  * as the powder database — the page above has nothing stateful in it, and a
- * server component that renders 69 cards is cheaper than a client one that does.
+ * server component that renders the cards is cheaper than a client one that does.
  *
- * Filtering is done in the browser over all 69 records. That is the right call
+ * Filtering is done in the browser over every record. That is the right call
  * at this size and would not be at ten times it: the whole collection is a
  * couple of pages of JSON, and a keystroke that re-filters locally is instant in
  * a way a round trip is not. `toCardData` is what keeps that honest — the client

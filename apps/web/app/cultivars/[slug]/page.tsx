@@ -67,7 +67,7 @@ export default async function CultivarPage({
   if (cultivar === undefined) notFound();
 
   // The record's own prose. Static enough for Turbopack to resolve the whole
-  // directory at build time, which is what lets 69 pages share one import.
+  // directory at build time, which is what lets every page share one import.
   const { default: Prose } = await import(`@/content/cultivars/${slug}.md`);
 
   const parents = parentsOf(cultivar, cultivars);
@@ -210,7 +210,7 @@ export default async function CultivarPage({
                         <div className="min-w-0 flex-1">
                           <p className="font-mono text-data-md">
                             {parent.slug === null ? (
-                              // Not one of the 69. Named, but with no record
+                              // Not in the collection. Named, but with no record
                               // behind it — a gap, shown as one.
                               <span className="text-ink-2">{parent.name}</span>
                             ) : (

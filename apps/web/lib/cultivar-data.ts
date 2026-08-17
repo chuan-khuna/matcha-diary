@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import type { Cultivar, CultivarSource } from "@/lib/cultivars";
 
 /**
- * The loader: 69 research records in `content/cultivars/`, read off disk at
+ * The loader: all research records in `content/cultivars/`, read off disk at
  * build time.
  *
  * SERVER ONLY. `node:fs` is imported at module scope, so importing anything
@@ -21,7 +21,7 @@ import type { Cultivar, CultivarSource } from "@/lib/cultivars";
  *   - The **body** is compiled by `@next/mdx`, pulled in by the detail page's
  *     dynamic import.
  *   - The **head** is read here, because the index page needs the metadata of
- *     all 69 records at once and the lineage cross-links need to look records up
+ *     every record at once and the lineage cross-links need to look records up
  *     by name. Neither can be answered by importing one compiled module, and the
  *     Next.js MDX guide names exactly this split.
  */
@@ -141,8 +141,9 @@ function parse(file: string, raw: string): Cultivar {
 /**
  * Read once per process, not once per page.
  *
- * `next build` renders 69 detail pages plus the index off this module. Without
- * the cache that is 70 passes over the same 69 files; with it, one.
+ * `next build` renders one detail page per record, plus the index, off this
+ * module. Without the cache that is a full pass over the directory for each of
+ * them; with it, one pass for the whole build.
  */
 let cache: Cultivar[] | null = null;
 

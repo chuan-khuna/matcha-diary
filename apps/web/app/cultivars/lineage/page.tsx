@@ -35,6 +35,12 @@ export default function LineagePage() {
 
   const generations = new Set(model.nodes.map((node) => node.x)).size;
 
+  // Counted rather than written down: a record with no recorded parent and no
+  // recorded offspring cannot be placed in a pedigree, and how many there are
+  // changes every time the collection grows.
+  const drawn = model.nodes.filter((node) => node.kind === "documented").length;
+  const undrawn = cultivars.length - drawn;
+
   return (
     <main className="mx-auto w-full max-w-content px-4 pb-16 sm:px-6">
       <div className="py-6">
@@ -53,15 +59,15 @@ export default function LineagePage() {
           Every parentage the records attest: {model.nodes.length} plants joined
           by {model.edges.length} crosses and selections across {generations}{" "}
           generations. Generations run left to right, siblings stacked, and every
-          box opens its record. The six cultivars with neither a parent nor an
-          offspring on file are not drawn — the{" "}
+          box opens its record. The {undrawn} cultivars with neither a parent nor
+          an offspring on file are not drawn — the{" "}
           <Link
             href="/cultivars"
             className="text-ink underline decoration-matcha-line decoration-1 underline-offset-4 transition-colors hover:decoration-matcha"
           >
             index
           </Link>{" "}
-          lists all 69.
+          lists all {cultivars.length}.
         </p>
       </header>
 

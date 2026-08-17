@@ -11,7 +11,7 @@ import { lineageAll } from "@/lib/lineage";
 export const metadata: Metadata = {
   title: "Cultivars — Matcha Diary",
   description:
-    "Sixty-nine Japanese tea cultivars: pedigree, registration, budding time and what each one is grown for.",
+    "Japanese tea cultivars: pedigree, registration, budding time and what each one is grown for.",
 };
 
 /**
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
  *
  * The diagram is capped and scrolls inside its frame. At full height it is over
  * 3000px — a fine page by itself, and a poor way to open a different one, since
- * it would push the search field and all 69 cards off the bottom.
+ * it would push the search field and every card off the bottom.
  *
  * Statically rendered: the records are files in `content/cultivars/`, read at
- * build time, so this page and all 69 behind it are HTML before anyone asks.
+ * build time, so this page and every behind it are HTML before anyone asks.
  */
 export default function CultivarsPage() {
   const cultivars = allCultivars();

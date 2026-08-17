@@ -550,7 +550,7 @@ export function lineageFor(cultivar: Cultivar, all: Cultivar[]): LineageModel | 
  * family before the barycentre pass — see the note there.
  *
  * Records with neither a parent nor an offspring on file have no pedigree to
- * place and are left out. There are six, and the index lists all 69 either way.
+ * place and are left out; the index lists the whole collection either way.
  */
 export function lineageAll(all: Cultivar[]): LineageModel {
   const { edges } = buildGraph(all);
