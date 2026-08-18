@@ -13,8 +13,10 @@ selectedFrom: "One of 106 individual trees selected during a 1935–1941 (Showa 
 bredAt: Kyoto Prefectural Tea Research Institute (Kohata and Maruyama trial sites, Uji)
 prefecture: Kyoto
 parents:
-  female: null
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling, Kohata trial site mother tree
 teaTypes:
   - gyokuro
 buddingTime: "medium (中生) — the 1954 registration report gives a recorded budding date of 7 April; no source states an exact day-count against Yabukita"

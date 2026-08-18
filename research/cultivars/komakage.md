@@ -13,8 +13,10 @@ selectedFrom: Uji Zairai seedlings, a tea garden near Manpuku-ji, Uji (old strai
 bredAt: Selected by Hirano Jin'nojō; trialled and named by the Kyoto Prefectural Tea Research Institute
 prefecture: Kyoto
 parents:
-  female: null
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling, Hirano's selection near Manpuku-ji
 teaTypes:
   - gyokuro
   - tencha

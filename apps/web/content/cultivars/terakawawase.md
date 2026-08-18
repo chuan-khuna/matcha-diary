@@ -13,8 +13,10 @@ selectedFrom: Uji Zairai (native Uji tea tree) seedlings, Uji city, Kyoto Prefec
 bredAt: Selected by Terakawa Toshio (寺川俊男), a private grower in Uji city, Kyoto — not a research-station programme
 prefecture: Kyoto
 parents:
-  female: null
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling, Terakawa's selection
 teaTypes:
   - tencha
   - matcha

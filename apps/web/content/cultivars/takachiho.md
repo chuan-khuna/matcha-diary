@@ -15,10 +15,10 @@ selectedFrom: An indigenous (zairai) seedling garden at what became the Miyazaki
 bredAt: Selected at the Miyazaki Prefectural Agricultural Experiment Station; developed from 1935 (Showa 10) at the station's Kawaminami branch, in a breeding stock garden designated by the Ministry of Agriculture and Forestry
 prefecture: Miyazaki
 parents:
-  female: Miyazaki indigenous
+  female: Miyazaki zairai
   male: null
 parentNotes:
-  female: zairai seedling
+  female: landrace seedling
 teaTypes:
   - kamairicha
   - sencha

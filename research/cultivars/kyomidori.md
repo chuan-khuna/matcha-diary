@@ -13,8 +13,10 @@ selectedFrom: "One of 106 candidate strains surveyed from tea gardens across the
 bredAt: "Selected under a Kyoto/Uji regional survey and propagated from 1940 at the Chagyo Kenkyujo (Tea Research Institute) Maruyama trial site; the institution continues today as the Kyoto Prefectural Tea Industry Research Institute (京都府立茶業研究所)"
 prefecture: Kyoto
 parents:
-  female: null
+  female: Uji zairai
   male: null
+parentNotes:
+  female: landrace seedling, 1935-41 Uji survey
 teaTypes:
   - gyokuro
   - tencha

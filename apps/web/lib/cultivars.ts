@@ -267,9 +267,16 @@ export function toCardData(cultivar: Cultivar, all: Cultivar[]): CultivarCardDat
     reading: cultivar.kana ?? cultivar.kanji,
     summary: cultivar.summary,
     registered: registeredLabel(cultivar),
-    // A landrace selection has no cross to report, which is itself the fact
-    // worth printing — an em dash would read as missing data instead.
-    parents: parentNames.length > 0 ? parentNames.join(" × ") : "Landrace selection",
+    // This used to say "Landrace selection", on the reasoning that an empty
+    // `parents` meant a selection out of a seed-grown population rather than a
+    // cross. It no longer can: a landrace record names the population it came
+    // out of — `Uji zairai`, `Shizuoka zairai` — the same way a crossed record
+    // names its parents, so the origin is stated rather than inferred from a
+    // hole. Every record in the collection now carries one, which leaves this
+    // branch for a record whose parentage is genuinely unrecorded — and
+    // calling that a landrace selection would be asserting the very thing the
+    // sources did not say.
+    parents: parentNames.length > 0 ? parentNames.join(" × ") : "Unrecorded",
     prefecture: cultivar.prefecture ?? "—",
     teaTypes: teaTypeTokens(cultivar),
     budding: buddingBucket(cultivar),

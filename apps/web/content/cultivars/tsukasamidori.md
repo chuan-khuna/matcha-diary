@@ -13,8 +13,10 @@ selectedFrom: A naturally cross-pollinated (open-pollinated) seedling from a Shi
 bredAt: Selected and registered by Yamazaki Yūji (山崎裕司), a private grower at Tawaramine, Shizuoka City — not a research-station programme
 prefecture: Shizuoka
 parents:
-  female: null
+  female: Shizuoka zairai
   male: null
+parentNotes:
+  female: open-pollinated seedling, Yamazaki's selection
 teaTypes:
   - sencha
 buddingTime: medium — its own registration record calls it 中生 (nakate, mid-season), the same category as Yabukita; no source quantifies a day offset
