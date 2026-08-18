@@ -1,6 +1,8 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { PiXLight } from "react-icons/pi";
 
+import { CompareDescription } from "@/components/database/compare-description";
 import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
 import { formatPrice, formatPricePerGram, type Powder } from "@/lib/powders";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
@@ -16,8 +18,17 @@ import { tasteNoteChipClasses } from "@/lib/taste-notes";
  *
  * Rows are the facts a person actually chooses between — where it grew, what is
  * in it, what it costs per gram, what it tastes of. The description comes last
- * and is the record's own opening paragraph, not a second summary: it is there
- * to give the numbers a voice, not to be scanned across.
+ * and is the record's own words in full, not a second summary: it is there to
+ * give the numbers a voice, not to be scanned across.
+ *
+ * Which is why it is the whole body and not the opening paragraph the cards
+ * clamp. Every row above this one is a fact read across five columns on an eye
+ * line; this one is read down a single column, and a description cut off after
+ * its first sentence is a column that stops mid-argument — the reader has to
+ * open the record to finish it, which is the trip the comparison exists to save.
+ * It is set smaller than the record page sets it and clipped to a few lines
+ * with the rest behind a disclosure, so the whole body is here without the row
+ * deciding how tall the table is; `CompareDescription` carries both calls.
  *
  * Nothing is highlighted as a winner. The cheapest per gram is visible by
  * reading the row, and painting it green would spend the accent on a judgement
@@ -30,9 +41,19 @@ import { tasteNoteChipClasses } from "@/lib/taste-notes";
  */
 export function CompareTable({
   powders,
+  descriptions,
   hrefWithout,
 }: {
   powders: Powder[];
+  /**
+   * Each powder's compiled description, by `Powder.id`.
+   *
+   * A node rather than a string, and passed in rather than imported: the bodies
+   * are MDX modules, so only a server component can compile one, and the page
+   * above is where the columns are known. A record with nothing under this key
+   * draws the same em dash as any other empty cell.
+   */
+  descriptions: Record<string, ReactNode>;
   /** This page's URL with one powder taken out of it. */
   hrefWithout: (id: string) => string;
 }) {
@@ -160,10 +181,18 @@ export function CompareTable({
             }
           </Row>
 
+          {/* Clipped to a readable height with the rest behind a disclosure —
+              see `CompareDescription` for why the cut is a height rather than a
+              line clamp, and why this one control is not a link like the rest
+              of the page's are. */}
           <Row label="Description" powders={powders}>
-            {(powder) => (
-              <p className="text-body-excerpt text-ink-2">{powder.excerpt}</p>
-            )}
+            {(powder) =>
+              descriptions[powder.id] === undefined ? null : (
+                <CompareDescription name={powder.name}>
+                  {descriptions[powder.id]}
+                </CompareDescription>
+              )
+            }
           </Row>
         </tbody>
       </table>
@@ -191,7 +220,7 @@ function Row({
 }: {
   label: string;
   powders: Powder[];
-  children: (powder: Powder) => React.ReactNode;
+  children: (powder: Powder) => ReactNode;
 }) {
   return (
     <tr className="align-top">

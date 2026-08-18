@@ -352,3 +352,30 @@
 .prose blockquote p:last-of-type::after {
   content: none;
 }
+
+/* ---- Prose in a column --------------------------------------------------
+   The comparison table's last row, and nothing else so far.
+
+   `body-prose` is 18/1.75 because DESIGN.md sets it for the one place people
+   read paragraphs — a review diary at a 620px measure. A compare column is
+   15rem before the table scrolls, and 18px there is about twenty-six
+   characters to the line: prose set for a measure it does not have, breaking
+   every clause across two rows.
+
+   So the block drops to `body-excerpt` (15/1.65), which is the style this
+   system already describes a powder in on its card. That is the whole reason
+   this rebinds the *token* rather than adding a `text-*` to the call site:
+   the map in `components/cultivars/mdx-components` writes `text-body-prose`
+   onto every paragraph, list and blockquote it dresses, and a utility on the
+   wrapper cannot reach past it. `@theme inline` compiles that class to
+   `var(--t-body-prose-size)`, so redefining the token here changes what the
+   map resolves to inside this subtree and leaves it alone everywhere else —
+   the same mechanism a theme swap uses, at the scale of one cell.
+
+   Only the two properties that answer to measure. Tracking and weight are not
+   a function of column width, and the headings keep their own sizes: a record
+   that grows an `h2` should still read as a heading here. */
+@utility prose-column {
+  --t-body-prose-size: var(--t-body-excerpt-size);
+  --t-body-prose-leading: var(--t-body-excerpt-leading);
+}

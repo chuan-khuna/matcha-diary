@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 import { ComparePicker } from "@/components/database/compare-picker";
 import { CompareTable } from "@/components/database/compare-table";
@@ -65,6 +66,38 @@ export default async function ComparePage({
   // client component and holds the whole collection to search it.
   const picks = powders.map(toPickData);
 
+  // The chosen records' descriptions, compiled — the whole body, not the
+  // opening paragraph the grid's cards clamp. The comparison's last row is the
+  // one place a record gets to speak in its own words, and a first paragraph
+  // stopping mid-argument is a worse answer there than a long cell: the rows
+  // above already carry everything that is read across.
+  //
+  // Only the chosen ones. The database page compiles all forty-nine because its
+  // grid is a client component that picks a record at runtime; here the columns
+  // are decided on the server, from the query string, so this is at most five
+  // imports and never the collection.
+  //
+  // Two variables rather than `powder.id` so the path reads as the directory
+  // layout it is — either way Turbopack compiles it to the one recursive context
+  // over `content/database` that every other MDX site in the app shares.
+  const descriptions: Record<string, ReactNode> = Object.fromEntries(
+    await Promise.all(
+      chosen.map(async (powder) => {
+        const { default: Prose } = await import(
+          `@/content/database/${powder.brandSlug}/${powder.slug}.mdx`
+        );
+
+        // Every record opens with its own name as an `h1`. The column header
+        // has already printed it, so the heading is dropped — the same call the
+        // record page and the dialog make.
+        return [
+          powder.id,
+          <Prose key={powder.id} components={{ h1: () => null }} />,
+        ] as const;
+      }),
+    ),
+  );
+
   return (
     <main className="mx-auto w-full max-w-content px-4 pb-16 sm:px-6">
       <div className="py-6">
@@ -114,6 +147,7 @@ export default async function ComparePage({
           <section aria-label="Comparison" className="mt-8">
             <CompareTable
               powders={chosen}
+              descriptions={descriptions}
               hrefWithout={(id) =>
                 compareHref(selected.filter((kept) => kept !== id))
               }
