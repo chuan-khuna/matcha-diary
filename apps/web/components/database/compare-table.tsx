@@ -41,7 +41,12 @@ export function CompareTable({
     // page sideways — three columns of tins do not fit a phone and should not
     // try to.
     <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-left">
+      {/* `border-separate` with no spacing rather than `border-collapse`,
+          because a collapsed border belongs to the table rather than to a cell
+          and does not travel with a sticky one — the label column would scroll
+          out from under its own hairlines. Each cell draws its own bottom edge
+          instead. */}
+      <table className="w-full border-separate border-spacing-0 text-left">
         <caption className="sr-only">
           {powders.map((powder) => powder.name).join(", ")} compared by origin,
           cultivars, price and taste notes
@@ -50,14 +55,19 @@ export function CompareTable({
         <thead>
           <tr>
             {/* The corner. Empty, because the column of row labels beneath it
-                is the table's stub rather than a heading of its own. */}
-            <th scope="col" className="w-32 sm:w-40" />
+                is the table's stub rather than a heading of its own — and
+                sticky with the rest of that column, or it would slide out and
+                let the first powder's photograph run under nothing. */}
+            <th
+              scope="col"
+              className="sticky left-0 z-10 w-28 border-b border-line bg-paper sm:w-36"
+            />
 
             {powders.map((powder) => (
               <th
                 key={powder.id}
                 scope="col"
-                className="min-w-60 border-b border-line p-3 align-bottom font-normal"
+                className="min-w-52 border-b border-line p-3 align-bottom font-normal sm:min-w-60"
               >
                 <div className="flex flex-col gap-2">
                   <div className="flex items-start justify-between gap-2">
@@ -185,9 +195,15 @@ function Row({
 }) {
   return (
     <tr className="align-top">
+      {/* Sticky, and this is the point of the layout. Scrolled sideways to
+          reach a fourth column, a table whose stub has left the screen is a
+          grid of values with nothing saying which fact each one is — the
+          reader has to scroll back to find out what they are looking at. The
+          opaque `bg-paper` is load-bearing: rows have no background of their
+          own, so without it the cells would scroll visibly underneath. */}
       <th
         scope="row"
-        className="label-caps border-b border-line py-4 pr-3 text-clay"
+        className="label-caps sticky left-0 z-10 border-b border-line bg-paper py-4 pr-3 text-clay"
       >
         {label}
       </th>

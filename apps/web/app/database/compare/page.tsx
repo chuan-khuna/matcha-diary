@@ -95,14 +95,20 @@ export default async function ComparePage({
         </p>
       )}
 
+      {/* The picker sits above the table rather than under it. Adding is the
+          only thing to do on an empty comparison and the most likely thing to
+          do on a full one, so it goes where the database's own search field is
+          — in a bordered strip directly under the header, in the same place on
+          both pages. */}
+      <div className="border-b border-line py-4">
+        <ComparePicker picks={picks} selected={selected} />
+      </div>
+
       {chosen.length === 0 ? (
-        <section className="mt-10 flex max-w-reading flex-col gap-6">
-          <p className="text-body-md text-ink-2">
-            Nothing to compare yet. Search for a powder to put the first column
-            up — or open any record from the database and add it from there.
-          </p>
-          <ComparePicker picks={picks} selected={selected} />
-        </section>
+        <p className="mt-10 max-w-reading text-body-md text-ink-2">
+          Nothing to compare yet. Search above to put the first column up, or
+          pick several from the database and bring them over together.
+        </p>
       ) : (
         <>
           <section aria-label="Comparison" className="mt-8">
@@ -114,18 +120,20 @@ export default async function ComparePage({
             />
           </section>
 
-          <div className="mt-10 flex flex-col gap-6 border-t border-line pt-6">
-            <ComparePicker picks={picks} selected={selected} />
-
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="data-md text-clay">
+              {chosen.length} of {MAX_COMPARE}
+            </p>
             <Link
               href="/database/compare"
-              className="data-md -ml-2.5 self-start rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+              className="data-md rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
             >
               clear the comparison
             </Link>
           </div>
         </>
       )}
+
     </main>
   );
 }
