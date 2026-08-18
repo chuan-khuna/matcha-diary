@@ -37,6 +37,8 @@ sources:
     url: https://horiishichimeien.com/en-sb/blogs/topics/about
   - title: 堀井七茗園 — 当園オリジナル 奥ノ山茶園から生まれた品種「成里乃」と「奥の山」のご紹介
     url: https://horiishichimeien.com/blogs/topics/about
+  - title: "Tea plants with a history of 600 years — Horii Shichimeien, 7 Stories chapter 4 (English)"
+    url: https://horiishichimeien.com/en-sb/pages/story4
   - title: 農林水産省 品種登録データベース — 登録品種「奥の山」（登録番号10752）
     url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=10752&LANGUAGE=Japanese
   - title: 農林水産省 品種登録データベース — 登録品種「成里乃」（登録番号10751）

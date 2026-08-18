@@ -50,6 +50,8 @@ sources:
     url: https://horiishichimeien.com/blogs/topics/about
   - title: About — Horii Shichimeien (English)
     url: https://horiishichimeien.com/en-sb/blogs/topics/about
+  - title: "Tea plants with a history of 600 years — Horii Shichimeien, 7 Stories chapter 4 (English)"
+    url: https://horiishichimeien.com/en-sb/pages/story4
   - title: 抹茶 成里乃 (Matcha Narino) — product page, Horii Shichimeien
     url: https://horiishichimeien.com/products/matcha-narino
   - title: 京都府の茶の品種 (Uji tea cultivars) — 京都府茶業会議所 (Kyoto Tea Trade Association)

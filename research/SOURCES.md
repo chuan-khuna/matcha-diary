@@ -69,8 +69,32 @@ anything factual.
   Also useful on Uji practice: the house invented **Japan's first tencha drying machine in 1924**,
   has held the Okunoyama garden for 600+ years, and stone-mills all its matcha.
 
+  **The `/about` page is not the whole site.** There is a seven-part house history at
+  `https://horiishichimeien.com/en-sb/pages/story<N>`, `N` = 1–7, and **chapter 4, "Tea plants
+  with a history of 600 years"** (https://horiishichimeien.com/en-sb/pages/story4) is the
+  cultivar one. It is far more detailed than `/about` and is the primary source for the Narino
+  and Okunoyama selection programme:
+
+  - Selection began **1981**, run by **Nobuo Horii** (fifth generation) observing every plant in
+    the garden annually, from handwritten notes recording taste, aroma, shoot count, weight and
+    yield.
+  - The funnel, in the house's own words: **~2,000 native plants → 58 → 24 → 8 → 2 final
+    candidates in 1994**, trialled, then registered **2002**.
+  - Until the **1970s** the Okunoyama garden was entirely native plants — about 2,000, planted
+    island-fashion. Nobuo replanted rather than clear it, selecting out of the existing stock
+    precisely so the zairai line would survive.
+  - **Narino is for tencha, Okunoyama for gyokuro** — a split neither is always given elsewhere.
+  - **Narino took the Minister of Agriculture, Forestry and Fisheries Award at the 64th National
+    Tea Competition, Nara, 2010.**
+  - The **400-year-old mother tree is Okunoyama's own** original plant and still stands in the
+    garden.
+
+  This page overturned a fabrication warning that stood in this file — see *The draft records in
+  `example/` are not authoritative* below.
+
   Caveat: theanine and tree-age claims are the producer's own and are not independently verified
-  here. Attribute them rather than stating them flatly.
+  here. Attribute them rather than stating them flatly. That applies to the funnel figures too —
+  they are now sourced, but the source is the house itself.
 
 - **品種特性表 (cultivar characteristics table)** — 京都府茶業会議所, PDF.
   https://ujicha.or.jp/wp-content/themes/kyotocha/assets/files/hinsyutokusei.pdf
@@ -147,6 +171,43 @@ anything factual.
 
   Use it to *enumerate* cultivars, which is what it is uniquely good for. Do not take a parent or
   a year from it without corroboration.
+
+- **Shizu-Inzatsu 131, an historical cultivar** — Japanese Tea Sommelier, 24 January 2017.
+  https://japaneseteasommelier.wordpress.com/2017/01/24/shizu-inzatsu-131-an-historical-cultivar/
+  Same author as the master list above, but a different kind of document — a narrative history
+  rather than a table, and the master list's weakness (dates and parentage) is not what this is
+  for. It is the fullest account found in English of **how the 印雑 lines came about and who made
+  them**, and it carries several facts that connect entries elsewhere in this file:
+
+  - **Two independent 印雑 lineages, not one.** The *Tada* hybrids — Tada Motokichi 多田元吉, sent
+    to China and India, crossing for **black** tea, of which Benihomare is the famous one and
+    later Benifuki's parent — are a separate programme from Inzatsu 131, which descends from
+    **Maruo Fumio 丸尾文雄's** 1922 expedition to India, Sri Lanka and Java. Sources that treat
+    "inzatsu" as one thing are collapsing two.
+  - **Maruo died of a tropical disease in Taiwan on the return journey.** The Manipuli seeds
+    reached Shizuoka; he did not. They were planted at the prefectural research centre and
+    numbered 1–90.
+  - **Arima Toshiharu 有馬利治 (1912–1999)** is the through-line. Black-tea cultivar work at the
+    Miyazaki centre from 1938, transferred to Shizuoka in 1942, selected Inzatsu 131 from a
+    Manipuli No. 15 seedling in 1944, and **also originated the 静7000 series** — so the
+    `静7000` entry under *Decoding breeding-line designations* below and Inzatsu 131 are the same
+    man's work, which no other source consulted joins up. He left the centre in 1960.
+    **Morizono Ichiji**, co-developer of Fuji-kaori, was one of his followers.
+  - **It was bred as a green-tea cultivar, not a black one**, despite the Assam parentage. The
+    post quotes period documents describing it as very early budding, weak to cold and disease,
+    with a very particular perfume, suited to sencha and tamaryokucha.
+  - **Benihomare is Cha Norin No. 1** — the first entry in the 1953 registry.
+  - Names the two houses still making single-cultivar Inzatsu 131: **Koyanagi Tsutomu** in
+    Fujieda (kamairicha, and Fuji-kaori kamairicha too) and **Tarui of Nearaimatsu-Meichaen** in
+    Nearai, Hamamatsu (fukamushi sencha, on an Akitsu line built to Arima's hot-air method).
+
+  Caveats. The author sells the teas he is writing about — the post links his own shop — so treat
+  the tasting and the house history as a merchant's account. The biography is unsourced on the
+  page and is not independently verified here; attribute it rather than stating it flat. One
+  sentence is ambiguous in translation from the French: it has Arima both directing the centre
+  and being pushed out of it, and the post does not say which came first. And it writes
+  **Manipuli** where this corpus writes Manipuri — the same Assam line, not two.
+
 - **Japanese Tea Cultivar List** — My Japanese Green Tea.
   https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
 - **Japanese Tea Pedia — Cultivars** — Japanese Tea Singapore.
@@ -544,6 +605,10 @@ Line identities confirmed from primary sources during this research:
   **Kurasawa = 静7111**, **Yamakai = 静7166**, and **静7132** (the line behind Tsuyuhikari), with
   **Surugawase** and **Fujimidori** named as siblings in the same series.
 
+  Run by **Arima Toshiharu**, who also selected 印雑131 — so this series and the Inzatsu line
+  are one breeder's work rather than two unrelated Shizuoka programmes. Source is the
+  Shizu-Inzatsu 131 post listed above, which independently gives 静7166 = Yamakai.
+
   Members are **siblings by origin only** — each is a separate seedling with an unrecorded pollen
   parent, so the relationship cannot be drawn as a cross. For a lineage graph this is the same
   case as the Uji zairai cluster: a shared source population, not a shared parent.
@@ -617,11 +682,20 @@ been contradicted by primary sources:
 
 - NARO's handbook gives **Kirari 31's registration as 25 March 2016**, against the December 2013
   / May 2014 dates in the example record.
-- The **Okunoyama** draft carried a "1981–1994" selection window and a precise screening funnel
-  (2,000 → 58 → 24 → 8 → 2 plants) that appear in **no source found anywhere**. Horii
-  Shichimeien's own account gives a single 1980–2000 span, consistent with the 2000 PVP filing
-  date. The specificity of the invented figures is what makes them dangerous — they read as
-  primary data.
+- ~~The **Okunoyama** draft carried a "1981–1994" selection window and a precise screening funnel
+  (2,000 → 58 → 24 → 8 → 2 plants) that appear in no source found anywhere.~~ **Retracted — the
+  draft was right and this note was wrong.** Horii Shichimeien's *7 Stories* chapter 4
+  (https://horiishichimeien.com/en-sb/pages/story4) states all of it in the house's own words:
+  selection began in **1981**, about **2,000** plants were narrowed to **58**, then **24**, then
+  **8**, and in **1994** two final candidates were chosen, registered **2002** — "a good 20 years
+  after we started". The earlier check had only reached `/blogs/topics/about`, which compresses
+  the same story into one span, and read the difference as invention.
+
+  Worth keeping as the counter-example to the entries around it. The reasoning that condemned it
+  — *this is too specific to be sourced, therefore it is fabricated* — is the same reasoning that
+  correctly caught Koshun and Yutakamidori, and here it produced a false positive on real primary
+  data. Unusual specificity means **find the source or mark it unverified**; it is not by itself
+  evidence of invention. Absence of evidence was doing the work of evidence of absence.
 - The **Asahi** draft lists **gyokuro** among its tea types. Kyoto Prefecture's own
   characteristics table marks Asahi ◎ for てん茶 (tencha) only, and Matcha Direct states its
   thin, large leaf is unsuitable for a rolled tea like gyokuro. Independently disconfirmed.
