@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { PowderDatabase } from "@/components/database/powder-database";
@@ -70,6 +71,19 @@ export default async function DatabasePage() {
           One card per powder — brand, blend name, origin, cultivars, price,
           photographs, description and taste notes. Placeholder records: the
           brands are real, everything written about them here is not.
+        </p>
+
+        {/* The grid draws each record whole so one can be read; the compare
+            page cuts them along shared rows so several can be read across.
+            Different enough to be its own page rather than a mode of this
+            one. */}
+        <p>
+          <Link
+            href="/database/compare"
+            className="data-md -ml-2.5 inline-block rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+          >
+            compare powders →
+          </Link>
         </p>
       </header>
 

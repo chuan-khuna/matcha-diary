@@ -214,3 +214,107 @@ export function powderHaystack(powder: Powder): string {
     .join(" ")
     .toLowerCase();
 }
+
+/* -------------------------------------------------------------------------- */
+/* Comparison                                                                 */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * How many powders the comparison holds.
+ *
+ * Five is a reading limit rather than a technical one. The table gives each
+ * column 15rem before it scrolls, so five is already wider than a laptop and is
+ * read by scrolling sideways — past that the first column has left the screen
+ * before the last arrives, and a comparison you cannot see at once has stopped
+ * being one.
+ */
+export const MAX_COMPARE = 5;
+
+/**
+ * The comparison's URL: `?p1=<id>&p2=<id>…`, one numbered slot per powder.
+ *
+ * Numbered rather than a repeated `?p=` or one comma-joined value, because the
+ * slot number is what makes a column's position part of the address — reorder
+ * the comparison and the URL says so, and a link someone sends opens with the
+ * columns where they left them.
+ *
+ * The value is `Powder.id`, which is already `<brand-slug>/<slug>` and already
+ * what `/database/<brand>/<slug>` is built from — so the same identity spells
+ * the record's page and its column here. The slash is left unencoded: it is
+ * legal in a query value, and `?p1=mtch/zairai` can be read at a glance in a
+ * way that `%2F` cannot.
+ *
+ * Renumbering is deliberate and happens on every build of this href. Dropping
+ * the middle of `p1,p2,p3` yields `p1,p2` rather than `p1,p3` — a gap would
+ * make two different URLs mean the same comparison, and the parser would then
+ * have to decide whether `p3` alone is the third column or the first.
+ */
+export function compareHref(ids: string[]): string {
+  const slots = ids
+    .slice(0, MAX_COMPARE)
+    .map((id, index) => `p${index + 1}=${id}`);
+
+  return slots.length === 0
+    ? "/database/compare"
+    : `/database/compare?${slots.join("&")}`;
+}
+
+/**
+ * What the compare page's picker needs, and nothing else.
+ *
+ * The picker is a client component holding the whole collection so it can
+ * search it, which means every field on every record crosses into the RSC
+ * payload. A full `Powder` carries an `excerpt` — a paragraph — plus sizes,
+ * photo seeds and an origin, and the picker draws none of them: it lists a name
+ * and a brand, and matches against text. Forty-nine paragraphs in the payload
+ * to render forty-nine two-word rows is the same waste `toCardData` exists to
+ * avoid on the cultivar index.
+ *
+ * `haystack` is precomputed here for the same reason it is there: the text a
+ * query is matched against does not change while someone types, only the query
+ * does.
+ */
+export type PowderPick = {
+  id: string;
+  name: string;
+  brand: string;
+  haystack: string;
+};
+
+export function toPickData(powder: Powder): PowderPick {
+  return {
+    id: powder.id,
+    name: powder.name,
+    brand: powder.brand,
+    haystack: powderHaystack(powder),
+  };
+}
+
+/**
+ * The ids a comparison URL names, in slot order.
+ *
+ * Reads `p1` through `p5` and nothing else: an unknown key is ignored rather
+ * than guessed at, and a slot that repeats an id already taken is dropped, so a
+ * hand-edited URL cannot put one powder in two columns and make the table look
+ * like it is comparing a tin against itself.
+ *
+ * Whether an id names a real record is not decided here — that needs the
+ * collection, which the loader has and this module deliberately does not.
+ */
+export function comparedIds(
+  params: Record<string, string | string[] | undefined>,
+): string[] {
+  const ids: string[] = [];
+
+  for (let slot = 1; slot <= MAX_COMPARE; slot += 1) {
+    const raw = params[`p${slot}`];
+    // A repeated key arrives as an array. Take the first: two values for one
+    // slot is a malformed URL, and picking one is friendlier than dropping the
+    // column entirely.
+    const id = (Array.isArray(raw) ? raw[0] : raw)?.trim();
+
+    if (id !== undefined && id !== "" && !ids.includes(id)) ids.push(id);
+  }
+
+  return ids;
+}
