@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { PiXLight } from "react-icons/pi";
 import { useEffect, useId, useRef, type ReactNode } from "react";
 
 import { PhotoGallery } from "@/components/shared/photo-gallery";
@@ -27,10 +29,14 @@ import { tasteNoteChipClasses } from "@/lib/taste-notes";
  * content that belongs in the payload rather than a compiler that belongs in the
  * bundle. The page above compiles all ten and passes the open one through.
  *
- * Deliberately NOT a route yet, on the same terms as the entry dialog: when
- * /powders/[id] exists this should become an intercepting route so the record
- * earns a URL, a back button, and a page that survives a refresh — and the
- * dynamic import would move there, one record at a time.
+ * The record now has a URL of its own at `/database/<brand>/<slug>`, and this
+ * links to it rather than being replaced by it. The two answer different
+ * questions: a dialog is for reading one card without losing your place in a
+ * filtered grid, and a page is for linking, reloading and sharing. What is
+ * still outstanding is making that link an *intercepting* route, so opening a
+ * record pushes history and a refresh lands on the page — at which point this
+ * component keeps its markup and loses its `open` state, and the dynamic import
+ * above moves to the page, one record at a time rather than all of them.
  */
 export function PowderDialog({
   powder,
@@ -82,14 +88,40 @@ export function PowderDialog({
     >
       {powder && (
         <>
-          <div className="sticky top-0 z-10 flex justify-end border-b border-line bg-paper-translucent px-4 py-2 backdrop-blur-md">
-            <button
-              type="button"
-              onClick={onClose}
-              className="data-md cursor-pointer rounded-sm px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
-            >
-              close
-            </button>
+          {/* The bar keeps the record's identity in view once the body has
+              scrolled past the header below — a modal with no title showing is
+              a modal you have to scroll up in to know what you are reading.
+              Actions sit right, in the order they are reached for: the way
+              deeper in, then the way out. */}
+          <div className="sticky top-0 z-10 flex items-center gap-3 border-b border-line bg-paper-translucent px-3 py-2 backdrop-blur-md">
+            <p className="data-sm min-w-0 truncate uppercase text-clay">
+              <span className="text-ink-2">{powder.brand}</span>
+              <span aria-hidden="true"> · </span>
+              {powder.name}
+            </p>
+
+            <div className="ml-auto flex shrink-0 items-center gap-1">
+              {/* The same content at an address, for anyone who wants to link
+                  it, reload it, or open it in a tab. */}
+              <Link
+                href={`/database/${powder.brandSlug}/${powder.slug}`}
+                className="data-sm rounded-sm px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+              >
+                full record →
+              </Link>
+
+              {/* An icon, but never only an icon: the accessible name is on the
+                  button and the glyph is hidden from the tree. Phosphor Light,
+                  which is the weight this system's hairlines are drawn at. */}
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close"
+                className="cursor-pointer rounded-sm p-2 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+              >
+                <PiXLight aria-hidden="true" size={18} />
+              </button>
+            </div>
           </div>
 
           <article className="flex flex-col gap-6 p-4 sm:p-6">
@@ -119,27 +151,47 @@ export function PowderDialog({
               </h2>
             </header>
 
-            <section className="flex flex-col gap-3">
-              <h3 className="label-caps text-clay">Origin</h3>
-              <p className="data-md uppercase">
-                {powder.origin}
-              </p>
-            </section>
+            {powder.origin !== "—" && (
+              <section className="flex flex-col gap-3">
+                <h3 className="label-caps text-clay">Origin</h3>
+                <p className="data-md uppercase">{powder.origin}</p>
+              </section>
+            )}
 
-            <section className="flex flex-col gap-3">
-              <h3 className="label-caps text-clay">Cultivars</h3>
-              {/* Tags, and the record says nothing about their shares —
-                  no maker publishes the ratio and a made-up percentage
-                  would read as a fact. */}
-              <p className="data-md uppercase">
-                {powder.cultivars.join(" · ")}
-              </p>
-            </section>
+            {/* Guarded, because several own-label ranges publish no cultivar at
+                all. A heading over an empty line presents a hole as a fact —
+                the same call `FactCard` makes by dropping its empty rows. */}
+            {powder.cultivars.length > 0 && (
+              <section className="flex flex-col gap-3">
+                <h3 className="label-caps text-clay">Cultivars</h3>
+                {/* Tags, and the record says nothing about their shares —
+                    no maker publishes the ratio and a made-up percentage
+                    would read as a fact. */}
+                <p className="data-md uppercase">
+                  {powder.cultivars.join(" · ")}
+                </p>
+              </section>
+            )}
 
-            <section className="flex flex-col gap-3">
-              <h3 className="label-caps text-clay">Price</h3>
-              <PriceList sizes={powder.sizes} />
-            </section>
+            {powder.sizes.length > 0 && (
+              <section className="flex flex-col gap-3">
+                <h3 className="label-caps text-clay">Price</h3>
+                <PriceList sizes={powder.sizes} />
+              </section>
+            )}
+
+            {powder.notes.length > 0 && (
+              <section className="flex flex-col gap-3">
+                <h3 className="label-caps text-clay">Taste notes</h3>
+                <ul className="flex flex-wrap gap-2">
+                  {powder.notes.map((note) => (
+                    <li key={note} className={tasteNoteChipClasses()}>
+                      {note}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             <section className="flex flex-col gap-3">
               <h3 className="label-caps text-clay">Description</h3>
@@ -153,16 +205,6 @@ export function PowderDialog({
               <div className="prose [&>p:first-child]:mt-0">{prose}</div>
             </section>
 
-            <section className="flex flex-col gap-3">
-              <h3 className="label-caps text-clay">Taste notes</h3>
-              <ul className="flex flex-wrap gap-2">
-                {powder.notes.map((note) => (
-                  <li key={note} className={tasteNoteChipClasses()}>
-                    {note}
-                  </li>
-                ))}
-              </ul>
-            </section>
           </article>
         </>
       )}

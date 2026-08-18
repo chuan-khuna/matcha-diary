@@ -21,6 +21,10 @@ import { tasteNoteChipClasses } from "@/lib/taste-notes";
  * `h-full` plus `mt-auto` on the notes is what keeps a row of cards agreeing.
  * Descriptions clamp to three lines, but cultivar lines wrap at one or two, so
  * without it the chip rows in a row of three would sit at three heights.
+ *
+ * With the notes now above the description, the `mt-auto` moves onto a wrapper
+ * holding both, so the pair is anchored to the foot of the card whether or not
+ * a record has taste notes — several own-label ranges publish none.
  */
 export function PowderCard({
   powder,
@@ -85,19 +89,31 @@ export function PowderCard({
 
         <PriceList sizes={powder.sizes} />
 
-        {/* The record's opening paragraph, clamped — not a second summary
-            written for the card. See `Powder.excerpt`. */}
-        <p className="line-clamp-3 text-body-excerpt text-ink-2">
-          {powder.excerpt}
-        </p>
+        {/* Notes above the prose, because they are what the card is scanned
+            for. A row of stamps is read in one glance where a paragraph has to
+            be started, and putting the paragraph first makes the reader step
+            over the answer to reach it.
+            The two travel together in one `mt-auto` block rather than the chip
+            row carrying it alone — a record with no notes at all, which
+            several own-label ranges have, would otherwise leave its
+            description floating wherever the facts above it ended. */}
+        <div className="mt-auto flex flex-col gap-3 pt-1">
+          {powder.notes.length > 0 && (
+            <ul className="flex flex-wrap gap-2">
+              {powder.notes.map((note) => (
+                <li key={note} className={tasteNoteChipClasses()}>
+                  {note}
+                </li>
+              ))}
+            </ul>
+          )}
 
-        <ul className="mt-auto flex flex-wrap gap-2 pt-1">
-          {powder.notes.map((note) => (
-            <li key={note} className={tasteNoteChipClasses()}>
-              {note}
-            </li>
-          ))}
-        </ul>
+          {/* The record's opening paragraph, clamped — not a second summary
+              written for the card. See `Powder.excerpt`. */}
+          <p className="line-clamp-3 text-body-excerpt text-ink-2">
+            {powder.excerpt}
+          </p>
+        </div>
       </div>
     </article>
   );
