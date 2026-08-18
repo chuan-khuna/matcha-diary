@@ -25,7 +25,7 @@ import {
  */
 export function PriceList({ sizes }: { sizes: PowderSize[] }) {
   return (
-    <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 font-mono text-data-md tabular-nums">
+    <dl className="data-md grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
       {sizes.map((size) => (
         <Fragment key={size.grams}>
           <dt className="text-right text-clay">{size.grams} g</dt>

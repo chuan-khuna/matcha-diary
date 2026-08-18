@@ -51,7 +51,7 @@ export function RatingBar({ axis, halfSteps }: Rating) {
         })}
       </span>
 
-      <span className="text-right font-mono text-data-md tabular-nums text-ink">
+      <span className="data-md text-right text-ink">
         {(halfSteps / 2).toFixed(1)}
       </span>
     </div>

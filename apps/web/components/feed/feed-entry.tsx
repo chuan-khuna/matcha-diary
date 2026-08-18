@@ -41,7 +41,7 @@ export function FeedEntry({
         <div className="flex flex-wrap items-baseline gap-2">
           {/* Inter for the name a person chose, mono for the facts beside it. */}
           <span className="text-body-md font-medium">{entry.author.name}</span>
-          <span className="font-mono text-data-md text-clay">
+          <span className="data-md text-clay">
             @{entry.author.handle} · {entry.postedAt}
           </span>
         </div>
@@ -85,7 +85,7 @@ export function FeedEntry({
 
         <p className="line-clamp-4 text-body-excerpt text-ink-2">{entry.body[0]}</p>
 
-        <span className="font-mono text-data-sm uppercase text-clay">
+        <span className="data-sm uppercase text-clay">
           {entry.place}
         </span>
       </div>

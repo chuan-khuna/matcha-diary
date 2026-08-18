@@ -54,7 +54,7 @@ export default function CultivarsPage() {
           <h2 id="pedigree-heading" className="text-headline-md">
             Pedigree
           </h2>
-          <p className="font-mono text-data-sm text-clay">
+          <p className="data-sm text-clay">
             {lineage.nodes.length} plants · {lineage.edges.length} parentages ·{" "}
             <Link
               href="/cultivars/lineage"

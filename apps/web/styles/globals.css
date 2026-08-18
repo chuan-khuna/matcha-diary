@@ -91,8 +91,21 @@
   --font-sans: var(--family-sans);
   --font-mono: var(--family-mono);
 
-  /* Thirteen semantic styles, each carrying its own leading, tracking and
-     weight — `text-body-prose` is the whole style, not just a size.
+  /* Eight of the thirteen semantic styles — every one that Inter sets. Each
+     carries its own leading, tracking and weight, so `text-body-prose` is the
+     whole style rather than just a size, and since the body already carries
+     the sans face, the name on its own is the finished style.
+
+     The five mono ones are deliberately not here. A font-size namespace holds
+     a size, a leading, a tracking and a weight and nothing else, so
+     `--text-data-md` was a style with its *family* missing — and DESIGN.md
+     carries the authored/recorded split on the family. That left every call
+     site to remember `font-mono` beside it, which four of them had already
+     forgotten. All five now live as `@utility` blocks below, which is where
+     `label-caps` and `label-axis` already were; their `--text-*` twins are
+     gone with the others, so there is one way in rather than a whole one and
+     a half-finished one under a similar name.
+
      Tailwind's numeric scale (text-sm, text-lg, …) is left in place rather
      than cleared, because shadcn's generated components are written against
      it and clearing it would break them silently. Preferring these names over
@@ -137,31 +150,6 @@
   --text-label-lg--letter-spacing: var(--t-label-lg-tracking);
   --text-label-lg--font-weight: var(--t-label-lg-weight);
 
-  --text-data-md: var(--t-data-md-size);
-  --text-data-md--line-height: var(--t-data-md-leading);
-  --text-data-md--letter-spacing: var(--t-data-md-tracking);
-  --text-data-md--font-weight: var(--t-data-md-weight);
-
-  --text-data-sm: var(--t-data-sm-size);
-  --text-data-sm--line-height: var(--t-data-sm-leading);
-  --text-data-sm--letter-spacing: var(--t-data-sm-tracking);
-  --text-data-sm--font-weight: var(--t-data-sm-weight);
-
-  --text-data-xs: var(--t-data-xs-size);
-  --text-data-xs--line-height: var(--t-data-xs-leading);
-  --text-data-xs--letter-spacing: var(--t-data-xs-tracking);
-  --text-data-xs--font-weight: var(--t-data-xs-weight);
-
-  --text-label-caps: var(--t-label-caps-size);
-  --text-label-caps--line-height: var(--t-label-caps-leading);
-  --text-label-caps--letter-spacing: var(--t-label-caps-tracking);
-  --text-label-caps--font-weight: var(--t-label-caps-weight);
-
-  --text-label-axis: var(--t-label-axis-size);
-  --text-label-axis--line-height: var(--t-label-axis-leading);
-  --text-label-axis--letter-spacing: var(--t-label-axis-tracking);
-  --text-label-axis--font-weight: var(--t-label-axis-weight);
-
   /* ---- Elevation ----------------------------------------------------- */
   /* Named by material, because that is how DESIGN.md assigns them: hairline
      and tone carry depth, and a shadow is reached for only twice. Tailwind's
@@ -189,10 +177,50 @@
 }
 
 /* ---- Composed utilities -------------------------------------------------
-   Two type styles are never used bare: DESIGN.md specifies that label-caps
-   and label-axis are uppercased in CSS rather than in the source text, and
-   both are mono by definition. Bundling that here keeps the rule out of
-   thirteen call sites. */
+   The five type styles a font-size namespace cannot hold, written whole.
+
+   All five are mono, and that is the reason rather than a coincidence.
+   DESIGN.md carries its central split — what a person wrote versus what is a
+   recorded fact about the cup — on the family, so for these five the family
+   is not decoration on top of a size, it is half the meaning. `@theme` has
+   nowhere to put it: `--text-*` takes a size, a leading, a tracking and a
+   weight. Leaving the rest to the call site is what produced four sites that
+   set mono's 13px and 0.02em tracking on Inter, and twenty-two that never got
+   the tabular figures DESIGN.md gives `data-md` (`fontFeature: 'tnum' 1`),
+   so a column of numbers jittered whenever somebody forgot a class.
+
+   Written this way they cannot be used half-way — there is no `text-data-md`
+   left to reach for without its family. */
+
+@utility data-md {
+  font-family: var(--family-mono);
+  font-size: var(--t-data-md-size);
+  line-height: var(--t-data-md-leading);
+  letter-spacing: var(--t-data-md-tracking);
+  font-weight: var(--t-data-md-weight);
+  /* Dates, counts and rating values sit in fixed columns. Part of the style,
+     not something a call site opts into. */
+  font-variant-numeric: tabular-nums;
+}
+
+@utility data-sm {
+  font-family: var(--family-mono);
+  font-size: var(--t-data-sm-size);
+  line-height: var(--t-data-sm-leading);
+  letter-spacing: var(--t-data-sm-tracking);
+  font-weight: var(--t-data-sm-weight);
+}
+
+@utility data-xs {
+  font-family: var(--family-mono);
+  font-size: var(--t-data-xs-size);
+  line-height: var(--t-data-xs-leading);
+  letter-spacing: var(--t-data-xs-tracking);
+  font-weight: var(--t-data-xs-weight);
+}
+
+/* These two add the uppercase on top, because DESIGN.md specifies the casing
+   happens in CSS rather than in the source text. */
 
 @utility label-caps {
   font-family: var(--family-mono);

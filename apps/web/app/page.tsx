@@ -21,7 +21,7 @@ export default function FeedPage() {
 
       <button
         type="button"
-        className="mb-12 block w-full cursor-pointer py-6 font-mono text-data-md text-matcha-deep hover:bg-paper-sunk"
+        className="data-md mb-12 block w-full cursor-pointer py-6 text-matcha-deep hover:bg-paper-sunk"
       >
         load older entries ↓
       </button>

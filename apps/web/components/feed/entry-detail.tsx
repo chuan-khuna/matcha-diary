@@ -28,7 +28,7 @@ export function EntryDetail({
         <AvatarStandIn seed={entry.author.avatar} />
         <div className="flex flex-col">
           <span className="text-body-md font-medium">{entry.author.name}</span>
-          <span className="font-mono text-data-sm text-clay">
+          <span className="data-sm text-clay">
             @{entry.author.handle} · {entry.postedAt}
           </span>
         </div>
@@ -75,7 +75,7 @@ export function EntryDetail({
         </section>
       )}
 
-      <span className="font-mono text-data-sm uppercase text-clay">
+      <span className="data-sm uppercase text-clay">
         {entry.place}
       </span>
     </article>

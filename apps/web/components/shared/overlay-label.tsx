@@ -19,7 +19,7 @@ export function OverlayLabel({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1.25 rounded-xs bg-scrim px-2.25 py-1 font-mono text-data-sm text-on-scrim backdrop-blur-[6px] ${className}`}
+      className={`data-sm inline-flex items-center gap-1.25 rounded-xs bg-scrim px-2.25 py-1 text-on-scrim backdrop-blur-[6px] ${className}`}
     >
       {children}
     </span>

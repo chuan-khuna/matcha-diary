@@ -15,7 +15,7 @@ export function ComposePrompt() {
     >
       <AvatarStandIn seed={0} />
       <span className="text-clay">What are you drinking today?</span>
-      <span className="ml-auto rounded-sm border border-line-strong bg-surface px-2.75 py-1.25 font-mono text-data-sm text-ink-2">
+      <span className="data-sm ml-auto rounded-sm border border-line-strong bg-surface px-2.75 py-1.25 text-ink-2">
         Log a cup
       </span>
     </Link>

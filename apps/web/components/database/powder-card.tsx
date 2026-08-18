@@ -64,7 +64,7 @@ export function PowderCard({
             where a tin came from, on one line because they answer one
             question. The brand is the identifier and carries the darker ink;
             the origin qualifies it. */}
-        <div className="flex items-baseline justify-between gap-2 font-mono text-data-sm uppercase">
+        <div className="data-sm flex items-baseline justify-between gap-2 uppercase">
           <span className="text-ink-2">{powder.brand}</span>
           <span className="text-right text-clay">{powder.origin}</span>
         </div>
@@ -79,7 +79,7 @@ export function PowderCard({
           </button>
         </h2>
 
-        <p className="font-mono text-data-sm uppercase text-clay">
+        <p className="data-sm uppercase text-clay">
           {powder.cultivars.join(" · ")}
         </p>
 

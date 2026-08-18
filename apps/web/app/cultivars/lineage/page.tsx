@@ -46,7 +46,7 @@ export default function LineagePage() {
       <div className="py-6">
         <Link
           href="/cultivars"
-          className="-ml-2.5 inline-block rounded-xs px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+          className="data-md -ml-2.5 inline-block rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
         >
           ← All cultivars
         </Link>

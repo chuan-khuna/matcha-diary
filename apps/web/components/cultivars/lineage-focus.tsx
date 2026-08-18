@@ -384,7 +384,7 @@ export function LineageFocus({
       {canIsolate && (
         <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex justify-end p-3">
           {focused === null ? (
-            <p className="rounded-xs border border-line bg-surface/90 px-2.25 py-1 font-mono text-data-sm text-clay">
+            <p className="data-sm rounded-xs border border-line bg-surface/90 px-2.25 py-1 text-clay">
               click a plant to hide the rest · double-click opens it
             </p>
           ) : (

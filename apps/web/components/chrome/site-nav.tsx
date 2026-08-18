@@ -35,7 +35,7 @@ export function SiteNav() {
             key={label}
             href={href}
             aria-current={isCurrent ? "page" : undefined}
-            className={`flex items-center gap-1.5 rounded-xs px-2.5 py-1.5 font-mono text-data-md transition-colors ${navLinkClasses(isCurrent)}`}
+            className={`data-md flex items-center gap-1.5 rounded-xs px-2.5 py-1.5 transition-colors ${navLinkClasses(isCurrent)}`}
           >
             <Icon aria-hidden="true" size={16} />
             {label}

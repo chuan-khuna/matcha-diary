@@ -33,7 +33,7 @@ export function FeedTabs() {
             onClick={() => setActive(tab)}
             // -mb-px pulls the underline onto the container's hairline so the
             // active marker replaces it rather than sitting above it.
-            className={`-mb-px cursor-pointer border-b-2 py-4 font-mono text-data-md transition-colors ${
+            className={`data-md -mb-px cursor-pointer border-b-2 py-4 transition-colors ${
               isActive
                 ? "border-matcha text-ink"
                 : "border-transparent text-clay hover:text-ink"

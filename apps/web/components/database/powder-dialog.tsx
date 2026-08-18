@@ -86,7 +86,7 @@ export function PowderDialog({
             <button
               type="button"
               onClick={onClose}
-              className="cursor-pointer rounded-sm px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+              className="data-md cursor-pointer rounded-sm px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
             >
               close
             </button>
@@ -111,7 +111,7 @@ export function PowderDialog({
             )}
 
             <header className="flex flex-col gap-1">
-              <span className="font-mono text-data-sm uppercase text-ink-2">
+              <span className="data-sm uppercase text-ink-2">
                 {powder.brand}
               </span>
               <h2 id={titleId} className="text-headline-lg">
@@ -121,7 +121,7 @@ export function PowderDialog({
 
             <section className="flex flex-col gap-3">
               <h3 className="label-caps text-clay">Origin</h3>
-              <p className="font-mono text-data-md uppercase">
+              <p className="data-md uppercase">
                 {powder.origin}
               </p>
             </section>
@@ -131,7 +131,7 @@ export function PowderDialog({
               {/* Tags, and the record says nothing about their shares —
                   no maker publishes the ratio and a made-up percentage
                   would read as a fact. */}
-              <p className="font-mono text-data-md uppercase">
+              <p className="data-md uppercase">
                 {powder.cultivars.join(" · ")}
               </p>
             </section>

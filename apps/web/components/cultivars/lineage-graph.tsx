@@ -155,7 +155,7 @@ export function LineageGraph({
       </LineageFocus>
 
       {caption !== undefined && (
-        <figcaption className="border-t border-line px-4 py-3 font-mono text-data-sm text-clay">
+        <figcaption className="data-sm border-t border-line px-4 py-3 text-clay">
           {caption}
         </figcaption>
       )}

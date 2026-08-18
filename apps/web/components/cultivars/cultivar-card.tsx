@@ -35,7 +35,7 @@ export function CultivarCard({ cultivar }: { cultivar: CultivarCardData }) {
           </Link>
         </h2>
         {cultivar.reading !== null && (
-          <span className="shrink-0 font-mono text-data-sm text-clay">
+          <span className="data-sm shrink-0 text-clay">
             {cultivar.reading}
           </span>
         )}
@@ -76,7 +76,7 @@ function Fact({
   return (
     <div className={span ? "col-span-2" : undefined}>
       <dt className="label-caps text-clay">{label}</dt>
-      <dd className="mt-1 font-mono text-data-md text-ink">{value}</dd>
+      <dd className="data-md mt-1 text-ink">{value}</dd>
     </div>
   );
 }

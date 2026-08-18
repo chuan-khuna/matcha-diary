@@ -74,7 +74,7 @@ export function EntryDialog({
             <button
               type="button"
               onClick={onClose}
-              className="cursor-pointer rounded-sm px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+              className="data-md cursor-pointer rounded-sm px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
             >
               close
             </button>

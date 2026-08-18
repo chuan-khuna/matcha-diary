@@ -122,7 +122,7 @@ export function CultivarIndex({ cultivars }: { cultivars: CultivarCardData[] }) 
             that a keyword or a chip narrowed anything. */}
         <p
           aria-live="polite"
-          className="font-mono text-data-md tabular-nums text-clay sm:ml-auto"
+          className="data-md text-clay sm:ml-auto"
         >
           {visible.length === cultivars.length
             ? `${cultivars.length} cultivars`
@@ -207,7 +207,7 @@ export function CultivarIndex({ cultivars }: { cultivars: CultivarCardData[] }) 
           <button
             type="button"
             onClick={reset}
-            className="cursor-pointer rounded-xs px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink sm:ml-auto"
+            className="data-md cursor-pointer rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink sm:ml-auto"
           >
             Reset
           </button>

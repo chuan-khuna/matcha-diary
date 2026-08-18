@@ -89,7 +89,7 @@ export function PowderDatabase({
             narrowed anything is this number and the grid below it. */}
         <p
           aria-live="polite"
-          className="font-mono text-data-md tabular-nums text-clay sm:ml-auto"
+          className="data-md text-clay sm:ml-auto"
         >
           {visible.length === powders.length
             ? `${powders.length} powders`

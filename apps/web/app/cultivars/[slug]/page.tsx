@@ -92,7 +92,7 @@ export default async function CultivarPage({
       <div className="py-6">
         <Link
           href="/cultivars"
-          className="-ml-2.5 inline-block rounded-xs px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+          className="data-md -ml-2.5 inline-block rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
         >
           ← All cultivars
         </Link>
@@ -104,7 +104,7 @@ export default async function CultivarPage({
               transcription of a record, so it takes the mono face. */}
           <h1 className="text-display">{cultivar.name}</h1>
           {(cultivar.kana ?? cultivar.kanji) !== null && (
-            <p className="font-mono text-data-md text-clay">
+            <p className="data-md text-clay">
               {[cultivar.kana, cultivar.kanji !== cultivar.kana ? cultivar.kanji : null]
                 .filter(Boolean)
                 .join(" · ")}
@@ -155,7 +155,7 @@ export default async function CultivarPage({
                   the diagram itself has stayed free of. */}
               {offspringToShow !== null && (
                 <details className="group mt-3">
-                  <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 rounded-xs px-2.5 py-1.5 font-mono text-data-md text-clay transition-colors hover:bg-paper-sunk hover:text-ink [&::-webkit-details-marker]:hidden">
+                  <summary className="data-md inline-flex cursor-pointer list-none items-center gap-1.5 rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink [&::-webkit-details-marker]:hidden">
                     <span
                       aria-hidden="true"
                       className="transition-transform group-open:rotate-90"
@@ -234,7 +234,7 @@ export default async function CultivarPage({
 
               {parents.length > 0 && (
                 <>
-                  <h3 className="mt-4 font-mono text-data-sm text-clay">Parents</h3>
+                  <h3 className="data-sm mt-4 text-clay">Parents</h3>
                   <ul className="mt-2 space-y-1.5">
                     {parents.map((parent) => (
                       <li
@@ -242,13 +242,13 @@ export default async function CultivarPage({
                         className="flex gap-2"
                       >
                         <span
-                          className="font-mono text-data-md text-clay"
+                          className="data-md text-clay"
                           aria-hidden="true"
                         >
                           {parent.role}
                         </span>
                         <div className="min-w-0 flex-1">
-                          <p className="font-mono text-data-md">
+                          <p className="data-md">
                             {parent.slug === null ? (
                               // Not in the collection. Named, but with no record
                               // behind it — a gap, shown as one.
@@ -278,12 +278,12 @@ export default async function CultivarPage({
                 <>
                   {/* Derived from the children's own `parents`, so this list and
                       the parent lists above can never disagree. */}
-                  <h3 className="mt-5 font-mono text-data-sm text-clay">
+                  <h3 className="data-sm mt-5 text-clay">
                     Offspring in this collection
                   </h3>
                   <ul className="mt-2 space-y-1.5">
                     {offspring.map((child) => (
-                      <li key={child.slug} className="font-mono text-data-md">
+                      <li key={child.slug} className="data-md">
                         <RecordLink href={`/cultivars/${child.slug}`}>
                           {child.name}
                         </RecordLink>
@@ -314,18 +314,18 @@ export default async function CultivarPage({
                 {cultivar.sources.map((source) => (
                   <li key={`${source.title}-${source.url ?? ""}`}>
                     {source.url === null ? (
-                      <span className="text-data-md text-ink-2">{source.title}</span>
+                      <span className="data-md text-ink-2">{source.title}</span>
                     ) : (
                       <a
                         href={source.url}
                         rel="noreferrer"
-                        className="text-data-md text-ink underline decoration-matcha-line decoration-1 underline-offset-4 transition-colors hover:decoration-matcha"
+                        className="data-md text-ink underline decoration-matcha-line decoration-1 underline-offset-4 transition-colors hover:decoration-matcha"
                       >
                         {source.title}
                       </a>
                     )}
                     {source.publisher !== null && (
-                      <p className="mt-1 font-mono text-data-sm text-clay">
+                      <p className="data-sm mt-1 text-clay">
                         {source.publisher}
                       </p>
                     )}
@@ -388,8 +388,8 @@ function FactCard({
             key={label}
             className="border-b border-line pb-3 last:border-0 last:pb-0"
           >
-            <dt className="font-mono text-data-sm text-clay">{label}</dt>
-            <dd className="mt-1 text-data-md text-ink">{value}</dd>
+            <dt className="data-sm text-clay">{label}</dt>
+            <dd className="data-md mt-1 text-ink">{value}</dd>
           </div>
         ))}
       </dl>
@@ -405,7 +405,7 @@ function ListCard({ title, items }: { title: string; items: string[] }) {
       <h2 className="label-caps text-clay">{title}</h2>
       <ul className="mt-4 space-y-2">
         {items.map((item) => (
-          <li key={item} className="text-data-md text-ink-2">
+          <li key={item} className="data-md text-ink-2">
             {item}
           </li>
         ))}
@@ -419,10 +419,10 @@ function NameList({ title, names }: { title: string; names: string[] }) {
 
   return (
     <>
-      <h3 className="mt-5 font-mono text-data-sm text-clay">{title}</h3>
+      <h3 className="data-sm mt-5 text-clay">{title}</h3>
       <ul className="mt-2 space-y-1.5">
         {names.map((name) => (
-          <li key={name} className="font-mono text-data-md text-ink-2">
+          <li key={name} className="data-md text-ink-2">
             {name}
           </li>
         ))}

@@ -72,7 +72,7 @@ const components: MDXComponents = {
   // takes the mono face and the stamped, zero-radius treatment rather than a
   // pill, matching taste-note chips elsewhere in the app.
   code: ({ children }) => (
-    <code className="rounded-none border border-line bg-paper-sunk px-[5px] py-px font-mono text-data-md text-ink">
+    <code className="data-md rounded-none border border-line bg-paper-sunk px-[5px] py-px text-ink">
       {children}
     </code>
   ),

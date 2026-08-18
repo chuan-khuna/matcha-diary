@@ -14,7 +14,7 @@
  * stays grey, so that one page never shows two greens meaning different things.
  */
 export const CHIP_BASE =
-  "rounded-none border px-2.25 py-1 font-mono text-data-sm whitespace-nowrap";
+  "data-sm rounded-none border px-2.25 py-1 whitespace-nowrap";
 
 export function chipClasses(isSelected = false) {
   return isSelected
