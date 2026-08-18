@@ -1,7 +1,10 @@
+import { PiCheckLight, PiPlusLight } from "react-icons/pi";
+
 import { OverlayLabel } from "@/components/shared/overlay-label";
 import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
 import { PriceList } from "@/components/database/price-list";
 import type { Powder } from "@/lib/powders";
+import { chipClasses } from "@/lib/chip";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
@@ -25,13 +28,26 @@ import { tasteNoteChipClasses } from "@/lib/taste-notes";
  * With the notes now above the description, the `mt-auto` moves onto a wrapper
  * holding both, so the pair is anchored to the foot of the card whether or not
  * a record has taste notes — several own-label ranges publish none.
+ *
+ * The compare toggle is the card's second control and the only other one. It
+ * carries the record to `/database/compare` rather than doing anything here,
+ * so a person can pick several while scrolling and cross over once — which is
+ * the thing the compare page could not previously be reached by.
  */
 export function PowderCard({
   powder,
   onOpen,
+  isCompared,
+  canCompare,
+  onToggleCompare,
 }: {
   powder: Powder;
   onOpen: () => void;
+  /** Already carried into the comparison. */
+  isCompared: boolean;
+  /** False once the comparison is full, which disables adding but never removing. */
+  canCompare: boolean;
+  onToggleCompare: () => void;
 }) {
   const [cover] = powder.photos;
 
@@ -48,6 +64,30 @@ export function PowderCard({
           are read across rather than down, and one card starting at its brand
           while the two beside it start at a picture puts three different things
           on the same eye line. */}
+      {/* `z-10` and a stacking context of its own, because the name button
+          below stretches a pseudo-element across the whole card to make it one
+          target — without this the toggle would sit under it and every click
+          would open the dialog instead. Matcha here is state, which is one of
+          the colour's sanctioned uses: it marks what is carried over. */}
+      <button
+        type="button"
+        onClick={onToggleCompare}
+        aria-pressed={isCompared}
+        aria-label={
+          isCompared
+            ? `Remove ${powder.name} from the comparison`
+            : `Add ${powder.name} to the comparison`
+        }
+        disabled={!isCompared && !canCompare}
+        className={`${chipClasses(isCompared)} absolute top-2 right-2 z-10 cursor-pointer shadow-raised transition-colors hover:border-matcha-line hover:bg-matcha-soft disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-line-strong disabled:hover:bg-surface`}
+      >
+        {isCompared ? (
+          <PiCheckLight aria-hidden="true" size={15} />
+        ) : (
+          <PiPlusLight aria-hidden="true" size={15} />
+        )}
+      </button>
+
       {cover === undefined ? (
         <PhotoPlaceholder className="aspect-[4/3] border-b border-line" />
       ) : (

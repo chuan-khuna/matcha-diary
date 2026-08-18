@@ -1,10 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { useId, useMemo, useState, type ReactNode } from "react";
 
 import { PowderCard } from "@/components/database/powder-card";
 import { PowderDialog } from "@/components/database/powder-dialog";
-import { powderHaystack, type Powder } from "@/lib/powders";
+import {
+  compareHref,
+  MAX_COMPARE,
+  powderHaystack,
+  type Powder,
+} from "@/lib/powders";
 import { tasteNoteChipClasses, tasteNoteVocabulary } from "@/lib/taste-notes";
 
 /**
@@ -46,6 +52,11 @@ export function PowderDatabase({
   const [query, setQuery] = useState("");
   const [note, setNote] = useState<string | null>(null);
   const [openId, setOpenId] = useState<string | null>(null);
+  // Ids picked for the comparison, in the order they were picked — which is the
+  // order they become columns. Kept here rather than in the URL because a
+  // half-assembled selection is not worth a navigation per card; it becomes a
+  // URL exactly once, when the bar below is followed.
+  const [compared, setCompared] = useState<string[]>([]);
   const filterLabelId = useId();
 
   const vocabulary = useMemo(() => tasteNoteVocabulary(powders), [powders]);
@@ -71,6 +82,16 @@ export function PowderDatabase({
   // Looked up in the full list rather than the visible one: an open record
   // should not vanish because the search behind it stopped matching.
   const openPowder = powders.find((powder) => powder.id === openId) ?? null;
+
+  // Same reasoning: a picked record stays picked when a filter stops matching
+  // it, or narrowing the grid would silently empty the comparison behind you.
+  const isFull = compared.length >= MAX_COMPARE;
+
+  const toggleCompared = (id: string) =>
+    setCompared((current) => {
+      if (current.includes(id)) return current.filter((kept) => kept !== id);
+      return current.length >= MAX_COMPARE ? current : [...current, id];
+    });
 
   return (
     <>
@@ -137,6 +158,9 @@ export function PowderDatabase({
               key={powder.id}
               powder={powder}
               onOpen={() => setOpenId(powder.id)}
+              isCompared={compared.includes(powder.id)}
+              canCompare={!isFull}
+              onToggleCompare={() => toggleCompared(powder.id)}
             />
           ))}
         </section>
@@ -151,6 +175,40 @@ export function PowderDatabase({
         prose={openPowder === null ? null : prose[openPowder.id]}
         onClose={() => setOpenId(null)}
       />
+
+      {/* The tray, and the only reason the selection above is worth holding.
+          It appears when there is something to carry and clears the fixed
+          bottom nav below 640px, where that bar is 60px plus the home
+          indicator's safe area — the same offset `app/layout.tsx` reserves on
+          the body. Above 640px the nav is gone and so is the offset. */}
+      {compared.length > 0 && (
+        <div className="fixed inset-x-0 bottom-[calc(60px+env(safe-area-inset-bottom))] z-20 border-t border-line bg-paper-translucent backdrop-blur-md sm:bottom-0">
+          <div className="mx-auto flex max-w-content flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3 sm:px-6">
+            <p aria-live="polite" className="data-md text-clay">
+              {compared.length} of {MAX_COMPARE} picked
+              {isFull ? " — the most this compares at once" : ""}
+            </p>
+
+            <button
+              type="button"
+              onClick={() => setCompared([])}
+              className="data-md cursor-pointer rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+            >
+              clear
+            </button>
+
+            {/* A link rather than a button: the comparison is a URL, so
+                crossing over is a navigation and behaves like one — openable
+                in a new tab, and back returns to the grid. */}
+            <Link
+              href={compareHref(compared)}
+              className="ml-auto rounded-sm border border-line-strong bg-surface px-4 py-2.25 text-label-lg text-ink-2 transition-colors hover:bg-paper-sunk"
+            >
+              Compare →
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 }
