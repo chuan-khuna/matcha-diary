@@ -131,14 +131,14 @@ export function CompareTable({
         <tbody>
           <Row label="Origin" powders={powders}>
             {(powder) => (
-              <span className="data-md uppercase">{powder.origin}</span>
+              <span className="data-md-caps">{powder.origin}</span>
             )}
           </Row>
 
           <Row label="Cultivars" powders={powders}>
             {(powder) =>
               powder.cultivars.length === 0 ? null : (
-                <span className="data-md uppercase">
+                <span className="data-md-caps">
                   {powder.cultivars.join(" · ")}
                 </span>
               )

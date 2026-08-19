@@ -100,7 +100,9 @@
 
   /* ---- Type scale ----------------------------------------------------- */
   /* A closed set of 13 semantic styles. Weight is 400 for prose, 500 for
-     button labels, 600 for headlines — nothing bold, nothing italic. */
+     button labels, 600 for headlines — nothing bold. Italic is loaded and is
+     allowed in exactly one place, emphasis inside a record's prose; DESIGN.md
+     carries the rule and the reason. */
 
   --t-display-size: 36px;
   --t-display-leading: 1.15;
@@ -133,11 +135,6 @@
   --t-body-md-tracking: normal;
   --t-body-md-weight: 400;
 
-  --t-body-excerpt-size: 15px;
-  --t-body-excerpt-leading: 1.65;
-  --t-body-excerpt-tracking: normal;
-  --t-body-excerpt-weight: 400;
-
   --t-label-lg-size: 13px;
   --t-label-lg-leading: 1.2;
   --t-label-lg-tracking: normal;
@@ -147,6 +144,19 @@
   --t-data-md-leading: 1.5;
   --t-data-md-tracking: 0.02em;
   --t-data-md-weight: 400;
+
+  /* A recorded value set in capitals — an origin, a cultivar list. It exists as
+     a token for its tracking alone: capitals need more of it than lowercase,
+     and --t-data-md-tracking is the smallest in the mono set, so `uppercase`
+     composed onto data-md gave the one style here set in caps and tracked as
+     if it were not. 0.08em sits between that 0.02em and label-caps' 0.12em —
+     nearer the latter because capitals ask for it, under it because this is a
+     value rather than a heading. Size and leading track data-md deliberately;
+     it is the same style in a different case, not a fourth data size. */
+  --t-data-md-caps-size: var(--t-data-md-size);
+  --t-data-md-caps-leading: var(--t-data-md-leading);
+  --t-data-md-caps-tracking: 0.08em;
+  --t-data-md-caps-weight: var(--t-data-md-weight);
 
   --t-data-sm-size: 11px;
   --t-data-sm-leading: 1.45;

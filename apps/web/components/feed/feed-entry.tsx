@@ -83,7 +83,7 @@ export function FeedEntry({
           </ul>
         )}
 
-        <p className="line-clamp-4 text-body-excerpt text-ink-2">{entry.body[0]}</p>
+        <p className="line-clamp-4 text-body-md text-ink-2">{entry.body[0]}</p>
 
         <span className="data-sm uppercase text-clay">
           {entry.place}

@@ -150,7 +150,7 @@ export function PowderCard({
 
           {/* The record's opening paragraph, clamped — not a second summary
               written for the card. See `Powder.excerpt`. */}
-          <p className="line-clamp-3 text-body-excerpt text-ink-2">
+          <p className="line-clamp-3 text-body-md text-ink-2">
             {powder.excerpt}
           </p>
         </div>

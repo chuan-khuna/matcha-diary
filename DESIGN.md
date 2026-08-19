@@ -56,11 +56,6 @@ typography:
     fontSize: 15px
     fontWeight: 400
     lineHeight: 1.6
-  body-excerpt:
-    fontFamily: Inter
-    fontSize: 15px
-    fontWeight: 400
-    lineHeight: 1.65
   label-lg:
     fontFamily: Inter
     fontSize: 13px
@@ -73,6 +68,13 @@ typography:
     lineHeight: 1.5
     letterSpacing: 0.02em
     fontFeature: "'tnum' 1"
+  data-md-caps:
+    fontFamily: JetBrains Mono
+    fontSize: 13px
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: 0.08em
+    textTransform: uppercase
   data-sm:
     fontFamily: JetBrains Mono
     fontSize: 11px
@@ -352,19 +354,48 @@ rating axis labels, and rating values.
   feed. Both semi-bold with tightened tracking; post titles clamp at two lines.
 - **Body (18 / 15):** `body-prose` (18/1.75) is the review diary body — the loosest leading in the
   system, because it is the one place people read paragraphs. `body-lg` (18/1.55) is a lead-in
-  paragraph. `body-md` (15/1.6) is the default. `body-excerpt` (15/1.65) is the feed description,
-  clamped to four lines so every post keeps the same rhythm.
+  paragraph. `body-md` (15/1.6) is the default, and it is also the feed and card description —
+  clamped to four lines so every post keeps the same rhythm. There was briefly a second 15px style
+  for that job, `body-excerpt` at 1.65; it differed from `body-md` by 0.75px of line box, which over
+  a four-line clamp is 3px of block height. Two names for one style is worse than one name, because
+  it puts a choice at every call site that has no consequence and no rule to settle it. If a
+  description ever needs to differ from body copy, differentiate it on something a reader can see —
+  measure, colour, or a clamp baked into the style — not on 0.05 of leading.
 - **Label (13, Inter, 500):** Button text. The only place Inter appears at a weight other than 400 or
   600, and the only sans label style.
 - **Data (13 / 11 / 9, mono):** `data-md` for dates, cafés, handles, and rating values, with tabular
   figures so columns of numbers do not jitter. `data-sm` for chips, small buttons, and helper text.
   `data-xs` only for labels sitting on top of a photograph.
+- **Data caps (13, mono, uppercase):** `data-md-caps` for a recorded value that is set in capitals —
+  an origin, a cultivar list. It is a *value*, not a heading, which is what separates it from
+  `label-caps`: in the powder dialog the heading "Origin" is `label-caps` at 11px and the value
+  `UJI, KYOTO` beneath it is `data-md-caps` at 13px. Its 0.08em is the whole reason it is a token
+  rather than `uppercase` composed onto `data-md`. Capitals need *more* tracking than lowercase, not
+  less, and `data-md` is the least-tracked style in the mono set at 0.02em — so composing the two
+  produced the one style in this system that was set in caps and tracked as if it were not. The
+  0.08em sits between `data-md`'s 0.02em and `label-caps`'s 0.12em, nearer the latter because that
+  is what capitals ask for and slightly under it because a value need not be as airy as a heading.
 - **Label caps (11, mono, uppercase):** `label-caps` at 0.12em tracking for section headers such as
   TASTE NOTES. `label-axis` at 0.1em for rating axis names, which sit in a fixed 84px column and need
   the slightly tighter setting to fit. Both are uppercased in CSS, not in the source text.
 
 Weight is used sparingly: 400 for prose, 500 for button labels and an author's display name, 600 for
-headlines. Nothing is bold, nothing is italic, and no screen shows more than these three weights.
+headlines. Nothing is bold, and no screen shows more than these three weights.
+
+**Italic is allowed in one place: emphasis inside a record's prose.** This rule used to read "nothing
+is italic," and the records broke it the moment they were written — a cultivar history sets botanical
+binomials (*Camellia sinensis* var. *assamica*), gene symbols, and journal titles, and a scientific
+record cannot set those in roman. The rule was wrong rather than the content. What made it worse than
+a dead rule is that believing it meant nobody loaded the face: `next/font` defaults to
+`style: ['normal']`, so every one of those was a browser-synthesized oblique — the upright sheared,
+with no true italic *a*, *f* or *g* — on the one surface whose whole job is comfortable reading. Inter
+is now loaded with its italic, so `em` renders in a drawn face. Outside a record's prose, italic
+stays unused: not for UI copy, not for emphasis in the interface's own voice, and never on a mono
+style, where the recorded/authored split does the work instead.
+
+The Thai face has no italic either, and `IBM_Plex_Sans_Thai_Looped` offers none to load — so a Thai
+record's `em` is still synthesized. That is open rather than decided, and it belongs with the other
+per-script work below.
 
 ### Thai
 

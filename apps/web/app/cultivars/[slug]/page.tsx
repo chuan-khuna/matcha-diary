@@ -264,7 +264,7 @@ export default async function CultivarPage({
                               into the name itself. Kept, just no longer in the
                               way of resolving the reference. */}
                           {parent.note !== null && (
-                            <p className="mt-1 text-body-excerpt text-ink-2">
+                            <p className="mt-1 text-body-md text-ink-2">
                               {parent.note}
                             </p>
                           )}

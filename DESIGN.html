@@ -6,7 +6,7 @@
 <title>Matcha Diary — DESIGN.md preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
    Visual preview of DESIGN.md. The page is built out of the tokens it
@@ -71,10 +71,12 @@ code { font-family: var(--mono); font-size: 11px; letter-spacing: .04em; }
 .t-body-lg     { font-size: 18px; font-weight: 400; line-height: 1.55; }
 .t-body-prose  { font-size: 18px; font-weight: 400; line-height: 1.75; }
 .t-body-md     { font-size: 15px; font-weight: 400; line-height: 1.6; }
-.t-body-excerpt{ font-size: 15px; font-weight: 400; line-height: 1.65; }
 .t-label-lg    { font-size: 13px; font-weight: 500; line-height: 1.2; }
 .t-data-md     { font-family: var(--mono); font-size: 13px; line-height: 1.5;
                  letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+.t-data-md-caps{ font-family: var(--mono); font-size: 13px; line-height: 1.5;
+                 letter-spacing: .08em; font-variant-numeric: tabular-nums;
+                 text-transform: uppercase; }
 .t-data-sm     { font-family: var(--mono); font-size: 11px; line-height: 1.45; letter-spacing: .04em; }
 .t-data-xs     { font-family: var(--mono); font-size: 9px;  line-height: 1.2;  letter-spacing: .08em; }
 .t-label-caps  { font-family: var(--mono); font-size: 11px; line-height: 1.45;
@@ -358,7 +360,7 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
     <div class="grid g2" style="margin-top:var(--xl)">
       <div class="demo">
         <div class="demo-head"><h3>Green means state or data</h3></div>
-        <p class="t-body-excerpt variant" style="margin-bottom:var(--lg)">
+        <p class="t-body-md variant" style="margin-bottom:var(--lg)">
           The accent appears on the active nav item, the filled cells of a rating bar, and the single
           primary action on a screen. If green is being used because a surface looked plain, it is
           being used wrongly.
@@ -373,7 +375,7 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
       </div>
       <div class="demo">
         <div class="demo-head"><h3>There is no overall score</h3></div>
-        <p class="t-body-excerpt variant">
+        <p class="t-body-md variant">
           A cup is described by the shape of its individual taste ratings and by what the author
           wrote. Nothing is averaged, nothing collapses to a star count, and ratings never appear in
           the timeline — only on the review page. Do not add a summary number, however convenient it
@@ -564,16 +566,16 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
       <span class="t-body-prose variant">The front is all cut grass and something like snap peas. Then it turns: a long savory tail that coats the roof of the mouth.</span></div>
     <div class="spec"><span class="meta"><b>body-lg</b>18 / 400 / 1.55 · lead-in</span>
       <span class="t-body-lg variant">Ordered it thin on purpose — the shop grinds a first-harvest Uji.</span></div>
-    <div class="spec"><span class="meta"><b>body-md</b>15 / 400 / 1.6 · default</span>
+    <div class="spec"><span class="meta"><b>body-md</b>15 / 400 / 1.6 · default, and the feed excerpt clamped to 4 lines</span>
       <span class="t-body-md">Water was noticeably softer than what I get at home.</span></div>
-    <div class="spec"><span class="meta"><b>body-excerpt</b>15 / 400 / 1.65 · feed, clamped to 4 lines</span>
-      <span class="t-body-excerpt variant">Sifted the powder for once and it made an absurd difference — not one lump, not one gritty sip.</span></div>
     <div class="spec"><span class="meta"><b>label-lg</b>13 / 500 / 1.2 · button text</span>
       <span class="t-label-lg">Publish entry</span></div>
 
     <p class="sub-label t-label-caps">JetBrains Mono — recorded fact</p>
     <div class="spec"><span class="meta"><b>data-md</b>13 / 400 / 0.02em / tabular</span>
       <span class="t-data-md">KETTL TEA · BROOKLYN · 2026-08-04 · 4.5</span></div>
+    <div class="spec"><span class="meta"><b>data-md-caps</b>13 / 400 / 0.08em / uppercase · a value in capitals</span>
+      <span class="t-data-md-caps variant">Uji, Kyoto</span></div>
     <div class="spec"><span class="meta"><b>data-sm</b>11 / 400 / 0.04em · chips, hints</span>
       <span class="t-data-sm">umami · cut grass · astringency</span></div>
     <div class="spec"><span class="meta"><b>label-caps</b>11 / 400 / 0.12em / uppercase</span>
@@ -585,8 +587,10 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
 
     <p class="note" style="margin-top:var(--xl)">
       Weight is rationed: 400 for prose, 500 for button labels and an author's display name, 600 for
-      headlines. Nothing is bold, nothing is italic, and no screen shows more than these three
-      weights. Uppercasing happens in CSS, never in the source text.
+      headlines. Nothing is bold, and no screen shows more than these three weights. Uppercasing
+      happens in CSS, never in the source text. Italic is allowed in exactly one place — emphasis
+      inside a record's prose, where a <em>binomial</em> or a journal title needs it — and the face
+      is loaded rather than synthesized.
     </p>
   </section>
 
@@ -633,7 +637,7 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
             <span class="width-bar" style="width:5.6%"></span>
           </div>
         </div>
-        <p class="prose t-body-excerpt" style="margin-top:var(--lg)">
+        <p class="prose t-body-md" style="margin-top:var(--lg)">
           <strong>1080</strong> for chrome and reference pages (24px gutter). <strong>720</strong> for
           the review and the composer — wide enough for a 3:2 cover, narrow enough that an 18px diary
           body stays near 70 characters. <strong>620</strong> for the feed, where the gutter drops to
@@ -706,11 +710,11 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
         <div class="box" style="border-radius:9999px"><code>full</code></div>
       </div>
       <div>
-        <p class="prose t-body-excerpt" style="margin:0">
+        <p class="prose t-body-md" style="margin:0">
           Radius is assigned by <strong>material, not by size</strong> — the same button is 3px
           whether it is 28px or 40px tall.
         </p>
-        <p class="prose t-body-excerpt" style="margin-top:var(--md)">
+        <p class="prose t-body-md" style="margin-top:var(--md)">
           The zero is the load-bearing decision. A taste note is a <strong>stamped label, not a
           bubble</strong> — square corners, monospace, no icon, no dot. It is the sharpest shape in
           the system and the only component that never softens, which is what makes a row of them

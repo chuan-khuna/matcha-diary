@@ -8,9 +8,17 @@ import "@/styles/globals.css";
 // Inter carries anything a person wrote; JetBrains Mono carries anything that
 // is a fact about the cup. These variables are what the active preset's
 // --family-sans / --family-mono resolve to.
+// Italic is loaded, and it is loaded for one reason: a cultivar record sets
+// botanical binomials, gene symbols and journal titles in `em`, and a browser
+// with no italic face to reach for synthesizes one by shearing the upright —
+// no true italic a, f or g, and skewed stem weights, on the one surface whose
+// job is comfortable reading. `next/font` defaults to `style: ["normal"]`, so
+// this is opt-in rather than something the face brings along. See DESIGN.md
+// for where italic is allowed, which is only there.
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 const jetbrainsMono = JetBrains_Mono({

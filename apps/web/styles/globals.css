@@ -140,11 +140,6 @@
   --text-body-md--letter-spacing: var(--t-body-md-tracking);
   --text-body-md--font-weight: var(--t-body-md-weight);
 
-  --text-body-excerpt: var(--t-body-excerpt-size);
-  --text-body-excerpt--line-height: var(--t-body-excerpt-leading);
-  --text-body-excerpt--letter-spacing: var(--t-body-excerpt-tracking);
-  --text-body-excerpt--font-weight: var(--t-body-excerpt-weight);
-
   --text-label-lg: var(--t-label-lg-size);
   --text-label-lg--line-height: var(--t-label-lg-leading);
   --text-label-lg--letter-spacing: var(--t-label-lg-tracking);
@@ -201,6 +196,21 @@
   /* Dates, counts and rating values sit in fixed columns. Part of the style,
      not something a call site opts into. */
   font-variant-numeric: tabular-nums;
+}
+
+/* Same style, different case — so it takes data-md's size and leading through
+   the tokens rather than repeating them, and differs only where the case
+   demands: tracking, and the transform itself. Uppercasing happens here rather
+   than in the source text, the same way label-caps does it, so a value stays
+   readable in the markup and in a screen reader. */
+@utility data-md-caps {
+  font-family: var(--family-mono);
+  font-size: var(--t-data-md-caps-size);
+  line-height: var(--t-data-md-caps-leading);
+  letter-spacing: var(--t-data-md-caps-tracking);
+  font-weight: var(--t-data-md-caps-weight);
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
 }
 
 @utility data-sm {
@@ -362,8 +372,8 @@
    characters to the line: prose set for a measure it does not have, breaking
    every clause across two rows.
 
-   So the block drops to `body-excerpt` (15/1.65), which is the style this
-   system already describes a powder in on its card. That is the whole reason
+   So the block drops to `body-md` (15/1.6), which is the style this system
+   already describes a powder in on its card. That is the whole reason
    this rebinds the *token* rather than adding a `text-*` to the call site:
    the map in `components/cultivars/mdx-components` writes `text-body-prose`
    onto every paragraph, list and blockquote it dresses, and a utility on the
@@ -376,6 +386,6 @@
    a function of column width, and the headings keep their own sizes: a record
    that grows an `h2` should still read as a heading here. */
 @utility prose-column {
-  --t-body-prose-size: var(--t-body-excerpt-size);
-  --t-body-prose-leading: var(--t-body-excerpt-leading);
+  --t-body-prose-size: var(--t-body-md-size);
+  --t-body-prose-leading: var(--t-body-md-leading);
 }

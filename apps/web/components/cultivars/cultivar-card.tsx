@@ -41,7 +41,7 @@ export function CultivarCard({ cultivar }: { cultivar: CultivarCardData }) {
         )}
       </div>
 
-      <p className="mt-2.5 line-clamp-4 text-body-excerpt text-ink-2">
+      <p className="mt-2.5 line-clamp-4 text-body-md text-ink-2">
         {cultivar.summary}
       </p>
 

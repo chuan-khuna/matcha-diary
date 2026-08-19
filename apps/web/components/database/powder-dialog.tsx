@@ -154,7 +154,7 @@ export function PowderDialog({
             {powder.origin !== "—" && (
               <section className="flex flex-col gap-3">
                 <h3 className="label-caps text-clay">Origin</h3>
-                <p className="data-md uppercase">{powder.origin}</p>
+                <p className="data-md-caps">{powder.origin}</p>
               </section>
             )}
 
@@ -167,7 +167,7 @@ export function PowderDialog({
                 {/* Tags, and the record says nothing about their shares —
                     no maker publishes the ratio and a made-up percentage
                     would read as a fact. */}
-                <p className="data-md uppercase">
+                <p className="data-md-caps">
                   {powder.cultivars.join(" · ")}
                 </p>
               </section>
