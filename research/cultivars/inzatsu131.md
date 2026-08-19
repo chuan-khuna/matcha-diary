@@ -10,14 +10,14 @@ registrationNumber: null
 registry: unregistered
 crossedYear: null
 selectedYear: 1944
-selectedFrom: "A natural, open-pollinated seed of 'Manipuri No. 15', an Assam (var. assamica) mother tree grown at the Shizuoka Prefecture Tea Experiment Station from seed brought back from Assam by Maruo Fumio in 1922; the pollen parent was not recorded and is presumed to be a local var. sinensis tree growing nearby."
+selectedFrom: "A natural, open-pollinated seed of 'Manipur No. 5', an Assam (var. assamica) mother tree grown at the Shizuoka Prefecture Tea Experiment Station from seed brought back from Assam by Maruo Fumio in 1922; the pollen parent was not recorded and is presumed to be a local var. sinensis tree growing nearby."
 bredAt: Shizuoka Prefecture Tea Experiment Station (静岡県立茶業試験場), development credited to Arima Toshiharu (有馬利治, 1912–1999)
 prefecture: Shizuoka
 parents:
-  female: Manipuri No. 15
+  female: Manipur No. 5
   male: null
 parentNotes:
-  female: マニプリ15号, Assam / var. assamica seedling
+  female: "'Manipur No. 5', Assam / var. assamica clonal strain introduced from Manipur"
 teaTypes:
   - sencha
   - fukamushi sencha
@@ -71,7 +71,7 @@ directions — Sofu and Fujikaori.
 
 ## Lineage
 
-- **Manipuri No. 15** (マニプリ15号) ♀ — an Assam (var. *assamica*) mother tree grown at the
+- **Manipur No. 5** ♀ — an Assam (var. *assamica*) mother tree grown at the
   Shizuoka station from seed Maruo Fumio brought back from Assam in 1922. It was one of roughly
   ninety numbered Assam introductions planted at the station from that expedition; Inzatsu 131 grew
   from a seed harvested off this particular tree.
@@ -110,7 +110,7 @@ individually numbered trees, one to ninety.
 
 ### Selection under Arima Toshiharu, 1944
 
-In 1944, a seedling grown from a seed of tree "Manipuri No. 15" was selected as an Assam–Japanese
+In 1944, a seedling grown from a seed of tree "Manipur No. 5" was selected as an Assam–Japanese
 hybrid with distinctive qualities and given the station's own designation, Shizu-Inzatsu 131. Its
 development is credited to Arima Toshiharu (有馬利治, 1912–1999), who had been responsible for
 black-tea cultivar breeding at the Miyazaki research station from 1938 before transferring to
@@ -171,7 +171,7 @@ cultivars — it was never trialled or registered as one — so the record here 
 than for Sofu or Fujikaori. Early Shizuoka station documents describe it as early-budding ("very
 hasty") with weak resistance to both cold and disease; no source consulted gives a day-count
 relative to Yabukita or breaks disease resistance down by pathogen. Two general studies on Assam
-variety breeding utility from the same research-station tradition (1957, 1966) — not specific to
+variety breeding utility from the same research-station tradition (both 1966) — not specific to
 Inzatsu 131, but describing var. *assamica* material generally — note poor rooting from cuttings,
 sparse side branching, oversized mature leaves, and weak cold hardiness as typical Assam-parent
 traits in this breeding programme; these are consistent with, though not direct evidence for,

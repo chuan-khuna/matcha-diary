@@ -4,7 +4,7 @@ slug: toyoka
 kana: とよか
 kanji: 豊香
 romaji: Toyoka
-nameMeaning: "Toyo (豊, abundant) plus ka (香, fragrance) — 'abundant fragrance'. As with other hiragana-era Cha Norin registrations (compare Sayamakaori), the plant itself was registered under the kana form とよか rather than kanji; 豊香 is the conventional kanji gloss used on vendor and retailer pages."
+nameMeaning: "Toyo (豊) from 豊岡 (Toyooka), the test site where the cultivar was raised, plus ka (香, fragrance) for the aroma that distinguishes it — Saitama Prefecture states the name was given because the plant was bred at the 豊岡試験地 of the station's pre-relocation site and is characterised by its fragrance. As with other hiragana-era Cha Norin registrations (compare Sayamakaori), it was registered under the kana form とよか rather than kanji, but 豊香 is the prefecture's own rendering rather than a vendor gloss."
 registered: 1976
 registrationNumber: 茶農林33号 (Cha Norin No. 33)
 registry: MAFF
@@ -135,9 +135,10 @@ specifically were found.
 In the cup as sencha, growers describe good colour and pronounced body — strong astringency,
 bitterness and richness rather than a light, easy-drinking style — alongside an aroma repeatedly
 called 一癖ある, "distinctive" or "idiosyncratic" rather than simply pleasant. One grower's tasting
-note goes further, describing a milk-like note on the finish. That combination of a powerful,
-unusual aroma and heavy body is plausibly why the name means "abundant fragrance" and also why it
-never became an easy sell as everyday sencha: it reads as a characterful, minority-taste tea
+note goes further, describing a milk-like note on the finish. That powerful, unusual aroma is
+the trait the name records — Saitama named the cultivar for the fragrance that set it apart, joined
+to the 豊岡 (Toyooka) test site where it was raised — and paired with the heavy body it is plausibly
+why it never became an easy sell as everyday sencha: it reads as a characterful, minority-taste tea
 rather than a balanced one, and it lost out in Sayama to the milder, better-adopted Sayamakaori
 in the very market it was bred for. As black tea, that same intensity has instead worked in its
 favour, though no source consulted gives a specific flavour description of the finished wakōcha

@@ -22,14 +22,15 @@ teaTypes:
   - fukamushi sencha
   - gyokuro
   - black tea
-buddingTime: medium-late (中晩生) — about 4 days after Yabukita
+buddingTime: medium-late (中晩生) — budding about 8 days after Yabukita and first-flush plucking about 4 days after, per the 1971 release paper
 recommendedRegions:
   - Shizuoka
-  - Kagoshima
+  - Kyoto
+  - Miyazaki
 yield: higher than Yabukita's despite smaller leaves; strong regenerative vigour after pruning. No published kg/10a trial figure located.
-cultivationShare: roughly 3% of Japan's tea acreage, concentrated in Shizuoka and Kagoshima
+cultivationShare: 477 ha and 1% of Japan's tea area in 2023, down from 646 ha in 2008 (MAFF). MAFF's 2012 prefectural breakdown puts it at 0.5% of Shizuoka's tea area, 4% of Miyazaki's and 4% of Fukuoka's; it does not appear among Kagoshima's main cultivars
 diseaseResistance:
-  - cold (strong — the trait credited with letting growers carry it into Kagoshima and other districts beyond Shizuoka)
+  - cold (the release paper rates cold resistance the same as Yabukita's in its characteristics table but calls it strong in the summary, and credits late budding plus cold tolerance with suiting the cultivar to frost-prone mountain districts)
   - disease and pest resistance generally (strong, reported consistently across grower sources; no cultivar-specific pathogen trial data located)
   - regrowth after pruning (strong)
 notableDescendants:
@@ -38,11 +39,19 @@ notableDescendants:
   - Koshun (香駿)
 rarity: Niche nationally — its polarising milk-like aroma reportedly depressed its market price for decades against Yabukita-calibrated buyers; interest has picked up more recently, particularly overseas.
 lineageNote: A controlled cross, not a landrace selection — S6 (a Shizuoka zairai seedling kept and numbered by the station itself) crossed with Yabukita. Its pedigree is unusually well documented in both directions for a 1970-era Norin cultivar, backward to S6 and forward to three cultivars that used it as a parent in turn.
-conflicts: "\"S6\" — Some English-language vendor sources (myjapanesegreentea.com, tearoir.com) gloss S6 as 'Shizuoka Zairai No. 16'. Japanese-language sources (kyo-chikiriya.com's 'Shizuoka Native 6 (S6)'; search-indexed text attributed to shinryokuen.co.jp reading '静岡県在来6号「S-6」') instead identify it as No. 6. The MAFF registered-cultivar table lists a separate '静在16' (Zairai No. 16) as a parent of Okumidori (茶農林32号), so this record follows the No. 6 reading as better supported and keeps the two selections distinct. Separately, the 1949 crossing year is sourced only to myjapanesegreentea.com; no Japanese-language primary source confirming that specific year was located, though none contradicts it either."
+conflicts: "\"S6\" — Some English-language vendor sources (myjapanesegreentea.com, tearoir.com) gloss S6 as 'Shizuoka Zairai No. 16'. Japanese-language sources (kyo-chikiriya.com's 'Shizuoka Native 6 (S6)'; search-indexed text attributed to shinryokuen.co.jp reading '静岡県在来6号「S-6」') instead identify it as No. 6. The MAFF registered-cultivar table lists a separate '静在16' (Zairai No. 16) as a parent of Okumidori (茶農林32号), so this record follows the No. 6 reading and keeps the two selections distinct. The 1971 release paper in 茶業研究報告 settles it outright — 'S6(静岡在来6号)を母とし' — and confirms the 1949 crossing year in the same sentence, so neither is in doubt any longer."
 summary: A 1949 Shizuoka cross of Yabukita and a local zairai selection (S6), registered in 1970 as Cha Norin No. 30, Kanayamidori is known above all for a sencha with an unmistakably sweet, milky aroma, and later became a parent of Fushun, Harumidori and Koshun.
 sources:
-  - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list)
+  - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林30号 row)
     url: https://minorien.jp/university/hinshu.pdf
+  - title: 煎茶用新登録品種「かなやみどり」 (Katsuo, Watanabe & Masuda, 茶業研究報告 35, 1971 — the release paper)
+    url: https://www.jstage.jst.go.jp/article/cha1953/1971/35/1971_35_23/_pdf
+  - title: 茶業及びお茶の文化に係る現状と課題 (MAFF — 品種別栽培面積等の推移)
+    url: https://www.maff.go.jp/j/seisan/tokusan/cha/attach/pdf/230929-4.pdf
+  - title: 新品種・新技術の開発・保護・普及の方針 茶 (MAFF — 主要府県の品種構成)
+    url: https://www.maff.go.jp/j/kanbo/kihyo03/gityo/tuyomi/pdf/05-02tya.pdf
+  - title: 茶品種ハンドブック第6版 (NARO — pedigree charts for ふうしゅん, はるみどり, せいめい)
+    url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: The Kanayamidori Tea Cultivar
     url: https://www.myjapanesegreentea.com/kanayamidori
   - title: "What is Kanaya Midori (かなやみどり)?"
@@ -89,16 +98,16 @@ all name it as a parent.
 
 This is a controlled cross, not a landrace selection or a sport. S6 was evidently treated as a
 resource in its own right rather than raw material used once: it reappears as one grandparent (via
-the intermediate hybrid F1NN8, itself S6 × Tamamidori) of Okuyutaka, registered at the same station
+the intermediate hybrid F1NN8, itself Tamamidori × S6) of Okuyutaka, registered at the same station
 in 1983. Kanayamidori itself went on to be used as a parent three times over:
 
 - **Harumidori** (はるみどり, 茶農林48号, 2000) — Kanayamidori × Yabukita, with Kanayamidori as the
   seed parent. Bred at the Makurazaki station in Kagoshima (old strain name 枕崎19号).
 - **Fushun** (ふうしゅん, 茶農林41号, 1991) — Z1 × Kanayamidori, with Kanayamidori as the pollen
   parent. Bred back at Kanaya (old strain name 金谷12号).
-- **Koshun** (香駿, registered 1996 under the Plant Variety Protection Act rather than as a Norin
-  cultivar) — Kurasawa × Kanayamidori, crossed in 1970, the same year Kanayamidori itself was
-  registered.
+- **Koshun** (香駿, registered in 2000 under the Plant Variety Protection Act rather than as a Norin
+  cultivar; the application was filed in 1996) — Kurasawa × Kanayamidori, crossed in 1970, the same
+  year Kanayamidori itself was registered.
 
 ## History
 
@@ -127,13 +136,15 @@ Shizuoka and Kagoshima producers rather than disappearing into blends.
 
 ## Characteristics
 
-Kanayamidori buds medium-late, roughly four days after Yabukita (中晩生). The tree has a moderate,
-fairly vigorous form; its leaves are oval, dark and glossy, and slightly smaller than Yabukita's, yet
-the bush still out-yields Yabukita at harvest. Regrowth after pruning is strong, which along with its
-broad disease and pest resistance has made it a repeated choice for organic and reduced-input
-gardens. Cold tolerance is strong and is the trait usually credited with letting the cultivar spread
-from Shizuoka into Kagoshima; resistance to specific pathogens such as anthracnose or ring spot does
-not appear to have been published separately from this general reputation.
+Kanayamidori buds medium-late (中晩生), about eight days after Yabukita, and is plucked about four
+days after it. The tree has a moderate, fairly vigorous form; its leaves are oval, dark and glossy,
+and slightly smaller than Yabukita's, yet the bush still out-yields Yabukita at harvest. Regrowth
+after pruning is strong, which along with its broad disease and pest resistance has made it a
+repeated choice for organic and reduced-input gardens. The release paper rates cold tolerance the
+same as Yabukita's in its characteristics table while calling it strong in its summary, and pairs it
+with the late budding to argue the cultivar suits frost-prone mountain districts; resistance to
+specific pathogens such as anthracnose or ring spot does not appear to have been published
+separately from this general reputation.
 
 The cup is the reason the cultivar exists. Tasters describe the aroma as sweet and milky —
 sometimes narrowed to porridge oats, vanilla, brown sugar or honeyed steamed greens, sometimes to a

@@ -33,7 +33,7 @@ notableDescendants:
   - Kanaya Homare
   - Kanaya Ibuki
 lineageNote: An open-pollinated Yabukita seedling rather than a controlled cross, so its pollen parent was never recorded; it has since been used, directly or as a documented parent, by breeders in Saitama, Miyazaki and Shizuoka, though two cultivars sometimes credited to it (Musashikaori, Miyamakaori) trace instead to the similarly named Sayamamidori once the fuller pedigree is checked.
-conflicts: "Kanaya Homare's registration number could not be pinned down: an AI-summarised search result attributed Plant Variety Protection No. 17960 to it, but a direct lookup in the MAFF PVP database shows No. 17960 (registered 19 March 2009) actually belongs to its sibling cultivar Kanaya Ibuki; Kanaya Homare's own number is left unstated here rather than guessed. Separately, an older tabulated MAFF-style registry (茶農林登録品種一覧, via minorien.jp) lists Musashikaori and Miyamakaori's origin as running through さやまかおり, while NARO's detailed pedigree charts (茶品種ハンドブック第6版) trace both instead through the separate, similarly named cultivar Sayamamidori (さやまみどり, Cha Norin No. 5). The more detailed pedigree source is preferred here, so those two are omitted from notableDescendants above."
+conflicts: "An AI-summarised search result attributed Plant Variety Protection No. 17960 to Kanaya Homare, but a direct lookup in the MAFF PVP database shows No. 17960 (registered 19 March 2009) belongs to its sibling cultivar Kanaya Ibuki; Kanaya Homare is the adjacent No. 17961, registered the same day to the same applicant. Separately, an older tabulated MAFF-style registry (茶農林登録品種一覧, via minorien.jp) lists Musashikaori and Miyamakaori's origin as running through さやまかおり, while NARO's detailed pedigree charts (茶品種ハンドブック第6版) trace both instead through the separate, similarly named cultivar Sayamamidori (さやまみどり, Cha Norin No. 5). The more detailed pedigree source is preferred here, so those two are omitted from notableDescendants above."
 summary: A slightly early, strongly cold-hardy Yabukita seedling registered in Saitama in 1971 as Cha Norin No. 31, known for concentrated astringency and a powerful, sometimes floral aroma, and now parent to Sainomidori, Yumekaori, Nanmei and the Kanaya Homare/Ibuki pair.
 sources:
   - title: "The Japanese Tea Cultivars"
@@ -48,6 +48,8 @@ sources:
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: "品種登録迅速化総合電子化システム — 登録品種検索 (第17960号, 金谷いぶき)"
     url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=17960&LANGUAGE=Japanese
+  - title: "品種登録迅速化総合電子化システム — 登録品種検索 (第17961号, 金谷ほまれ)"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=17961&LANGUAGE=Japanese
   - title: "水野昭南さん｜おおいがわの収穫人"
     url: https://ooigawa.ja-shizuoka.or.jp/member/detail/14
   - title: "緑茶の品種「さやまかおり」のご紹介と、おすすめの淹れ方"
@@ -81,7 +83,7 @@ Because it comes from open pollination rather than a deliberate cross, Sayamakao
 one step removed from a landrace selection: one parent is documented, the other is not, in the same
 way Yabukita's own zairai origin left its pollen parent unknowable. What is unusually well documented
 is Sayamakaori's own use as a parent since. Saitama's breeding programme used it directly to raise
-**Sainomidori** (さいのみどり, Cha Norin No. 50, 2006) as a further open-pollinated seedling. In
+**Sainomidori** (さいのみどり, Cha Norin No. 50, 2003) as a further open-pollinated seedling. In
 Miyazaki, it was crossed with a Miyazaki-bred line to produce **Yumekaori** (ゆめかおり, 2009) and,
 via a different Makurazaki cross, **Nanmei** (なんめい, Sayamakaori ♀ × Makurazaki 13 ♂, bred at
 NARO's Makurazaki tea research station and registered in February 2014) — notable as the first
@@ -89,8 +91,9 @@ Japanese tree or tea cultivar selected using DNA markers, used specifically to t
 resistance gene it inherited from Sayamakaori. Independently in Shizuoka, the grower-breeder Mizuno
 Shonan of the Ōigawa Agricultural Cooperative's Kanaya tea centre crossed Sayamakaori with the rare
 cultivar Marishi (摩利支) and, after growing out roughly 6,000 seedlings over three years and tasting
-the results for close to three decades, registered two of them as **Kanaya Homare** (金谷ほまれ) and
-**Kanaya Ibuki** (金谷いぶき, Plant Variety Protection No. 17960, registered 19 March 2009).
+the results for close to three decades, registered two of them as **Kanaya Homare** (金谷ほまれ,
+Plant Variety Protection No. 17961) and **Kanaya Ibuki** (金谷いぶき, Plant Variety Protection
+No. 17960), both registered 19 March 2009.
 
 One caution worth flagging: Sayamakaori is easily confused with **Sayamamidori** (さやまみどり,
 Cha Norin No. 5) — an unrelated, earlier Saitama cultivar selected from Uji Zairai seed in 1953.
@@ -115,11 +118,11 @@ tolerance. It was registered in 1971 as 茶農林31号 under the name Sayamakaor
 It has since become Sayama tea's signature cultivar and one of the most widely grown in Japan outside
 Yabukita itself — commonly cited as the fifth most planted nationally — with meaningful acreage as
 far away as Shizuoka and Mie. It has also proved a useful parent: Saitama used it to raise Sainomidori
-in 2006; Miyazaki crossed it into Yumekaori (2009) and, using DNA-marker selection to confirm the
-scale-insect resistance carried over from Sayamakaori, Nanmei (2014) — the first Japanese tree or tea
-cultivar bred with that technique. In Shizuoka, an individual grower, Mizuno Shonan, spent roughly
+in 2003; Miyazaki crossed it into Yumekaori (2009), and NARO's Makurazaki station, using DNA-marker
+selection to confirm the scale-insect resistance carried over from Sayamakaori, raised Nanmei
+(2014) — the first Japanese tree or tea cultivar bred with that technique. In Shizuoka, an individual grower, Mizuno Shonan, spent roughly
 thirty years crossing Sayamakaori with the rare cultivar Marishi and selecting among the seedlings,
-eventually registering Kanaya Homare and Kanaya Ibuki around 2009.
+eventually registering Kanaya Homare and Kanaya Ibuki in 2009.
 
 ## Characteristics
 

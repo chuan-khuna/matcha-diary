@@ -8,10 +8,12 @@ nameMeaning: "南爽 — \"minami\" (south) and \"sayaka\" (clear, refreshing). 
 registered: 1991
 registrationNumber: 茶農林42号 (Cha Norin No. 42)
 registry: MAFF
-plantVarietyRegistration: 品種登録第3932号, registered 14 March 1994 under the Plant Variety Registration Act (種苗法) — a separate, later registration; see conflicts
+plantVarietyRegistration: 品種登録第3932号, applied for 1 June 1991 and registered 14 March 1994 under the Plant Variety Registration Act (種苗法), with Miyazaki Prefecture as the registered holder; the breeder's right ran 18 years and lapsed on 15 March 2012, so the handbook now lists it as 一般品種 — a separate, later registration; see conflicts
+strainNames:
+  - 宮崎9号 (Miyazaki No. 9)
 crossedYear: 1970
 selectedYear: null
-bredAt: Miyazaki Prefecture — sources render the station in English as the "Miyazaki Prefectural Agricultural Experiment Station" or "Miyazaki Agricultural Research Institute"; no source gives its exact contemporary Japanese name for the 1970s–90s trial period
+bredAt: Miyazaki Prefectural Agricultural Experiment Station, Tea Research Branch (宮崎県総合農業試験場茶業支場), at Kawaminami in Koyu District — the station NARO's handbook lists as the contact for its Miyazaki-bred cultivars; English secondary sources render it variously as the "Miyazaki Prefectural Agricultural Experiment Station" or the "Miyazaki Agricultural Research Institute"
 prefecture: Miyazaki
 parents:
   female: Miya A-6
@@ -46,13 +48,20 @@ conflicts: >
   table. Separately, NARO's own 茶品種ハンドブック gives a Plant Variety Registration Act
   (種苗法) registration dated 14 March 1994, No. 3932 — a different, later, IP-protection-style
   registration under a different numbering scheme entirely (compare Benifuuki, No. 4591 in the
-  same handbook, whose Cha Norin number is unrelated). I could not independently verify "Cha
-  Norin No. 42" against a primary MAFF list; I trust it because the same secondary source's
-  parentage and history match NARO's pedigree chart exactly on every other checkable point.
+  same handbook, whose Cha Norin number is unrelated). "Cha Norin No. 42" also stands on the
+  compiled 茶農林登録品種一覧 registry table, which gives the 茶農林42号 row as みなみさやか,
+  strain 宮崎9号, bred 1991 in Miyazaki for sencha — so the two numbers are independently
+  attested and simply belong to two different schemes.
 summary: A 1970 Miyazaki cross of Miya A-6 and Chamoto F1 NN27, registered in 1991 as Cha Norin No. 42, Minamisayaka is unusual among Japanese sencha cultivars for carrying Assam and Caucasus heritage, giving it a milky, floral aroma prized for pan-roasted and black tea.
 sources:
   - title: 茶品種ハンドブック 第6版 Version 2 (NARO Tea Cultivar Handbook, 6th ed.)
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
+  - title: "附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林42号 row)"
+    url: https://minorien.jp/university/hinshu.pdf
+  - title: "登録品種データベース — みなみさやか（品種登録番号3932）"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=3932&LANGUAGE=Japanese
+  - title: "煎茶用品種「みなみさやか」の育成 (breeding paper record, AgriKnowledge)"
+    url: https://agriknowledge.affrc.go.jp/RN/2010551059
   - title: "品種茶／みなみさやか (Shinkoju cultivar-tea catalogue page)"
     url: https://www.shinkoju.com/品種茶/みなみさやか/
   - title: The Minamisayaka Tea Cultivar
@@ -99,28 +108,32 @@ programmes that imported Assam and other foreign material for black tea developm
 NARO chart shows an unrelated Assam-descended parent behind Benifuuki.
 
 Minamisayaka is a controlled cross, not a landrace selection, and every plant of it is a clone of
-the individual selected from that 1970 cross. Miya A-6 was also used, independently, to breed the
-Unkai (雲海) cultivar from the same pair of grandparents (Takachiho × Miya F1-9-4-48) — a different
-seedling was selected in that case, so Unkai and Minamisayaka's female parent are full siblings
-rather than the same plant. No descendants of Minamisayaka itself are recorded in the sources
+the individual selected from that 1970 cross. The same pair of grandparents (Takachiho × Miya
+F1-9-4-48) also produced the Unkai (雲海) cultivar, Cha Norin No. 29, selected at the same station
+as strain A15 — a different seedling out of that cross, so Unkai and Minamisayaka's female parent
+are full siblings rather than the same plant. No descendants of Minamisayaka itself are recorded in the sources
 consulted.
 
 ## History
 
 Miya A-6 and Chamoto F1 NN27 were crossed in 1970. The resulting seedlings were raised and
-evaluated at a Miyazaki prefectural tea research station for roughly two decades — sources give
-the institution's English name inconsistently ("Miyazaki Prefectural Agricultural Experiment
-Station" and "Miyazaki Agricultural Research Institute" both appear), and none gives its precise
-contemporary Japanese name.
+evaluated for roughly two decades at the Tea Research Branch of the Miyazaki Prefectural
+Agricultural Experiment Station (宮崎県総合農業試験場茶業支場) at Kawaminami — the station NARO's
+handbook still lists as the contact for the cultivar. English-language sources render its name
+inconsistently ("Miyazaki Prefectural Agricultural Experiment Station" and "Miyazaki Agricultural
+Research Institute" both appear).
 
-The best individual from that trial was named and registered in 1991 under MAFF's national
-tea-cultivar naming system, becoming, by the account of myjapanesegreentea.com, "tea cultivar
-number 42" — Cha Norin No. 42. NARO's own handbook separately records a later, different kind of
-registration: on 14 March 1994, Minamisayaka was registered under the Plant Variety Registration
-Act (種苗法) as variety No. 3932, a scheme that assigns sequential numbers across all registered
-crops rather than tea specifically (compare Benifuuki's unrelated No. 4591 in the same table). The
-two registrations are easy to conflate, and are recorded separately in the frontmatter of this
-record; see the `conflicts` note there.
+The best individual from that trial, strain 宮崎9号, was named and registered in 1991 under MAFF's
+national tea-cultivar naming system as Cha Norin No. 42 — the row the 茶農林登録品種一覧 registry
+table gives it, listing it as a Miyazaki sencha cultivar of that year. NARO's own handbook
+separately records a later, different kind of registration: applied for on 1 June 1991 and granted
+on 14 March 1994, Minamisayaka was registered under the Plant Variety Registration Act (種苗法) as
+variety No. 3932, to Miyazaki Prefecture, a scheme that assigns sequential numbers across all
+registered crops rather than tea specifically (compare Benifuuki's unrelated No. 4591 in the same
+table). That breeder's right ran its eighteen years and lapsed on 15 March 2012, which is why the
+handbook now marks the cultivar 一般品種 rather than 登録品種. The two registrations are easy to
+conflate, and are recorded separately in the frontmatter of this record; see the `conflicts` note
+there.
 
 NARO's handbook gives the naming rationale directly: bred in Miyazaki, suited to warm regions, and
 carrying a refreshing aroma, it was named Minamisayaka — written 南爽, "south" and "clear/fresh" —

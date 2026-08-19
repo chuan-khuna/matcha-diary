@@ -9,7 +9,7 @@ registered: 1986
 registrationNumber: 茶農林36号 (Cha Norin No. 36)
 registry: MAFF
 crossedYear: 1957
-bredAt: Saitama Prefectural Tea Experiment Station (埼玉県茶業試験場), formerly the Saitama Prefectural Tea Research Institute (埼玉県茶業研究所, established 1951)
+bredAt: Saitama Prefectural Tea Experiment Station (埼玉県茶業試験場), the name the Saitama Prefectural Tea Research Institute (埼玉県茶業研究所, founded 1928) took in November 1971; the institution carries the 茶業研究所 name again today
 prefecture: Saitama
 parents:
   female: Yabukita
@@ -25,16 +25,24 @@ recommendedRegions:
   - Kanto and Tosan generally — the cold northern limit of Japan's tea-growing area
 yield: "first-flush average 241 kg/10a (139% of Yabukita's 174 kg/10a) and second-flush average 386 kg/10a (170% of Yabukita's 227 kg/10a), from a multi-year clonal comparison trial at the home station; multi-prefecture adaptability trials elsewhere found first-flush yield closer to level with Yabukita"
 diseaseResistance:
-  - freeze / red-scorch frost damage, 赤枯れ (strong — field damage grade 1.7 against Yabukita's 2.7, confirmed by a statistically significant indoor cold-shock test, 1.33 against 2.17)
-  - dry-cold / blue-scorch damage, 青枯れ (medium-to-fairly strong — improved over Yabukita but short of the reference cultivar Sayamakaori)
+  - freeze / red-scorch frost damage, 赤枯れ (fairly strong, やや強 in the release paper's characteristic table — field damage grade 1.7 against Yabukita's 2.7, confirmed by a statistically significant indoor cold-shock test, 1.33 against 2.17)
+  - dry-cold / blue-scorch damage, 青枯れ (fairly strong, やや強 in the same table — field damage grade 1.8 against Yabukita's 2.5, improved over Yabukita but short of the reference cultivar Sayamakaori)
   - split-bark type frost injury, 裂傷型凍害 (about the same as Yabukita — no consistent advantage over five years of testing at Kagoshima)
   - anthracnose, 炭疽病 (susceptible — tracks Yabukita's incidence; growers are advised against it in warm, anthracnose-prone districts)
 lineageNote: A controlled backcross rather than a fresh cross — Yabukita was crossed against its own earlier hybrid offspring, so Yabukita supplies three of Fukumidori's four grandparent-equivalent genetic shares. No descendants of Fukumidori itself were found in the sources consulted.
-conflicts: "Two secondary sources (the japaneseteasommelier registry and myjapanesegreentea's cultivar list) give 1988 as Fukumidori's registration year. The release paper resolves this: the MAFF Cha Norin No. 36 designation was announced within the ministry on 13 May 1986 and registered in June 1986 (per the paper's own English summary), while a separate registration under the Seed and Seedling Act (種苗法) — filed by the Saitama prefectural governor as an employment-bred cultivar — was still pending when the paper went to press in June 1987. 1988 most likely marks that second, separate registration completing, not the Cha Norin designation."
+conflicts: "1988 turns up alongside 1986 as Fukumidori's registration year, and both are right. The release paper gives the Cha Norin side: deliberated within the ministry on 13 May 1986 and published in the official gazette of 6 June 1986 as Cha Norin No. 36, while a separate registration under the Seed and Seedling Act (種苗法) — filed by the Saitama prefectural governor as an employment-bred cultivar — was still pending when the paper went to press in June 1987. Saitama's own cultivar page dates that second registration to 昭和63年, 1988. The two secondary lists consulted (the japaneseteasommelier registry and myjapanesegreentea's cultivar list) both carry the pair, 1986 for the name registration and 1988 for the cultivar registration."
 summary: A Saitama-bred sencha cultivar registered in 1986 as Cha Norin No. 36, produced by backcrossing Yabukita against its own earlier hybrid offspring 23F1-107 (Sayamamidori × Yabukita); it out-yields Yabukita by roughly a third to two-thirds and resists frost markedly better, bred for the cold northern edge of Japan's tea belt.
 sources:
   - title: "煎茶用新登録品種\"ふくみどり\" / A Newly Registered Tea Cultivar 'Fukumidori' Suitable for Green Tea"
     url: https://www.jstage.jst.go.jp/article/cha1953/1987/66/1987_66_1/_article/-char/en
+  - title: "埼玉県が育成した茶の品種 / Tea cultivars bred by Saitama Prefecture"
+    url: https://www.pref.saitama.lg.jp/b0914/saitamaken_cha_hinshu.html
+  - title: "茶業研究所 施設紹介・沿革 / Saitama Prefectural Tea Research Institute, facilities and history"
+    url: https://www.pref.saitama.lg.jp/b0914/tyakenshisetsu.html
+  - title: "附表1 茶農林登録品種一覧 / MAFF Cha Norin registered cultivar list"
+    url: https://minorien.jp/university/hinshu.pdf
+  - title: "多収で香気に特徴があるチャ「ふくみどり」の品種特性 / Ibaraki research result on Fukumidori"
+    url: https://www.pref.ibaraki.jp/nourinsuisan/santoku/documents/2007chafukumidori.pdf
   - title: "The Japanese Tea Cultivars"
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: "Japanese Tea Cultivar List"
@@ -83,24 +91,26 @@ yields unreliable year to year; the station's own account of the problem notes t
 Yabukita still made up roughly 90% of the plantings in these districts regardless.
 
 In autumn 1957, at what was then called the Saitama Prefectural Tea Research Institute (founded
-1951, later renamed the Tea Experiment Station), breeders backcrossed Yabukita against 23F1-107.
-Seed was collected in October 1958 and raised in a glasshouse nursery bed, then moved to an
-open-air nursery bed in April 1960, where individual selection began. A first-stage selection was
-made in 1962, the seedling was planted out to the main field the following April for further study,
-and a second-stage selection followed in 1966. Nursery-bed selection continued from June 1967 to
-March 1969; the line was planted to the main field again in April 1970 and, for the following eight
-years, ran as a clonal comparison and characteristics trial at the home station under the strain
-number 57F1-17, with particular attention to cold hardiness, yield and quality.
+1928, renamed the Tea Experiment Station in November 1971, and back to the Tea Research Institute
+today), breeders backcrossed Yabukita against 23F1-107; the MAFF-designated tea breeding trial site
+that carried the work had been set up at the institute in 1951. Seed was collected in October 1958
+and raised in a glasshouse nursery bed, then moved to an open-air nursery bed in April 1960, where
+individual selection began. A first-stage selection was made in 1962, the seedling was planted out
+to the main field the following April for further study, and a second-stage selection followed in
+1966. Nursery-bed selection continued from June 1967 to March 1969; the line was planted to the
+main field again in April 1970 and, for the following eight years, ran as a clonal comparison and
+characteristics trial at the home station under the strain number 57F1-17, with particular
+attention to cold hardiness, yield and quality.
 
 From 1978 to 1985, renamed Saitama No. 4 (埼玉4号), it went through wider clonal adaptability
 trials at four MAFF-designated sites (Ibaraki, Mie, Kyoto, Kochi) and four prefecture-only sites
 (Shizuoka, Shiga, Fukuoka, Kagoshima), plus a dedicated split-bark frost-resistance trial at the
 Kagoshima Prefectural Tea Experiment Station from 1979 to 1983. In March 1986 the Tea Research
-Council selected it as a candidate for MAFF new-cultivar registration, and on 13 May 1986 it was
-publicly announced within the ministry as the newly bred cultivar Fukumidori, registered as Cha
-Norin No. 36 in June 1986. At the time the release paper was written (dated 24 June 1987), a
-separate registration under the Seed and Seedling Act was still pending, filed by the Saitama
-prefectural governor; Saitama's own Seedling Council had already added Fukumidori to the
+Council selected it as a candidate for MAFF new-cultivar registration, it was deliberated within
+the ministry on 13 May 1986, and the official gazette of 6 June 1986 published it as the newly bred
+cultivar Fukumidori, Cha Norin No. 36. At the time the release paper was written (dated 24 June
+1987), a separate registration under the Seed and Seedling Act was still pending, filed by the
+Saitama prefectural governor; Saitama's own Seedling Council had already added Fukumidori to the
 prefecture's recommended-cultivar list on 18 March 1987. Saitama set a target of 508 ha planted by
 2000, and the paper names Nagano, Mie, Nara and Kumamoto as other prefectures planning to adopt it.
 

@@ -93,11 +93,13 @@ Fujikaori is a controlled cross, not a landrace selection, and its defining fact
 relationship to Sofu: the same two parents, sexes swapped. NARO's own 2002 research report states
 this directly, describing Fujikaori as the cultivar "'やぶきた'を花粉親、'静-印雑131'を種子親として
 育成された" — bred using Yabukita as the pollen parent and Shizu-Inzatsu 131 as the seed parent —
-the mirror of Sofu's own cross. A related 2004 paper also lists a third cultivar, Kondowase, as sharing Sofu's
-parent arrangement (Yabukita as seed parent, Shizu-Inzatsu 131 as pollen parent) — which would
-make Kondowase a sibling of Sofu's rather than of Fujikaori's, though Kondowase's own record is not
-independently verified here. No cultivar bred from Fujikaori itself is documented in the sources
-consulted.
+the mirror of Sofu's own cross. A related 2004 report names two further Shizu-Inzatsu 131
+descendants carrying the same aroma compound — the breeding lines Kanaya 22 (金谷22号) and
+Miyazaki 24 (宮崎24号) — rather than any further named cultivar. A cultivar survey by the Japanese
+Tea Sommelier separately puts Kondowase in the same family, as another Yabukita × Shizu-Inzatsu 131
+cross sharing Sofu's parent arrangement rather than Fujikaori's — a secondary claim, and
+Kondowase's own record is not independently verified here. No cultivar bred from Fujikaori itself
+is documented in the sources consulted.
 
 ## History
 
@@ -121,12 +123,12 @@ Fujikaori is known to be grown.
 ### The methyl anthranilate connection
 
 Fujikaori's aroma has the same chemical explanation as Sofu's. When NARO researchers Sawai,
-Yamaguchi and Tanaka identified methyl anthranilate — a grape- and jasmine-adjacent aroma compound
-never previously found in a Japanese tea cultivar — as the cause of Sofu's floral character, their
-2002 project report noted in passing that the same compound is also present in Fujikaori, "bred
-using Yabukita as the pollen parent and Shizu-Inzatsu 131 as the seed parent" (data not given in
-detail). Their 2004 follow-up paper, which mapped the trait to a single locus provisionally named
-*Mat*, went further: it estimated Fujikaori's genotype at that locus as heterozygous (Mat/mat),
+Yamaguchi and Yoshitomi identified methyl anthranilate — a grape- and jasmine-adjacent aroma
+compound never previously found in a Japanese tea cultivar — as the cause of Sofu's floral
+character, their 2002 project report noted in passing that the same compound is also present in
+Fujikaori, "bred using Yabukita as the pollen parent and Shizu-Inzatsu 131 as the seed parent"
+(data not given in detail). The 2004 follow-up work by Tanaka and Sawai, which mapped the trait to
+a single locus provisionally named *Mat*, went further: it estimated Fujikaori's genotype at that locus as heterozygous (Mat/mat),
 the same as Sofu's, based on its known lineage — consistent with both cultivars having inherited
 one copy of a dominant allele from their shared Shizu-Inzatsu 131 parent, regardless of which side
 of the cross that parent sat on. The English-language paper covering this work, published in the

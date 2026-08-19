@@ -22,19 +22,22 @@ teaTypes:
   - matcha
   - sencha
   - kabusecha
-buddingTime: early — registered and marketed as a wase (早生, early-budding) cultivar; its 1990 registration text states its budding and picking times are earlier than Asahi, a fellow Uji tencha cultivar. No source found quantifies the offset in days relative to Yabukita specifically.
+buddingTime: early — registered and marketed as a wase (早生, early-budding) cultivar; its 1990 registration text states its budding and picking times are earlier than both Yabukita and Asahi, a fellow Uji tencha cultivar. No source found quantifies the offset in days relative to Yabukita specifically.
 recommendedRegions:
   - Uji, Kyoto (place of origin)
   - Also grown on a small scale in Mie Prefecture
-yield: Described in the 1990 registration as higher-yielding than Asahi, and by My Japanese Green Tea as having "good yield at harvest." No numeric kg/10a figures were found.
+yield: The 1990 registration rates yield やや多 (fairly high) on young bushes and 多 (high) on mature ones, and higher than Asahi's; My Japanese Green Tea separately reports "good yield at harvest." No numeric kg/10a figures were found.
 diseaseResistance:
   - anthracnose (medium)
   - gray blight (fairly strong)
+  - cold hardiness (strong — the 1990 registration rates red-withering, blue-withering and split-type frost-damage resistance all 強)
 lineageNote: A landrace selection from Uji Zairai seedlings, in the same tradition as Yabukita, Asahi and Asatsuyu — an individual plant chosen and cloned by a private grower rather than bred through a research station's controlled cross. Its pollen parent is unrecorded and unknowable.
 rarity: Consistently described by reviewers and vendors as one of Japan's rarer named cultivars — cultivated by only a handful of growers, with stock reported to sell out before the next harvest. No cultivation-area figures were found.
 documentation: sparse
 summary: A tencha cultivar selected from Uji Zairai seedlings by grower Terakawa Toshio and registered under the Plant Variety Protection Act in 1990; early-budding and high-yielding at origin, but now a rare cultivar occasionally rediscovered as an unusual sencha.
 sources:
+  - title: 品種登録データベース 登録番号2092「寺川早生」 (農林水産省)
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2092&LANGUAGE=Japanese
   - title: 寺川早生はどんな植物？ わかりやすく解説 (Weblio辞書)
     url: https://www.weblio.jp/content/%E5%AF%BA%E5%B7%9D%E6%97%A9%E7%94%9F
   - title: 寺川早生（てらかわわせ）｜お茶辞典｜和茶倶楽部 (Wayback Machine archive)
@@ -59,22 +62,22 @@ Terakawa-wase is a tencha cultivar selected from Uji Zairai seedlings and regist
 Terakawa Toshio, a private grower in Uji city, Kyoto — not a prefectural or national research
 station. It belongs to the same family of Uji shaded-tea cultivars as Asahi, Samidori and Gokou,
 and like those it exists to make tencha, the shade-grown leaf that becomes matcha. Its defining
-trait, recorded in its own registration text, is speed: it buds and can be picked earlier than
-Asahi, one of the earliest Uji cultivars already on the books. It is little known today, cultivated
-by only a small number of growers, and turns up more often as a curiosity — the occasional
-sencha or kabusecha lot — than in the tencha production it was bred for.
+trait, recorded in its own registration text, is speed: it buds and can be picked earlier than both
+Yabukita and Asahi, the two cultivars it was measured against at registration. It is little known
+today, cultivated by only a small number of growers, and turns up more often as a curiosity — the
+occasional sencha or kabusecha lot — than in the tencha production it was bred for.
 
 ## Lineage
 
 - **Uji Zairai seedlings** — an individual selection from a seed-grown, native (zairai) stand in
   Uji city, not a controlled cross.
 
-Terakawa-wase was picked out, not bred. Like Yabukita in Shizuoka, or Asahi and Asatsuyu in Uji
-before it, it began as one tea tree among many genetically distinct seedlings in a zairai planting,
-noticed for budding early and yielding well, then propagated by cuttings so every Terakawa-wase
-bush is a clone of that one plant. Because it was selected rather than crossed, it has no recorded
-pollen parent, and no source found documents any cultivar bred from it in turn — it appears to
-have no registered descendants.
+Terakawa-wase was picked out, not bred. Like Yabukita in Shizuoka, or Asahi in Uji and Asatsuyu
+from Uji zairai seed before it, it began as one tea tree among many genetically distinct seedlings
+in a zairai planting, noticed for budding early and yielding well, then propagated by cuttings so
+every Terakawa-wase bush is a clone of that one plant. Because it was selected rather than crossed,
+it has no recorded pollen parent, and no source found documents any cultivar bred from it in turn —
+it appears to have no registered descendants.
 
 ## History
 
@@ -91,8 +94,9 @@ Magoichi), Takane-wase, Inaguchi. No source gives an earlier date for when the p
 actually spotted or first propagated, so a selection year distinct from the 1988 application
 cannot be stated with confidence.
 
-Terakawa-wase's Plant Variety Protection rights ran the statutory 18 years and lapsed on
-7 February 2002, after which propagation was no longer restricted to a licensed grower.
+Terakawa-wase's Plant Variety Protection rights carried a statutory 18-year term but lapsed early,
+on 7 February 2002, twelve years in, after which propagation was no longer restricted to a licensed
+grower.
 
 The name is unremarkable by design: Terakawa is simply the breeder's surname, and wase (早生)
 is the standard Japanese term for an early-budding cultivar, the same suffix seen in Kondō-wase,
@@ -110,22 +114,25 @@ cultivars still grown in Japan, without giving cultivation-area figures.
 Terakawa-wase is an early cultivar: wase (早生) is the conventional Japanese term for
 early-budding, sitting opposite nakate (中生, mid-season) and banshu/bansei (晩生, late), and its
 own 1990 registration text confirms the label is not just marketing — at its place of origin in
-Uji, both budding time and picking time come earlier than Asahi, itself an early-to-mid Uji
-cultivar. No source found puts a number of days on that gap relative to Yabukita, the usual
-reference point, so the "early" here should be read as qualitatively confirmed rather than
-quantified.
+Uji, both budding time and picking time come earlier than Yabukita and earlier than Asahi, the
+latter itself a medium-season (中生) Uji cultivar on par with Yabukita. No source found puts a
+number of days on that gap relative to Yabukita, the usual reference point, so the "early" here
+should be read as qualitatively confirmed rather than quantified.
 
-Growth habit and leaf: mature leaves are described as slightly thin, elliptical, medium-sized and
-with few creases. The same registration compares it directly to Asahi — smaller mature leaf, but
-higher yield — and My Japanese Green Tea separately reports "good yield at harvest." A Japanese
-cultivar-reference site also notes it allows early orchard establishment (早期成園化), meaning a
-newly planted field reaches full productive maturity sooner than usual, a practical advantage for
-growers even without hard numbers attached. Disease resistance is reported as medium against
-anthracnose and fairly strong against gray blight; no cold-hardiness data was found.
+Growth habit and leaf: mature leaves are described as slightly thin, elliptical, medium-sized, with
+medium creasing on the blade and slightly sparse waviness at the margin. The same registration
+compares it directly to Asahi — smaller mature leaf, but higher yield — and My Japanese Green Tea
+separately reports "good yield at harvest." A Japanese cultivar-reference site also notes it allows
+early orchard establishment (早期成園化), meaning a newly planted field reaches full productive
+maturity sooner than usual, a practical advantage for growers even without hard numbers attached.
+Disease resistance is reported as medium against anthracnose and fairly strong against gray blight,
+and the registration rates its cold hardiness — resistance to red-withering, blue-withering and
+split-type frost damage — as strong on all three counts.
 
-Processed as tencha, the use it was bred for, it is reported to give good colour and taste with a
-medium aroma. Away from that traditional processing, results are more mixed and more interesting.
-A 2019 tasting of a Mie-grown, lightly shaded sencha lot found it strikingly unlike ordinary
+Processed as tencha, the use it was bred for, the registration rates the product's shape and colour
+and its taste as superior (上), with aroma a notch below at upper-medium (中上). Away from that
+traditional processing, results are more mixed and more interesting. A 2019 tasting of a Mie-grown,
+lightly shaded sencha lot found it strikingly unlike ordinary
 sencha: a vegetal but unfamiliar aroma, a light, almost "watery" body, mild sweetness and umami
 without astringency through the first two infusions, and a little astringency and bitterness only
 appearing by the third — a tea the reviewer called surprising and worth trying rather than

@@ -31,7 +31,7 @@ buddingTime: "early — first-flush budding about 4 days before Yabukita and fir
 recommendedRegions:
   - Nationwide, where frost-protection facilities are in place
   - Bred and trialled from Miyazaki; regional and prefectural adaptation trials ran at 15 institutions plus 2 dedicated disease-trial sites by 2012
-yield: 511 kg/10a first flush and 520 kg/10a second flush, averaged over bushes aged 5-8 years at the breeding station's regional trial — index 184 and 162 against Yabukita's 100, and 127/150 against Saemidori's 353/482 kg (index terms)
+yield: 511 kg/10a first flush (bushes aged 5-8 years) and 520 kg/10a second flush (aged 5-7) at the breeding station's regional trial — index 184 and 162 against Yabukita's 277 and 322 kg at 100, a scale on which Saemidori's own 353 and 482 kg index 127 and 150
 diseaseResistance:
   - split-bark frost injury / 裂傷型凍害 (strong, and acquired early in the cold season)
   - winter red-scorch / 赤枯れ (milder than Yabukita — cold-damage symptom, distinct from the bacterial disease below)
@@ -149,8 +149,9 @@ days ahead of Yabukita's and its plucking date about three days ahead; across th
 the margin was much the same, four days early to bud and two early to pluck. It runs slightly behind
 Saemidori — one to four days later to bud, depending on the trial. Tree form is intermediate, vigour and
 branching both stronger than Yabukita's, with a somewhat acute leaf angle. New leaf is long-elliptical,
-close to Yabukita's in size and thickness, slightly glossier and softer, with somewhat more trichome
-hair; mature leaf is larger than Yabukita's but thinner.
+close to Yabukita's in size, thickness and colour, and graded somewhat glossy, somewhat soft and
+somewhat hairy — the same three grades Yabukita takes; mature leaf is larger than Yabukita's but
+thinner.
 
 Nursery survival runs a little behind Yabukita's — 86% against Yabukita's 88%, though ahead of
 Saemidori's 73% — but the gap closes within a year: first-year field survival averages 97% across all
@@ -159,10 +160,11 @@ a visibly deeper green than Saemidori's from as early as 21 days after budding t
 measured by chlorophyll meter (SPAD-502).
 
 Yield is the standout trait: averaged over bushes aged five to eight years at the breeding station,
-first-flush fresh leaf runs 511 kg/10a and second-flush 520 kg/10a, index values of 184 and 162 against
-Yabukita's 100 (and 127 and 150 against Saemidori's). Cold tolerance is strong and, unusually for an
-early-budding line, acquired early in the season: split-bark frost-injury resistance already exceeds
-Sayamakaori's from early November, and by late November and December matches or exceeds both
+first-flush fresh leaf runs 511 kg/10a and, over bushes aged five to seven, second-flush 520 kg/10a —
+index values of 184 and 162 against Yabukita's 277 and 322 kg at 100, a scale on which Saemidori's own
+353 and 482 kg index 127 and 150. Cold tolerance is strong and, unusually for an early-budding line,
+acquired early in the season: split-bark frost-injury resistance already exceeds Sayamakaori's from
+early November, and by late November and December matches or exceeds both
 Sayamakaori's and Kanayamidori's — two of the more cold-hardy cultivars in cultivation. Winter-bud
 frost damage runs lower than both Yabukita and Saemidori, and in a dedicated trial at Saitama, the
 harshest-winter site in the network, both red-scorch and blue-scorch injury (赤枯れ, 青枯れ — cold-damage

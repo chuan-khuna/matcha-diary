@@ -12,7 +12,7 @@ strainNames:
   - 藪北 (the old strain name recorded in MAFF's Cha Norin registry)
 selectedYear: 1908
 selectedFrom: 静岡在来種実生 (Shizuoka zairai seedling) — a single plant picked out of a seed-grown landrace stand in a garden cleared from a bamboo grove
-bredAt: Selected by the grower Sugiyama Hikosaburo (杉山彦三郎, 1857–1941) in the former Udo village, Uto district (旧有渡郡有度村), now Nakayoshida in Suruga ward, Shizuoka city; trialled and promoted after his death by Shizuoka Prefecture
+bredAt: Selected by the grower Sugiyama Hikosaburo (杉山彦三郎, 1857–1941) in the former Udo village, Uto district (旧有渡郡有度村), now Nakayoshida in Suruga ward, Shizuoka city; raised and trialled 1935–1946 (昭和10〜21年) at the Shizuoka Prefectural Tea Experiment Station's MAF-designated foundation-stock nursery (農林省指定原種圃), which is where the registration paper credits its development
 prefecture: Shizuoka
 parents:
   female: Shizuoka zairai
@@ -49,6 +49,7 @@ notableDescendants:
   - Meiryoku (茶農林35号, 1986) — seed parent
   - Okuhikari (1987) — seed parent
   - Inaguchi (1988) — seed parent, open-pollinated
+  - Minekaori (茶農林38号, 1988) — seed parent
   - Minamikaori (茶農林39号, 1988) — seed parent
   - Saemidori (茶農林40号, 1990) — seed parent
   - Sawamizuka (1995) — seed parent
@@ -56,14 +57,17 @@ notableDescendants:
   - Fujikaori (1996) — pollen parent
   - Mie Ryokuho No. 1 (1996) — seed parent
   - Mineyutaka (1996) — bud sport, not a cross
+  - Ryofu (茶農林45号, 1997) — pollen parent
   - Yamanoibuki (1997) — seed parent
   - Harumidori (茶農林48号, 2003) — pollen parent
   - Sofu (茶農林49号, 2005) — seed parent
   - Kurasawa, Shizu-7132, Yamakai — seed parent, all unregistered or later-registered lines
-lineageNote: "A single-plant selection out of a seed-grown Shizuoka zairai stand, not a controlled cross, so it has one recorded parent and can never have two. Every Yabukita bush in Japan is a cutting-propagated clone of Sugiyama's 1908 plant, which is why the cultivar is genetically uniform enough for its weaknesses — anthracnose above all — to be a national problem rather than a local one. It is also the most-used parent in Japanese tea breeding by a wide margin: twenty-one of the seventy-one records in this collection name it as a parent, on both sides of the cross."
+lineageNote: "A single-plant selection out of a seed-grown Shizuoka zairai stand, not a controlled cross, so it has one recorded parent and can never have two. Every Yabukita bush in Japan is a cutting-propagated clone of Sugiyama's 1908 plant, which is why the cultivar is genetically uniform enough for its weaknesses — anthracnose above all — to be a national problem rather than a local one. It is also the most-used parent in Japanese tea breeding by a wide margin: twenty-four of the eighty-two records in this collection name it as a parent, on both sides of the cross."
 conflicts: "Prefectural recommendation date: the Shizuoka Tea Commercial and Industrial Cooperative (ocha.or.jp) states Yabukita was designated a Shizuoka Prefecture recommended cultivar (奨励品種) in 1945 (Showa 20), eight years before national registration. Japanese Wikipedia instead gives 1955, two years after it. Both orderings are mechanically possible — a prefecture maintains its own recommended list independently of MAFF's registry — and no primary prefectural document settling the date was located, so this record asserts only the 1953 Cha Norin registration, which the MAFF registry itself carries, and reports the prefectural designation as disputed. Cultivation share: figures between 64% and 80% circulate widely. This record uses only MAFF's own series (76% in 2008, 72% in 2019, 67% in 2023) and NARO's 71.5% for 2020, which agree with each other on both level and trend; the higher round numbers appear to be older figures repeated after they stopped being current."
 summary: A single seedling picked out of a Shizuoka landrace stand in 1908 by the grower Sugiyama Hikosaburo and registered in 1953 as Cha Norin No. 6, Yabukita still covers two thirds of Japan's tea area and is the benchmark every other cultivar is described against — budding times in days from Yabukita, yields as a multiple of it, flavour as more or less umami than it.
 sources:
+  - title: "茶の品種登録と命名 (茶業研究報告 2:95–97, 1953 — the 茶農林6号 entry: 旧系統名 藪北, selected from Sugiyama's tea garden, developed 昭和10〜21年 at the Shizuoka Prefectural Tea Experiment Station)"
+    url: https://www.jstage.jst.go.jp/article/cha1953/1953/2/1953_2_95/_pdf
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林6号 row)
     url: https://minorien.jp/university/hinshu.pdf
   - title: 茶44品種・系統のDNA品種識別技術 (NARO SSR cultivar identification manual, 2021 — pedigree table and national cultivar shares)
@@ -106,9 +110,9 @@ national acreage with no genetic variation within it means that a weakness of th
 weakness of the industry — Yabukita's susceptibility to anthracnose is the reason a large share
 of Japan's tea pesticide programme exists.
 
-Its output as a parent runs the other way and is without parallel here. Twenty-one of the
-sixty-nine records in this collection name Yabukita as a parent, as the seed parent in most and
-the pollen parent in Kanayamidori, Toyoka, Fujikaori and Harumidori. The breeding stations
+Its output as a parent runs the other way and is without parallel here. Twenty-four of the
+eighty-two records in this collection name Yabukita as a parent, as the seed parent in most and
+the pollen parent in Kanayamidori, Toyoka, Fujikaori, Ryofu and Harumidori. The breeding stations
 reached for it so consistently that several of the crosses are effectively Yabukita against
 itself at one remove: Fukumidori is Yabukita crossed with 23F1-107, a line that was already
 three-quarters Yabukita, and Saemidori, Okumidori and Sofu all put Yabukita against one landrace
@@ -125,8 +129,9 @@ thicket, and Yabuminami, south of it. Yabuminami is a footnote; Yabukita is the 
 knows Sugiyama's name.
 
 It was not an immediate success, and Sugiyama did not live to see it become one. He died in 1941,
-and it was Shizuoka Prefecture's own comparative cultivation trials, run after his death, that
-established what the plant could do — high and dependable yield, unusually good cold and frost
+midway through the Shizuoka Prefectural Tea Experiment Station's trials of the plant in its
+MAF-designated foundation-stock nursery, which ran from 1935 to 1946 and established what it
+could do — high and dependable yield, unusually good cold and frost
 tolerance, easy rooting from cuttings, and tolerance of a wide range of soils. That last group of
 traits is what actually explains the spread: a cultivar that roots readily and survives a hard
 winter is one a farmer can replant an entire hillside with, and Yabukita's cold hardiness took
@@ -143,7 +148,7 @@ prefecture that trialled it.
 ## Characteristics
 
 Yabukita buds mid-season (中生), which is less a description than a definition: it is the zero
-point, and the other sixty-eight records in this collection state their own season as an offset
+point, and the other eighty-one records in this collection state their own season as an offset
 from it. The bush is vigorous and roots easily from cuttings. Yield is high and, more usefully,
 consistent across the first, second and later flushes rather than concentrated in one.
 

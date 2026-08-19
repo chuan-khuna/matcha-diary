@@ -4,7 +4,7 @@ slug: mieryokuho1
 kana: みえりょくほう1号
 kanji: 緑萌
 romaji: Mie Ryokuhō No. 1
-nameMeaning: "'Mie' (みえ) is written in hiragana in the officially registered name itself, not the kanji 三重 normally used for the prefecture (though 三重緑萌1号 does appear in some secondary listings, including Shinkoju's cultivar index) — for Mie Prefecture, where it was bred. 'Ryokuho' (緑萌, 'green sprouting/budding') most likely nods to the notably deep green colour of its new leaf. The trailing '1' marks it as the first of a small in-house naming series: the MAFF registration database also lists a sibling release, 'Mie Ryokusui No. 2' (みえ緑水2号), from the same station."
+nameMeaning: "'Mie' (みえ) is written in hiragana in the officially registered name itself, not the kanji 三重 normally used for the prefecture — for Mie Prefecture, where it was bred. 'Ryokuho' (緑萌, 'green sprouting/budding') most likely nods to the notably deep green colour of its new leaf, which the registration record rates 濃緑 (deep green)."
 registered: 1996
 registry: Plant Variety Protection Act (registered 18 March 1996 as Registration No. 4954; application No. 6649 filed 8 March 1994)
 selectedYear: 1960
@@ -84,9 +84,7 @@ It is worth naming alongside a separate, unrelated Mie cultivar that shares its 
 a Yabukita seedling at all but a landrace (zairai) selection, picked out on a private grower's own
 field in Ōdai-chō starting in 1985 by the breeder Uejima Chikashi (上嶋親), and it buds early
 rather than late. The two cultivars share nothing beyond a prefecture and a naming convention —
-easy to conflate on the strength of the name alone, genetically unconnected in fact. The MAFF
-registration database also lists a further, undocumented sibling from the same programme, みえ緑水
-2号 (Mie Ryokusui No. 2), though no further detail on it was sourced here.
+easy to conflate on the strength of the name alone, genetically unconnected in fact.
 
 ## History
 
@@ -115,10 +113,10 @@ Ryokuho No. 1') in the Mie Prefecture Agricultural Technology Center's research 
 
 It never received a 茶農林 (Cha Norin) number. Checking MAFF's own registry table of Cha Norin
 cultivars (附表１茶農林登録品種一覧 — numbers 1 through 52, spanning registrations from 1953 into
-the early 2000s) confirms Mie Ryokuho No. 1 is absent from it. By the mid-1990s the Cha Norin
-system had effectively lapsed as the route for cultivars coming out of prefectural, rather than
-national, breeding programmes, and Plant Variety Protection Act registration — as used here — had
-become the operative one instead.
+the early 2000s) confirms Mie Ryokuho No. 1 is absent from it. That was a choice rather than a
+closed door: the same table shows prefectural programmes still taking Cha Norin numbers on either
+side of this registration — Saitama's Musashikaori as 茶農林46号 in 1997, its Sainomidori as
+茶農林50号 in 2003 — and Mie registered under the Plant Variety Protection Act instead.
 
 ## Characteristics
 

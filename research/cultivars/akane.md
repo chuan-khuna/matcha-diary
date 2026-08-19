@@ -15,26 +15,31 @@ selectedYear: 1939
 bredAt: Kagoshima Prefectural Agricultural Experiment Station
 prefecture: Kagoshima
 parents:
-  female: Ai2
+  female: Ai21
   male: NkaO3
 parentNotes:
-  female: "Ａｉ2 in MAFF's registry; an Assam (var. assamica) introduction. Tea Nursery renders the code as Ai21 — the registry's glyphs do not settle it."
-  male: "ＮｋａＯ3 in MAFF's registry; a Kagoshima zairai (landrace) selection. Tea Nursery renders it NKa03."
+  female: "アッサム21号 (Assam No. 21) in the 1953 naming paper, which writes the pedigree as A21×O3; an Assam (var. assamica) wild-type introduction. The 茶農林 summary list compresses the code to Ａｉ2."
+  male: "ＮｋａＯ3 in the 茶農林 list, given in full as 鹿緑原3号 (Ka-ryokugen No. 3) in the 1953 naming paper; a Kagoshima zairai (landrace) selection. Tea Nursery renders it NKa03."
 teaTypes:
   - black
 buddingTime: medium
 recommendedRegions:
   - Kagoshima
+  - warm districts of Kyushu
+  - warm districts of Shikoku
 yield: about 267 kg at the first harvest and 194 kg at the third; 8% below Hatsumomiji and 38% above Benihomare in comparative trials
 diseaseResistance:
+  - disease generally (high — 耐病性が大 in the 1953 naming paper)
   - cold (highly resistant)
 lineageNote: A controlled cross of an Assam introduction against a Kagoshima landrace selection, made in 1935 — the same programme and the same era as Benihomare, Japan's first registered tea cultivar, and aimed at the same target. Where Benihomare is an open-pollinated Assam seedling, Akane pairs the Assam side deliberately with local landrace material, which is what its comparative yield figures are quoted against.
-conflicts: "Parent codes: MAFF's Cha Norin registry table renders the parents as Ａｉ2 and ＮｋａＯ3 in full-width characters. Tea Nursery gives Ai21 and NKa03. The difference is one digit in each, and the registry's typesetting cannot distinguish a capital O from a zero, so neither reading can be confirmed from the sources consulted. This record follows the registry's glyph-for-glyph form and records the alternative."
-documentation: sparse — a Cha Norin registry row and a secondary compilation; no release paper was retrieved, and Japan's black-tea cultivars of this period are generally thinly documented
+conflicts: "Parent codes: the 1953 naming paper gives the strain as 鹿アッサム交配132号（アッサム21号×鹿緑原3号）and the pedigree as A21×O3. The 茶農林 summary table renders the same cross as Ａｉ2×ＮｋａＯ3, and gives that same Ａｉ2 to Hatsumomiji (paper: A2×O5) and Benitachiwase (paper: A26×O1) — so it is the summary table that collapses three distinct Assam accessions into one code, not Tea Nursery that invented a digit. This record follows the naming paper."
+documentation: sparse — the 1953 naming paper in 茶業研究報告 gives pedigree, characteristics, recommended districts and name derivation in a single paragraph; beyond that a Cha Norin registry row and a secondary compilation. Japan's black-tea cultivars of this period are generally thinly documented
 summary: A 1935 Kagoshima cross of an Assam introduction against a local landrace selection, registered in 1953 as Cha Norin No. 15 — one of the black-tea cultivars from Japan's brief attempt to build a black-tea industry, named for the red of the liquor it makes.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林15号 row)
     url: https://minorien.jp/university/hinshu.pdf
+  - title: 茶の品種登録と命名 (茶業研究報告 第2号, October 1953, pp. 95–97 — the naming paper for the first fifteen Cha Norin cultivars)
+    url: https://www.jstage.jst.go.jp/article/cha1953/1953/2/1953_2_95/_pdf/-char/ja
   - title: Akane あかね — Tea Nursery
     url: https://www.teanursery.com/akane/
 ---
@@ -55,10 +60,10 @@ Benifuki, which found a second life as a source of methylated catechins for alle
 
 ## Lineage
 
-- **Ai2** ♀ — an Assam (*Camellia sinensis* var. *assamica*) introduction.
-- **NkaO3** ♂ — a Kagoshima zairai (landrace) selection.
+- **Ai21** ♀ — an Assam (*Camellia sinensis* var. *assamica*) introduction, アッサム21号.
+- **NkaO3** ♂ — 鹿緑原3号, a Kagoshima zairai (landrace) selection.
 
-Both codes are ambiguous in the registry's typesetting; see `conflicts`. What is clear is the
+The 茶農林 summary table garbles the female code; see `conflicts`. What is clear is the
 shape of the cross: introduced Assam germplasm on the seed side for the black-tea chemistry,
 Japanese landrace on the pollen side for hardiness. That is the same recipe as Benifuki two
 generations later, and the deliberate opposite of Benihomare, which is simply an open-pollinated

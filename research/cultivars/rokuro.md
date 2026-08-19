@@ -25,11 +25,13 @@ recommendedRegions:
 yield: null
 rarity: Struck from Shizuoka Prefecture's own recommended-cultivar list in 1955, two years after national registration; absent even from the prefecture's later cultivation-area tables, unlike its stablemate Koyanishi, which still shows a recorded 7 ha in 1954. No current commercial planting was found in this research.
 lineageNote: A landrace selection from Shizuoka Zairai stock made by Sugiyama Hikosaburo — the same grower credited with discovering Yabukita — not a controlled cross; its pollen parent is unrecorded and unknowable.
-conflicts: "Digital Daijisen Plus (via Kotobank) describes Rokuro as a \"玉露用中生品種\" (a gyokuro-type cultivar). The 1953 MAFF registration paper that announced its registration, and every other source found, places it among that year's eight sencha cultivars instead. The gyokuro claim is most plausibly a kanji mix-up between 玉露 (gyokuro) and 玉緑 (tamaryokucha, guricha) — the tea type of Tamamidori, a different cultivar registered in the same 1953 batch."
+conflicts: "Digital Daijisen Plus (via Kotobank) describes Rokuro as a \"玉露用中生品種\" (a gyokuro-type cultivar), though the same entry goes on to add 煎茶に向く — suited to sencha. The 1953 MAFF registration paper that announced its registration places it among that year's eight sencha cultivars, and MAFF's 茶農林 registry table gives its 用途 as 煎茶. The gyokuro label is not baseless, though: the 1961 registration paper for Himemidori (茶農林23号), Fukuoka's first purpose-bred gyokuro cultivar, records that ordinary sencha cultivars — 「やぶきた・ろくろう等」 — had until then been diverted to gyokuro use under shade in the Yame district, the practice Himemidori was bred to end."
 summary: A Shizuoka Zairai selection by Sugiyama Hikosaburo — Yabukita's own discoverer — registered in 1953 as Cha Norin No. 9 for sencha, named for its trial-plot number rather than a person, and struck from Shizuoka's own recommended list two years later.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 (Tea Research Journal) No. 2, 1953
     url: https://www.jstage.jst.go.jp/article/cha1953/1953/2/1953_2_95/_article/-char/en
+  - title: "A Newly Registered Tea Variety 'Himemidori' for Gyokuro (玉露用新登録品種「ひめみどり」について), 茶業研究報告 No. 17, 1961"
+    url: https://www.jstage.jst.go.jp/article/cha1953/1961/17/1961_17_8/_article
   - title: The Japanese Tea Cultivars
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: 杉山彦三郎 (Sugiyama Hikosaburo) — Wikipedia
@@ -40,7 +42,7 @@ sources:
     url: https://kotobank.jp/word/%E3%82%8D%E3%81%8F%E3%82%8D%E3%81%86-2103384
   - title: 【お茶の品種一覧】たくさんある日本茶の品種！— 茶活 CHAKATSU
     url: https://chakatsu.com/basic/ocha_hinshu/
-  - title: 茶の品種改良とその増殖技術 (Nakamura Yorishito, Shizuoka Prefectural Tea Research Center, 2013)
+  - title: 茶の品種改良とその増殖技術 (Nakamura Yoriyuki 中村順行, Shizuoka Prefectural Tea Research Center, 2013)
     url: https://dfns.u-shizuoka-ken.ac.jp/labs/tsc/pdf/2503.pdf
   - title: Instagram post, @chabashira078 (茶ばっしー) — used for flavour description only
     url: https://www.instagram.com/p/CSFz-g_BCrS/
@@ -90,17 +92,20 @@ Japanese Wikipedia biography of Sugiyama) show it was already a prefectural reco
 from 1937, partway through that development window, and the same record shows it excluded from
 Shizuoka's recommended list again in 1955 — two years after national registration, and the same
 year Koyanishi was dropped alongside it. A 2013 history of Shizuoka's cultivar policy, by Nakamura
-Yorishito, then director of the Shizuoka Prefectural Tea Research Center, groups Yabukita,
+Yoriyuki (中村順行), then director of the Shizuoka Prefectural Tea Research Center, groups Yabukita,
 Koyanishi and Rokuro together as the prefecture's Showa-10s (1935–1944) wave of clonal-cultivar
 promotion, driven by wartime and export-era demand for higher, more consistent yield. Rokuro does
 not, however, appear by name in that same paper's later table of Shizuoka's cultivation area by
 cultivar from 1954 onward — unlike Koyanishi, which shows a recorded 7 ha that year before it too
 disappears from the record. Whatever area Rokuro held was evidently too small to itemise, even at
 the height of its brief prefectural favour, and it was in any case about to be overtaken: by 1972
-Yabukita alone held 88% of Shizuoka's tea fields.
+Yabukita alone held 88% of Shizuoka's cultivar-planted area.
 
 No release trial data, characteristics bulletin, or trade profile beyond the original registration
-entry and a handful of reference-list mentions was found for Rokuro in this research.
+entry and a handful of reference-list mentions was found for Rokuro in this research. It does
+surface once outside Shizuoka: the 1961 registration paper for the gyokuro cultivar Himemidori
+records that ordinary sencha cultivars — 「やぶきた・ろくろう等」 — had until then been put under
+shade for gyokuro in Fukuoka's Yame district.
 
 ## Characteristics
 

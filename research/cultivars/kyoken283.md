@@ -27,11 +27,13 @@ rarity: Never released or grown under this designation; whether the original sel
 lineageNote: Kyoken 283 is a Kyoto Prefectural Tea Research Institute breeding-line number, not a cultivar that was ever named or registered. Its own parentage is unpublished — it appears in only one primary source, the release paper for Miyamakaori, which shows it as that cultivar's seed parent and describes it as "selected from Kyoto zairai." It is recorded here with Kyoto zairai as its seed parent, which is the whole of what the source says and is enough to place it in the pedigree; a landrace selection has no second parent by definition, since a zairai stand is pollinated at random. Whether it was an Uji-district selection specifically, like its numerical neighbours in the same series (Kyoken 166 → Gokou, Kyoken 307 → Ujimidori), is not stated anywhere sourced, which is why it draws as its own landrace node rather than joining the Uji zairai cluster. A claim that it is also a parent of Nagomiyutaka circulates in secondary lists but is not supported by Nagomiyutaka's own release paper — see conflicts.
 documentation: sparse
 conflicts: |
-  Three disagreements surfaced during research, all resolved in favour of the primary release papers:
+  Three points needed sorting out during research:
   (1) Miyamakaori's registration year is given as 2006 in at least one widely used secondary registry
-  of Japanese cultivars (japaneseteasommelier.wordpress.com). Miyamakaori's own release paper
-  (Nagatomo et al. 2003, Chagyo Kenkyu Hokoku No. 96) states it was registered as Cha Norin No. 52 on
-  5 September 2003, the same year the paper itself was submitted; this record uses 2003.
+  of Japanese cultivars (japaneseteasommelier.wordpress.com). Both years are right, because there are
+  two registrations. Miyamakaori's own release paper (Nagatomo et al. 2003, Chagyo Kenkyu Hokoku
+  No. 96) states it was registered as Cha Norin No. 52 on 5 September 2003 under the MAFF 茶農林
+  naming series; NARO's 茶品種ハンドブック records a separate 種苗法 品種登録 as No. 13754 on
+  27 February 2006. This record quotes the 2003 Cha Norin registration.
   (2) The same secondary registry, and other sources drawing on it, list Nagomiyutaka as a second
   Kyoken 283 cross — "Saitama No. 1 × Kyoken 283, 2010." Nagomiyutaka's own release paper (Yoshidome
   et al. 2014, Chagyo Kenkyu Hokoku No. 117, "釜炒り茶及び煎茶用新品種'なごみゆたか'の育成") gives its
@@ -41,8 +43,10 @@ conflicts: |
   Nagomiyutaka as a descendant of Kyoken 283; the pairing looks like a mix-up with Miyamakaori, bred
   at the same station in the same period from a similarly-numbered "Saitama" parent.
   (3) Miyamakaori's pedigree chart (Nagatomo et al. 2003, Fig. 1) gives its pollen parent, Saitama
-  No. 1, as itself Yabukita G1 × Sayamamidori. A different parentage for Saitama No. 1 — Sayamamidori
-  and a line called "Sai 53G17" — appears in at least one other source and is not supported here.
+  No. 1, as itself Yabukita G1 × Sayamamidori. NARO's 茶品種ハンドブック names the same cross more
+  precisely as 埼53G1-7 × さやまみどり, with 埼53G1-7 a Saitama-bred natural-cross seedling of
+  Yabukita — the fuller name for the line the release paper writes as "Yabukita G1," not a rival
+  account of Saitama No. 1's parentage.
 summary: A Kyoto Prefectural Tea Research Institute breeding line that was never named or registered, documented today only because it was the seed parent of the Miyazaki-bred sencha cultivar Miyamakaori, crossed with Saitama No. 1 in 1983.
 sources:
   - title: 宇治品種について (Uji Cultivars) — Kyoto Prefectural Tea Research Institute
@@ -55,6 +59,10 @@ sources:
     url: https://www.jstage.jst.go.jp/article/cha/2014/117/2014_117_1/_article/-char/en
   - title: 京都府茶奨励品種の栽培特性一覧 (Kyoto Prefecture recommended-cultivar characteristics table)
     url: https://ujicha.or.jp/wp-content/themes/kyotocha/assets/files/hinsyutokusei.pdf
+  - title: 茶品種ハンドブック 第6版 (NARO tea cultivar handbook — pedigree charts and registration data)
+    url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
+  - title: 附表1 茶農林登録品種一覧 (MAFF Cha Norin registered-cultivar list)
+    url: https://minorien.jp/university/hinshu.pdf
   - title: The Japanese Tea Cultivars (registry list)
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: 日本茶備忘録 — みやまかおり entry
@@ -108,9 +116,9 @@ institute's oldest recommended cultivars, Asahi and Samidori, both dated to 1954
 selectors' own names instead: 平野11号 (Hirano 11, selected by Hirano Jinnojō) and 小山69号 (Koyama
 69, selected by Koyama Masajirō). From the same year, lines selected and evaluated by the institute
 itself carried the 京研 prefix: Kyoken 166 became Gokou and Kyoken 170 became Ujihikari, both in
-1954; Kyoken 307 became Ujimidori in 1983. All three are recorded as Uji zairai selections
-(宇治在来種選抜), and all three carry the institute itself, rather than a named individual, as
-breeder (育成者：京都府茶業研究所).
+1954; Kyoken 307 became Ujimidori in 1983. Gokou and Ujimidori are recorded as Uji zairai selections
+(宇治在来種選抜) — the institute's page gives no origin for Ujihikari — and all three carry the
+institute itself, rather than a named individual, as breeder (育成者：京都府茶業研究所).
 
 Kyoken 283 belongs to the same numbering series, sitting between 170 and 307, but it does not appear
 in any of the institute's or the Uji trade association's own published cultivar lists. Those lists
@@ -128,7 +136,7 @@ sown that November; three years of individual selection (1985–1987) narrowed t
 lines chosen for leaf colour and disease resistance, which were propagated by cuttings from June
 1987 and planted out in 1988. The surviving line was carried through six years of clonal comparison
 trials under the working name Mi88-86, then through national regional-adaptation trials from 1994
-as Miyazaki No. 20, tested across nine prefectures including Kyoto itself. It was registered by the
+as Miyazaki No. 20, tested across five prefectures including Kyoto itself. It was registered by the
 Ministry of Agriculture, Forestry and Fisheries as Cha Norin No. 52, "Miyamakaori," on 5 September
 2003 — a twenty-year span from cross to registration, involving nine researchers at the station.
 
@@ -158,9 +166,11 @@ as Kyoken 283's only documented descendant.
 
 ## Characteristics
 
-None are published for Kyoken 283 itself. It has no recorded budding date, growth habit, leaf
-description, yield figure, disease-resistance rating, or cup-quality note anywhere found — it was
-never carried far enough through any trial programme, in Kyoto or elsewhere, to generate one. The
+Almost none are published for Kyoken 283 itself. Miyamakaori's release paper describes it in a
+single clause, as the late-budding, good-quality (晩生で良質) line chosen as seed parent for that
+cross. Beyond that it has no recorded plucking date, growth habit, leaf description, yield figure,
+disease-resistance rating, or cup-quality note anywhere found — it was never carried far enough
+through any trial programme, in Kyoto or elsewhere, to generate one. The
 only characteristics on record anywhere near it belong to its offspring, Miyamakaori, and are not
 safe to attribute to Kyoken 283 specifically since Saitama No. 1 contributed the other half of that
 cultivar's genetics. For reference, Miyamakaori is late-budding (its first-flush plucking runs two

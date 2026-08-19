@@ -22,7 +22,7 @@ teaTypes:
 buddingTime: early — bud-break recorded as 28 March and first-flush harvest as 3 May in the 1954 registration trial; classed as an early (早生) cultivar throughout the literature. No source gives an exact day-count against Yabukita for Yaeho itself, unlike its offspring Ooiwase, whose 1978 release paper records budding about 10 days and harvest about 5 days ahead of Yabukita in the same trials.
 recommendedRegions:
   - Shizuoka Prefecture and warmer regions to its west (the 1954 bulletin's stated cultivation range)
-yield: 149.3 kan/10a (≈560 kg/10a by modern conversion) average across the 1943–45 harvests, on 9–11-year-old bushes, per the 1954 registration bulletin
+yield: 149.3 kan/10a (≈560 kg/10a by modern conversion) average across the 1943–45 harvests, on 9–11-year-old bushes, first and third flushes combined, per the 1954 registration bulletin
 cultivationShare: roughly 0.01% of Japan's national tea acreage today, per one Shizuoka Yaeho producer — a figure not corroborated by an official national statistic
 diseaseResistance:
   - white-star disease (weak — noted specifically in the 1954 registration bulletin)
@@ -41,11 +41,11 @@ sources:
     url: https://doi.org/10.5979/cha.1954.4_76
   - title: "日高保・倉貫幸一「煎茶用新品種『おおいわせ』」(A New Tea Variety for Green Tea 'Ooiwase')"
     url: https://doi.org/10.5979/cha.1978.1
-  - title: "暖地における早生品種の緑茶品質(第1報) (Green tea quality of early varieties in a warm region, Part 1)"
+  - title: "暖地におけるチャ早生品種の品質特性(第1報) (The Green Tea Quality of Early Varieties in the Warm Region, Part 1)"
     url: https://doi.org/10.5979/cha.1979.47
-  - title: "秋季凍害による茶樹の裂皮害に対する品種間差異 (Varietal differences in resistance to bark-splitting injury from autumn frost)"
+  - title: "チャの裂傷型凍害抵抗性の品種間差異と検定法の開発 (Varietal difference of resistance to the bark-splitting injury caused by autumn frost, and testing methods for the injury in tea plant breeding)"
     url: https://doi.org/10.5979/cha.1979.Appendix4_23
-  - title: "静岡県における茶の細菌性萎縮病 (Bacterial shoot blight of tea in Shizuoka Prefecture)"
+  - title: "静岡県におけるチャ赤焼病の分布, 病徴, 発生時期および品種間差異 (Bacterial shoot blight of tea in Shizuoka Prefecture: distribution, symptoms, disease development time and varietal resistance)"
     url: https://doi.org/10.4165/kapps1958.27.0_7
   - title: Japanese Tea Cultivar List
     url: https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
@@ -59,6 +59,8 @@ sources:
     url: https://www.matsushita-seicha.com/t-ogt-yaeho/
   - title: 錦園「杉山八重穂」商品ページ
     url: http://www.nishikien.com/002nishikiens-tea/001item16/nishikiens-tea1.html
+  - title: 摩利支 登録番号第4953号（農林水産省 登録品種データベース）
+    url: "https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4953&LANGUAGE=Japanese"
   - title: 錦園「摩利支」品種登録データベース抜粋
     url: http://www.nishikien.com/hi-end-tea/002marishi/002marishi-3.html
   - title: 錦園オーナーブログ「茶品種の『八重穂』≠『やえほ』？？？」
@@ -103,7 +105,7 @@ Udo village, Abe County — the same district, on the outskirts of Shizuoka City
 already found Yabukita and Yabuminami. It was tested from 1935 to 1946 (Showa 10–21) at the
 Shizuoka Prefectural Tea Experiment Station's MAFF-designated foundation-stock garden and adopted
 as a Shizuoka Prefecture recommended cultivar. In October 1954, alongside five other cultivars —
-Natsumidori, Asagiri, Kiyomidori, Hatsumidori and the black-tea cultivar Benikaori — it was
+Natsumidori, Asagiri, Kyomidori, Hatsumidori and the black-tea cultivar Benikaori — it was
 registered nationally as one of that year's new Ministry of Agriculture and Forestry cultivars,
 Cha Norin No. 17, its former strain name given as 八重穂 (Yaeho, in kanji). The registration
 bulletin states the naming plainly: it was called Yae-ho, "many-layered ear," because it puts out
@@ -173,7 +175,8 @@ days and is harvested about five days ahead of Yabukita in side-by-side trials, 
 rough sense of where Yaeho itself sits.
 
 Reported yield from the 1954 trial averaged 149.3 kan per 10a (roughly 560 kg by modern
-conversion) across the 1943–45 harvests on 9–11-year-old bushes, combining all three flushes.
+conversion) across the 1943–45 harvests on 9–11-year-old bushes, combining the first and third
+flushes only — the second flush went unsurveyed in 1944 and 1945 because of insect damage.
 Propagation is a genuine weak point: in the Shizuoka Tea Experiment Station's side-by-side cutting
 trials for the Ooiwase release paper, Yaeho cuttings rooted reasonably well in the short term
 (96.7% at two months, against Yabukita's 93.3%) but fell away badly over the following two years —
@@ -190,8 +193,8 @@ to bacterial shoot blight, a disease to which its own offspring Ooiwase proved c
 susceptible.
 
 On the chemistry behind the cup, Yaeho runs consistently lower in total and soluble nitrogen than
-Yabukita (5.68% against 6.20% total nitrogen; 1.90% against 2.17% soluble nitrogen, three-year
-averages from the Ooiwase trial) and higher in tannin (12.78% against 11.94%) — the likely
+Yabukita (5.68% against 6.20% total nitrogen; 1.90% against 2.17% soluble nitrogen, two-year
+averages, 1975–76, from the Ooiwase trial) and higher in tannin (12.78% against 11.94%) — the likely
 explanation for a 1972 warm-region comparison trial that rated its made-tea quality inferior to
 Yabukita and to several other early cultivars, attributing the shortfall specifically to lower
 nitrogen. That is not the whole story, though: growers who still work with it describe a

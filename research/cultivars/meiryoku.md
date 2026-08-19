@@ -2,9 +2,9 @@
 name: Meiryoku
 slug: meiryoku
 kana: めいりょく
-kanji: 明緑
+kanji: 茗緑
 romaji: Meiryoku
-nameMeaning: "\"Bright green\" (明 mei, bright + 緑 ryoku, green). The release paper notes that tea is also referred to by the classical Sino-Japanese word 茗 (myō), and glosses the chosen name in English as \"Bright Green Tea\" — a nod to the cultivar's leaf colour."
+nameMeaning: "\"Tea green\" (茗 mei, the classical Sino-Japanese word for the tea plant + 緑 ryoku, green). The release paper explains that tea is also called 茗 in Chinese, and that the name was coined to carry the sense of the cultivar's bright green (明るい緑) leaf colour; it designates 茗緑 as the kanji form to use and glosses the name in English as \"Bright Green Tea\"."
 registered: 1986
 registrationNumber: 茶農林35号 (Cha Norin No. 35)
 registry: MAFF
@@ -46,7 +46,7 @@ sources:
     url: https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
   - title: "主要品種のさし木発根性 (Cutting Rooting Ability of Major Cultivars), by Kaoru Matsushita and Shun Anma, 茶業研究報告 1973(Feb)"
     url: https://www.jstage.jst.go.jp/article/cha1953/1973/Feb/1973_Feb_1/_article
-  - title: "個別官能審査による茶の質評価 (Individual Sensory Evaluation of Tea Quality), by Namiko Ikeda, 茶業研究報告 75, 1992"
+  - title: "個別官能審査による茶の品質評価 (Individual Sensory Evaluation of Tea Quality), by Namiko Ikeda, 茶業研究報告 75, 1992"
     url: https://www.jstage.jst.go.jp/article/cha1953/1992/75/1992_75_13/_article/-char/ja
   - title: "接木育成茶樹の新芽生育及び遊離アミノ酸含量に及ぼす台木品種の影響 (Effect of Rootstock Cultivar on New Shoot Growth and Free Amino Acid Content of Grafted Tea Trees), by Koji Tadaya and Masatomo Ito, 茶業研究報告 83, 1996"
     url: https://www.jstage.jst.go.jp/article/cha1953/1996/83/1996_83_1/_article/-char/ja

@@ -11,7 +11,7 @@ registry: Ministry of Agriculture and Forestry
 selectedYear: null
 selectedFrom: Uji zairai (Kyoto landrace) seed, sown at the Ministry of Agriculture and Commerce's Agricultural Experiment Station, Tea Manufacturing Division, Nishigahara, Tokyo
 bredAt: Transplanted in 1921 to the tea experiment station at Kanaya, Shizuoka (a predecessor of today's NARO Institute of Fruit Tree and Tea Science); development completed there in 1944, under the pre-naming designation Kokucha U14 (国茶U14号)
-prefecture: Kyoto
+prefecture: Shizuoka
 parents:
   female: Uji zairai
   male: null
@@ -19,13 +19,13 @@ parentNotes:
   female: seed stand, Kyoto — no individual mother plant is recorded
 teaTypes:
   - sencha
-buddingTime: "Early in the field record — a 1991 NARO/Kagoshima trial (Torimaru & Fuchinoue) found it, with Yutakamidori, among the two earliest-budding of 13 cultivars tested, ahead of Yabukita. The 1953 registration bulletin itself, however, classified Asatsuyu as 中生種 (medium-season); see conflicts."
+buddingTime: "Early in the field record — a 1991 Kagoshima trial (Torimaru & Fuchinoue) found it, with Yutakamidori, among the two earliest-budding of 13 cultivars tested, ahead of Yabukita. The 1953 registration bulletin itself, however, classified Asatsuyu as 中生種 (medium-season); see conflicts."
 recommendedRegions:
   - Northern Kyushu, Chugoku, and the prefectures neighbouring Shizuoka — the suitable-area range given in the 1953 registration bulletin
   - Kagoshima — widely cited by retailers and cultivar guides as its principal modern growing area, though this research did not independently source acreage or regional-share figures
-yield: Low and unreliable relative to Yabukita — in a NARO field trial in Kagoshima, four years after planting, Asatsuyu had the lowest bush-survival rate (67.5%) of the cultivars tested and was excluded from that year's yield survey because of it
+yield: Low and unreliable relative to Yabukita — in a 1990 field trial at Mizobe, Kagoshima, four years after planting, Asatsuyu had the lowest bush survival of the five cultivars in its test group (67.50 on the paper's arcsin-transformed scale, roughly 85% untransformed, against 83.07 for Yabukita and 90.00 — full survival — for Toyoka, Kanayamidori and Yutakamidori) and was excluded from that year's yield survey because of it
 diseaseResistance:
-  - cold/frost (weak — early budding puts its new growth in the late-frost window; its damaged buds were singled out as conspicuous in a 1990 Kagoshima trial, second only to Yutakamidori)
+  - cold/frost (weak — early budding puts its new growth in the late-frost window; its damaged buds were singled out as conspicuous in a 1990 Kagoshima trial, at the same top damage grade as Yutakamidori)
   - tea gray blight (susceptible to slightly susceptible, per a 1996 varietal resistance survey)
   - field vigour (weak — the lowest four-year bush survival of the cultivars in the Kagoshima trial above)
 notableDescendants:
@@ -36,7 +36,7 @@ rarity: Never widely planted despite its quality reputation — low yield, poor 
 lineageNote: A landrace selection from Uji zairai seed, not a controlled cross — Asatsuyu has no recorded pollen parent of its own. It is nonetheless one of two ancestral hubs, with Yabukita, behind most of Japan's post-war specialty sencha cultivars, as the confirmed pollen parent of Saemidori and Tsuyuhikari and the seed parent of Yutakamidori.
 conflicts: >-
   (1) Budding time. The 1953 registration bulletin (茶の品種登録と命名, 茶業研究報告 No. 2) classifies Asatsuyu
-  as 中生種 (medium-season). A 1991 NARO field trial in Kagoshima instead found it among the very earliest
+  as 中生種 (medium-season). A 1991 field trial at Mizobe, Kagoshima instead found it among the very earliest
   budders of 13 cultivars tested, and secondary sources (japantea-chachacha.com, the pre-existing draft of
   this record) uniformly call it 早生/early. This record follows the trial data, as the more specific and
   directly comparative source, and flags the bulletin's older classification rather than silently dropping
@@ -55,7 +55,7 @@ sources:
     url: https://minorien.jp/university/hinshu.pdf
   - title: 茶品種ハンドブック 第6版 Version 2 (Tea Cultivar Handbook, 6th ed.), NARO, August 2022
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
-  - title: 鳥丸萩夫・渕上康元「緑茶用主要品種の特性について(第5報) 定植4年目の一・二番茶収量(第I群)」茶業研究報告 73, 1991
+  - title: 鳥丸萩夫・渕之上康元「緑茶用主要品種の特性について(第5報) 定植4年目の一・二番茶収量(第I群)」茶業研究報告 73, 1991
     url: https://www.jstage.jst.go.jp/article/cha1953/1991/73/1991_73_1/_article/-char/en
   - title: Oyaizu, Kuranuki, Nakamura, Hidaka & Aoshima, "A New Cultivar 'Tsuyuhikari' for Green Tea," 茶業研究報告 95, 2003
     url: https://www.jstage.jst.go.jp/article/cha1953/2003/95/2003_95_1/_article/-char/en
@@ -83,7 +83,7 @@ Asatsuyu is a sencha cultivar selected from Uji zairai seedlings and registered 
 
 Because Asatsuyu was picked out of an open-pollinated seedling population rather than bred, it has no recorded parents of its own — the same situation as Yabukita, selected from Shizuoka zairai seed the same registration year. What makes Asatsuyu unusual is the other end of the pedigree: it is a confirmed, named parent of three cultivars that between them anchor a large share of Japan's post-Yabukita specialty tea. NARO's own pedigree charts (茶品種ハンドブック) show it twice as a direct parent — as the pollen (male) parent of Saemidori (Yabukita ♀ × Asatsuyu ♂, crossed 1969) and, in the Shizuoka Tea Experiment Station's own release paper, as the pollen parent of Tsuyuhikari (Shizu7132 ♀ × Asatsuyu ♂, crossed 1970). Shizu7132 is itself an open-pollinated Yabukita seedling, so Tsuyuhikari's family tree runs Yabukita on both sides, once directly and once through Asatsuyu. Yutakamidori reverses the roles: it was raised as an open-pollinated seedling of Asatsuyu, with Asatsuyu as seed parent and the pollen source unrecorded.
 
-Saemidori's own descendants compound the pattern. NARO's pedigree charts trace Kirari 31, Seimei, Kiyoka, Danshin 37, Saeakari and Harunagori all back through Saemidori to the same Yabukita × Asatsuyu cross of 1969 — meaning Asatsuyu's genetic contribution recurs through a second and third generation of cultivars bred decades after Asatsuyu itself was registered.
+Saemidori's own descendants compound the pattern. NARO's pedigree charts trace Kirari 31, Seimei, Kiyoka, Danshin 37, Saeakari and Haruto 34 all back through Saemidori to the same Yabukita × Asatsuyu cross of 1969 — meaning Asatsuyu's genetic contribution recurs through a second and third generation of cultivars bred decades after Asatsuyu itself was registered.
 
 ## History
 
@@ -97,9 +97,9 @@ Asatsuyu's own footprint stayed small, but the two crosses made from it in 1969 
 
 ## Characteristics
 
-Field data complicates the budding-time question. The 1953 registration bulletin classed Asatsuyu as 中生種, medium-season. Field trials tell a different story: in a 1991 NARO comparison of 13 cultivars planted in Kagoshima, Asatsuyu and Yutakamidori budded earliest of all, ahead of Sayamakaori (itself roughly two days ahead of Yabukita) and Yabukita itself. Modern secondary sources consistently describe it as 早生, early — this record follows the trial data as the better-sourced and more specific claim, while noting the bulletin's older classification as a documented disagreement rather than silently overriding it.
+Field data complicates the budding-time question. The 1953 registration bulletin classed Asatsuyu as 中生種, medium-season. Field trials tell a different story: in a 1991 comparison of 13 cultivars planted at Mizobe in Kagoshima, Asatsuyu and Yutakamidori budded earliest of all, ahead of Sayamakaori (itself roughly two days ahead of Yabukita) and Yabukita itself. Modern secondary sources consistently describe it as 早生, early — this record follows the trial data as the better-sourced and more specific claim, while noting the bulletin's older classification as a documented disagreement rather than silently overriding it.
 
-That early budding comes at a cost the same trial documents directly. A late-frost event in the spring of 1990 damaged nine of the thirteen cultivars under test to some degree, and the paper singles out Asatsuyu and Yutakamidori — the two earliest budders — for the most conspicuous bud damage, worse than Yabukita's. Field survival tells the same story from a different angle: four years after planting, Asatsuyu had the lowest bush-survival rate (67.5%) of the four cultivars in its test group, below Yabukita (83.1%), Toyoka and Kanayamidori (both 90%). It was poor enough that the researchers excluded Asatsuyu from that year's harvest and yield measurements altogether, rather than report figures from a badly thinned plot. A separate 1996 varietal survey rated it susceptible to slightly susceptible to tea gray blight. Together this is a reasonably direct documentary basis for the cultivar's reputation as low-yielding and disease-prone: it is not simply a repeated rumour, but the outcome recorded in at least one controlled multi-year trial.
+That early budding comes at a cost the same trial documents directly. A late-frost event in the spring of 1990 damaged nine of the thirteen cultivars under test to some degree, and the paper singles out Asatsuyu and Yutakamidori — the two earliest budders — for the most conspicuous bud damage, worse than Yabukita's. Field survival tells the same story from a different angle: four years after planting, Asatsuyu had the lowest bush survival of the five cultivars in its test group — 67.50 on the paper's arcsin-transformed scale, roughly 85% untransformed, below Yabukita (83.07, roughly 98%) and Toyoka, Kanayamidori and Yutakamidori (90.00, full survival). It was poor enough that the researchers excluded Asatsuyu from that year's harvest and yield measurements altogether, rather than report figures from a badly thinned plot. A separate 1996 varietal survey rated it susceptible to slightly susceptible to tea gray blight. Together this is a reasonably direct documentary basis for the cultivar's reputation as low-yielding and disease-prone: it is not simply a repeated rumour, but the outcome recorded in at least one controlled multi-year trial.
 
 The cup is where Asatsuyu earns its reputation. Processed as ordinary or deep-steamed sencha, it gives a bright, lush green liquor and a grain-and-nori-toned umami character that tasting notes compare to shaded teas — the origin of "natural gyokuro." How well-founded that comparison is chemically is harder to pin down than the tasting notes suggest. The 1953 registration bulletin's own stated reason for the nickname is leaf colour, not amino acid content, and this research did not turn up a controlled study directly comparing Asatsuyu's theanine or free-amino-acid levels against other unshaded sencha cultivars to establish shading-like chemistry as the mechanism. What the literature does show is that Asatsuyu has long been treated as a serious reference point for amino-acid quality: a 1984 study used it as the baseline cultivar against which a spontaneous mutant's free amino acid content (105.8–332.9% of Asatsuyu's) and tannin content were measured. That is evidence Asatsuyu's amino-acid profile has been taken seriously enough to build comparisons on, but it falls short of proving the specific "gyokuro without shading" mechanism. On present evidence, "natural gyokuro" is best treated as a long-standing, officially adopted descriptive name — predating any modern marketing use by decades — whose stated basis is visual (leaf colour) and whose implied biochemical basis (amino acids standing in for theanine-rich, shade-grown character) is plausible and consistent with how the cultivar is used, but not something this research could confirm with a direct comparative assay.
 

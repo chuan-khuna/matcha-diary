@@ -19,7 +19,7 @@ parentNotes:
   female: open-pollinated seed parent
 teaTypes:
   - sencha
-buddingTime: early — its own registration text states both budding and picking come earlier than Yabukita, and earlier than three other named Shizuoka early cultivars (Surugawase, Ōiwase, Yamakai). No source found quantifies the gap in days.
+buddingTime: early — its own registration text rates both budding (萌芽期) and picking (摘採期) as early, and names both as grounds for distinguishing it from Yabukita. Three other Shizuoka early cultivars (Surugawase, Ōiwase, Yamakai) are also compared against in that document, but on shoot number, red-blight resistance and leaf characters rather than on earliness. No source found quantifies the gap in days.
 recommendedRegions:
   - Haibara-cho, Shizuoka (place of origin; now part of Makinohara City, on the Makinohara Plateau)
 yield: "Registration text describes young-tree yield as high (多) and mature-tree yield as somewhat high (やや多), relative to comparison cultivars. No kg/10a figures were found."
@@ -58,18 +58,19 @@ sources:
 
 # Takane-wase
 
-Takane-wase is a sencha cultivar selected from open-pollinated Yabukita seedlings and registered under
-Japan's Plant Variety Protection Act (種苗法) in 1985. Unlike the controlled crosses produced by national
-and prefectural research stations, it was bred by a private grower, Muramatsu Hoichi, working at Sakabe in
-Haibara-cho, Haibara-gun, Shizuoka Prefecture — a town later absorbed into Makinohara City, on the
-Makinohara Plateau, one of Japan's largest single tea-growing districts and the area credited with
-pioneering deep-steamed (fukamushi) sencha. Its defining trait, recorded in its own official variety
-description, is speed: both its budding period and its picking period come earlier than Yabukita, and
-earlier again than three other named early Shizuoka selections it is directly compared against in that
-same document — Surugawase, Ōiwase and Yamakai. It belongs to the same loose cohort of privately
-registered wase (早生, early-budding) cultivars as Satō-wase, Sagara-wase and Terakawa-wase: growers'
-individual selections registered under the Plant Variety Protection Act rather than products of an
-institutional breeding programme.
+Takane-wase is a sencha cultivar selected from open-pollinated Yabukita seedlings and registered
+under Japan's Plant Variety Protection Act (種苗法) in 1985. Unlike the controlled crosses produced by
+national and prefectural research stations, it was bred by a private grower, Muramatsu Hoichi,
+working at Sakabe in Haibara-cho, Haibara-gun, Shizuoka Prefecture — a town later absorbed into
+Makinohara City, on the Makinohara Plateau, one of Japan's largest single tea-growing districts and
+the area credited with pioneering deep-steamed (fukamushi) sencha. Its defining trait, recorded in
+its own official variety description, is speed: both its budding period and its picking period are
+rated early, and both are named among the points that distinguish it from Yabukita. The same
+document also compares it against three other early Shizuoka selections — Surugawase, Ōiwase and
+Yamakai — but on shoot number, red-blight resistance and leaf characters rather than on earliness.
+It belongs to the same loose cohort of privately registered wase (早生, early-budding) cultivars as
+Satō-wase, Sagara-wase and Terakawa-wase: growers' individual selections registered under the Plant
+Variety Protection Act rather than products of an institutional breeding programme.
 
 ## Lineage
 
@@ -104,10 +105,11 @@ explains the discrepancy; it may reflect an early termination (for example, non-
 maintenance fee) rather than the full statutory term running its course, but that is not stated in the
 record and should not be assumed.
 
-Haibara-cho merged with the neighbouring town of Sagara-cho in 2005 to form Makinohara City — the same
-area that later produced Sagara-wase — and the whole district sits on the Makinohara Plateau, developed
-into tea land in the Meiji era and now Shizuoka's second-largest tea-producing area after Shizuoka City
-itself, known in particular for pioneering deep-steamed sencha processing.
+Haibara-cho merged with the neighbouring town of Sagara-cho in 2005 to form Makinohara City — the
+same area that later produced Sagara-wase — and the whole district sits on the Makinohara Plateau,
+developed into tea land in the Meiji era and now first in Japan for crude-tea (aracha) output and
+second only to Shizuoka City nationally in tea-garden area, known in particular for pioneering
+deep-steamed sencha processing.
 
 No dedicated release paper for Takane-wase was found in 茶業研究報告 (Tea Research Journal) on J-STAGE, nor
 any record in CiNii Research or the National Diet Library catalogue, which is consistent with its origin
@@ -120,10 +122,12 @@ some of its wase cohort (Terakawa-wase, for instance, still turns up in small Mi
 
 ## Characteristics
 
-Takane-wase is documented as early on both counts that matter for a wase cultivar: its own registration
-text states that its budding period (萌芽期) and its picking period (摘採期) are both early, ahead of
-Yabukita and of the three comparison cultivars named in the same document. No source found quantifies
-that gap in days, so "early" here should be read as officially confirmed rather than precisely measured.
+Takane-wase is documented as early on both counts that matter for a wase cultivar: its own
+registration text states that its budding period (萌芽期) and its picking period (摘採期) are both rated
+early, and lists both as grounds for distinguishing it from Yabukita. Against the other three
+comparison cultivars the registration rests its distinctness on other characters, so nothing in the
+record places it ahead of those three. No source found quantifies that gap in days, so "early" here
+should be read as officially confirmed rather than precisely measured.
 
 The registration's plant description is otherwise detailed. Tree form is open (spreading) with strong
 vigour and a somewhat large stool spread; trunk diameter and leaf-layer thickness are both medium. At

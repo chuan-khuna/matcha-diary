@@ -13,7 +13,7 @@ registry: Plant Variety Protection Act
 strainNames:
   - Makurazaki No. 32 (枕崎32号)
 crossedYear: 1992
-selectedYear: null
+selectedYear: 2000
 bredAt: NARO (then the National Institute of Vegetable and Tea Science, tea research division; now NARO's Institute of Fruit Tree and Tea Science), Makurazaki, Kagoshima
 prefecture: Kagoshima
 parents:
@@ -32,7 +32,7 @@ buddingTime: early — about 5 days before Yabukita to first-flush budding and 4
 recommendedRegions:
   - Kanto and areas further south — the same range as Yabukita
   - young plants need frost protection in cold districts such as Saitama
-yield: higher than both Yabukita and Saemidori across every flush of the season, in open-field cultivation and under shade alike; no kg/10a trial figure located
+yield: higher than both Yabukita and Saemidori across every flush of the season, in open-field cultivation and under shade alike; 1,075 kg/10a annual plucked-leaf yield at the Makurazaki breeding station over 2008–2012, against 758 for Saemidori and 489 for Yabukita
 diseaseResistance:
   - anthracnose (medium)
   - ring spot disease / 輪斑病 (strong)
@@ -44,8 +44,8 @@ diseaseResistance:
 rarity: Newly released; NARO's own adoption target on registration was 500 ha of new planting within ten years, so it remains a thin, young planting rather than an established one
 lineageNote: A controlled cross made at NARO's Makurazaki tea research station, not a landrace selection. Fushun and Saemidori were crossed in 1992 and Seimei was selected from that F1 seedling population; it shares its pollen parent, Saemidori, with several other modern cultivars, including Kirari 31 (bred at a different station from a different seed parent, Sakimidori, in the same period).
 documentation: null
-conflicts: "Ito En's O-CHA NET dates Seimei to 2017; the Japanese Tea Sommelier master list dates it to 2020. Both are correct — they are different stages of the same Plant Variety Protection Act filing, not a disagreement. MAFF's variety registration database (登録品種データベース, TOUROKU_NO 27874) and NARO's own release materials give four distinct dates: application filed 30 June 2016 (application No. 31289), application publicly announced 30 January 2017 — the date Ito En most likely reflects — and registration granted 30 March 2020 under registration No. 27874, the date the Sommelier list uses. This record follows NARO's own convention and gives 2020 as the registration year, recording 2016 and 2017 separately above rather than picking one."
-summary: A 2020-registered Kagoshima cultivar bred at NARO's Makurazaki station from Fushun × Saemidori, Seimei buds about four days before Yabukita and out-yields both parents under shade cloth — developed specifically for tencha and kabusecha as matcha and powdered-tea demand has grown.
+conflicts: "Ito En's O-CHA NET dates Seimei to 2017; the Japanese Tea Sommelier master list dates it to 2020. Both are correct — they are different stages of the same Plant Variety Protection Act filing, not a disagreement. MAFF's variety registration database (登録品種データベース, TOUROKU_NO 27874) and NARO's own release materials give three distinct dates: application filed 30 June 2016 (application No. 31289), application publicly announced 30 January 2017 — the date Ito En most likely reflects — and registration granted 30 March 2020 under registration No. 27874, the date the Sommelier list uses. This record follows NARO's own convention and gives 2020 as the registration year, recording 2016 and 2017 separately above rather than picking one."
+summary: A 2020-registered Kagoshima cultivar bred at NARO's Makurazaki station from Fushun × Saemidori, Seimei is plucked about four days before Yabukita and out-yields both Yabukita and Saemidori under shade cloth — developed specifically for tencha and kabusecha as matcha and powdered-tea demand has grown.
 sources:
   - title: せいめい | 農研機構 品種・技術データベース
     url: https://www.naro.go.jp/collab/breed/0200/0206/073702.html
@@ -78,15 +78,16 @@ registered under the Plant Variety Protection Act in 2020. It was crossed in 199
 Saemidori, and developed to answer a problem the trade had been living with for years: the country's
 shade-grown acreage — the raw material for tencha and matcha — was overwhelmingly planted in Yabukita,
 a cultivar whose yield and tree vigour both decline under cloth, just as matcha and powdered-tea
-demand rose through the 2000s and 2010s. Seimei buds about four days ahead of Yabukita, out-yields
-both Yabukita and Saemidori under shade, and turns a visibly greener matcha than Yabukita does — the
-trait its name was chosen for.
+demand rose through the 2000s and 2010s. Seimei is plucked about four days ahead of Yabukita,
+out-yields both Yabukita and Saemidori under shade, and turns a visibly greener matcha than Yabukita
+does — the trait its name was chosen for.
 
 ## Lineage
 
 - **Fushun (ふうしゅん)** ♀ — the seed parent, contributing strong tree vigour, high yield and cold
-  hardiness. It is itself a NARO Makurazaki-line cultivar, still grown and tested in Shizuoka's own
-  recommended-cultivar trials as of 2022, though no registration record for it was located here.
+  hardiness. It is itself a Kanaya-line cultivar, bred at the tea station in Kanaya, Shizuoka, and
+  registered under the Plant Variety Protection Act as No. 3697 in October 1993; it is still grown and
+  tested in Shizuoka's own recommended-cultivar trials as of 2022.
 - **Saemidori (さえみどり)** ♂ — the pollen parent, contributing early budding and strong processing
   quality. It is also the pollen parent of Kirari 31, bred at a different station from a different
   seed parent (Sakimidori) around the same period.
@@ -104,25 +105,25 @@ reach registration.
 
 By the early 2010s NARO's tea breeders were working against two pressures at once. Processors were
 asking for cultivars with a flavour genuinely different from Yabukita's. More pressingly for a
-matcha-focused programme, the shaded-cultivation acreage that supplies tencha and matcha had grown
-roughly 1.4-fold over the preceding decade, both in Japan and in export demand, while the crop
-actually growing under that shade cloth remained overwhelmingly Yabukita — planted on roughly
-three-quarters of the country's tea fields, much of it ageing, and a cultivar whose yield and tree
-vigour both suffer under long-term shading. NARO's stated aim was a high-quality green tea cultivar
-that held its yield, colour and umami under cover.
+matcha-focused programme, production of matcha and powdered tea — which depends on shaded
+cultivation — had grown roughly 1.4-fold over the preceding decade, while the crop actually growing
+under that shade cloth remained overwhelmingly Yabukita — planted on roughly three-quarters of the
+country's tea fields, much of it ageing, and a cultivar whose yield and tree vigour both suffer
+under long-term shading. NARO's stated aim was a high-quality green tea cultivar that held its
+yield, colour and umami under cover.
 
 ### Breeding and trial
 
 The cross that produced Seimei was made in 1992, at what was then the National Institute of Vegetable
 and Tea Science's tea research division in Makurazaki, Kagoshima — using Fushun, a vigorous and
-high-yielding Makurazaki line, as the seed parent, and Saemidori, valued for early budding and
-processing quality, as the pollen parent. Seimei was selected from that F1 seedling population and
-carried afterward under the trial designation Makurazaki No. 32; no source consulted here dates the
-individual selection more precisely than that. A funded regional-adaptation programme — under the
-agri-food project "Development of tea cultivars with superior colour, flavour and functional
-components sought by processors, and their cultivation and processing technology" — ran from 2011 to
-2015 at NARO's reorganised Institute of Fruit Tree and Tea Science, examining Seimei's performance
-under both open-field and shaded cultivation.
+high-yielding Kanaya line, as the seed parent, and Saemidori, valued for early budding and
+processing quality, as the pollen parent. Seimei was selected in 2000 from that F1 seedling
+population of 58 seedlings, as the individual F189447, and carried afterward under the trial
+designation Makurazaki No. 32. A funded regional-adaptation programme — under the agri-food project
+"Development of tea cultivars with superior colour, flavour and functional components sought by
+processors, and their cultivation and processing technology" — ran from 2011 to 2015 at NARO's
+reorganised Institute of Fruit Tree and Tea Science, examining Seimei's performance under both
+open-field and shaded cultivation.
 
 ### Registration
 

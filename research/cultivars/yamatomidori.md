@@ -10,7 +10,7 @@ registrationNumber: 茶農林10号 (Cha Norin No. 10)
 registry: MAFF
 selectedYear: null
 selectedFrom: "Nara indigenous (zairai) tea tree seed: seedling trees collected in 1924 (Taisho 13) from the tea garden of Fukui Kanjiro at Kamitsu, Yamazoe village, Yamabe district, Nara, and raised as a seedling tea garden at the Nara Prefectural Agricultural Experiment Station's tea branch; an individual selected from that garden was developed 1935-1946 at a MAFF-designated original-variety plot before registration"
-bredAt: Nara Prefectural Agricultural Experiment Station, Tea Branch (奈良県農事試験場茶業分場; successor institution now called the Yamatocha Research Center, 大和茶研究センター)
+bredAt: Nara Prefectural Agricultural Experiment Station, Tea Branch (奈良県立農事試験場茶業分場; successor institution now called the Yamatocha Research Center, 大和茶研究センター)
 prefecture: Nara
 parents:
   female: Nara zairai
@@ -30,15 +30,20 @@ diseaseResistance:
   - split-bark frost damage / 裂傷型凍害 (extremely strong, per the same grower account)
 notableDescendants:
   - Okumusashi (registered 1962; Yamatomidori is its pollen parent, crossed with Sayamamidori)
+  - Meiryoku (registered 1986; Yamatomidori is its pollen parent, crossed with Yabukita)
 rarity: "Plantings of Yamatomidori and its seed-grown population once exceeded 50 hectares in Nara, but most were later replanted to Yabukita and other cultivars as its ten-day-later harvest became a commercial disadvantage. True clonal (cutting-propagated) Yamatomidori nearly disappeared: a 2016 planting at Tsukigase Health Tea Farm was, according to a researcher at Nara's tea research centre, the first clonal planting of it in the prefecture in 60 years. Almost everything sold as Yamatomidori today, including at Tsukigase, is grown from 'Yamatomidori-jissei,' a seed-propagated population descended from it rather than the cutting-propagated cultivar itself."
-lineageNote: A landrace selection from Nara indigenous (zairai) tea tree seed, not a controlled cross — an individual tree selected from a seedling garden grown from seed collected in 1924, with no recorded pollen parent. It later served as the pollen parent of Okumusashi in 1962, its one documented descendant.
-conflicts: "The 1953 registration paper (the primary release document, 茶業研究報告 No. 2) records vigour as very strong (樹勢甚強) and yield as abundant (収量が多い). The Japanese Wikipedia article on Yamatocha instead gives vigour as medium (樹勢中) and yield as medium (収量は中である) for the same cultivar, without citing its source. This record follows the 1953 paper as the better-sourced value."
+lineageNote: "A landrace selection from Nara indigenous (zairai) tea tree seed, not a controlled cross — an individual tree selected from a seedling garden grown from seed collected in 1924, with no recorded pollen parent. It later served as the pollen parent of two registered cultivars: Okumusashi in 1962 and Meiryoku in 1986."
+conflicts: "The 1953 registration paper (the primary release document, 茶業研究報告 No. 2) records vigour as very strong (樹勢甚強) and yield as abundant (収量が多い). MAFF's 登録品種一覧表 as published by NARO — the table the Japanese Wikipedia article on Yamatocha quotes for its own figures — instead gives vigour as medium (樹勢中) and yield as medium (着芽密で収量は中) for the same cultivar. This record follows the 1953 release paper as the earlier and more detailed of the two official statements."
 summary: A 1953 landrace selection from Nara indigenous tea tree seed, registered as Cha Norin No. 10, Yamatomidori is the only cultivar Nara has ever bred — it buds over ten days later than Yabukita, resists cold and frost exceptionally well, and survives today mainly as seed-grown bancha and hojicha stock.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 No. 2
     url: https://www.jstage.jst.go.jp/article/cha1953/1953/2/1953_2_95/_article/-char/en
   - title: "Studies on the Varietal Differences of the Cold-Resistance of the Tea Plant (Part 1), 茶業研究報告 No. 4"
     url: https://www.jstage.jst.go.jp/article/cha1953/1954/4/1954_4_1/_article/-char/en
+  - title: 農林水産省登録品種一覧表 (MAFF Registered Tea Varieties table) — 農研機構 野菜茶業研究所
+    url: https://web.archive.org/web/20090509103630/http://vegetea.naro.affrc.go.jp:80/cha/cultivar.htm
+  - title: 緑茶用新登録品種「おくむさし」について, 茶業研究報告 No. 19
+    url: https://www.jstage.jst.go.jp/article/cha1953/1962/19/1962_19_6/_article/-char/ja/
   - title: 大和茶 (Yamatocha) — Wikipedia
     url: https://ja.wikipedia.org/wiki/大和茶
   - title: 唯一、奈良で育成された品種「やまとみどり」の魅力 — 月ヶ瀬健康茶園
@@ -70,8 +75,9 @@ seed and dense budding rather than for any particular finesse in the cup.
   its own parentage is unrecorded.
 
 Because it is a landrace selection rather than a bred cross, Yamatomidori has no documented
-pollen parent. It does have one documented descendant: it is recorded as the pollen parent of
-Okumusashi, registered in 1962 from a cross with Sayamamidori as the seed parent.
+pollen parent. It does have two documented descendants: it is recorded as the pollen parent of
+Okumusashi, registered in 1962 from a cross with Sayamamidori as the seed parent, and of
+Meiryoku, registered in 1986 from a cross with Yabukita as the seed parent.
 
 ## History
 
@@ -86,7 +92,7 @@ plot, under the working strain name Nara No. 59 (奈良59号).
 It was registered nationally in October 1953 as Cha Norin No. 10 (茶農林10号), one of fifteen tea
 cultivars given their first Ministry of Agriculture and Forestry registration that year — the
 inaugural round of the system, announced in 茶業研究報告 (Tea Research Journal) No. 2 alongside
-Yabukita (No. 6) and twelve others. That release paper is the primary source for this record: it
+Yabukita (No. 6) and thirteen others. That release paper is the primary source for this record: it
 gives the registration number, the strain history, and the characteristics summary quoted
 throughout this page. Its stated reason for the name is that it represents both the place the
 cultivar was bred and the region it was expected to spread into — Nara itself, and cold
@@ -113,9 +119,10 @@ Yamatomidori is a late-budding cultivar: the 1953 registration paper classes it 
 (late-maturing type), and a Nara grower account puts the gap at ten or more days behind Yabukita
 in both bud break and picking date. Tree form is upright with, per the original registration
 paper, very strong vigour; leaves are long-elliptical and deep green. That same paper records
-dense budding and abundant yield, though the Japanese Wikipedia article on Yamatocha instead
-describes vigour and yield as merely medium for the same cultivar — a real disagreement between a
-primary and a secondary source that this record resolves in favour of the primary paper. Seed-set
+dense budding and abundant yield, though MAFF's own 登録品種一覧表 as published by NARO — the
+table the Japanese Wikipedia article on Yamatocha quotes — instead describes vigour and yield as
+merely medium for the same cultivar, a real disagreement between two official sources that this
+record resolves in favour of the original release paper. Seed-set
 (結実性) is high and genetic purity strong, which the 1953 paper notes made it well suited to
 propagation by seed rather than by cutting — a trait that, decades later, is largely why the
 cultivar survives at all.

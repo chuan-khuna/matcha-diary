@@ -29,7 +29,7 @@ diseaseResistance:
   - "late-spring frost on new buds (weak — Kyoto Prefecture's cultivation guidance singles this out as a caution specific to Asahi: \"芽は晩霜に敏感であるので注意\")"
   - anthracnose / 炭疽病 (medium)
   - gray blight / ring spot disease, 輪斑病 (somewhat weak)
-  - cutting propagation / 挿し木発根性 (somewhat poor — rated below Yabukita, Samidori, Ujihikari and Tenmyo on the same official table)
+  - cutting propagation / 挿し木発根性 (somewhat poor — rated below Yabukita, Ujihikari and Tenmyo on the same official table, and level with Samidori, which is rated やや不良 too)
 rarity: Rare and concentrated in Uji — hand-picked on a short window, never planted at scale outside Kyoto, and traded at high prices as a competition-grade tencha
 lineageNote: A single-tree selection from Uji zairai (landrace) seed-grown stock, not a controlled cross, so it has no recorded pollen parent. It was finalised in the same year (1954) as two other Uji selections, Samidori and Ujihikari, with which it is grouped as Kyoto's core hand-picked tencha trio — but unlike Ujihikari (bred directly by the institute) it was found and numbered by a working farmer, not an institution.
 documentation: normal
@@ -118,7 +118,7 @@ tea." That reputation has held for seventy years. Horii Shichimeien, a long-esta
 producer, describes Asahi in its own words as "the best variety of tencha found in Uji" and "a
 high-quality tea that dominates the top ranks at tea competitions," and named a stone-ground matcha
 after it — Mumon (無門) — replanting the cultivar in the first year of Reiwa (2019) for a first
-picking targeted six years later, in Reiwa 6 (2024), which is itself a measure of how long a new
+picking targeted five years later, in Reiwa 6 (2024), which is itself a measure of how long a new
 Asahi planting takes to become productive. Matcha Direct, a Uji tencha wholesaler, ranks Asahi
 fifth among Kyoto Prefecture's tea cultivars by production volume — behind Yabukita, Okumidori,
 Samidori and Gokou — describing it as "a rare cultivar of Uji Tea that is traded at high prices...
@@ -137,14 +137,14 @@ gyokuro or sencha.
 Kyoto Prefecture's own cultivation table is candid about where Asahi is hard work. Yield is rated
 やや少, "somewhat low," among the lowest of the prefecture's recommended cultivars, and cutting
 propagation is rated やや不良, "somewhat poor" — new plantings are harder to establish from
-cuttings than Yabukita, Samidori or Ujihikari. Disease resistance is middling rather than strong:
-medium tolerance of anthracnose and only "somewhat weak" resistance to gray blight (輪斑病). The
-same table singles Asahi out with a caution not applied to most of its neighbours — its new buds
-are sensitive to late-spring frost and need watching for it — a specific vulnerability distinct
-from, and not necessarily contradicted by, the general "cold-hardy" reputation the cultivar
-otherwise carries in enthusiast sources. Add to that a picking window that is short even by Uji
-standards, and the crop is taken by hand rather than machine; the extra labour goes into quality
-rather than volume.
+cuttings than Yabukita, Ujihikari or Tenmyo — only Samidori is rated as poorly. Disease
+resistance is middling rather than strong: medium tolerance of anthracnose and only "somewhat
+weak" resistance to gray blight (輪斑病). The same table singles Asahi out with a caution not
+applied to most of its neighbours — its new buds are sensitive to late-spring frost and need
+watching for it — a specific vulnerability distinct from, and not necessarily contradicted by, the
+general "cold-hardy" reputation the cultivar otherwise carries in enthusiast sources. Add to that
+a picking window that is short even by Uji standards, and the crop is taken by hand rather than
+machine; the extra labour goes into quality rather than volume.
 
 What that labour buys is the cup Uji growers compete on: concentrated colour that takes shading
 well ("染まりが良く"), a clear, strong aroma, and a mellow, rounded flavour with little bitterness,

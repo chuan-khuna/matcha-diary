@@ -16,7 +16,7 @@ parents:
   female: Uji zairai
   male: null
 parentNotes:
-  female: recorded as Uji-strain (宇治種) — (宇治種) zairai seedling
+  female: recorded as Uji-strain (宇治種) zairai seedling
 teaTypes:
   - tamaryokucha
 buddingTime: medium (中生種) — the 1953 registration paper's own classification; no day-count relative to Yabukita has been located. One secondary source (日本茶備忘録) instead calls it late-budding (晩生); not corroborated elsewhere, see conflicts.
@@ -79,12 +79,16 @@ the shops.
   of Agriculture and Commerce's tea manufacturing division in Nishigahara, Tokyo, using Uji (Kyoto)
   native stock; not a controlled cross, so Tamamidori has no recorded pollen parent of its own.
 
-Tamamidori was one of three Uji-strain selections registered in the same 1953 cohort, alongside
-Asatsuyu (Cha Norin No. 2) and Miyoshi (Cha Norin No. 3) — all three grown from Uji zairai
-seedlings sown at the same Nishigahara facility and carried forward at the national tea experiment
-station. Unlike its two sencha-registered siblings, Tamamidori was registered for tamaryokucha, the
-one tamaryokucha slot among the ten green-tea cultivars named that year (the other nine split
-between eight sencha and one kamairicha).
+Tamamidori was one of three Uji-strain Nishigahara selections registered in the same 1953 cohort,
+alongside Asatsuyu (Cha Norin No. 2) and Miyoshi (Cha Norin No. 3) — all three grown from Uji
+zairai seedlings sown at the same Nishigahara facility and carried forward at the national tea
+experiment station. They were not the only Uji-derived entries in that round: MAFF's own 茶農林
+registry table records five of the 1953 cultivars as 宇治在来種実生, adding Sayamamidori (No. 5),
+selected in 1935 and carried forward in Saitama, and Koyanishi (No. 8), a Shizuoka selection for
+which the registration paper itself names no origin at all. Unlike its two sencha-registered
+Nishigahara siblings, Tamamidori was registered for tamaryokucha, the one tamaryokucha slot among
+the ten green-tea cultivars named that year (the other nine split between eight sencha and one
+kamairicha).
 
 Tamamidori's own descendants are what make it worth a longer look. It has no recorded children of
 its own by controlled crossing, but it appears twice as a grandparent, in two unrelated breeding
@@ -93,7 +97,7 @@ efforts run decades apart at the Kanaya national tea station:
 - **Z1** — an unregistered breeding line raised from Tamamidori seed by open pollination (自然交雑
   in NARO's own pedigree charts), with an unrecorded pollen parent. Z1 was itself used as a parent
   three times: as the seed parent of Fushun (Z1 × Kanayamidori, crossed 1965, registered 1991 as
-  Cha Norin No. 41), as the seed parent of Saeakari (Z1 × Saemidori, crossed 1989, registered 2011),
+  Cha Norin No. 41), as the seed parent of Saeakari (Z1 × Saemidori, crossed 1989, registered 2012),
   and as the pollen parent of Meiryoku (Yabukita × Z1, registered 1986/87 as Cha Norin No. 35).
 - **F1NN8** — a numbered F1 hybrid breeding line kept at the Kanaya station, never released as a
   cultivar itself, from a deliberate cross of Tamamidori and S6 (静岡在来種実生, a numbered
@@ -119,7 +123,7 @@ individual was transplanted to the Ministry of Agriculture and Forestry's tea ex
 and it was established as a fixed line in Showa 15 (1940), under the trial designation 国茶U17号
 (Kokucha U17). By the time of registration in 1953, the registry table places its breeding station
 at Kanaya, Shizuoka — the government's national tea research site, forerunner of NARO's present-day
-Institute of Vegetable and Tea Science.
+Institute of Fruit Tree and Tea Science (果樹茶業研究部門).
 
 Registration came in Showa 28 (1953), Japan's first tea cultivar registration round of any kind.
 Fifteen varieties were named and numbered at once: ten for green tea (eight sencha, one
@@ -127,9 +131,9 @@ tamaryokucha, one kamairicha) and five for black tea. Tamamidori was Cha Norin N
 between Miyoshi (No. 3) and Sayamamidori (No. 5). The announcement was published as "茶の品種登録と
 命名" (Registered Tea Varieties) in 茶業研究報告 (Tea Research Journal) No. 2, October 1953 — the
 second issue of a journal that had itself begun publication only that same year. The paper's own
-words on Tamamidori read: "中生種で樹姿直立、樹勢甚強、葉は稍円形で緑色である。耐寒性が強く、収量が多いが、
+words on Tamamidori read: "中生種で樹姿直立、樹勢甚強、葉は楕円形で緑色である。耐寒性が強く、収量が多いが、
 耐病性の弱い欠点がある。蒸製玉緑茶として品質優良である" — a medium-budding, upright, very vigorous bush
-with somewhat rounded green leaves, strongly cold-hardy and high-yielding but weak in disease
+with elliptical green leaves, strongly cold-hardy and high-yielding but weak in disease
 resistance, making an excellent steamed tamaryokucha. Its recommended region was given as "九州各県、
 静岡県、三重県における玉緑茶地帯" — the tamaryokucha-producing districts of Kyushu's prefectures,
 Shizuoka, and Mie.
@@ -151,7 +155,7 @@ itself to needle-rolling, most kamairicha ends up tamaryokucha-shaped by default
 why the two get conflated. But tamaryokucha can equally be made by steaming, simply by omitting
 sencha's final needle-rolling step, and the 1953 registration paper is explicit that this is
 Tamamidori's process: 蒸製玉緑茶, *steamed* tamaryokucha. The same paper registers a cohort-mate,
-Takachiho (Cha Norin No. 11), in the sentence "釜炒り茶として品質優良である" — kamairicha, not
+Takachiho (Cha Norin No. 11), in the sentence "釜炒茶として品質優良である" — kamairicha, not
 tamaryokucha — and MAFF's own registry table tags the two cultivars with different use-codes,
 玉緑茶 for Tamamidori and 釜炒り茶 for Takachiho, confirming the distinction was deliberate rather
 than incidental. My Japanese Green Tea's cultivar table and its dedicated Tamamidori page both
@@ -169,11 +173,11 @@ actually designated for kamairicha.
 ## Characteristics
 
 The 1953 registration paper describes Tamamidori as medium-budding (中生種), upright in growth
-habit (樹姿直立) with very strong vigour (樹勢甚強), and somewhat rounded leaves (稍円形) — a
-distinct term from the plain elliptical (楕円形) shape the same paper uses for most of its other
-1953 entries — coloured green. My Japanese Green Tea adds more detail: a greenish-yellow leaf with
-high lustre. One secondary source, 日本茶備忘録, instead classifies it as late-budding; this is not
-corroborated by the primary source or by My Japanese Green Tea, both of which agree on medium.
+habit (樹姿直立) with very strong vigour (樹勢甚強), and elliptical leaves (楕円形) coloured green —
+the same leaf-shape term the paper uses for most of its other 1953 entries. My Japanese Green Tea
+agrees on the elliptical shape and adds more detail: a greenish-yellow leaf with high lustre. One
+secondary source, 日本茶備忘録, instead classifies it as late-budding; this is not corroborated by
+the primary source or by My Japanese Green Tea, both of which agree on medium.
 
 Cold hardiness is explicitly called out as strong in the registration paper — a real asset for a
 Uji-origin cultivar being pushed into more marginal growing districts — and yield is described as

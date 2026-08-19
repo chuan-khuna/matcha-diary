@@ -25,7 +25,7 @@ teaTypes:
   - tencha
   - matcha
   - gyokuro
-buddingTime: late (晩生) — budding about 11 days after Yabukita and first-flush plucking about 8 days after, which is the whole agronomic point of it
+buddingTime: late (晩生) — budding about 11 days after Yabukita and first-flush plucking about 9 days after, which is the whole agronomic point of it
 recommendedRegions:
   - Shizuoka
   - Kyoto
@@ -47,6 +47,8 @@ summary: A 1953 cross of Yabukita against the landrace selection 静在16, regis
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林32号 row)
     url: https://minorien.jp/university/hinshu.pdf
+  - title: "緑茶用早生品種「さえみどり」および晩生品種「おくみどり」の育成 — 武田善行ほか, 育種学研究 8(3): 113-117 (2006). The breeding group's own account; 表3 gives the 育成地 phenology (萌芽期 4.14 / 摘採期 5.17 against Yabukita's 4.3 / 5.8)"
+    url: https://www.jstage.jst.go.jp/article/jsbbr/8/3/8_113/_article/-char/ja
   - title: おくみどり ─ 「やぶきた」と組み合わせて摘採期を拡大する ─ / O-CHA NET (Ito En)
     url: https://www.o-cha.net/teacha/hinshu/okumidori.html
   - title: 茶44品種・系統のDNA品種識別技術 (NARO SSR cultivar identification manual, 2021 — pedigree table and national cultivar shares)
@@ -69,7 +71,7 @@ Okumidori was bred to solve a scheduling problem. A district planted almost enti
 has one picking season, and it is short: every bush comes ready at once, the factory runs flat
 out for a fortnight, and the quality of what comes off the later fields suffers because they
 were picked late rather than because they were meant to be. Okumidori buds about eleven days
-after Yabukita and is plucked about eight days after it, which lets a grower plant both and turn
+after Yabukita and is plucked about nine days after it, which lets a grower plant both and turn
 one frantic window into two manageable ones. That is what the national station at Kanaya crossed
 it for in 1953, and what MAFF registered it for in 1974 — as a sencha cultivar, high-yielding
 and late.

@@ -149,8 +149,8 @@ Kagoshima mainland, in 1972, 1973 and 1975 tested Kuritawase's first-crop qualit
 and several other early cultivars (Yutakamidori, Surugawase, Makinoharawase, Hatsumidori, Yaeho)
 and concluded that Kuritawase was "the most suitable variety from the viewpoints of both better
 quality of the made tea and the earliest production among the early varieties in the warm region
-of southern Kyushu" — a research-station verdict that lines up with the prefecture's own decision
-the following year. Kuritawase has never held a national Cha Norin registration; myjapanesegreentea.com's
+of southern Kyushu" — a national research-station verdict arriving six years after the
+prefecture's own 1966 decision. Kuritawase has never held a national Cha Norin registration; myjapanesegreentea.com's
 cultivar list places it explicitly among Japan's unregistered tea cultivars.
 
 ### Sugiyama Hikosaburo's second island

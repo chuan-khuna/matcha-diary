@@ -31,7 +31,7 @@ cultivationShare: no percentage published; ranked 3rd by production volume among
 diseaseResistance:
   - cold (strong)
   - anthracnose (medium)
-  - grey blight / Pseudocercospora (weak)
+  - grey blight / 輪斑病 (slightly weak, やや弱)
   - white peach scale (weak)
 notableDescendants:
   - Houshun (鳳春) — natural-cross seedling of Samidori, registered 2006
@@ -40,6 +40,8 @@ lineageNote: A landrace selection from Uji zairai stock, not a controlled cross 
 conflicts: "Selection/registration date: several vendor pages (myjapanesegreentea.com, nagocha.com, przyprawyimatcha.pl) state Koyama Masajirō began breeding Samidori 'since 1939', with 1954 marking only its promotion as a recommended cultivar. The primary source — the Kyoto Prefectural Tea Research Institute's own page (pref.kyoto.jp/chaken, mirrored at ujicha.or.jp) — gives a single 育成年 (development year) of 1954 for the selection itself and no earlier date. This record follows the primary source; the 1939 date could not be independently corroborated in any Japanese-language source and is not asserted. — Budding-time offset: the Institute's own release on Houshun and Tenmyo (pref.kyoto.jp/chaken/seika_hou-ten.html) gives inconsistent implied offsets for Samidori relative to Yabukita: Houshun is described as '7 days earlier than Samidori, 10 days earlier than Yabukita' (implying Samidori sits ~3 days ahead of Yabukita), while Tenmyo is described as 'similar to Samidori, 1–2 days later than Yabukita' (implying Samidori sits slightly behind Yabukita). No single day-count for Samidori itself is published, so this record reports only the qualitative 中生 (mid-season) designation."
 summary: A landrace selection from Uji zairai stock, promoted as a Kyoto Prefecture recommended cultivar in 1954, Samidori is one of the principal Uji tencha and gyokuro cultivars, prized for its vivid colour and umami, and the seed parent of both Houshun and Tenmyo.
 sources:
+  - title: 京都府茶奨励品種の栽培特性一覧 (Kyoto Prefecture recommended tea cultivars — characteristics table, PDF)
+    url: https://ujicha.or.jp/wp-content/themes/kyotocha/assets/files/hinsyutokusei.pdf
   - title: 宇治品種について (About Uji Cultivars) — Kyoto Prefecture
     url: https://www.pref.kyoto.jp/chaken/mame_ujihinnshu.html
   - title: 新品種'鳳春（ほうしゅん）、展茗（てんみょう）'について — Kyoto Prefecture
@@ -110,8 +112,9 @@ generations, watched his seed-grown bushes for individuals worth propagating on 
 of them — pale green, glossy, upright enough to make hand-picking easy — became Samidori. The
 Kyoto Prefectural Tea Research Institute records its 育成年 (development year) as 1954, the
 year the selection was finalised and the cultivar was designated a Kyoto Prefecture recommended
-variety (京都府奨励品種); the same institute selected Asahi, Gokou, Ujihikari and several other
-Uji cultivars in the same year, from the same pool of zairai material. Several retail sources
+variety (京都府奨励品種); the Research Institute and other Uji growers selected Gokou,
+Ujihikari, Asahi and several other Uji cultivars in the same year, from the same pool of zairai
+material. Several retail sources
 state that Koyama had been working with the plant since 1939, fifteen years before its formal
 promotion — a plausible enough shape for a landrace selection, where an individual is often
 identified and multiplied by cuttings long before any institution formally endorses it, as with
@@ -148,8 +151,9 @@ most sources single out — it makes hand-picking distinctly easier than on cult
 sprawling habit, a real consideration for a cultivar grown almost entirely for hand-harvested
 tencha. New leaves are pale green, glossy and described as moist or fresh-looking (みずみずしい)
 rather than dark or leathery. Yield is somewhat above average for the category. Cold tolerance
-is reported as good; disease resistance is more mixed, with weak resistance to grey blight and
-white peach scale and only medium resistance to anthracnose — Samidori is not a cultivar chosen
+is reported as good; disease resistance is more mixed, with slightly weak resistance to grey blight
+(輪斑病), weak resistance to white peach scale and only medium resistance to anthracnose —
+Samidori is not a cultivar chosen
 for its disease package so much as for what it does in the cup.
 
 That cup is the point of it. Processed as tencha, the Research Institute credits it with

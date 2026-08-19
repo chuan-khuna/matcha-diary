@@ -9,7 +9,7 @@ registered: 2020
 registrationNumber: null
 pvpRegistrationNumber: 28148
 pvpApplicationNumber: 33551
-registry: Plant Variety Protection Act only — application No. 33551 filed 14 December 2018, published 14 March 2019, registration No. 28148 granted 19 November 2020. No MAFF 茶農林 (Cha Norin) sequence number has been found for this cultivar; recent NARO tea releases in this record's source handbook (Haruto 34, Seimei, Danshin 37, Kanaemaru, all 2020–22) carry PVP registration numbers only, with no parallel Cha Norin number, suggesting the two-track system had already lapsed for tea by the time Kiyoka was filed.
+registry: Plant Variety Protection Act only — application No. 33551 filed 14 December 2018, published 14 March 2019, registration No. 28148 granted 19 November 2020. No MAFF 茶農林 (Cha Norin) sequence number has been found for this cultivar; recent tea releases in this record's source handbook (Seimei and Kanaemaru from NARO, Haruto 34 and Danshin 37 from Miyazaki Prefecture, all 2020–22) carry PVP registration numbers only, with no parallel Cha Norin number, suggesting the two-track system had already lapsed for tea by the time Kiyoka was filed.
 crossedYear: 1998
 selectedYear: null
 bredAt: National Agriculture and Food Research Organization (NARO), Makurazaki tea research station, Kagoshima
@@ -24,7 +24,7 @@ teaTypes:
   - oolong-style tea
 buddingTime: early — first-flush picking date about 8 days before Yabukita at the breeding site (NARO); the Plant Variety Protection Act filing separately describes budding itself as "considerably early" relative to Yabukita, as a categorical rather than numeric rating
 recommendedRegions:
-  - Warm-climate tea districts (暖地) generally — NARO's own cultivation notes recommend it only for warm regions and flag frost-protection infrastructure as a prerequisite there
+  - Warm-climate tea districts (暖地) generally — NARO's own cultivation notes recommend it for warm districts, and tell growers weighing it for the cooler 温暖地 to judge frost-protection infrastructure and orchard siting carefully first
   - Kagoshima (the breeding site)
 yield: null
 diseaseResistance:
@@ -36,12 +36,14 @@ diseaseResistance:
 rarity: Registered only in November 2020, and no vendor or single-cultivar retail listing has been found for it. Shinkoju.com's own reference page — normally the broadest single-cultivar directory available — links its "きよか" entry to the page for a different cultivar (きょうみどり, Kyomidori) rather than to any content of its own, which reads as an unfilled placeholder rather than a real listing.
 lineageNote: A controlled cross, not a landrace selection. FYZ-41 is an internal NARO breeding-line code, never released as a named cultivar in its own right — NARO's own pedigree chart shows it is itself Yabukita × Shizu-Inzatsu 131, the same parent pairing that produced Sofu (蒼風) and Fujikaori, making FYZ-41 a distinct sibling line to those two rather than a landrace or an unknown wild parent. Saemidori, the pollen parent, is a documented cultivar in its own right (Yabukita × Asatsuyu, NARO, 1991).
 documentation: sparse commercially, though its official Plant Variety Protection Act and NARO cultivar-handbook records are unusually detailed for a cultivar this new
-summary: A 2020 Plant Variety Protection Act cultivar bred at NARO's Makurazaki station from FYZ-41 — an unregistered Yabukita × Shizu-Inzatsu131 line — and Saemidori, Kiyoka buds about eight days before Yabukita and carries a sweet floral aroma and umami best kept out of deep steaming.
+summary: A 2020 Plant Variety Protection Act cultivar bred at NARO's Makurazaki station from FYZ-41 — an unregistered Yabukita × Shizu-Inzatsu131 line — and Saemidori, Kiyoka is picked about eight days before Yabukita and carries a sweet floral aroma and umami best kept out of deep steaming.
 sources:
   - title: きよか — 品種登録データベース (Registered Variety Database), Toroku No. 28148
     url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=28148&LANGUAGE=Japanese
   - title: 品種登録データベース検索 (Registered Variety Database search) — MAFF
     url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM110.aspx
+  - title: 香りに特徴がある緑茶用品種「きよか」— 農研機構 研究成果情報
+    url: https://www.naro.go.jp/project/results/4th_laboratory/nifts/2017/nifts17_s18.html
   - title: 茶品種ハンドブック 第6版 Version 2（2022年8月更新）— 国費により育成した茶品種, NARO
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: 品種茶（か行のお茶）— 日本茶備忘録
@@ -141,5 +143,6 @@ by semi-fermented, oolong-style processing is recommended and is said to preserv
 aroma and umami even in the normally weaker summer flush. A short period of direct shading (five
 to seven days at 70% shade) is tolerated without weakening the aroma, though NARO does not
 recommend shading as standard practice for it. Caffeine content is noted as high. Because its
-early, exposed budding sits inside the frost-risk window, NARO's siting advice for growers in warm
-regions is to weigh frost-protection infrastructure carefully before planting it.
+early, exposed budding sits inside the frost-risk window, NARO's siting advice is aimed not at the warm
+districts it is recommended for but at the cooler 温暖地: growers there are told to weigh
+frost-protection infrastructure and orchard site conditions carefully before planting it.

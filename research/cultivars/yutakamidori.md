@@ -117,13 +117,14 @@ parent line behind entries 34 and 37. Because the Plant Variety Protection Act d
 1978, a Cha Norin number was, in 1966, the only national-level status a cultivar this age could
 have held; Yutakamidori simply never went through that process, even though it clearly could have.
 
-Kagoshima trialled the new cultivar seriously. A 1972 comparison run by the prefecture's tea
-research station, published in the Tea Research Journal in 1979, tested Yutakamidori alongside
-five other early cultivars — Kuritawase, Makinoharawase, Hatsumidori, Yaeho and Surugawase — against
-a Yabukita control, aiming for an optimal first-flush plucking date around 18 April. Yutakamidori
-ranked fourth on tea quality behind Surugawase, Yabukita and Kuritawase, but the study still
-recommended it, alongside Kuritawase, as a suitable early cultivar "for the warm region of
-southern Kyushu."
+The new cultivar was trialled seriously in Kagoshima. A 1972 comparison run by the national tea
+experiment station's Makurazaki branch (農林水産省茶業試験場枕崎支場) in farmers' tea gardens around
+Makurazaki, published in the Tea Research Journal in 1979, tested Yutakamidori alongside five other
+early cultivars — Kuritawase, Makinoharawase, Hatsumidori, Yaeho and Surugawase — against a Yabukita
+control, and put its optimal first-flush plucking date at 18 April, eight days ahead of Yabukita's
+26 April. Yutakamidori ranked fourth on tea quality behind Surugawase, Yabukita and Kuritawase, but
+the study still recommended it, alongside Kuritawase, as a suitable early cultivar "for the warm
+region of southern Kyushu."
 
 What the trial reports do not fully convey is the rockier commercial start Yutakamidori actually
 had: processed the ordinary way, as a standard sencha, the leaf came out noticeably astringent and
@@ -150,11 +151,12 @@ parallel among Japan's other major cultivars.
 
 Yutakamidori is an early cultivar, budding about five days ahead of Yabukita (Ito En's comparison
 page states this directly; other sources round it to "about a week"). A 1990 Tea Research Journal
-trial in southern Kyushu, tracking third-year plant growth after first pruning, found Yutakamidori's
-canopy spread and branch diameter significantly larger than every comparison cultivar in the
-study — a vigorous, fast-establishing plant by measured standards, not just by reputation. Yield is
-reported as high and consistent across all three flushes; no source independently checked here
-gave a specific figure relative to Yabukita, so none is stated.
+trial in southern Kyushu, tracking third-year plant growth after first pruning, found that in its
+five-cultivar plot Yutakamidori's pruned-branch cross-sectional diameter was significantly larger
+than all four comparison cultivars, and its canopy spread larger than three of them, with only
+Kanayamidori matching it — a vigorous, fast-establishing plant by measured standards, not just by
+reputation. Yield is reported as high and consistent across all three flushes; no source
+independently checked here gave a specific figure relative to Yabukita, so none is stated.
 
 That vigour comes with a real limitation: cold and frost tolerance are weak. A 1991 Tea Research
 Journal trial recorded severe frost damage to Yutakamidori in a hard frost year, pushing the actual

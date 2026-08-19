@@ -8,6 +8,7 @@ nameMeaning: "Officially registered entirely in hiragana (みなみかおり), n
 registered: 1988
 registrationNumber: 茶農林39号 (Cha Norin No. 39)
 registry: MAFF
+plantVarietyRegistration: 品種登録第2158号, registered 3 April 1990 under the Seed and Seedling Act (種苗法); applied for 31 March 1988 by Miyazaki Prefecture — a separate, later registration, see conflicts
 crossedYear: null
 selectedYear: null
 selectedFrom: "Carried through trials as line 宮崎5号 (Miyazaki No. 5) before naming and registration"
@@ -24,9 +25,13 @@ buddingTime: "medium — classified as 中生 (mid-season), the same category as
 recommendedRegions:
   - Miyazaki
 yield: null
+diseaseResistance:
+  - akagare, 赤枯れ winter red-wither (strong — MAFF PVP characteristic filing, 品種登録第2158号)
+  - anthracnose, 炭疽病 (strong — same filing)
+  - "no rating sourced for ring spot (輪斑病), red blight (赤焼病) or scale insects"
 lineageNote: A controlled cross rather than an open-pollinated seedling — Yabukita crossed with Miya A11, an internal numbered breeding line of the Miyazaki station's own "宮A" series, the same series that produced Minamisayaka's seed parent Miya A6. Miya A11's own parentage was not found in the sources consulted.
 documentation: sparse
-conflicts: "The registration year is reported inconsistently because two separate registries are involved, not because a source is wrong. 附表１茶農林登録品種一覧 (MAFF's national registry table) dates the Cha Norin No. 39 designation to 1988, matching myjapanesegreentea.com's 'Agriculture and Forestry Certified Cultivars' entry. The same page's separate 'Seed and Seedling Law Registered Cultivars' table gives 1990, which is a distinct Seed and Seedling Act (種苗法) registration for the same cultivar. Both dates are real and describe different events; 1988 is used as `registered` here because it is the year attached to the Cha Norin number this record leads with."
+conflicts: "The registration year is reported inconsistently because two separate registries are involved, not because a source is wrong. 附表１茶農林登録品種一覧 (MAFF's national registry table) dates the Cha Norin No. 39 designation to 1988, matching myjapanesegreentea.com's 'Agriculture and Forestry Certified Cultivars' entry. The same page's separate 'Seed and Seedling Law Registered Cultivars' table gives 1990, which is a distinct Seed and Seedling Act (種苗法) registration for the same cultivar. MAFF's own 品種登録 database confirms that second registration directly — 品種登録第2158号, 登録年月日 1990/04/03, 出願年月日 1988/03/31, applicant 宮崎県. Both dates are real and describe different events; 1988 is used as `registered` here because it is the year attached to the Cha Norin number this record leads with."
 summary: A mid-season sencha cultivar crossed from Yabukita and an internal Miyazaki breeding line, Miya A11, registered as Cha Norin No. 39 in 1988 at the Miyazaki Prefectural Agricultural Experiment Station; thinly documented outside the registry record itself.
 sources:
   - title: 附表１ 茶農林登録品種一覧
@@ -39,6 +44,8 @@ sources:
     url: https://japantea-chachacha.com/hinshu/%e3%81%be%e3%83%bb%e3%82%84%e3%83%bb%e3%82%89%e8%a1%8c%e3%81%ae%e3%81%8a%e8%8c%b6/
   - title: 煎茶用新品種「みなみかおり」について（CiNii Research record; 上野貞一, 九農研 51, 1989, pp.58-）
     url: https://cir.nii.ac.jp/crid/1571135651661942656
+  - title: 品種登録データベース 登録番号2158「みなみかおり」（農林水産省）
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2158&LANGUAGE=Japanese
   - title: 茶品種ハンドブック第6版 Version 2 — 国費により育成した茶品種
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
 ---
@@ -48,10 +55,11 @@ sources:
 Minamikaori is a sencha cultivar bred at the Miyazaki Prefectural Agricultural Experiment Station
 and registered in 1988 as Cha Norin No. 39 (茶農林39号). It is a controlled cross of Yabukita with
 Miya A11 (宮A11), an internal breeding line of the station's own numbered programme rather than a
-named cultivar. It was one of three Miyazaki releases carrying a Yabukita parent in the space of a
-few years — alongside Minekaori (1988) and Minamisayaka (1991) — and it is the least documented of
-the three: outside the registry entry itself, almost nothing about its cup or its cultivation has
-survived into the secondary literature this project could reach.
+named cultivar. It was one of three Miyazaki releases in the space of a few
+years — alongside Minekaori (1988), which shares its Yabukita seed parent, and Minamisayaka (1991),
+which does not — and it is the least documented of the three: outside the registry entry itself,
+almost nothing about its cup or its cultivation has survived into the secondary literature this
+project could reach.
 
 ## Lineage
 
@@ -73,7 +81,7 @@ scope, unlike its stablemate Minamisayaka, which was folded into the nationally-
 and does appear there.
 
 One caution worth flagging: Minamikaori is easy to confuse with two other Miyazaki cultivars from
-the same station and the same narrow span of years, both of which also cross Yabukita. **Minekaori**
+the same station and the same narrow span of years. **Minekaori**
 (みねかおり, 茶農林38号, also 1988) shares the Yabukita parent but crosses it with Unkai rather than
 Miya A11, and is bred for kamairicha (pan-fired tea) rather than sencha. **Minamisayaka**
 (みなみさやか, 茶農林42号, 1991) is unrelated in its parentage, descending instead from Miya A6 ×
@@ -103,11 +111,15 @@ was not reachable for this record.
 ## Characteristics
 
 Minamikaori is classified as 中生 (chūsei), mid-season — the same budding category as Yabukita
-itself — in the one general-reference source that mentions it at all. No source consulted gives a
-day-count relative to Yabukita, a yield figure, a disease or cold resistance rating, or a flavour
-description specific to Minamikaori, and none of the current cultivar guides, tea-shop references or
-vendor listings checked for this record carry it at all — a contrast with its Miyazaki
-contemporaries Saemidori and Minamisayaka, both of which are widely stocked and described today.
+itself — both in MAFF's own characteristic filing and in the one general-reference source that
+mentions it at all. That filing (品種登録第2158号) also records strong resistance to akagare
+(赤枯れ, winter red-wither) and to anthracnose (炭疽病), a tree of medium habit with strong vigour
+and wide spread, and gives the difference from Yabukita as mature-leaf colour and anthracnose
+resistance. Beyond that, no source consulted gives a day-count relative to Yabukita, a yield figure,
+or a flavour description specific to Minamikaori, and none of the current cultivar guides, tea-shop
+references or vendor listings checked for this record carry it at all — a contrast with Minamisayaka
+from the same station, and with Saemidori, which is widely grown in Miyazaki though it was bred at
+the national station at Makurazaki, both of which are widely stocked and described today.
 That silence is itself informative: whatever commercial footing Minamikaori had after its 1988
 registration does not appear to have lasted, or at least did not leave a trace in the sources this
 project could reach. Nothing here should be read as a claim about its cup — only as an honest gap.
