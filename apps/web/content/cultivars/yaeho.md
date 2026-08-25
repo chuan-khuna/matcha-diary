@@ -186,8 +186,11 @@ tender cultivars tested, and a young planting followed for the 1978 Ooiwase pape
 in 84.3% of Yaeho trees, with a 22.5% death rate, against 1.2% injury and no deaths for Yabukita in
 the same ground. It is also noted as weak against white-star disease. Set against that, a 1985
 Shizuoka survey found it, together with Kanayamidori, the most resistant of the surveyed cultivars
-to bacterial shoot blight, a disease to which its own offspring Ooiwase proved comparatively
-susceptible.
+to bacterial shoot blight — 2.5% and 3.0% diseased leaves in the survey's two fields, the only
+cultivar low in both. Its own offspring Ooiwase did markedly worse in one of those fields (18.5%
+against Yabukita's 3.5%) and markedly better in the other (9.5% against 18.8%), so the earlier
+reading of that survey as showing Ooiwase "comparatively susceptible" flattened a pair of
+field-specific numbers into a cultivar rating they do not support.
 
 On the chemistry behind the cup, Yaeho runs consistently lower in total and soluble nitrogen than
 Yabukita (5.68% against 6.20% total nitrogen; 1.90% against 2.17% soluble nitrogen, three-year

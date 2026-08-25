@@ -44,6 +44,7 @@ notableDescendants:
   - Sayamakaori (茶農林31号, 1971) — seed parent
   - Okumidori (茶農林32号, 1974) — seed parent
   - Toyoka (茶農林33号, 1976) — pollen parent
+  - Ooiwase (Shizuoka recommended cultivar, 1977) — pollen parent, on Yaeho
   - Takane-wase (1985) — seed parent
   - Fukumidori (茶農林36号, 1986) — seed parent, and pollen grandparent via 23F1-107
   - Meiryoku (茶農林35号, 1986) — seed parent
