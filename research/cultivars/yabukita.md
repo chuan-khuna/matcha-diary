@@ -44,6 +44,7 @@ notableDescendants:
   - Sayamakaori (茶農林31号, 1971) — seed parent
   - Okumidori (茶農林32号, 1974) — seed parent
   - Toyoka (茶農林33号, 1976) — pollen parent
+  - Ooiwase (Shizuoka recommended cultivar, 1977) — pollen parent, on Yaeho
   - Takane-wase (1985) — seed parent
   - Fukumidori (茶農林36号, 1986) — seed parent, and pollen grandparent via 23F1-107
   - Meiryoku (茶農林35号, 1986) — seed parent
@@ -62,7 +63,7 @@ notableDescendants:
   - Harumidori (茶農林48号, 2003) — pollen parent
   - Sofu (茶農林49号, 2005) — seed parent
   - Kurasawa, Shizu-7132, Yamakai — seed parent, all unregistered or later-registered lines
-lineageNote: "A single-plant selection out of a seed-grown Shizuoka zairai stand, not a controlled cross, so it has one recorded parent and can never have two. Every Yabukita bush in Japan is a cutting-propagated clone of Sugiyama's 1908 plant, which is why the cultivar is genetically uniform enough for its weaknesses — anthracnose above all — to be a national problem rather than a local one. It is also the most-used parent in Japanese tea breeding by a wide margin: twenty-four of the eighty-two records in this collection name it as a parent, on both sides of the cross."
+lineageNote: "A single-plant selection out of a seed-grown Shizuoka zairai stand, not a controlled cross, so it has one recorded parent and can never have two. Every Yabukita bush in Japan is a cutting-propagated clone of Sugiyama's 1908 plant, which is why the cultivar is genetically uniform enough for its weaknesses — anthracnose above all — to be a national problem rather than a local one. It is also the most-used parent in Japanese tea breeding by a wide margin: twenty-five of the eighty-three records in this collection name it as a parent, on both sides of the cross."
 conflicts: "Prefectural recommendation date: the Shizuoka Tea Commercial and Industrial Cooperative (ocha.or.jp) states Yabukita was designated a Shizuoka Prefecture recommended cultivar (奨励品種) in 1945 (Showa 20), eight years before national registration. Japanese Wikipedia instead gives 1955, two years after it. Both orderings are mechanically possible — a prefecture maintains its own recommended list independently of MAFF's registry — and no primary prefectural document settling the date was located, so this record asserts only the 1953 Cha Norin registration, which the MAFF registry itself carries, and reports the prefectural designation as disputed. Cultivation share: figures between 64% and 80% circulate widely. This record uses only MAFF's own series (76% in 2008, 72% in 2019, 67% in 2023) and NARO's 71.5% for 2020, which agree with each other on both level and trend; the higher round numbers appear to be older figures repeated after they stopped being current."
 summary: A single seedling picked out of a Shizuoka landrace stand in 1908 by the grower Sugiyama Hikosaburo and registered in 1953 as Cha Norin No. 6, Yabukita still covers two thirds of Japan's tea area and is the benchmark every other cultivar is described against — budding times in days from Yabukita, yields as a multiple of it, flavour as more or less umami than it.
 sources:

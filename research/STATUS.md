@@ -19,6 +19,14 @@ matcha-oriented cultivars (Seimei, Kiyoka, Sakimidori, Harumidori).
 Cha Norin numbers recovered from primary sources include Nos. 1, 3, 5, 7, 8, 9, 10, 16, 17, 18,
 19, 20, 23, 26, 30, 31, 33, 35, 36, 37, 39, 42, 44, 47, 48, 49.
 
+## Added since the paused run
+
+- **ooiwase** (2026-08-25) — Shizuoka's 1977 prefectural early cultivar, off the *Unregistered*
+  list above. Written from the 1978 release paper (茶業研究報告 No. 47) read page by page, plus a
+  1985 赤焼病 field survey, a 2002 rust-mite study, and the prefectural planted-area table in the
+  2013 Nakamura lecture that `kurasawa.md` already cites. No Cha Norin number — confirmed by
+  checking MAFF's own registry table rather than inferred from silence.
+
 ## Known cleanup needed
 
 **The `registry:` field is not normalised.** Agents wrote it freely, so it currently holds a mix
@@ -48,6 +56,9 @@ Still open:
   prefix, so all five should be solid. Not yet applied.
 - `Kirari 31`, `Inzatsu 131`, `Shizu-7132` and `Mie Ryokuho No. 1` carry numbers, where a
   separator is standard — leave those alone.
+- **`yamanoibuki.md`** writes the cultivar as `Oiwase (おおいわせ)` in one sentence. The 1978
+  release paper's own English title is *A New Tea Variety for Green Tea "Ooiwase"*, and
+  `ooiwase.md`, `yaeho.md`, `kurasawa.md` and `kanayamidori.md` all write Ooiwase. One-word fix.
 
 **The `example/` drafts contain fabricated data** and should be audited, not trusted — see the
 note in `SOURCES.md`. Two confirmed cases so far: Okunoyama's invented selection window and
@@ -85,7 +96,7 @@ Kamairicha: izumi, yamanami, koju
 Black tea: indo, hatsumomiji, benitachiwase, benikaori, benifuji, satsumabeni, karabeni,
 tadanishiki, benitsukuba, beniibara
 
-Unregistered / lines still in commercial use: surugawase, fujimidori, ooiwase, kondowase,
+Unregistered / lines still in commercial use: surugawase, fujimidori, kondowase,
 kominami, shigeru2, misaki, koganemidori, z1
 
 From the Shinkoju sitemap, absent from every other list used here: sayamaakari, hidenosuke,

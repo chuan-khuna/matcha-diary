@@ -400,7 +400,24 @@ Not online; noted for anyone able to reach a copy.
 - **静岡茶 — 品種** — https://shizuoka-cha.com/index.php/ocha/shinshu
   Shizuoka's own cultivar pages. Shizuoka bred a large share of the registry (Yabukita,
   Okuhikari, Sofu, Tsukasamidori, Yaeho, Makinohara-wase), so this is the regional counterpart
-  to Kyoto's 茶業研究所 page.
+  to Kyoto's 茶業研究所 page. It is also the index to the per-cultivar leaflet PDFs — see the
+  entry under *Registries* above.
+
+- **静岡県での緑茶の奨励品種を一挙紹介！** — 静岡茶商工業協同組合 (Shizuoka tea merchants'
+  co-operative), 25 March 2022.
+  https://www.ocha.or.jp/column/863/
+  A consumer column, but a useful one: it walks Shizuoka's current 奨励品種 in order — Okuhikari,
+  Sawamizuka, Kanayamidori, Yamanoibuki, Koshun, Tsuyuhikari, **Ooiwase**, Sayamakaori, Yamakai,
+  … — each with two or three bullets of characteristics and two of cup quality. The fastest way
+  to check whether a Shizuoka cultivar is *still* recommended rather than historically so, and it
+  reads as a live list rather than an archive.
+
+- **おいしい日本茶研究所 — しずおかシングルティー** — https://oitea-lab.shop/
+  A Shizuoka single-cultivar series, one cultivar per product, each page giving **parentage with
+  the ♀/♂ marked**, the producer and district, the steaming style, and separate 香り / 水色 lines.
+  Good evidence for what a rare cultivar actually tastes like when someone bothers to make it
+  properly, and for which producers still work with it — Houkouen (豊好園) in the mountainous
+  Ryōkōchi district of Shizuoka City turns up repeatedly, including for Ooiwase and Kurasawa.
 - **品種茶一覧** — 心向樹 (Shinkoju), Saitama.
   https://www.shinkoju.com/知る-見る-学ぶ/品種茶の話/品種茶一覧/
   Individual pages at `/品種茶/<かな name>/` — e.g. `/品種茶/あさつゆ/`, `/品種茶/そうふう/`.
@@ -484,6 +501,14 @@ Not online; noted for anyone able to reach a copy.
   An individually-run Japanese reference indexing 50+ cultivars alphabetically by kana, each with
   its own page. Thin on registration numbers and parentage, but it covers obscure cultivars the
   English sources omit entirely — Asahikari, Okunosanma, Ooiwase, Surugawase, Tadanishiki.
+
+  **The kana index pages carry 命名の由来, and the per-cultivar pages do not.** The entries live
+  inline on `…/hinshu/あ行のお茶/` and its five siblings (か行, さ行, た行, な・は行, ま・や・ら行),
+  each a short paragraph ending in a sentence on where the name comes from — and that sentence is
+  often the only naming rationale in existence outside a registration bulletin. Ooiwase's came from
+  here: 大井川 the river, 早生 early, **多い** for heavy yield and **覆い** for the shading that
+  stands for high-grade tea, three puns on one reading, where every English source gives only the
+  river. Attribute it to the site rather than to the breeders, who left no rationale on record.
 - **Wachaclub** — https://www.wachaclub.com/ — has a cultivar section.
 - **Minorien 茶の品種表** — https://minorien.jp/university/hinshu.pdf
   A rendering of MAFF's official registered-cultivar table, and the fastest way to confirm a Cha
@@ -507,6 +532,48 @@ Not online; noted for anyone able to reach a copy.
   whether a **種苗法 (Seed and Seedling Law) registration exists**, marked 有 / 無. That single
   field distinguishes a PVP-registered cultivar from a Cha Norin one faster than anything else
   found, and settled Sawamizuka.
+
+  The index is **注目されている茶品種ガイドブック** at
+  https://shizuoka-cha.com/index.php/ocha/shinshu, and each cultivar's sheet is a separate PDF at
+  `https://shizuoka-cha.com/index.php/download_file/view/<id>/221/`. The ids are not derivable —
+  scrape them from the index page, where the link text is the cultivar's kana name (香駿 is id 90,
+  さやまかおり 91, おおいわせ 92, さえみどり 85, おくみどり 95, ふうしゅん 97, めいりょく 98 —
+  neither alphabetical nor sequential). **These PDFs have no embedded fonts**:
+  they rasterise as a page of photographs with every character missing, and `pdftotext` returns
+  the text under a broken CMap. See *When a PDF comes back blank rather than scanned* below.
+
+- **静岡県内における奨励品種別栽培面積の推移** — a table inside 中村順行 (head of the Shizuoka
+  Prefectural Tea Research Center), 茶の品種改良とその増殖技術, 第28回茶学術研究会, 2013.
+  https://dfns.u-shizuoka-ken.ac.jp/labs/tsc/pdf/2503.pdf — page 2, top-left slide.
+  **The best per-cultivar planted-area source found for any prefecture.** Twenty Shizuoka
+  cultivars, each with the span of years it was a 奨励品種 (in Showa/Heisei years, an open end
+  meaning still recommended) and its planted area at eleven dates from 昭和29 (1954) to 平成19
+  (2007), over prefectural totals and a cultivar-adoption rate. It settles both "when did the
+  prefecture take it up and drop it" and "how much of it was there", which almost nothing else
+  does. Kurasawa 154 ha at its 1976 peak and 38 ha in 2007, Ooiwase 141 ha in 1998 and 109 ha in
+  2007, Sayamakaori around 400 ha throughout, all come from it.
+
+  `pdftotext` scrambles the row order, so **read the slide as an image** — the rows and the
+  right-aligned columns are legible at 220 dpi. Anchor the column mapping on a cultivar whose
+  first year is known (Yamakai, recommended from 昭和42, has exactly nine values for the nine
+  columns from 昭和42 on) before reading any row off it.
+
+  The same deck carries 奨励品種選定の時代的推移, which assigns each era's releases to the demand
+  that drove them — 昭40年代 (1965–74), surging domestic demand and larger processing machinery,
+  produced Kurasawa, Kanayamidori and Ooiwase — and per-cultivar fact boxes for Yamanoibuki,
+  Tsuyuhikari, Koshun, Okuhikari and Yumesuruga with registration year, parentage, budding offset,
+  resistances and 2008 prefectural production area.
+
+- **茶業研究報告 No. 69 (1989), 表1-1 府県別品種普及面積** — the 1988 national cultivar survey,
+  tabulating 1987 planted area for ~29 cultivars across every tea prefecture, with ○/△ marking
+  which prefectures list each as a recommended or semi-recommended cultivar, plus each
+  prefecture's total, cultivar-planted area and adoption rate.
+  https://doi.org/10.5979/cha.1989.69_49
+  Note what it cannot tell you: the row set is fixed, cultivars under 1 ha are excluded, and
+  everything unlisted is swept into その他 (250 ha for Shizuoka). **A cultivar's absence from it
+  is not evidence of absence from the ground** — Ooiwase held 46 ha of Shizuoka in 1982 and is
+  not a row. The cultivar names are set in staggered, right-aligned kana that read as gibberish
+  in columns; read them as rows, left to right, and crop the label column at 400 dpi.
 - **京都府茶業研究所 — 鳳春・展茗の育成** — https://www.pref.kyoto.jp/chaken/seika_hou-ten.html
   The institute's own release page for Houshun and Tenmyo. Gives the 53-7 / 53-38 strain
   designations and dates selection from 1977 (昭和52年), correcting the English Uji page's "1952".
@@ -571,6 +638,37 @@ Two access notes that recovered otherwise-unreadable pages: some Japanese sites 
 and need converting before the text is legible, and some sit behind **ModSecurity**, which
 returns a block page to a bare `curl` but serves normally when ordinary browser headers are sent.
 A blocked or mojibake page is not an absent one.
+
+### When a PDF comes back blank rather than scanned
+
+There are two opposite PDF failure modes here and the fix for one is the fix that fails on the
+other.
+
+- **A scan** has no text layer. `pdftotext` returns nothing or noise; the page images are perfectly
+  legible. **Rasterise and read** — `pdftoppm -png -r 150`, higher for a dense table. Almost every
+  primary-source win in this project is this case.
+- **A blank render** is the reverse: the fonts are not embedded, so `pdftoppm` produces a page with
+  the photographs, rules and Latin numerals present and **every Japanese character missing**. The
+  Shizuoka Tea Chamber's cultivar leaflets and the 2002 rust-mite paper both do this. Rasterising
+  harder will never help. The text is in the file; only the mapping is broken.
+
+For that second case, `pdftotext` output is not garbage but a **constant Unicode offset**. Add the
+offset back and the kana come out clean: the Shizuoka leaflets need **+0x2CF7** (お is emitted as
+U+0353, い as U+034D, わ as U+0398 — subtract each from its true codepoint and the difference is the
+same). Kanji are subset in order of first appearance, so **no single offset recovers them** — you
+get a readable kana skeleton with holes, which is enough to confirm a claim you already have and
+not enough to source a new one. Do not read kanji values out of a partially-decoded leaflet.
+
+```bash
+pdftotext -enc UTF-8 leaflet.pdf out.txt          # looks like mojibake, isn't
+python -c "import sys;print(''.join(chr(ord(c)+0x2CF7) if 0x100<=ord(c)<=0x2000 else c
+           for c in open('out.txt',encoding='utf-8').read()))"
+```
+
+When neither route reaches the one number you need, **the J-STAGE English abstract often carries
+it**. The rust-mite figure for Ooiwase (97.8 eggs per 20 females over 3 days, the highest of eight
+cultivars) came from the abstract at `…/_article/-char/en` after the PDF rendered blank; abstracts
+on that platform routinely quote the paper's headline range with both cultivars named.
 
 ### Decoding breeding-line designations
 
@@ -650,6 +748,13 @@ and Takane-wase are all registered or recorded in kana only, and plausible-looki
 (紅誉 for Benihomare, 宇治光 for Ujihikari, 五月みどり for Samidori) appear in no primary source.
 Set `kanji: null` rather than supplying one that reads correctly — a kanji spelling is a claim
 about the official name, not a transliteration.
+
+**And a kanji spelling can be real in the trade and absent from every document.** Ooiwase is sold
+as **大井早生** by producers in Kagoshima and Kumamoto, and the spelling is not invented — it is
+exactly the derivation the naming gloss gives. But the release paper, the Shizuoka Tea Chamber's
+leaflet, the prefecture's own tables and MAFF's registry all write おおいわせ in kana. So a kanji
+form attested on a tin is evidence of how the tea is marketed, not of what the cultivar is called
+officially, and it still takes `kanji: null` with the retail spelling noted in `conflicts:`.
 - **G15613** = Sayamakaori before naming · **金谷4号** = Shunmei · **Mi99-23 / 宮崎31号** =
   Kirari 31.
 
