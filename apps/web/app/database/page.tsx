@@ -39,8 +39,8 @@ export default async function DatabasePage() {
 
   // Every description, compiled. The grid is a client component and the record
   // it opens is chosen at runtime, so the bodies cannot be imported down there —
-  // they are rendered here and passed as nodes. Ten records is the whole
-  // collection; when it is a query rather than a directory this becomes one
+  // they are rendered here and passed as nodes. The whole collection is a few
+  // dozen records; when it is a query rather than a directory this becomes one
   // fetch per opened record, which is what the /powders/[id] route is for.
   //
   // The path is built from two variables rather than `powder.id` so it reads as

@@ -16,14 +16,17 @@ import type { Powder, PowderSize } from "@/lib/powders";
  * in `lib/powders`, which is pure and safe to import from anywhere — a component
  * that needs one type or one formatter wants that module.
  *
- * The records are placeholders. The brands are real; everything written about
- * them here — prices included — is invented, and none of it should be read as a
- * claim about an actual tin of tea. They came over from the UI prototype at
- * `docs/artifacts/ui-prototype/database.html` as a TypeScript array and are
- * files now for the same reason the cultivar records are: the eventual source is
- * a Django admin and a Postgres row, so the shape a page reads should already be
- * "a record fetched from somewhere else" rather than "a constant imported from
- * the bundle".
+ * Every record is transcribed from something a maker or a shop actually
+ * published — a price card, a shelf listing, a catalogue page — and says at its
+ * foot what that was and when. The invented placeholders that came over from the
+ * UI prototype at `docs/artifacts/ui-prototype/database.html` have been removed:
+ * a price here is now a claim about a real tin, so a wrong one is a bug rather
+ * than a typo in a mock.
+ *
+ * They are files rather than the prototype's TypeScript array for the same
+ * reason the cultivar records are: the eventual source is a Django admin and a
+ * Postgres row, so the shape a page reads should already be "a record fetched
+ * from somewhere else" rather than "a constant imported from the bundle".
  *
  * Each record is markdown with a YAML head, and the two halves are read by two
  * different mechanisms:
@@ -40,9 +43,9 @@ import type { Powder, PowderSize } from "@/lib/powders";
  * record has exactly one of and which groups the collection, so it is the
  * directory rather than a field repeated across ten files — which is also what
  * makes a slug unique only *within* a brand, and why `id` is the path. The
- * display name still lives in the frontmatter: "Rocky's Matcha" cannot be
- * derived from `rockys-matcha`, and guessing at it would be a second, worse
- * source of truth for a name a maker prints on a tin.
+ * display name still lives in the frontmatter: "MTCH" cannot be derived from
+ * `mtch` — title-casing gives "Mtch" — and guessing at it would be a second,
+ * worse source of truth for a name a maker prints on a tin.
  */
 
 const CONTENT_DIR = path.join(process.cwd(), "content/database");
