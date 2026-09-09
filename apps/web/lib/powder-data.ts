@@ -3,6 +3,7 @@ import path from "node:path";
 
 import matter from "gray-matter";
 
+import type { Photo } from "@/lib/photos";
 import type { Powder, PowderSize } from "@/lib/powders";
 
 /**
@@ -72,16 +73,69 @@ function list(value: unknown): string[] {
 }
 
 /**
- * A frontmatter list of numbers — the photo seeds. Anything that is not a finite
- * number is dropped rather than coerced: a seed that arrived as the string "two
- * hundred" is a broken record, and `NaN` propagating into a gradient is a far
- * quieter failure than a missing photograph.
+ * The record's photographs, resolved.
+ *
+ * A frontmatter entry is one of two things, and the YAML says which by its
+ * shape. A bare number is a gradient seed — anything that is not a finite
+ * number is dropped rather than coerced, because a seed that arrived as the
+ * string "two hundred" is a broken record and `NaN` propagating into a gradient
+ * is a far quieter failure than a missing photograph. A mapping with a `file`
+ * is a real image, and `alt` is required of it: an undescribed photograph is a
+ * record that is not finished.
+ *
+ * `file` is a path from the record's own directory — `images/x.jpg` beside
+ * `x.mdx` — so it reads the way a path in a document should. Write it WITHOUT a
+ * leading `./`, which is the one thing this cannot take: the bundler keys its
+ * context module on the literal string this template builds, so `honcha/./
+ * images/x.jpg` misses a map whose key is `honcha/images/x.jpg`, and the build
+ * fails with a module it cannot find. Nothing normalises the path on the way
+ * through, because normalising here would suggest the specifier is resolved and
+ * it is not — it is concatenated.
+ *
+ * ## Why the file lives beside the record and not in `public/`
+ *
+ * `public/` is the obvious home — it is what the server serves — but it means a
+ * record's own scans sit in a directory that knows nothing about records, where
+ * moving `content/database/honcha/` leaves ten orphaned files behind and
+ * nothing catches it. The brand is a directory precisely so that a house is one
+ * place on disk; its photographs belong in it.
+ *
+ * What makes that work is the dynamic `import()` below, which is the pattern
+ * Next documents for exactly this ("Images without static imports"). The
+ * bundler resolves the specifier at build time — every file matching the
+ * template becomes part of the build, hashed and served — and hands back a
+ * `StaticImageData` carrying the intrinsic width, height and blur placeholder.
+ * A path in `public/` gives none of those: a record names a file and never a
+ * width, so a frame there has to guess its own box.
+ *
+ * The specifier is a relative path rather than the `@/` alias every other
+ * import in this app uses. It has to be: the bundler reads this template
+ * literally to decide which files to include, and it resolves that glob itself
+ * without consulting `tsconfig.json` — the same reason a stylesheet's `@import`
+ * is the other exception. See the app's CLAUDE.md.
  */
-function numbers(value: unknown): number[] {
+async function photos(value: unknown, brandSlug: string): Promise<Photo[]> {
   if (!Array.isArray(value)) return [];
-  return value.filter(
-    (item): item is number => typeof item === "number" && Number.isFinite(item),
-  );
+
+  return Promise.all(
+    value.map(async (entry): Promise<Photo | null> => {
+      if (typeof entry === "number") {
+        return Number.isFinite(entry) ? { kind: "stand-in", seed: entry } : null;
+      }
+
+      const photo = (entry ?? {}) as Record<string, unknown>;
+      const file = text(photo.file);
+      const alt = text(photo.alt);
+
+      if (file === null || alt === null) return null;
+
+      const { default: src } = await import(
+        `../content/database/${brandSlug}/${file}`
+      );
+
+      return { kind: "image", src, alt };
+    }),
+  ).then((list) => list.filter((photo): photo is Photo => photo !== null));
 }
 
 /**
@@ -134,7 +188,11 @@ function excerpt(body: string): string {
   return paragraph?.replace(/\s+/g, " ") ?? "";
 }
 
-function parse(brandSlug: string, file: string, raw: string): Powder {
+async function parse(
+  brandSlug: string,
+  file: string,
+  raw: string,
+): Promise<Powder> {
   const { data, content } = matter(raw);
   const fallbackSlug = file.replace(/\.mdx?$/, "");
   const slug = text(data.slug) ?? fallbackSlug;
@@ -150,46 +208,56 @@ function parse(brandSlug: string, file: string, raw: string): Powder {
     excerpt: excerpt(content),
     notes: list(data.notes),
     sizes: sizes(data.sizes),
-    photos: numbers(data.photos),
+    photos: await photos(data.photos, brandSlug),
   };
 }
 
 /**
  * Read once per process, not once per page — the same cache, for the same
  * reason, as the cultivar loader's.
+ *
+ * The promise is what is cached, not the records. Resolving a record's images
+ * is asynchronous, so two pages rendering at once would otherwise both find an
+ * empty cache and both do the whole read; handing the second one the first
+ * one's promise is what makes "once per process" true rather than approximate.
  */
-let cache: Powder[] | null = null;
+let cache: Promise<Powder[]> | null = null;
 
-export function allPowders(): Powder[] {
+export function allPowders(): Promise<Powder[]> {
   if (cache !== null) return cache;
 
-  cache = fs
-    .readdirSync(CONTENT_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .flatMap((brand) =>
-      fs
-        .readdirSync(path.join(CONTENT_DIR, brand.name))
-        .filter((file) => /\.mdx?$/.test(file))
-        .map((file) =>
-          parse(
-            brand.name,
-            file,
-            fs.readFileSync(path.join(CONTENT_DIR, brand.name, file), "utf8"),
+  cache = Promise.all(
+    fs
+      .readdirSync(CONTENT_DIR, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .flatMap((brand) =>
+        fs
+          .readdirSync(path.join(CONTENT_DIR, brand.name))
+          // `images/` sits alongside the records; only the records are records.
+          .filter((file) => /\.mdx?$/.test(file))
+          .map((file) =>
+            parse(
+              brand.name,
+              file,
+              fs.readFileSync(path.join(CONTENT_DIR, brand.name, file), "utf8"),
+            ),
           ),
-        ),
-    )
+      ),
+  ).then((powders) =>
+    powders
     // By brand, then by blend within it — the order the directories already
     // imply, made explicit so it does not depend on what `readdirSync` happens
     // to return on a given filesystem. Nothing here is promoted or featured: the
     // grid is a reference, and a house with three powders gets three cards next
     // to each other rather than three positions.
-    .sort(
-      (a, b) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name),
-    );
+      .sort(
+        (a, b) => a.brand.localeCompare(b.brand) || a.name.localeCompare(b.name),
+      ),
+  );
 
   return cache;
 }
 
-export function powderById(id: string): Powder | undefined {
-  return allPowders().find((powder) => powder.id === id);
+export async function powderById(id: string): Promise<Powder | undefined> {
+  return (await allPowders()).find((powder) => powder.id === id);
 }

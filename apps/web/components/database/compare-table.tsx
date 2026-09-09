@@ -3,7 +3,8 @@ import type { ReactNode } from "react";
 import { PiXLight } from "react-icons/pi";
 
 import { CompareDescription } from "@/components/database/compare-description";
-import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
+import { PhotoFrame } from "@/components/shared/photo-frame";
+import { PhotoPlaceholder } from "@/components/shared/placeholders";
 import {
   formatPrice,
   formatPricePerGram,
@@ -115,9 +116,11 @@ export function CompareTable({
                       iconSize={28}
                     />
                   ) : (
-                    <PhotoStandIn
-                      seed={powder.photos[0]}
+                    <PhotoFrame
+                      photo={powder.photos[0]}
                       className="aspect-[4/3] rounded-md border border-line"
+                      // Every column is 15rem before the table scrolls.
+                      sizes="15rem"
                     />
                   )}
 
@@ -160,13 +163,13 @@ export function CompareTable({
                 <ul className="data-md flex flex-col gap-1">
                   {powder.sizes.map((size) => (
                     <li key={sizeKey(size)}>
-                      <span className="text-clay">
-                        {size.grams} g
-                        {size.packaging !== null && ` ${size.packaging}`}
-                      </span>{" "}
+                      <span className="text-clay">{size.grams} g</span>{" "}
                       {formatPrice(size)}{" "}
                       <span className="text-clay">
                         ({formatPricePerGram(size)})
+                        {size.packaging !== null && (
+                          <span className="data-sm block">{size.packaging}</span>
+                        )}
                       </span>
                     </li>
                   ))}

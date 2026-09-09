@@ -3,7 +3,8 @@
 import { useState } from "react";
 
 import { OverlayLabel } from "@/components/shared/overlay-label";
-import { PhotoStandIn } from "@/components/shared/placeholders";
+import { PhotoFrame } from "@/components/shared/photo-frame";
+import { photoKey, type Photo } from "@/lib/photos";
 
 /**
  * A review's photographs: one shown large, with the whole set beneath it as
@@ -19,25 +20,44 @@ import { PhotoStandIn } from "@/components/shared/placeholders";
  * component rather than state lifted into `EntryDetail`: everything else there
  * is presentational and can stay on the server.
  */
-export function PhotoGallery({ photos }: { photos: number[] }) {
+export function PhotoGallery({ photos }: { photos: Photo[] }) {
   const [active, setActive] = useState(0);
   const total = photos.length;
+  const shown = photos[active];
+
+  // A stand-in has no shape of its own, so it takes the review cover's 3:2. A
+  // real photograph has one, and it is used: Honcha's records are portrait
+  // scans of a label and a price card, and fitting a 3:4 picture inside a 3:2
+  // frame leaves half the width empty on the sunk ground. Reserving the box the
+  // picture will actually occupy is also what keeps the page from jumping when
+  // the file arrives — the reason the loader resolves dimensions at all.
+  const ratio =
+    shown.kind === "image"
+      ? `${shown.src.width} / ${shown.src.height}`
+      : "3 / 2";
 
   return (
     <div className="flex flex-col gap-2">
       {/* 3:2 at `lg` — the review cover is the only element in the system
           allowed an 8px corner, and the only place a shadow is meant to be
           visible, because a photograph is a physical object here. */}
-      <PhotoStandIn
-        seed={photos[active]}
-        className="aspect-[3/2] rounded-lg shadow-photo"
+      <PhotoFrame
+        photo={shown}
+        className="rounded-lg shadow-photo"
+        style={{ aspectRatio: ratio }}
+        sizes="(min-width: 768px) 42rem, 100vw"
+        // The one place in the app a photograph is read rather than glanced
+        // at, so nothing is cropped out of it. The frame already matches a real
+        // photograph's shape; `contain` is what keeps a rounding difference
+        // from shaving an edge off the label.
+        fit="contain"
       >
         {total > 1 && (
           <OverlayLabel className="absolute right-3 bottom-3">
             {active + 1} / {total}
           </OverlayLabel>
         )}
-      </PhotoStandIn>
+      </PhotoFrame>
 
       {total > 1 && (
         <ul className="flex flex-wrap gap-2">
@@ -45,7 +65,7 @@ export function PhotoGallery({ photos }: { photos: number[] }) {
             const isActive = index === active;
 
             return (
-              <li key={`${photo}-${index}`}>
+              <li key={photoKey(photo, index)}>
                 <button
                   type="button"
                   onClick={() => setActive(index)}
@@ -62,9 +82,10 @@ export function PhotoGallery({ photos }: { photos: number[] }) {
                     isActive ? "outline-2" : ""
                   }`}
                 >
-                  <PhotoStandIn
-                    seed={photo}
+                  <PhotoFrame
+                    photo={photo}
                     className="size-16 rounded-sm border border-line"
+                    sizes="4rem"
                   />
                 </button>
               </li>

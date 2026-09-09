@@ -1,7 +1,8 @@
 import { PiCheckLight, PiPlusLight } from "react-icons/pi";
 
 import { OverlayLabel } from "@/components/shared/overlay-label";
-import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
+import { PhotoFrame } from "@/components/shared/photo-frame";
+import { PhotoPlaceholder } from "@/components/shared/placeholders";
 import { PriceList } from "@/components/database/price-list";
 import type { Powder } from "@/lib/powders";
 import { chipClasses } from "@/lib/chip";
@@ -91,16 +92,19 @@ export function PowderCard({
       {cover === undefined ? (
         <PhotoPlaceholder className="aspect-[4/3] border-b border-line" />
       ) : (
-        <PhotoStandIn
-          seed={cover}
+        <PhotoFrame
+          photo={cover}
           className="aspect-[4/3] border-b border-line"
+          // Three columns at the widest, one below `sm`. The grid is capped at
+          // 72rem, so a card is never wider than a third of that.
+          sizes="(min-width: 1024px) 24rem, (min-width: 640px) 50vw, 100vw"
         >
           {powder.photos.length > 1 && (
             <OverlayLabel className="absolute right-2 bottom-2">
               {powder.photos.length} photos
             </OverlayLabel>
           )}
-        </PhotoStandIn>
+        </PhotoFrame>
       )}
 
       <div className="flex flex-1 flex-col gap-3 p-4">

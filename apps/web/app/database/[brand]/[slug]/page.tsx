@@ -42,8 +42,8 @@ import type { Powder } from "@/lib/powders";
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return allPowders().map((powder) => ({
+export async function generateStaticParams() {
+  return (await allPowders()).map((powder) => ({
     brand: powder.brandSlug,
     slug: powder.slug,
   }));
@@ -53,7 +53,9 @@ export async function generateMetadata({
   params,
 }: PageProps<"/database/[brand]/[slug]">): Promise<Metadata> {
   const { brand, slug } = await params;
-  const powder = allPowders().find((entry) => entry.id === `${brand}/${slug}`);
+  const powder = (await allPowders()).find(
+    (entry) => entry.id === `${brand}/${slug}`,
+  );
   if (powder === undefined) return {};
 
   return {
@@ -70,7 +72,7 @@ export default async function PowderPage({
 }: PageProps<"/database/[brand]/[slug]">) {
   const { brand, slug } = await params;
 
-  const powders = allPowders();
+  const powders = await allPowders();
   const index = powders.findIndex((entry) => entry.id === `${brand}/${slug}`);
   const powder = powders[index];
 

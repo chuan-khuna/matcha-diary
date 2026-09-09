@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { PiLeafLight } from "react-icons/pi";
 
 import { GradientPattern } from "@/components/shared/gradient-pattern";
@@ -30,17 +30,24 @@ const AVATAR_SEED_OFFSET = 100;
 export function PhotoStandIn({
   seed,
   className = "",
+  style,
   children,
 }: {
   seed: number;
   className?: string;
+  /** Passed through to the pattern — see `GradientPattern`. */
+  style?: CSSProperties;
   /** Overlay labels. Rendered above the pattern and clipped by the corners. */
   children?: ReactNode;
 }) {
   return (
     // surface-sunk is the well a photograph that has not loaded sits in. The
     // pattern covers it today; it stays because a real <img> will not.
-    <GradientPattern seed={seed} className={`bg-paper-sunk ${className}`}>
+    <GradientPattern
+      seed={seed}
+      className={`bg-paper-sunk ${className}`}
+      style={style}
+    >
       {children}
     </GradientPattern>
   );

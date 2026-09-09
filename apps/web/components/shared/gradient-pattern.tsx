@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 import { gradientPattern } from "@/lib/gradient-pattern";
 
@@ -17,12 +17,15 @@ import { gradientPattern } from "@/lib/gradient-pattern";
 export function GradientPattern({
   seed,
   className = "",
+  style,
   decorative = false,
   children,
 }: {
   /** Any integer. Same seed, same picture, on both sides of the wire. */
   seed: number;
   className?: string;
+  /** Merged over the pattern fill, for a shape no utility class can spell. */
+  style?: CSSProperties;
   /** An avatar stand-in carries no information; a photograph well does. */
   decorative?: boolean;
   /** Overlay labels. Drawn above the pattern and clipped by the corners. */
@@ -32,7 +35,7 @@ export function GradientPattern({
     <div
       aria-hidden={decorative || undefined}
       className={`relative overflow-hidden ${className}`}
-      style={{ backgroundImage: gradientPattern(seed) }}
+      style={{ backgroundImage: gradientPattern(seed), ...style }}
     >
       {children}
     </div>

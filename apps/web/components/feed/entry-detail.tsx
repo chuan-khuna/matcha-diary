@@ -1,4 +1,5 @@
 import { PhotoGallery } from "@/components/shared/photo-gallery";
+import { standIn } from "@/lib/photos";
 import { AvatarStandIn } from "@/components/shared/placeholders";
 import { RatingBar } from "@/components/feed/rating-bar";
 import type { FeedEntry } from "@/lib/feed-data";
@@ -34,7 +35,12 @@ export function EntryDetail({
         </div>
       </div>
 
-      {entry.photos.length > 0 && <PhotoGallery photos={entry.photos} />}
+      {/* The feed's records are mock data holding bare seeds. `standIn` is the
+          adapter at that edge — the gallery takes one photograph type, and this
+          goes away with the mock. */}
+      {entry.photos.length > 0 && (
+        <PhotoGallery photos={entry.photos.map(standIn)} />
+      )}
 
       <h2 id={titleId} className="text-headline-lg">
         {entry.title}

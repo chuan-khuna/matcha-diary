@@ -49,7 +49,7 @@ export default async function ComparePage({
   searchParams,
 }: PageProps<"/database/compare">) {
   const params = await searchParams;
-  const powders = allPowders();
+  const powders = await allPowders();
 
   const byId = new Map(powders.map((powder) => [powder.id, powder]));
 

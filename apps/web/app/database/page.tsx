@@ -35,7 +35,7 @@ export const metadata: Metadata = {
  * is HTML before anyone asks for it.
  */
 export default async function DatabasePage() {
-  const powders = allPowders();
+  const powders = await allPowders();
 
   // Every description, compiled. The grid is a client component and the record
   // it opens is chosen at runtime, so the bodies cannot be imported down there —

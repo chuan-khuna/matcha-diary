@@ -22,6 +22,8 @@
  * prose.
  */
 
+import type { Photo } from "@/lib/photos";
+
 /**
  * One tin, at one weight, in one packaging, for one price.
  *
@@ -134,20 +136,22 @@ export type Powder = {
    */
   sizes: PowderSize[];
   /**
-   * Seeds for the photo stand-ins, cover first. Becomes an ordered list of
-   * storage keys.
+   * The record's photographs, cover first.
    *
    * One field rather than a cover plus a count, on the same reasoning as the
    * feed's: two fields can disagree and this one cannot. Empty is a record with
    * no photograph, length 1 is a bare cover, and the overlay counter reports
    * the length.
    *
-   * The seeds sit in their own band, well clear of the feed's 0–7 and the
-   * avatars' 100+. Seeds are a global namespace over one generator, so an
-   * overlap would put the same picture on a powder tin and on someone's cup —
-   * which reads as a bug rather than as a coincidence.
+   * A `Photo` is either a real file or a gradient stand-in — see `lib/photos`
+   * for why that is one type rather than two fields. Records transcribed from a
+   * maker's own scans carry files; the rest still carry seeds, and their seeds
+   * sit in their own band, well clear of the feed's 0–7 and the avatars' 100+.
+   * Seeds are a global namespace over one generator, so an overlap would put
+   * the same picture on a powder tin and on someone's cup — which reads as a
+   * bug rather than as a coincidence.
    */
-  photos: number[];
+  photos: Photo[];
 };
 
 /* -------------------------------------------------------------------------- */
