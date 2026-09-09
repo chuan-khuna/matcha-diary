@@ -393,17 +393,17 @@ is now loaded with its italic, so `em` renders in a drawn face. Outside a record
 stays unused: not for UI copy, not for emphasis in the interface's own voice, and never on a mono
 style, where the recorded/authored split does the work instead.
 
-The Thai face has no italic either, and `IBM_Plex_Sans_Thai_Looped` offers none to load — so a Thai
+The Thai face has no italic either, and `Noto_Sans_Thai_Looped` offers none to load — so a Thai
 record's `em` is still synthesized. That is open rather than decided, and it belongs with the other
 per-script work below.
 
 ### Thai
 
-Thai is set in **IBM Plex Sans Thai Looped**, one face for both stacks. Looped (มีหัว) is the
+Thai is set in **Noto Sans Thai Looped**, one face for both stacks. Looped (มีหัว) is the
 traditional, bookish setting and the more readable one at paragraph length, which is what
-`body-prose` asks for. It is the same superfamily as the rest of Plex, so its skeleton and vertical
-metrics are drawn against a Latin neo-grotesque, and weights 400 / 500 / 600 map onto the three the
-system already uses.
+`body-prose` asks for. It is drawn inside the Noto superfamily against Noto Sans's Latin, so its
+skeleton answers a neo-grotesque rather than fighting Inter's, and its weight is a variable axis —
+400 / 500 / 600 are three stops on one file rather than three files.
 
 It sits directly behind the Latin face in **both** stacks rather than in a stack of its own. Fallback
 is per glyph, so Latin and **digits never leave Inter or JetBrains Mono** whatever the surrounding

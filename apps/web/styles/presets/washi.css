@@ -88,14 +88,14 @@
      Both stacks carry it directly behind the Latin face, and the order is
      doing real work: a browser falls back per glyph, not per run, so Latin
      and digits always resolve to Inter or JetBrains Mono and only Thai ever
-     reaches Plex. That is what keeps mono's tabular figures — the digits
+     reaches Noto. That is what keeps mono's tabular figures — the digits
      never leave JetBrains Mono, whatever language surrounds them.
 
      All three --font-* variables are injected by next/font in app/layout.tsx;
      the generic fallbacks cover the pre-hydration paint. */
-  --family-sans: var(--font-inter), var(--font-ibm-plex-thai-looped), -apple-system,
+  --family-sans: var(--font-inter), var(--font-noto-thai-looped), -apple-system,
     BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --family-mono: var(--font-jetbrains-mono), var(--font-ibm-plex-thai-looped), ui-monospace,
+  --family-mono: var(--font-jetbrains-mono), var(--font-noto-thai-looped), ui-monospace,
     SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
   /* ---- Type scale ----------------------------------------------------- */

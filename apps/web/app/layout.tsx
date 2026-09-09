@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Thai_Looped, Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Noto_Sans_Thai_Looped } from "next/font/google";
 
 import { BottomNav } from "@/components/chrome/bottom-nav";
 import { SiteHeader } from "@/components/chrome/site-header";
@@ -36,18 +36,18 @@ const jetbrainsMono = JetBrains_Mono({
  *
  * `subsets` is a preload list rather than a filter, which is worth knowing
  * before reading the build output: next/font still emits @font-face rules for
- * this face's Latin and Cyrillic ranges, and only the three Thai files get a
+ * this face's Latin and Latin Extended ranges, and only the Thai file gets a
  * <link rel="preload">. Nothing fetches the others — `unicode-range` makes a
  * download lazy per range, and this face sits *behind* Inter and JetBrains
  * Mono in both stacks, so no Latin glyph ever resolves to it.
  *
- * Weights are pinned to the three DESIGN.md uses. This is a static face, not
- * a variable one, so an unpinned weight is another file on the wire.
+ * No `weight` here, and that is deliberate: this is a variable face, so the
+ * three weights DESIGN.md uses are three stops on one file's wght axis. Pinning
+ * them would ask next/font for static instances instead — more files, no gain.
  */
-const plexThaiLooped = IBM_Plex_Sans_Thai_Looped({
-  variable: "--font-ibm-plex-thai-looped",
+const notoThaiLooped = Noto_Sans_Thai_Looped({
+  variable: "--font-noto-thai-looped",
   subsets: ["thai"],
-  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       // `:root` and `[data-theme="washi"]`, so this is redundant today and
       // is the switch a second preset will need.
       data-theme="washi"
-      className={`${inter.variable} ${jetbrainsMono.variable} ${plexThaiLooped.variable} h-full`}
+      className={`${inter.variable} ${jetbrainsMono.variable} ${notoThaiLooped.variable} h-full`}
     >
       {/* The bottom bar is fixed, so the page reserves its height plus the home
           indicator's safe area. Above 640px the bar is gone and so is the gap. */}
