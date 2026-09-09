@@ -4,7 +4,12 @@ import { PiXLight } from "react-icons/pi";
 
 import { CompareDescription } from "@/components/database/compare-description";
 import { PhotoPlaceholder, PhotoStandIn } from "@/components/shared/placeholders";
-import { formatPrice, formatPricePerGram, type Powder } from "@/lib/powders";
+import {
+  formatPrice,
+  formatPricePerGram,
+  sizeKey,
+  type Powder,
+} from "@/lib/powders";
 import { tasteNoteChipClasses } from "@/lib/taste-notes";
 
 /**
@@ -154,8 +159,11 @@ export function CompareTable({
               powder.sizes.length === 0 ? null : (
                 <ul className="data-md flex flex-col gap-1">
                   {powder.sizes.map((size) => (
-                    <li key={size.grams}>
-                      <span className="text-clay">{size.grams} g</span>{" "}
+                    <li key={sizeKey(size)}>
+                      <span className="text-clay">
+                        {size.grams} g
+                        {size.packaging !== null && ` ${size.packaging}`}
+                      </span>{" "}
                       {formatPrice(size)}{" "}
                       <span className="text-clay">
                         ({formatPricePerGram(size)})

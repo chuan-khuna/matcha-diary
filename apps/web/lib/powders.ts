@@ -23,16 +23,41 @@
  */
 
 /**
- * One tin, at one weight, for one price.
+ * One tin, at one weight, in one packaging, for one price.
  *
  * A powder is sold in several sizes and they do not scale linearly — the 100g
  * tin is cheaper per gram than the 20g one, near enough always. That gap is the
  * thing worth showing, and it only exists if the sizes are rows rather than a
  * single price with a note beside it.
+ *
+ * The same holds at one weight across two containers, which is why `packaging`
+ * is here: a tin costs more than a bag of the same tea and a reader comparing
+ * per-gram figures needs to see which they are looking at.
  */
 export type PowderSize = {
   /** Weight of the tin. */
   grams: number;
+  /**
+   * How that weight is packed — "Aluminium bag", "Aluminium tin" — or `null`
+   * where the maker sells one weight one way and never says which.
+   *
+   * Here because weight alone stopped identifying a row. Honcha sells 30 g
+   * twice, as a bag and as a tin, at a 140-baht difference, and without this a
+   * record either drops one of the two real prices or lists the same weight at
+   * two prices with nothing to say why. It is also what the lists key on: two
+   * rows that agree on `grams` need something else to tell them apart.
+   *
+   * Free text rather than an enum, on the same reasoning as `origin`. Packaging
+   * is a maker's word and the collection has seen bags, tins and caddies
+   * already; a closed list here would have to grow every time a house invents a
+   * container, and would be a second vocabulary to keep in step for no gain
+   * that a reader of the price list can see.
+   *
+   * `null` rather than a default string, because most records genuinely do not
+   * say. "Aluminium bag" on a tin nobody described is an invented fact, and the
+   * price list is built to draw a bare weight when there is nothing to add.
+   */
+  packaging: string | null;
   /**
    * Retail price in baht, written the way it is written on the shelf — `1050`
    * for a whole-baht price, `1000.50` when there are satang.
@@ -177,6 +202,22 @@ const perGramFormat = new Intl.NumberFormat(LOCALE, {
 
 export const formatPrice = (size: PowderSize): string =>
   priceFormat.format(size.price);
+
+/**
+ * A React key for one row of a price list, unique within the powder that owns
+ * it.
+ *
+ * Weight alone was the key until a record listed 30 g twice — a bag and a tin —
+ * and two rows with the same key is a rendering bug React reports at runtime
+ * rather than a build failure. Weight and packaging together is what a maker
+ * actually varies, and a house selling the same weight in the same container at
+ * two prices is a record that is wrong rather than a key that is too narrow.
+ *
+ * Here rather than in either list, because both draw the same rows and a key
+ * spelled twice is two chances to fix only one of them.
+ */
+export const sizeKey = (size: PowderSize): string =>
+  `${size.grams}-${size.packaging ?? ""}`;
 
 /**
  * Derived at the edge rather than stored beside the price. Two fields for one

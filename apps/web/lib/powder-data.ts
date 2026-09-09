@@ -87,6 +87,12 @@ function numbers(value: unknown): number[] {
 /**
  * The tins a powder is sold in, in the order the record lists them — smallest
  * first by convention, and never re-sorted here. See `PowderSize`.
+ *
+ * `grams` and `price` are required and a row missing either is dropped: a size
+ * with no price is not a size. `packaging` is optional and absent means `null`,
+ * because most makers here sell one weight one way and never name the
+ * container — see the field's own note on why that is not defaulted to a
+ * string.
  */
 function sizes(value: unknown): PowderSize[] {
   if (!Array.isArray(value)) return [];
@@ -100,7 +106,7 @@ function sizes(value: unknown): PowderSize[] {
       if (typeof grams !== "number" || !Number.isFinite(grams)) return null;
       if (typeof price !== "number" || !Number.isFinite(price)) return null;
 
-      return { grams, price };
+      return { grams, packaging: text(size.packaging), price };
     })
     .filter((size): size is PowderSize => size !== null);
 }
