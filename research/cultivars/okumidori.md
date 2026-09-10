@@ -42,7 +42,22 @@ diseaseResistance:
   - cold (strong — suited to mountain districts and frost-prone ground)
   - anthracnose / 炭疽病 (weak — needs a preventive programme where the disease is established)
 lineageNote: A controlled cross made at the national station at Kanaya in 1953, Yabukita as seed parent against the numbered landrace selection 静在16. It shares that pollen parent with 茶本F1NN27, an unreleased line from the same station and the same combination, which went on to parent Sakimidori and Minamisayaka — so Okumidori and those two are close relatives by a route their own records do not make obvious. No descendants of Okumidori appear in this collection.
-conflicts: "Pollen parent: several English-language sources (teanursery.com, and the cultivar guide this collection's earlier drafts drew on) state that a 2021 parentage analysis attributed to 'Kubo et al.' found the recorded pedigree inconsistent with Okumidori's genotype, leaving the pollen parent unidentified. No such publication could be located. The citation is given without journal, title or volume anywhere it appears, and the 2021 NARO publication that does analyse Japanese tea cultivars by SSR markers — the 44-cultivar DNA identification manual — lists Okumidori's parents flatly as やぶきた × 静在16 with no caveat. The nearest real paper found is Kubo et al. (2019) in Genetic Resources and Crop Evolution, which classifies Kyoto landraces and cultivars by SSR and RAD-seq and is not about Okumidori. This record therefore follows the MAFF registry and NARO's own 2021 table, and notes the claim rather than repeating it. — Cultivation share: 'second most planted cultivar in Japan' is a common claim. MAFF's own series does not support it: at 4% in 2023 Okumidori sits behind Yutakamidori (7%) and Saemidori (5%). It is second only among cultivars grown for tencha, and first among late-season ones."
+conflicts:
+  - >-
+    Pollen parent: several English-language sources (teanursery.com, and the cultivar guide this
+    collection's earlier drafts drew on) state that a 2021 parentage analysis attributed to 'Kubo et
+    al.' found the recorded pedigree inconsistent with Okumidori's genotype, leaving the pollen
+    parent unidentified. No such publication could be located. The citation is given without
+    journal, title or volume anywhere it appears, and the 2021 NARO publication that does analyse
+    Japanese tea cultivars by SSR markers — the 44-cultivar DNA identification manual — lists
+    Okumidori's parents flatly as やぶきた × 静在16 with no caveat. The nearest real paper found is Kubo
+    et al. (2019) in Genetic Resources and Crop Evolution, which classifies Kyoto landraces and
+    cultivars by SSR and RAD-seq and is not about Okumidori. This record therefore follows the MAFF
+    registry and NARO's own 2021 table, and notes the claim rather than repeating it.
+  - >-
+    Cultivation share: 'second most planted cultivar in Japan' is a common claim. MAFF's own series
+    does not support it: at 4% in 2023 Okumidori sits behind Yutakamidori (7%) and Saemidori (5%).
+    It is second only among cultivars grown for tencha, and first among late-season ones.
 summary: A 1953 cross of Yabukita against the landrace selection 静在16, registered in 1974 as Cha Norin No. 32, Okumidori buds some eleven days after Yabukita and exists to stretch a district's picking season past the point where one mid-season clone would jam it — and its sweet, low-astringency leaf made it, unplanned, one of the principal tencha and gyokuro cultivars outside Uji.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林32号 row)

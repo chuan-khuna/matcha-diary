@@ -33,7 +33,17 @@ diseaseResistance:
   - cold hardiness (medium overall, but comparatively weak against frost-crack/laceration-type winter injury)
 lineageNote: A controlled cross between two long-established Cha Norin cultivars, made at the predecessor of the Kanaya national tea research station; several secondary registries instead list Z1 as the pollen parent, which the primary release paper does not support (see conflicts).
 documentation: normal — a peer-reviewed release paper survives, plus several later agronomic studies
-conflicts: "Parentage. The Cha Norin registry table reproduced by Minorien (附表１ 茶農林登録品種一覧) and the Japanese Tea Sommelier registry list both give the cross as Yabukita × Z1. The peer-reviewed release paper — Kozaki (1987), Japanese Journal of Breeding, which reproduces MAFF's own 1986 registration dossier — gives Yabukita × Yamatomidori in both its Japanese text and English abstract, with a full breeding chronology (crossed 1959, selected 1965, strain-numbered 1967, retested as Kanaya 6 from 1977). This record follows the release paper as the better-sourced primary account; Z1 was not found to be part of Meiryoku's own pedigree, though it is a documented parent of two related Kanaya/Makurazaki-bred cultivars, Fushun and Saeakari (see History)."
+conflicts:
+  - >-
+    Parentage: the Cha Norin registry table reproduced by Minorien (附表１ 茶農林登録品種一覧) and the Japanese
+    Tea Sommelier registry list both give the cross as Yabukita × Z1. The peer-reviewed release
+    paper — Kozaki (1987), Japanese Journal of Breeding, which reproduces MAFF's own 1986
+    registration dossier — gives Yabukita × Yamatomidori in both its Japanese text and English
+    abstract, with a full breeding chronology (crossed 1959, selected 1965, strain-numbered 1967,
+    retested as Kanaya 6 from 1977). This record follows the release paper as the better-sourced
+    primary account; Z1 was not found to be part of Meiryoku's own pedigree, though it is a
+    documented parent of two related Kanaya/Makurazaki-bred cultivars, Fushun and Saeakari (see
+    History).
 summary: A 1959 Yabukita × Yamatomidori cross bred at Kanaya and registered in 1986 as Cha Norin No. 35, Meiryoku is a medium-season Shizuoka sencha cultivar valued for anthracnose and ring-blight resistance, though several registries mistakenly credit its pollen parent as the breeding line Z1.
 sources:
   - title: "夏作物・園芸作物等新品種の紹介－昭和61年農林水産省登録－(I)果樹・茶・桑 (New summer crop cultivars registered by MAFF in 1986; (I) Fruit trees, Tea and Mulberry), by Itaru Kozaki, Japanese Journal of Breeding 37(1), 1987"

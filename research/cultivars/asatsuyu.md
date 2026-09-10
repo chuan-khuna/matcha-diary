@@ -34,19 +34,25 @@ notableDescendants:
   - Yutakamidori (seed/female parent, open-pollinated — pollen parent unrecorded; bred at the national tea experiment station)
 rarity: Never widely planted despite its quality reputation — low yield, poor field survival and frost vulnerability kept it a minor cultivar even as its offspring became mainstream
 lineageNote: A landrace selection from Uji zairai seed, not a controlled cross — Asatsuyu has no recorded pollen parent of its own. It is nonetheless one of two ancestral hubs, with Yabukita, behind most of Japan's post-war specialty sencha cultivars, as the confirmed pollen parent of Saemidori and Tsuyuhikari and the seed parent of Yutakamidori.
-conflicts: >-
-  (1) Budding time. The 1953 registration bulletin (茶の品種登録と命名, 茶業研究報告 No. 2) classifies Asatsuyu
-  as 中生種 (medium-season). A 1991 field trial at Mizobe, Kagoshima instead found it among the very earliest
-  budders of 13 cultivars tested, and secondary sources (japantea-chachacha.com, the pre-existing draft of
-  this record) uniformly call it 早生/early. This record follows the trial data, as the more specific and
-  directly comparative source, and flags the bulletin's older classification rather than silently dropping
-  it. (2) Development year. The 1953 bulletin states development (育成) was completed in Showa 19 (1944); a
-  separately sourced compiled registry table (茶農林登録品種一覧, minorien.jp) lists "1953" uniformly for
-  every cultivar in that first registration batch, which reads as a simplification using the registration
-  year rather than an independent claim about completion of breeding — the bulletin's 1944 date is preferred
-  here. (3) The pre-existing draft of this record gave a cultivation-share figure ("1.2% of Japan's
-  production, roughly 500 ha, as of 2012"). No source located in this research corroborated it, so it has
-  been dropped rather than repeated; cultivationShare is omitted below rather than filled with that figure.
+conflicts:
+  - >-
+    Budding time: the 1953 registration bulletin (茶の品種登録と命名, 茶業研究報告 No. 2) classifies Asatsuyu as
+    中生種 (medium-season). A 1991 field trial at Mizobe, Kagoshima instead found it among the very
+    earliest budders of 13 cultivars tested, and secondary sources (japantea-chachacha.com, the
+    pre-existing draft of this record) uniformly call it 早生/early. This record follows the trial
+    data, as the more specific and directly comparative source, and flags the bulletin's older
+    classification rather than silently dropping it.
+  - >-
+    Development year: the 1953 bulletin states development (育成) was completed in Showa 19 (1944); a
+    separately sourced compiled registry table (茶農林登録品種一覧, minorien.jp) lists "1953" uniformly for
+    every cultivar in that first registration batch, which reads as a simplification using the
+    registration year rather than an independent claim about completion of breeding — the bulletin's
+    1944 date is preferred here.
+  - >-
+    Cultivation share: the pre-existing draft of this record gave a cultivation-share figure ("1.2%
+    of Japan's production, roughly 500 ha, as of 2012"). No source located in this research
+    corroborated it, so it has been dropped rather than repeated; cultivationShare is omitted below
+    rather than filled with that figure.
 summary: Selected from Uji zairai seedlings and registered in 1953 as Cha Norin No. 2, Asatsuyu makes an umami-rich, low-astringency sencha even unshaded — hence "natural gyokuro" — but poor yield and frost sensitivity kept it niche; it is chiefly known today as the pollen parent of Saemidori and Tsuyuhikari.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 No. 2, October 1953

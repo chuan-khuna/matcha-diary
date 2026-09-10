@@ -32,7 +32,13 @@ diseaseResistance:
   - disease generally (high — 耐病性が大 in the 1953 naming paper)
   - cold (highly resistant)
 lineageNote: A controlled cross of an Assam introduction against a Kagoshima landrace selection, made in 1935 — the same programme and the same era as Benihomare, Japan's first registered tea cultivar, and aimed at the same target. Where Benihomare is an open-pollinated Assam seedling, Akane pairs the Assam side deliberately with local landrace material, which is what its comparative yield figures are quoted against.
-conflicts: "Parent codes: the 1953 naming paper gives the strain as 鹿アッサム交配132号（アッサム21号×鹿緑原3号）and the pedigree as A21×O3. The 茶農林 summary table renders the same cross as Ａｉ2×ＮｋａＯ3, and gives that same Ａｉ2 to Hatsumomiji (paper: A2×O5) and Benitachiwase (paper: A26×O1) — so it is the summary table that collapses three distinct Assam accessions into one code, not Tea Nursery that invented a digit. This record follows the naming paper."
+conflicts:
+  - >-
+    Parent codes: the 1953 naming paper gives the strain as 鹿アッサム交配132号（アッサム21号×鹿緑原3号）and the
+    pedigree as A21×O3. The 茶農林 summary table renders the same cross as Ａｉ2×ＮｋａＯ3, and gives that
+    same Ａｉ2 to Hatsumomiji (paper: A2×O5) and Benitachiwase (paper: A26×O1) — so it is the summary
+    table that collapses three distinct Assam accessions into one code, not Tea Nursery that
+    invented a digit. This record follows the naming paper.
 documentation: sparse — the 1953 naming paper in 茶業研究報告 gives pedigree, characteristics, recommended districts and name derivation in a single paragraph; beyond that a Cha Norin registry row and a secondary compilation. Japan's black-tea cultivars of this period are generally thinly documented
 summary: A 1935 Kagoshima cross of an Assam introduction against a local landrace selection, registered in 1953 as Cha Norin No. 15 — one of the black-tea cultivars from Japan's brief attempt to build a black-tea industry, named for the red of the liquor it makes.
 sources:

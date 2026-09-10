@@ -36,7 +36,22 @@ diseaseResistance:
   - tea scale insect, クワシロカイガラムシ (somewhat weak — about the same as Yabukita)
 rarity: "Newly registered (application published 2013, registered 2015) — too recent for any cultivation-share or acreage figure to have been sourced. Already sold as a single-cultivar tea by specialist retailers such as Shinkoju."
 lineageNote: A controlled cross, not a landrace selection, made in 1975 — but both parents are themselves unreleased internal Saitama breeding lines rather than named cultivars, so Okuharuka's documented pedigree runs two generations deep into the station's own breeding programme before it reaches any registered cultivar (Sayamamidori, Yamatomidori, Yabukita). No descendants of Okuharuka are documented in the sources consulted; it is too recently registered to have any yet.
-conflicts: "Registration year is quoted inconsistently across sources. The release paper (Nakajima et al., 2014, primary source) states only that a Plant Variety Protection Act application was filed in March 2013 and the application was published (出願公表) on 5 July 2013 — it does not report a registration grant, because none had happened yet when the paper went to press in December 2014. Shinkoju's own cultivar-index page uses the identical framing: '2013年に出願公表されました' (application published in 2013), not registration. The Japanese Tea Sommelier's master registry list and myjapanesegreentea.com's cultivar list both independently give 2015 as the registration year. Read together, these sources are consistent rather than contradictory: 2013 is the application-publication date, and 2015 is the actual grant date, which explains why no source claiming 2013 as a registration year traces back to a primary document. The MAFF Plant Variety Protection database (hinshu2.maff.go.jp) settles it: application No. 27958 filed 5 March 2013, published 5 July 2013, registration No. 23946 granted 11 March 2015 to Saitama Prefecture. Saitama's own cultivar leaflet prints the same number (品種登録番号 第23946号), and the prefecture's cultivar page dates the registration to 平成27年 (2015)."
+conflicts:
+  - >-
+    Registration year: quoted inconsistently across sources. The release paper (Nakajima et al.,
+    2014, primary source) states only that a Plant Variety Protection Act application was filed in
+    March 2013 and the application was published (出願公表) on 5 July 2013 — it does not report a
+    registration grant, because none had happened yet when the paper went to press in December 2014.
+    Shinkoju's own cultivar-index page uses the identical framing: '2013年に出願公表されました' (application
+    published in 2013), not registration. The Japanese Tea Sommelier's master registry list and
+    myjapanesegreentea.com's cultivar list both independently give 2015 as the registration year.
+    Read together, these sources are consistent rather than contradictory: 2013 is the
+    application-publication date, and 2015 is the actual grant date, which explains why no source
+    claiming 2013 as a registration year traces back to a primary document. The MAFF Plant Variety
+    Protection database (hinshu2.maff.go.jp) settles it: application No. 27958 filed 5 March 2013,
+    published 5 July 2013, registration No. 23946 granted 11 March 2015 to Saitama Prefecture.
+    Saitama's own cultivar leaflet prints the same number (品種登録番号 第23946号), and the prefecture's
+    cultivar page dates the registration to 平成27年 (2015).
 summary: An extremely late-budding, cold-hardy Saitama cultivar bred from Saitama 20 × Saitama 7, application-published in 2013 and registered in 2015; trial data show markedly lower frost damage than even Sayamakaori, and it carries a distinctive cherry-leaf aroma linked to coumarin in the leaf.
 sources:
   - title: "耐寒性を有した極晩生の煎茶用品種'おくはるか'の育成 (Cultivation of New Extremely Late Budding Green Tea, 'Okuharuka' with Cold Resistance) — Nakajima, Miyazaki, Honda, Sakai, Tanaka, Sasaki, Takahashi, Fuchinoue, Kitada, Okano, Kyogoku & Uchino, 茶業研究報告 (Tea Research Report) No. 118, pp.1–9 (2014)"

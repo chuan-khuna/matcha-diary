@@ -77,8 +77,8 @@ describe it. Search in **kana**, not romaji.
 **4. Corroborate the traps.** Work through *Traps* below against what you have found. Each one has
 already produced a wrong record in this corpus at least once.
 
-**5. Resolve.** Where two sources genuinely disagree, write both into `conflicts:` with the evidence
-for each and say which the record follows and why. Where a specific-sounding claim resists sourcing,
+**5. Resolve.** Where two sources genuinely disagree, write both into `conflicts:` — one list entry
+per disagreement — with the evidence for each and say which the record follows and why. Where a specific-sounding claim resists sourcing,
 **mark it unverified** and keep it out of frontmatter — unusual specificity means *find the source*,
 not *it is invented*. That reasoning caught Koshun and Yutakamidori correctly, and produced one
 false positive on Okunoyama's real selection funnel.
@@ -116,12 +116,21 @@ registered at all, and `registered: null` says so.
 | `buddingTime` | Days relative to Yabukita where a source gives it, attributed to its trial |
 | `recommendedRegions` `yield` `cultivationShare` `diseaseResistance` `rarity` | Agronomy, each figure attributed |
 | `documentation` | `sparse` when it genuinely is. Roughly a quarter of the corpus says so and is the better for it |
-| `conflicts` | Every real disagreement, with the evidence on both sides |
+| `conflicts` | A list, one entry per real disagreement, each opening with the field it is about — `Budding time: …` — and carrying the evidence on both sides. `null` when the sources agree |
 | `summary` | One sentence. It is the index card, so it carries registration, origin and what the cup is like |
 | `sources` | `- title:` / `url:` pairs, optionally `publisher:` |
 
 **YAML that bites.** An unquoted `2013-12-20` parses as a timestamp and arrives as a Date. Quote any
-value containing `:`, `#`, or a leading quote — most `conflicts:` and `yield:` values need it.
+value containing `:`, `#`, or a leading quote — most `yield:` values need it. A `conflicts:` entry
+carries colons and quotes by nature, so write each one as a folded block scalar instead, which needs
+no escaping:
+
+```yaml
+conflicts:
+  - >-
+    Registration date: the release paper dates the 茶農林48号 naming registration to 24 August 2000;
+    the Plant Variety Protection Act registration (No. 11102) is dated 17 March 2003.
+```
 
 ### Prose
 
@@ -176,7 +185,7 @@ Three registers: `name: Uji-Hikari` (field value), `romaji: Uji-hikari` (body pr
 - Every primary source in that list was opened and read, not summarised
 - Parentage came from a release paper wherever one exists
 - Every date names which registry it belongs to
-- Every disagreement you met is in `conflicts:`, resolved in the open
+- Every disagreement you met is its own entry in `conflicts:`, resolved in the open
 - `kanji` is `null` unless a primary source gives the registered form
 - The three prose headings are present, in order
 - `STATUS.md` no longer lists this cultivar as unresearched

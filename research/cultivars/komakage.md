@@ -34,7 +34,15 @@ diseaseResistance:
   - gray blight / ring spot disease, 輪斑病 (strong)
 rarity: Rarely cultivated today; grown only in scattered plots outside Uji, including Nara Prefecture (Mizuma) and Saitama Prefecture (Sayama)
 lineageNote: A single-tree selection from Uji Zairai seed-grown stock, not a controlled cross — one of three Uji selections (with Asahi and Samidori) made under the same 1930s–40s programme, but the only one of the three never to receive formal registration or wide cultivation.
-conflicts: "Selection year and registration status are reported inconsistently. The International Camellia Register, senchado.jp and myjapanesegreentea.com give 1954 as the year the strain comparison trial concluded and the name was fixed, and state explicitly that Komakage carries no MAFF or Plant Variety Protection Act registration — consistent with its absence from Kyoto Prefecture's own current cultivar page. d:matcha USA instead describes it as 'Registered: 1955 (Kyoto Prefecture)'. This record follows the majority sourcing: selectedYear 1954, registry unregistered."
+conflicts:
+  - >-
+    Selection year and registration status are reported inconsistently. The International Camellia
+    Register, senchado.jp and myjapanesegreentea.com give 1954 as the year the strain comparison
+    trial concluded and the name was fixed, and state explicitly that Komakage carries no MAFF or
+    Plant Variety Protection Act registration — consistent with its absence from Kyoto Prefecture's
+    own current cultivar page. d:matcha USA instead describes it as 'Registered: 1955 (Kyoto
+    Prefecture)'. This record follows the majority sourcing: selectedYear 1954, registry
+    unregistered.
 summary: A 1954 selection from Uji Zairai seedlings by Hirano Jin'nojō, named for its tea garden's proximity to Manpuku-ji's horse-hoofprint monument; one of the three original Uji shade-cultivar selections alongside Asahi and Samidori, but the only one never formally registered, and now rarely grown.
 sources:
   - title: The Komakage Tea Cultivar

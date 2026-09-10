@@ -35,7 +35,14 @@ diseaseResistance:
 rarity: deliberately kept close to Fujieda by its breeders, who were reluctant to release cuttings widely; a small amount reached Ureshino, Saga for kamairicha production, but it remains one of the less-planted floral cultivars
 lineageNote: A controlled cross, not a landrace selection — and specifically the reciprocal of Sofu, using the same two parents with the sexes reversed. Shizu-Inzatsu 131 is Fujikaori's seed parent and Yabukita its pollen parent, the opposite arrangement from Sofu (Yabukita seed parent, Shizu-Inzatsu 131 pollen parent).
 documentation: normal
-conflicts: "Sources differ on cold hardiness. myjapanesegreentea.com describes Fujikaori as having general 'strong resistance to cold weather'; the more detailed technical write-up reprinted by O-cha Net from the Shizuoka Prefecture Tea Industry Council's 'Cha' magazine instead specifies that resistance to split-bark-type frost injury (裂傷型凍害) specifically is weak, and recommends siting the cultivar only in warm districts with low frost risk. This record follows the more detailed, attributed technical source for that qualified claim."
+conflicts:
+  - >-
+    Cold hardiness: sources differ. myjapanesegreentea.com describes Fujikaori as having general
+    'strong resistance to cold weather'; the more detailed technical write-up reprinted by O-cha Net
+    from the Shizuoka Prefecture Tea Industry Council's 'Cha' magazine instead specifies that
+    resistance to split-bark-type frost injury (裂傷型凍害) specifically is weak, and recommends siting
+    the cultivar only in warm districts with low frost risk. This record follows the more detailed,
+    attributed technical source for that qualified claim.
 summary: A 1996 Fujieda, Shizuoka cross of Shizu-Inzatsu 131 and Yabukita, Fujikaori is the reciprocal of Sofu — same two parents, sexes reversed — and shares its jasmine-like methyl anthranilate aroma, though its breeders kept it almost entirely local to their home city.
 sources:
   - title: 藤かおり — ジャスミン様の芳香、藤枝で産地ブランド化 (お茶を楽しむホームページ O-CHA NET / 世界緑茶協会), reprinted from 月刊「茶」(静岡県茶業会議所), by 中村順行

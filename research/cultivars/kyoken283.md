@@ -26,27 +26,29 @@ notableDescendants:
 rarity: Never released or grown under this designation; whether the original selection is still maintained at the institute is not documented
 lineageNote: Kyoken 283 is a Kyoto Prefectural Tea Research Institute breeding-line number, not a cultivar that was ever named or registered. Its own parentage is unpublished — it appears in only one primary source, the release paper for Miyamakaori, which shows it as that cultivar's seed parent and describes it as "selected from Kyoto zairai." It is recorded here with Kyoto zairai as its seed parent, which is the whole of what the source says and is enough to place it in the pedigree; a landrace selection has no second parent by definition, since a zairai stand is pollinated at random. Whether it was an Uji-district selection specifically, like its numerical neighbours in the same series (Kyoken 166 → Gokou, Kyoken 307 → Ujimidori), is not stated anywhere sourced, which is why it draws as its own landrace node rather than joining the Uji zairai cluster. A claim that it is also a parent of Nagomiyutaka circulates in secondary lists but is not supported by Nagomiyutaka's own release paper — see conflicts.
 documentation: sparse
-conflicts: |
-  Three points needed sorting out during research:
-  (1) Miyamakaori's registration year is given as 2006 in at least one widely used secondary registry
-  of Japanese cultivars (japaneseteasommelier.wordpress.com). Both years are right, because there are
-  two registrations. Miyamakaori's own release paper (Nagatomo et al. 2003, Chagyo Kenkyu Hokoku
-  No. 96) states it was registered as Cha Norin No. 52 on 5 September 2003 under the MAFF 茶農林
-  naming series; NARO's 茶品種ハンドブック records a separate 種苗法 品種登録 as No. 13754 on
-  27 February 2006. This record quotes the 2003 Cha Norin registration.
-  (2) The same secondary registry, and other sources drawing on it, list Nagomiyutaka as a second
-  Kyoken 283 cross — "Saitama No. 1 × Kyoken 283, 2010." Nagomiyutaka's own release paper (Yoshidome
-  et al. 2014, Chagyo Kenkyu Hokoku No. 117, "釜炒り茶及び煎茶用新品種'なごみゆたか'の育成") gives its
-  parents as Saitama No. 16 and Fuku 8, crossed in 1988 at the same Miyazaki station, and does not
-  mention Kyoken 283 or Saitama No. 1 anywhere in the text. Release year (2010) is the only point of
-  agreement between the two accounts. This record follows the release paper and does not list
-  Nagomiyutaka as a descendant of Kyoken 283; the pairing looks like a mix-up with Miyamakaori, bred
-  at the same station in the same period from a similarly-numbered "Saitama" parent.
-  (3) Miyamakaori's pedigree chart (Nagatomo et al. 2003, Fig. 1) gives its pollen parent, Saitama
-  No. 1, as itself Yabukita G1 × Sayamamidori. NARO's 茶品種ハンドブック names the same cross more
-  precisely as 埼53G1-7 × さやまみどり, with 埼53G1-7 a Saitama-bred natural-cross seedling of
-  Yabukita — the fuller name for the line the release paper writes as "Yabukita G1," not a rival
-  account of Saitama No. 1's parentage.
+conflicts:
+  - >-
+    Miyamakaori's registration year is given as 2006 in at least one widely used secondary registry
+    of Japanese cultivars (japaneseteasommelier.wordpress.com). Both years are right, because there
+    are two registrations. Miyamakaori's own release paper (Nagatomo et al. 2003, Chagyo Kenkyu
+    Hokoku No. 96) states it was registered as Cha Norin No. 52 on 5 September 2003 under the MAFF
+    茶農林 naming series; NARO's 茶品種ハンドブック records a separate 種苗法 品種登録 as No. 13754 on 27 February
+    2006. This record quotes the 2003 Cha Norin registration.
+  - >-
+    The same secondary registry, and other sources drawing on it, list Nagomiyutaka as a second
+    Kyoken 283 cross — "Saitama No. 1 × Kyoken 283, 2010." Nagomiyutaka's own release paper
+    (Yoshidome et al. 2014, Chagyo Kenkyu Hokoku No. 117, "釜炒り茶及び煎茶用新品種'なごみゆたか'の育成") gives its
+    parents as Saitama No. 16 and Fuku 8, crossed in 1988 at the same Miyazaki station, and does not
+    mention Kyoken 283 or Saitama No. 1 anywhere in the text. Release year (2010) is the only point
+    of agreement between the two accounts. This record follows the release paper and does not list
+    Nagomiyutaka as a descendant of Kyoken 283; the pairing looks like a mix-up with Miyamakaori,
+    bred at the same station in the same period from a similarly-numbered "Saitama" parent.
+  - >-
+    Miyamakaori's pedigree chart (Nagatomo et al. 2003, Fig. 1) gives its pollen parent, Saitama No.
+    1, as itself Yabukita G1 × Sayamamidori. NARO's 茶品種ハンドブック names the same cross more precisely as
+    埼53G1-7 × さやまみどり, with 埼53G1-7 a Saitama-bred natural-cross seedling of Yabukita — the fuller
+    name for the line the release paper writes as "Yabukita G1," not a rival account of Saitama No.
+    1's parentage.
 summary: A Kyoto Prefectural Tea Research Institute breeding line that was never named or registered, documented today only because it was the seed parent of the Miyazaki-bred sencha cultivar Miyamakaori, crossed with Saitama No. 1 in 1983.
 sources:
   - title: 宇治品種について (Uji Cultivars) — Kyoto Prefectural Tea Research Institute

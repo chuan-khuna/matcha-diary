@@ -26,7 +26,25 @@ yield: null
 rarity: Not found in any modern retailer, vendor cultivar list, or prefectural cultivation page consulted for this record; delisted as a Shizuoka Prefecture recommended cultivar in 1955 and not documented as commercially grown since.
 lineageNote: An individual selection by Sugiyama Hikosaburo — the breeder of Yabukita — from a landrace tree rather than a controlled cross; the pollen parent is unrecorded and no cultivar bred from Koyanishi was found in the sources checked.
 documentation: sparse
-conflicts: "MAFF's 茶農林 registry table gives the 来歴 of 茶農林8号 as 宇治在来種実生 — a seedling of the Uji landrace — and The Japanese Tea Cultivars (japaneseteasommelier.wordpress.com) repeats that origin. The original 1953 registration record (茶業研究報告 / Chagyo Kenkyu Hokoku, Tea Research Journal) gives no origin at all: its 来歴 for Koyanishi reads only 杉山彦三郎氏が選拔し，昭和10〜21年静岡県立茶業試験場の農林省指定原種圃において育成したものである — selected by Sugiyama Hikosaburo, raised at the Shizuoka station, suitable region Shizuoka only. That silence is pointed, because the entries around it in the same article do name a place: Yabukita is selected from an old tree in Sugiyama's own 小字段平 garden in Shizuoka, Makinohara-wase from a named grower's garden in Yokooka, Gowa, Haibara-gun. So the two official records do not in fact disagree — the registry states a seed origin the journal is silent on, and it states it deliberately rather than by block, since the rows on either side of Koyanishi carry different phrases (茶農林6号 and 7号 静岡在来種実生, 茶農林9号 在来種). This record therefore takes the seed origin as the Uji landrace and the selection and raising as Shizuoka, which are compatible: Uji seed was planted widely in Shizuoka. What stays unrecorded is where the hut stood. Kyoto Prefecture's page on Uji-origin cultivars does not list Koyanishi, but that page covers Kyoto-bred cultivars rather than every cultivar raised from Uji seed."
+conflicts:
+  - >-
+    Seed origin: MAFF's 茶農林 registry table gives the 来歴 of 茶農林8号 as 宇治在来種実生 — a seedling of the Uji
+    landrace — and The Japanese Tea Cultivars (japaneseteasommelier.wordpress.com) repeats that
+    origin. The original 1953 registration record (茶業研究報告 / Chagyo Kenkyu Hokoku, Tea Research
+    Journal) gives no origin at all: its 来歴 for Koyanishi reads only
+    杉山彦三郎氏が選拔し，昭和10〜21年静岡県立茶業試験場の農林省指定原種圃において育成したものである — selected by Sugiyama Hikosaburo, raised at
+    the Shizuoka station, suitable region Shizuoka only. That silence is pointed, because the
+    entries around it in the same article do name a place: Yabukita is selected from an old tree in
+    Sugiyama's own 小字段平 garden in Shizuoka, Makinohara-wase from a named grower's garden in Yokooka,
+    Gowa, Haibara-gun. So the two official records do not in fact disagree — the registry states a
+    seed origin the journal is silent on, and it states it deliberately rather than by block, since
+    the rows on either side of Koyanishi carry different phrases (茶農林6号 and 7号 静岡在来種実生, 茶農林9号 在来種).
+    This record therefore takes the seed origin as the Uji landrace and the selection and raising as
+    Shizuoka, which are compatible: Uji seed was planted widely in Shizuoka. What stays unrecorded
+    is where the hut stood.
+  - >-
+    Kyoto Prefecture's page on Uji-origin cultivars does not list Koyanishi, but that page covers
+    Kyoto-bred cultivars rather than every cultivar raised from Uji seed.
 summary: An individual tree selected by Sugiyama Hikosaburo — the breeder of Yabukita — and raised at the Shizuoka prefectural station, registered in 1953 as Cha Norin No. 8; a Shizuoka recommended cultivar from 1937, it was delisted in 1955, the year Yabukita replaced it.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林8号 row)

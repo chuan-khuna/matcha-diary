@@ -32,7 +32,15 @@ diseaseResistance:
   - ring spot disease (medium)
 rarity: "Extremely rare today; kept alive by very few producers, among them the Yamashita Shinjuen estate in Kyotanabe, Uji"
 lineageNote: A landrace selection, not a controlled cross — one of 106 strains surveyed from Uji-region tea gardens in 1935–1941 and then one of 20 further narrowed for tencha quality. Its pollen and seed parents are unrecorded, as with any zairai selection.
-conflicts: "Budding-time class and yield rank differ between the 1954 registration bulletin (茶業研究報告 No. 4) and the current official Kyoto Prefecture cultivar table (ujicha.or.jp): the former calls the budding medium (中生) and the yield high relative to the zairai it replaced; the latter classes the budding medium-early (中早生) and the yield 'slightly low' relative to Kyoto's other current cultivars. Both readings come directly from primary or official documents, so this record uses the current table for the Characteristics section and gives the 1954 figures as historical context in History."
+conflicts:
+  - >-
+    Budding-time class and yield rank differ between the 1954 registration bulletin (茶業研究報告 No. 4)
+    and the current official Kyoto Prefecture cultivar table (ujicha.or.jp): the former calls the
+    budding medium (中生) and the yield high relative to the zairai it replaced; the latter classes
+    the budding medium-early (中早生) and the yield 'slightly low' relative to Kyoto's other current
+    cultivars. Both readings come directly from primary or official documents, so this record uses
+    the current table for the Characteristics section and gives the 1954 figures as historical
+    context in History.
 summary: A 1954 landrace selection from a roughly century-old Uji zairai tree, registered as Cha Norin No. 19 for gyokuro; once prizewinning, it is now grown by only a handful of Uji-region producers.
 sources:
   - title: 茶の新登録品種 (The New Registered Tea Varieties), 茶業研究報告 第4号

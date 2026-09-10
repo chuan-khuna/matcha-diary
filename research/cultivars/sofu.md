@@ -39,7 +39,14 @@ diseaseResistance:
   - split-bark frost injury / 裂傷型凍害 (moderately weak — weaker than Yabukita)
 rarity: officially a recommended Shizuoka cultivar since 2005, but grower accounts describe commercial planting as still minimal — it persists mainly as small single-cultivar lots out of districts such as Ashikubo, Kawane, Tamakawa and Fuji rather than as an established block planting
 lineageNote: A controlled cross, not a landrace selection — Yabukita crossed with Shizu-Inzatsu 131, an unregistered Assamica-hybrid breeding line. The pollen parent is the source of Sofu's defining trait, methyl anthranilate, inherited through a single locus.
-conflicts: "Sources disagree on the registration year. NARO's own 2002 research announcement and several vendor pages (myjapanesegreentea, Tea Epicure) describe Sofu as registered in 2002 — the year it was named, assigned 茶農林49号, and its Plant Variety Protection Act application was filed. NARO's own cultivar database instead gives 7 February 2005 as the date the Plant Variety Protection Act registration (No. 12706) was granted. This record uses 2005 for `registered` and treats 2002 as the naming/application year."
+conflicts:
+  - >-
+    Registration year: NARO's own 2002 research announcement and several vendor pages
+    (myjapanesegreentea, Tea Epicure) describe Sofu as registered in 2002 — the year it was named,
+    assigned 茶農林49号, and its Plant Variety Protection Act application was filed. NARO's own cultivar
+    database instead gives 7 February 2005 as the date the Plant Variety Protection Act registration
+    (No. 12706) was granted. This record uses 2005 for `registered` and treats 2002 as the
+    naming/application year.
 summary: A 2005 Shizuoka cross of Yabukita and the Assamica-hybrid Shizu-Inzatsu 131, Sofu is grown for a sweet, jasmine-like aroma traced to methyl anthranilate — a compound never before found in a Japanese cultivar — though weak frost tolerance and thin commercial planting keep it a specialty tea.
 sources:
   - title: そうふう（品種）| 農研機構 品種・技術データベース

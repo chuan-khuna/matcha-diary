@@ -30,24 +30,30 @@ diseaseResistance: []
 notableDescendants: []
 rarity: Extremely rare — cultivated only in Horii Shichimeien's Okunoyama garden, Uji, and absent from every broad cultivar catalogue we checked (shinkoju.com, ujicha.or.jp, Kyoto Prefecture's recommended-cultivar table)
 lineageNote: A mass selection from a centuries-old, non-clonal zairai population in a single private garden, not a controlled cross — its pollen parent is unknowable, and it has no institutional breeding programme behind it. Okunoyama (奥の山), selected from the same trees in the same 1980–2000 screening, is its closest relative, not a descendant.
-conflicts: >
-  An earlier internal draft of this record (not a verified source) described a specific
-  selection narrative — roughly 2,000 candidate trees narrowed to 58, then 24, then 8, with two
-  finalists entering trial cultivation by 1994 — that we could not verify in Horii Shichimeien's
-  own current materials or in any independent source; Horii's own site describes only a
-  twenty-year screening beginning in 1980, with no year-by-year candidate counts and no single
-  named selection year. We have left selectedYear null rather than repeat the unconfirmed 1994
-  date. MAFF's own plant variety registration database settles the registration itself: Narino is
-  registered variety No. 10751 (application No. 12426), filed 13 March 2000, published 20 October
-  2000 and registered 14 November 2002 — so the draft's "November 2002" month and its
-  "applicationFiled 2000" were both right, and are restored here. The same record names the
-  individual Horii Nobuo (堀井信夫), not the company, as registrant and breeder, and shows his
-  breeder's right — a nominal 25-year term — as having lapsed early, on 15 November 2011. We also
-  correct the draft's registry label: Narino does not appear in Kyoto Prefecture's official table
-  of Uji recommended cultivars (茶奨励品種) or in NARO's own handbook
-  of nationally bred cultivars, which confirms it is a private Plant Variety Protection Act
-  registration rather than a prefectural or Cha Norin (MAFF national trial) one — the draft's
-  registry field ("MAFF plant variety registration") elided that distinction.
+conflicts:
+  - >-
+    Selection narrative: an earlier internal draft of this record (not a verified source) described
+    a specific selection narrative — roughly 2,000 candidate trees narrowed to 58, then 24, then 8,
+    with two finalists entering trial cultivation by 1994 — that we could not verify in Horii
+    Shichimeien's own current materials or in any independent source; Horii's own site describes
+    only a twenty-year screening beginning in 1980, with no year-by-year candidate counts and no
+    single named selection year. We have left selectedYear null rather than repeat the unconfirmed
+    1994 date.
+  - >-
+    Registration dates: MAFF's own plant variety registration database settles the registration
+    itself. Narino is registered variety No. 10751 (application No. 12426), filed 13 March 2000,
+    published 20 October 2000 and registered 14 November 2002 — so the draft's "November 2002" month
+    and its "applicationFiled 2000" were both right, and are restored here.
+  - >-
+    Registrant: the same record names the individual Horii Nobuo (堀井信夫), not the company, as
+    registrant and breeder, and shows his breeder's right — a nominal 25-year term — as having
+    lapsed early, on 15 November 2011.
+  - >-
+    Registry label: Narino does not appear in Kyoto Prefecture's official table of Uji recommended
+    cultivars (茶奨励品種) or in NARO's own handbook of nationally bred cultivars, which confirms it is a
+    private Plant Variety Protection Act registration rather than a prefectural or Cha Norin (MAFF
+    national trial) one — the draft's registry field ("MAFF plant variety registration") elided that
+    distinction.
 summary: A tencha and matcha cultivar registered under Japan's Plant Variety Protection Act in 2002, mass-selected over twenty years from indigenous zairai tea trees in Horii Shichimeien's Okunoyama garden in Uji, and distinguished by theanine levels close to double conventional cultivars.
 sources:
   - title: 当園について (About) — Horii Shichimeien

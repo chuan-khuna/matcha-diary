@@ -36,7 +36,23 @@ notableDescendants:
   - Shoju (松寿) — a bud sport found on a Kuritawase bush at Furuta, Tanegashima, registered under the Plant Variety Protection Act in 1996
   - Shizukaori (しずかおり) — Okuhikari × Kuritawase, crossed in 1989 at the Shizuoka Tea Experiment Station with Kuritawase as the pollen parent, registered under the Plant Variety Protection Act and adopted as a Shizuoka Prefecture recommended cultivar in 2015
 lineageNote: A landrace selection from a Shizuoka zairai seedling stand sown on Tanegashima, not a controlled cross — its pollen parent is unrecorded and unknowable, exactly as with Yabukita's own origin. Every Kuritawase bush today is a cutting-propagated clone of the single plant the Kurita family and Sugiyama Hikosaburo selected in 1927.
-conflicts: "Kuritawase's home prefecture is widely misstated. Most listings that mention it in passing imply a Shizuoka origin, but every primary and secondary source found — a 1984 monument inscription transcribed by furusato-tanegashima.net, myjapanesegreentea.com, and independent local reporting from both Tanegashima (furusato-tanegashima.net) and neighbouring Yakushima (Yakushima Keizai Shimbun) — places the selection, trialling and naming of Kuritawase entirely on Tanegashima, Kagoshima. Shizuoka's role was supplying the founding seed: zairai seed the Kurita family ordered from Shizuoka in 1909 and sowed on Tanegashima. Separately, myjapanesegreentea.com attributes the final 1927 selection directly to Kurita Mosaburo, the grandfather who ordered the original 1909 seed; the more detailed 1984 monument inscription, erected by the Kurita family itself, instead credits the decade of selection work (60 stocks chosen in 1921, individual survey in 1926, the final stock picked in 1927 under Sugiyama Hikosaburo's guidance) to Mosaburo's son, Kurita Seiichi. This record follows the monument as the more detailed, family-sourced account and treats myjapanesegreentea.com's attribution as a likely simplification."
+conflicts:
+  - >-
+    Home prefecture: widely misstated. Most listings that mention Kuritawase in passing imply a
+    Shizuoka origin, but every primary and secondary source found — a 1984 monument inscription
+    transcribed by furusato-tanegashima.net, myjapanesegreentea.com, and independent local reporting
+    from both Tanegashima (furusato-tanegashima.net) and neighbouring Yakushima (Yakushima Keizai
+    Shimbun) — places the selection, trialling and naming of Kuritawase entirely on Tanegashima,
+    Kagoshima. Shizuoka's role was supplying the founding seed: zairai seed the Kurita family
+    ordered from Shizuoka in 1909 and sowed on Tanegashima.
+  - >-
+    Who made the 1927 selection: myjapanesegreentea.com attributes it directly to Kurita Mosaburo,
+    the grandfather who ordered the original 1909 seed; the more detailed 1984 monument inscription,
+    erected by the Kurita family itself, instead credits the decade of selection work (60 stocks
+    chosen in 1921, individual survey in 1926, the final stock picked in 1927 under Sugiyama
+    Hikosaburo's guidance) to Mosaburo's son, Kurita Seiichi. This record follows the monument as
+    the more detailed, family-sourced account and treats myjapanesegreentea.com's attribution as a
+    likely simplification.
 summary: An extremely early-budding sencha cultivar selected on Tanegashima, Kagoshima in 1927 from Shizuoka zairai seed the Kurita family sowed in 1909, with Yabukita's own discoverer Sugiyama Hikosaburo guiding the final selection; it became Kagoshima's recommended cultivar in 1966 and still opens Japan's earliest new-tea season each spring.
 sources:
   - title: お茶の品種 くりたわせの由来 — 西之表市の記念碑

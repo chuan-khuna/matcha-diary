@@ -40,18 +40,19 @@ diseaseResistance:
   - cold hardiness (generally sufficient for nationwide cultivation, but cases of aokugare/青枯れ winter dieback reported)
 rarity: uncommon outside Miyazaki; sold as a specialist single-cultivar tea by shops such as Shinkoju, whose own stock is grown as far away as Sayama, Saitama
 lineageNote: A controlled cross, not a landrace selection. Unusual among Japanese sencha cultivars for carrying both Assam (Camellia sinensis var. assamica) and Caucasus-origin heritage, inherited from its great-grandparents through the F1 breeding line 宮F1-9-4-48 (grandfather on the seed-parent side). Both English- and Japanese-language sources that report this pedigree agree, and it is drawn directly from NARO's own published pedigree chart, but none explains how or why a Caucasus-origin parent entered a Miyazaki tea programme.
-conflicts: >
-  Two separate registrations exist and are easy to conflate. MAFF's tea-cultivar naming system
-  (茶農林) registered it in 1991 as cultivar No. 42 — this is the figure myjapanesegreentea.com
-  states explicitly ("registered as tea cultivar number 42"), corroborated by the 1991
-  "name registration" year given independently in the japaneseteasommelier.wordpress.com pedigree
-  table. Separately, NARO's own 茶品種ハンドブック gives a Plant Variety Registration Act
-  (種苗法) registration dated 14 March 1994, No. 3932 — a different, later, IP-protection-style
-  registration under a different numbering scheme entirely (compare Benifuuki, No. 4591 in the
-  same handbook, whose Cha Norin number is unrelated). "Cha Norin No. 42" also stands on the
-  compiled 茶農林登録品種一覧 registry table, which gives the 茶農林42号 row as みなみさやか,
-  strain 宮崎9号, bred 1991 in Miyazaki for sencha — so the two numbers are independently
-  attested and simply belong to two different schemes.
+conflicts:
+  - >-
+    Registration year: two separate registrations exist and are easy to conflate. MAFF's
+    tea-cultivar naming system (茶農林) registered it in 1991 as cultivar No. 42 — this is the figure
+    myjapanesegreentea.com states explicitly ("registered as tea cultivar number 42"), corroborated
+    by the 1991 "name registration" year given independently in the
+    japaneseteasommelier.wordpress.com pedigree table. Separately, NARO's own 茶品種ハンドブック gives a
+    Plant Variety Registration Act (種苗法) registration dated 14 March 1994, No. 3932 — a different,
+    later, IP-protection-style registration under a different numbering scheme entirely (compare
+    Benifuuki, No. 4591 in the same handbook, whose Cha Norin number is unrelated). "Cha Norin No.
+    42" also stands on the compiled 茶農林登録品種一覧 registry table, which gives the 茶農林42号 row as みなみさやか,
+    strain 宮崎9号, bred 1991 in Miyazaki for sencha — so the two numbers are independently attested
+    and simply belong to two different schemes.
 summary: A 1970 Miyazaki cross of Miya A-6 and Chamoto F1 NN27, registered in 1991 as Cha Norin No. 42, Minamisayaka is unusual among Japanese sencha cultivars for carrying Assam and Caucasus heritage, giving it a milky, floral aroma prized for pan-roasted and black tea.
 sources:
   - title: 茶品種ハンドブック 第6版 Version 2 (NARO Tea Cultivar Handbook, 6th ed.)

@@ -34,7 +34,19 @@ notableDescendants:
   - Marishi
 rarity: extremely rare in commercial cultivation — about 0.01% of national tea acreage, and seldom marketed as a single-cultivar sencha even where it survives
 lineageNote: A 1954 registration of an individual Shizuoka Zairai tea tree that Sugiyama Hikosaburo — the discoverer of Yabukita — selected from his own garden; not a controlled cross. Whether the tree that some Shizuoka trade sources call "Sugiyama-Yaeho," and name as Marishi's parent, is this same registered clone or a related but distinct individual is not settled across sources — see Conflicts.
-conflicts: "Sources disagree on the exact relationship between the registered Yaeho and \"Sugiyama-Yaeho\" (杉山八重穂). The 1954 registration bulletin — the primary source for Yaeho's own history — states plainly that Sugiyama Hikosaburo selected the cultivar registered as Yaeho directly from his own garden at Dampira, Udo village. But Shizuoka retailers close to a planting that survives at Maruko, Shizuoka City (Nishikien; Matsushita Seicha) describe \"Sugiyama-Yaeho\" as a related but formally distinct individual — one that reliably shows the paired-bud trait the registered Yaeho does not — and name it, not plain Yaeho, as the natural-seedling parent of Marishi. The official Plant Variety Protection registration record for Marishi (MAFF variety database, via Nishikien) names the parent simply as \"Yaeho.\" This record follows the primary 1954 bulletin for Yaeho's own registration history and reports the Sugiyama-Yaeho/Marishi question as unresolved rather than picking a side."
+conflicts:
+  - >-
+    Sources disagree on the exact relationship between the registered Yaeho and "Sugiyama-Yaeho"
+    (杉山八重穂). The 1954 registration bulletin — the primary source for Yaeho's own history — states
+    plainly that Sugiyama Hikosaburo selected the cultivar registered as Yaeho directly from his own
+    garden at Dampira, Udo village. But Shizuoka retailers close to a planting that survives at
+    Maruko, Shizuoka City (Nishikien; Matsushita Seicha) describe "Sugiyama-Yaeho" as a related but
+    formally distinct individual — one that reliably shows the paired-bud trait the registered Yaeho
+    does not — and name it, not plain Yaeho, as the natural-seedling parent of Marishi. The official
+    Plant Variety Protection registration record for Marishi (MAFF variety database, via Nishikien)
+    names the parent simply as "Yaeho." This record follows the primary 1954 bulletin for Yaeho's
+    own registration history and reports the Sugiyama-Yaeho/Marishi question as unresolved rather
+    than picking a side.
 summary: A 1954 registration (Cha Norin No. 17) of an early-budding Shizuoka Zairai individual that Yabukita's discoverer, Sugiyama Hikosaburo, selected from his own garden; now grown on a vanishing scale for a distinctive chestnut-toned aroma, and parent of Ooiwase and, on a still-debated line, of Marishi.
 sources:
   - title: "茶の新登録品種 (The New Registered Tea Varieties) — やえほ entry"

@@ -42,7 +42,35 @@ diseaseResistance:
   - bacterial shoot blight / 赤焼病 (somewhat weak)
   - mulberry scale insect / クワシロカイガラムシ (extremely weak)
 lineageNote: A controlled cross made at the Miyazaki Prefectural Agricultural Experiment Station's Tea Research Branch (Sakimidori female x Saemidori male, crossed 1994), not a landrace selection. Its reciprocal complement is Haruto 34 (Saemidori female x Sakimidori male, crossed 1997 at the same station), and it shares its pollen parent, Saemidori, with NARO's Seimei (bred separately in Kagoshima from Fushun x Saemidori).
-conflicts: "Registration date: an earlier draft of this record, and several secondary sources, give 'registered December 2013' or 'published May 2014'. Checked directly against MAFF's variety registration database (TOUROKU_NO 25105), these are two of three distinct Plant Variety Protection Act milestones: application filed 20 December 2013 (application No. 28772), application publicly announced 15 May 2014, and registration actually granted 25 March 2016. NARO's own tea cultivar handbook and pedigree charts (and Sakimidori's own record in this collection) date Kirari 31 to 2016 for the same reason; this record follows the grant date as 'registered' and keeps the earlier two dates in separate fields above, per this project's convention (see Seimei, which has the same three-milestone pattern). Disease/cold-damage terminology: the earlier draft listed 'red blight (strong)' and 'blue blight (strong)' as disease-resistance traits, alongside a separate, seemingly contradictory 'shoot blight (weak)'. The release paper (Yoshidome et al., 茶業研究報告 No. 120, 2015) shows these are not one axis: 赤枯れ/青枯れ (akagare/aogare, winter cold-scorch symptoms tested at Saitama) are cold-damage traits Kirari 31 outperforms Yabukita on, while 赤焼病 (akayakibyō, bacterial shoot blight, a true disease caused by Pseudomonas syringae pv. theae) is rated only 'somewhat weak' — matching the draft's 'shoot blight' entry, not its 'red blight' one. This record keeps them as distinct cold-damage and disease traits rather than one disease under two English names. The same paper rates ring spot disease 'somewhat strong' (やや強), not 'medium', and resistance to the mulberry scale insect 'extremely weak' (極弱), not just 'weak'; this record follows the paper's own grades. A specific day-level date for seed collection ('19 October 1995') in the earlier draft is not supported — the release paper gives only 'October 1995'. Its yield, survival-rate and researcher-count figures, by contrast, all checked out against the release paper almost exactly and are kept as sourced here."
+conflicts:
+  - >-
+    Registration date: an earlier draft of this record, and several secondary sources, give
+    'registered December 2013' or 'published May 2014'. Checked directly against MAFF's variety
+    registration database (TOUROKU_NO 25105), these are two of three distinct Plant Variety
+    Protection Act milestones: application filed 20 December 2013 (application No. 28772),
+    application publicly announced 15 May 2014, and registration actually granted 25 March 2016.
+    NARO's own tea cultivar handbook and pedigree charts (and Sakimidori's own record in this
+    collection) date Kirari 31 to 2016 for the same reason; this record follows the grant date as
+    'registered' and keeps the earlier two dates in separate fields above, per this project's
+    convention (see Seimei, which has the same three-milestone pattern).
+  - >-
+    Disease/cold-damage terminology: the earlier draft listed 'red blight (strong)' and 'blue blight
+    (strong)' as disease-resistance traits, alongside a separate, seemingly contradictory 'shoot
+    blight (weak)'. The release paper (Yoshidome et al., 茶業研究報告 No. 120, 2015) shows these are not
+    one axis: 赤枯れ/青枯れ (akagare/aogare, winter cold-scorch symptoms tested at Saitama) are
+    cold-damage traits Kirari 31 outperforms Yabukita on, while 赤焼病 (akayakibyō, bacterial shoot
+    blight, a true disease caused by Pseudomonas syringae pv. theae) is rated only 'somewhat weak' —
+    matching the draft's 'shoot blight' entry, not its 'red blight' one. This record keeps them as
+    distinct cold-damage and disease traits rather than one disease under two English names.
+  - >-
+    Trait grades: the release paper rates ring spot disease 'somewhat strong' (やや強), not 'medium',
+    and resistance to the mulberry scale insect 'extremely weak' (極弱), not just 'weak'; this record
+    follows the paper's own grades.
+  - >-
+    Seed collection date: the day-level date in the earlier draft ('19 October 1995') is not
+    supported — the release paper gives only 'October 1995'. Its yield, survival-rate and
+    researcher-count figures, by contrast, all checked out against the release paper almost exactly
+    and are kept as sourced here.
 summary: A 1994 cross of Sakimidori and Saemidori bred at Miyazaki's tea research station, Kirari 31 buds about four days ahead of Yabukita, nearly doubles its first-flush yield, and was developed for high-quality sencha, kabusecha and gyokuro; its Plant Variety Protection Act registration was granted in 2016, three years after the 2013 filing some sources mistake for it.
 sources:
   - title: 品種登録データベース — きらり31（品種登録番号25105）

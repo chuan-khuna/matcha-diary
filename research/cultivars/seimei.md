@@ -44,7 +44,16 @@ diseaseResistance:
 rarity: Newly released; NARO's own adoption target on registration was 500 ha of new planting within ten years, so it remains a thin, young planting rather than an established one
 lineageNote: A controlled cross made at NARO's Makurazaki tea research station, not a landrace selection. Fushun and Saemidori were crossed in 1992 and Seimei was selected from that F1 seedling population; it shares its pollen parent, Saemidori, with several other modern cultivars, including Kirari 31 (bred at a different station from a different seed parent, Sakimidori, in the same period).
 documentation: null
-conflicts: "Ito En's O-CHA NET dates Seimei to 2017; the Japanese Tea Sommelier master list dates it to 2020. Both are correct — they are different stages of the same Plant Variety Protection Act filing, not a disagreement. MAFF's variety registration database (登録品種データベース, TOUROKU_NO 27874) and NARO's own release materials give three distinct dates: application filed 30 June 2016 (application No. 31289), application publicly announced 30 January 2017 — the date Ito En most likely reflects — and registration granted 30 March 2020 under registration No. 27874, the date the Sommelier list uses. This record follows NARO's own convention and gives 2020 as the registration year, recording 2016 and 2017 separately above rather than picking one."
+conflicts:
+  - >-
+    Registration year: Ito En's O-CHA NET dates Seimei to 2017; the Japanese Tea Sommelier master
+    list dates it to 2020. Both are correct — they are different stages of the same Plant Variety
+    Protection Act filing, not a disagreement. MAFF's variety registration database (登録品種データベース,
+    TOUROKU_NO 27874) and NARO's own release materials give three distinct dates: application filed
+    30 June 2016 (application No. 31289), application publicly announced 30 January 2017 — the date
+    Ito En most likely reflects — and registration granted 30 March 2020 under registration No.
+    27874, the date the Sommelier list uses. This record follows NARO's own convention and gives
+    2020 as the registration year, recording 2016 and 2017 separately above rather than picking one.
 summary: A 2020-registered Kagoshima cultivar bred at NARO's Makurazaki station from Fushun × Saemidori, Seimei is plucked about four days before Yabukita and out-yields both Yabukita and Saemidori under shade cloth — developed specifically for tencha and kabusecha as matcha and powdered-tea demand has grown.
 sources:
   - title: せいめい | 農研機構 品種・技術データベース

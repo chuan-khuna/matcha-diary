@@ -39,7 +39,15 @@ notableDescendants:
   - Koshun (香駿)
 rarity: Niche nationally — its polarising milk-like aroma reportedly depressed its market price for decades against Yabukita-calibrated buyers; interest has picked up more recently, particularly overseas.
 lineageNote: A controlled cross, not a landrace selection — S6 (a Shizuoka zairai seedling kept and numbered by the station itself) crossed with Yabukita. Its pedigree is unusually well documented in both directions for a 1970-era Norin cultivar, backward to S6 and forward to three cultivars that used it as a parent in turn.
-conflicts: "\"S6\" — Some English-language vendor sources (myjapanesegreentea.com, tearoir.com) gloss S6 as 'Shizuoka Zairai No. 16'. Japanese-language sources (kyo-chikiriya.com's 'Shizuoka Native 6 (S6)'; search-indexed text attributed to shinryokuen.co.jp reading '静岡県在来6号「S-6」') instead identify it as No. 6. The MAFF registered-cultivar table lists a separate '静在16' (Zairai No. 16) as a parent of Okumidori (茶農林32号), so this record follows the No. 6 reading and keeps the two selections distinct. The 1971 release paper in 茶業研究報告 settles it outright — 'S6(静岡在来6号)を母とし' — and confirms the 1949 crossing year in the same sentence, so neither is in doubt any longer."
+conflicts:
+  - >-
+    "S6": some English-language vendor sources (myjapanesegreentea.com, tearoir.com) gloss S6 as
+    'Shizuoka Zairai No. 16'. Japanese-language sources (kyo-chikiriya.com's 'Shizuoka Native 6
+    (S6)'; search-indexed text attributed to shinryokuen.co.jp reading '静岡県在来6号「S-6」') instead
+    identify it as No. 6. The MAFF registered-cultivar table lists a separate '静在16' (Zairai No. 16)
+    as a parent of Okumidori (茶農林32号), so this record follows the No. 6 reading and keeps the two
+    selections distinct. The 1971 release paper in 茶業研究報告 settles it outright — 'S6(静岡在来6号)を母とし' —
+    and confirms the 1949 crossing year in the same sentence, so neither is in doubt any longer.
 summary: A 1949 Shizuoka cross of Yabukita and a local zairai selection (S6), registered in 1970 as Cha Norin No. 30, Kanayamidori is known above all for a sencha with an unmistakably sweet, milky aroma, and later became a parent of Fushun, Harumidori and Koshun.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林30号 row)

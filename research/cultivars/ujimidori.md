@@ -32,7 +32,19 @@ diseaseResistance:
 rarity: Quite rare outside Kyoto Prefecture, with little published information; an unregistered prefectural selection known mainly by its strain number.
 lineageNote: A landrace selection from Uji zairai stock, not a controlled cross — the same category of breeding as Samidori, Asahi, Ujihikari and Gokou, and made by the same institute, but three decades later than the 1954 group. Its pollen parent was never recorded and, in a zairai stand, never could be.
 documentation: sparse — a strain number, a selection year and the qualitative ratings on Kyoto Prefecture's recommended-cultivar table are recorded; no kg/10a yield trial and no release paper were located, and one published hundred-bud weight appears to be an error
-conflicts: "Yield: a 1985 report gives roughly 5.9 g per 100 buds. That is far below any comparable figure for a gyokuro cultivar in this collection — Asahi's and Samidori's hundred-bud weights run several times higher — and the compilation reporting it flags the number as most likely an error. No corrected figure was found, so this record carries the prefecture's qualitative rating rather than an implausible number, and the prefecture's two publications do not quite agree on that rating either: the characteristics table rates it 中 where it rates Yabukita やや多, while the research institute's cultivar page calls it equal to Yabukita and high. Separately, English-language cultivar lists sometimes give Ujimidori as a tencha cultivar as well as a gyokuro one; Kyoto Prefecture's characteristics table marks it ◎ for 玉露 only and leaves the てん茶 row blank, so this record lists gyokuro alone."
+conflicts:
+  - >-
+    Yield: a 1985 report gives roughly 5.9 g per 100 buds. That is far below any comparable figure
+    for a gyokuro cultivar in this collection — Asahi's and Samidori's hundred-bud weights run
+    several times higher — and the compilation reporting it flags the number as most likely an
+    error. No corrected figure was found, so this record carries the prefecture's qualitative rating
+    rather than an implausible number, and the prefecture's two publications do not quite agree on
+    that rating either: the characteristics table rates it 中 where it rates Yabukita やや多, while the
+    research institute's cultivar page calls it equal to Yabukita and high.
+  - >-
+    Tea types: English-language cultivar lists sometimes give Ujimidori as a tencha cultivar as well
+    as a gyokuro one; Kyoto Prefecture's characteristics table marks it ◎ for 玉露 only and leaves the
+    てん茶 row blank, so this record lists gyokuro alone.
 summary: An unregistered Uji landrace selection made by the Kyoto Prefectural Tea Research Institute in 1983 and still known chiefly by its strain number Kyoken 307, Ujimidori is a medium-early gyokuro cultivar prized for aroma and umami, and rare enough outside Kyoto that most of what is published about it is a single line in a prefectural list.
 sources:
   - title: Ujimidori うじみどり — Tea Nursery

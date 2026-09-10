@@ -37,7 +37,23 @@ notableDescendants:
   - Houshun (鳳春) — natural-cross seedling of Samidori, registered 2006
   - Tenmyo (展茗) — natural-cross seedling of Samidori, registered 2006
 lineageNote: A landrace selection from Uji zairai stock, not a controlled cross — its pollen parent was never recorded. It is documented as the seed (mother) parent, via open pollination, of both Houshun and Tenmyo; neither has a recorded pollen parent either.
-conflicts: "Selection/registration date: several vendor pages (myjapanesegreentea.com, nagocha.com, przyprawyimatcha.pl) state Koyama Masajirō began breeding Samidori 'since 1939', with 1954 marking only its promotion as a recommended cultivar. The primary source — the Kyoto Prefectural Tea Research Institute's own page (pref.kyoto.jp/chaken, mirrored at ujicha.or.jp) — gives a single 育成年 (development year) of 1954 for the selection itself and no earlier date. This record follows the primary source; the 1939 date could not be independently corroborated in any Japanese-language source and is not asserted. — Budding-time offset: the Institute's own release on Houshun and Tenmyo (pref.kyoto.jp/chaken/seika_hou-ten.html) gives inconsistent implied offsets for Samidori relative to Yabukita: Houshun is described as '7 days earlier than Samidori, 10 days earlier than Yabukita' (implying Samidori sits ~3 days ahead of Yabukita), while Tenmyo is described as 'similar to Samidori, 1–2 days later than Yabukita' (implying Samidori sits slightly behind Yabukita). No single day-count for Samidori itself is published, so this record reports only the qualitative 中生 (mid-season) designation."
+conflicts:
+  - >-
+    Selection/registration date: several vendor pages (myjapanesegreentea.com, nagocha.com,
+    przyprawyimatcha.pl) state Koyama Masajirō began breeding Samidori 'since 1939', with 1954
+    marking only its promotion as a recommended cultivar. The primary source — the Kyoto Prefectural
+    Tea Research Institute's own page (pref.kyoto.jp/chaken, mirrored at ujicha.or.jp) — gives a
+    single 育成年 (development year) of 1954 for the selection itself and no earlier date. This record
+    follows the primary source; the 1939 date could not be independently corroborated in any
+    Japanese-language source and is not asserted.
+  - >-
+    Budding-time offset: the Institute's own release on Houshun and Tenmyo
+    (pref.kyoto.jp/chaken/seika_hou-ten.html) gives inconsistent implied offsets for Samidori
+    relative to Yabukita: Houshun is described as '7 days earlier than Samidori, 10 days earlier
+    than Yabukita' (implying Samidori sits ~3 days ahead of Yabukita), while Tenmyo is described as
+    'similar to Samidori, 1–2 days later than Yabukita' (implying Samidori sits slightly behind
+    Yabukita). No single day-count for Samidori itself is published, so this record reports only the
+    qualitative 中生 (mid-season) designation.
 summary: A landrace selection from Uji zairai stock, promoted as a Kyoto Prefecture recommended cultivar in 1954, Samidori is one of the principal Uji tencha and gyokuro cultivars, prized for its vivid colour and umami, and the seed parent of both Houshun and Tenmyo.
 sources:
   - title: 京都府茶奨励品種の栽培特性一覧 (Kyoto Prefecture recommended tea cultivars — characteristics table, PDF)

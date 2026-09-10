@@ -33,7 +33,18 @@ notableDescendants:
   - Kanaya Homare
   - Kanaya Ibuki
 lineageNote: An open-pollinated Yabukita seedling rather than a controlled cross, so its pollen parent was never recorded; it has since been used, directly or as a documented parent, by breeders in Saitama, Miyazaki and Shizuoka, though two cultivars sometimes credited to it (Musashikaori, Miyamakaori) trace instead to the similarly named Sayamamidori once the fuller pedigree is checked.
-conflicts: "An AI-summarised search result attributed Plant Variety Protection No. 17960 to Kanaya Homare, but a direct lookup in the MAFF PVP database shows No. 17960 (registered 19 March 2009) belongs to its sibling cultivar Kanaya Ibuki; Kanaya Homare is the adjacent No. 17961, registered the same day to the same applicant. Separately, an older tabulated MAFF-style registry (茶農林登録品種一覧, via minorien.jp) lists Musashikaori and Miyamakaori's origin as running through さやまかおり, while NARO's detailed pedigree charts (茶品種ハンドブック第6版) trace both instead through the separate, similarly named cultivar Sayamamidori (さやまみどり, Cha Norin No. 5). The more detailed pedigree source is preferred here, so those two are omitted from notableDescendants above."
+conflicts:
+  - >-
+    Plant Variety Protection No. 17960: an AI-summarised search result attributed it to Kanaya
+    Homare, but a direct lookup in the MAFF PVP database shows No. 17960 (registered 19 March 2009)
+    belongs to its sibling cultivar Kanaya Ibuki; Kanaya Homare is the adjacent No. 17961,
+    registered the same day to the same applicant.
+  - >-
+    Musashikaori and Miyamakaori: an older tabulated MAFF-style registry (茶農林登録品種一覧, via
+    minorien.jp) lists their origin as running through さやまかおり, while NARO's detailed pedigree charts
+    (茶品種ハンドブック第6版) trace both instead through the separate, similarly named cultivar Sayamamidori
+    (さやまみどり, Cha Norin No. 5). The more detailed pedigree source is preferred here, so those two are
+    omitted from notableDescendants above.
 summary: A slightly early, strongly cold-hardy Yabukita seedling registered in Saitama in 1971 as Cha Norin No. 31, known for concentrated astringency and a powerful, sometimes floral aroma, and now parent to Sainomidori, Yumekaori, Nanmei and the Kanaya Homare/Ibuki pair.
 sources:
   - title: "The Japanese Tea Cultivars"

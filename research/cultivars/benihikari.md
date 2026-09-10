@@ -32,7 +32,16 @@ diseaseResistance:
   - general disease and pest incidence (no notable disease recorded in any trial; the paper recommends only standard control measures)
   - cutting-rooting ability (strong — 88–90% success reported)
 lineageNote: "A controlled F1 cross of two named black tea parents — Benikaori as seed parent, the breeding line Cn1 as pollen parent — not a landrace selection. The individual that became Benihikari was tracked under the working number F1ANC1144 from its 1957 field planting through to registration. No descendant cultivars bred from Benihikari were found in any source consulted."
-conflicts: "Benikaori's own registration year is unclear from sources available for this record. The Japanese Wikipedia article on 紅茶 (black tea) lists Japan's black tea cultivars by MAFF registration fiscal year and gives べにかおり (Benikaori) as Showa 29 (1954) — not 1960, a year sometimes associated with Benikaori elsewhere, which appears to belong instead to べにふじ (Benifuji), a similarly-named but different cultivar the same list dates to Showa 35 (1960). Benihikari's own registration is not in dispute: the 1970 registration paper itself dates it to 17 May 1969, and the same Wikipedia list independently corroborates Showa 44 (1969)."
+conflicts:
+  - >-
+    Benikaori's registration year: unclear from the sources available for this record. The Japanese
+    Wikipedia article on 紅茶 (black tea) lists Japan's black tea cultivars by MAFF registration
+    fiscal year and gives べにかおり (Benikaori) as Showa 29 (1954) — not 1960, a year sometimes
+    associated with Benikaori elsewhere, which appears to belong instead to べにふじ (Benifuji), a
+    similarly-named but different cultivar the same list dates to Showa 35 (1960).
+  - >-
+    Benihikari's own registration is not in dispute: the 1970 registration paper itself dates it to
+    17 May 1969, and the same Wikipedia list independently corroborates Showa 44 (1969).
 summary: Registered in 1969 as Cha Norin No. 28, two years before Japan's 1971 black tea import liberalisation collapsed the industry it was bred for, Benihikari is a Kagoshima-bred F1 cross of Benikaori and the China-type line Cn1, valued for aroma, high yield and cold hardiness, and still sold today within Japan's small wakocha revival.
 sources:
   - title: 紅茶用新登録品種「べにひかり」/ A Newly Registered Tea Variety "Benihikari" for Black Tea — 茶業研究報告 (Tea Research Journal) No. 32, 1970 (reprinted from 茶業技術研究 No. 39, 1970)

@@ -33,7 +33,14 @@ notableDescendants:
   - Meiryoku (registered 1986; Yamatomidori is its pollen parent, crossed with Yabukita)
 rarity: "Plantings of Yamatomidori and its seed-grown population once exceeded 50 hectares in Nara, but most were later replanted to Yabukita and other cultivars as its ten-day-later harvest became a commercial disadvantage. True clonal (cutting-propagated) Yamatomidori nearly disappeared: a 2016 planting at Tsukigase Health Tea Farm was, according to a researcher at Nara's tea research centre, the first clonal planting of it in the prefecture in 60 years. Almost everything sold as Yamatomidori today, including at Tsukigase, is grown from 'Yamatomidori-jissei,' a seed-propagated population descended from it rather than the cutting-propagated cultivar itself."
 lineageNote: "A landrace selection from Nara indigenous (zairai) tea tree seed, not a controlled cross — an individual tree selected from a seedling garden grown from seed collected in 1924, with no recorded pollen parent. It later served as the pollen parent of two registered cultivars: Okumusashi in 1962 and Meiryoku in 1986."
-conflicts: "The 1953 registration paper (the primary release document, 茶業研究報告 No. 2) records vigour as very strong (樹勢甚強) and yield as abundant (収量が多い). MAFF's 登録品種一覧表 as published by NARO — the table the Japanese Wikipedia article on Yamatocha quotes for its own figures — instead gives vigour as medium (樹勢中) and yield as medium (着芽密で収量は中) for the same cultivar. This record follows the 1953 release paper as the earlier and more detailed of the two official statements."
+conflicts:
+  - >-
+    Vigour and yield: the 1953 registration paper (the primary release document, 茶業研究報告 No. 2)
+    records vigour as very strong (樹勢甚強) and yield as abundant (収量が多い). MAFF's 登録品種一覧表 as published
+    by NARO — the table the Japanese Wikipedia article on Yamatocha quotes for its own figures —
+    instead gives vigour as medium (樹勢中) and yield as medium (着芽密で収量は中) for the same cultivar. This
+    record follows the 1953 release paper as the earlier and more detailed of the two official
+    statements.
 summary: A 1953 landrace selection from Nara indigenous tea tree seed, registered as Cha Norin No. 10, Yamatomidori is the only cultivar Nara has ever bred — it buds over ten days later than Yabukita, resists cold and frost exceptionally well, and survives today mainly as seed-grown bancha and hojicha stock.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 No. 2

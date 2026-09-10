@@ -31,7 +31,38 @@ diseaseResistance:
   - cold and late frost (weak — the Institute advises against planting it in the prefecture's colder districts)
 rarity: "Uncommon outside Kyoto; within the prefecture it ranks around sixth by cultivation volume, behind Yabukita and Okumidori, per Matcha Direct (Kyoto) citing prefectural production data"
 lineageNote: A landrace selection out of the Uji zairai population, given an in-house institute strain number rather than bred from a controlled cross — it has no recorded pollen parent. Sibling to Gokou (Kyoken No. 166) from the same 1954 batch and to Ujimidori (Kyoken No. 307), added to the same numbered series in 1983.
-conflicts: "Kanji form: no primary source uses the kanji 宇治光. Both official Kyoto sources (ujicha.or.jp, pref.kyoto.jp) write the name in hiragana only (うじひかり); the retailer Shinkoju writes it 宇治ひかり (kanji place-name plus hiragana). — Registration status: the compiled registry list at japaneseteasommelier.wordpress.com places Uji-hikari in its 'Non-registered' table with a selection year of 1954, agreeing with the Kyoto Prefectural Tea Research Institute's own page, which distinguishes 育成年 (development year — used for Uji-hikari, 1954) from 登録年/品種登録 (formal Plant Variety Protection Act registration — achieved only by the later Tenmyo and Housyun, both in 2006). No 茶農林 (Cha Norin) number or Plant Variety Protection Act registration for Uji-hikari was found in any source, including the NARO cultivar handbook (searched by text and found absent). This record follows the Institute's own distinction and treats Uji-hikari as an unregistered, prefecturally recommended cultivar rather than a nationally registered one. — Budding time: the Institute's current table classes Uji-hikari as medium (中生), level with or up to two days later than Yabukita. A 1991 multi-site frost-damage trial published in Chagyo Kenkyu Hokoku (Tea Research Journal), run at Mizobe, Kagoshima, instead groups Uji-hikari among 'early budding' cultivars severely damaged by a late frost, alongside Asahi, Yutakamidori, Asatsuyu and Yamakai — and separately reports it as one of the lowest-yielding cultivars in a seedling-transplant trial there. The two readings likely reflect different comparison sets (Kyoto's own recommended-cultivar shortlist versus a wider national trial in a different growing region) rather than a direct contradiction, but no source reconciles them, so both are reported here. — Origin annotation: the Institute's page explicitly labels Asahi, Samidori, Gokou and Ujimidori as '(宇治在来種選抜)' — Uji zairai selections — but omits that parenthetical from Uji-hikari's entry alone, despite listing for Gokou the same 1954 development year and the same institute as breeder. This record treats the omission as an editorial inconsistency rather than evidence of a different origin, since no source suggests one, but flags it rather than silently supplying the missing annotation."
+conflicts:
+  - >-
+    Kanji form: no primary source uses the kanji 宇治光. Both official Kyoto sources (ujicha.or.jp,
+    pref.kyoto.jp) write the name in hiragana only (うじひかり); the retailer Shinkoju writes it 宇治ひかり
+    (kanji place-name plus hiragana).
+  - >-
+    Registration status: the compiled registry list at japaneseteasommelier.wordpress.com places
+    Uji-hikari in its 'Non-registered' table with a selection year of 1954, agreeing with the Kyoto
+    Prefectural Tea Research Institute's own page, which distinguishes 育成年 (development year — used
+    for Uji-hikari, 1954) from 登録年/品種登録 (formal Plant Variety Protection Act registration — achieved
+    only by the later Tenmyo and Housyun, both in 2006). No 茶農林 (Cha Norin) number or Plant Variety
+    Protection Act registration for Uji-hikari was found in any source, including the NARO cultivar
+    handbook (searched by text and found absent). This record follows the Institute's own
+    distinction and treats Uji-hikari as an unregistered, prefecturally recommended cultivar rather
+    than a nationally registered one.
+  - >-
+    Budding time: the Institute's current table classes Uji-hikari as medium (中生), level with or up
+    to two days later than Yabukita. A 1991 multi-site frost-damage trial published in Chagyo Kenkyu
+    Hokoku (Tea Research Journal), run at Mizobe, Kagoshima, instead groups Uji-hikari among 'early
+    budding' cultivars severely damaged by a late frost, alongside Asahi, Yutakamidori, Asatsuyu and
+    Yamakai — and separately reports it as one of the lowest-yielding cultivars in a
+    seedling-transplant trial there. The two readings likely reflect different comparison sets
+    (Kyoto's own recommended-cultivar shortlist versus a wider national trial in a different growing
+    region) rather than a direct contradiction, but no source reconciles them, so both are reported
+    here.
+  - >-
+    Origin annotation: the Institute's page explicitly labels Asahi, Samidori, Gokou and Ujimidori
+    as '(宇治在来種選抜)' — Uji zairai selections — but omits that parenthetical from Uji-hikari's entry
+    alone, despite listing for Gokou the same 1954 development year and the same institute as
+    breeder. This record treats the omission as an editorial inconsistency rather than evidence of a
+    different origin, since no source suggests one, but flags it rather than silently supplying the
+    missing annotation.
 summary: A 1954 Kyoto Prefectural Tea Research Institute selection from Uji zairai stock, numbered Kyoken No. 170, Uji-hikari is grown almost exclusively for tencha and gyokuro, valued for its soft, thin leaf, bright clear colour and good uptake of shading colour, though it needs protection from cold.
 sources:
   - title: 宇治品種について (About Uji Cultivars) — Kyoto Prefecture

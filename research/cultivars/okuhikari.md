@@ -37,7 +37,24 @@ notableDescendants:
   - Yumesuruga (ゆめするが) — Okuhikari × Yabukita, crossed 1986, registered 2012
   - Shizukaori (しずかおり) — Okuhikari × Kuritawase, crossed 1989, registered 2015
 lineageNote: A controlled cross between two clonal, individually documented parents — Yabukita and the Chinese-origin accession Shizu-Cy225 — made at the Shizuoka Prefectural Tea Experiment Station. Unlike a landrace selection, the pedigree is genuinely known on both sides, though Shizu-Cy225's own background (when and from where in Hubei it was introduced) is not well documented in the sources found here.
-conflicts: "Registration: MAFF's 品種登録データベース carries the full record — registration no. 1387, registered 7 August 1987 (Showa 62) on application no. 1857 filed 24 March 1986, registrant Shizuoka Prefecture, breeders Oishi Sadao, Hidaka Tamotsu, Kuranuki Koichi and Nakamura Noriyuki, the breeder's right lapsing at the end of its eighteen-year term on 8 August 2005 — which confirms the figures a now-404 wachaclub.com cultivar-dictionary page had previously been the only source for. Anthracnose: MAFF's registered characteristic filing rates 炭そ病抵抗性 as やや強 (somewhat strong), while the breeder's own O-CHA NET account and the Shizuoka Tea Industry Council guidebook both give 強 (strong); the rating below follows the latter two. Chronology: the cross (Showa 39 / 1964) and the FY1985 (Showa 60) establishment-as-a-line date are corroborated by two independently fetched vendor pages (hagiricha.com, tsuchiya-nouen.com) using near-identical phrasing likely drawn from the same station-authored source text; one AI-generated search summary additionally claimed a '1972 field test', which no other source repeats and which is not used here."
+conflicts:
+  - >-
+    Registration: MAFF's 品種登録データベース carries the full record — registration no. 1387, registered 7
+    August 1987 (Showa 62) on application no. 1857 filed 24 March 1986, registrant Shizuoka
+    Prefecture, breeders Oishi Sadao, Hidaka Tamotsu, Kuranuki Koichi and Nakamura Noriyuki, the
+    breeder's right lapsing at the end of its eighteen-year term on 8 August 2005 — which confirms
+    the figures a now-404 wachaclub.com cultivar-dictionary page had previously been the only source
+    for.
+  - >-
+    Anthracnose: MAFF's registered characteristic filing rates 炭そ病抵抗性 as やや強 (somewhat strong),
+    while the breeder's own O-CHA NET account and the Shizuoka Tea Industry Council guidebook both
+    give 強 (strong); the rating below follows the latter two.
+  - >-
+    Chronology: the cross (Showa 39 / 1964) and the FY1985 (Showa 60) establishment-as-a-line date
+    are corroborated by two independently fetched vendor pages (hagiricha.com, tsuchiya-nouen.com)
+    using near-identical phrasing likely drawn from the same station-authored source text; one
+    AI-generated search summary additionally claimed a '1972 field test', which no other source
+    repeats and which is not used here.
 summary: A late-budding Shizuoka cultivar bred from Yabukita and the Chinese accession Shizu-Cy225, registered in 1987; valued in mountainous districts for its cold hardiness, glossy deep-green leaf and distinctive aroma, and the seed parent of both Yumesuruga and Shizukaori.
 sources:
   - title: "おくひかり ─香気が高く、水色の良好な山間地向きの晩生品種─（O-CHA NET）"

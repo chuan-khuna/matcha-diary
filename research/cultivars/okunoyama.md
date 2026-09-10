@@ -30,7 +30,22 @@ siblingCultivars:
   - Narino
 rarity: "Extremely rare. Propagated only within Horii Shichimeien's own Okunoyama garden; absent from every Kyoto prefectural cultivar list and specialist cultivar-shop catalogue checked for this record."
 lineageNote: "A clonal selection from an individual Uji zairai (landrace) plant, not a controlled cross — its only 'parent' is the seed-grown population of the Okunoyama garden, and even the specific mother tree is undocumented beyond Horii Shichimeien's own claim of its age. Sibling selection to Narino, drawn from the same garden and filed for Plant Variety Protection Act registration on the same day."
-conflicts: "An earlier draft of this record dated the selection to 1981-1994 via a five-stage screening funnel (roughly 2,000 trees narrowed to 58, then 24, then 8, then 2). Horii Shichimeien tells the same work two ways: its product page gives a single 20-year span from 1980, while chapter 4 of its own 7 Stories sets out exactly that funnel - selection begun 1981, roughly 2,000 trees narrowed to 58, then 24, then 8, and the final two chosen in 1994, grown on trial until registration in 2002. Both accounts are the company's own and neither is contradicted by MAFF, whose database records only the application as filed 13 March 2000. The draft also described the registration simply as 'MAFF plant variety registration' and credited 'Horii Shichimeien' as rights-holder; MAFF's own register shows this is specifically a Plant Variety Protection Act registration (registered variety No. 10752, application No. 12427), filed by the named individual Horii Nobuo (堀井信夫) rather than the company, and records his breeder's right - nominally a 25-year term - as having lapsed early, on 15 November 2011."
+conflicts:
+  - >-
+    Selection dates: an earlier draft of this record dated the selection to 1981-1994 via a
+    five-stage screening funnel (roughly 2,000 trees narrowed to 58, then 24, then 8, then 2). Horii
+    Shichimeien tells the same work two ways: its product page gives a single 20-year span from
+    1980, while chapter 4 of its own 7 Stories sets out exactly that funnel - selection begun 1981,
+    roughly 2,000 trees narrowed to 58, then 24, then 8, and the final two chosen in 1994, grown on
+    trial until registration in 2002. Both accounts are the company's own and neither is
+    contradicted by MAFF, whose database records only the application as filed 13 March 2000.
+  - >-
+    Registration and rights-holder: the draft described the registration simply as 'MAFF plant
+    variety registration' and credited 'Horii Shichimeien' as rights-holder; MAFF's own register
+    shows this is specifically a Plant Variety Protection Act registration (registered variety No.
+    10752, application No. 12427), filed by the named individual Horii Nobuo (堀井信夫) rather than the
+    company, and records his breeder's right - nominally a 25-year term - as having lapsed early, on
+    15 November 2011.
 summary: A gyokuro-leaning landrace selection propagated by cuttings from a single centuries-old zairai tree in Horii Shichimeien's historic Okunoyama garden in Uji, registered under the Plant Variety Protection Act in 2002 alongside its sibling selection Narino.
 sources:
   - title: "Horii Shichimeien — Our garden original: introducing the cultivars \"Narino\" and \"Okunoyama\" (English)"

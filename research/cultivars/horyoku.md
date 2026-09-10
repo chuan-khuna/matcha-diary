@@ -34,7 +34,20 @@ notableDescendants:
 rarity: "Absent from Japan's complete 52-entry Cha Norin national tea cultivar registry (1953–2003), and no Plant Variety Protection Act registration was found under its own name. It survives today chiefly as breeding germplasm — its one documented legacy is as Ryofu's seed parent — and in occasional small-batch offerings from single-cultivar specialist retailers; the one retail listing found (Shinkoju) was sold out at time of research."
 lineageNote: "An open-pollinated selection from introduced (non-Japanese) Assam-type germplasm — the same broad category of origin as Benihomare, though bred independently by Shizuoka Prefecture rather than descending from the same Nishigahara trial planting. Not a Zairai landrace selection and not a controlled cross; its pollen parent is unrecorded."
 documentation: sparse
-conflicts: "No kanji form was found for the name in any source; 豊緑 is a plausible reading of the kana but is not attested and is not asserted here. No source found gives a selection year, a breeding station of a more specific name than 'Shizuoka Prefecture', or an explicit reason it was never submitted for Cha Norin registration — these are treated as undocumented rather than inferred. (A prior working note for this project characterised Horyoku as a '1956 cultivar'; this could not be corroborated in the sources checked — including a March 1956 issue of 茶業研究報告 that superficially matched a lineage-term search but, on inspection of its contents, is a general agronomy/chemistry proceedings issue with no located mention of Horyoku — and is not carried into this record.)"
+conflicts:
+  - >-
+    Kanji: no kanji form was found for the name in any source; 豊緑 is a plausible reading of the kana
+    but is not attested and is not asserted here.
+  - >-
+    Undocumented rather than inferred: no source found gives a selection year, a breeding station of
+    a more specific name than 'Shizuoka Prefecture', or an explicit reason it was never submitted
+    for Cha Norin registration.
+  - >-
+    The '1956 cultivar' claim: a prior working note for this project characterised Horyoku as a
+    '1956 cultivar'; this could not be corroborated in the sources checked — including a March 1956
+    issue of 茶業研究報告 that superficially matched a lineage-term search but, on inspection of its
+    contents, is a general agronomy/chemistry proceedings issue with no located mention of Horyoku —
+    and is not carried into this record.
 summary: An unregistered green tea cultivar bred in Shizuoka from open-pollinated Assam-type seed stock — the same Tada-line ancestry as Benihomare — valued chiefly for strong disease resistance and known today mainly as the seed parent of Ryofu (1997).
 sources:
   - title: 煎茶用中晩生品種「りょうふう」の育成 / New Released Green Tea Cultivar 'Ryofu', 茶業研究報告 (Tea Research Journal) No. 87, 1999, pp.21–38

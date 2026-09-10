@@ -35,7 +35,17 @@ notableDescendants:
   - Izumi (いずみ, 1960) — per the standard cultivar registry; less independently corroborated than Benifuki's descent
 rarity: "Once the dominant cultivar of several black tea districts, it was reduced to isolated remnants after Japan's 1971 black tea import liberalisation collapsed domestic production; commercial planting today is mainly a revival-project phenomenon, most documented at Kameyama, Mie."
 lineageNote: "An open-pollinated selection from Meiji-era Tada-line Assam-type (多田系印度雑種) seedlings — imported germplasm naturalised by cold selection, not a controlled cross and not a Zairai landrace either. Its pollen parent is unrecorded."
-conflicts: "No fixed kanji form is registered for the name — it is hiragana only — but it is often seen written 紅誉 or, less often, 紅芳; 紅誉 (beni + homare) matches the meaning given in the 1953 registration paper but is not an official spelling (per Tea World's dictionary entry, which flags both as common mistakes). Separately, the 1953 registration paper only dates the cultivar's transplant (1921) and establishment (1935) at the Kanaya station; the earlier 1905-1907 initial mother-tree selection at Nishigahara comes from a secondary source (customtea.jp), not corroborated in the primary paper."
+conflicts:
+  - >-
+    Kanji: no fixed kanji form is registered for the name — it is hiragana only — but it is often
+    seen written 紅誉 or, less often, 紅芳; 紅誉 (beni + homare) matches the meaning given in the 1953
+    registration paper but is not an official spelling (per Tea World's dictionary entry, which
+    flags both as common mistakes).
+  - >-
+    Mother-tree selection: the 1953 registration paper only dates the cultivar's transplant (1921)
+    and establishment (1935) at the Kanaya station; the earlier 1905-1907 initial mother-tree
+    selection at Nishigahara comes from a secondary source (customtea.jp), not corroborated in the
+    primary paper.
 summary: Registered in 1953 as Cha Norin No. 1 — the very first entry in Japan's first-ever tea cultivar registration — Benihomare is a black tea cultivar selected from Meiji-era Tada-line Assam seedlings that became the backbone of Japan's black tea export industry before its collapse after 1971 import liberalisation.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 (Tea Research Journal) No. 2, 1953

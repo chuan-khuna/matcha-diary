@@ -39,7 +39,21 @@ notableDescendants:
 rarity: Still grown but scarce — My Japanese Green Tea describes it as cultivated yet not widely available, "very rare to find, even in Japan," with some online listings of uncertain authenticity. Its greater significance today is genealogical rather than as a planted tea in its own right.
 lineageNote: A landrace selection from Uji zairai seedlings, not a controlled cross — its own pollen parent is unrecorded. Its importance to this collection is almost entirely as an ancestor, reached two different ways — through the open-pollinated seedling Z1 and through the deliberate cross that produced the breeding line F1NN8 — making it one of the best-connected root nodes in the graph despite being obscure as a tea in its own right.
 documentation: sparse for current cultivation and cup characteristics; well documented for registration and lineage
-conflicts: "Tea-type category — the 1953 registration paper and MAFF's own registry table (both primary sources) designate Tamamidori for 蒸製玉緑茶, steamed tamaryokucha, and the same MAFF table separately and explicitly designates a different 1953 cohort-mate, Takachiho, for 釜炒り茶 (kamairicha). My Japanese Green Tea's cultivar list and dedicated Tamamidori page independently agree: tamaryokucha. Against this, two secondary references — Japanese Tea Sommelier's master list and 日本茶備忘録 (chachacha), which also gives Tamamidori's budding time as late (晩生) rather than medium — group Tamamidori under kamairicha instead. This record follows the primary sources and treats the kamairicha grouping as a common but traceable conflation: most tamaryokucha is shaped identically to kamairicha and much of it (including in Tamamidori's own recommended Kyushu districts) is in fact pan-fired, but Tamamidori's own registration specifies the steamed process."
+conflicts:
+  - >-
+    Tea-type category: the 1953 registration paper and MAFF's own registry table (both primary
+    sources) designate Tamamidori for 蒸製玉緑茶, steamed tamaryokucha, and the same MAFF table
+    separately and explicitly designates a different 1953 cohort-mate, Takachiho, for 釜炒り茶
+    (kamairicha). My Japanese Green Tea's cultivar list and dedicated Tamamidori page independently
+    agree: tamaryokucha. Against this, two secondary references — Japanese Tea Sommelier's master
+    list and 日本茶備忘録 (chachacha) — group Tamamidori under kamairicha instead. This record follows the
+    primary sources and treats the kamairicha grouping as a common but traceable conflation: most
+    tamaryokucha is shaped identically to kamairicha and much of it (including in Tamamidori's own
+    recommended Kyushu districts) is in fact pan-fired, but Tamamidori's own registration specifies
+    the steamed process.
+  - >-
+    Budding time: 日本茶備忘録 (chachacha) also gives Tamamidori's budding time as late (晩生) rather than
+    medium.
 summary: Registered in 1953 as Cha Norin No. 4, Tamamidori is a Uji-seed selection bred for steamed tamaryokucha rather than sencha, and — via its open-pollinated seedling Z1 and the unreleased breeding line F1NN8 — an ancestor of Fushun, Saeakari, Meiryoku, Okuyutaka and Shunmei.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 No. 2 (1953)

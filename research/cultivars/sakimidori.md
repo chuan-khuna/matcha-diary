@@ -37,7 +37,21 @@ notableDescendants:
   - Haruto 34 (はると34) — Saemidori (female) x Sakimidori (male), the reciprocal cross, crossed 1997, registered 2020
 rarity: Not among Japan's widely planted cultivars; grown mainly in Miyazaki and sold as a single-cultivar tea by specialist retailers (e.g. Shinkoju), which also sell it as black tea and pan-fired (kamairicha) tea alongside sencha.
 lineageNote: A controlled cross (F1NN27 x ME52), not a landrace selection, made at the Miyazaki Prefectural Agricultural Experiment Station. It is a full sibling of Harumoegi — both share the identical registered female parent (F1NN27) and male parent (ME52) — but the two come from separate crossings made two years apart (1979 for Sakimidori, 1981 for Harumoegi), not from one shared seed batch.
-conflicts: "Cha Norin registration date: the release paper's Japanese abstract states registration as 茶農林47号 in August 1997, matching MAFF's own registered-cultivar table (育成年 1997); the same paper's own printed English summary says instead that it was 'released in 1996', which this record does not follow. Budding time: sources disagree by a couple of days — Ito En/O-cha.net give 1 day earlier than Yabukita, the cultivar's own 1999 release paper gives 2-3 days earlier, and NARO's current (6th edition) handbook gives 'same as Yabukita to 2 days earlier'; this record follows NARO's handbook as the primary figure and notes the others. Kirari 31's registration year is given elsewhere as December 2013 (a Plant Variety Protection Act filing date); NARO's own pedigree chart dates its registration to 25 March 2016 (No. 25105), which this record follows when citing it as a descendant."
+conflicts:
+  - >-
+    Cha Norin registration date: the release paper's Japanese abstract states registration as 茶農林47号
+    in August 1997, matching MAFF's own registered-cultivar table (育成年 1997); the same paper's own
+    printed English summary says instead that it was 'released in 1996', which this record does not
+    follow.
+  - >-
+    Budding time: sources disagree by a couple of days — Ito En/O-cha.net give 1 day earlier than
+    Yabukita, the cultivar's own 1999 release paper gives 2-3 days earlier, and NARO's current (6th
+    edition) handbook gives 'same as Yabukita to 2 days earlier'; this record follows NARO's
+    handbook as the primary figure and notes the others.
+  - >-
+    Kirari 31's registration year is given elsewhere as December 2013 (a Plant Variety Protection
+    Act filing date); NARO's own pedigree chart dates its registration to 25 March 2016 (No. 25105),
+    which this record follows when citing it as a descendant.
 summary: A 1979 cross of the breeding line F1NN27 and the Miyazaki landrace ME52, Sakimidori was registered in 1997/2001 for its vivid green colour and 20-40% yield advantage over Yabukita, and later parented Kirari 31 and Haruto 34.
 sources:
   - title: "茶品種ハンドブック 第6版 (NARO Tea Cultivar Handbook, 6th edition) — individual profile pages for Sakimidori (p.15) and Harumoegi (p.11), and pedigree charts (pp.41-42, 45)"

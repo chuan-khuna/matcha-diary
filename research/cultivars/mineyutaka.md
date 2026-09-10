@@ -27,7 +27,16 @@ yield: "slightly high — MAFF's registration record calls it a やや多収 (so
 rarity: "Grown almost exclusively on Tanegashima; treated locally as one of the island's own distinctive cultivars alongside Shoju and Kuritawase, but essentially absent from mainland cultivar literature"
 lineageNote: A bud sport (枝変わり) of Yabukita — a spontaneous somatic mutation propagated by cuttings from a single branch, not a seedling or a cross. It carries Yabukita's genome unchanged except for the mutated trait, and has no pollen parent to record because no fertilisation event produced it.
 documentation: sparse
-conflicts: "The English-language master registry (japaneseteasommelier.wordpress.com) lists Mineyutaka's 1996 registration in the same table and column format used for classic 茶農林 (Cha Norin) numbered cultivars, which could be misread as implying a Cha Norin number. Cross-checked against MAFF's own official 茶農林登録品種一覧 (via minorien.jp), no such number exists: the numbered list runs directly from 茶農林44号 (Benifuuki, bred 1993) to 茶農林45号 (Ryofu, bred 1997), with nothing registered 1994–1996. MAFF's own Plant Variety Protection registry settles it: Mineyutaka is registration No. 4835 under the 種苗法, granted 19 January 1996, and carries no Cha Norin number."
+conflicts:
+  - >-
+    Cha Norin number: the English-language master registry (japaneseteasommelier.wordpress.com)
+    lists Mineyutaka's 1996 registration in the same table and column format used for classic 茶農林
+    (Cha Norin) numbered cultivars, which could be misread as implying a Cha Norin number.
+    Cross-checked against MAFF's own official 茶農林登録品種一覧 (via minorien.jp), no such number exists:
+    the numbered list runs directly from 茶農林44号 (Benifuuki, bred 1993) to 茶農林45号 (Ryofu, bred 1997),
+    with nothing registered 1994–1996. MAFF's own Plant Variety Protection registry settles it:
+    Mineyutaka is registration No. 4835 under the 種苗法, granted 19 January 1996, and carries no Cha
+    Norin number.
 summary: A 1996 bud sport of Yabukita, discovered and grown almost exclusively on Tanegashima, Kagoshima, where it is one of a handful of locally distinctive cultivars alongside Shoju and Kuritawase; barely documented outside the island.
 sources:
   - title: "みねゆたか 登録番号4835 - 農林水産省 品種登録データベース"

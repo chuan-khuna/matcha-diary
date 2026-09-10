@@ -25,7 +25,16 @@ recommendedRegions:
 yield: null
 rarity: Struck from Shizuoka Prefecture's own recommended-cultivar list in 1955, two years after national registration; absent even from the prefecture's later cultivation-area tables, unlike its stablemate Koyanishi, which still shows a recorded 7 ha in 1954. No current commercial planting was found in this research.
 lineageNote: A landrace selection from Shizuoka Zairai stock made by Sugiyama Hikosaburo — the same grower credited with discovering Yabukita — not a controlled cross; its pollen parent is unrecorded and unknowable.
-conflicts: "Digital Daijisen Plus (via Kotobank) describes Rokuro as a \"玉露用中生品種\" (a gyokuro-type cultivar), though the same entry goes on to add 煎茶に向く — suited to sencha. The 1953 MAFF registration paper that announced its registration places it among that year's eight sencha cultivars, and MAFF's 茶農林 registry table gives its 用途 as 煎茶. The gyokuro label is not baseless, though: the 1961 registration paper for Himemidori (茶農林23号), Fukuoka's first purpose-bred gyokuro cultivar, records that ordinary sencha cultivars — 「やぶきた・ろくろう等」 — had until then been diverted to gyokuro use under shade in the Yame district, the practice Himemidori was bred to end."
+conflicts:
+  - >-
+    Tea type: Digital Daijisen Plus (via Kotobank) describes Rokuro as a "玉露用中生品種" (a gyokuro-type
+    cultivar), though the same entry goes on to add 煎茶に向く — suited to sencha. The 1953 MAFF
+    registration paper that announced its registration places it among that year's eight sencha
+    cultivars, and MAFF's 茶農林 registry table gives its 用途 as 煎茶. The gyokuro label is not baseless,
+    though: the 1961 registration paper for Himemidori (茶農林23号), Fukuoka's first purpose-bred
+    gyokuro cultivar, records that ordinary sencha cultivars — 「やぶきた・ろくろう等」 — had until then been
+    diverted to gyokuro use under shade in the Yame district, the practice Himemidori was bred to
+    end.
 summary: A Shizuoka Zairai selection by Sugiyama Hikosaburo — Yabukita's own discoverer — registered in 1953 as Cha Norin No. 9 for sencha, named for its trial-plot number rather than a person, and struck from Shizuoka's own recommended list two years later.
 sources:
   - title: 茶の品種登録と命名 (Registered Tea Varieties), 茶業研究報告 (Tea Research Journal) No. 2, 1953

@@ -32,7 +32,21 @@ diseaseResistance:
 rarity: Uncommon but current — a Kyoto Prefecture recommended cultivar and one of the ten 宇治種 the prefecture has been subsidising growers to replant since 2021, though single-cultivar Ogura-midori matcha is rarely offered at retail
 lineageNote: A landrace selection from Kyoto/Uji indigenous (zairai) stock, not a controlled cross — one of four private selections (with Samidori, Asahi and Komakage) that the Kyoto Prefectural Tea Research Institute took into its trials, raised and named alongside its own selections Asagiri, Kyō-midori, Gokou and Ujihikari.
 documentation: normal
-conflicts: "Two Kyoto sources date the naming differently. The tea research institute's own chronology puts the raising and naming of the private selections 「さみどり」「おぐらみどり」「あさひ」「こまかげ」 in 昭和28年 (1953) and the fixing of ten Kyoto recommended cultivars in 昭和29年 (1954), while the institute's Uji-cultivar page dates its siblings Asahi, Samidori, Ujihikari and Gokou to 昭和29年. This record follows 1954, the year the name is generally cited from, and treats 1953 as the year the naming work concluded. Separately, secondary Japanese cultivar lists (chakatsu.com) describe Ogura-midori as 玉露・碾茶用 — for gyokuro as well as tencha — but Kyoto Prefecture's own characteristics table marks it ◎ for てん茶 only and leaves the 玉露 row blank, so this record lists tencha alone. Finally, English-language cultivar lists sometimes give a kanji form 小倉みどり; every Japanese source found writes the cultivar in kana, so no kanji is recorded here."
+conflicts:
+  - >-
+    Naming year: two Kyoto sources date the naming differently. The tea research institute's own
+    chronology puts the raising and naming of the private selections 「さみどり」「おぐらみどり」「あさひ」「こまかげ」 in
+    昭和28年 (1953) and the fixing of ten Kyoto recommended cultivars in 昭和29年 (1954), while the
+    institute's Uji-cultivar page dates its siblings Asahi, Samidori, Ujihikari and Gokou to 昭和29年.
+    This record follows 1954, the year the name is generally cited from, and treats 1953 as the year
+    the naming work concluded.
+  - >-
+    Tea types: secondary Japanese cultivar lists (chakatsu.com) describe Ogura-midori as 玉露・碾茶用 —
+    for gyokuro as well as tencha — but Kyoto Prefecture's own characteristics table marks it ◎ for
+    てん茶 only and leaves the 玉露 row blank, so this record lists tencha alone.
+  - >-
+    Kanji: English-language cultivar lists sometimes give a kanji form 小倉みどり; every Japanese source
+    found writes the cultivar in kana, so no kanji is recorded here.
 summary: A landrace selection from Kyoto/Uji indigenous tea trees, made by a private breeder and named by the Kyoto Prefectural Tea Research Institute; rated ◎ for tencha alone and medium in nearly every other respect, it remains one of the ten 宇治種 that Kyoto subsidises growers to replant, even though its origin — which garden, which grower — went unrecorded.
 sources:
   - title: 京都府茶奨励品種の栽培特性一覧 (Cultivation characteristics table of Kyoto Prefecture's recommended tea cultivars, PDF)

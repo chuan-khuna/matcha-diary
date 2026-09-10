@@ -45,7 +45,35 @@ notableDescendants:
   - Kiyoka (FYZ-41 × Saemidori)
   - Danshin 37 (Saemidori × Yumekaori)
 lineageNote: A controlled cross, not a landrace selection — Yabukita and Asatsuyu are themselves both single-plant selections out of regional Zairai (seed-grown landrace) stands rather than crosses, so Saemidori's pedigree runs only one generation deep before it hits unrecorded seedling parentage on both sides. It has gone on to become an unusually prolific parent in its own right; the cultivars listed above only cover named, registered descendants found during this research.
-conflicts: "Two separate two-registry patterns, both resolved directly against primary documents rather than left as open disagreements. (1) Registration year: some sources say 1990, others 1991 — both are correct and refer to different filings. The MAFF Cha Norin naming registration (茶農林40号) was granted in June 1990; a separate Plant Variety Protection Act registration under the then Seeds and Seedlings Act followed, application filed 29 March 1990 (No. 3794) and granted 19 November 1991 (No. 2881) — confirmed directly against the MAFF variety-registration database record for No. 2881 and against the breeding team's own 2006 retrospective paper, which gives both dates explicitly. The Polish retailer source's '1990, variety #40' is correct; sources citing 1991 alone are describing the later Seeds and Seedlings Act filing rather than an error. (2) Seedling survival and cold hardiness: this record could not verify the widely circulated figure of roughly 73% seedling survival for Saemidori against Yabukita's 88%, and could not trace it to any primary source. The best comparable primary data found — Yoshidome et al. (2018), a 13–15-site national trial that used both cultivars as reference checks for the related cultivar Haruto 34 — instead gives Saemidori a national-average nursery survival rate of 75%, statistically level with Yabukita's own 75% in the same trial (range highly site-dependent, 1–100%, for both cultivars), and a first-year post-transplant establishment rate of 92% against Yabukita's 93%. This record follows the Yoshidome et al. figures and treats the 73%/88% figure as unverified rather than repeating it. Relatedly, the breeding team's own 2006 trial data rates Saemidori's winter cold hardiness (red-wilt and split-bark frost resistance) as strong, on par with or slightly better than Yabukita's — which sits awkwardly next to Saemidori's popular reputation as cold-sensitive. That reputation is not baseless, but it describes a different, narrower phenomenon: because Saemidori buds several days before Yabukita, its new shoots are exposed to late-spring frost events that a later-budding cultivar would miss entirely, and recovery from that specific kind of frost damage is reported as poor (日本茶備忘録). This record treats that as an early-budding exposure risk rather than a general cold-intolerance, since the trial data does not support the latter."
+conflicts:
+  - >-
+    Registration year: some sources say 1990, others 1991 — both are correct and refer to different
+    filings. The MAFF Cha Norin naming registration (茶農林40号) was granted in June 1990; a separate
+    Plant Variety Protection Act registration under the then Seeds and Seedlings Act followed,
+    application filed 29 March 1990 (No. 3794) and granted 19 November 1991 (No. 2881) — confirmed
+    directly against the MAFF variety-registration database record for No. 2881 and against the
+    breeding team's own 2006 retrospective paper, which gives both dates explicitly. The Polish
+    retailer source's '1990, variety #40' is correct; sources citing 1991 alone are describing the
+    later Seeds and Seedlings Act filing rather than an error.
+  - >-
+    Seedling survival: this record could not verify the widely circulated figure of roughly 73%
+    seedling survival for Saemidori against Yabukita's 88%, and could not trace it to any primary
+    source. The best comparable primary data found — Yoshidome et al. (2018), a 13–15-site national
+    trial that used both cultivars as reference checks for the related cultivar Haruto 34 — instead
+    gives Saemidori a national-average nursery survival rate of 75%, statistically level with
+    Yabukita's own 75% in the same trial (range highly site-dependent, 1–100%, for both cultivars),
+    and a first-year post-transplant establishment rate of 92% against Yabukita's 93%. This record
+    follows the Yoshidome et al. figures and treats the 73%/88% figure as unverified rather than
+    repeating it.
+  - >-
+    Cold hardiness: the breeding team's own 2006 trial data rates Saemidori's winter cold hardiness
+    (red-wilt and split-bark frost resistance) as strong, on par with or slightly better than
+    Yabukita's — which sits awkwardly next to Saemidori's popular reputation as cold-sensitive. That
+    reputation is not baseless, but it describes a different, narrower phenomenon: because Saemidori
+    buds several days before Yabukita, its new shoots are exposed to late-spring frost events that a
+    later-budding cultivar would miss entirely, and recovery from that specific kind of frost damage
+    is reported as poor (日本茶備忘録). This record treats that as an early-budding exposure risk rather
+    than a general cold-intolerance, since the trial data does not support the latter.
 summary: Registered in 1990 as Cha Norin No. 40 from a 1969 Yabukita × Asatsuyu cross bred at Makurazaki, Kagoshima, Saemidori buds about four days ahead of Yabukita and is prized for high amino acids, low astringency and vivid green colour — Japan's most widely planted premium sencha cultivar after Yabukita, at roughly 4% of national tea acreage.
 sources:
   - title: "緑茶用早生品種「さえみどり」および晩生品種「おくみどり」の育成 / Breeding of the early budding cultivar 'Saemidori' and the late budding cultivar 'Okumidori'"

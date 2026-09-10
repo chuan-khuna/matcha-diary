@@ -32,7 +32,19 @@ diseaseResistance:
   - ring spot disease / 輪斑病 (weak — level with Yabukita)
   - mulberry scale insect / クワシロカイガラムシ (weak — level with Yabukita)
 lineageNote: "A controlled cross at Saitama's tea experiment station, and one whose pollen parent is recorded two different ways by two official sources. Either way Yabukita is in the ancestry on the pollen side, since MAFF describes that parent as a Yabukita open-pollinated seedling, while Sayamamidori brings Uji landrace stock in on the seed side. Sayamamidori is also the seed parent of Okumusashi and Toyoka, which makes those two Hokumei's half-siblings."
-conflicts: "Pollen parent: MAFF's Cha Norin registry table gives the 来歴 of 茶農林43号 as さやまみどり×5507（藪北自然実生） — Sayamamidori crossed with a numbered Yabukita open-pollinated seedling. NARO's tea cultivar handbook (6th ed.) gives さやまみどり（♀）× 埼玉13号（♂）. These are not necessarily different claims: a station commonly carries one line under both a seedling number and a prefectural line number, and 5507 could be the seedling that became 埼玉13号. No document stating the identity was found, so this record follows the handbook's form for the parent name and records MAFF's alongside it. — Registration date: 1992 is the Cha Norin designation; November 1995 is a separate Plant Variety Protection Act registration, No. 4775. Sources quoting one or the other as \"the\" registration year are both partly right, which is the same two-track pattern seen in Fukumidori and Kirari 31."
+conflicts:
+  - >-
+    Pollen parent: MAFF's Cha Norin registry table gives the 来歴 of 茶農林43号 as さやまみどり×5507（藪北自然実生） —
+    Sayamamidori crossed with a numbered Yabukita open-pollinated seedling. NARO's tea cultivar
+    handbook (6th ed.) gives さやまみどり（♀）× 埼玉13号（♂）. These are not necessarily different claims: a
+    station commonly carries one line under both a seedling number and a prefectural line number,
+    and 5507 could be the seedling that became 埼玉13号. No document stating the identity was found, so
+    this record follows the handbook's form for the parent name and records MAFF's alongside it.
+  - >-
+    Registration date: 1992 is the Cha Norin designation; November 1995 is a separate Plant Variety
+    Protection Act registration, No. 4775. Sources quoting one or the other as "the" registration
+    year are both partly right, which is the same two-track pattern seen in Fukumidori and Kirari
+    31.
 summary: A Saitama cross of Sayamamidori against a Yabukita seedling line, registered in 1992 as Cha Norin No. 43 and again under the Plant Variety Protection Act in 1995, Hokumei was bred for the cold northern edge of Japan's tea belt and named for it — it out-yields Yabukita and beats it on both winter cold-scorch syndromes, while inheriting its disease weaknesses unchanged.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林43号 row)

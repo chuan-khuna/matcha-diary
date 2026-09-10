@@ -35,7 +35,18 @@ diseaseResistance:
   - mulberry (white peach) scale insect (somewhat susceptible)
 rarity: a minor cultivar long passed over by blenders for its idiosyncratic aroma; now sought out for exactly that trait by single-cultivar producers
 lineageNote: An open-pollinated seedling of Yabukita, not a controlled cross — the seed parent is documented but the pollen parent was never recorded and cannot now be established.
-conflicts: "Kanji: the Shizuoka Tea Industry Council's own cultivar leaflet gives 山峡, together with the naming rationale ('the new shoots and made tea have a mountain-tea-like character'), and that form is used here; japantea-chachacha.com gives 山狭 with the same rationale and is treated as a misprint. Budding time: the brief for this research project described Yamakai as late-budding, but no source found here supports that — the prefectural leaflet classes it 中生 (medium), picked at roughly the same time as Yabukita, so that classification is used instead; what is documented is not lateness but early bud break, weak recovery and disproportionate frost damage (see Characteristics)."
+conflicts:
+  - >-
+    Kanji: the Shizuoka Tea Industry Council's own cultivar leaflet gives 山峡, together with the
+    naming rationale ('the new shoots and made tea have a mountain-tea-like character'), and that
+    form is used here; japantea-chachacha.com gives 山狭 with the same rationale and is treated as a
+    misprint.
+  - >-
+    Budding time: the brief for this research project described Yamakai as late-budding, but no
+    source found here supports that — the prefectural leaflet classes it 中生 (medium), picked at
+    roughly the same time as Yabukita, so that classification is used instead; what is documented is
+    not lateness but early bud break, weak recovery and disproportionate frost damage (see
+    Characteristics).
 summary: An unregistered 1967 Shizuoka cultivar, Yamakai is an open-pollinated Yabukita seedling known for an unusually strong, food-like aroma that long kept it out of blends. It buds alongside Yabukita, is frost-prone, and survives today as a recognised Shizuoka prefectural cultivar despite never gaining a Cha Norin number.
 sources:
   - title: ま・や・ら行のお茶 (品種の一覧)

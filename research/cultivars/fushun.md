@@ -38,7 +38,22 @@ notableDescendants:
   - Seimei (せいめい) — seed parent, crossed with Saemidori
   - 野茶研01号 — seed parent, crossed with Asanoka
 lineageNote: A controlled cross at Kanaya, Z1 against Kanayamidori, and the point at which several lines in this collection meet. Through Kanayamidori it descends from Yabukita and the S6 landrace selection; forward, it is the seed parent of Seimei, whose pollen parent Saemidori is itself a Yabukita cross — so Seimei reaches Yabukita by two separate paths, which is precisely the shape a pedigree drawn as a tree cannot show.
-conflicts: "Budding season and disease resistance: Tea Nursery describes Fushun as late-budding, about 5 days after Yabukita, with high resistance to anthracnose, ring blight and mochi disease 'surpassing' both Yabukita and Kanayamidori. Both figures trace back to the breeder rather than to nothing. The 1992 release paper puts plucking at the breeding site about 6 days after Yabukita, and rates anthracnose resistance 中庸 with a disease index of 1.2 against Yabukita's 1.7 — better than Yabukita, but level with Kanayamidori's 1.1 rather than surpassing it. The same paper gives the regional-trial average as only 1.5 days after Yabukita, which is what NARO's later handbook states as 1 to 3 days, and the handbook rates anthracnose flatly weak (弱). This record follows the handbook on both, but the disagreement is between two of the breeding institution's own publications, not between the breeder and a retailer. — Cross year: 1965 is confirmed both by the release paper and by the pedigree table in NARO's handbook. Tea Nursery's 27-year development period is one year long; the paper counts 26 years from cross to registration."
+conflicts:
+  - >-
+    Budding season and disease resistance: Tea Nursery describes Fushun as late-budding, about 5
+    days after Yabukita, with high resistance to anthracnose, ring blight and mochi disease
+    'surpassing' both Yabukita and Kanayamidori. Both figures trace back to the breeder rather than
+    to nothing. The 1992 release paper puts plucking at the breeding site about 6 days after
+    Yabukita, and rates anthracnose resistance 中庸 with a disease index of 1.2 against Yabukita's 1.7
+    — better than Yabukita, but level with Kanayamidori's 1.1 rather than surpassing it. The same
+    paper gives the regional-trial average as only 1.5 days after Yabukita, which is what NARO's
+    later handbook states as 1 to 3 days, and the handbook rates anthracnose flatly weak (弱). This
+    record follows the handbook on both, but the disagreement is between two of the breeding
+    institution's own publications, not between the breeder and a retailer.
+  - >-
+    Cross year: 1965 is confirmed both by the release paper and by the pedigree table in NARO's
+    handbook. Tea Nursery's 27-year development period is one year long; the paper counts 26 years
+    from cross to registration.
 summary: A 1965 Kanaya cross of the breeding line Z1 against Kanayamidori, registered in 1991 as Cha Norin No. 41, Fushun yields a third to a half more than Yabukita and was named for the hope it would make tea farming pay — and it matters here chiefly as the seed parent of Seimei, the cultivar that reaches Yabukita by two different routes.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林41号 row)

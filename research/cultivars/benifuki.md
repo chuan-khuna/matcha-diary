@@ -39,7 +39,15 @@ diseaseResistance:
   - mochi disease (weak)
   - split-bark frost injury in young trees, 裂傷型凍害 (weak; ordinary winter leaf-scorch resistance is only moderate)
 lineageNote: A controlled cross, not a landrace selection — both parents are named and documented, and both are themselves foreign-origin Assam/Darjeeling-type accessions rather than the Chinese-type Zairai stock behind cultivars like Yabukita. The cross has not been confirmed independently by DNA marker analysis — Benifuki is one of the 79 cultivars examined in an SSR marker parentage study (Kubo et al., 2021, Breeding Science), but the study carries its Benihomare × Makura-Cd86 pedigree from the literature and does not mark it among the parentages its markers confirmed; the pollen parent is not among the cultivars it genotyped. No descendant cultivars bred from Benifuki were found in the sources consulted.
-conflicts: "Sources split Benifuki's registration into two dates that are often collapsed into one. NARO's own 茶品種ハンドブック第6版 gives 17 August 1995 as the 品種登録 (Plant Variety Protection Act registration, No. 4591). Japanese Wikipedia and myjapanesegreentea.com instead give 1993 as 'the' registration year, which is when MAFF assigned it the sequence number 茶農林44号. japaneseteasommelier.wordpress.com's table resolves this by listing both explicitly, as separate 'name registration' (1993) and 'cultivar registration' (1995) events — this record follows that distinction and uses 1995 as the formal `registered` year."
+conflicts:
+  - >-
+    Registration year: sources split Benifuki's registration into two dates that are often collapsed
+    into one. NARO's own 茶品種ハンドブック第6版 gives 17 August 1995 as the 品種登録 (Plant Variety Protection Act
+    registration, No. 4591). Japanese Wikipedia and myjapanesegreentea.com instead give 1993 as
+    'the' registration year, which is when MAFF assigned it the sequence number 茶農林44号.
+    japaneseteasommelier.wordpress.com's table resolves this by listing both explicitly, as separate
+    'name registration' (1993) and 'cultivar registration' (1995) events — this record follows that
+    distinction and uses 1995 as the formal `registered` year.
 summary: A black-tea cultivar crossed in 1965 from Benihomare × Makura-Cd86 at the Makurazaki station and registered in 1995 as Cha Norin No. 44, Benifuki is better known today for a green-tea by-product — an unusually high, fermentation-sensitive methylated catechin sold against hay fever.
 sources:
   - title: "べにふうき｜品種のお茶専門店 心向樹"

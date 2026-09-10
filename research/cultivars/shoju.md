@@ -26,7 +26,19 @@ yield: "Somewhat low in both young and mature bushes (幼木及び成木の収�
 diseaseResistance: []
 rarity: "A single private grower's registration, confined in practice to Tanegashima. Its Plant Variety Protection Act breeder's right is recorded as having lapsed on 19 March 1998 — barely two years after the 18 March 1996 registration, well short of the 18-year statutory term. No source explains the discrepancy; it may reflect an early lapse (for instance, non-payment of the annual maintenance fee) rather than the term running its course, but that is not stated in the record and should not be assumed."
 lineageNote: A sport (枝変わり), not a seedling or a cross. Shoju is a somatic mutation that appeared on an existing Kuritawase bush and was propagated onward by cuttings, so every Shoju plant is genetically Kuritawase except for the handful of traits the mutation changed — it has no seed parent, no pollen parent, and no crossing date to record, only the bush it branched from.
-conflicts: "Kuritawase's home prefecture. This record's brief characterised Kuritawase as 'the unregistered 1966 Shizuoka cultivar' it is a sport of. The 1966 date and the unregistered status both check out — Kuritawase became Kagoshima Prefecture's recommended cultivar (県奨励品種) in Showa 41 (1966) and has never held a national Cha Norin number — but 'Shizuoka cultivar' does not: every source found (a monument inscription transcribed by furusato-tanegashima.net, Japanese Wikipedia, myjapanesegreentea.com, and an independent Yakushima news report) places Kuritawase's selection, trialling and naming entirely on Tanegashima, Kagoshima. Shizuoka's role was as the source of the founding seed — zairai seed the Kurita family ordered from Shizuoka in 1909 (Meiji 42) and sowed on Tanegashima — not as the place the cultivar itself was bred. This record treats Kuritawase as a Kagoshima cultivar of Shizuoka zairai ancestry, and reads the 'Shizuoka cultivar' framing as a likely conflation of the seed's origin with the cultivar's own home."
+conflicts:
+  - >-
+    Kuritawase's home prefecture: this record's brief characterised Kuritawase as 'the unregistered
+    1966 Shizuoka cultivar' it is a sport of. The 1966 date and the unregistered status both check
+    out — Kuritawase became Kagoshima Prefecture's recommended cultivar (県奨励品種) in Showa 41 (1966)
+    and has never held a national Cha Norin number — but 'Shizuoka cultivar' does not: every source
+    found (a monument inscription transcribed by furusato-tanegashima.net, Japanese Wikipedia,
+    myjapanesegreentea.com, and an independent Yakushima news report) places Kuritawase's selection,
+    trialling and naming entirely on Tanegashima, Kagoshima. Shizuoka's role was as the source of
+    the founding seed — zairai seed the Kurita family ordered from Shizuoka in 1909 (Meiji 42) and
+    sowed on Tanegashima — not as the place the cultivar itself was bred. This record treats
+    Kuritawase as a Kagoshima cultivar of Shizuoka zairai ancestry, and reads the 'Shizuoka
+    cultivar' framing as a likely conflation of the seed's origin with the cultivar's own home.
 summary: A very-early-budding sencha cultivar registered in 1996 under Japan's Plant Variety Protection Act, Shoju is a bud sport of Kuritawase found on Tanegashima by grower Matsushita Eiichi, prized locally for a milky, vanilla-like sweetness and for opening Japan's earliest new-tea season each March.
 sources:
   - title: "松寿 — 品種登録データベース (Plant Variety Registration No. 4952)"

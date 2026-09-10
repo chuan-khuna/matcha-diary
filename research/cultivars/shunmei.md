@@ -30,7 +30,17 @@ diseaseResistance:
   - cold (comparable to Yabukita in the dormant plant, but its early budding exposes new growth to late-spring frost)
 rarity: Uncommon in commercial cultivation. My Japanese Green Tea describes it as "not popular," with growers generally preferring the similarly early Saemidori instead; it is absent from NARO's current (6th edition, 2022) tea cultivar handbook, which only gives individual profile pages to cultivars registered from 1991 onward, so its exclusion there is not evidence of decline on its own.
 lineageNote: A controlled cross made at the Kanaya station, not a landrace selection. Shunmei is a full sibling of Okuyutaka (茶農林34号, registered 1983) — both were selected from the same Yutakamidori × F1NN8 crossing batch, with Shunmei taking several more years of trial before its own, later registration.
-conflicts: "Registration year — both years are right and belong to different registries. MAFF's 茶農林 series list ties 茶農林37号 to 1988, which is the year this record quotes; MAFF's separate 種苗法 variety-registration database records しゅんめい as application 2753 filed 1988/03/31 and registration 2159 granted 1990/04/03. The Japanese Tea Sommelier list's paired '1988 / 1990' columns are that same split, not a disagreement. Crossing year — the 1958 crossing date is sourced only to My Japanese Green Tea's Okuyutaka page; no Japanese-language primary source confirming that specific year was located, though none contradicts it either."
+conflicts:
+  - >-
+    Registration year — both years are right and belong to different registries. MAFF's 茶農林 series
+    list ties 茶農林37号 to 1988, which is the year this record quotes; MAFF's separate 種苗法
+    variety-registration database records しゅんめい as application 2753 filed 1988/03/31 and
+    registration 2159 granted 1990/04/03. The Japanese Tea Sommelier list's paired '1988 / 1990'
+    columns are that same split, not a disagreement.
+  - >-
+    Crossing year — the 1958 crossing date is sourced only to My Japanese Green Tea's Okuyutaka
+    page; no Japanese-language primary source confirming that specific year was located, though none
+    contradicts it either.
 summary: A 1988-registered Shizuoka sencha cultivar bred from Yutakamidori × F1NN8 at the Kanaya station, Shunmei buds four to five days before Yabukita and is the full sibling of Okuyutaka — though it never matched Okuyutaka's or Saemidori's commercial reach.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list)

@@ -31,7 +31,17 @@ diseaseResistance:
   - "no rating sourced for ring spot (輪斑病), red blight (赤焼病) or scale insects"
 lineageNote: A controlled cross rather than an open-pollinated seedling — Yabukita crossed with Miya A11, an internal numbered breeding line of the Miyazaki station's own "宮A" series, the same series that produced Minamisayaka's seed parent Miya A6. Miya A11's own parentage was not found in the sources consulted.
 documentation: sparse
-conflicts: "The registration year is reported inconsistently because two separate registries are involved, not because a source is wrong. 附表１茶農林登録品種一覧 (MAFF's national registry table) dates the Cha Norin No. 39 designation to 1988, matching myjapanesegreentea.com's 'Agriculture and Forestry Certified Cultivars' entry. The same page's separate 'Seed and Seedling Law Registered Cultivars' table gives 1990, which is a distinct Seed and Seedling Act (種苗法) registration for the same cultivar. MAFF's own 品種登録 database confirms that second registration directly — 品種登録第2158号, 登録年月日 1990/04/03, 出願年月日 1988/03/31, applicant 宮崎県. Both dates are real and describe different events; 1988 is used as `registered` here because it is the year attached to the Cha Norin number this record leads with."
+conflicts:
+  - >-
+    Registration year: reported inconsistently because two separate registries are involved, not
+    because a source is wrong. 附表１茶農林登録品種一覧 (MAFF's national registry table) dates the Cha Norin No.
+    39 designation to 1988, matching myjapanesegreentea.com's 'Agriculture and Forestry Certified
+    Cultivars' entry. The same page's separate 'Seed and Seedling Law Registered Cultivars' table
+    gives 1990, which is a distinct Seed and Seedling Act (種苗法) registration for the same cultivar.
+    MAFF's own 品種登録 database confirms that second registration directly — 品種登録第2158号, 登録年月日
+    1990/04/03, 出願年月日 1988/03/31, applicant 宮崎県. Both dates are real and describe different events;
+    1988 is used as `registered` here because it is the year attached to the Cha Norin number this
+    record leads with.
 summary: A mid-season sencha cultivar crossed from Yabukita and an internal Miyazaki breeding line, Miya A11, registered as Cha Norin No. 39 in 1988 at the Miyazaki Prefectural Agricultural Experiment Station; thinly documented outside the registry record itself.
 sources:
   - title: 附表１ 茶農林登録品種一覧

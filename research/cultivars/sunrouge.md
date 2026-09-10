@@ -33,7 +33,14 @@ diseaseResistance:
   - cutting propagation survival (weak — lower rooting success than Yabukita under ordinary cutting-bed conditions; original release relied on photoautotrophic tissue culture, later work reports 95%+ survival with a refined propagation-bed method)
 rarity: "Very rare — commercial cultivation only began at scale after Nippon Paper Group's patent lapsed in 2013, and one specialist vendor puts it at under 1% of Japan's cultivated tea area (unverified, vendor estimate)"
 lineageNote: "Not a controlled, single-generation cross. Sunrouge was selected from an open-pollinated seedling population of a bred intermediate parental line, itself an interspecific cross between the wild tea relative Camellia taliensis and the registered Camellia sinensis cultivar Okumusashi. Its own pollen parent is consequently unrecorded, and it is the only cultivar in this collection that is not purely Camellia sinensis."
-conflicts: "Registration year is given as 2009 by some secondary listings and 2011 by others. Both are correct but describe different steps: Nesumi et al. (2012) record the Plant Variety Protection Act application as filed 3 June 2009 and published 18 August 2009 (Application No. 23800); the completed registration, per MAFF's variety registration database, was granted on 20 December 2011 as Registration No. 21262. This record uses 2011 as the registered year and notes 2009 as the application/release year in the History section."
+conflicts:
+  - >-
+    Registration year: given as 2009 by some secondary listings and 2011 by others. Both are correct
+    but describe different steps: Nesumi et al. (2012) record the Plant Variety Protection Act
+    application as filed 3 June 2009 and published 18 August 2009 (Application No. 23800); the
+    completed registration, per MAFF's variety registration database, was granted on 20 December
+    2011 as Registration No. 21262. This record uses 2011 as the registered year and notes 2009 as
+    the application/release year in the History section.
 summary: An anthocyanin-rich, red-leaf tea bred at NARO's Makurazaki station from a Camellia taliensis × Okumusashi cross, registered in 2011; its liquor is blackish at neutral pH and turns pink or red with an acid such as lemon juice.
 sources:
   - title: サンルージュ（品種登録番号21262）— 農林水産省 品種登録データベース (MAFF variety registration database)

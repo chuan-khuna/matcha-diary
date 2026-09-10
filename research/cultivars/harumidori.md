@@ -38,7 +38,18 @@ diseaseResistance:
   - mochi disease (medium, per NARO only)
 rarity: Rare — marketed by specialist single-cultivar retailer Shinkoju as a 希少品種 (rare cultivar), grouped by them among cultivars covering under 1% of Japan's tea acreage. Slow establishment, no resistance to tea scale insect, and poor tolerance of heavy clay soil are documented, plausible reasons it stayed a minor cultivar rather than spreading; Shinkoju was still selling Harumidori nursery stock as of early 2026, so it has not disappeared from new planting.
 lineageNote: A controlled cross between two named, already-registered cultivars, not a landrace selection. It is a half-sibling, through Kanayamidori, of Fushun (Kanayamidori sits on the opposite side of that cross, as pollen parent rather than seed parent) and, per this collection's own Kanayamidori record, of Koshun — that second claim is not independently verified here.
-conflicts: "Budding time: NARO's handbook gives 3–5 days after Yabukita; a Shizuoka Prefectural Tea Industry Council article by Takeda Yoshiyuki (reprinted by O-Cha Net) instead gives about 6 days after Yabukita and 2–4 days after Kanayamidori. Both agree it is later than Yabukita. 日本茶備忘録 (japantea-chachacha.com) instead calls it 早生 (early-budding), which conflicts with both and is treated here as an outlier. Registration date: the two registries genuinely differ. The release paper dates the 茶農林48号 naming registration to 24 August 2000; the Plant Variety Protection Act registration (No. 11102) is dated 17 March 2003 by NARO's handbook and by the MAFF registry. The frontmatter `registered` value quotes the 2003 PVP date."
+conflicts:
+  - >-
+    Budding time: NARO's handbook gives 3–5 days after Yabukita; a Shizuoka Prefectural Tea Industry
+    Council article by Takeda Yoshiyuki (reprinted by O-Cha Net) instead gives about 6 days after
+    Yabukita and 2–4 days after Kanayamidori. Both agree it is later than Yabukita. 日本茶備忘録
+    (japantea-chachacha.com) instead calls it 早生 (early-budding), which conflicts with both and is
+    treated here as an outlier.
+  - >-
+    Registration date: the two registries genuinely differ. The release paper dates the 茶農林48号
+    naming registration to 24 August 2000; the Plant Variety Protection Act registration (No. 11102)
+    is dated 17 March 2003 by NARO's handbook and by the MAFF registry. The frontmatter `registered`
+    value quotes the 2003 PVP date.
 summary: A 2003-registered cross of Kanayamidori and Yabukita bred at NARO's Makurazaki station, prized for exceptionally high amino-acid, low-tannin umami; sold as a rare speciality sencha, fukamushi, kamairicha and black tea, but slow to establish and demanding to grow well.
 sources:
   - title: 茶品種ハンドブック（第6版）
