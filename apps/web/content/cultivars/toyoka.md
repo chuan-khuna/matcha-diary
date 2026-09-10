@@ -4,7 +4,7 @@ slug: toyoka
 kana: とよか
 kanji: 豊香
 romaji: Toyoka
-nameMeaning: "Toyo (豊, abundant) plus ka (香, fragrance) — 'abundant fragrance'. As with other hiragana-era Cha Norin registrations (compare Sayamakaori), the plant itself was registered under the kana form とよか rather than kanji; 豊香 is the conventional kanji gloss used on vendor and retailer pages."
+nameMeaning: "Toyo (豊) from 豊岡 (Toyooka), the test site where the cultivar was raised, plus ka (香, fragrance) for the aroma that distinguishes it — Saitama Prefecture states the name was given because the plant was bred at the 豊岡試験地 of the station's pre-relocation site and is characterised by its fragrance. As with other hiragana-era Cha Norin registrations (compare Sayamakaori), it was registered under the kana form とよか rather than kanji, but 豊香 is the prefecture's own rendering rather than a vendor gloss."
 registered: 1976
 registrationNumber: 茶農林33号 (Cha Norin No. 33)
 registry: MAFF
@@ -31,7 +31,14 @@ diseaseResistance:
 rarity: "Rare. Grown at scale only briefly after registration; by recent decades cultivated by very few farms, mostly within Saitama, and described by growers and retailers as close to extinct."
 lineageNote: A controlled cross between two earlier single-plant Zairai selections rather than a landrace selection itself — Sayamamidori and Yabukita are each one generation removed from seed-grown stands, so Toyoka is the first controlled cross in its own line. No documented descendants were found, and it predates the Plant Variety Protection Act pedigree records that cover Saitama's later releases.
 documentation: sparse
-conflicts: "The MAFF-derived registration table (via minorien.jp) lists Toyoka's registered use (用途) as 煎茶 (sencha) only. Nakajima Tea Garden, one of its few remaining growers, instead describes it as originally bred with gyokuro production in mind, and says it fell out of favour partly because Sayama is not a gyokuro district. That account is plausible but uncorroborated by any research-station or registry source, so sencha is treated here as the documented primary use and the gyokuro claim is reported as a grower's account rather than adopted as fact."
+conflicts:
+  - >-
+    Tea type: the MAFF-derived registration table (via minorien.jp) lists Toyoka's registered use
+    (用途) as 煎茶 (sencha) only. Nakajima Tea Garden, one of its few remaining growers, instead
+    describes it as originally bred with gyokuro production in mind, and says it fell out of favour
+    partly because Sayama is not a gyokuro district. That account is plausible but uncorroborated by
+    any research-station or registry source, so sencha is treated here as the documented primary use
+    and the gyokuro claim is reported as a grower's account rather than adopted as fact.
 summary: A cold-hardy, high-yielding cross of Sayamamidori and Yabukita registered in Saitama in 1976 as Cha Norin No. 33, Toyoka has become a near-extinct "phantom cultivar" grown by a handful of farms, valued today less for sencha than for a distinctively aromatic, full-bodied black tea.
 sources:
   - title: "附表１ 茶農林登録品種一覧"
@@ -135,9 +142,10 @@ specifically were found.
 In the cup as sencha, growers describe good colour and pronounced body — strong astringency,
 bitterness and richness rather than a light, easy-drinking style — alongside an aroma repeatedly
 called 一癖ある, "distinctive" or "idiosyncratic" rather than simply pleasant. One grower's tasting
-note goes further, describing a milk-like note on the finish. That combination of a powerful,
-unusual aroma and heavy body is plausibly why the name means "abundant fragrance" and also why it
-never became an easy sell as everyday sencha: it reads as a characterful, minority-taste tea
+note goes further, describing a milk-like note on the finish. That powerful, unusual aroma is
+the trait the name records — Saitama named the cultivar for the fragrance that set it apart, joined
+to the 豊岡 (Toyooka) test site where it was raised — and paired with the heavy body it is plausibly
+why it never became an easy sell as everyday sencha: it reads as a characterful, minority-taste tea
 rather than a balanced one, and it lost out in Sayama to the milder, better-adopted Sayamakaori
 in the very market it was bred for. As black tea, that same intensity has instead worked in its
 favour, though no source consulted gives a specific flavour description of the finished wakōcha

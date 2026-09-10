@@ -40,7 +40,21 @@ notableDescendants:
   - Beniibara (direct, an unregistered black-tea selection attributed to Kimura Noboru)
 rarity: Largely superseded in its own home district — the Japanese Wikipedia article on Sayama tea (狭山茶) names Yabukita and Sayamakaori, not Sayamamidori, as the region's leading cultivars today. Its significance now is mainly genealogical rather than as a planted tea.
 lineageNote: A landrace selection from Uji zairai seedlings, not a controlled cross — its pollen parent is unrecorded, like Yabukita's. Unusually well documented as a parent for a cultivar this old, it is a confirmed direct parent of at least four later Cha Norin cultivars and a grandparent of at least two more.
-conflicts: "Sainomidori: the japaneseteasommelier registry table and some derived summaries list Sainomidori's origin as a 'Sayama-midori seed'. The primary NARO breeding record (茶品種ハンドブック第6版, both the Sainomidori cultivar page and the pedigree chart in its 品種の来歴 section) instead names さやまかおり (Sayamakaori — a different, Yabukita-derived Saitama cultivar) as the sole, open-pollinated parent, with no Sayamamidori in the pedigree. This record follows the NARO chart and does not list Sainomidori as a documented Sayamamidori descendant. Musashikaori: the older MAFF registry table (附表1, minorien.jp) gives its parentage as Sayamakaori x a Koushi-koushin seedling, but the more detailed NARO handbook pedigree chart gives Yabukita x Saitama 27F1-73, with 27F1-73 itself being Sayamamidori x a Koushi-koushin seedling. This record follows the NARO chart, making Sayamamidori a grandparent of Musashikaori rather than Sayamakaori. Both discrepancies plausibly stem from the two cultivars' near-identical names."
+conflicts:
+  - >-
+    Sainomidori: the japaneseteasommelier registry table and some derived summaries list
+    Sainomidori's origin as a 'Sayama-midori seed'. The primary NARO breeding record (茶品種ハンドブック第6版,
+    both the Sainomidori cultivar page and the pedigree chart in its 品種の来歴 section) instead names
+    さやまかおり (Sayamakaori — a different, Yabukita-derived Saitama cultivar) as the sole,
+    open-pollinated parent, with no Sayamamidori in the pedigree. This record follows the NARO chart
+    and does not list Sainomidori as a documented Sayamamidori descendant.
+  - >-
+    Musashikaori: the older MAFF registry table (附表1, minorien.jp) gives its parentage as
+    Sayamakaori x a Koushi-koushin seedling, but the more detailed NARO handbook pedigree chart
+    gives Yabukita x Saitama 27F1-73, with 27F1-73 itself being Sayamamidori x a Koushi-koushin
+    seedling. This record follows the NARO chart, making Sayamamidori a grandparent of Musashikaori
+    rather than Sayamakaori. Both this and the Sainomidori discrepancy plausibly stem from the two
+    cultivars' near-identical names.
 summary: Selected from Uji zairai seedlings and registered in Saitama in 1953 as Cha Norin No. 5, the same year as Yabukita, Sayamamidori was the first cultivar bred at Saitama's tea research station and became the prefecture's foundational parent, siring Okumusashi, Toyoka, Hokumei and Miyamakaori directly.
 sources:
   - title: "Registered Tea Varieties (茶の品種登録と命名)"
@@ -91,4 +105,4 @@ Growth habit is upright and vigorous, with somewhat thicker branches than Yabuki
 
 Processed as sencha, it produces a dark, deep-green dry leaf and a tea the 1953 paper rates as good quality, with a distinct aroma noted by later vendor descriptions. In the tasting panel run for the 1962 Okumusashi comparison trial, Sayamamidori's first-flush cup scored 59.5 out of a possible 100 across colour, aroma and taste — close behind Okumusashi's own 60.0 and clearly ahead of Yabukita's 56.0 at the same tasting, a result that supports its historical reputation as a genuine step up on Yabukita in cup quality rather than merely a regional substitute for it.
 
-That reputation has not translated into a lasting place in the fields. No source consulted here documents Sayamamidori being processed into fukamushi sencha, tencha, gyokuro or any tea style beyond ordinary sencha, and the Japanese Wikipedia article on Sayama tea names Yabukita and Sayamamidori's own descendant Sayamakaori, not Sayamamidori itself, as the district's leading cultivars today. Seventy years after its registration, Sayamamidori survives less as a tea people drink and more as a name several generations back in the pedigree of the cultivars that replaced it.
+That reputation has not translated into a lasting place in the fields. No source consulted here documents Sayamamidori being processed into fukamushi sencha, tencha, gyokuro or any tea style beyond ordinary sencha, and the Japanese Wikipedia article on Sayama tea names Yabukita and the Yabukita-derived Sayamakaori, not Sayamamidori itself, as the district's leading cultivars today. Seventy years after its registration, Sayamamidori survives less as a tea people drink and more as a name several generations back in the pedigree of the cultivars that replaced it.

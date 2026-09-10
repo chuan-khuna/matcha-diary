@@ -21,13 +21,13 @@ teaTypes:
   - kamairicha
   - black tea
   - matcha
-buddingTime: medium (中生) — described as a normal/mid-season budding cultivar by independent sources; no day-offset against Yabukita has been sourced, which is typical of a strain that never entered the formal comparison trials that usually generate that figure
+buddingTime: medium (中生) — described as a normal/mid-season budding cultivar by independent sources; no day-offset against Yabukita has been sourced, the prefectural material that covers the cultivar recording only the 中生 class
 recommendedRegions:
   - Shizuoka
-yield: high — consistently described as vigorous with heavy yield (生育旺盛で収量が多い), but no trial figure in kg/10a has been located, again because it was never entered into the national/prefectural comparison-trial system that produces such numbers for registered cultivars
+yield: high — consistently described as vigorous with heavy yield (生育旺盛で収量が多い), and heavy yield was the ground on which Shizuoka took it onto its prefectural recommended-cultivar (奨励品種) list in 1967; no trial figure in kg/10a has been located
 notableDescendants:
   - Koshun
-rarity: Still propagated and sold today as a standalone single-cultivar tea by at least one Shizuoka specialist retailer, across ordinary and deep steaming, pan-firing and black-tea processing, and marketed by at least one producer as a single-estate matcha built around its cocoa note — unusual longevity in the market for a strain that was never nationally registered.
+rarity: A Shizuoka prefectural recommended cultivar (奨励品種) from 1967 to 2001, peaking at 154 ha of prefectural planting in 1976 and down to 38 ha by 2007. Still propagated and sold today as a standalone single-cultivar tea by at least one Saitama specialist retailer, across ordinary and deep steaming, pan-firing and black-tea processing, and marketed by at least one producer as a single-estate matcha built around its cocoa note — unusual longevity in the market for a strain that was never nationally registered.
 lineageNote: An individual selection out of an open-pollinated Yabukita seedling population, not a controlled cross — its pollen parent is unrecorded and unknowable. It was one of several strains produced by the same mid-to-late-1960s Yabukita-seedling screening programme at the Shizuoka Prefectural Tea Experiment Station — a group later labelled the "Shizu-7000 series" — alongside Yamakai (Shizu-7166), Suruga-wase (Shizu-7109), Fuji-midori (Shizu-7224) and Shizu-7132, none of which were registered either. Its main documented legacy is as the seed parent of Koshun (Kurasawa × Kanayamidori, registered 2000).
 documentation: sparse
 summary: An unregistered 1967 Shizuoka selection from open-pollinated Yabukita seedlings, Kurasawa carries a heavy, forest-like astringency and, in matcha, a distinctive cocoa character; its clearest legacy is as the seed parent of the registered aroma cultivar Koshun.
@@ -46,6 +46,10 @@ sources:
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: 香駿 その誕生と現状 (Koshun — its birth and current state)
     url: https://dfns.u-shizuoka-ken.ac.jp/labs/tsc/pdf/03/0308_kosyun.pdf
+  - title: 茶の品種改良とその増殖技術 — 静岡県茶業研究センター長 中村順行, 第28回茶学術研究会 (2013); table 静岡県内における奨励品種別栽培面積の推移
+    url: https://dfns.u-shizuoka-ken.ac.jp/labs/tsc/pdf/2503.pdf
+  - title: 品種登録データベース 登録番号8131「香駿」 (MAFF PVP registration record for Koshun)
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8131&LANGUAGE=Japanese
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list)
     url: https://minorien.jp/university/hinshu.pdf
   - title: 茶の品種／おしえてTea Cha！／O-CHA NET (index — confirms no dedicated Kurasawa profile exists)
@@ -58,7 +62,7 @@ Kurasawa is a Shizuoka sencha cultivar selected in 1967 from open-pollinated Yab
 seedlings and never registered. It is one of a cluster of strains — retrospectively grouped as
 the "Shizu-7000 series" — that the Shizuoka Prefectural Tea Experiment Station pulled out of a
 Yabukita-seedling screening programme in the mid-to-late 1960s, and, like most of that cluster,
-it stayed a locally-propagated strain rather than a nationally-promoted cultivar. Its two claims
+it stayed a prefectural recommended cultivar rather than a nationally-registered one. Its two claims
 to notice are unrelated to registration status: a heavy, forest-like astringency that carries
 through to a distinctive cocoa note when it is processed as matcha, and its role three years
 after its own selection as the seed parent of Koshun, the aroma cultivar that did go on to be
@@ -105,10 +109,14 @@ specifically, why it was passed over — Shizu-7132 tended to redden on the summ
 too dark a liquor, and was too astringent from lowland gardens, despite a prized cherry-leaf
 aroma. No source located gives an equivalent explanation for Kurasawa itself; none of the material
 consulted states a reason it was not carried forward to national registration, and this record
-does not invent one. What can be said is only the observable pattern: it never entered the
-prefectural or national comparison-trial pipeline that produces a Cha Norin number, and by 1970 —
-three years after its own selection, while it was presumably still being evaluated as a strain in
-its own right — the station was already crossing it with the newly registered Kanayamidori to
+does not invent one. What can be said is the observable pattern: Shizuoka took it up itself
+instead. A 2013 lecture by the head of the prefecture's tea research centre carries a table of
+Shizuoka's recommended cultivars (奨励品種) and their planted area, and Kurasawa sits in it with a
+recommendation running from 昭和42 (1967), the year of its own selection, to 平成13 (2001) — 9 ha
+of prefectural planting in 1967, a peak of 154 ha in 1976, 65 ha by 1998 and 38 ha by 2007. It was
+promoted, in other words, but only within the prefecture, and it was never put up for a Cha Norin
+number. By 1970 — three years after its selection, and already a recommended cultivar in its own
+right — the station was crossing it with the newly registered Kanayamidori to
 produce what would become Koshun, whose own path from cross to registration took thirty years and
 is unusually well documented by comparison. Kurasawa's practical legacy runs through that cross
 more than through any release of its own.
@@ -127,13 +135,12 @@ Japanese market — a claim made by a single vendor source and not independently
 
 Kurasawa buds in a normal, mid-season window — a "中生" cultivar in the Japanese sources, echoed
 by an English-language source describing it as "normal budding" — but no source gives a specific
-day-count relative to Yabukita, the usual convention in this collection; that figure is generated
-by the formal comparison trials that a registered cultivar goes through, and Kurasawa did not go
-through them. Multiple independent sources agree that it grows vigorously and yields heavily,
+day-count relative to Yabukita, the usual convention in this collection; the prefectural material
+that does cover the cultivar records only the 中生 class. Multiple independent sources agree that
+it grows vigorously and yields heavily — heavy yield being the ground Shizuoka recommended it on —
 again without a specific kg/10a figure attached. No disease-resistance or cold-hardiness data has
-been located for it in any source consulted, which is again consistent with a strain that was
-never carried through the national or prefectural trial system that would normally produce that
-data.
+been located for it in any source consulted; the prefectural material located records its
+recommended-cultivar status and its planted area rather than its characteristic ratings.
 
 The cup is where the sourcing is most consistent and most specific. Shinkoju's own tasting copy
 describes a natural aroma reminiscent of forest and woodland, paired with an astringency that

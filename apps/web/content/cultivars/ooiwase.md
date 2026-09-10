@@ -46,7 +46,33 @@ diseaseResistance:
   - "tea rust mite / Acaphylla theavagrans (highly susceptible — in a 2002 laboratory comparison of 8 Japanese cultivars, Ooiwase supported the most eggs of any cultivar tested, 97.8 per 20 females over 3 days, against a low of 34.8 for Kuritawase)"
   - "white peach scale / クワシロカイガラムシ (susceptible, per My Japanese Green Tea; not addressed by the release paper, which recorded no pest damage during the breeding trials)"
 rarity: "Uncommon but not vanishing. It is still on Shizuoka's recommended-cultivar list — the 2013 prefectural table shows its recommendation running from 昭和52 (1977) with no closing year, where Surugawase's and Kurasawa's both stop at 平成13 (2001) — and it still reaches the market as a single-cultivar tea: Shinkoju sells it as ordinary and deep-steamed sencha, Oishii Nihoncha Kenkyujo sells a light-steamed version grown at Houkouen in the mountainous Ryōkōchi district of Shizuoka City, and it turns up outside Shizuoka as a Kanoya deep-steamed sencha in Kagoshima and a Kuma tamaryokucha from Sagara village in Kumamoto — the Kyushu range its release paper recommended."
-conflicts: "Four. (1) The crossing year. My Japanese Green Tea dates the Yaeho × Yabukita cross to 1964; the release paper by the breeders themselves gives October 1960, with seed sown in December 1961 and seedlings planted out in April 1963, and its table of 育成担当者 assigns 交配・採種・は種 to 1960–1961. This record follows the paper. (2) The month of adoption. The paper's Japanese body says the council recognised and named the cultivar in 1977年1月 (January 1977); the paper's own English summary says February 1977. The record follows the Japanese body and notes that the discrepancy is internal to a single document. Both are separate again from the 1976年度 (fiscal 1976) the adoption was backdated to, and from the 昭和52 (1977) start the prefecture's own later table gives. (3) Disease resistance. My Japanese Green Tea states Ooiwase is strong against blister blight, bacterial shoot blight and gray blight. The release paper observed no disease other than anthracnose across the whole breeding programme and rates that 弱, and the one field survey of bacterial shoot blight found on Ooiwase has it worse than Yabukita in one field and better in the other. Nothing consulted supports the blister-blight or gray-blight claims and they are not recorded here. (4) Kanji. Kagoshima and Kumamoto retailers sell the cultivar as 大井早生, and that reading is consistent with the name's stated derivation, but the release paper, the Shizuoka Tea Chamber's own leaflet, the prefectural tables and MAFF's registry all write it in kana only, so kanji stays null. On English spelling, separately: the release paper's own English title romanises it Ooiwase, which is the form this corpus uses; yamanoibuki.md writes it Oiwase once and should be corrected."
+conflicts:
+  - >-
+    Crossing year: My Japanese Green Tea dates the Yaeho × Yabukita cross to 1964; the release
+    paper by the breeders themselves gives October 1960, with seed sown in December 1961 and
+    seedlings planted out in April 1963, and its table of 育成担当者 assigns 交配・採種・は種 to 1960–1961. This
+    record follows the paper.
+  - >-
+    Month of adoption: the paper's Japanese body says the council recognised and named the
+    cultivar in 1977年1月 (January 1977); the paper's own English summary says February 1977. The
+    record follows the Japanese body and notes that the discrepancy is internal to a single
+    document. Both are separate again from the 1976年度 (fiscal 1976) the adoption was backdated to,
+    and from the 昭和52 (1977) start the prefecture's own later table gives.
+  - >-
+    Disease resistance: My Japanese Green Tea states Ooiwase is strong against blister blight,
+    bacterial shoot blight and gray blight. The release paper observed no disease other than
+    anthracnose across the whole breeding programme and rates that 弱, and the one field survey of
+    bacterial shoot blight found on Ooiwase has it worse than Yabukita in one field and better in
+    the other. Nothing consulted supports the blister-blight or gray-blight claims and they are not
+    recorded here.
+  - >-
+    Kanji: Kagoshima and Kumamoto retailers sell the cultivar as 大井早生, and that reading is
+    consistent with the name's stated derivation, but the release paper, the Shizuoka Tea Chamber's
+    own leaflet, the prefectural tables and MAFF's registry all write it in kana only, so kanji
+    stays null.
+  - >-
+    English spelling: the release paper's own English title romanises it Ooiwase, which is the form
+    this corpus uses; yamanoibuki.md writes it Oiwase once and should be corrected.
 summary: An unregistered 1977 Shizuoka recommended cultivar, bred at the prefectural tea experiment station from a 1960 Yaeho × Yabukita cross specifically so that growers would have something worth plucking in the ten days before Yabukita; it makes a clean, refreshing early sencha rated level with Yabukita or a little above, and still holds about 100 ha of the prefecture.
 sources:
   - title: "日高保・倉貫幸一「煎茶用新品種『おおいわせ』」(A New Tea Variety for Green Tea 'Ooiwase'), 茶業研究報告 No. 47, 1978, pp. 1–10"

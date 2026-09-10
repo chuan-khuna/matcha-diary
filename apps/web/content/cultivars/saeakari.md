@@ -39,6 +39,10 @@ conflicts: null
 documentation: normal — a NARO handbook entry and a Plant Variety Protection Act record; no Cha Norin registration exists, consistent with recent NARO tea releases carrying PVP numbers only
 summary: A Makurazaki cross of the breeding line Z1 against Saemidori, registered under the Plant Variety Protection Act in 2012, Saeakari buds three to four days ahead of Yabukita and keeps Saemidori's bright colour into the summer crop — and unusually for an early sencha cultivar, it takes shade well enough for kabusecha, gyokuro and tencha.
 sources:
+  - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — ends at 茶農林52号, no さえあかり row)
+    url: https://minorien.jp/university/hinshu.pdf
+  - title: 品種登録データベース 第22070号 さえあかり (MAFF Plant Variety Protection register)
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=22070&LANGUAGE=Japanese
   - title: 茶品種ハンドブック 第6版 Version 2 (NARO Tea Cultivar Handbook — さえあかり entry)
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: 茶44品種・系統のDNA品種識別技術 (NARO SSR cultivar identification manual, 2021 — pedigree table)

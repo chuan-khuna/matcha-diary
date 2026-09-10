@@ -52,8 +52,9 @@ deliberate crossing rather than selected from a zairai (landrace, seed-grown) st
 paper itself makes a point of this, noting that until then no Japanese green tea cultivar had been
 bred by crossing at all, only black tea. It was developed specifically to extend the growing
 season in the Sayama district: alongside Yabukita and Sayamamidori, which both pick in early-to-
-mid May, Okumusashi buds and picks roughly ten days later, spreading the harvest and reducing
-frost risk for growers working the cooler, comparatively northern Kanto climate.
+mid May, Okumusashi buds and picks roughly ten days after Yabukita and four after Sayamamidori,
+spreading the harvest and reducing frost risk for growers working the cooler, comparatively
+northern Kanto climate.
 
 ## Lineage
 
@@ -62,10 +63,12 @@ frost risk for growers working the cooler, comparatively northern Kanto climate.
   alongside Yabukita, as one of only two named cultivars then planted in any quantity in Saitama.
 - **Yamatomidori** (やまとみどり) ♂ — the pollen parent. Selected in Nara, according to the
   Japanese Tea Sommelier's registry list, from Nara zairai seed; in the Okumusashi trial data it is
-  the latest-picking and most cold-hardy of the four varieties compared, the trait Okumusashi was
-  crossed to inherit. It does not appear to have had a wide cultivation history of its own outside
-  its use as a breeding parent and, later, as a genetic-resource line in tea-breeding research (it
-  has since turned up in studies of tea polyploidy and self-incompatibility genotypes).
+  the latest-picking of the four varieties compared, the trait Okumusashi was crossed to inherit —
+  though its cold hardiness is rated 大, no higher than Yabukita's or Sayamamidori's, where
+  Okumusashi alone is rated はなはだ大. It does not appear to have had a wide cultivation history
+  of its own outside its use as a breeding parent and, later, as a genetic-resource line in
+  tea-breeding research (it has since turned up in studies of tea polyploidy and
+  self-incompatibility genotypes).
 
 This is a controlled cross, not a landrace selection: the seed and pollen parents were deliberately
 combined by hand at a named experiment station, and the resulting seedling population was
@@ -86,7 +89,7 @@ growth.
 A single line was fixed as the first-selection tree in 1950 and moved to the main field in 1951 to
 begin a second round of individual selection. That same year the Kumagaya station was abolished,
 and the trial — by then a Ministry of Agriculture and Forestry-designated tea-breeding programme —
-was transferred to the newly established Saitama Prefectural Tea Research Institute (埼玉県茶業
+was newly attached to the Saitama Prefectural Tea Research Institute (埼玉県茶業
 研究所), which carried the line forward and eventually authored the release paper. Selection
 continued there from 1952, and in 1954 the line was confirmed as the second-selection tree, given
 the working strain name 22-131, and switched to vegetative (clonal) propagation for formal
@@ -97,8 +100,9 @@ Results were reviewed at the 1959 national tea-trial research liaison conference
 was approved as a registration candidate; the following years were spent bulking up planting
 stock. It was registered in 1962 as the green tea cultivar Okumusashi, Cha Norin No. 26, with
 Matsumoto Takeo — who had taken over as the project's lead by then — as first author of the
-release paper, alongside Fuchinoue, Yonemaru Tadashi and Tanaka, all of whom had stayed with the
-line since the Kumagaya days.
+release paper, alongside Fuchinoue, Yonemaru Tadashi and Tanaka. Fuchinoue and Tanaka had stayed
+with the line since the Kumagaya days; Yonemaru joined in 1952, under Tsutsumi Jiro, who led the
+project through the selection and line-comparison years.
 
 The release paper's afterword makes a claim worth taking at face value: that in black tea, most
 Japanese cultivars were already produced by crossing, but that until Okumusashi no Japanese green

@@ -11,7 +11,7 @@ registry: MAFF Cha Norin registration (1997) and a separate Plant Variety Protec
 plantVarietyRegistration: 品種登録第9204号, granted August 2001; overseas export of propagating material prohibited, self-propagation permitted with (free) licence
 strainNames:
   - 金谷17号 (Kanaya No. 17)
-bredAt: National Tea Experiment Station, Kanaya (国立茶業試験場金谷; now NARO's Institute of Vegetable and Tea Science)
+bredAt: National Tea Experiment Station, Kanaya (国立茶業試験場金谷; now NARO's Institute of Fruit Tree and Tea Science)
 prefecture: Shizuoka
 parents:
   female: Horyoku
@@ -34,7 +34,7 @@ diseaseResistance:
   - split-bark frost injury / 裂傷型凍害 (occurs at the same rate as Yabukita)
 lineageNote: A controlled cross at Kanaya, Horyoku against Yabukita. Horyoku is itself an open-pollinated Assam-type seedling, so Ryofu carries Assam germplasm on the seed side against the Japanese reference cultivar on the pollen side — an unusual combination for a green-tea cultivar, and one shared with nothing else in this collection.
 conflicts: null
-documentation: normal — a NARO handbook entry, a Cha Norin registry row and a Plant Variety Protection Act record, but no release paper was retrieved for this record
+documentation: normal — a NARO handbook entry, a Cha Norin registry row, a Plant Variety Protection Act record and the original release paper (Kondo et al., 茶業研究報告 87, 1999)
 summary: A Kanaya cross of Horyoku against Yabukita, registered in 1997 as Cha Norin No. 45, Ryofu is a slightly late sencha cultivar with an unusually clean, brisk character — the trait it is named for, and the one that divides opinion about it.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林45号 row)
@@ -43,6 +43,8 @@ sources:
     url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: 茶44品種・系統のDNA品種識別技術 (NARO SSR cultivar identification manual, 2021 — pedigree table)
     url: https://www.naro.go.jp/publicity_report/publication/files/nifts_cha_shikibetsu20210325.pdf
+  - title: 煎茶用中晩生品種「りょうふう」の育成 (Kondo et al., 茶業研究報告 87, 1999 — original release paper)
+    url: https://doi.org/10.5979/cha.1999.21
   - title: Ryofu りょうふう — Tea Nursery
     url: https://www.teanursery.com/ryofu/
 ---

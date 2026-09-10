@@ -63,7 +63,8 @@ export type Cultivar = {
   rarity: string | null;
 
   documentation: string | null;
-  conflicts: string | null;
+  /** One entry per disagreement between sources, each self-contained. */
+  conflicts: string[];
   summary: string;
   sources: CultivarSource[];
 };

@@ -30,9 +30,30 @@ yield: null
 rarity: Extremely rare and boutique — the first harvest produced only 1.5 kg of finished tea, and it is not documented as grown commercially outside a small number of Shizuoka producers.
 lineageNote: An officially registered natural cross-pollinated seedling (自然交雑実生) of the registered cultivar Yaeho, not a controlled cross — and, through Yaeho, a second-generation descendant of a Sugiyama Hikosaburo selection. Whether Marishi's true genetic parent is the plain registered Yaeho or the separately named "Sugiyama-Yaeho" individual is disputed between sources; see Conflicts.
 documentation: sparse
-conflicts: "Marishi's own registration record is not in dispute — the Plant Variety Protection Act database, quoted verbatim by the retailer Nishikien, names the parent plainly as \"Yaeho\" (やえほ). What is disputed is what stands one generation further back. Yaeho's own 1954 Cha Norin registration bulletin states that Sugiyama Hikosaburo selected the registered cultivar directly from his own garden at Dampira, Udo village, with no intervening generation. But a Shizuoka retailer close to a planting that survives at Marukocho, Shizuoka City, describes \"Sugiyama-Yaeho\" (杉山八重穂) as a distinct, older individual that Sugiyama himself selected — one that reliably throws paired buds from a single leaf axil, a trait it says the registered Yaeho does not show — and states in a dated 2005 post that registered Yaeho was itself \"selected from Sugiyama-Yaeho's natural seedlings,\" i.e. one generation removed from Sugiyama's original tree rather than being that tree. The same source states that Marishi and its sibling Mizumishiro-kaori both inherit the paired-bud trait, which it attributes to Sugiyama-Yaeho specifically. That is circumstantial evidence for a closer relationship to the Sugiyama-Yaeho individual than the plain \"child of registered Yaeho\" reading implies, but it is retailer testimony, not a registration document, and it contradicts Yaeho's own primary bulletin. This record follows the official Plant Variety Protection registration for Marishi's direct parentage claim (Yaeho) and reports the deeper Sugiyama-Yaeho question as unresolved rather than picking a side — matching the treatment in this collection's Yaeho record."
+conflicts:
+  - >-
+    Marishi's own registration record is not in dispute — the Plant Variety Protection Act database,
+    quoted verbatim by the retailer Nishikien, names the parent plainly as "Yaeho" (やえほ). What is
+    disputed is what stands one generation further back. Yaeho's own 1954 Cha Norin registration
+    bulletin states that Sugiyama Hikosaburo selected the registered cultivar directly from his own
+    garden at Dampira, Udo village, with no intervening generation. But a Shizuoka retailer close to
+    a planting that survives at Marukocho, Shizuoka City, describes "Sugiyama-Yaeho" (杉山八重穂) as a
+    distinct, older individual that Sugiyama himself selected — one that reliably throws paired buds
+    from a single leaf axil, a trait it says the registered Yaeho does not show — and states in a
+    dated 2005 post that registered Yaeho was itself "selected from Sugiyama-Yaeho's natural
+    seedlings," i.e. one generation removed from Sugiyama's original tree rather than being that
+    tree. The same source states that Marishi and its sibling Mizumishiro-kaori both inherit the
+    paired-bud trait, which it attributes to Sugiyama-Yaeho specifically. That is circumstantial
+    evidence for a closer relationship to the Sugiyama-Yaeho individual than the plain "child of
+    registered Yaeho" reading implies, but it is retailer testimony, not a registration document,
+    and it contradicts Yaeho's own primary bulletin. This record follows the official Plant Variety
+    Protection registration for Marishi's direct parentage claim (Yaeho) and reports the deeper
+    Sugiyama-Yaeho question as unresolved rather than picking a side — matching the treatment in
+    this collection's Yaeho record.
 summary: An extra-early Shizuoka cultivar registered in 1996 as a natural seedling of Yaeho, found in the Yamamori family's tea garden at Mizumishiro; prized in tiny volume for a strikingly vivid green liquor and named for Marishiten, a Buddhist deva of light.
 sources:
+  - title: 農林水産省 登録品種データベース「摩利支」（登録番号4953）
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4953&LANGUAGE=Japanese
   - title: 心向樹「摩利支」品種茶ページ
     url: https://www.shinkoju.com/%E5%93%81%E7%A8%AE%E8%8C%B6/%E6%91%A9%E5%88%A9%E6%94%AF/
   - title: 錦園「摩利支」品種登録データベース抜粋
@@ -110,11 +131,11 @@ and Yamamori Risao propagated and trialled the plant. Its first harvest yielded 
 finished tea, and the liquor colour was reportedly so vivid that people seeing it for the first
 time wondered whether it had been artificially coloured — described on the shop's page, in
 English, simply as "Perfect Green." It was registered under the Plant Variety Protection Act on 18
-March 1996 as Registration No. 4953, with Yamamori Miyoshi as the registrant. The official summary
-of the registered plant's characteristics describes it as a natural cross-pollinated seedling
-selected from Yaeho, extra-early in both budding and harvest at its Shizuoka City breeding site,
-and distinguished from Yaeho by longer, more elliptical new leaves, a darker green colour, more
-gloss, and higher total nitrogen and amino acid content.
+March 1996 as Registration No. 4953, with Yamamori Miyoshi and Yamamori Risao both named as
+registrants. The official summary of the registered plant's characteristics describes it as a
+natural cross-pollinated seedling selected from Yaeho, extra-early in both budding and harvest at
+its Shizuoka City breeding site, and distinguished from Yaeho by longer, more elliptical new
+leaves, a darker green colour, more gloss, and higher total nitrogen and amino acid content.
 
 ### Two generations from Yabukita's breeder — with a complication
 

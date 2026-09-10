@@ -6,7 +6,7 @@ kanji: null
 romaji: Sawamizuka
 nameMeaning: "No source consulted gives an official kanji spelling — it is registered and written in hiragana. The name plays on two things at once: 沢水 (sawamizu, clear mountain-stream water), for the clean fragrance it was bred to evoke, and 沢水加, a place name near where it was bred that is itself read differently (Sabaka), reused here as a rough echo rather than a direct reading."
 registered: 1995
-registrationNumber: null
+registrationNumber: "Plant Variety Protection Act registration No. 4292, granted 9 March 1995 (application No. 5399, filed 31 July 1992 by Shizuoka Prefecture; breeder's right ran its full 18-year term and lapsed 10 March 2013) — not a Cha Norin / 茶農林 number"
 registry: Plant Variety Protection Act
 crossedYear: null
 selectedYear: 1966
@@ -31,6 +31,8 @@ rarity: A minor cultivar grown mainly by larger cooperative-factory producers in
 lineageNote: A controlled cross of Yabukita and Fujimidori rather than a landrace selection, but the pedigree is only half documented once traced back a generation — Fujimidori is itself an unregistered, open-pollinated Yabukita seedling named in 1962, and its own pollen parent was never recorded.
 summary: A late-budding, high-yielding sencha cultivar crossed from Yabukita and the unregistered Fujimidori, selected in Shizuoka in 1966 and registered under the Plant Variety Protection Act in 1995, valued by cooperative factories for a clean aroma that reads as distinctly different from Yabukita's.
 sources:
+  - title: "さわみずか — 登録品種データベース (MAFF Plant Variety Registration No. 4292)"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4292&LANGUAGE=Japanese
   - title: "茶の品種：さ行のお茶の名前"
     url: https://japantea-chachacha.com/hinshu/%e3%81%95%e8%a1%8c%e3%81%ae%e3%81%8a%e8%8c%b6/
   - title: "Sawamizuka"
@@ -87,16 +89,19 @@ seedling from that cross was selected in 1966. It was carried through regional t
 and in 1992 it was formally named Sawamizuka and recognised as a high-quality cultivar, after
 which its planting was actively promoted within Shizuoka.
 
-Registration followed in 1995, but under the Plant Variety Protection Act (種苗法) rather than as
-a Cha Norin number. This is not stated outright by any single source, but it is well supported by
-the pattern across several: Sawamizuka does not appear anywhere in the national 茶農林登録品種一覧
-(the MAFF Cha Norin registry table), which otherwise runs continuously from No. 1 (1953) to
-No. 52 and has no entries at all between 1993 and 1997; it is likewise absent from NARO's own
-handbook of nationally funded tea cultivars, which covers only cultivars bred with national money
-at institutions such as Kanaya, Makurazaki and the prefectural stations working under the national
-programme. The Shizuoka Tea Industry Council's own cultivar guidebook leaflet for Sawamizuka marks
-its "variety registration" field as present (有), where the equivalent leaflet for the
-Cha-Norin-numbered Kanayamidori marks the same field absent (無) — that field tracks Seed and
+Registration followed on 9 March 1995, but under the Plant Variety Protection Act (種苗法) rather
+than as a Cha Norin number. MAFF's own 登録品種データベース carries the record: registration
+No. 4292, applied for as No. 5399 by Shizuoka Prefecture on 31 July 1992, bred by Hidaka Tamotsu,
+Kuranuki Koichi and Nakamura Noriyuki, the breeder's right running its full 18-year term to
+10 March 2013. The Shizuoka Tea Industry Council's guidebook leaflet says the same in as many
+words — 平成7年に種苗法による品種登録が行われました. Everything around it agrees: Sawamizuka does
+not appear anywhere in the national 茶農林登録品種一覧 (the MAFF Cha Norin registry table), which
+otherwise runs continuously from No. 1 (1953) to No. 52 and has no entries at all between 1993 and
+1997; it is likewise absent from NARO's own handbook of nationally funded tea cultivars, which
+covers only cultivars bred with national money at institutions such as Kanaya, Makurazaki and the
+prefectural stations working under the national programme. The Council's guidebook leaflet for
+Sawamizuka marks its "variety registration" field as present (有), where the equivalent leaflet for
+the Cha-Norin-numbered Kanayamidori marks the same field absent (無) — that field tracks Seed and
 Seedling Law status specifically, independent of any Cha Norin number, and confirms Sawamizuka was
 registered through the newer, prefecture-usable route rather than the older national one.
 

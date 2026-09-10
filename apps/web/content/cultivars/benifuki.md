@@ -38,8 +38,16 @@ diseaseResistance:
   - tea scale insect / kuwashirokaigaramushi (weak)
   - mochi disease (weak)
   - split-bark frost injury in young trees, 裂傷型凍害 (weak; ordinary winter leaf-scorch resistance is only moderate)
-lineageNote: A controlled cross, not a landrace selection — both parents are named and documented, and both are themselves foreign-origin Assam/Darjeeling-type accessions rather than the Chinese-type Zairai stock behind cultivars like Yabukita. The cross has since been checked independently by DNA marker analysis (Kubo et al., 2021, Breeding Science), which included Benifuki's parentage among the relationships it verified using SSR markers. No descendant cultivars bred from Benifuki were found in the sources consulted.
-conflicts: "Sources split Benifuki's registration into two dates that are often collapsed into one. NARO's own 茶品種ハンドブック第6版 gives 17 August 1995 as the 品種登録 (Plant Variety Protection Act registration, No. 4591). Japanese Wikipedia and myjapanesegreentea.com instead give 1993 as 'the' registration year, which is when MAFF assigned it the sequence number 茶農林44号. japaneseteasommelier.wordpress.com's table resolves this by listing both explicitly, as separate 'name registration' (1993) and 'cultivar registration' (1995) events — this record follows that distinction and uses 1995 as the formal `registered` year."
+lineageNote: A controlled cross, not a landrace selection — both parents are named and documented, and both are themselves foreign-origin Assam/Darjeeling-type accessions rather than the Chinese-type Zairai stock behind cultivars like Yabukita. The cross has not been confirmed independently by DNA marker analysis — Benifuki is one of the 79 cultivars examined in an SSR marker parentage study (Kubo et al., 2021, Breeding Science), but the study carries its Benihomare × Makura-Cd86 pedigree from the literature and does not mark it among the parentages its markers confirmed; the pollen parent is not among the cultivars it genotyped. No descendant cultivars bred from Benifuki were found in the sources consulted.
+conflicts:
+  - >-
+    Registration year: sources split Benifuki's registration into two dates that are often collapsed
+    into one. NARO's own 茶品種ハンドブック第6版 gives 17 August 1995 as the 品種登録 (Plant Variety Protection Act
+    registration, No. 4591). Japanese Wikipedia and myjapanesegreentea.com instead give 1993 as
+    'the' registration year, which is when MAFF assigned it the sequence number 茶農林44号.
+    japaneseteasommelier.wordpress.com's table resolves this by listing both explicitly, as separate
+    'name registration' (1993) and 'cultivar registration' (1995) events — this record follows that
+    distinction and uses 1995 as the formal `registered` year.
 summary: A black-tea cultivar crossed in 1965 from Benihomare × Makura-Cd86 at the Makurazaki station and registered in 1995 as Cha Norin No. 44, Benifuki is better known today for a green-tea by-product — an unusually high, fermentation-sensitive methylated catechin sold against hay fever.
 sources:
   - title: "べにふうき｜品種のお茶専門店 心向樹"
@@ -60,6 +68,12 @@ sources:
     url: https://www.naro.go.jp/project/results/laboratory/vegetea/2003/vegetea03-08.html
   - title: "「べにふうき」緑茶に期待される健康機能（プレスリリース, 2005年12月9日）"
     url: https://www.naro.go.jp/publicity_report/press/laboratory/vegetea/043605.html
+  - title: "Parentage analysis of tea cultivars in Japan based on simple sequence repeat markers（Kubo et al., Breeding Science 71(5), 2021）"
+    url: https://www.jstage.jst.go.jp/article/jsbbs/71/5/71_20156/_article
+  - title: "登録品種データベース — べにふうき（品種登録番号4591）"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4591&LANGUAGE=Japanese
+  - title: "べにふうき（茶農林44号）栽培・加工マニュアル（野菜茶業研究所）"
+    url: https://www.naro.go.jp/publicity_report/publication/files/naro-se/benihuuki.pdf
 ---
 
 # Benifuki
@@ -90,10 +104,12 @@ Benifuki is a controlled cross, not a landrace selection or an open-pollinated s
 parents are named. Notably, neither parent is Chinese-type (var. *sinensis*) Zairai stock of the
 kind behind Yabukita and most Japanese sencha cultivars; both are Assam- or Darjeeling-type
 accessions introduced from India, which is a large part of why Benifuki behaves so differently in
-the cup. The cross itself has since been checked independently: a 2021 DNA study of Japanese tea
-cultivars using SSR (simple sequence repeat) markers (Kubo, Matsuda, Yanagida, Hotta, Mimura and
-Kanda, *Breeding Science* 71(5), 2021) included the Benihomare × Makura-Cd86 parentage among the
-relationships it verified genetically. No cultivar bred from Benifuki as a parent turned up in the
+the cup. The cross itself rests on the breeding record rather than on genetic confirmation: a 2021
+DNA study of Japanese tea cultivars using SSR (simple sequence repeat) markers (Kubo, Matsuda,
+Yanagida, Hotta, Mimura and Kanda, *Breeding Science* 71(5), 2021) lists Benifuki among the 79
+cultivars it examined and carries the Benihomare × Makura-Cd86 pedigree from the literature, but
+does not mark it as one of the parentages its markers confirmed — and Makura-Cd86, being a station
+accession rather than a cultivar, is not among the material the study genotyped. No cultivar bred from Benifuki as a parent turned up in the
 sources consulted for this record.
 
 ## History

@@ -37,7 +37,21 @@ notableDescendants:
   - Haruto 34 (はると34) — Saemidori (female) x Sakimidori (male), the reciprocal cross, crossed 1997, registered 2020
 rarity: Not among Japan's widely planted cultivars; grown mainly in Miyazaki and sold as a single-cultivar tea by specialist retailers (e.g. Shinkoju), which also sell it as black tea and pan-fired (kamairicha) tea alongside sencha.
 lineageNote: A controlled cross (F1NN27 x ME52), not a landrace selection, made at the Miyazaki Prefectural Agricultural Experiment Station. It is a full sibling of Harumoegi — both share the identical registered female parent (F1NN27) and male parent (ME52) — but the two come from separate crossings made two years apart (1979 for Sakimidori, 1981 for Harumoegi), not from one shared seed batch.
-conflicts: "Cha Norin registration date: the release paper's Japanese abstract states registration as 茶農林47号 in August 1997, matching MAFF's own registered-cultivar table (育成年 1997); an English machine summary of the same paper had suggested 1996, which this record does not follow. Budding time: sources disagree by a couple of days — Ito En/O-cha.net give 1 day earlier than Yabukita, the cultivar's own 1999 release paper gives 2-3 days earlier, and NARO's current (6th edition) handbook gives 'same as Yabukita to 2 days earlier'; this record follows NARO's handbook as the primary figure and notes the others. Kirari 31's registration year is given elsewhere as December 2013 (a Plant Variety Protection Act filing date); NARO's own pedigree chart dates its registration to 25 March 2016 (No. 25105), which this record follows when citing it as a descendant."
+conflicts:
+  - >-
+    Cha Norin registration date: the release paper's Japanese abstract states registration as 茶農林47号
+    in August 1997, matching MAFF's own registered-cultivar table (育成年 1997); the same paper's own
+    printed English summary says instead that it was 'released in 1996', which this record does not
+    follow.
+  - >-
+    Budding time: sources disagree by a couple of days — Ito En/O-cha.net give 1 day earlier than
+    Yabukita, the cultivar's own 1999 release paper gives 2-3 days earlier, and NARO's current (6th
+    edition) handbook gives 'same as Yabukita to 2 days earlier'; this record follows NARO's
+    handbook as the primary figure and notes the others.
+  - >-
+    Kirari 31's registration year is given elsewhere as December 2013 (a Plant Variety Protection
+    Act filing date); NARO's own pedigree chart dates its registration to 25 March 2016 (No. 25105),
+    which this record follows when citing it as a descendant.
 summary: A 1979 cross of the breeding line F1NN27 and the Miyazaki landrace ME52, Sakimidori was registered in 1997/2001 for its vivid green colour and 20-40% yield advantage over Yabukita, and later parented Kirari 31 and Haruto 34.
 sources:
   - title: "茶品種ハンドブック 第6版 (NARO Tea Cultivar Handbook, 6th edition) — individual profile pages for Sakimidori (p.15) and Harumoegi (p.11), and pedigree charts (pp.41-42, 45)"
@@ -77,7 +91,7 @@ produced Kirari 31 and, later, Haruto 34.
 - **F1NN27** ♀ — an unreleased breeding line from the National Tea Experiment Station at Kanaya,
   Shizuoka, itself a cross of Yabukita and Shizuoka Zairai No. 16 (静在16). It was never released
   as a cultivar in its own right, only kept on as breeding stock; the same MAFF registry table
-  records Okumidori's own immediate parent, F1NN29, with the identical recorded parentage
+  lists Okumidori under its own former strain name F1NN29, with the identical recorded parentage
   (Yabukita x Shizuoka Zairai No. 16), which suggests the two numbered lines came out of the same
   Kanaya crossing programme, though no source confirms they share a single seed batch.
 - **ME52** ♂ — a Miyazaki landrace (zairai) selection, contributing local adaptation and, per one
@@ -102,16 +116,17 @@ produce the reciprocal cross, Haruto 34 (registered 2020).
 The cross was made in 1979 at the Miyazaki Prefectural Agricultural Experiment Station, pairing
 F1NN27 — a numbered F1 hybrid line bred at the national station in Kanaya but never itself released
 — with ME52, a Miyazaki zairai selection. A single clone was selected from the resulting seedlings
-in 1984 and carried forward under the trial designation Miyazaki No. 15 (宮崎15号). Regional
-adaptation and disease-resistance trials ran from 1988 to 1996 across fifteen tea experiment
-stations. The cultivar was registered nationally as 茶農林47号 (Cha Norin No. 47) in August 1997,
-and separately registered under the Seed and Seedling Law on 16 August 2001 as Plant Variety
-Registration No. 9203.
+in 1984 and carried forward first under the strain name Mi84-117, then from 1988 under the trial
+designation Miyazaki No. 15 (宮崎15号). Regional adaptation trials ran from 1988 to 1996 across
+fifteen tea experiment stations, with characteristic testing for blister blight and frost-crack
+injury at two more. The cultivar was registered nationally as 茶農林47号 (Cha Norin No. 47) in
+August 1997, and separately registered under the Seed and Seedling Law on 16 August 2001 as Plant
+Variety Registration No. 9203.
 
 The 1999 release paper, "煎茶用品種「さきみどり」の育成" (Breeding of the sencha cultivar
 'Sakimidori'), published in 茶業研究報告 (Tea Research Journal, vol. 87, pp. 67-76), credits seven
-researchers: Furuno Tsurukichi, Yoshidome Hiroshi, Masoso Ryuichi, Sato Kunihiko, Ueno Teiichi,
-Hirakawa Imao and Abe Tsuguo, working out of the Miyazaki Prefectural Agricultural Experiment
+researchers: Furuno Tsuruyoshi, Yoshidome Hiroshi, Maso Ryuichi, Sato Kunihiko, Ueno Sadaichi,
+Hirakawa Imao and Abe Tsugio, working out of the Miyazaki Prefectural Agricultural Experiment
 Station and associated agricultural offices. A follow-up paper in 2000 examined the cultivar's
 chlorophyll and pheophytin content specifically, finding chlorophyll levels 1.3-1.5 times higher
 than Yabukita's and a slower conversion to pheophytin during processing — the biochemical basis for

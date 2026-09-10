@@ -4,7 +4,7 @@ slug: yamakai
 kana: やまかい
 kanji: 山峡
 romaji: Yamakai
-nameMeaning: "'Mountain gorge' or 'ravine' — a standard dictionary word for the やまかい reading. Sources differ on the exact rationale (see conflicts below), but agree it points to the tea's mountain-grown character."
+nameMeaning: "'Mountain gorge' or 'ravine' — a standard dictionary word for the やまかい reading. The Shizuoka Tea Industry Council's own cultivar leaflet gives the rationale as 新芽や製茶が山の茶らしいことから — the new shoots and the made tea both have a mountain-tea character."
 registered: null
 registrationNumber: null
 registry: prefectural recommended cultivar (Shizuoka) — no MAFF Cha Norin number and no Plant Variety Protection Act registration found
@@ -25,7 +25,7 @@ buddingTime: medium — picked at the same time as Yabukita
 recommendedRegions:
   - Shizuoka (prefectural recommended cultivar)
   - Also grown commercially in small quantities in Wazuka and Asamiya (Kyoto/Shiga) and in Yame (Fukuoka)
-yield: about the same as Yabukita
+yield: slightly higher than Yabukita — rated やや多 (somewhat high) in the Shizuoka prefectural cultivar leaflet
 diseaseResistance:
   - cold (medium)
   - anthracnose (weak)
@@ -35,7 +35,18 @@ diseaseResistance:
   - mulberry (white peach) scale insect (somewhat susceptible)
 rarity: a minor cultivar long passed over by blenders for its idiosyncratic aroma; now sought out for exactly that trait by single-cultivar producers
 lineageNote: An open-pollinated seedling of Yabukita, not a controlled cross — the seed parent is documented but the pollen parent was never recorded and cannot now be established.
-conflicts: "Kanji: myjapanesegreentea.com gives 山峡 (yamakai, 'ravine', a standard dictionary compound), used here; japantea-chachacha.com instead gives 山狭, with its own naming rationale ('the new shoots and made tea have a mountain-tea-like character'). Both are read やまかい and no third source was found to break the tie. Budding time: the brief for this research project described Yamakai as late-budding, but no source found here supports that — japantea-chachacha.com and myjapanesegreentea.com both class it as medium-season, picked alongside Yabukita, so that classification is used instead; the sourced trait is not lateness but disproportionate frost damage (see Characteristics)."
+conflicts:
+  - >-
+    Kanji: the Shizuoka Tea Industry Council's own cultivar leaflet gives 山峡, together with the
+    naming rationale ('the new shoots and made tea have a mountain-tea-like character'), and that
+    form is used here; japantea-chachacha.com gives 山狭 with the same rationale and is treated as a
+    misprint.
+  - >-
+    Budding time: the brief for this research project described Yamakai as late-budding, but no
+    source found here supports that — the prefectural leaflet classes it 中生 (medium), picked at
+    roughly the same time as Yabukita, so that classification is used instead; what is documented is
+    not lateness but early bud break, weak recovery and disproportionate frost damage (see
+    Characteristics).
 summary: An unregistered 1967 Shizuoka cultivar, Yamakai is an open-pollinated Yabukita seedling known for an unusually strong, food-like aroma that long kept it out of blends. It buds alongside Yabukita, is frost-prone, and survives today as a recognised Shizuoka prefectural cultivar despite never gaining a Cha Norin number.
 sources:
   - title: ま・や・ら行のお茶 (品種の一覧)
@@ -60,6 +71,10 @@ sources:
     url: https://minorien.jp/university/hinshu.pdf
   - title: 注目されている茶品種ガイドブック (静岡県茶業会議所)
     url: https://shizuoka-cha.com/index.php/ocha/shinshu
+  - title: 注目されている茶品種ガイドブック p15 やまかい (静岡県茶業会議所)
+    url: https://shizuoka-cha.com/index.php/download_file/view/94/221/
+  - title: 茶の品種改良とその増殖技術 (中村順行, 静岡県茶業研究センター, 第28回茶学術研究会 2013)
+    url: https://dfns.u-shizuoka-ken.ac.jp/labs/tsc/pdf/2503.pdf
 ---
 
 # Yamakai
@@ -84,8 +99,10 @@ Shizuoka Prefectural Tea Experiment Station in the late 1960s under the internal
 number Shizu-7166, alongside Suruga-wase (Shizu-7109), Kurasawa (Shizu-7111) and Fuji-midori
 (Shizu-7224) — plus a further line, Shizu-7132, which like Yamakai was never formally registered.
 Because each of these lines began as an unplanned open-pollination event on an existing Yabukita
-plant, none has a documented pollen parent, and none is recorded as having gone on to parent a
-later registered cultivar in its own right.
+plant, none has a documented pollen parent. Two of the cohort did go on to found registered
+cultivars, though Yamakai itself is not recorded as having parented one: Kurasawa is the seed
+parent of Koshun (registered 2000, Kurasawa × Kanaya-midori), and the unnamed line Shizu-7132 is
+the seed parent of Tsuyuhikari (registered 2003, Shizu-7132 × Asatsuyu, crossed 1970).
 
 ## History
 
@@ -117,11 +134,11 @@ comparative growth, frost-damage and yield data published across several instalm
 a national number, breeders kept using it as a comparison point against Yabukita and other
 registered cultivars.
 
-Accounts differ slightly on why the name was chosen. One Japanese specialist reference explains it
-as a reference to the new shoots and made tea both having a mountain-tea-like character; an
-English-language reference instead attributes it to the liquor's colour resembling mountain-grown
-tea. The two also disagree on the kanji used — 山峡 against 山狭 — though both are read やまかい and
-both point at the same "mountain ravine" imagery.
+The Shizuoka Tea Industry Council's leaflet on the cultivar settles both the kanji and the
+rationale: it writes the name 山峡 and explains it as a reference to the new shoots and the made tea
+both having a mountain-tea-like character. Secondary references wobble on each half — one Japanese
+site gives the kanji as 山狭, and an English-language reference attributes the name to the liquor's
+colour resembling mountain-grown tea — but the prefectural source is the one the record follows.
 
 ## Characteristics
 
@@ -132,7 +149,7 @@ damage than the group average, in company with Asahi and Uji-hikari, even though
 timing was not markedly later than Yabukita's. Disease resistance is mixed — weak against
 anthracnose and bacterial shoot blight, medium against blister blight and gray blight, and somewhat
 susceptible to the mulberry (white peach) scale insect. Mature leaves are deep green, slightly
-small and thin, with a diamond shape. Yield is reported as roughly on par with Yabukita, and it
+small and thin, with a diamond shape. Yield is rated やや多 — slightly higher than Yabukita — and it
 takes well to covered cultivation, which is a large part of why it has kept a following among
 kabusecha producers.
 

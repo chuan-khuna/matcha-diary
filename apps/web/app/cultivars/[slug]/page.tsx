@@ -33,6 +33,7 @@ import {
  * The two long editorial fields, `lineageNote` and `conflicts`, sit at the foot
  * of the prose column rather than in the rail. They are paragraphs, not values,
  * and several run past a hundred words — in an 18rem rail that is a wall.
+ * `conflicts` is a list of them: one entry per disagreement between sources.
  */
 
 export const dynamicParams = false;
@@ -400,13 +401,26 @@ function NameList({ title, names }: { title: string; names: string[] }) {
  * failure — and DESIGN.md defines no warning colour and says not to invent one —
  * so it is marked out by being the one recessed panel on the page.
  */
-function NoteBlock({ title, body }: { title: string; body: string | null }) {
-  if (body === null) return null;
+function NoteBlock({ title, body }: { title: string; body: string | string[] | null }) {
+  if (body === null || body.length === 0) return null;
 
   return (
     <section className="mt-10 rounded-md border border-line-strong bg-paper-sunk p-5">
       <h2 className="label-caps text-clay">{title}</h2>
-      <p className="mt-3 text-body-md text-ink-2">{body}</p>
+      {/* `lineageNote` is one paragraph; `conflicts` is one entry per
+          disagreement, and each entry names the field it is about, the sources
+          on both sides and which one the record follows. A record with a single
+          conflict still renders as a list — the marker is what says the field
+          holds however many the sources produced. */}
+      {Array.isArray(body) ? (
+        <ul className="mt-3 list-disc space-y-2 pl-5 text-body-md text-ink-2 marker:text-matcha-line">
+          {body.map((entry) => (
+            <li key={entry}>{entry}</li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-3 text-body-md text-ink-2">{body}</p>
+      )}
     </section>
   );
 }

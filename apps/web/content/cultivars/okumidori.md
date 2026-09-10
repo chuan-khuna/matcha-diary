@@ -25,7 +25,7 @@ teaTypes:
   - tencha
   - matcha
   - gyokuro
-buddingTime: late (晩生) — budding about 11 days after Yabukita and first-flush plucking about 8 days after, which is the whole agronomic point of it
+buddingTime: late (晩生) — budding about 11 days after Yabukita and first-flush plucking about 9 days after, which is the whole agronomic point of it
 recommendedRegions:
   - Shizuoka
   - Kyoto
@@ -42,11 +42,28 @@ diseaseResistance:
   - cold (strong — suited to mountain districts and frost-prone ground)
   - anthracnose / 炭疽病 (weak — needs a preventive programme where the disease is established)
 lineageNote: A controlled cross made at the national station at Kanaya in 1953, Yabukita as seed parent against the numbered landrace selection 静在16. It shares that pollen parent with 茶本F1NN27, an unreleased line from the same station and the same combination, which went on to parent Sakimidori and Minamisayaka — so Okumidori and those two are close relatives by a route their own records do not make obvious. No descendants of Okumidori appear in this collection.
-conflicts: "Pollen parent: several English-language sources (teanursery.com, and the cultivar guide this collection's earlier drafts drew on) state that a 2021 parentage analysis attributed to 'Kubo et al.' found the recorded pedigree inconsistent with Okumidori's genotype, leaving the pollen parent unidentified. No such publication could be located. The citation is given without journal, title or volume anywhere it appears, and the 2021 NARO publication that does analyse Japanese tea cultivars by SSR markers — the 44-cultivar DNA identification manual — lists Okumidori's parents flatly as やぶきた × 静在16 with no caveat. The nearest real paper found is Kubo et al. (2019) in Genetic Resources and Crop Evolution, which classifies Kyoto landraces and cultivars by SSR and RAD-seq and is not about Okumidori. This record therefore follows the MAFF registry and NARO's own 2021 table, and notes the claim rather than repeating it. — Cultivation share: 'second most planted cultivar in Japan' is a common claim. MAFF's own series does not support it: at 4% in 2023 Okumidori sits behind Yutakamidori (7%) and Saemidori (5%). It is second only among cultivars grown for tencha, and first among late-season ones."
+conflicts:
+  - >-
+    Pollen parent: several English-language sources (teanursery.com, and the cultivar guide this
+    collection's earlier drafts drew on) state that a 2021 parentage analysis attributed to 'Kubo et
+    al.' found the recorded pedigree inconsistent with Okumidori's genotype, leaving the pollen
+    parent unidentified. No such publication could be located. The citation is given without
+    journal, title or volume anywhere it appears, and the 2021 NARO publication that does analyse
+    Japanese tea cultivars by SSR markers — the 44-cultivar DNA identification manual — lists
+    Okumidori's parents flatly as やぶきた × 静在16 with no caveat. The nearest real paper found is Kubo
+    et al. (2019) in Genetic Resources and Crop Evolution, which classifies Kyoto landraces and
+    cultivars by SSR and RAD-seq and is not about Okumidori. This record therefore follows the MAFF
+    registry and NARO's own 2021 table, and notes the claim rather than repeating it.
+  - >-
+    Cultivation share: 'second most planted cultivar in Japan' is a common claim. MAFF's own series
+    does not support it: at 4% in 2023 Okumidori sits behind Yutakamidori (7%) and Saemidori (5%).
+    It is second only among cultivars grown for tencha, and first among late-season ones.
 summary: A 1953 cross of Yabukita against the landrace selection 静在16, registered in 1974 as Cha Norin No. 32, Okumidori buds some eleven days after Yabukita and exists to stretch a district's picking season past the point where one mid-season clone would jam it — and its sweet, low-astringency leaf made it, unplanned, one of the principal tencha and gyokuro cultivars outside Uji.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list — 茶農林32号 row)
     url: https://minorien.jp/university/hinshu.pdf
+  - title: "緑茶用早生品種「さえみどり」および晩生品種「おくみどり」の育成 — 武田善行ほか, 育種学研究 8(3): 113-117 (2006). The breeding group's own account; 表3 gives the 育成地 phenology (萌芽期 4.14 / 摘採期 5.17 against Yabukita's 4.3 / 5.8)"
+    url: https://www.jstage.jst.go.jp/article/jsbbr/8/3/8_113/_article/-char/ja
   - title: おくみどり ─ 「やぶきた」と組み合わせて摘採期を拡大する ─ / O-CHA NET (Ito En)
     url: https://www.o-cha.net/teacha/hinshu/okumidori.html
   - title: 茶44品種・系統のDNA品種識別技術 (NARO SSR cultivar identification manual, 2021 — pedigree table and national cultivar shares)
@@ -69,7 +86,7 @@ Okumidori was bred to solve a scheduling problem. A district planted almost enti
 has one picking season, and it is short: every bush comes ready at once, the factory runs flat
 out for a fortnight, and the quality of what comes off the later fields suffers because they
 were picked late rather than because they were meant to be. Okumidori buds about eleven days
-after Yabukita and is plucked about eight days after it, which lets a grower plant both and turn
+after Yabukita and is plucked about nine days after it, which lets a grower plant both and turn
 one frantic window into two manageable ones. That is what the national station at Kanaya crossed
 it for in 1953, and what MAFF registered it for in 1974 — as a sencha cultivar, high-yielding
 and late.

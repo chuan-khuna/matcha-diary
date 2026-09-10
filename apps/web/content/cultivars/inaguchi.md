@@ -6,11 +6,11 @@ kanji: 稲口
 romaji: Inaguchi
 nameMeaning: "The breeder's own surname — Inaguchi (稲口, 稲 'rice plant' + 口 'mouth/opening'), not a place name. The grower who found the plant, surnamed Inaguchi, propagated it himself and it kept his name, the same way a number of chance tea finds are named after whoever spotted them rather than where they grew."
 registered: 1988
-registrationNumber: null
+registrationNumber: "Plant Variety Protection Act registration No. 1676, granted 18 August 1988 (application No. 2120, filed 21 January 1987) — not a Cha Norin / 茶農林 number, as Inaguchi was never submitted for national MAFF registration"
 registry: Plant Variety Protection Act
 selectedYear: null
 selectedFrom: An open-pollinated Yabukita seedling found growing by chance in a tea field in present-day Shizuoka city
-bredAt: Discovered and propagated by the grower Inaguchi; evaluated by the Shizuoka Prefectural Tea Industry Experimental Station, which confirmed its colour, shape and aroma in 1986
+bredAt: "Discovered and propagated by the grower 稲口勝利 (Inaguchi Katsutoshi) of Niima (新間), Shizuoka city, who is named on the MAFF registration as both registrant and sole breeder; myjapanesegreentea.com adds that the Shizuoka Prefectural Tea Industry Experimental Station confirmed its colour, shape and aroma in 1986, which the registration filing does not mention"
 prefecture: Shizuoka
 parents:
   female: Yabukita
@@ -24,14 +24,17 @@ recommendedRegions:
   - Shizuoka
 yield: similar to Yabukita
 diseaseResistance:
-  - anthracnose (fairly strong)
-  - ring spot / grey blight (fairly strong)
-  - bacterial shoot blight (very weak)
+  - anthracnose (fairly strong — 炭そ病抵抗性やや強, per the MAFF registration filing)
+  - ring spot / grey blight (medium — 輪斑病抵抗性中, per the MAFF registration filing)
+  - freeze / red-scorch, 赤枯れ (strong — 耐寒性の赤枯抵抗性強, per the MAFF registration filing)
+  - bacterial shoot blight (very weak — myjapanesegreentea.com only; the MAFF filing gives no 赤焼病 rating)
 lineageNote: "An open-pollinated Yabukita seedling found by chance, not a controlled cross — the pollen parent was never recorded and cannot now be known. This is one generation removed from a landrace selection like Yabukita itself: Yabukita's own seed parent is an anonymous Zairai bush, while Inaguchi's seed parent is specifically Yabukita, making it a chance \"Yabukita seedling\" cultivar rather than a Zairai one."
-rarity: A minor, little-planted cultivar — absent from Shizuoka Prefecture's own guidebook of recommended cultivars and from every general cultivar hub checked for this record; documented in useful detail by only one source found.
+rarity: A minor, little-planted cultivar — absent from Shizuoka Prefecture's own guidebook of recommended cultivars and from every general cultivar hub checked for this record; outside its MAFF registration filing, documented in useful detail by only one source found.
 documentation: sparse
 summary: A Yabukita seedling a Shizuoka grower named Inaguchi found by chance in his own tea field and propagated himself, registered in 1988 under the Plant Variety Protection Act; a minor, thinly documented sencha cultivar budding just a day or two after Yabukita.
 sources:
+  - title: "いなぐち — 登録品種データベース (MAFF Plant Variety Protection registration No. 1676)"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=1676&LANGUAGE=Japanese
   - title: The Inaguchi Tea Cultivar
     url: https://myjapanesegreentea.com/inaguchi
   - title: The Japanese Tea Cultivars (master registry list)
@@ -60,12 +63,12 @@ This is an open-pollinated selection, not a controlled cross: Mr. Inaguchi found
 
 Inaguchi's origin is recorded only in outline. A grower whose surname was Inaguchi discovered the plant by accident in his own tea field in what is now Shizuoka city; because it stood out for its deep green colour and appeared to grow well, he began propagating it by cuttings rather than treating it as one more seedling among many. The Shizuoka Prefectural Tea Industry Experimental Station evaluated the resulting plant in 1986 and judged its colour, shape and aroma good enough to be worth registering; it was registered two years later, in 1988, under the seed and seedling law — the Plant Variety Protection Act, in its modern rendering — rather than through the nationally coordinated Cha Norin (茶農林) trial programme.
 
-That distinction is worth stating plainly, because the absence is itself informative. A full appendix table of all 52 Cha Norin registrations, spanning 1953 to 2003, contains no entry for Inaguchi, and NARO's own tea cultivar handbook — which covers only cultivars bred with national funding, including those entrusted to Saitama's and Miyazaki's prefectural stations — does not include it either, for the same reason: Inaguchi was never part of that programme. It was a single grower's find, evaluated and registered through the prefecture rather than bred by it. Shizuoka Prefecture's own guidebook of cultivars it actively promotes (注目されている茶品種ガイドブック) also has no entry for it, which is consistent with a cultivar that was registered but never pushed as a recommended planting. No release paper, registration number, or named breeder team could be found for it in the usual primary-source channels — the Cha Norin registry, the NARO handbook, J-STAGE, CiNii, or the National Diet Library's catalogue all return nothing under either いなぐち or 稲口 in connection with tea — which is itself consistent with a cultivar that entered the record through an individual's Plant Variety Protection Act filing rather than through an institutional breeding trial with its own published chronology.
+That distinction is worth stating plainly, because the absence is itself informative. A full appendix table of all 52 Cha Norin registrations, spanning 1953 to 2003, contains no entry for Inaguchi, and NARO's own tea cultivar handbook — which covers only cultivars bred with national funding, including those entrusted to Saitama's and Miyazaki's prefectural stations — does not include it either, for the same reason: Inaguchi was never part of that programme. It was a single grower's find, registered in his own name rather than an institution's. Shizuoka Prefecture's own guidebook of cultivars it actively promotes (注目されている茶品種ガイドブック) also has no entry for it, which is consistent with a cultivar that was registered but never pushed as a recommended planting. What the record does carry is the Plant Variety Protection Act filing itself, held in MAFF's 登録品種データベース: application No. 2120, filed 21 January 1987, registered as No. 1676 on 18 August 1988, with 稲口勝利 (Inaguchi Katsutoshi) of Niima, Shizuoka city named as both the registrant and the sole person who bred the variety — no institution, no team. Beyond that filing there is no release paper: J-STAGE, CiNii and the National Diet Library's catalogue all return nothing under either いなぐち or 稲口 in connection with tea, which is itself consistent with a cultivar that entered the record through an individual's registration rather than through an institutional breeding trial with its own published chronology. The breeder's rights lapsed on 19 August 1994, six years into an eighteen-year term.
 
 ## Characteristics
 
 Inaguchi buds only one to two days after Yabukita, placing it squarely in the mid-season band alongside the cultivar it grew from. Mature leaves are slightly large with a long oval shape, deep green and notably glossy; young leaves share the same shape and colour but run to medium size, and the leaf itself is slightly thick and soft. Yield at harvest is reported as similar to Yabukita's.
 
-Disease resistance is fairly strong against anthracnose and against ring spot (grey blight), but very weak against bacterial shoot blight, which is the trait most worth flagging for anyone considering it: a planting without careful spray management would be exposed on that front. No data on cold tolerance was found, which for a Shizuoka-city cultivar bred without deliberate selection for hardiness is itself a plausible gap rather than an oversight.
+Disease resistance is fairly strong against anthracnose and medium against ring spot (grey blight) — both ratings taken from the registration filing, which notes that both are nonetheless an improvement on Yabukita's. It is reported very weak against bacterial shoot blight, which is the trait most worth flagging for anyone considering it: a planting without careful spray management would be exposed on that front. That last rating comes from a secondary source only; the registration filing carries no bacterial shoot blight figure. Cold tolerance, by contrast, the filing does rate, and rates strong: resistance to red-scorch winter injury (赤枯れ) is 強.
 
-In the cup, the brewed liquor runs yellow-green, with a sweet taste carrying umami and a subtle astringency; the aroma is sweet, fresh and a little floral. Beyond that description, though, the honest limit of this record is how little is corroborated: only one source found gives a full characterisation of Inaguchi's flavour and agronomy, and none of the broader English or Japanese cultivar hubs checked for this record carry an entry for it at all. It is a genuinely minor, thinly documented cultivar rather than one this record can describe with the same confidence as Yabukita or its better-known relatives.
+In the cup, the brewed liquor runs yellow-green, with a sweet taste carrying umami and a subtle astringency; the aroma is sweet, fresh and a little floral. Beyond that description, though, the honest limit of this record is how little is corroborated: outside the registration filing's own characteristic table only one source found gives a full characterisation of Inaguchi's flavour and agronomy, and none of the broader English or Japanese cultivar hubs checked for this record carry an entry for it at all. It is a genuinely minor, thinly documented cultivar rather than one this record can describe with the same confidence as Yabukita or its better-known relatives.

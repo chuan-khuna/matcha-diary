@@ -22,7 +22,7 @@ teaTypes:
   - gyokuro
   - tencha
   - matcha
-buddingTime: "late — MAFF's registered-variety description states its budding period (萌芽期) and picking period (摘採期) both run later than Yabukita's, and later again than Asahi's; no day-count figure is published"
+buddingTime: "late — MAFF's registered-variety description rates its budding period (ほう芽期) 晩 (late) and its picking period (摘採期) やや晩 (somewhat late), and gives later budding as a point of distinction from both Yabukita and Asahi; no day-count figure is published"
 recommendedRegions:
   - Kyoto (Uji) — a single-garden cultivar, not grown commercially anywhere else
 yield: null
@@ -30,7 +30,22 @@ siblingCultivars:
   - Narino
 rarity: "Extremely rare. Propagated only within Horii Shichimeien's own Okunoyama garden; absent from every Kyoto prefectural cultivar list and specialist cultivar-shop catalogue checked for this record."
 lineageNote: "A clonal selection from an individual Uji zairai (landrace) plant, not a controlled cross — its only 'parent' is the seed-grown population of the Okunoyama garden, and even the specific mother tree is undocumented beyond Horii Shichimeien's own claim of its age. Sibling selection to Narino, drawn from the same garden and filed for Plant Variety Protection Act registration on the same day."
-conflicts: "An earlier draft of this record dated the selection to 1981-1994 via a five-stage screening funnel (roughly 2,000 trees narrowed to 58, then 24, then 8, then 2). Neither the funnel nor those specific years appear in any source found for this record; Horii Shichimeien's own account gives a single 20-year span, 1980-2000, which lines up with the Plant Variety Protection Act application MAFF's registration database records as filed 13 March 2000 - this record follows the primary sources instead. The draft also described the registration simply as 'MAFF plant variety registration' and credited 'Horii Shichimeien' as rights-holder; MAFF's own register shows this is specifically a Plant Variety Protection Act registration (registered variety No. 10752, application No. 12427), filed by the named individual Horii Nobuo (堀井信夫) rather than the company, and records his breeder's right - nominally a 25-year term - as having lapsed early, on 15 November 2011."
+conflicts:
+  - >-
+    Selection dates: an earlier draft of this record dated the selection to 1981-1994 via a
+    five-stage screening funnel (roughly 2,000 trees narrowed to 58, then 24, then 8, then 2). Horii
+    Shichimeien tells the same work two ways: its product page gives a single 20-year span from
+    1980, while chapter 4 of its own 7 Stories sets out exactly that funnel - selection begun 1981,
+    roughly 2,000 trees narrowed to 58, then 24, then 8, and the final two chosen in 1994, grown on
+    trial until registration in 2002. Both accounts are the company's own and neither is
+    contradicted by MAFF, whose database records only the application as filed 13 March 2000.
+  - >-
+    Registration and rights-holder: the draft described the registration simply as 'MAFF plant
+    variety registration' and credited 'Horii Shichimeien' as rights-holder; MAFF's own register
+    shows this is specifically a Plant Variety Protection Act registration (registered variety No.
+    10752, application No. 12427), filed by the named individual Horii Nobuo (堀井信夫) rather than the
+    company, and records his breeder's right - nominally a 25-year term - as having lapsed early, on
+    15 November 2011.
 summary: A gyokuro-leaning landrace selection propagated by cuttings from a single centuries-old zairai tree in Horii Shichimeien's historic Okunoyama garden in Uji, registered under the Plant Variety Protection Act in 2002 alongside its sibling selection Narino.
 sources:
   - title: "Horii Shichimeien — Our garden original: introducing the cultivars \"Narino\" and \"Okunoyama\" (English)"
@@ -55,7 +70,7 @@ sources:
     url: https://ujicha.or.jp/knowledge/flow/hinshu/
   - title: 京都府立茶業研究所 — 宇治の品種について（checked; same result）
     url: https://www.pref.kyoto.jp/chaken/mame_ujihinnshu.html
-  - title: 京都府茶業会議所 — 京都府茶奨励品種の栽培特性一覧（checked; only Hoshun, Ujimidori, Kyomidori and Asahi are listed）
+  - title: 京都府茶業会議所 — 京都府茶奨励品種の栽培特性一覧（checked; its twelve entries do not include Oku-no-yama）
     url: https://ujicha.or.jp/wp-content/themes/kyotocha/assets/files/hinsyutokusei.pdf
   - title: 心向樹 — 品種茶一覧（checked; Okunoyama is not among its roughly 80 entries)
     url: https://www.shinkoju.com/%E7%9F%A5%E3%82%8B-%E8%A6%8B%E3%82%8B-%E5%AD%A6%E3%81%B6/%E5%93%81%E7%A8%AE%E8%8C%B6%E3%81%AE%E8%A9%B1/%E5%93%81%E7%A8%AE%E8%8C%B6%E4%B8%80%E8%A6%A7/
@@ -87,10 +102,11 @@ the same day under sequential numbers - Narino as registered variety No. 10751 (
 No. 12426), Oku-no-yama as No. 10752 (application No. 12427) - both filed by Horii Nobuo on 13
 March 2000, which is about as close to documentary proof of a shared origin as a pair of
 zairai selections is likely to get. They are not clones of each other, though: Horii
-Shichimeien's own account describes a single 20-year screening of the garden's zairai
-population (1980-2000) that yielded two distinct plants worth keeping, of which Oku-no-yama
-was judged the deeper green and more gyokuro-like, and Narino the higher in theanine. No
-cultivar bred forward from Oku-no-yama is documented in any source consulted for this record.
+Shichimeien's own account describes a roughly 20-year screening of the garden's zairai
+population (from 1980, or 1981 in its longer telling) that yielded two distinct plants worth
+keeping, of which Oku-no-yama was judged the deeper green and more gyokuro-like, and Narino the
+higher in theanine. No cultivar bred forward from Oku-no-yama is documented in any source
+consulted for this record.
 
 ## History
 
@@ -113,11 +129,15 @@ Shichimeien states it took over the garden in the middle of the Meiji era (rough
 
 Between 1980 and 2000, Horii Nobuo (堀井信夫), the family's fifth-generation head, worked through
 the garden's zairai population looking for individual plants worth preserving as named
-cultivars, rather than left as an anonymous mixed stand. Two were chosen: Narino and Oku-no-yama.
-Of the latter, Horii is quoted as saying "there are no leaves this deep green - it's dyed just
-like natural gyokuro," and MAFF's registration record credits that depth of colour as the basis
-for the plant's legal distinctness. Only one mother tree - reportedly over 400 years old - stands
-in the garden today; every Oku-no-yama plant is a cutting-propagated descendant of it.
+cultivars, rather than left as an anonymous mixed stand. Chapter 4 of the company's own 7
+Stories describes the funnel: roughly 2,000 trees narrowed over several years to 58, then 24,
+then 8, with the final two chosen in 1994 and grown on trial until registration. Those two were
+Narino and Oku-no-yama. Of the latter, Horii is quoted as saying "there are no leaves this deep
+green - it's dyed just like natural gyokuro," and Horii Shichimeien credits that depth of colour
+as what secured the registration - though MAFF's own record rests the plant's legal distinctness
+on mature-leaf shape, budding time and shoot number rather than on colour. Only one mother tree
+- reportedly over 400 years old - stands in the garden today; every Oku-no-yama plant is a
+cutting-propagated descendant of it.
 
 An application for registration under the Plant Variety Protection Act (種苗法) was filed on 13
 March 2000 (application No. 12427) and published on 20 October 2000. The variety was formally
@@ -126,7 +146,8 @@ applicant and breeder, his address on file as 84 Uji-Myōraku, Uji City, Kyoto (
 a Plant Variety Protection Act registration, not a MAFF Cha Norin (茶農林) number, and not a
 Kyoto prefectural recommended cultivar: neither the Kyoto Tea Trade Association's cultivar page
 nor the prefectural tea research institute's own list Oku-no-yama among Kyoto's recommended
-cultivars, which currently number just four (Hoshun, Ujimidori, Kyomidori and Asahi). The
+cultivars, which currently number twelve (Hoshun, Ujimidori, Kyomidori, Asahi, Yabukita,
+Ujihikari, Tenmyo, Samidori, Oguramidori, Gokou, Komakage and Okumidori). The
 registration record also states a 25-year statutory term for the breeder's right, but records
 that right as having lapsed on 15 November 2011 - nine years in, not twenty-five. No source found
 explains the discrepancy; a lapse of this kind more commonly reflects non-renewal of an annual
@@ -143,11 +164,12 @@ directly by Horii Shichimeien rather than cultivated more widely.
 
 ## Characteristics
 
-Oku-no-yama is a late cultivar. Its own registration record states plainly that both budding
-(萌芽期) and picking (摘採期) run later than Yabukita's, and later again than Asahi's - the two
-comparison cultivars MAFF used to establish its legal distinctness - though no source found
-quantifies the gap in days. A separate cultivar reference (日本茶備忘録) independently classifies
-it as 晩生 (late-budding) and a gyokuro cultivar, consistent with the registration record.
+Oku-no-yama is a late cultivar. Its own registration record rates budding (ほう芽期) 晩 (late)
+and picking (摘採期) やや晩 (somewhat late), and gives later budding as a point of difference
+from both Yabukita and Asahi - the two comparison cultivars MAFF used to establish its legal
+distinctness - though no source found quantifies the gap in days. A separate cultivar reference
+(日本茶備忘録) independently classifies it as 晩生 (late-budding) and a gyokuro cultivar,
+consistent with the registration record.
 
 The registration's plant description gives a fuller picture than is normal for so obscure a
 cultivar. Growth habit is slightly upright with strong vigour and a large stool spread; leaf

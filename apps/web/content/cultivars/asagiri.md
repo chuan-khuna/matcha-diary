@@ -22,8 +22,7 @@ teaTypes:
 buddingTime: "medium (中生) — the 1954 registration report gives a recorded budding date of 7 April; no source states an exact day-count against Yabukita"
 recommendedRegions:
   - Flat lowland areas of the Kinki region
-  - Uji, Kyoto
-yield: "115 kan (~430 kg) per 10 a average, first-flush leaf from a shaded (tana-shita) garden planted 1940, measured 1948–1950 — figures ranged 96–134 kan across those three years"
+yield: "115 kan (~430 kg) per 10 a average, first-flush leaf from a shaded (覆下園) garden planted 1940, measured 1948–1950 — figures ranged 96–134 kan across those three years"
 diseaseResistance:
   - cold (strong)
   - anthracnose / tanso disease (very strong — singled out in the 1954 registration report as a particular strength)
@@ -37,6 +36,8 @@ sources:
     url: https://minorien.jp/university/hinshu.pdf
   - title: The Japanese tea cultivars – Japanese Tea Sommelier
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
+  - title: 宇治品種について (About the Uji cultivars) – 京都府茶業研究所
+    url: https://www.pref.kyoto.jp/chaken/mame_ujihinnshu.html
   - title: 令和5年度 京都府産茶の生産・流通状況等に関する資料 (Kyoto Prefecture tea production and distribution data, FY2023)
     url: https://www.pref.kyoto.jp/nosan/documents/r5chachosa1.pdf
   - title: Cultivars of Tea for Tencha (Matcha) Production in the Uji Area – MATCHA DIRECT
@@ -80,7 +81,7 @@ The selection programme that produced Asagiri ran through the difficult years of
 explicitly at finding superior strains for gyokuro and tencha among Uji's zairai gardens. Of the 106
 trees chosen, Asagiri — carried through the programme under the working name Kyoken No. 113 (京研113号)
 — was propagated by cuttings at the Institute's Maruyama trial site in 1940. In 1946 part of the
-planting was moved under a traditional overhead shade trellis (棚架) so its behaviour and quality
+planting was brought under overhead shade (覆架) so its behaviour and quality
 under shaded cultivation could be assessed directly, since that is the cultivation method gyokuro and
 tencha both depend on.
 
@@ -93,7 +94,7 @@ was named, the same bulletin records, "in likening it to the morning mist of the
 (宇治地方の朝霧になぞらえる).
 
 Asagiri and Kyomidori are, in one respect, the more official siblings of a well-known family. The
-same Institute, working the same Uji gardens across the same years, also produced Asahi, Samidori,
+same Uji gardens, worked across the same years, also yielded Asahi, Samidori,
 Gokou, Ujihikari, Komakage and Ogura-midori — cultivars now far better known than Asagiri and still
 grown across Uji today. Those, however, never received a Cha Norin number; they were adopted
 instead as Kyoto Prefecture recommended cultivars (京都府奨励品種), a prefectural rather than
@@ -116,8 +117,8 @@ the flat lowland areas of the Kinki region generally, not Uji specifically.
 The leaf's fresh, vivid green colour (鮮緑) was what earned it its "excellent for gyokuro" rating in
 the original trial. In blind tasting comparisons run from 1948 to 1950, judges scored processed
 Asagiri tea above Yabukita on the same panel — 198 points against 193 out of a 250-point scale
-across shape, colour, liquor colour, aroma and taste — with its edge concentrated in aroma and
-taste, offset by a slightly weaker liquor colour. Leaf yield from a shaded garden planted in 1940
+across shape, colour, liquor colour, aroma and taste — with its edge concentrated in shape and leaf
+colour, offset by a slightly weaker liquor colour. Leaf yield from a shaded garden planted in 1940
 averaged around 115 kan (roughly 430 kg) per 10 a for the first flush over those same three years,
 a respectable but not exceptional figure; the record frames Asagiri throughout as a quality
 candidate for shaded cultivation rather than a yield play.

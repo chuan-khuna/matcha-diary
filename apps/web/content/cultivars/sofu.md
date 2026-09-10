@@ -23,31 +23,42 @@ teaTypes:
   - sencha
   - kamairicha
   - oolong-style tea
-buddingTime: early — about 6 days before Yabukita to bud and 4 days earlier to first-flush harvest, in warm-region trials (NARO); secondary sources round this to a 4-7 day range
+buddingTime: early — about 6 days before Yabukita to bud and 4 days earlier to first-flush harvest, in warm-region trials (NARO); NARO's own cultivar handbook gives the plucking date as 4-7 days ahead of Yabukita
 recommendedRegions:
   - Shizuoka (official recommended cultivar since 2005)
   - warm districts with little risk of late frost generally
 yield: comparable to Yabukita in mature plantings; grower commentary describes young bushes as slower to bush out, with fewer new shoots and heavier individual buds
 diseaseResistance:
   - ring spot disease / Pestalotiopsis longiseta (strong)
-  - anthracnose (medium — better than Yabukita)
-  - red leaf blight / 赤葉枯病 (medium — better than Yabukita)
+  - anthracnose (moderately strong — better than Yabukita)
+  - red leaf blight / 赤葉枯病 (moderately strong — better than Yabukita)
   - mochi disease (medium)
   - bacterial shoot blight / 赤焼病 (weak)
-  - red-wilt frost injury / 赤枯 (medium — on par with Yabukita)
-  - blue-wilt frost injury / 青枯 (weak — weaker than Yabukita)
-  - split-bark frost injury / 裂傷型凍害 (weak — weaker than Yabukita)
+  - red-wilt frost injury / 赤枯 (moderately strong — on par with Yabukita)
+  - blue-wilt frost injury / 青枯 (moderately weak — weaker than Yabukita)
+  - split-bark frost injury / 裂傷型凍害 (moderately weak — weaker than Yabukita)
 rarity: officially a recommended Shizuoka cultivar since 2005, but grower accounts describe commercial planting as still minimal — it persists mainly as small single-cultivar lots out of districts such as Ashikubo, Kawane, Tamakawa and Fuji rather than as an established block planting
 lineageNote: A controlled cross, not a landrace selection — Yabukita crossed with Shizu-Inzatsu 131, an unregistered Assamica-hybrid breeding line. The pollen parent is the source of Sofu's defining trait, methyl anthranilate, inherited through a single locus.
-conflicts: "Sources disagree on the registration year. NARO's own 2002 research announcement and several vendor pages (myjapanesegreentea, Tea Epicure) describe Sofu as registered in 2002 — the year it was named, assigned 茶農林49号, and its Plant Variety Protection Act application was filed. NARO's own cultivar database instead gives 7 February 2005 as the date the Plant Variety Protection Act registration (No. 12706) was granted. This record uses 2005 for `registered` and treats 2002 as the naming/application year."
+conflicts:
+  - >-
+    Registration year: NARO's own 2002 research announcement and several vendor pages
+    (myjapanesegreentea, Tea Epicure) describe Sofu as registered in 2002 — the year it was named,
+    assigned 茶農林49号, and its Plant Variety Protection Act application was filed. NARO's own cultivar
+    database instead gives 7 February 2005 as the date the Plant Variety Protection Act registration
+    (No. 12706) was granted. This record uses 2005 for `registered` and treats 2002 as the
+    naming/application year.
 summary: A 2005 Shizuoka cross of Yabukita and the Assamica-hybrid Shizu-Inzatsu 131, Sofu is grown for a sweet, jasmine-like aroma traced to methyl anthranilate — a compound never before found in a Japanese cultivar — though weak frost tolerance and thin commercial planting keep it a specialty tea.
 sources:
   - title: そうふう（品種）| 農研機構 品種・技術データベース
     url: https://www.naro.go.jp/collab/breed/0200/0206/001787.html
+  - title: 茶品種ハンドブック 第6版 | 農研機構
+    url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
+  - title: 附表1 茶農林登録品種一覧
+    url: https://minorien.jp/university/hinshu.pdf
   - title: 新品種'そうふう'に特徴的に含まれる香気成分アントラニル酸メチル | 農研機構
     url: https://www.naro.go.jp/project/results/laboratory/vegetea/2002/vegetea02-44.html
   - title: 「静-印雑131」由来香気成分アントラニル酸メチルの含有を支配するMat遺伝子座 | 農研機構
-    url: https://www.naro.affrc.go.jp/project/results/laboratory/vegetea/2004/vegetea04-28.html
+    url: https://www.naro.go.jp/project/results/laboratory/vegetea/2004/vegetea04-28.html
   - title: "Methyl Anthranilate is the Cause of Cultivar-Specific Aroma in the Japanese Tea Cultivar 'Sofu'"
     url: https://www.jstage.jst.go.jp/article/jarq/38/4/38_271/_article
   - title: "Shizu-Inzatsu 131, an historical cultivar"
@@ -80,15 +91,16 @@ Kawane districts, rather than as a volume crop.
 - **Yabukita** ♀ — the standard Shizuoka cultivar, contributing the reliable vegetal base and
   general growing habit that most Yabukita crosses are bred to keep.
 - **Shizu-Inzatsu 131** ♂ (静印雑131) — an unregistered breeding line selected around 1944 from
-  a seedling of "Manipuri No. 15," an Assam-type tea tree grown from seed brought back from
+  a seedling of "Manipur No. 5," an Assam-type tea tree grown from seed brought back from
   India in the 1920s by Maruo Fumio, at the Shizuoka tea experiment station, where its
   development is credited to Arima Toshiharu. It never received a 茶農林 number of its own — the
-  registration system did not exist until 1953 — but it is the parent that gives Sofu, and its
-  full sibling Fujikaori, their defining floral aroma.
+  registration system did not exist until 1953 — but it is the parent that gives Sofu, and
+  Fujikaori, their defining floral aroma.
 
 Sofu is a controlled cross, not a landrace selection: both parents are documented, and the cross
 was made deliberately to move an *assamica*-type aroma trait into a *sinensis*-type garden plant.
-Fujikaori is bred from the same two parents and shares the aroma trait; at least one further
+Fujikaori is the reciprocal cross of the same two parents — Shizu-Inzatsu 131 as the seed parent,
+Yabukita as the pollen parent — and shares the aroma trait; at least one further
 Inzatsu-131-line cultivar, Kondowase, is reported to carry it too, though that claim rests on a
 single source and is not independently confirmed here. No cultivar bred from Sofu itself is
 documented.
@@ -100,9 +112,10 @@ documented.
 The cross of Yabukita and Shizu-Inzatsu 131 was made at the Tea Experiment Station's cultivation
 department in Kanaya, Shizuoka (from 2001 part of the National Institute of Vegetable and Tea
 Science, now NARO's Institute of Fruit Tree and Tea Science). An individual from that cross was
-selected in 1977; no source found here separately documents the year the cross itself was made,
-so it is not stated as distinct from the selection year. The line was carried afterward under the
-working strain name Kanaya No. 21 (金谷21号).
+selected in 1977 — though NARO's own sources use that year differently, the variety database
+calling it the year the line was selected and the pedigree chart in its cultivar handbook
+labelling it the year of the cross, so the two are not stated separately here. The line was
+carried afterward under the working strain name Kanaya No. 21 (金谷21号).
 
 ### Naming and registration
 
@@ -136,8 +149,8 @@ specifically; its floral character is instead credited squarely to methyl anthra
 ## Characteristics
 
 Sofu is early-budding: NARO's own cultivar entry gives it 6 days ahead of Yabukita to bud and
-about 4 days ahead to first-flush harvest in warm-region trials, though secondary summaries round
-this to a 4–7 day range. Because it is early, NARO recommends it only for warm districts with
+about 4 days ahead to first-flush harvest in warm-region trials, and its cultivar handbook gives
+the plucking date as 4–7 days ahead. Because it is early, NARO recommends it only for warm districts with
 little risk of late frost — and its frost tolerance does not help matters. Resistance to
 blue-wilt frost injury (青枯) and split-bark frost injury (裂傷型凍害) is rated weaker than
 Yabukita, though resistance to red-wilt frost injury (赤枯) is on a par with it. That combination

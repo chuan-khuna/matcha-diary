@@ -6,7 +6,7 @@ kanji: null
 romaji: Sanrūju
 nameMeaning: "'Sun' (English) plus 'rouge' (French for red) — a red bud reaching toward the sun, likened by the breeders' own release material to a stick of rouge or lipstick. It is written only in katakana, with no kanji or hiragana form at all."
 registered: 2011
-registrationNumber: null
+registrationNumber: "Registration No. 21262 (Plant Variety Protection Act, registered 20 December 2011; application No. 23800, filed 3 June 2009 and published 18 August 2009)"
 registry: Plant Variety Protection Act
 selectedYear: 2001
 selectedFrom: "Open-pollinated (naturally crossed) seedlings of the intermediate parental line 'Cha Chuukanbohon Nou 6' (茶中間母本農6号), seed collected and sown in 2001 at NARO's Makurazaki Tea Research Station"
@@ -33,9 +33,20 @@ diseaseResistance:
   - cutting propagation survival (weak — lower rooting success than Yabukita under ordinary cutting-bed conditions; original release relied on photoautotrophic tissue culture, later work reports 95%+ survival with a refined propagation-bed method)
 rarity: "Very rare — commercial cultivation only began at scale after Nippon Paper Group's patent lapsed in 2013, and one specialist vendor puts it at under 1% of Japan's cultivated tea area (unverified, vendor estimate)"
 lineageNote: "Not a controlled, single-generation cross. Sunrouge was selected from an open-pollinated seedling population of a bred intermediate parental line, itself an interspecific cross between the wild tea relative Camellia taliensis and the registered Camellia sinensis cultivar Okumusashi. Its own pollen parent is consequently unrecorded, and it is the only cultivar in this collection that is not purely Camellia sinensis."
-conflicts: "Registration year is given as 2009 by some secondary listings and 2011 by others. Both are correct but describe different steps: Nesumi et al. (2012) record the Plant Variety Protection Act application as filed 3 June 2009 and published 18 August 2009 (Application No. 23800); the completed registration, per the Japanese Tea Sommelier's registry and myjapanesegreentea's cultivar table, dates to 2011. This record uses 2011 as the registered year and notes 2009 as the application/release year in the History section."
+conflicts:
+  - >-
+    Registration year: given as 2009 by some secondary listings and 2011 by others. Both are correct
+    but describe different steps: Nesumi et al. (2012) record the Plant Variety Protection Act
+    application as filed 3 June 2009 and published 18 August 2009 (Application No. 23800); the
+    completed registration, per MAFF's variety registration database, was granted on 20 December
+    2011 as Registration No. 21262. This record uses 2011 as the registered year and notes 2009 as
+    the application/release year in the History section.
 summary: An anthocyanin-rich, red-leaf tea bred at NARO's Makurazaki station from a Camellia taliensis × Okumusashi cross, registered in 2011; its liquor is blackish at neutral pH and turns pink or red with an acid such as lemon juice.
 sources:
+  - title: サンルージュ（品種登録番号21262）— 農林水産省 品種登録データベース (MAFF variety registration database)
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=21262&LANGUAGE=Japanese
+  - title: 茶品種ハンドブック 第6版 — 農研機構 (NARO Tea Cultivar Handbook, 6th ed.), サンルージュ entry
+    url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: "'Sunrouge', a New Tea Cultivar with High Anthocyanin — Nesumi, Ogino, Yoshida, Taniguchi, Maeda-Yamamoto, Tanaka & Murakami, JARQ 46(4), 321–328 (2012)"
     url: https://www.jstage.jst.go.jp/article/jarq/46/4/46_321/_pdf
   - title: "New Parental Line 'Cha Chuukanbohon Nou 6' for Anthocyanin-rich Tea — Ogino, Tanaka, Yoshida, Taniguchi, Omae, Nesumi, Saba, Takyu & Takeda, Bulletin of the National Institute of Vegetable and Tea Science No. 4, 77–85 (2005)"
@@ -129,7 +140,8 @@ cross of a Benibana-cha-derived line with a separate taliensis hybrid) and 'Maku
 natural-cross seedling of Cha Chuukanbohon Nou 6). The latter proved the better anthocyanin-rich tea
 cultivar, and on 3 June 2009 the breeders applied to the Ministry of Agriculture, Forestry and
 Fisheries for its registration as Sunrouge (application published 18 August 2009, Application No.
-23800). Registration under the Plant Variety Protection Act (種苗法) was completed in 2011. Nippon
+23800). Registration under the Plant Variety Protection Act (種苗法) was completed on 20 December
+2011, as Registration No. 21262. Nippon
 Paper Group, Inc. was a development partner from early on and held a patent on the cultivar until
 2013, after which commercial planting began to spread beyond the original research plots — today it
 is grown commercially in Kagoshima, including on Tokunoshima, where a local processor supplies the
@@ -167,8 +179,10 @@ in ordinary propagation beds is lower than Yabukita's, which is why the original
 photoautotrophic (tissue-culture) propagation; a 2021 trial using a refined propagation-bed method at
 NARO's Kanaya station reported over 95% survival, though growth was still slower than Yabukita's.
 Disease resistance is mixed — slightly resistant to anthracnose, highly resistant to gray blight
-(Pestalotiopsis longiseta), but only weakly resistant to brown blight — and cold hardiness is moderate,
-short of Yabukita's. Fresh-leaf yield across three 2011 pluckings on four-year-old bushes totalled
+(Pestalotiopsis longiseta), but only weakly resistant to brown blight — while cold hardiness is good:
+NARO's cultivar handbook rates its resistance to red wither (赤枯れ) and to split-type freeze injury
+(裂傷型凍害) as strong, and to blue wither (青枯れ) as moderately strong. Fresh-leaf yield across
+three 2011 pluckings on four-year-old bushes totalled
 5,038 kg/ha, a shade ahead of Yabukita's ~4,965 kg/ha in the same trial but well behind the parental
 line's ~7,193 kg/ha.
 

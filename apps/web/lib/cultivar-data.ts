@@ -132,7 +132,7 @@ function parse(file: string, raw: string): Cultivar {
     rarity: text(data.rarity),
 
     documentation: text(data.documentation),
-    conflicts: text(data.conflicts),
+    conflicts: list(data.conflicts),
     summary: text(data.summary) ?? "",
     sources,
   };

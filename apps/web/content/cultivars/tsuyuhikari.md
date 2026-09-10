@@ -32,19 +32,19 @@ yield: around 130% of Yabukita counting the first and second flushes together, w
 diseaseResistance:
   - anthracnose / 炭疽病 (high resistance)
   - freeze / red-scorch, 赤枯れ (high resistance)
-  - cold (level with Yabukita)
+  - blister blight / もち病 (level with Yabukita)
 rarity: Grown mainly in Shizuoka, and deliberately so — cultivation outside the prefecture was restricted in 2021, which caps how far it can spread regardless of demand.
 lineageNote: A controlled cross at the Shizuoka Prefectural Tea Experiment Station, and one where both parents have records in this collection — an unusual thing here. The seed parent Shizu-7132 is an unregistered Yabukita seedling kept only under its trial number; the pollen parent Asatsuyu is one of the 1953 Uji zairai selections. So Tsuyuhikari joins the Shizuoka and Uji landrace lines one generation below each.
 conflicts: null
-documentation: normal — a Plant Variety Protection Act record and a published release paper (Oyaizu et al., 茶業研究報告 95, 2003), though the paper itself was not retrieved for this record
+documentation: normal — a Plant Variety Protection Act record and a published release paper (Oyaizu et al., 茶業研究報告 95, 2003)
 summary: A Shizuoka cross of the unregistered breeding line Shizu-7132 against Asatsuyu, registered under the Plant Variety Protection Act in 2003, Tsuyuhikari buds a day or two ahead of Yabukita, out-yields it by about a third, and resists anthracnose well — and since 2021 may not be planted outside the prefecture that bred it.
 sources:
   - title: Tsuyuhikari つゆひかり — Tea Nursery
     url: https://www.teanursery.com/tsuyuhikari/
   - title: "\"A New Cultivar 'Tsuyuhikari' for Green Tea\" (Oyaizu et al., 茶業研究報告 95, 2003)"
-    url: https://www.jstage.jst.go.jp/article/cha/2003/95/_contents/-char/ja
+    url: https://www.jstage.jst.go.jp/article/cha1953/2003/95/2003_95_1/_article/-char/ja
   - title: 品種登録データベース — 農林水産省 (Plant Variety Protection Act register)
-    url: https://www.hinshu2.maff.go.jp/
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=11103&LANGUAGE=Japanese
 ---
 
 # Tsuyuhikari
@@ -89,7 +89,8 @@ combined, with an autumn crop reported as particularly strong.
 Disease resistance is genuinely good where Yabukita is worst. Anthracnose resistance is high —
 the single most useful thing a Shizuoka cultivar can offer, given that Yabukita's susceptibility
 to it drives a large part of the region's spray programme — and red-scorch resistance is high too.
-Cold tolerance is level with Yabukita rather than better.
+赤枯れ is the winter cold injury itself, so cold tolerance runs better than Yabukita's
+rather than level with it. What is only level with Yabukita is blister blight (もち病).
 
 It is used for sencha and, in Shizuoka, particularly for deep-steamed sencha, with reported use
 for tencha and kamairicha as well and some potential for oxidised styles. That range is wider than

@@ -7,9 +7,9 @@ romaji: Mineyutaka
 nameMeaning: null
 registered: 1996
 registrationNumber: null
-registry: Plant Variety Protection Act
-bredAt: "Matsushita Ei'ichi, an individual grower — not a prefectural or national research station; associated with Tanegashima, Kagoshima"
-prefecture: Kagoshima (Tanegashima)
+registry: Plant Variety Protection Act (registration No. 4835, granted 19 January 1996; application No. 6224 filed 9 August 1993; breeder's right lapsed 20 January 1998)
+bredAt: "Matsushita Ei'ichi, an individual grower — not a prefectural or national research station; MAFF's registration record gives the breeding site (育成地) as Nishinoomote City on Tanegashima, Kagoshima"
+prefecture: Kagoshima (Nishinoomote, Tanegashima)
 parents:
   female: Yabukita
   male: null
@@ -23,13 +23,24 @@ teaTypes:
 buddingTime: early (早生) — no day-count relative to Yabukita found in any source
 recommendedRegions:
   - Tanegashima, Kagoshima — no other region is documented growing it commercially
-yield: null
+yield: "slightly high — MAFF's registration record calls it a やや多収 (somewhat high-yielding) sencha cultivar and rates 収量性 やや多 on both young and mature bushes. No kg/10a figure sourced."
 rarity: "Grown almost exclusively on Tanegashima; treated locally as one of the island's own distinctive cultivars alongside Shoju and Kuritawase, but essentially absent from mainland cultivar literature"
 lineageNote: A bud sport (枝変わり) of Yabukita — a spontaneous somatic mutation propagated by cuttings from a single branch, not a seedling or a cross. It carries Yabukita's genome unchanged except for the mutated trait, and has no pollen parent to record because no fertilisation event produced it.
 documentation: sparse
-conflicts: "The English-language master registry (japaneseteasommelier.wordpress.com) lists Mineyutaka's 1996 registration in the same table and column format used for classic 茶農林 (Cha Norin) numbered cultivars, which could be misread as implying a Cha Norin number. Cross-checked against MAFF's own official 茶農林登録品種一覧 (via minorien.jp), no such number exists: the numbered list runs directly from 茶農林44号 (Benifuuki, bred 1993) to 茶農林45号 (Ryofu, bred 1997), with nothing registered 1994–1996. This record treats the 1996 date as a Plant Variety Protection Act (種苗法) registration instead, per ja.wikipedia.org's チャノキ article, which lists Mineyutaka among cultivars registered under that Act rather than the Cha Norin system."
+conflicts:
+  - >-
+    Cha Norin number: the English-language master registry (japaneseteasommelier.wordpress.com)
+    lists Mineyutaka's 1996 registration in the same table and column format used for classic 茶農林
+    (Cha Norin) numbered cultivars, which could be misread as implying a Cha Norin number.
+    Cross-checked against MAFF's own official 茶農林登録品種一覧 (via minorien.jp), no such number exists:
+    the numbered list runs directly from 茶農林44号 (Benifuuki, bred 1993) to 茶農林45号 (Ryofu, bred 1997),
+    with nothing registered 1994–1996. MAFF's own Plant Variety Protection registry settles it:
+    Mineyutaka is registration No. 4835 under the 種苗法, granted 19 January 1996, and carries no Cha
+    Norin number.
 summary: A 1996 bud sport of Yabukita, discovered and grown almost exclusively on Tanegashima, Kagoshima, where it is one of a handful of locally distinctive cultivars alongside Shoju and Kuritawase; barely documented outside the island.
 sources:
+  - title: "みねゆたか 登録番号4835 - 農林水産省 品種登録データベース"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=4835&LANGUAGE=Japanese
   - title: "みねゆたか［匠］ - 品種のお茶専門店 心向樹"
     url: https://www.shinkoju.com/品種茶/みねゆたか/
   - title: "品種茶一覧 - 心向樹"
@@ -101,13 +112,15 @@ southern Kyushu. A 2018 sensory-evaluation study presented to the Japan Society 
 testing green teas made from cultivars grown specifically on Tanegashima, names Mineyutaka
 alongside Shoju (there called by its kanji name, 松寿) and Kuritawase as among the island's own
 distinctive local cultivars — grown in a district the paper notes still processes some of its tea
-by the traditional light-steaming (asamushi) method. That paper is the only source found that
-places Mineyutaka geographically; no source names the specific town, orchard, or year the mutation
-was first noticed.
+by the traditional light-steaming (asamushi) method. MAFF's registration record is more precise
+still: it gives the breeding site (育成地) as Nishinoomote City, the town at the northern end of
+Tanegashima, and lists Matsushita's address there as 古田 1101. No source names the orchard or the
+year the mutation was first noticed.
 
-It is also not clear whether 1996 is the year Matsushita first selected the sport or the year it
-cleared formal registration — for other cultivars in this collection those are usually years
-apart, but no source separates them for Mineyutaka. What can be said with more confidence is which
+The 1996 date is the year of registration, not of selection: Matsushita filed the application on
+9 August 1993 and the registration was granted on 19 January 1996, as No. 4835. The breeder's
+right did not last — MAFF records it as lapsing on 20 January 1998, two years into a nominal
+eighteen-year term. What can be said with more confidence is which
 registration this was *not*: Mineyutaka does not carry a 茶農林 (Cha Norin) number. The official
 MAFF 茶農林登録品種一覧 runs directly from 茶農林44号 (Benifuuki, bred 1993) to 茶農林45号 (Ryofu,
 bred 1997), with nothing registered in between — the national Cha Norin numbering system issued
@@ -121,7 +134,11 @@ normal route for a cultivar bred outside the national programme.
 
 Mineyutaka is an early-budding (早生) sencha cultivar — the one trait every source that mentions
 it agrees on — though no source gives a day-count relative to Yabukita, so none is stated here.
-Nothing citable was found on its growth habit, yield, or disease and cold resistance.
+MAFF's registration characteristics fill in the rest of the bush: growth habit slightly upright
+(樹姿やや直), vigour strong, spread large, cuttings rooting well, and yield rated やや多 (somewhat
+high) on both young and mature bushes. The same record distinguishes it from Yabukita precisely by
+that larger spread, a greener new leaf, and the earlier budding and plucking. Nothing citable was
+found on its disease or cold resistance.
 
 The clearest description of the cup comes from a Saitama-based specialist retailer selling
 single-cultivar Mineyutaka across several processing styles: regular sencha, deep-steamed

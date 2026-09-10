@@ -114,12 +114,13 @@ Its one clearly documented institutional role came in 1970, when the Shizuoka Te
 Station used it as the seed parent in a cross with Asatsuyu. The resulting line, carried under
 the strain name 70-30-302, went through individual selection in 1978–79, nursery-bed selection
 in 1981, clonal comparison trials from 1982 to 1987, and regional adaptability and
-characteristics trials from 1991 to 1997 at the station's main site in Kikugawa and its Fuji and
-Nakagawane branches. The line was named Tsuyuhikari and filed for Plant Variety Protection Act
-registration in 2000, adopted as a Shizuoka prefectural recommended cultivar in April 2001, and
-formally registered in March 2003. Its release paper credits it with strong resistance to tea
-anthracnose and a higher yield than Yabukita, but describes its aroma only as "refreshing" — none
-of Shizu-7132's cherry-leaf character appears to have carried through to its offspring.
+characteristics trials from 1991 to 1997 at the station's main site in Kikugawa, its Fuji branch
+and the Nakagawane town agriculture and forestry centre. The line was named Tsuyuhikari and filed
+for Plant Variety Protection Act registration in 2000, adopted as a Shizuoka prefectural
+recommended cultivar in April 2001, and formally registered in March 2003. Its release paper
+credits it with strong resistance to tea anthracnose and a higher yield than Yabukita, but
+describes its aroma only as "refreshing" — none of Shizu-7132's cherry-leaf character appears to
+have carried through to its offspring.
 
 ### Becoming "Machiko"
 

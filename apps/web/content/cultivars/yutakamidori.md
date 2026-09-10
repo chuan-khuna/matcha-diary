@@ -38,7 +38,30 @@ notableDescendants:
   - Okuyutaka
   - Shunmei
 lineageNote: An open-pollinated seedling selection from Asatsuyu seed, not a controlled cross — no pollen parent was ever recorded, and tea's self-incompatibility means a true self-pollination event (as an unrelated draft in this repository claims) would be biologically exceptional and needs stronger sourcing than could be found here.
-conflicts: "Registration status — the Japanese Tea Sommelier master list and MAFF's own 茶農林登録品種一覧 (checked directly against the rasterised PDF, entries 茶農林1号 to 52号) agree Yutakamidori never received a national Cha Norin number; it appears there only indirectly, as the recorded seed parent of Okuyutaka (茶農林34号, 1983) and Shunmei (茶農林37号, 1988). My Japanese Green Tea and Kyo Chikiriya instead describe a 1966 命名登録 (\"name registration\") carried out by Kagoshima Prefecture — a real, if sub-national, formal status, not a rejection or an omission. This record follows that framing (registry: prefectural recommended cultivar) rather than a flat \"unregistered,\" since the Plant Variety Protection Act did not exist until 1978 and a Cha Norin number was always available to a 1966 cultivar had one been sought. Cultivation share — Kyo Chikiriya gives 5.2% of national acreage \"as of December 2013\"; the Japanese Tea Sommelier list gives roughly 6% with no stated year (article posted August 2022); an unrelated draft in this repository's research/example directory claims 7% for 2023 with no source found. This record uses the dated 5.2% figure as best-sourced, though the true current share is plausibly a little higher. Self-pollination claim — that same example draft describes a \"rare self-pollination cross of Asatsuyu\" in 1934 and a strain name \"U14-1.\" No independently checked source here corroborates a 1934 date or a self-pollination event; every other source describes only an open-pollinated Asatsuyu seedling selected in 1949, and \"U14\" is independently confirmed, via the MAFF table, as Asatsuyu's own strain designation (国茶U14号) rather than Yutakamidori's — so \"U14-1\" looks like a conflation of the two cultivars' records. That claim is rejected here; no crossedYear is given."
+conflicts:
+  - >-
+    Registration status — the Japanese Tea Sommelier master list and MAFF's own 茶農林登録品種一覧 (checked
+    directly against the rasterised PDF, entries 茶農林1号 to 52号) agree Yutakamidori never received a
+    national Cha Norin number; it appears there only indirectly, as the recorded seed parent of
+    Okuyutaka (茶農林34号, 1983) and Shunmei (茶農林37号, 1988). My Japanese Green Tea and Kyo Chikiriya
+    instead describe a 1966 命名登録 ("name registration") carried out by Kagoshima Prefecture — a real,
+    if sub-national, formal status, not a rejection or an omission. This record follows that framing
+    (registry: prefectural recommended cultivar) rather than a flat "unregistered," since the Plant
+    Variety Protection Act did not exist until 1978 and a Cha Norin number was always available to a
+    1966 cultivar had one been sought.
+  - >-
+    Cultivation share — Kyo Chikiriya gives 5.2% of national acreage "as of December 2013"; the
+    Japanese Tea Sommelier list gives roughly 6% with no stated year (article posted August 2022);
+    an unrelated draft in this repository's research/example directory claims 7% for 2023 with no
+    source found. This record uses the dated 5.2% figure as best-sourced, though the true current
+    share is plausibly a little higher.
+  - >-
+    Self-pollination claim — that same example draft describes a "rare self-pollination cross of
+    Asatsuyu" in 1934 and a strain name "U14-1." No independently checked source here corroborates a
+    1934 date or a self-pollination event; every other source describes only an open-pollinated
+    Asatsuyu seedling selected in 1949, and "U14" is independently confirmed, via the MAFF table, as
+    Asatsuyu's own strain designation (国茶U14号) rather than Yutakamidori's — so "U14-1" looks like a
+    conflation of the two cultivars' records. That claim is rejected here; no crossedYear is given.
 summary: Selected in 1949 from an open-pollinated Asatsuyu seedling and named by Kagoshima Prefecture in 1966 without ever receiving a national Cha Norin number, Yutakamidori is Japan's second most-planted cultivar and the backbone of Kagoshima's shaded, deep-steamed sencha.
 sources:
   - title: 附表１ 茶農林登録品種一覧 (MAFF registered tea cultivar list)
@@ -117,13 +140,14 @@ parent line behind entries 34 and 37. Because the Plant Variety Protection Act d
 1978, a Cha Norin number was, in 1966, the only national-level status a cultivar this age could
 have held; Yutakamidori simply never went through that process, even though it clearly could have.
 
-Kagoshima trialled the new cultivar seriously. A 1972 comparison run by the prefecture's tea
-research station, published in the Tea Research Journal in 1979, tested Yutakamidori alongside
-five other early cultivars — Kuritawase, Makinoharawase, Hatsumidori, Yaeho and Surugawase — against
-a Yabukita control, aiming for an optimal first-flush plucking date around 18 April. Yutakamidori
-ranked fourth on tea quality behind Surugawase, Yabukita and Kuritawase, but the study still
-recommended it, alongside Kuritawase, as a suitable early cultivar "for the warm region of
-southern Kyushu."
+The new cultivar was trialled seriously in Kagoshima. A 1972 comparison run by the national tea
+experiment station's Makurazaki branch (農林水産省茶業試験場枕崎支場) in farmers' tea gardens around
+Makurazaki, published in the Tea Research Journal in 1979, tested Yutakamidori alongside five other
+early cultivars — Kuritawase, Makinoharawase, Hatsumidori, Yaeho and Surugawase — against a Yabukita
+control, and put its optimal first-flush plucking date at 18 April, eight days ahead of Yabukita's
+26 April. Yutakamidori ranked fourth on tea quality behind Surugawase, Yabukita and Kuritawase, but
+the study still recommended it, alongside Kuritawase, as a suitable early cultivar "for the warm
+region of southern Kyushu."
 
 What the trial reports do not fully convey is the rockier commercial start Yutakamidori actually
 had: processed the ordinary way, as a standard sencha, the leaf came out noticeably astringent and
@@ -150,11 +174,12 @@ parallel among Japan's other major cultivars.
 
 Yutakamidori is an early cultivar, budding about five days ahead of Yabukita (Ito En's comparison
 page states this directly; other sources round it to "about a week"). A 1990 Tea Research Journal
-trial in southern Kyushu, tracking third-year plant growth after first pruning, found Yutakamidori's
-canopy spread and branch diameter significantly larger than every comparison cultivar in the
-study — a vigorous, fast-establishing plant by measured standards, not just by reputation. Yield is
-reported as high and consistent across all three flushes; no source independently checked here
-gave a specific figure relative to Yabukita, so none is stated.
+trial in southern Kyushu, tracking third-year plant growth after first pruning, found that in its
+five-cultivar plot Yutakamidori's pruned-branch cross-sectional diameter was significantly larger
+than all four comparison cultivars, and its canopy spread larger than three of them, with only
+Kanayamidori matching it — a vigorous, fast-establishing plant by measured standards, not just by
+reputation. Yield is reported as high and consistent across all three flushes; no source
+independently checked here gave a specific figure relative to Yabukita, so none is stated.
 
 That vigour comes with a real limitation: cold and frost tolerance are weak. A 1991 Tea Research
 Journal trial recorded severe frost damage to Yutakamidori in a hard frost year, pushing the actual

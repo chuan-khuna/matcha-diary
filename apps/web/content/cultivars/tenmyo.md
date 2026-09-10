@@ -7,8 +7,9 @@ romaji: Tenmyō
 nameMeaning: "展 (ten, 'to unfold, display') + 茗 (myō, a classical word for tea) — read literally, something like 'tea on display'. The Kyoto Prefectural Tea Trade Association's English-language page glosses the name simply as 'Exhibition'; no source consulted explains why the name was specifically chosen."
 registered: 2006
 registrationNumber: null
-registry: Plant Variety Protection Act
+registry: "Plant Variety Protection Act — a Kyoto Prefecture release; application published 17 December 2004, registration No. 14535 granted 14 December 2006 for a 30-year term. No MAFF Cha Norin sequence number was found for this cultivar."
 selectedYear: 1977
+selectedFrom: Open-pollinated seed collected from Samidori bushes at the institute's Uji field in 1975, with selection begun in 1977; old strain name 53-38 (さみどり自然交雑実生)
 bredAt: Kyoto Prefectural Tea Research Institute (京都府茶業研究所)
 prefecture: Kyoto
 parents:
@@ -17,6 +18,8 @@ parents:
 parentNotes:
   female: さみどり — natural crossing
   male: unknown (open pollination)
+strainNames:
+  - 53-38
 teaTypes:
   - tencha
   - matcha
@@ -26,8 +29,8 @@ recommendedRegions:
   - Kyoto (Uji tea region — commercial plantings reported in Wazuka and Ujitawara)
 yield: high — on par with Samidori, bud-weight-type yield structure (Houshun, from the same seedling population, is bud-number-type)
 diseaseResistance:
-  - anthracnose (weak)
-  - gray blight / ring spot disease (medium)
+  - anthracnose (weak — 炭疽病抵抗性 弱 in the Kyoto Prefecture recommended-cultivar characteristics table, the same rating that table gives Yabukita)
+  - gray blight / ring spot disease (medium — 輪斑病抵抗性は中 in the Plant Variety Protection Act characteristic filing, and 中 in the Kyoto Prefecture table)
 siblingCultivars:
   - Houshun
 rarity: Still uncommon in the market some twenty years after registration — grown by a small number of specialist Uji farms as a single-cultivar matcha, rather than displacing the hand-picked Asahi/Samidori/Ujihikari trio at the top of Kyoto's tencha line-up.
@@ -36,6 +39,10 @@ summary: A mid-season tencha cultivar selected in 1977 from open-pollinated seed
 sources:
   - title: 新品種'鳳春（ほうしゅん）、展茗（てんみょう）'について
     url: https://www.pref.kyoto.jp/chaken/seika_hou-ten.html
+  - title: 品種登録 第14535号 展茗 — 農林水産省 品種登録公報 (registration No. 14535, 14 December 2006)
+    url: https://www.hinshu2.maff.go.jp/gazette/touroku/contents/191gaiyou.pdf
+  - title: 京都府茶奨励品種の栽培特性一覧 — 京都府茶業会議所
+    url: https://ujicha.or.jp/wp-content/themes/kyotocha/assets/files/hinsyutokusei.pdf
   - title: 宇治品種について（京都府ホームページ）
     url: https://www.pref.kyoto.jp/chaken/mame_ujihinnshu.html
   - title: 品種 | うじ茶のあれこれ（京都府茶業会議所）
@@ -95,7 +102,8 @@ Houshun both came from a third, intermediate route — open-pollinated seedlings
 Samidori seed, from which the institute began selecting promising individuals in 1977 (Showa
 52). Tenmyo carried the working strain name "53-38" through the trial period.
 
-The two cultivars were registered together in 2006 (Heisei 18) and announced jointly by the
+The two cultivars were registered together on 14 December 2006 (Heisei 18) — Tenmyo as Plant
+Variety Protection registration No. 14535, Houshun as No. 14534 — and announced jointly by the
 institute under the title "About the new cultivars Houshun and Tenmyo". The institute framed
 Houshun as an ultra-early gyokuro cultivar and Tenmyo as a "high-quality, high-yield tencha
 cultivar" (良質・多収てん茶用品種), noting three points in Tenmyo's favour: strong vigour and
@@ -137,10 +145,12 @@ green liquor, and a smooth, faintly marine or "seaweed" note characteristic of w
 tea. Several growers also report it making a good gyokuro, though tencha and matcha remain
 its primary use.
 
-Disease resistance data is thinner than for the agronomic figures above: one specialist
-reference reports Tenmyo as weak against anthracnose and only moderately resistant to gray
-blight (ring spot disease), but this was not corroborated in the institute's own material,
-which does not address disease resistance for either Tenmyo or Houshun.
+Tenmyo is weak against anthracnose and only moderately resistant to gray blight (ring spot
+disease). The institute's release announcement does not address disease resistance for either
+Tenmyo or Houshun, but both ratings are official elsewhere: the Plant Variety Protection Act
+characteristic filing gives 輪斑病抵抗性は中, and Kyoto Prefecture's recommended-cultivar
+characteristics table gives 炭疽病抵抗性 弱 alongside 輪斑病抵抗性 中 — the same anthracnose
+rating that table gives Yabukita.
 
 Two decades after registration, Tenmyo remains a minor cultivar in commercial terms. It solved
 a specific problem — quality tencha off a mechanical harvester — rather than aiming to

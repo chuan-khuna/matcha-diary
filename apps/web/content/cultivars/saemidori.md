@@ -4,7 +4,7 @@ slug: saemidori
 kana: さえみどり
 kanji: null
 romaji: Saemidori
-nameMeaning: "冴え (sae, clear/vivid/bright) + 緑 (midori, green). The original release literature explains the name as chosen for the vivid, clear green colour of the new leaf. Every primary source consulted for this record — the MAFF variety-registration database and the breeding team's own 2006 and 1991 papers — writes the registered name in hiragana only (さえみどり); the kanji form 冴え緑 seen on some retail and secondary pages is a folk rendering, not the registered form, so it is left null here."
+nameMeaning: "冴え (sae, clear/vivid/bright) + 緑 (midori, green). The original release literature explains the name as chosen for the vivid, clear green colour of the new leaf, and NARO's own 茶品種ハンドブック glosses the naming outright as 「さえみどり」（冴え緑）, so the kanji form is breeder-sanctioned rather than a retail invention. The registered name itself is hiragana only, though — the MAFF variety-registration database and the breeding team's own 2006 and 1991 papers all write さえみどり and nothing else — so 冴え緑 is a gloss rather than the registered form, and the kanji field is left null here."
 registered: 1990
 registrationNumber: 茶農林40号 (Cha Norin No. 40)
 registry: "MAFF Cha Norin naming registration (品種名称登録), granted June 1990, and separately a Plant Variety Protection Act registration (品種登録) under the then Seeds and Seedlings Act — application No. 3794 filed 29 March 1990, registration No. 2881 granted 19 November 1991, breeder's rights held by NARO for an 18-year term that expired 20 November 2009 on schedule. See conflicts."
@@ -22,14 +22,14 @@ teaTypes:
   - gyokuro
   - kamairicha
   - matcha
-buddingTime: "early — 4 days ahead of Yabukita to both budding and first-flush harvest at the Kagoshima breeding site (Takeda et al. 1991/2006); commonly cited more broadly as 4 days to about a week early (Ito En O-CHA NET: 4 days; 日本茶備忘録: 4 days to 1 week). A separate multi-year, multi-prefecture trial run for the related cultivar Haruto 34 (Yoshidome et al. 2018) measured Saemidori at 6.7 days early to budding and 4.4 days early to harvest, averaged across trial sites and years — consistent with the same early-but-not-extreme range."
+buddingTime: "early — 4 days ahead of Yabukita to both budding and first-flush harvest at the Kagoshima breeding site (Takeda et al. 1991/2006); cited more broadly as 4 to 7 days early by NARO's own 茶品種ハンドブック, and as 4 days to about a week elsewhere (Ito En O-CHA NET: 4 days; 日本茶備忘録: 4 days to 1 week). A separate multi-year, multi-prefecture trial run for the related cultivar Haruto 34 (Yoshidome et al. 2018) measured Saemidori at 6.7 days early to budding and 4.4 days early to harvest at that trial's own Miyazaki breeding site, and at 5.3 and 2.6 days early respectively when averaged across its national trial sites — consistent with the same early-but-not-extreme range."
 recommendedRegions:
   - Kagoshima (the breeding site and the leading producer; a de facto prefectural brand cultivar there)
   - Miyazaki
   - Mie
   - "All prefectures of Kyushu carried it as a recommended/semi-recommended cultivar as of the mid-2000s (Fukuoka, Saga, Nagasaki, Kumamoto, Oita, Miyazaki, Kagoshima)"
   - "Broader commercial adoption ran across roughly 15 prefectures from Shizuoka westward as of 2005 (Takeda et al. 2006)"
-yield: "531 kg/10a first flush, 297 kg/10a second flush, 279 kg/10a third flush at the Kagoshima breeding site (6–9-year-old bushes, 1979–1989 average) — well above Yabukita's 379/189/193 kg/10a in the same trial (Takeda et al. 2006). The cultivar's own Plant Variety Protection Act characteristic filing is more conservative, describing young-tree yield as merely average and mature-tree yield as only 'slightly high.'"
+yield: "531 kg/10a first flush, 297 kg/10a second flush, 279 kg/10a third flush at the Kagoshima breeding site (average of 6–9-year-old bushes; the 1979–1989 averaging period in the same table applies to the budding and harvest dates, not to these figures) — well above Yabukita's 379/189/193 kg/10a in the same trial (Takeda et al. 2006). The cultivar's own Plant Variety Protection Act characteristic filing is more conservative, describing young-tree yield as merely average and mature-tree yield as only 'slightly high.'"
 cultivationShare: roughly 4% of Japan's tea acreage, behind only Yabukita and Yutakamidori (The Japanese Tea Cultivars master list, undated recent snapshot, published 2022)
 diseaseResistance:
   - anthracnose / 炭疽病 (mixed rating — medium and better than Yabukita's own "weak" rating in the 2006 breeding-trial comparison table, but rated "slightly weak" in absolute terms on the Plant Variety Protection Act characteristic filing)
@@ -45,7 +45,35 @@ notableDescendants:
   - Kiyoka (FYZ-41 × Saemidori)
   - Danshin 37 (Saemidori × Yumekaori)
 lineageNote: A controlled cross, not a landrace selection — Yabukita and Asatsuyu are themselves both single-plant selections out of regional Zairai (seed-grown landrace) stands rather than crosses, so Saemidori's pedigree runs only one generation deep before it hits unrecorded seedling parentage on both sides. It has gone on to become an unusually prolific parent in its own right; the cultivars listed above only cover named, registered descendants found during this research.
-conflicts: "Two separate two-registry patterns, both resolved directly against primary documents rather than left as open disagreements. (1) Registration year: some sources say 1990, others 1991 — both are correct and refer to different filings. The MAFF Cha Norin naming registration (茶農林40号) was granted in June 1990; a separate Plant Variety Protection Act registration under the then Seeds and Seedlings Act followed, application filed 29 March 1990 (No. 3794) and granted 19 November 1991 (No. 2881) — confirmed directly against the MAFF variety-registration database record for No. 2881 and against the breeding team's own 2006 retrospective paper, which gives both dates explicitly. The Polish retailer source's '1990, variety #40' is correct; sources citing 1991 alone are describing the later Seeds and Seedlings Act filing rather than an error. (2) Seedling survival and cold hardiness: this record could not verify the widely circulated figure of roughly 73% seedling survival for Saemidori against Yabukita's 88%, and could not trace it to any primary source. The best comparable primary data found — Yoshidome et al. (2018), a 13–15-site national trial that used both cultivars as reference checks for the related cultivar Haruto 34 — instead gives Saemidori a national-average nursery survival rate of 75%, statistically level with Yabukita's own 75% in the same trial (range highly site-dependent, 1–100%, for both cultivars), and a first-year post-transplant establishment rate of 92% against Yabukita's 93%. This record follows the Yoshidome et al. figures and treats the 73%/88% figure as unverified rather than repeating it. Relatedly, the breeding team's own 2006 trial data rates Saemidori's winter cold hardiness (red-wilt and split-bark frost resistance) as strong, on par with or slightly better than Yabukita's — which sits awkwardly next to Saemidori's popular reputation as cold-sensitive. That reputation is not baseless, but it describes a different, narrower phenomenon: because Saemidori buds several days before Yabukita, its new shoots are exposed to late-spring frost events that a later-budding cultivar would miss entirely, and recovery from that specific kind of frost damage is reported as poor (日本茶備忘録). This record treats that as an early-budding exposure risk rather than a general cold-intolerance, since the trial data does not support the latter."
+conflicts:
+  - >-
+    Registration year: some sources say 1990, others 1991 — both are correct and refer to different
+    filings. The MAFF Cha Norin naming registration (茶農林40号) was granted in June 1990; a separate
+    Plant Variety Protection Act registration under the then Seeds and Seedlings Act followed,
+    application filed 29 March 1990 (No. 3794) and granted 19 November 1991 (No. 2881) — confirmed
+    directly against the MAFF variety-registration database record for No. 2881 and against the
+    breeding team's own 2006 retrospective paper, which gives both dates explicitly. The Polish
+    retailer source's '1990, variety #40' is correct; sources citing 1991 alone are describing the
+    later Seeds and Seedlings Act filing rather than an error.
+  - >-
+    Seedling survival: this record could not verify the widely circulated figure of roughly 73%
+    seedling survival for Saemidori against Yabukita's 88%, and could not trace it to any primary
+    source. The best comparable primary data found — Yoshidome et al. (2018), a 13–15-site national
+    trial that used both cultivars as reference checks for the related cultivar Haruto 34 — instead
+    gives Saemidori a national-average nursery survival rate of 75%, statistically level with
+    Yabukita's own 75% in the same trial (range highly site-dependent, 1–100%, for both cultivars),
+    and a first-year post-transplant establishment rate of 92% against Yabukita's 93%. This record
+    follows the Yoshidome et al. figures and treats the 73%/88% figure as unverified rather than
+    repeating it.
+  - >-
+    Cold hardiness: the breeding team's own 2006 trial data rates Saemidori's winter cold hardiness
+    (red-wilt and split-bark frost resistance) as strong, on par with or slightly better than
+    Yabukita's — which sits awkwardly next to Saemidori's popular reputation as cold-sensitive. That
+    reputation is not baseless, but it describes a different, narrower phenomenon: because Saemidori
+    buds several days before Yabukita, its new shoots are exposed to late-spring frost events that a
+    later-budding cultivar would miss entirely, and recovery from that specific kind of frost damage
+    is reported as poor (日本茶備忘録). This record treats that as an early-budding exposure risk rather
+    than a general cold-intolerance, since the trial data does not support the latter.
 summary: Registered in 1990 as Cha Norin No. 40 from a 1969 Yabukita × Asatsuyu cross bred at Makurazaki, Kagoshima, Saemidori buds about four days ahead of Yabukita and is prized for high amino acids, low astringency and vivid green colour — Japan's most widely planted premium sencha cultivar after Yabukita, at roughly 4% of national tea acreage.
 sources:
   - title: "緑茶用早生品種「さえみどり」および晩生品種「おくみどり」の育成 / Breeding of the early budding cultivar 'Saemidori' and the late budding cultivar 'Okumidori'"
@@ -54,6 +82,8 @@ sources:
     url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=2881&LANGUAGE=Japanese
   - title: 品種登録データベース検索 (Registered Variety Database search) — MAFF
     url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM110.aspx
+  - title: 茶品種ハンドブック 第6版 Version 2 (NARO Tea Cultivar Handbook, 6th ed., August 2022) — さえみどり entry
+    url: https://www.naro.go.jp/publicity_report/publication/files/cha_hinshu_handbook06.pdf
   - title: "'Haruto34': An Extremely Early-Budding New Green Tea Cultivar"
     url: https://www.jstage.jst.go.jp/article/cha/2018/125/2018_7/_article/-char/en
   - title: さえみどり — お茶百科 品種紹介 (o-cha.net teacha)
@@ -144,9 +174,11 @@ Yabukita itself.
 Saemidori buds and reaches first-flush harvest about four days ahead of Yabukita at the Kagoshima
 breeding site — 19 March versus 23 March for budding, 18 April versus 22 April for harvest, in the
 breeding team's own multi-year trial average. Cited more loosely elsewhere as "four days to about a
-week" early, and measured at 6–7 days early to budding in a separate, more recent multi-prefecture
-trial run for the related cultivar Haruto 34. Growth habit is intermediate, vigour is about equal
-to or slightly stronger than Yabukita's, and cutting propagation takes well.
+week" early — a range NARO's own cultivar handbook gives as four to seven days — and measured at
+6.7 days early to budding at the Miyazaki breeding site of a separate, more recent multi-prefecture
+trial run for the related cultivar Haruto 34, whose own average across its national trial sites is a
+more modest 5.3 days. Growth habit is intermediate, vigour is about equal to or slightly stronger
+than Yabukita's, and cutting propagation takes well.
 
 Fresh-leaf yield at the breeding site clearly beat Yabukita across every flush in the original
 trial — 531 vs. 379 kg/10a in first flush, 297 vs. 189 kg/10a in second, 279 vs. 193 kg/10a in

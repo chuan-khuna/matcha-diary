@@ -7,7 +7,7 @@ romaji: Okuyutaka
 nameMeaning: "おく (oku, the conventional prefix marking a late-budding cultivar — the same one in Okumidori, Okuhikari, Okumusashi and Okuharuka) plus ゆたか (yutaka, abundant), carried over from its seed parent Yutakamidori. The name reads as \"the late Yutaka\", which is a fair description of what it is."
 registered: 1983
 registrationNumber: 茶農林34号 (Cha Norin No. 34)
-registry: Ministry of Agriculture and Forestry
+registry: MAFF
 strainNames:
   - 金谷3号 (Kanaya No. 3)
 crossedYear: 1958
@@ -34,7 +34,7 @@ yield: about 50% above Yabukita overall, approaching double at some trial sites 
 diseaseResistance:
   - cold damage in the field (less than Yabukita)
   - anthracnose / 炭疽病 (low incidence)
-lineageNote: A controlled cross at Kanaya, Yutakamidori against the unreleased breeding line F1NN8. Both of F1NN8's own parents are in this collection — Tamamidori, a Uji zairai selection, and S6, the Shizuoka landrace selection that also produced Kanayamidori — so Okuyutaka is one of the few cultivars here whose grandparents are all documented. F1NN8 is also the pollen parent of Shunmei, which makes the two half-siblings.
+lineageNote: A controlled cross at Kanaya, Yutakamidori against the unreleased breeding line F1NN8. Both of F1NN8's own parents are in this collection — Tamamidori, a Uji zairai selection, and S6, the Shizuoka landrace selection that also produced Kanayamidori — so Okuyutaka is one of the few cultivars here whose grandparents are all documented. Shunmei (茶農林37号) comes from the same Yutakamidori × F1NN8 cross, which makes the two full siblings.
 conflicts: null
 documentation: sparse — a Cha Norin registry row and secondary compilations; no NARO handbook entry (the 6th edition covers recent releases) and no release paper was retrieved for this record
 summary: A 1958 Kanaya cross of Yutakamidori against the breeding line F1NN8, registered in 1983 as Cha Norin No. 34 — a late sencha cultivar that yields around half again as much as Yabukita and sometimes close to double, with a mild, amino-acid-heavy cup that reads as its seed parent slowed down by a fortnight.
@@ -62,8 +62,8 @@ both ends.
 This is one of the very few records in the collection whose grandparents are all documented here.
 Tamamidori is a Uji zairai selection registered in the same 1953 batch as Yabukita; S6 is the
 Shizuoka landrace selection that also produced Kanayamidori; and Yutakamidori descends from
-Asatsuyu, another of the 1953 Uji selections. F1NN8 is also the pollen parent of Shunmei, so
-Okuyutaka and Shunmei are half-siblings.
+Asatsuyu, another of the 1953 Uji selections. Shunmei was selected from the same Yutakamidori ×
+F1NN8 cross, so Okuyutaka and Shunmei are full siblings.
 
 ## History
 

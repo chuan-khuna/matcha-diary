@@ -4,12 +4,12 @@ slug: yamanoibuki
 kana: やまのいぶき
 kanji: 山の息吹
 romaji: Yamanoibuki
-nameMeaning: "\"Breath of the mountain\" — yama (山, mountain) + no (の, possessive) + ibuki (息吹, breath, or figuratively a stirring of life). No sourced account explains why this particular image was chosen; unlike some Shizuoka-bred siblings (Okuhikari's name, for instance, is explained in the breeding station's own literature), nothing found for this record ties the name to a specific trait, place or story."
+nameMeaning: "\"Breath of the mountain\" — yama (山, mountain) + no (の, possessive) + ibuki (息吹, breath, or figuratively a stirring of life). The Shizuoka Prefectural Tea Industry Council's cultivar guidebook gives the naming account in full: because the selection was gathered from the mountain country of Nakakawane, the name pictures a wind of new greenery blowing through the encircling hills across tea buds that have flushed ahead of everything else, and at the same time carries a wish that a new breath (新たな息吹) would stir in the tea industry."
 registered: 1997
-registrationNumber: null
+registrationNumber: Registration No. 5430 (Plant Variety Protection Act, registered 7 March 1997; applied 31 March 1994 as application No. 6767)
 registry: Plant Variety Protection Act
 selectedYear: null
-selectedFrom: "Open-pollinated (natural-cross) seedlings raised from Yabukita seed at the Shizuoka Prefectural Tea Experiment Station"
+selectedFrom: "Cuttings taken in 1975 from a Yabukita open-pollinated seedling tea garden (「やぶきた」実生茶園) at Nakakawane-chō, Haibara-gun, Shizuoka, and selected at the Shizuoka Prefectural Tea Experiment Station"
 bredAt: Shizuoka Prefectural Tea Experiment Station (静岡県茶業試験場; reorganised since as the Tea Research Center, Shizuoka Prefectural Research Institute of Agriculture and Forestry)
 prefecture: Shizuoka
 parents:
@@ -25,13 +25,15 @@ recommendedRegions:
   - Shizuoka — specifically warm districts with low frost risk, per the breeding station's own cultivation guidance
 yield: comparable to Yabukita
 diseaseResistance:
-  - anthracnose (strong — somewhat better than Yabukita)
+  - anthracnose (medium — stronger than Yabukita)
   - cold injury / red-scorch (赤枯れ) (strong)
   - stem/root rot (立枯れ症) (weak — same as Yabukita)
   - white peach scale / mulberry scale insect (クワシロカイガラムシ) (weak — same as Yabukita)
-lineageNote: An open-pollinated Yabukita seedling rather than a controlled cross, selected at the Shizuoka Prefectural Tea Experiment Station; because pollination was uncontrolled, the pollen parent was never recorded and cannot now be known, the same structural gap one generation further down from Yabukita's own origin as a Zairai selection.
-summary: An early-budding sencha cultivar selected from open-pollinated Yabukita seed at the Shizuoka Prefectural Tea Experiment Station and registered in 1997, Yamanoibuki buds four to five days before Yabukita and was promoted as a strategic cultivar to rival Kagoshima's early Yutakamidori in Shizuoka's shincha market.
+lineageNote: An open-pollinated Yabukita seedling rather than a controlled cross, collected as cuttings from a seedling tea garden at Nakakawane-chō and selected at the Shizuoka Prefectural Tea Experiment Station; because pollination was uncontrolled, the pollen parent was never recorded and cannot now be known, the same structural gap one generation further down from Yabukita's own origin as a Zairai selection.
+summary: An early-budding sencha cultivar selected at the Shizuoka Prefectural Tea Experiment Station from a Yabukita open-pollinated seedling tea garden in the mountain interior of Nakakawane and registered in 1997, Yamanoibuki buds four to five days before Yabukita and was promoted as a strategic cultivar to rival Kagoshima's early Yutakamidori in Shizuoka's shincha market.
 sources:
+  - title: "登録品種データベース：山の息吹（登録番号5430） — 農林水産省 品種登録ホームページ"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=5430&LANGUAGE=Japanese
   - title: "山の息吹（品種茶） — 心向樹"
     url: https://www.shinkoju.com/品種茶/山の息吹/
   - title: "品種茶一覧 — 心向樹"
@@ -58,44 +60,47 @@ sources:
 
 # Yamanoibuki
 
-Yamanoibuki (山の息吹, "breath of the mountain") is an early-budding sencha cultivar selected
-from open-pollinated Yabukita seed at the Shizuoka Prefectural Tea Experiment Station and
-registered in 1997. It exists to answer a specific competitive problem: Kagoshima's early-budding
-Yutakamidori reaches the shincha (new-season tea) market before Shizuoka's mid-season Yabukita
-crop is ready, and Shizuoka's own tea industry council promoted Yamanoibuki as one of a handful of
-"strategic cultivars" meant to close that gap without sacrificing cup quality — an early cultivar
-whose water colour, aroma and taste hold up rather than the thinner, greener liquor early
-cultivars often give.
+Yamanoibuki (山の息吹, "breath of the mountain") is an early-budding sencha cultivar selected at
+the Shizuoka Prefectural Tea Experiment Station from a Yabukita open-pollinated seedling tea
+garden in the mountain interior of Nakakawane and registered in 1997. It exists to answer a
+specific competitive problem: Kagoshima's early-budding Yutakamidori reaches the shincha
+(new-season tea) market before Shizuoka's mid-season Yabukita crop is ready, and Shizuoka's own
+tea industry council promoted Yamanoibuki as one of a handful of "strategic cultivars" meant to
+close that gap without sacrificing cup quality — an early cultivar whose water colour, aroma and
+taste hold up rather than the thinner, greener liquor early cultivars often give.
 
 ## Lineage
 
-- **Yabukita seed** — an individual selection grown from Yabukita's own open-pollinated seed at
-  the Shizuoka station, not a cutting of Yabukita itself and not the product of a controlled
+- **Yabukita seed** — an individual selection out of a tea garden planted with Yabukita's own
+  open-pollinated seedlings, not a cutting of Yabukita itself and not the product of a controlled
   cross.
 
 Because Yamanoibuki was raised from seed rather than crossed deliberately, its pollen parent was
-never controlled and is not recorded. What is documented is the seed parent: an open-pollinated
-Yabukita mother plant at the Shizuoka Prefectural Tea Experiment Station, its flowers fertilised
-by whatever pollen reached them from a neighbouring bush. This is the same structural gap that
-applies to Yabukita's own origin from a Zairai stand, one generation further down the tree — and
-it puts Yamanoibuki in the same category as Sayamakaori, another Yabukita open-pollinated seedling
-selected at a different prefectural station four decades earlier. No cultivar bred from Yamanoibuki
+never controlled and is not recorded. What is documented is the seed parent: a Yabukita mother
+plant whose flowers were fertilised by whatever pollen reached them from a neighbouring bush, its
+seedlings growing in a tea garden at Nakakawane-chō in Haibara-gun from which the station took
+cuttings in 1975. This is the same structural gap that applies to Yabukita's own origin from a
+Zairai stand, one generation further down the tree — and it puts Yamanoibuki in the same category
+as Sayamakaori, another Yabukita open-pollinated seedling selected at a different prefectural
+station four decades earlier. No cultivar bred from Yamanoibuki
 itself, and no notable siblings from the same seed lot, were found in the sources consulted.
 
 ## History
 
 Yamanoibuki was selected at the Shizuoka Prefectural Tea Experiment Station (静岡県茶業試験場) —
 the institution, since reorganised into the Tea Research Center of the Shizuoka Prefectural
-Research Institute of Agriculture and Forestry, that also bred Okuhikari and Meiryoku among others.
-It was named and registered in 1997 under Japan's Plant Variety Protection Act (種苗法) rather than
+Research Institute of Agriculture and Forestry, that also bred Okuhikari and Tsuyuhikari among
+others. It was named and registered under Japan's Plant Variety Protection Act (種苗法) rather than
 as a numbered Cha Norin (茶農林) cultivar: a full table of the 52 Cha Norin registrations issued
-between 1953 and 2003 — a range that spans 1997 on both sides — contains no entry for Yamanoibuki,
-while both the Japanese Tea Sommelier's master cultivar registry and My Japanese Green Tea's
-cultivar list separately confirm a 1997 Seed and Seedling Law registration. No exact registration
-number was found in any source consulted, and no selection year distinct from the 1997 registration
-date is sourced either, so both are left unstated here rather than guessed. This registration path
-mirrors Okuhikari's own a decade earlier, and Shizuoka Prefecture's broader habit of registering
-its home-bred cultivars directly rather than through the nationally coordinated Cha Norin trial
+between 1953 and 2003 — a range that spans 1997 on both sides — contains no entry for Yamanoibuki.
+Shizuoka Prefecture filed the application on 31 March 1994 and the cultivar was entered on the
+MAFF variety register as No. 5430 on 7 March 1997, the breeders named on the filing being Tamotsu
+Hidaka, Kōichi Kuranuki, Yoriyuki Nakamura and Hidefumi Itō; the breeder's right was allowed to
+lapse on 8 March 2000, so the cultivar is no longer protected and may be propagated freely. No
+selection year distinct from the 1975 collection date is sourced, so it is left unstated here
+rather than guessed. This registration path mirrors Okuhikari's own a decade earlier, and Shizuoka
+Prefecture's broader habit of registering its home-bred cultivars directly rather than through the
+nationally coordinated Cha Norin trial
 series that produced releases like Meiryoku at the separate, national station in Kanaya.
 
 Shizuoka's own tea industry council later listed Yamanoibuki, alongside Okuhikari, as one of a

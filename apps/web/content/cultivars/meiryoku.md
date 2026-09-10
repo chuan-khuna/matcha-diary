@@ -2,9 +2,9 @@
 name: Meiryoku
 slug: meiryoku
 kana: めいりょく
-kanji: 明緑
+kanji: 茗緑
 romaji: Meiryoku
-nameMeaning: "\"Bright green\" (明 mei, bright + 緑 ryoku, green). The release paper notes that tea is also referred to by the classical Sino-Japanese word 茗 (myō), and glosses the chosen name in English as \"Bright Green Tea\" — a nod to the cultivar's leaf colour."
+nameMeaning: "\"Tea green\" (茗 mei, the classical Sino-Japanese word for the tea plant + 緑 ryoku, green). The release paper explains that tea is also called 茗 in Chinese, and that the name was coined to carry the sense of the cultivar's bright green (明るい緑) leaf colour; it designates 茗緑 as the kanji form to use and glosses the name in English as \"Bright Green Tea\"."
 registered: 1986
 registrationNumber: 茶農林35号 (Cha Norin No. 35)
 registry: MAFF
@@ -33,7 +33,17 @@ diseaseResistance:
   - cold hardiness (medium overall, but comparatively weak against frost-crack/laceration-type winter injury)
 lineageNote: A controlled cross between two long-established Cha Norin cultivars, made at the predecessor of the Kanaya national tea research station; several secondary registries instead list Z1 as the pollen parent, which the primary release paper does not support (see conflicts).
 documentation: normal — a peer-reviewed release paper survives, plus several later agronomic studies
-conflicts: "Parentage. The Cha Norin registry table reproduced by Minorien (附表１ 茶農林登録品種一覧) and the Japanese Tea Sommelier registry list both give the cross as Yabukita × Z1. The peer-reviewed release paper — Kozaki (1987), Japanese Journal of Breeding, which reproduces MAFF's own 1986 registration dossier — gives Yabukita × Yamatomidori in both its Japanese text and English abstract, with a full breeding chronology (crossed 1959, selected 1965, strain-numbered 1967, retested as Kanaya 6 from 1977). This record follows the release paper as the better-sourced primary account; Z1 was not found to be part of Meiryoku's own pedigree, though it is a documented parent of two related Kanaya/Makurazaki-bred cultivars, Fushun and Saeakari (see History)."
+conflicts:
+  - >-
+    Parentage: the Cha Norin registry table reproduced by Minorien (附表１ 茶農林登録品種一覧) and the Japanese
+    Tea Sommelier registry list both give the cross as Yabukita × Z1. The peer-reviewed release
+    paper — Kozaki (1987), Japanese Journal of Breeding, which reproduces MAFF's own 1986
+    registration dossier — gives Yabukita × Yamatomidori in both its Japanese text and English
+    abstract, with a full breeding chronology (crossed 1959, selected 1965, strain-numbered 1967,
+    retested as Kanaya 6 from 1977). This record follows the release paper as the better-sourced
+    primary account; Z1 was not found to be part of Meiryoku's own pedigree, though it is a
+    documented parent of two related Kanaya/Makurazaki-bred cultivars, Fushun and Saeakari (see
+    History).
 summary: A 1959 Yabukita × Yamatomidori cross bred at Kanaya and registered in 1986 as Cha Norin No. 35, Meiryoku is a medium-season Shizuoka sencha cultivar valued for anthracnose and ring-blight resistance, though several registries mistakenly credit its pollen parent as the breeding line Z1.
 sources:
   - title: "夏作物・園芸作物等新品種の紹介－昭和61年農林水産省登録－(I)果樹・茶・桑 (New summer crop cultivars registered by MAFF in 1986; (I) Fruit trees, Tea and Mulberry), by Itaru Kozaki, Japanese Journal of Breeding 37(1), 1987"
@@ -46,7 +56,7 @@ sources:
     url: https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
   - title: "主要品種のさし木発根性 (Cutting Rooting Ability of Major Cultivars), by Kaoru Matsushita and Shun Anma, 茶業研究報告 1973(Feb)"
     url: https://www.jstage.jst.go.jp/article/cha1953/1973/Feb/1973_Feb_1/_article
-  - title: "個別官能審査による茶の質評価 (Individual Sensory Evaluation of Tea Quality), by Namiko Ikeda, 茶業研究報告 75, 1992"
+  - title: "個別官能審査による茶の品質評価 (Individual Sensory Evaluation of Tea Quality), by Namiko Ikeda, 茶業研究報告 75, 1992"
     url: https://www.jstage.jst.go.jp/article/cha1953/1992/75/1992_75_13/_article/-char/ja
   - title: "接木育成茶樹の新芽生育及び遊離アミノ酸含量に及ぼす台木品種の影響 (Effect of Rootstock Cultivar on New Shoot Growth and Free Amino Acid Content of Grafted Tea Trees), by Koji Tadaya and Masatomo Ito, 茶業研究報告 83, 1996"
     url: https://www.jstage.jst.go.jp/article/cha1953/1996/83/1996_83_1/_article/-char/ja

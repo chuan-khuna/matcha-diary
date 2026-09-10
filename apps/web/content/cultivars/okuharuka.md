@@ -6,11 +6,11 @@ kanji: null
 romaji: Okuharuka
 nameMeaning: "おく (oku, the conventional prefix for late-budding tea cultivars, also used in Okumidori, Okuyutaka and Okuhikari) plus はるか. The release paper glosses the full name as おく春香 (oku-haruka, 'late spring fragrance') and explains it directly: chosen because, despite budding at the very end of the season, the cultivar carries a sweet cherry-leaf aroma that evokes spring."
 registered: 2015
-registrationNumber: null
+registrationNumber: "Plant Variety Protection Act registration No. 23946 (application No. 27958) — not a Cha Norin / 茶農林 number; Okuharuka carries no 茶農林 designation"
 registry: Plant Variety Protection Act
 crossedYear: 1975
 selectedYear: 1982
-bredAt: "Saitama Prefectural Agriculture and Forestry Research Center, Green Tea Laboratory (埼玉県農林総合研究センター茶業研究所) — the current name of the same Saitama tea-breeding programme, under earlier names, that produced Okumusashi, Fukumidori and Sayamakaori"
+bredAt: "Saitama Prefectural Agriculture and Forestry Research Center, Green Tea Laboratory (埼玉県農林総合研究センター茶業研究所) — the name on the release paper's byline; the same Saitama tea-breeding programme, under earlier names, that produced Okumusashi, Fukumidori and Sayamakaori, and which today carries the name Saitama Prefectural Tea Research Institute (埼玉県茶業研究所) again"
 prefecture: Saitama
 parents:
   female: Saitama 20
@@ -36,7 +36,22 @@ diseaseResistance:
   - tea scale insect, クワシロカイガラムシ (somewhat weak — about the same as Yabukita)
 rarity: "Newly registered (application published 2013, registered 2015) — too recent for any cultivation-share or acreage figure to have been sourced. Already sold as a single-cultivar tea by specialist retailers such as Shinkoju."
 lineageNote: A controlled cross, not a landrace selection, made in 1975 — but both parents are themselves unreleased internal Saitama breeding lines rather than named cultivars, so Okuharuka's documented pedigree runs two generations deep into the station's own breeding programme before it reaches any registered cultivar (Sayamamidori, Yamatomidori, Yabukita). No descendants of Okuharuka are documented in the sources consulted; it is too recently registered to have any yet.
-conflicts: "Registration year is disputed between sources. The release paper (Nakajima et al., 2014, primary source) states only that a Plant Variety Protection Act application was filed in March 2013 and the application was published (出願公表) on 5 July 2013 — it does not report a registration grant, because none had happened yet when the paper went to press in December 2014. Shinkoju's own cultivar-index page uses the identical framing: '2013年に出願公表されました' (application published in 2013), not registration. The Japanese Tea Sommelier's master registry list and myjapanesegreentea.com's cultivar list both independently give 2015 as the registration year. Read together, these sources are consistent rather than contradictory: 2013 is the application-publication date, and 2015 is most likely the actual grant date, which would explain why no source claiming 2013 as a registration year traces back to a primary document. A direct query of the MAFF Plant Variety Protection database (hinshu2.maff.go.jp) was attempted to confirm the exact grant date and registration number, but its search form did not return a result through scripted queries, so the registration number is left null here rather than guessed."
+conflicts:
+  - >-
+    Registration year: quoted inconsistently across sources. The release paper (Nakajima et al.,
+    2014, primary source) states only that a Plant Variety Protection Act application was filed in
+    March 2013 and the application was published (出願公表) on 5 July 2013 — it does not report a
+    registration grant, because none had happened yet when the paper went to press in December 2014.
+    Shinkoju's own cultivar-index page uses the identical framing: '2013年に出願公表されました' (application
+    published in 2013), not registration. The Japanese Tea Sommelier's master registry list and
+    myjapanesegreentea.com's cultivar list both independently give 2015 as the registration year.
+    Read together, these sources are consistent rather than contradictory: 2013 is the
+    application-publication date, and 2015 is the actual grant date, which explains why no source
+    claiming 2013 as a registration year traces back to a primary document. The MAFF Plant Variety
+    Protection database (hinshu2.maff.go.jp) settles it: application No. 27958 filed 5 March 2013,
+    published 5 July 2013, registration No. 23946 granted 11 March 2015 to Saitama Prefecture.
+    Saitama's own cultivar leaflet prints the same number (品種登録番号 第23946号), and the prefecture's
+    cultivar page dates the registration to 平成27年 (2015).
 summary: An extremely late-budding, cold-hardy Saitama cultivar bred from Saitama 20 × Saitama 7, application-published in 2013 and registered in 2015; trial data show markedly lower frost damage than even Sayamakaori, and it carries a distinctive cherry-leaf aroma linked to coumarin in the leaf.
 sources:
   - title: "耐寒性を有した極晩生の煎茶用品種'おくはるか'の育成 (Cultivation of New Extremely Late Budding Green Tea, 'Okuharuka' with Cold Resistance) — Nakajima, Miyazaki, Honda, Sakai, Tanaka, Sasaki, Takahashi, Fuchinoue, Kitada, Okano, Kyogoku & Uchino, 茶業研究報告 (Tea Research Report) No. 118, pp.1–9 (2014)"
@@ -51,8 +66,14 @@ sources:
     url: https://japaneseteasommelier.wordpress.com/2022/08/22/the-japanese-tea-cultivars/
   - title: "Japanese Tea Cultivar List"
     url: https://www.myjapanesegreentea.com/japanese-tea-cultivar-list
-  - title: "品種登録データベース (MAFF Plant Variety Protection database) — search attempted for おくはるか"
-    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM110.aspx
+  - title: "品種登録データベース (MAFF Plant Variety Protection database) — registered variety record for おくはるか, registration No. 23946"
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=23946&LANGUAGE=Japanese
+  - title: "埼玉県が育成した茶の品種 / Tea cultivars bred by Saitama Prefecture — Saitama Prefectural Tea Research Institute; carries the 茶業研究報告 No. 139 correction to Okuharuka's pedigree chart"
+    url: https://www.pref.saitama.lg.jp/b0914/saitamaken_cha_hinshu.html
+  - title: "緑茶用極晩生品種'おくはるか' (Okuharuka introductory leaflet) — 埼玉県茶業研究所"
+    url: https://www.pref.saitama.lg.jp/documents/284524/okuharuka.pdf
+  - title: "おくはるか栽培マニュアル (Okuharuka cultivation manual) — 埼玉県茶業研究所"
+    url: https://www.pref.saitama.lg.jp/documents/284524/okuharukasaibai.pdf
 ---
 
 # Okuharuka
@@ -78,8 +99,10 @@ cultivar's own release paper attributes in part to a high coumarin content in th
   parents; either way, it contributes late budding and high yield.
 - **Saitama 7** (埼玉7号) ♂ — the pollen parent. Also an unreleased internal Saitama line, descended
   from Yabukita through two successive generations of open (natural) pollination, via an
-  intermediate line recorded in the pedigree chart only as 56G1-99. It contributes comparatively
-  early budding and strong cold hardiness.
+  intermediate line recorded in the pedigree chart as 56G1-99 — which the Saitama Prefectural Tea
+  Research Institute has since corrected: a notice in 茶業研究報告 No. 139 gives that line's correct
+  designation as 5507 (埼玉13号, Saitama No. 13). It contributes comparatively early budding and
+  strong cold hardiness.
 
 This is a controlled cross, not a landrace selection, but an unusual one for how far back its named
 ancestry sits: neither parent was ever released under its own name, so Okuharuka's documented
@@ -90,12 +113,13 @@ it has not yet had time to be used as a parent itself.
 
 ## History
 
-The cross was made in 1975 at what is now the Saitama Prefectural Agriculture and Forestry Research
-Center's Green Tea Laboratory, using the high-yielding, late-budding line Saitama 20 as the seed
-parent and the cold-hardy, somewhat-early line Saitama 7 as the pollen parent. Seed was collected
-and sown in 1976, seedlings were planted to the field in 1978, and individual selection ran through
-1982. From 1986 the selected line entered the station's 34th group of clonal comparison trials
-(栄養系比較試験第34群), where its cultivation characteristics first stood out.
+The cross was made in 1975 at what the release paper calls the Saitama Prefectural Agriculture and
+Forestry Research Center's Green Tea Laboratory — the station is once again the Saitama Prefectural
+Tea Research Institute (埼玉県茶業研究所) today — using the high-yielding, late-budding line Saitama 20
+as the seed parent and the cold-hardy, somewhat-early line Saitama 7 as the pollen parent. Seed was
+collected and sown in 1976, seedlings were planted to the field in 1978, and individual selection
+ran through 1982. From 1986 the selected line entered the station's 34th group of clonal comparison
+trials (栄養系比較試験第34群), where its cultivation characteristics first stood out.
 
 From 2002 the line — by now carrying the working name Saitama 42 (埼玉42号) — was entered into the
 10th group of Japan's national tea strain-adaptability trial (系統適応性試験第10群), run in
@@ -113,9 +137,9 @@ month. In March 2013, under the name Okuharuka, a cultivar registration applicat
 the Seed and Seedling Act (種苗法) — Japan's Plant Variety Protection Act — and the application was
 published on 5 July 2013. The release paper, received by the journal in June 2014 and published in
 December 2014, reports the application and its publication but not a registration grant, because
-none had yet occurred; independent secondary sources (the Japanese Tea Sommelier's registry and
-myjapanesegreentea.com's cultivar list) place the actual registration in 2015. See the `conflicts` note
-in the frontmatter for the full reasoning.
+none had yet occurred. The MAFF Plant Variety Protection database records the grant itself: application
+No. 27958, filed 5 March 2013, published 5 July 2013, and registered as No. 23946 on 11 March 2015 in
+the name of Saitama Prefecture. See the `conflicts` note in the frontmatter for the full reasoning.
 
 The named authors span the full life of the programme: current station staff Nakajima Kenta,
 Miyazaki Yasuhiro, Honda Yusuke, Sakai Takashi, Tanaka Eri, Sasaki Koji and Takahashi Atsushi

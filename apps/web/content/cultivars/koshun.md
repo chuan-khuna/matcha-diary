@@ -7,9 +7,10 @@ romaji: Kōshun
 nameMeaning: "'Kō' (香, fragrance) plus 'shun' from Suruga (駿河), the old province name for the Shizuoka area where it was bred. The breeding station's own retrospective on the cultivar states it was named because its aroma reads as clearly different from Yabukita's, and that difference was meant to be the point — a flavour-branded product rather than a bulk one."
 registered: 2000
 registrationNumber: null
-registry: Plant Variety Protection Act
+registry: Plant Variety Protection Act — registration No. 8131, granted 27 June 2000. No MAFF Cha Norin sequence number was found for this cultivar.
+plantVarietyRegistration: 品種登録第8131号, granted 27 June 2000; application No. 9199 filed 21 October 1996, published 12 March 1999
 crossedYear: 1970
-bredAt: Shizuoka Prefectural Tea Experiment Station (静岡県茶業試験場)
+bredAt: Shizuoka Prefectural Tea Experiment Station (静岡県茶業試験場; reorganised since as the Tea Research Center, Shizuoka Prefectural Research Institute of Agriculture and Forestry)
 prefecture: Shizuoka
 parents:
   female: Kurasawa
@@ -21,7 +22,7 @@ teaTypes:
   - sencha
   - kamairicha
   - black tea
-buddingTime: medium (中生) — budding at the same time as Yabukita, per the breeding station's own material; one overseas vendor source (myjapanesegreentea.com) describes it as roughly a day earlier
+buddingTime: medium (中生) — the MAFF registration filing rates budding (ほう芽期) slightly early and the plucking date (摘採期) mid-season; the prefectural research centre's own sheet puts plucking at the same time as Yabukita or about a day later, while one overseas vendor source (myjapanesegreentea.com) describes it as roughly a day earlier
 recommendedRegions:
   - Shizuoka — suitable prefecture-wide, and singled out for districts building a quality-branded, single-estate identity rather than supplying a shared factory
 yield: high, and markedly so in young trees; described as higher-yielding than Yabukita. Its "bud-number" habit (many small buds rather than fewer large ones) becomes more pronounced as a garden matures, so sustaining that yield needs planned renewal pruning
@@ -29,12 +30,16 @@ cultivationShare: 12 ha recorded in a Shizuoka prefectural dataset, against 139 
 diseaseResistance:
   - cold (strong — recommended across the whole of Shizuoka Prefecture on this basis)
   - Kuwashiro scale insect / white peach scale, Pseudaulacaspis pentagona (weak — explicitly flagged as needing careful control)
-  - anthracnose (reported slightly better than Yabukita by one vendor source; not corroborated elsewhere)
+  - anthracnose / 炭疽病 (medium in the prefectural research centre's own rating, against weak for Yabukita — a vendor source describing it as slightly the better of the two is corroborated on that point)
   - bacterial shoot blight / akayaki-byō (reported weak by the same single source)
 rarity: A boutique, single-cultivar tea rather than a blending component — sold as sencha, kamairicha and, at specialist shops, a withering-style black tea, at a real premium over mainstream Shizuoka sencha.
-lineageNote: A controlled cross of two Shizuoka-bred aroma cultivars from the same station, not a landrace selection. Both parents run back to Yabukita — Kurasawa as an unregistered natural-hybrid Yabukita seedling, Kanayamidori as a Yabukita cross with a zairai selection — so Koshun carries Yabukita genetics on both sides despite tasting like its opposite. No cultivars bred from Koshun in turn have been located.
+lineageNote: A controlled cross of two aroma cultivars, not a landrace selection — Kurasawa from the prefectural station that bred Koshun, Kanayamidori from the national tea experiment station at Kanaya. Both parents run back to Yabukita — Kurasawa as an unregistered natural-hybrid Yabukita seedling, Kanayamidori as a Yabukita cross with a zairai selection — so Koshun carries Yabukita genetics on both sides despite tasting like its opposite. No cultivars bred from Koshun in turn have been located.
 summary: A 1970 Shizuoka cross of two aroma cultivars, Kurasawa and Kanayamidori, registered in 2000, Koshun was bred specifically for a distinctive orchid-like floral aroma unlike Yabukita's, and has become one of the more commercially interesting single-cultivar sencha, kamairicha and black teas produced in the prefecture.
 sources:
+  - title: 登録品種データベース 香駿（品種登録第8131号）／農林水産省
+    url: https://www.hinshu2.maff.go.jp/vips/cmm/apCMM112.aspx?TOUROKU_NO=8131&LANGUAGE=Japanese
+  - title: 静岡県が育成した茶の品種「ゆめするが、つゆひかり、香駿、しずかおり」／静岡県農林技術研究所茶業研究センター
+    url: https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/044/307/h2505.pdf.pdf
   - title: 香駿 その誕生と現状 (Koshun — its birth and current state)
     url: https://dfns.u-shizuoka-ken.ac.jp/labs/tsc/pdf/03/0308_kosyun.pdf
   - title: 香駿 ─これまでにない香味を持った中生品種─／おしえてTea Cha！／O-CHA NET
@@ -80,10 +85,11 @@ kamairicha and, at specialist shops, a withering-style black tea.
   Shizuoka selections from the same years, alongside Yamakai, Suruga-wase and Fuji-midori. It
   contributes a forest-like, woodland aroma and a fairly heavy astringency of its own, and — as
   matcha — a distinctive cocoa note.
-- **Kanayamidori** (かなやみどり) ♂ — 茶農林30号, registered in 1970 from a 1949 cross of Yabukita
-  and a zairai selection (S6). It contributes the other half of the aroma-forward pairing: a
-  cultivar known for a sweet, milky fragrance closer to fresh dairy than to anything in the
-  standard vocabulary of green tea.
+- **Kanayamidori** (かなやみどり) ♂ — 茶農林30号, bred not at the prefectural station but at the
+  national tea experiment station at Kanaya, and registered in 1970 from a 1949 cross of a zairai
+  selection (S6) as seed parent with Yabukita as pollen parent. It contributes the other half of
+  the aroma-forward pairing: a cultivar known for a sweet, milky fragrance closer to fresh dairy
+  than to anything in the standard vocabulary of green tea.
 
 This is a controlled cross rather than a landrace selection, but an unusual one in that neither
 parent is itself a fully "clean" cultivar in the pedigree sense. Kurasawa was picked out of an
@@ -109,9 +115,9 @@ The chronology from there is unusually well documented for a Shizuoka prefectura
 - **1978** — entered clonal (vegetative) comparison trials under the strain name 70-11-6.
 - **1987** — entered the prefecture's recommended-cultivar determination trial.
 - **1995** — breeding formally completed (育成).
-- **1996** — application filed for registration under the Seed and Seedling Law (種苗法), under
-  the cultivar name Koshun.
-- **2000** — registered.
+- **1996** — application filed on 21 October for registration under the Seed and Seedling Law
+  (種苗法) as application No. 9199, under the cultivar name Koshun; published 12 March 1999.
+- **2000** — registered on 27 June as 品種登録第8131号.
 
 That is a thirty-year span from cross to registration, and it is worth being precise about the
 gap between 1996 and 2000: the earlier date is when the registration application was filed, not
@@ -149,10 +155,11 @@ on it.
 
 ## Characteristics
 
-Koshun buds medium (中生), in the same window as Yabukita rather than distinctly earlier or
-later — a deliberate trait of the cross, though one that, as above, was seen as a limitation
-rather than an advantage when the cultivar was new. The tree is vigorous with an open, spreading
-habit, which makes it easy to train while young; as a garden matures its bud-number tendency
+Koshun is plucked medium (中生), in the same window as Yabukita rather than distinctly earlier or
+later — the registration filing rates its budding slightly early (ほう芽期やや早) and only its
+plucking date mid-season — a deliberate trait of the cross, though one that, as above, was seen
+as a limitation rather than an advantage when the cultivar was new. The tree is vigorous with an
+open, spreading habit, which makes it easy to train while young; as a garden matures its bud-number tendency
 strengthens, and growers are advised to plan renewal pruning to keep yield up. Reported yield is
 high, particularly from young bushes, and higher than Yabukita's. Cold resistance is strong
 enough that it is recommended across the whole of Shizuoka Prefecture, but it is susceptible to
