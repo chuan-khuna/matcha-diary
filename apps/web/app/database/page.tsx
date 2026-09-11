@@ -77,12 +77,20 @@ export default async function DatabasePage() {
             page cuts them along shared rows so several can be read across.
             Different enough to be its own page rather than a mode of this
             one. */}
-        <p>
+        {/* The wheel sits here because it is the vocabulary the taste notes on
+            these cards are drawn from. */}
+        <p className="-ml-2.5 flex flex-wrap gap-x-2">
           <Link
             href="/database/compare"
-            className="data-md -ml-2.5 inline-block rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+            className="data-md inline-block rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
           >
             compare powders →
+          </Link>
+          <Link
+            href="/flavour-wheel"
+            className="data-md inline-block rounded-xs px-2.5 py-1.5 text-clay transition-colors hover:bg-paper-sunk hover:text-ink"
+          >
+            flavour wheel →
           </Link>
         </p>
       </header>

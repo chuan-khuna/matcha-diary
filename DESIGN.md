@@ -268,7 +268,8 @@ more whitespace, no new colour.
 ## Colors
 
 One accent, one family of warm neutrals, and no second hue. The palette is deliberately small so that
-the only saturated thing on a screen is either a photograph or a piece of interactive state.
+the only saturated thing on a screen is either a photograph or a piece of interactive state. The flavour
+wheel is the one exception, and it is recorded at the end of this section with its reasons.
 
 **Every colour is authored in `oklch(L C H)`** — tokens, stylesheets, prototype markup. The sRGB
 column below is a reference for design tools that still speak hex; it is not a second source of
@@ -338,6 +339,43 @@ the timeline and the open review. And its stops **deliberately drift in hue**, b
 is not a token ramp — light across a bowl of tea changes hue as it darkens. That drift is the one
 place in this repo where two stops of one gradient disagreeing on H is correct, and it is confined to
 values nothing else may read.
+
+**Flavour wheel.** The one surface where the palette carries more than one hue. It is an exception
+in the same sense the photographs are: the wheel reproduces a printed reference chart, and on it
+colour is data, telling you which family a note belongs to. Everything around it still holds. The
+page is paper and ink, and the only green that means *state* there is the matcha outline on a held
+band.
+
+The values live in `apps/web/lib/flavour-wheel.ts` and nothing else may read them. They are not
+tokens, they do not re-theme with a preset, and none of them is a decorative fill for any other
+surface.
+
+They are built, not picked. Each band holds one hue, and the rings step in `L`: a family at 0.68, a
+group at 0.79, and that group's notes at 0.885 with 0.7 of the group's chroma. So moving outward
+always lightens, and a group never disagrees with its own notes on `H`. Text on every band is `ink`,
+and the contrast is measured rather than inferred from `L`: 5.3:1 at worst on a family band (Floral
+& fruity), 7.9:1 on a group, 11.0:1 on a note. Bands are parted by a 1.5px `surface` gap rather than
+by an edge of their own.
+
+| Band | Ring | OKLCH | sRGB | Its notes, OKLCH | sRGB |
+| --- | --- | --- | --- | --- | --- |
+| Green flavor | family | `0.6800 0.0850 150.00` | `#72A77C` | — | — |
+| Floral & fruity | family | `0.6800 0.0750 350.00` | `#BC859F` | — | — |
+| Brown/roast flavor | family | `0.6800 0.0600 65.00` | `#B39171` | — | — |
+| Sweet | family | `0.6800 0.0850 45.00` | `#C5886C` | — | — |
+| Other | family | `0.6800 0.0250 250.00` | `#8D9AA8` | — | — |
+| Umami | group | `0.7900 0.0700 95.00` | `#C8BB87` | `0.8850 0.0490 95.00` | `#E3D9B5` |
+| Vegetative | group | `0.7900 0.0800 138.00` | `#A2C795` | `0.8850 0.0560 138.00` | `#C8E2BF` |
+| Green | group | `0.7900 0.0750 158.00` | `#92CAA8` | `0.8850 0.0525 158.00` | `#BDE4CC` |
+| Herb/hay | group | `0.7900 0.0750 118.00` | `#B6C28B` | `0.8850 0.0525 118.00` | `#D5DEB8` |
+| Floral | group | `0.7900 0.0700 330.00` | `#D5ABD0` | `0.8850 0.0490 330.00` | `#EDCEE9` |
+| Fruity | group | `0.7900 0.0750 25.00` | `#E7A8A2` | `0.8850 0.0525 25.00` | `#FACCC8` |
+| Cereal | group | `0.7900 0.0750 88.00` | `#CFB883` | `0.8850 0.0525 88.00` | `#E8D8B2` |
+| Nutty | group | `0.7900 0.0350 30.00` | `#D0B3AD` | `0.8850 0.0245 30.00` | `#E9D4D0` |
+| Cocoa | group | `0.7900 0.0500 50.00` | `#D6B29E` | `0.8850 0.0350 50.00` | `#EDD3C5` |
+| Brown sugar | group | `0.7900 0.0850 70.00` | `#DEB17E` | `0.8850 0.0595 70.00` | `#F3D3AF` |
+| Aromatic | group | `0.7900 0.0650 5.00` | `#E0AAB5` | `0.8850 0.0455 5.00` | `#F5CDD5` |
+| Defective | group | `0.7900 0.0200 250.00` | `#B1BCC7` | `0.8850 0.0140 250.00` | `#D2DAE2` |
 
 ## Typography
 

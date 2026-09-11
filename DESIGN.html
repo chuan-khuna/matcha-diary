@@ -389,7 +389,7 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
   <section class="block" id="colors">
     <div class="block-head">
       <h2>Colors</h2>
-      <span class="t-data-md muted">1 accent · 1 warm neutral family · no second hue</span>
+      <span class="t-data-md muted">1 accent · 1 warm neutral family · no second hue outside the flavour wheel</span>
     </div>
     <p class="prose">
       The palette is deliberately small so that the only saturated thing on a screen is either a
@@ -531,6 +531,71 @@ details.src pre { margin: 0; padding: var(--lg); border-top: 1px solid var(--out
       whole reason for authoring in OKLCH — and re-check the contrast ratios afterwards rather than
       assuming they survived.
     </p>
+
+    <p class="sub-label t-label-caps" style="margin-top:var(--xl)">The one exception — the flavour wheel</p>
+    <p class="prose" style="margin-bottom:var(--lg)">
+      The wheel reproduces a printed reference chart, and on it colour is data: which family a note
+      belongs to. The values live in <code>apps/web/lib/flavour-wheel.ts</code> and nothing else may
+      read them — they are not tokens and never a decorative fill elsewhere. Each band holds one hue
+      and the rings step in L alone: family 0.68, group 0.79, notes 0.885 at 0.7 of the group's
+      chroma. Text on every band is ink, measured at 5.3:1 at worst on a family band, 7.9:1 on a
+      group, 11.0:1 on a note.
+    </p>
+    <div class="grid g5">
+      <div class="swatch"><div class="fill" style="background:oklch(0.6800 0.0850 150.00)"></div>
+        <div class="info"><span class="tok">Green flavor</span><span class="val">oklch(0.6800 0.0850 150.00)</span><span class="val">#72A77C</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.6800 0.0750 350.00)"></div>
+        <div class="info"><span class="tok">Floral &amp; fruity</span><span class="val">oklch(0.6800 0.0750 350.00)</span><span class="val">#BC859F</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.6800 0.0600 65.00)"></div>
+        <div class="info"><span class="tok">Brown/roast flavor</span><span class="val">oklch(0.6800 0.0600 65.00)</span><span class="val">#B39171</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.6800 0.0850 45.00)"></div>
+        <div class="info"><span class="tok">Sweet</span><span class="val">oklch(0.6800 0.0850 45.00)</span><span class="val">#C5886C</span></div></div>
+      <div class="swatch"><div class="fill" style="background:oklch(0.6800 0.0250 250.00)"></div>
+        <div class="info"><span class="tok">Other</span><span class="val">oklch(0.6800 0.0250 250.00)</span><span class="val">#8D9AA8</span></div></div>
+    </div>
+    <div class="tbl-scroll" style="margin-top:var(--lg)">
+      <table class="tbl">
+        <thead><tr><th>Group</th><th>Band</th><th>Its notes</th></tr></thead>
+        <tbody>
+          <tr><td class="m">Umami</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0700 95.00)"></span>oklch(0.7900 0.0700 95.00) · #C8BB87</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0490 95.00)"></span>oklch(0.8850 0.0490 95.00) · #E3D9B5</td></tr>
+          <tr><td class="m">Vegetative</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0800 138.00)"></span>oklch(0.7900 0.0800 138.00) · #A2C795</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0560 138.00)"></span>oklch(0.8850 0.0560 138.00) · #C8E2BF</td></tr>
+          <tr><td class="m">Green</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0750 158.00)"></span>oklch(0.7900 0.0750 158.00) · #92CAA8</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0525 158.00)"></span>oklch(0.8850 0.0525 158.00) · #BDE4CC</td></tr>
+          <tr><td class="m">Herb/hay</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0750 118.00)"></span>oklch(0.7900 0.0750 118.00) · #B6C28B</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0525 118.00)"></span>oklch(0.8850 0.0525 118.00) · #D5DEB8</td></tr>
+          <tr><td class="m">Floral</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0700 330.00)"></span>oklch(0.7900 0.0700 330.00) · #D5ABD0</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0490 330.00)"></span>oklch(0.8850 0.0490 330.00) · #EDCEE9</td></tr>
+          <tr><td class="m">Fruity</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0750 25.00)"></span>oklch(0.7900 0.0750 25.00) · #E7A8A2</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0525 25.00)"></span>oklch(0.8850 0.0525 25.00) · #FACCC8</td></tr>
+          <tr><td class="m">Cereal</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0750 88.00)"></span>oklch(0.7900 0.0750 88.00) · #CFB883</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0525 88.00)"></span>oklch(0.8850 0.0525 88.00) · #E8D8B2</td></tr>
+          <tr><td class="m">Nutty</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0350 30.00)"></span>oklch(0.7900 0.0350 30.00) · #D0B3AD</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0245 30.00)"></span>oklch(0.8850 0.0245 30.00) · #E9D4D0</td></tr>
+          <tr><td class="m">Cocoa</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0500 50.00)"></span>oklch(0.7900 0.0500 50.00) · #D6B29E</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0350 50.00)"></span>oklch(0.8850 0.0350 50.00) · #EDD3C5</td></tr>
+          <tr><td class="m">Brown sugar</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0850 70.00)"></span>oklch(0.7900 0.0850 70.00) · #DEB17E</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0595 70.00)"></span>oklch(0.8850 0.0595 70.00) · #F3D3AF</td></tr>
+          <tr><td class="m">Aromatic</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0650 5.00)"></span>oklch(0.7900 0.0650 5.00) · #E0AAB5</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0455 5.00)"></span>oklch(0.8850 0.0455 5.00) · #F5CDD5</td></tr>
+          <tr><td class="m">Defective</td>
+              <td class="m"><span class="dot" style="background:oklch(0.7900 0.0200 250.00)"></span>oklch(0.7900 0.0200 250.00) · #B1BCC7</td>
+              <td class="m"><span class="dot" style="background:oklch(0.8850 0.0140 250.00)"></span>oklch(0.8850 0.0140 250.00) · #D2DAE2</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <p class="note" style="margin-top:var(--xl)">
       <strong>Not yet defined.</strong> There is no error, warning, or success palette, because no
